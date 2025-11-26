@@ -25,7 +25,7 @@ def visualize_dict_results(result_dict):
     std_sentence_lenght = statistics.stdev(sentence_lengths)
     return mean_sentence_lenght, std_sentence_lenght
 
-def visualize_results(result_dict_dir):
+def visualize_results(result_dict_dir, outlier_removal=True):
     files = os.listdir(result_dict_dir)
     mean_sent_lens = []
     std_sent_lens = []
@@ -39,13 +39,23 @@ def visualize_results(result_dict_dir):
         except:
             print("failure")
 
+    if outlier_removal:
+        pruned_mean_sent_lens = []
+        pruned_std_sent_lens = []
+        std_over_avgs = statistics.stdev(mean_sent_lens)
+        mean_over_avgs = statistics.median(mean_sent_lens)
+        for i, avg in enumerate(mean_sent_lens):
+            if avg > mean_over_avgs - std_over_avgs and avg < mean_over_avgs + mean_over_avgs:
+                pruned_mean_sent_lens.append(avg)
+                pruned_std_sent_lens.append(std_sent_lens[i])
+            else:
+                print(f"pruned element {i}")
 
-
-    doc_labels = range(len(mean_sent_lens))
-    plt.bar(doc_labels, mean_sent_lens, yerr=std_sent_lens)
+    doc_labels = range(len(pruned_mean_sent_lens))
+    plt.bar(doc_labels, pruned_mean_sent_lens, yerr=pruned_std_sent_lens)
     plt.title('avg sentence lens per doc')
     plt.xlabel('doc id')
     plt.ylabel('avg sentence len')
     plt.show()
 
-visualize_results("/home/jan-malte/Desktop/DataLiteracyProject/processed_tex_sources")
+visualize_results("/home/jan-malte/DataLiteracyProject/processed_tex_sources")
