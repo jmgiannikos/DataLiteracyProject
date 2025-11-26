@@ -19,7 +19,7 @@ def visualize_word_histogram(word_histogram):
 
 def visualize_dict_results(result_dict):
     word_histogram = result_dict["word_hist"]
-    #visualize_word_histogram(word_histogram)
+    visualize_word_histogram(word_histogram)
     sentence_lengths = result_dict["sentence_lengths"]
     mean_sentence_lenght = sum(sentence_lengths)/len(sentence_lengths)
     std_sentence_lenght = statistics.stdev(sentence_lengths)
@@ -30,6 +30,7 @@ def visualize_results(result_dict_dir, outlier_removal=True):
     mean_sent_lens = []
     std_sent_lens = []
     for file in files:
+        print(file)
         try:
             with open(result_dict_dir + "/" + file, "r") as f:
                 result = json.load(f)
@@ -45,7 +46,7 @@ def visualize_results(result_dict_dir, outlier_removal=True):
         std_over_avgs = statistics.stdev(mean_sent_lens)
         mean_over_avgs = statistics.median(mean_sent_lens)
         for i, avg in enumerate(mean_sent_lens):
-            if avg > mean_over_avgs - std_over_avgs and avg < mean_over_avgs + mean_over_avgs:
+            if avg > mean_over_avgs - std_over_avgs and avg < mean_over_avgs + std_over_avgs:
                 pruned_mean_sent_lens.append(avg)
                 pruned_std_sent_lens.append(std_sent_lens[i])
             else:

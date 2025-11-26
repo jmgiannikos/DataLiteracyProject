@@ -6,7 +6,6 @@ from tex_parsing_rules import TEX_PARSING_RULES_LIST
 from pylatexenc.latex2text import LatexNodes2Text
 import json
 import nltk
-import enchant
 
 def unzip_source_file(source_file_name, staging_dir="./staging"):
     # delete staging folder if it exists, so that we dont mix files from different articles
@@ -57,40 +56,25 @@ def get_sentences(string):
     sentences =  nltk.tokenize.sent_tokenize(string, language='english')
     return sentences
 
-def get_word_histogram(text_words):
-    d = enchant.Dict("en_US")
-    word_hist = {}
-    for word in text_words:
-        if d.check(word) and not (len(word) == 1 and not (word == "a" or word =="i")):
-            if word in word_hist.keys():
-                word_hist[word] += 1
-            else:
-                word_hist[word] = 1
-    return word_hist
-
-def get_sentence_len(sentence):
-    words = nltk.tokenize.word_tokenize(sentence, language='english')
-    return len(words)
-
 def process_tex_source(source_file_name, target_file_name):
+    # fetching tex source
     working_folder = unzip_source_file(source_file_name)
     tex_file_paths = find_all_tex_sources(working_folder)
     tex_string = get_tex_string(tex_file_paths)
+
+    # apply preprocessing rules defined in TEX_PARSING_RULES_LIST
     preprocessed_tex_string = preprocess_tex_string(tex_string)
+    
+    # Initial Latex parsing
     doc_string = LatexNodes2Text().latex_to_text(preprocessed_tex_string)
     doc_string = postprocess_tex_string(doc_string)
     headings = re.findall("§ .*", doc_string)
     headless_text = re.sub(".*§ .*", "", doc_string)
-    sentences = nltk.tokenize.sent_tokenize(headless_text, language='english')
-    sentence_lengths = list(map(get_sentence_len, sentences))
-    words = nltk.tokenize.word_tokenize(headless_text, language='english')
-    word_hist = get_word_histogram(words)
-    result_dict = {
-        "word_hist": word_hist,
-        "sentence_lengths": sentence_lengths,
-        "headings": headings
-    }
-    with open(target_file_name, "w") as outfile:
-        outfile.write(json.dumps(result_dict))
 
-    return result_dict
+    # get sentences and sentence, lengths
+    sentences = nltk.tokenize.sent_tokenize(headless_text, language='english')
+
+    with open(target_file_name, "w") as outfile:
+        outfile.write(json.dumps(sentences))
+
+    return sentences
