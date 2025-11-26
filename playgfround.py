@@ -156,7 +156,7 @@ def process_articles(articles):
             print(f"parsing article {i} failed")
         i += 1
 
-HTML_DOC_PATH = "/home/jan-malte/Desktop/DataLiteracyProject/AuthorPages/Henning.html"
+HTML_DOC_PATH = "/home/jan-malte/DataLiteracyProject/AuthorPages/Henning.html"
 html_document = read_papers_page(HTML_DOC_PATH)
 articles = parse_papers_page(html_document)
 process_articles(articles)
