@@ -4,6 +4,7 @@ import math
 from sklearn.linear_model import TheilSenRegressor
 import json
 import nltk
+import os
 
 def get_sentence_len(sentence):
     words = nltk.tokenize.word_tokenize(sentence, language='english')
@@ -62,11 +63,52 @@ def append_sentences(sentences):
     return text
 
 def import_dataset(dataset_location):
-    pass
+    data_files = os.listdir(dataset_location)
+    sentence_lists = []
+    for data_file in data_files:
+        if data_file[-5:] == ".json":
+            with open(dataset_location + "/" + data_file, 'r') as file:
+                sentence_list = json.load(file)
+            sentence_lists.append(sentence_list)
+    return sentence_lists
 
+# unify the word histograms, so they are constructed over the same set of words
+# can be done in union mode (default), where the dictionaries are filled with entries of frequency zero
+# or it can be run in intersection mode, where only words that are contained in every document are retained
+def join_word_hists(word_hists, union=True):
+    # get word list
+    lexicon = []
+    if union:
+        for word_hist in word_hists:
+            contained_words = list(word_hist.keys())
+            # add unique words to word list (lexicon)
+            lexicon = list(set(lexicon + contained_words))
+    else:
+        for i, word_hist in enumerate(word_hists):
+            contained_words = list(word_hist.keys())
+            if i == 0:
+                lexicon = contained_words
+            else:
+                # calculate intersection between word list and lexicon
+                lexicon = list(set(lexicon) & set(contained_words))
+
+    # expand/reduce word hists
+    joined_word_hists = []
+    for word_hist in word_hists:
+        joined_word_hist = {}
+        for word in lexicon:
+            if word in word_hist.keys():
+                joined_word_hist[word] = word_hist[word]
+            else:
+                joined_word_hist[word] = 0
+        joined_word_hists.append(joined_word_hist)
+    return joined_word_hists
+            
 
 def generate_csv(dataset_location):
     sentence_lists = import_dataset(dataset_location)
+    pruned_word_hists = []
+    word_hists = []
 
     for sentences in sentence_lists:
         sentence_lengths = list(map(get_sentence_len, sentences))
@@ -79,7 +121,18 @@ def generate_csv(dataset_location):
         pruned_text = append_sentences(pruned_sentences)
         pruned_words = nltk.tokenize.word_tokenize(pruned_text, language='english')
         pruned_word_hist = check_zipfs_law(get_word_histogram(pruned_words))
+        pruned_word_hists.append(pruned_word_hist)
 
         # get overall word histogram
         words = nltk.tokenize.word_tokenize(raw_text, language='english')
         word_hist = get_word_histogram(words)
+        word_hists.append(word_hist)
+
+        pruned_word_hists_union = join_word_hists(pruned_word_hists)
+        pruned_word_hists_intersection = join_word_hists(pruned_word_hists, False)
+
+        word_hists_union = join_word_hists(word_hists)
+        word_hists_intersection = join_word_hists(word_hists, False)
+
+
+    
