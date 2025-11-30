@@ -47,6 +47,14 @@ def remove_references(tex_string):
     tex_string = re.sub(re.escape(r"\cref{") + r"(?s:.)*?\}", "", tex_string)
     print(f"'cref' removed: {doclen - len(tex_string)}")
     doclen = len(tex_string)
+    tex_string = re.sub(re.escape(r"\href{") + r"(?s:.)*?}\{" + r"(?s:.)*?}", "", tex_string)
+    print(f"'href' removed: {doclen - len(tex_string)}")
+    doclen = len(tex_string)
+    tex_string = re.sub(re.escape(r"\href{") + r"(?s:.)*?}", "", tex_string)
+    print(f"'href (only url)' removed: {doclen - len(tex_string)}")
+    doclen = len(tex_string)
+    tex_string = re.sub(r"\\href", "", tex_string)
+    print(f"'href (only command)' removed: {doclen - len(tex_string)}")
     return tex_string
 
 def remove_algorithm(tex_string):
