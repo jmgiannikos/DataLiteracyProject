@@ -4,7 +4,6 @@ import os
 import shutil
 from tex_parsing_rules import TEX_PARSING_RULES_LIST
 from pylatexenc.latex2text import LatexNodes2Text
-import json
 import nltk
 from utils import import_dataset
 
@@ -22,7 +21,7 @@ def unzip_source_file(source_file_name, staging_dir="./staging"):
 def get_tex_string(tex_strings):
     tex_string = ""
     for tex_substring in tex_strings:
-        tex_string = tex_string + "." + tex_substring # Assume that each file ending also ends any sentences that have not been ended and insert an extra "." to make sure later parsing catches that. Relevant for sentence length stats
+        tex_string = tex_string + ".".join(tex_substring) # Assume that each file ending also ends any sentences that have not been ended and insert an extra "." to make sure later parsing catches that. Relevant for sentence length stats
     return tex_string
 
 def preprocess_tex_string(tex_string):
@@ -42,23 +41,26 @@ def get_sentences(string):
     sentences =  nltk.tokenize.sent_tokenize(string, language='english')
     return sentences
 
-def process_tex_source(source_file_name):
+def process_tex_source(source_file_name, target_file_name):
     # fetching tex source
+    print("Fetching source file...")
     working_folder = unzip_source_file(source_file_name)
     tex_file_contents = import_dataset(working_folder, file_types=["tex"], recursive=True)
     tex_string = get_tex_string(tex_file_contents)
     # clean up temp dir
     shutil.rmtree(working_folder)
-
+    print("Preprocessing tex string...")
     # apply preprocessing rules defined in TEX_PARSING_RULES_LIST
     preprocessed_tex_string = preprocess_tex_string(tex_string)
-    
     # Initial Latex parsing
+    print("Processing tex string with latexNodes2Text...")
     doc_string = LatexNodes2Text().latex_to_text(preprocessed_tex_string)
     doc_string = postprocess_tex_string(doc_string)
     headings = re.findall("§ .*", doc_string)
     headless_text = re.sub(".*§ .*", "", doc_string)
 
+    with open(target_file_name + ".txt", "w", encoding="utf-8") as txtfile:
+            txtfile.write(doc_string)
     # get sentences and sentence, lengths
     sentences = nltk.tokenize.sent_tokenize(headless_text, language='english')
 
