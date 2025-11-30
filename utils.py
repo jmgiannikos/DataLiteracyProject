@@ -48,7 +48,7 @@ def import_dataset(dataset_location, file_types=[], recursive=False):
                     with open(element_path, "r", encoding="utf-8") as texfile:
                         data_content = texfile.read()
                 else:
-                    with open(element_path, "r") as file:
+                    with open(element_path, "r", encoding="utf-8") as file:
                         data_content = file.read()
 
                 data_contents.append(data_content)
