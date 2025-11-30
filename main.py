@@ -3,6 +3,8 @@ from arxiv_handler import search_arxiv, download_source
 from utils import strip_entry_id, sanitize_article_id
 from tex_parsing import process_tex_source
 
+HTML_DOC_PATH = "/home/jan-malte/DataLiteracyProject/AuthorPages/Henning.html"
+
 def process_articles(articles):
     i = 0
     for article in articles:
@@ -15,7 +17,10 @@ def process_articles(articles):
             print(f"parsing article {i} failed")
         i += 1
 
-HTML_DOC_PATH = "/home/jan-malte/DataLiteracyProject/AuthorPages/Henning.html"
-html_document = read_papers_page(HTML_DOC_PATH)
-articles = parse_papers_page(html_document)
-process_articles(articles)
+def main():
+    html_document = read_papers_page(HTML_DOC_PATH)
+    articles = parse_papers_page(html_document)
+    process_articles(articles)
+
+if __name__ == "__main__":
+    main()

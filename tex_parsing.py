@@ -6,6 +6,7 @@ from tex_parsing_rules import TEX_PARSING_RULES_LIST
 from pylatexenc.latex2text import LatexNodes2Text
 import json
 import nltk
+from utils import import_dataset
 
 def unzip_source_file(source_file_name, staging_dir="./staging"):
     # delete staging folder if it exists, so that we dont mix files from different articles
@@ -18,24 +19,9 @@ def unzip_source_file(source_file_name, staging_dir="./staging"):
 
     return staging_dir
 
-def find_all_tex_sources(directory_path):
-    tex_file_paths = []
-    dir_contents = os.listdir(directory_path)
-    for element in dir_contents:
-        element_path = directory_path + "/" + element
-        if os.path.isdir(element_path):
-            local_tex_file_paths = find_all_tex_sources(element_path)
-            tex_file_paths = tex_file_paths + local_tex_file_paths
-        else:
-            if ".tex" in element:
-                tex_file_paths.append(element_path)
-    return tex_file_paths
-
-def get_tex_string(file_paths):
+def get_tex_string(tex_strings):
     tex_string = ""
-    for file_path in file_paths:
-        with open(file_path, "r", encoding="utf-8") as texfile:
-            tex_substring = texfile.read()
+    for tex_substring in tex_strings:
         tex_string = tex_string + "." + tex_substring # Assume that each file ending also ends any sentences that have not been ended and insert an extra "." to make sure later parsing catches that. Relevant for sentence length stats
     return tex_string
 
@@ -56,11 +42,13 @@ def get_sentences(string):
     sentences =  nltk.tokenize.sent_tokenize(string, language='english')
     return sentences
 
-def process_tex_source(source_file_name, target_file_name):
+def process_tex_source(source_file_name):
     # fetching tex source
     working_folder = unzip_source_file(source_file_name)
-    tex_file_paths = find_all_tex_sources(working_folder)
-    tex_string = get_tex_string(tex_file_paths)
+    tex_file_contents = import_dataset(working_folder, file_types=["tex"], recursive=True)
+    tex_string = get_tex_string(tex_file_contents)
+    # clean up temp dir
+    shutil.rmtree(working_folder)
 
     # apply preprocessing rules defined in TEX_PARSING_RULES_LIST
     preprocessed_tex_string = preprocess_tex_string(tex_string)
@@ -74,7 +62,4 @@ def process_tex_source(source_file_name, target_file_name):
     # get sentences and sentence, lengths
     sentences = nltk.tokenize.sent_tokenize(headless_text, language='english')
 
-    with open(target_file_name, "w") as outfile:
-        outfile.write(json.dumps(sentences))
-
-    return sentences
+    return sentences, headings

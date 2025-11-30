@@ -5,6 +5,7 @@ from sklearn.linear_model import TheilSenRegressor
 import json
 import nltk
 import os
+import csv
 
 def get_sentence_len(sentence):
     words = nltk.tokenize.word_tokenize(sentence, language='english')
@@ -62,16 +63,6 @@ def append_sentences(sentences):
         text += sentence + " "
     return text
 
-def import_dataset(dataset_location):
-    data_files = os.listdir(dataset_location)
-    sentence_lists = []
-    for data_file in data_files:
-        if data_file[-5:] == ".json":
-            with open(dataset_location + "/" + data_file, 'r') as file:
-                sentence_list = json.load(file)
-            sentence_lists.append(sentence_list)
-    return sentence_lists
-
 # unify the word histograms, so they are constructed over the same set of words
 # can be done in union mode (default), where the dictionaries are filled with entries of frequency zero
 # or it can be run in intersection mode, where only words that are contained in every document are retained
@@ -104,9 +95,18 @@ def join_word_hists(word_hists, union=True):
         joined_word_hists.append(joined_word_hist)
     return joined_word_hists
             
-
-def generate_csv(dataset_location):
-    sentence_lists = import_dataset(dataset_location)
+def transform_to_csv(data_handles, histograms, sentence_lengths):
+    col_order = [word for word in histograms[0].keys()]
+    rows = []
+    for i, hist in enumerate(histograms):
+        if i == 0:
+            row = ["Data Name"] + col_order + ["Avg Sentence Length", "Stdev Sentence Length"]
+        else:
+            row = [data_handles[i]] + [hist[word] for word in col_order] + [statistics.mean(sentence_lengths[i]), statistics.stdev(sentence_lengths[i])]
+        rows.append(row)
+    return rows
+    
+def generate_csv(sentence_lists, data_handles):
     pruned_word_hists = []
     word_hists = []
 
@@ -128,11 +128,21 @@ def generate_csv(dataset_location):
         word_hist = get_word_histogram(words)
         word_hists.append(word_hist)
 
-        pruned_word_hists_union = join_word_hists(pruned_word_hists)
-        pruned_word_hists_intersection = join_word_hists(pruned_word_hists, False)
+    csv_union_pruned = transform_to_csv(data_handles, join_word_hists(pruned_word_hists), pruned_sentence_lengths)
+    csv_inter_pruned = transform_to_csv(data_handles, join_word_hists(pruned_word_hists, False), pruned_sentence_lengths)
 
-        word_hists_union = join_word_hists(word_hists)
-        word_hists_intersection = join_word_hists(word_hists, False)
+    csv_union_raw = transform_to_csv(data_handles, join_word_hists(word_hists), sentence_lengths)
+    csv_inter_raw = transform_to_csv(data_handles, join_word_hists(word_hists, False), sentence_lengths)
+
+    return csv_union_pruned, csv_inter_pruned, csv_union_raw, csv_inter_raw
+
+
+
+
+
+
+
+
 
 
     
