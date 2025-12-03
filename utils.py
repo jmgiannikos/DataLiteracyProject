@@ -52,5 +52,5 @@ def import_dataset(dataset_location, file_types=[], recursive=False):
                         data_content = file.read()
 
                 data_contents.append(data_content)
-                data_handles.append(element)
+                data_handles.append(element.split(".")[0])
     return data_contents, data_handles

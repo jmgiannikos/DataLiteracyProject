@@ -7,11 +7,6 @@ def remove_tags_from_all(strings):
         sanitized_list.append(re.sub("<.*>", "", string))
     return sanitized_list
 
-def read_papers_page(html_doc_path):
-    with open(html_doc_path, "r", encoding="utf-8") as file:
-        html_content = file.read()
-    return html_content
-
 def parse_papers_page(html_doc, author=None):
     soup = BeautifulSoup(html_doc, 'html.parser')
     article_elements = soup.findAll(class_="gs_mnde_one_art") # fetch the article elements by css class

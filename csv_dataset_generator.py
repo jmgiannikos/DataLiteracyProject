@@ -6,42 +6,45 @@ import json
 import nltk
 import os
 import csv
+import numpy as np
 
 def get_sentence_len(sentence):
     words = nltk.tokenize.word_tokenize(sentence, language='english')
     return len(words)
 
-def remove_outlier_sentences(sentences, sentence_lengths, n=1):
+def remove_outlier_sentences(sentences, sentence_lengths, n=4):
     pruned_sentences = []
     pruned_sentence_lenghts = []
-    median_len = statistics.median(sentence_lengths)
+    mean_len = statistics.mean(sentence_lengths)
     stdev_len = statistics.stdev(sentence_lengths)
-    for sentence, len in zip(sentences, sentence_lengths):
-        if len <= median_len + stdev_len*n and len >= median_len - stdev_len*n:
+    for sentence, length in zip(sentences, sentence_lengths):
+        if length <= mean_len + stdev_len*n and length >= mean_len - stdev_len*n:
             pruned_sentences.append(sentence)
-            pruned_sentence_lenghts.append(sentence_lengths)
+            pruned_sentence_lenghts.append(length)
     return pruned_sentences, pruned_sentence_lenghts
 
 # find words, that fall outside of a certain tolerance around what we would expect according to zipfs law
-def check_zipfs_law(word_histogram, n = 1):
+def check_zipfs_law(word_histogram, n = 4, verbose=True):
     remaining_words = {}
     removed_words = {}
     sortable_hist = [(word_histogram[word], word) for word in word_histogram.keys()]
     sortable_hist.sort(reverse=True, key=lambda x: x[0])
     # log scale our word counts, so we can perform outlier detection with a robust linear estimator
-    log_scaled_counts = [math.log(x[0], 2) for x in sortable_hist]
+    inverted_counts = [x[0]**(-1) for x in sortable_hist]
     outlier_resistant_estimator = TheilSenRegressor()
-    outlier_resistant_estimator.fit(range(len(log_scaled_counts)), log_scaled_counts)
-    predicted_counts = outlier_resistant_estimator.predict(range(len(log_scaled_counts)))
+    index_array = np.expand_dims(np.arange(len(inverted_counts), step=1), axis=1)
+    outlier_resistant_estimator.fit(index_array, inverted_counts)
+    predicted_counts = outlier_resistant_estimator.predict(index_array)
     # transfrom back from log space, cutoff linear predictions at zero and round to nearest integer
     expected_counts = [max([int(2**round(pred_count)), 0]) for pred_count in predicted_counts]
-    errors = [math.abs(expected_count - sortable_hist[i][0]) for i, expected_count in enumerate(expected_counts)]
-    median_error = statistics.median(errors)
+    errors = [expected_count - sortable_hist[i][0] for i, expected_count in enumerate(expected_counts)]
+    median_error = statistics.mean(errors)
     stdev_error = statistics.stdev(errors)
     for i, error in enumerate(errors):
         if error > n*stdev_error + median_error:
             removed_words[sortable_hist[i][1]] = sortable_hist[i][0]
-            print(f"removed word: {sortable_hist[i][1]}")
+            if verbose:
+                print(f"removed word: {sortable_hist[i][1]}")
         else:
             remaining_words[sortable_hist[i][1]] = sortable_hist[i][0]
     return remaining_words
@@ -110,12 +113,18 @@ def generate_csv(sentence_lists, data_handles):
     pruned_word_hists = []
     word_hists = []
 
+    pruned_sentence_lengths_list = []
+    sentence_lengths_list = []
+
     for sentences in sentence_lists:
         sentence_lengths = list(map(get_sentence_len, sentences))
+        sentence_lengths_list.append(sentence_lengths)
+
         raw_text = append_sentences(sentences)
 
         # remove sentences, that deviate more than n*stdev from the median sentence length (default n=1)  
         pruned_sentences, pruned_sentence_lengths = remove_outlier_sentences(sentences, sentence_lengths)
+        pruned_sentence_lengths_list.append(pruned_sentence_lengths)
 
         # get word histogram, excluding the sentences determined as abnormal
         pruned_text = append_sentences(pruned_sentences)
@@ -128,11 +137,11 @@ def generate_csv(sentence_lists, data_handles):
         word_hist = get_word_histogram(words)
         word_hists.append(word_hist)
 
-    csv_union_pruned = transform_to_csv(data_handles, join_word_hists(pruned_word_hists), pruned_sentence_lengths)
-    csv_inter_pruned = transform_to_csv(data_handles, join_word_hists(pruned_word_hists, False), pruned_sentence_lengths)
+    csv_union_pruned = transform_to_csv(data_handles, join_word_hists(pruned_word_hists), pruned_sentence_lengths_list)
+    csv_inter_pruned = transform_to_csv(data_handles, join_word_hists(pruned_word_hists, False), pruned_sentence_lengths_list)
 
-    csv_union_raw = transform_to_csv(data_handles, join_word_hists(word_hists), sentence_lengths)
-    csv_inter_raw = transform_to_csv(data_handles, join_word_hists(word_hists, False), sentence_lengths)
+    csv_union_raw = transform_to_csv(data_handles, join_word_hists(word_hists), sentence_lengths_list)
+    csv_inter_raw = transform_to_csv(data_handles, join_word_hists(word_hists, False), sentence_lengths_list)
 
     return csv_union_pruned, csv_inter_pruned, csv_union_raw, csv_inter_raw
 
