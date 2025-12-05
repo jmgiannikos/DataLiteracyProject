@@ -1,9 +1,24 @@
 import numpy as np
 from sklearn.manifold import TSNE
+from sklearn.decomposition import PCA
 import pandas as pd
 import matplotlib.pyplot as plt
 
-CSV_PATH = "/home/jan-malte/DataLiteracyProject/union_pruned.csv"
+CSV_PATHS = ["/home/jan-malte/DataLiteracyProject/union_pruned.csv", 
+             "/home/jan-malte/DataLiteracyProject/union_raw.csv", 
+             "/home/jan-malte/DataLiteracyProject/inter_raw.csv",
+             "/home/jan-malte/DataLiteracyProject/inter_pruned.csv"]
+PERPLEXITY_VALS = [10, 20, 40, 80]
+
+def normalize_word_rows(data_array):
+    word_dict = data_array[:,:-2]
+    # TODO: could probs do that with some cool double vectorized op or something, but I cant be bothered rn
+    for row_idx in range(word_dict.shape[0]):
+        row_sum = np.sum(word_dict[row_idx])
+        normalized_row = np.vectorize(lambda x: x/row_sum)(word_dict[row_idx])
+        assert len(normalized_row) == len(data_array[row_idx]) - 2
+        data_array[row_idx, :-2] = normalized_row
+    return data_array
 
 def load_csv(csv_path):
     data_df = pd.read_csv(csv_path, header=0, index_col=0)
@@ -20,7 +35,16 @@ def get_np_dataset(data_df):
     return author_handles, feature_labels, data
 
 def tsne_dim_reduction(data, perplexity=30):
-    reduced_data = TSNE(n_components=2, learning_rate='auto', init='pca', perplexity=perplexity).fit_transform(data)
+    if isinstance(perplexity, list):
+        reduced_data = []
+        for perplexity_value in perplexity:
+            reduced_data.append(tsne_dim_reduction(data, perplexity=perplexity_value))
+    else: 
+        reduced_data = TSNE(n_components=2, learning_rate='auto', init='pca', perplexity=perplexity).fit_transform(data)
+    return reduced_data
+
+def pca_dim_reduction(data):
+    reduced_data = PCA(n_components=2).fit_transform(data)
     return reduced_data
 
 def plot_dim_reduced_data(reduced_data, author_handles):
@@ -39,10 +63,25 @@ def plot_dim_reduced_data(reduced_data, author_handles):
     plt.show()
 
 def main():
-    data_df = load_csv(CSV_PATH)
-    author_handles, feature_labels, data = get_np_dataset(data_df)
-    tsne_reduced_data = tsne_dim_reduction(data)
-    plot_dim_reduced_data(tsne_reduced_data, author_handles)
+    print("###### PCA ######")
+    for csv_path in CSV_PATHS:
+        data_df = load_csv(csv_path)
+        author_handles, feature_labels, data = get_np_dataset(data_df)
+        data = normalize_word_rows(data)
+        pca_reduced_data = pca_dim_reduction(data)
+        print(f"CSV: {csv_path.split("/")[-1]}")
+        plot_dim_reduced_data(pca_reduced_data, author_handles)
+
+    print("###### t-SNE ######")
+    for csv_path in CSV_PATHS:
+        data_df = load_csv(csv_path)
+        author_handles, feature_labels, data = get_np_dataset(data_df)
+        data = normalize_word_rows(data)
+        tsne_reduced_data_list = tsne_dim_reduction(data, PERPLEXITY_VALS)
+        for i, tsne_reduced_data in enumerate(tsne_reduced_data_list):
+            print(f"CSV: {csv_path.split("/")[-1]}, PERPLEXITY: {PERPLEXITY_VALS[i]}")
+            plot_dim_reduced_data(tsne_reduced_data, author_handles)
+        
 
 if __name__ == '__main__':
     main()
