@@ -116,26 +116,30 @@ def generate_csv(sentence_lists, data_handles):
     pruned_sentence_lengths_list = []
     sentence_lengths_list = []
 
-    for sentences in sentence_lists:
-        sentence_lengths = list(map(get_sentence_len, sentences))
-        sentence_lengths_list.append(sentence_lengths)
+    for i, sentences in enumerate(sentence_lists):
+        if len(sentences) > 2:
+            sentence_lengths = list(map(get_sentence_len, sentences))
+            sentence_lengths_list.append(sentence_lengths)
 
-        raw_text = append_sentences(sentences)
+            raw_text = append_sentences(sentences)
 
-        # remove sentences, that deviate more than n*stdev from the median sentence length (default n=1)  
-        pruned_sentences, pruned_sentence_lengths = remove_outlier_sentences(sentences, sentence_lengths)
-        pruned_sentence_lengths_list.append(pruned_sentence_lengths)
+            # remove sentences, that deviate more than n*stdev from the median sentence length (default n=1)  
+            pruned_sentences, pruned_sentence_lengths = remove_outlier_sentences(sentences, sentence_lengths)
+            pruned_sentence_lengths_list.append(pruned_sentence_lengths)
 
-        # get word histogram, excluding the sentences determined as abnormal
-        pruned_text = append_sentences(pruned_sentences)
-        pruned_words = nltk.tokenize.word_tokenize(pruned_text, language='english')
-        pruned_word_hist = check_zipfs_law(get_word_histogram(pruned_words))
-        pruned_word_hists.append(pruned_word_hist)
+            # get word histogram, excluding the sentences determined as abnormal
+            pruned_text = append_sentences(pruned_sentences)
+            pruned_words = nltk.tokenize.word_tokenize(pruned_text, language='english')
+            pruned_word_hist = check_zipfs_law(get_word_histogram(pruned_words))
+            pruned_word_hists.append(pruned_word_hist)
 
-        # get overall word histogram
-        words = nltk.tokenize.word_tokenize(raw_text, language='english')
-        word_hist = get_word_histogram(words)
-        word_hists.append(word_hist)
+            # get overall word histogram
+            words = nltk.tokenize.word_tokenize(raw_text, language='english')
+            word_hist = get_word_histogram(words)
+            word_hists.append(word_hist)
+        else:
+            print(f"ERROR: document {data_handles[i]} contains too few sentences to calculate stdev")
+
 
     csv_union_pruned = transform_to_csv(data_handles, join_word_hists(pruned_word_hists), pruned_sentence_lengths_list)
     csv_inter_pruned = transform_to_csv(data_handles, join_word_hists(pruned_word_hists, False), pruned_sentence_lengths_list)
