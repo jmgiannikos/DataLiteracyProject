@@ -80,9 +80,12 @@ def main():
             writer = csv.writer(f)
             writer.writerows(csv_variant)
         i += 1
-
-    for json_variant in generate_sentence_json(global_sentence_lists, global_article_handles):
-        json.dumps(json_variant)
+    
+    i = 0
+    for i, json_variant in generate_sentence_json(global_sentence_lists, global_article_handles):
+        with open(JSN_FILE_PATHS[i], "w") as outfile:
+            outfile.write(json.dumps(json_variant))
+        i += 1
 
 if __name__ == "__main__":
     main()
