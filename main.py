@@ -2,11 +2,14 @@ from google_scholar_handler import parse_papers_page
 from arxiv_handler import search_arxiv, download_source
 from utils import strip_entry_id, sanitize_article_id, import_dataset, realize_path
 from tex_parsing import process_tex_source
-from csv_dataset_generator import generate_csv
+from csv_dataset_generator import generate_wordhist_csv, generate_sentence_json
 import csv
+import json
 
 HTML_DOC_PATH = "/home/jan-malte/DataLiteracyProject/AuthorPages"
 CSV_FILE_PATHS= ["./union_pruned.csv", "./inter_pruned.csv", "./union_raw.csv", "./inter_raw.csv"] # NOTE: must have exactly 4 values, that are valid file paths
+JSN_FILE_PATHS = ["./pruned.json", "./raw.json"]
+
 
 def process_articles(articles, author_handle, verbose=True):
     i = 0
@@ -72,11 +75,14 @@ def main():
 
     print(global_article_handles)
     i = 0
-    for csv_variant in generate_csv(global_sentence_lists, global_article_handles):
+    for csv_variant in generate_wordhist_csv(global_sentence_lists, global_article_handles):
         with open(CSV_FILE_PATHS[i], 'w', newline='') as f:
             writer = csv.writer(f)
             writer.writerows(csv_variant)
         i += 1
+
+    for json_variant in generate_sentence_json(global_sentence_lists, global_article_handles):
+        json.dumps(json_variant)
 
 if __name__ == "__main__":
     main()
