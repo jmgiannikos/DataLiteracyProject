@@ -11,13 +11,13 @@ CSV_PATHS = ["/home/jan-malte/DataLiteracyProject/union_pruned.csv",
 PERPLEXITY_VALS = [10, 20, 40, 80]
 
 def normalize_word_rows(data_array):
-    word_dict = data_array[:,:-2]
+    word_dict = data_array
     # TODO: could probs do that with some cool double vectorized op or something, but I cant be bothered rn
     for row_idx in range(word_dict.shape[0]):
         row_sum = np.sum(word_dict[row_idx])
         normalized_row = np.vectorize(lambda x: x/row_sum)(word_dict[row_idx])
-        assert len(normalized_row) == len(data_array[row_idx]) - 2
-        data_array[row_idx, :-2] = normalized_row
+        assert len(normalized_row) == len(data_array[row_idx])
+        data_array[row_idx] = normalized_row
     return data_array
 
 def load_csv(csv_path):
@@ -106,12 +106,12 @@ def process_PCA(csv_paths=CSV_PATHS, dims=2):
         print(explained_variance)
         print(f"CSV: {csv_path.split("/")[-1]}")
         plot_dim_reduced_data(pca_reduced_data, author_handles, cat_offset=cat_offset)
-        plot_loadings(loadings, feature_labels[:-2])
+        plot_loadings(loadings, feature_labels)
 
 def plot_word_frequency_distribution(dataframe, word):
     author_handles, feature_labels, data = get_np_dataset(dataframe)
     data = normalize_word_rows(data)
-    word_idx = np.where(feature_labels[:-2] == word)
+    word_idx = np.where(feature_labels == word)
     data = np.squeeze(data[:,word_idx])
     print(np.shape(data))
     data = expand_to_2dim(data)

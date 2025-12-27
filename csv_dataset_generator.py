@@ -29,19 +29,27 @@ def check_zipfs_law(word_histogram, n = 4, verbose=True):
     removed_words = {}
     sortable_hist = [(word_histogram[word], word) for word in word_histogram.keys()]
     sortable_hist.sort(reverse=True, key=lambda x: x[0])
-    # log scale our word counts, so we can perform outlier detection with a robust linear estimator
+    # according to zips law the inverted fraction should be roughly linear, proportional to rank
     inverted_counts = [x[0]**(-1) for x in sortable_hist]
+
     outlier_resistant_estimator = TheilSenRegressor()
     index_array = np.expand_dims(np.arange(len(inverted_counts), step=1), axis=1)
     outlier_resistant_estimator.fit(index_array, inverted_counts)
     predicted_counts = outlier_resistant_estimator.predict(index_array)
-    # transfrom back from log space, cutoff linear predictions at zero and round to nearest integer
-    expected_counts = [max([int(2**round(pred_count)), 0]) for pred_count in predicted_counts]
+    
+    # transform back to expected counts and round to integer
+    expected_counts = [max([int(round(pred_count)**-1), 0]) for pred_count in predicted_counts]
+
+    # compute errors
     errors = [expected_count - sortable_hist[i][0] for i, expected_count in enumerate(expected_counts)]
-    median_error = statistics.mean(errors)
+
+    # compute stdev and median (since median  is more outlier resistant)
+    median_error = statistics.median(errors)
     stdev_error = statistics.stdev(errors)
+
     for i, error in enumerate(errors):
-        if error > n*stdev_error + median_error:
+        # if error falls outside n stdev band around median remove word
+        if error > median_error + n*stdev_error or error < median_error - n*stdev_error:
             removed_words[sortable_hist[i][1]] = sortable_hist[i][0]
             if verbose:
                 print(f"removed word: {sortable_hist[i][1]}")
@@ -53,6 +61,7 @@ def get_word_histogram(text_words):
     d = enchant.Dict("en_US")
     word_hist = {}
     for word in text_words:
+        # prune all non english words
         if d.check(word) and not (len(word) == 1 and not (word == "a" or word =="i")):
             if word in word_hist.keys():
                 word_hist[word] += 1
@@ -103,13 +112,23 @@ def transform_to_csv(data_handles, histograms, sentence_lengths):
     rows = []
     for i, hist in enumerate(histograms):
         if i == 0:
-            row = ["Data Name"] + col_order + ["Avg Sentence Length", "Stdev Sentence Length"]
+            row = ["Data Name"] + col_order
         else:
-            row = [data_handles[i]] + [hist[word] for word in col_order] + [statistics.mean(sentence_lengths[i]), statistics.stdev(sentence_lengths[i])]
+            row = [data_handles[i]] + [hist[word] for word in col_order]
         rows.append(row)
     return rows
+
+def generate_sentence_json(sentence_lists, data_handles):
+    pruned_json_dict = {}
+    raw_json_dict = {}
+    for i, sentences in enumerate(sentence_lists):
+        sentence_lenths = list(map(get_sentence_len, sentences))
+        raw_json_dict[data_handles[i]] = sentence_lenths
+        _, pruned_sentence_lenths = remove_outlier_sentences(sentences, sentence_lenths)
+        pruned_json_dict[data_handles[i]] = pruned_sentence_lenths
+    return pruned_json_dict, raw_json_dict
     
-def generate_csv(sentence_lists, data_handles):
+def generate_wordhist_csv(sentence_lists, data_handles):
     pruned_word_hists = []
     word_hists = []
 
@@ -117,28 +136,24 @@ def generate_csv(sentence_lists, data_handles):
     sentence_lengths_list = []
 
     for i, sentences in enumerate(sentence_lists):
-        if len(sentences) > 2:
-            sentence_lengths = list(map(get_sentence_len, sentences))
-            sentence_lengths_list.append(sentence_lengths)
+        sentence_lengths = list(map(get_sentence_len, sentences))
 
-            raw_text = append_sentences(sentences)
+        raw_text = append_sentences(sentences)
 
-            # remove sentences, that deviate more than n*stdev from the median sentence length (default n=1)  
-            pruned_sentences, pruned_sentence_lengths = remove_outlier_sentences(sentences, sentence_lengths)
-            pruned_sentence_lengths_list.append(pruned_sentence_lengths)
+        # remove sentences, that deviate more than n*stdev from the median sentence length (default n=4)  
+        pruned_sentences, pruned_sentence_lengths = remove_outlier_sentences(sentences, sentence_lengths)
+        pruned_sentence_lengths_list.append(pruned_sentence_lengths)
 
-            # get word histogram, excluding the sentences determined as abnormal
-            pruned_text = append_sentences(pruned_sentences)
-            pruned_words = nltk.tokenize.word_tokenize(pruned_text, language='english')
-            pruned_word_hist = check_zipfs_law(get_word_histogram(pruned_words))
-            pruned_word_hists.append(pruned_word_hist)
+        # get word histogram, excluding the sentences determined as abnormal
+        pruned_text = append_sentences(pruned_sentences)
+        pruned_words = nltk.tokenize.word_tokenize(pruned_text, language='english')
+        pruned_word_hist = check_zipfs_law(get_word_histogram(pruned_words))
+        pruned_word_hists.append(pruned_word_hist)
 
-            # get overall word histogram
-            words = nltk.tokenize.word_tokenize(raw_text, language='english')
-            word_hist = get_word_histogram(words)
-            word_hists.append(word_hist)
-        else:
-            print(f"ERROR: document {data_handles[i]} contains too few sentences to calculate stdev")
+        # get overall word histogram
+        words = nltk.tokenize.word_tokenize(raw_text, language='english')
+        word_hist = get_word_histogram(words)
+        word_hists.append(word_hist)
 
 
     csv_union_pruned = transform_to_csv(data_handles, join_word_hists(pruned_word_hists), pruned_sentence_lengths_list)
