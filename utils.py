@@ -54,3 +54,18 @@ def import_dataset(dataset_location, file_types=[], recursive=False):
                 data_contents.append(data_content)
                 data_handles.append(element.split(".")[0])
     return data_contents, data_handles
+
+
+def import_from_txt(path):
+    author_paper_dict = {}
+    author_file_list = os.listdir(path)
+    for author_file in author_file_list:
+        author_file_loc = os.path.join(path, author_file)
+        papers = open(author_file_loc).read().splitlines()
+        author = os.path.basename(author_file)[:-4]
+        paper_dict_list = []
+        for paper in papers:
+            paper_dict = {'title': paper.split(';')[0], 'authors': paper.split(';')[1].split(',')}
+            paper_dict_list = paper_dict_list + [paper_dict]
+        author_paper_dict[author] = paper_dict_list
+    return author_paper_dict
