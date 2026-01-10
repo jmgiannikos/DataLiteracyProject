@@ -125,6 +125,17 @@ def plot_word_frequency_distributions(words, csv_paths=CSV_PATHS):
             print(f"#### Distribution over '{word}' frequency ####")
             plot_word_frequency_distribution(data_df, word)
 
+def plot_sentence_length_distribution(sentence_lengths):
+    length_dict = {}
+    # init lenght dict
+    max_sentence_length = max(sentence_lengths)
+    for i in range(max_sentence_length+1):
+        length_dict[i] = 0
+    for sentence_len in sentence_lengths:
+        length_dict[sentence_len] += 1
+    plt.bar(length_dict.keys(), length_dict.values()) # for now im just gonna hope this works
+    plt.show()
+
 def main():
     print("###### Top word distributions ######")
     plot_word_frequency_distributions(words=["the", "we", "of", "that"])
