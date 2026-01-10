@@ -1,0 +1,13 @@
+name: data-lit
+dependencies:
+  - pip
+  - pip:
+    - arxiv
+    - beautifulsoup4
+    - pylatexenc
+    - nltk
+    - enchant
+    - matplotlib
+    - scikit-learn
+    - numpy
+    - pandas
