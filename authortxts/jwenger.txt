@@ -1,0 +1,9 @@
+Non-Parametric Calibration for Classification; J Wenger, H Kjellström, R Triebel
+Preconditioning for Scalable Gaussian Process Hyperparameter Optimization; J Wenger, G Pleiss, P Hennig, JP Cunningham, JR Gardner
+Posterior and Computational Uncertainty in Gaussian Processes; J Wenger, G Pleiss, M Pförtner, P Hennig, JP Cunningham
+ProbNum: Probabilistic Numerics in Python; J Wenger, N Krämer, M Pförtner, J Schmidt, N Bosch, N Effenberger, J Zenn, A Gessner, T Karvonen, FX Briol, M Mahsereci, P Hennig
+Probabilistic Linear Solvers for Machine Learning; J Wenger, P Hennig
+On the Disconnect Between Theory and Practice of Neural Networks: Limits of the Neural Tangent Kernel Perspective; J Wenger, F Dangel, A Kristiadi
+Computation-Aware Gaussian Processes: Model Selection And Linear-Time Inference; J Wenger, K Wu, P Hennig, JR Gardner, G Pleiss, JP Cunningham
+Probabilistic Numerical Linear Algebra for Machine Learning; J Wenger
+Variational Deep Learning via Implicit Regularization; J Wenger, B Coker, J Marusic, JP Cunningham
