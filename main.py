@@ -82,10 +82,11 @@ def main():
         i += 1
     
     i = 0
-    for i, json_variant in generate_sentence_json(global_sentence_lists, global_article_handles):
-        with open(JSN_FILE_PATHS[i], "w") as outfile:
-            outfile.write(json.dumps(json_variant))
-        i += 1
+    pruned_json_dict, raw_json_dict = generate_sentence_json(global_sentence_lists, global_article_handles)
+    with open(JSN_FILE_PATHS[0], "w") as outfile:
+        outfile.write(json.dumps(pruned_json_dict))
+    with open(JSN_FILE_PATHS[1], "w") as outfile:
+        outfile.write(json.dumps(raw_json_dict))
 
 if __name__ == "__main__":
     main()

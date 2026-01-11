@@ -7,23 +7,28 @@ import nltk
 import os
 import csv
 import numpy as np
+from nltk.stem import PorterStemmer
 
 def get_sentence_len(sentence):
     words = nltk.tokenize.word_tokenize(sentence, language='english')
     return len(words)
 
 def remove_outlier_sentences(sentences, sentence_lengths, n=4):
-    pruned_sentences = []
-    pruned_sentence_lenghts = []
-    mean_len = statistics.mean(sentence_lengths)
-    stdev_len = statistics.stdev(sentence_lengths)
-    for sentence, length in zip(sentences, sentence_lengths):
-        if length <= mean_len + stdev_len*n and length >= mean_len - stdev_len*n:
-            pruned_sentences.append(sentence)
-            pruned_sentence_lenghts.append(length)
-    return pruned_sentences, pruned_sentence_lenghts
+    if len(sentence_lengths) > 2:
+        pruned_sentences = []
+        pruned_sentence_lenghts = []
+        mean_len = statistics.mean(sentence_lengths)
+        stdev_len = statistics.stdev(sentence_lengths)
+        for sentence, length in zip(sentences, sentence_lengths):
+            if length <= mean_len + stdev_len*n and length >= mean_len - stdev_len*n:
+                pruned_sentences.append(sentence)
+                pruned_sentence_lenghts.append(length)
+        return pruned_sentences, pruned_sentence_lenghts
+    else:
+        return sentences, sentence_lengths
 
 # find words, that fall outside of a certain tolerance around what we would expect according to zipfs law
+# NOTE: weirdly empty word histograms appear here  
 def check_zipfs_law(word_histogram, n = 4, verbose=True):
     remaining_words = {}
     removed_words = {}
@@ -32,16 +37,22 @@ def check_zipfs_law(word_histogram, n = 4, verbose=True):
     # according to zips law the inverted fraction should be roughly linear, proportional to rank
     inverted_counts = [x[0]**(-1) for x in sortable_hist]
 
+    print(len(inverted_counts))
+    if len(inverted_counts) <= 1:
+        return word_histogram
+
     outlier_resistant_estimator = TheilSenRegressor()
     index_array = np.expand_dims(np.arange(len(inverted_counts), step=1), axis=1)
     outlier_resistant_estimator.fit(index_array, inverted_counts)
     predicted_counts = outlier_resistant_estimator.predict(index_array)
-    
+    print(predicted_counts.shape)
+
     # transform back to expected counts and round to integer
-    expected_counts = [max([int(round(pred_count)**-1), 0]) for pred_count in predicted_counts]
+    expected_counts = [max([int(round(pred_count**-1)), 0]) if round(pred_count) > 0 else 0 for pred_count in predicted_counts]
 
     # compute errors
-    errors = [expected_count - sortable_hist[i][0] for i, expected_count in enumerate(expected_counts)]
+    # errors are "normalized" by the actual count. an error of 10 if the word was counted 100 times is less anomalous than the same error on a count of 2
+    errors = [(expected_count - sortable_hist[i][0])/sortable_hist[i][0] for i, expected_count in enumerate(expected_counts)]
 
     # compute stdev and median (since median  is more outlier resistant)
     median_error = statistics.median(errors)
@@ -57,12 +68,18 @@ def check_zipfs_law(word_histogram, n = 4, verbose=True):
             remaining_words[sortable_hist[i][1]] = sortable_hist[i][0]
     return remaining_words
 
-def get_word_histogram(text_words):
+# NOTE: stemming may be a good way to reduce amount of words to get more actionable datasets
+# by default we apply it to the pruned dataset, but not to the raw one
+def get_word_histogram(text_words, stemm=False):
+    if stemm:
+        porter_stemmer = PorterStemmer()
     d = enchant.Dict("en_US")
     word_hist = {}
     for word in text_words:
         # prune all non english words
         if d.check(word) and not (len(word) == 1 and not (word == "a" or word =="i")):
+            if stemm:
+                word = porter_stemmer.stem(word)
             if word in word_hist.keys():
                 word_hist[word] += 1
             else:
@@ -105,6 +122,22 @@ def join_word_hists(word_hists, union=True):
             else:
                 joined_word_hist[word] = 0
         joined_word_hists.append(joined_word_hist)
+
+    words = joined_word_hists[0].keys()
+    sum_dict = {}
+    for word_hist in joined_word_hists:
+        if word_hist.keys() != words:
+            print("## Word misalignment between supposedly joinable word hists ##")
+        for word in word_hist.keys():
+            if word in sum_dict.keys():
+                sum_dict[word] += word_hist[word]
+            else:
+                sum_dict[word] = word_hist[word]
+    for word in sum_dict.keys():
+        if sum_dict[word] <= 0:
+            print("## issue in join ##")
+            print(f"word {word} has zero occurences")
+
     return joined_word_hists
             
 def transform_to_csv(data_handles, histograms, sentence_lengths):
@@ -147,12 +180,20 @@ def generate_wordhist_csv(sentence_lists, data_handles):
         # get word histogram, excluding the sentences determined as abnormal
         pruned_text = append_sentences(pruned_sentences)
         pruned_words = nltk.tokenize.word_tokenize(pruned_text, language='english')
-        pruned_word_hist = check_zipfs_law(get_word_histogram(pruned_words))
+        pruned_word_hist = check_zipfs_law(get_word_histogram(pruned_words, stemm=True))
         pruned_word_hists.append(pruned_word_hist)
 
         # get overall word histogram
         words = nltk.tokenize.word_tokenize(raw_text, language='english')
         word_hist = get_word_histogram(words)
+        for word in word_hist.keys():
+            if word_hist[word] == 0:
+                print("## Issue in word hist generation ##")
+                print(f"word {word} has count zero")
+        for word in pruned_word_hist.keys():
+            if word_hist[word] == 0:
+                print("## Issue in pruned word hist generation ##")
+                print(f"word {word} has count zero")
         word_hists.append(word_hist)
 
 
