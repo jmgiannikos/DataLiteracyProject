@@ -1,0 +1,110 @@
+Distilling the knowledge in a neural network; G Hinton, O Vinyals, J Dean
+Reducing the dimensionality of data with neural networks; G Hinton, RR Salakhutdinov
+A fast learning algorithm for deep belief nets; G Hinton, S Osindero, YW Teh
+Deep neural networks for acoustic modeling in speech recognition: The shared views of four research groups; G Hinton, L Deng, D Yu, GE Dahl, AR Mohamed, N Jaitly, A Senior, V Vanhoucke, P Nguyen, T N Sainath, B Kingsbury
+Improving neural networks by preventing co-adaptation of feature detectors; G Hinton, N Srivastava, A Krizhevsky, I Sutskever, RR Salakhutdinov
+Training products of experts by minimizing contrastive divergence; G Hinton
+A practical guide to training restricted Boltzmann machines; G Hinton
+Connectionist learning procedures; G Hinton
+Neural networks for machine learning lecture 6a overview of mini-batch gradient descent; G Hinton, N Srivastava, K Swersky
+Stochastic neighbor embedding; G Hinton, S Roweis
+Learning and relearning in Boltzmann machines; G Hinton, TJ Sejnowski
+Distributed representations; G Hinton, JL McClelland, DE Rumelhart
+Autoencoders, minimum description length and Helmholtz free energy; G Hinton, R Zemel
+Transforming auto-encoders; G Hinton, A Krizhevsky, SD Wang
+How learning can guide evolution; G Hinton, SJ Nowlan
+Keeping the neural networks simple by minimizing the description length of the weights; G Hinton, D Van Camp
+Learning distributed representations of concepts; G Hinton
+Parallel models of associative memory; G Hinton, JA Anderson
+The" wake-sleep" algorithm for unsupervised neural networks; GE Hinton, P Dayan, BJ Frey, RM Neal
+Learning multiple layers of representation; G Hinton
+Matrix capsules with EM routing; G Hinton, S Sabour, N Frosst
+Deep belief networks; G Hinton
+Lesioning an attractor network: investigations of acquired dyslexia; G Hinton, T Shallice
+Unsupervised learning: foundations of neural computation; G Hinton, TJ Sejnowski
+Optimal perceptual inference; G Hinton, TJ Sejnowski
+Boltzmann machines: Constraint satisfaction networks that learn; G Hinton, TJ Sejnowski, DH Ackley
+Visualizing data using t-SNE; G Hinton, L van der Maaten
+Deep learning—a technology with the potential to transform health care; G Hinton
+How neural networks learn from experience; G Hinton
+Replicated softmax: an undirected topic model; GE Hinton, RR Salakhutdinov
+To recognize shapes, first learn to generate images; G Hinton
+The forward-forward algorithm: Some preliminary investigations; G Hinton
+Modeling the manifolds of images of handwritten digits; G Hinton, P Dayan, M Revow
+Mapping part-whole hierarchies into connectionist networks; G Hinton
+Implementing semantic networks in parallel hardware; G Hinton
+Parallel distributed processing: Explorations in the microstructure of cognition; G Hinton, JL McClelland, DE Rumelhart
+Learning translation invariant recognition in a massively parallel networks; G Hinton
+Some demonstrations of the effects of structural descriptions in mental imagery; G Hinton
+Using fast weights to deblur old memories; G Hinton, DC Plaut
+Generative models for discovering sparse distributed representations; G Hinton, Z Ghahramani
+A parallel computation that assigns canonical object-based frames of reference; G Hinton
+How to represent part-whole hierarchies in a neural network; G Hinton
+Using deep belief nets to learn covariance kernels for Gaussian processes; G Hinton, RR Salakhutdinov
+Frames of reference and mental imagery; G Hinton, LM Parsons
+Deterministic Boltzmann learning performs steepest descent in weight-space; G Hinton
+Learning representations by recirculation; G Hinton, J McClelland
+Boltzmann machine; G Hinton
+Unsupervised discovery of nonlinear structure using contrastive backpropagation; G Hinton, S Osindero, M Welling, YW Teh
+A better way to pretrain deep boltzmann machines; G Hinton, RR Salakhutdinov
+Shape representation in parallel systems; G Hinton
+Adaptive elastic models for hand-printed character recognition; G Hinton, C Williams, MD Revow
+Analyzing cooperative computation; G Hinton, TJ Sejnowski
+Neural networks: Tricks of the trade; G Hinton, G Montavon, GB Orr
+Recognizing handwritten digits using mixtures of linear models; G Hinton, M Revow, P Dayan
+Representing part-whole hierarchies in connectionist networks; G Hinton
+Relaxation and its role in vision; G Hinton
+Discovering binary codes for documents by learning deep generative models; G Hinton, R Salakhutdinov
+Learning to represent visual input; G Hinton
+Parallel computations for controlling an arm; G Hinton
+Scene-based and viewer-centered representations for comparing shapes; G Hinton, LM Parsons
+Shape recognition and illusory conjunctions; G Hinton, KJ Lang
+Simulating brain damage; G Hinton, DC Plaut, T Shallice
+Where do features come from; G Hinton
+Connectionist symbol processing; G Hinton
+Improving neural networks by preventing co-adaptation of feature detectors; G Hinton, N Srivastava, A Krizhevsky, S Ilya, R Salakhutdinov
+Preface to the special issue on connectionist symbol processing; G Hinton
+System and method for addressing overfitting in a neural network; G Hinton, A Krizhevsky, I Sutskever, N Srivastva
+What kind of graphical model is the brain; G Hinton
+Learning to parse images; G Hinton, Z Ghahramani, YW Teh
+The bootstrap Widrow-Hoff rule as a cluster-formation algorithm; G Hinton, SJ Nowlan
+Spiking boltzmann machines; G Hinton, A Brown
+Spatial Coherence as an Internal Teacher for a Neural Network; G Hinton
+A hierarchical community of experts; G Hinton, B Sallans, Z Ghahramani
+Discovering multiple constraints that are frequently approximately satisfied; G Hinton, YW Teh
+An unsupervised learning procedure that discovers surfaces in random-dot stereograms; G Hinton, S Becker
+Using relaxation to find a puppet; G Hinton
+Learning causally linked markov random fields; G Hinton, S Osindero, K Bao
+Computation by neural networks; G Hinton
+The ups and downs of Hebb synapses; G Hinton
+Machine learning for neuroscience; G Hinton
+A new view of ICA; G Hinton, M Welling, YW Teh, S Osindero
+An efficient learning procedure for deep Boltzmann machines; G Hinton, R Salakhutdinov
+Does the brain do inverse graphics; G Hinton, A Krizhevsky, N Jaitly, T Tieleman, Y Tang
+Imagery without arrays; G Hinton
+Learning multiple layers of features from tiny images; G Hinton, A Krizhevsky
+Using pairs of data-points to define splits for decision trees; G Hinton, M Revow
+Parallel Distributed Processing; G Hinton, T Sejnowski, DE Rumelhart, JL McClelland
+A better way to learn features: technical perspective; G Hinton
+The Helmholtz machine through time; G Hinton, P Dayan, A To, R Neal
+The role of spatial working memory in shape perception; G Hinton
+Will digital intelligence replace biological intelligence; G Hinton
+Minimizing description length in an unsupervised neural network; G Hinton, RS Zemel
+Neural network architectures for artificial intelligence; G Hinton
+Inferring the meaning of direct perception; G Hinton
+The next generation of neural networks; G Hinton
+Training many small hidden markov models; G Hinton, AD Brown
+Taking inverse graphics seriously; G Hinton
+Modeling high-dimensional data by combining simple experts; G Hinton
+Mental simulation; G Hinton
+The horizontal—vertical delusion; G Hinton
+Non-linear dimensionality reduction; G Hinton
+Implementing Semantic Networks in Parallel Hardware; G Hinton
+Recent developments in deep learning; G Hinton
+Greedy layer-wise algorithm; G Hinton
+Simplifying neural networks by soft weight sharing; G Hinton, S Nowlan
+Parallel computation and the mass-spring model of motor control; G Hinton, P Smolensky
+Phoneme recognition: neural networks vs hidden markov models; G Hinton, IC Shikano, A Waibel, T Hanazawa, K Lang
+Descent in Weight-Space; G Hinton
+Learning Population Codes by Minimizing Description Length; G Hinton
+The Development of the Time-Delayed Neural Network Architecture; G Hinton, JL Mcclelland

@@ -1,0 +1,27 @@
+Perspective: composition–structure–property mapping in high-throughput experiments: turning data into knowledge; JR Hattrick-Simpers, JM Gregoire, AG Kusne
+A simple constrained machine learning model for predicting high-pressure-hydrogen-compressor materials; JR Hattrick-Simpers, K Choudhary, C Corgnale
+Combinatorial investigation of magnetostriction in Fe–Ga and Fe–Ga–Al; JR Hattrick-Simpers, D Hunter, CM Craciunescu, KS Jang, M Murakami, J Cullen, M Wuttig, I Takeuchi, SE Lofland, L Benderksy, N Woo, RB Van Dover, T Takahashi, Y Furuya
+The materials super highway: integrating high-throughput experimentation into mapping the catalysis materials genome; JR Hattrick-Simpers, C Wen, J Lauterbach
+Raman spectroscopic observation of dehydrogenation in ball-milled LiNH2–LiBH4–MgH2 nanoparticles; JR Hattrick-Simpers, JE Maslar, MU Niemann, C Chiu, SS Srinivasan, EK Stefanakos, L Bendersky
+High-throughput screening of magnetic properties of quenched metallic-alloy thin-film composition spreads; JR Hattrick-Simpers, C Jun, M Murakami, A Orozco, L Knauss, RJ Booth, EW Greve, SE Lofland, M Wuttig, I Takeuchi
+An open combinatorial diffraction dataset including consensus human and machine learning labels with quantified uncertainty for training new machine learning models; JR Hattrick-Simpers, B DeCost, AG Kusne, H Joress, W Wong-Ng, DL Kaiser, A Zakutayev, C Phillips, S Sun, J Thapa, H Yu, I Takeuchi, T Buonassisi
+An inter-laboratory study of Zn–Sn–Ti–O thin films using high-throughput experimental methods; JR Hattrick-Simpers, A Zakutayev, SC Barron, ZT Trautt, N Nguyen, K Choudhary, B DeCost, C Phillips, A G Kusne, F Yi, A Mehta, I Takeuchi, JD Perkins, ML Green
+Demonstration of magnetoelectric scanning probe microscopy; JR Hattrick-Simpers, L Dai, M Wuttig, I Takeuchi, E Quandt
+Designing durable, sustainable, high-performance materials for clean energy infrastructure; JR Hattrick-Simpers, K Li, M Greenwood, R Black, J Witt, M Kozdras, X Pang, O Ozcan
+Observation of phase transitions in hydrogenated Yttrium films via normalized infrared emissivity; JR Hattrick-Simpers, K Wang, L Cao, C Chiu, E Heilweil, RG Downing, LA Bendersky
+Optical cell for combinatorial in situ Raman spectroscopic measurements of hydrogen storage materials at high pressures and temperatures; JR Hattrick-Simpers, WS Hurst, SS Srinivasan, JE Maslar
+A combinatorial characterization scheme for high-throughput investigations of hydrogen storage materials; JR Hattrick-Simpers, Z Tan, H Oguchi, C Chiu, EJ Heilweil, JE Maslar, LA Bendersky
+Aggressively optimizing validation statistics can degrade interpretability of data-driven materials models; JR Hattrick-Simpers, B DeCost, H Joress, N Persson, K Lei
+How Robots Could Teach Us to Trust AI; JR Hattrick-Simpers
+Techno–Economic Analysis Constrained Machine Learning Predictions of Materials for High Pressure Hydrogen Compression; JR Hattrick-Simpers, K Choudhary, C Corgnale
+How do we combine high-throughput theory, experimentation and data science to map a materials genome in real time?; JR Hattrick-Simpers, AG Kusne
+The Role of Morphology in Promoting Self-healing in Cobalt Nanomaterials; JR Hattrick-Simpers
+Spectral imaging for the discovery of novel catalytic materials using high-throughput screening; JR Hattrick-Simpers, J Bedenbaugh, S Kim, S Salim, J Ashok, J Lauterbach
+Development of a combinatorial characterization scheme for high-throughput investigations of hydrogen storage materials; JR Hattrick-Simpers, Z Tan, H Oguchi, C Chiu, EJ Heilweil, JE Maslar, LA Bendersky
+Applications of high-throughput screening tools für thermoelectric materials; JR Hattrick-Simpers
+An infrared imaging high-throughput combinatorial method for investigating new phase formation and hydrogen storage capacities of thin films; JR Hattrick-Simpers, LA Bendersky, EJ Heilweil, H Oguchi, I Takeuchi
+Combinatorial Exploration of Magnetostriction of FeGaM Ternary Alloys; JR Hattrick-Simpers, KS Jang, SE Lofland, N Woo, B Van Dover, M Wuttig, I Takeuchi
+Systematic Investigation of Exchange Coupling in Thickness Gradient Fe/Sm-Co and Co/Sm-Co Magnetic Bilayers; JR Hattrick-Simpers, JP Liu, I Takeuchi, M Yu
+Composition–Structure–Property Mapping in High-Throughput Experiments: Turning Data into Knowledge; JR Hattrick-Simpers, J Gregoire, AG Kusne
+Molecular Systems Design and Engineering; JR Hattrick-Simpers, K Choudharya, C Corgnaleb
+

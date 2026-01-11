@@ -1,0 +1,23 @@
+Entropy search for information-efficient global optimization; P Hennig, CJ Schuler
+Probabilistic numerics and uncertainty in computations; P Hennig, MA Osborne, M Girolami
+Probabilistic Numerics: Computation as Machine Learning; P Hennig, MA Osborne, HP Kersting
+Quasi-Newton methods: A new direction; P Hennig, M Kiefel
+Topic models; P Hennig, D Stern, T Graepel, R Herbrich
+Probabilistic interpretation of linear solvers; P Hennig
+Kernel topic models; P Hennig, D Stern, R Herbrich, T Graepel
+Probabilistic solutions to differential equations and their application to Riemannian statistics; P Hennig, S Hauberg
+Fast probabilistic optimization from noisy gradients; P Hennig
+Point-spread functions for backscattered imaging in the scanning electron microscope; P Hennig, W Denk
+Optimal reinforcement learning for Gaussian systems; P Hennig
+Exact sampling from determinantal point processes; P Hennig, R Garnett
+Approximate inference in graphical models; P Hennig
+Animating samples from Gaussian distributions; P Hennig
+Coherent inference on optimal play in game trees; P Hennig, D Stern, T Graepel
+Expectation propagation on the maximum of correlated normal variables; P Hennig
+Bayesian quadratic reinforcement learning; P Hennig, D Stern, T Graepel
+Probabilistic numerical methods-from theory to implementation; P Hennig, ICF Ipsen, M Mahsereci, TJ Sullivan
+Probabilistic Numerical Analysis in Riemannian Statistics; P Hennig, S Hauberg
+Previous Seminars in Computational Engineering Contact: Kate Nelson CCE Headquarters 77 Massachusetts Avenue; P Hennig
+Information-Greedy Global Optimization; P Hennig, CJ Schuler
+Gaussian Approximations for Discrete Bayesian Reinforcement Learning; P Hennig, DH Stern, T Graepel
+Monte Carlo Temperature Discovery Search for Combinatorial Games; P Hennig
