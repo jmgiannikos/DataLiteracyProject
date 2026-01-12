@@ -9,8 +9,6 @@ Machine learning for industrial processes: Forecasting amine emissions from a ca
 Making molecules vibrate: Interactive web environment for the teaching of infrared spectroscopy; KM Jablonka, L Patiny, B Smit
 A data-driven perspective on the colours of metal–organic frameworks; KM Jablonka, SM Moosavi, M Asgari, C Ireland, L Patiny, B Smit
 Connecting lab experiments with computer experiments: Making routine simulations routine; KM Jablonka, M Zasso, L Patiny, N Marzari, G Pizzi, B Smit, AV Yakutovich
-Grundlagen der Thermodynamik für Studierende der Chemie; KM Jablonka
 Vision language models excel at perception but struggles with scientific reasoning; KM Jablonka, NM Krishnan
 A reproducibility study of Augmenting Genetic Algorithms with Deep Neural Networks for Exploring the Chemical Space; KM Jablonka, F Mcilwaine, S Garcia, B Smit, B Yoo
 Toward data-driven materials design: From atoms to pilot plants; KM Jablonka
-Vorrichtung zur katalytischen, photochemischen Aufspaltung von Wasser zur Gewinnung von Wasserstoff; KM Jablonka
