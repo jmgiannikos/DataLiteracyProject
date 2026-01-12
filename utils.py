@@ -65,7 +65,9 @@ def import_from_txt(path):
         author = os.path.basename(author_file)[:-4]
         paper_dict_list = []
         for paper in papers:
-            paper_dict = {'title': paper.split(';')[0], 'authors': paper.split(';')[1].split(',')}
-            paper_dict_list = paper_dict_list + [paper_dict]
+            # failsafe, because it seems like some of the loaded txt descriptions have incorrect format
+            if len(paper.split(';')) >= 2:
+                paper_dict = {'title': paper.split(';')[0], 'authors': paper.split(';')[1].split(',')}
+                paper_dict_list = paper_dict_list + [paper_dict]
         author_paper_dict[author] = paper_dict_list
     return author_paper_dict

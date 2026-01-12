@@ -269,7 +269,7 @@ def plot_author_wise_synonym_prefernece(synonyms, dataframe):
 
         width = 0.5
         fig, ax = plt.subplots()
-        bottom = np.zeros(3)
+        bottom = np.zeros(len(authors))
 
         for i, word_prevalence in enumerate(author_preference_distribution):
             p = ax.bar(authors, word_prevalence, width, label=synonyms[i], bottom=bottom)

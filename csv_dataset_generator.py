@@ -191,7 +191,7 @@ def generate_wordhist_csv(sentence_lists, data_handles):
                 print("## Issue in word hist generation ##")
                 print(f"word {word} has count zero")
         for word in pruned_word_hist.keys():
-            if word_hist[word] == 0:
+            if pruned_word_hist[word] == 0:
                 print("## Issue in pruned word hist generation ##")
                 print(f"word {word} has count zero")
         word_hists.append(word_hist)

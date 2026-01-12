@@ -5,27 +5,45 @@ from tex_parsing import process_tex_source
 from csv_dataset_generator import generate_wordhist_csv, generate_sentence_json
 import csv
 import json
+import pickle
+import os
 
 HTML_DOC_PATH = "/home/jan-malte/DataLiteracyProject/authortxts"
 CSV_FILE_PATHS= ["./union_pruned.csv", "./inter_pruned.csv", "./union_raw.csv", "./inter_raw.csv"] # NOTE: must have exactly 4 values, that are valid file paths
 JSN_FILE_PATHS = ["./pruned.json", "./raw.json"]
+DOWNLOAD_REGISTRY_PATH = "./downloaded_registry/"
 
 
 def process_articles(articles, author_handle, verbose=True):
+    if os.path.isfile(DOWNLOAD_REGISTRY_PATH + f"{author_handle}.json"):
+        with open(DOWNLOAD_REGISTRY_PATH + f"{author_handle}.json", 'r') as f:
+            downloaded_files_registry = json.load(f)
+    else:
+        downloaded_files_registry = {}
+        empty_registry = True
+
     i = 0
     e = 0
     article_handles = []
     sentence_lists = []
     for article in articles:
         try:
-            if verbose:
-                print(f"Searching arxiv for article {i}...")
-            arxiv_search_result = search_arxiv(article)
-            if verbose:
-                print("Getting ID...")
-            paper_arxiv_id = arxiv_search_result.entry_id
-            if verbose:
-                print("Downloading...")
+            if not empty_registry and article["title"] in downloaded_files_registry.keys():
+                if verbose:
+                    print(f"Article {i} already downloaded.")
+                paper_arxiv_id = downloaded_files_registry[article]
+            else:
+                if verbose:
+                    print(f"Searching arxiv for article {i}...")
+                arxiv_search_result = search_arxiv(article)
+                if verbose:
+                    print("Getting ID...")
+                paper_arxiv_id = arxiv_search_result.entry_id
+
+                # register downloaded paper. Even if download fails, we dont reattempt. TODO: maybe implement this better
+                downloaded_files_registry[article["title"]] = paper_arxiv_id
+                if verbose:
+                    print("Downloading...")
 
             zip_target_path = f"./tex_sources/{author_handle}"
             realize_path(zip_target_path, overwrite=False)
@@ -35,13 +53,15 @@ def process_articles(articles, author_handle, verbose=True):
                 if verbose:
                     print("Getting Document String...")
 
-                processed_txt_path = f"./processed_tex_sources/{author_handle}/"
+                processed_txt_path = f"./processed_tex_sources/{author_handle}"
                 realize_path(processed_txt_path, overwrite=False)
-                sentences, headings = process_tex_source(zip_path, processed_txt_path, verbose=verbose)
+                paper_arxiv_id = sanitize_article_id(paper_arxiv_id)
+                # NOTE: The name passed in processed_txt_path is incomplete and leads to incorrect file seperation. The file identifier is missing
+                sentences, headings = process_tex_source(zip_path, processed_txt_path+f"/{strip_entry_id(paper_arxiv_id)}", verbose=verbose)
 
                 # collect sentence outputs and handles
                 sentence_lists.append(sentences)
-                article_handles.append(f"{author_handle}/{strip_entry_id(sanitize_article_id(paper_arxiv_id))}")
+                article_handles.append(f"{author_handle}/{strip_entry_id(paper_arxiv_id)}")
 
                 if verbose:
                     print(f"Processing article {i} with ID {paper_arxiv_id} successful!")
@@ -58,6 +78,12 @@ def process_articles(articles, author_handle, verbose=True):
         i += 1
     if verbose:
         print(f"Processing of {e} out of {i} articles failed")
+
+    realize_path(DOWNLOAD_REGISTRY_PATH, overwrite=False)
+    registry_str = json.dumps(downloaded_files_registry)
+    with open(DOWNLOAD_REGISTRY_PATH + f"{author_handle}.json", "w") as f:
+        f.write(registry_str)
+
     return sentence_lists, article_handles
 
 
@@ -65,7 +91,7 @@ def main():
     author_paper_dict = import_from_txt(HTML_DOC_PATH)
     global_sentence_lists = []
     global_article_handles = []
-    
+
     for author in author_paper_dict:
         articles = author_paper_dict[author]
         sentence_lists, article_handles = process_articles(articles, author)
