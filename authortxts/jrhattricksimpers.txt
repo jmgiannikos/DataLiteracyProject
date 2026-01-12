@@ -24,4 +24,3 @@ Combinatorial Exploration of Magnetostriction of FeGaM Ternary Alloys; JR Hattri
 Systematic Investigation of Exchange Coupling in Thickness Gradient Fe/Sm-Co and Co/Sm-Co Magnetic Bilayers; JR Hattrick-Simpers, JP Liu, I Takeuchi, M Yu
 Composition–Structure–Property Mapping in High-Throughput Experiments: Turning Data into Knowledge; JR Hattrick-Simpers, J Gregoire, AG Kusne
 Molecular Systems Design and Engineering; JR Hattrick-Simpers, K Choudharya, C Corgnaleb
-
