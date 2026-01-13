@@ -2,11 +2,6 @@ import os
 import shutil
 import json
 
-def sanitize_article_id(article_id):
-    return article_id.replace(".", "_")
-
-def strip_entry_id(arxiv_entry_id):
-    return arxiv_entry_id.split("/")[-1]
 
 def realize_path(path, overwrite=True):
     splitpath = path.split("/")
@@ -26,8 +21,7 @@ def realize_path(path, overwrite=True):
         else:
             os.mkdir(current_subpath)
 
-# currently allows for recursive call, but assumes that even in a multi dir environment the
-# individual file handles are unique. TODO: fix this so duplicate data handles cannot occur.
+
 def import_dataset(dataset_location, file_types=[], recursive=False):
     data_dir_contents = os.listdir(dataset_location)
     data_contents = []
@@ -56,16 +50,9 @@ def import_dataset(dataset_location, file_types=[], recursive=False):
     return data_contents, data_handles
 
 
-def import_from_txt(path):
-    author_paper_dict = {}
-    author_file_list = os.listdir(path)
-    for author_file in author_file_list:
-        author_file_loc = os.path.join(path, author_file)
-        papers = open(author_file_loc).read().splitlines()
-        author = os.path.basename(author_file)[:-4]
-        paper_dict_list = []
-        for paper in papers:
-            paper_dict = {'title': paper.split(';')[0], 'authors': paper.split(';')[1].split(',')}
-            paper_dict_list = paper_dict_list + [paper_dict]
-        author_paper_dict[author] = paper_dict_list
-    return author_paper_dict
+def sanitize_article_id(article_id):
+    return article_id.replace(".", "_")
+
+
+def strip_entry_id(arxiv_entry_id):
+    return arxiv_entry_id.split("/")[-1]

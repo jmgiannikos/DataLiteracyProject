@@ -1,6 +1,8 @@
 import arxiv
 import urllib
 from utils import sanitize_article_id
+import time
+
 
 def search_arxiv(paper, client=arxiv.Client()):
     search = arxiv.Search(
@@ -10,7 +12,9 @@ def search_arxiv(paper, client=arxiv.Client()):
     )
     return list(client.results(search))[0]
 
+
 def download_source(article_id, target_path):
+    time.sleep(15)
     download_link = f"https://arxiv.org/src/{article_id}"
     urllib.request.urlretrieve(download_link, f"{target_path}/{sanitize_article_id(article_id)}")
     return f"{target_path}/{sanitize_article_id(article_id)}"

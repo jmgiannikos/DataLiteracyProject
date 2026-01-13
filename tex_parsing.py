@@ -7,6 +7,7 @@ from pylatexenc.latex2text import LatexNodes2Text
 import nltk
 from utils import import_dataset
 
+
 def unzip_source_file(source_file_name, staging_dir="./staging"):
     # delete staging folder if it exists, so that we dont mix files from different articles
     if os.path.exists(staging_dir):
@@ -18,16 +19,19 @@ def unzip_source_file(source_file_name, staging_dir="./staging"):
 
     return staging_dir
 
+
 def get_tex_string(tex_strings):
     tex_string = ""
     for tex_substring in tex_strings:
         tex_string = tex_string + ".".join(tex_substring) # Assume that each file ending also ends any sentences that have not been ended and insert an extra "." to make sure later parsing catches that. Relevant for sentence length stats
     return tex_string
 
+
 def preprocess_tex_string(tex_string):
     for rule in TEX_PARSING_RULES_LIST:
         tex_string = rule(tex_string)
     return tex_string
+
 
 def postprocess_tex_string(tex_string):
     tex_string = re.sub(r"< g r a p h i c s >", "", tex_string)
@@ -36,12 +40,14 @@ def postprocess_tex_string(tex_string):
     tex_string = tex_string.lower()
     return tex_string
 
+
 def get_sentences(string):
     string = re.sub(".*§ .*", "", string)
     sentences =  nltk.tokenize.sent_tokenize(string, language='english')
     return sentences
 
-def process_tex_source(source_file_name, target_file_name, verbose=True):
+
+def process_tex_source(source_file_name, target_file_name, article_id, verbose=True):
     # fetching tex source
     if verbose:
         print("Fetching source file...")
@@ -62,7 +68,7 @@ def process_tex_source(source_file_name, target_file_name, verbose=True):
     headings = re.findall("§ .*", doc_string)
     headless_text = re.sub(".*§ .*", "", doc_string)
 
-    with open(target_file_name + ".txt", "w", encoding="utf-8") as txtfile:
+    with open(target_file_name + article_id + ".txt", "w", encoding="utf-8") as txtfile:
         txtfile.write(doc_string)
 
     # get sentences and sentence, lengths
