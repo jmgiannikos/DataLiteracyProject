@@ -56,3 +56,8 @@ def sanitize_article_id(article_id):
 
 def strip_entry_id(arxiv_entry_id):
     return arxiv_entry_id.split("/")[-1]
+
+
+def normalize_name(name: str) -> str:
+    # Very simple normalization: lowercase, collapse spaces
+    return " ".join(name.lower().split())
