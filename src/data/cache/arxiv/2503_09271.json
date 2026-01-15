@@ -1,0 +1,27 @@
+{
+  "arxiv_id": "2503.09271",
+  "found": true,
+  "title": "DitHub: A Modular Framework for Incremental Open-Vocabulary Object Detection",
+  "authors": [
+    "Chiara Cappellino",
+    "Gianluca Mancusi",
+    "Matteo Mosconi",
+    "Angelo Porrello",
+    "Simone Calderara",
+    "Rita Cucchiara"
+  ],
+  "first_author": "Chiara Cappellino",
+  "summary": "Open-Vocabulary object detectors can generalize to an unrestricted set of categories through simple textual prompting. However, adapting these models to rare classes or reinforcing their abilities on multiple specialized domains remains essential. While recent methods rely on monolithic adaptation strategies with a single set of weights, we embrace modular deep learning. We introduce DitHub, a framework designed to build and maintain a library of efficient adaptation modules. Inspired by Version Control Systems, DitHub manages expert modules as branches that can be fetched and merged as needed. This modular approach allows us to conduct an in-depth exploration of the compositional properties of adaptation modules, marking the first such study in Object Detection. Our method achieves state-of-the-art performance on the ODinW-13 benchmark and ODinW-O, a newly introduced benchmark designed to assess class reappearance. For more details, visit our project page: https://aimagelab.github.io/DitHub/",
+  "primary_category": "cs.CV",
+  "categories": [
+    "cs.CV",
+    "cs.LG"
+  ],
+  "published": "2025-03-12T11:15:34+00:00",
+  "updated": "2025-10-22T09:08:21+00:00",
+  "doi": null,
+  "journal_ref": null,
+  "comment": "Accepted at the 39th Conference on Neural Information Processing Systems (NeurIPS 2025)",
+  "pdf_url": "https://arxiv.org/pdf/2503.09271v4",
+  "entry_id": "http://arxiv.org/abs/2503.09271v4"
+}

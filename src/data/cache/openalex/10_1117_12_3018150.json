@@ -1,0 +1,721 @@
+{
+  "id": "https://openalex.org/W4399658235",
+  "doi": "https://doi.org/10.1117/12.3018150",
+  "title": "Asgard/NOTT: water vapor and CO2 atmospheric dispersion compensation system",
+  "display_name": "Asgard/NOTT: water vapor and CO2 atmospheric dispersion compensation system",
+  "publication_year": 2024,
+  "publication_date": "2024-06-14",
+  "ids": {
+    "openalex": "https://openalex.org/W4399658235",
+    "doi": "https://doi.org/10.1117/12.3018150"
+  },
+  "language": "en",
+  "primary_location": {
+    "id": "doi:10.1117/12.3018150",
+    "is_oa": false,
+    "landing_page_url": "http://dx.doi.org/10.1117/12.3018150",
+    "pdf_url": null,
+    "source": null,
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Optical and Infrared Interferometry and Imaging IX",
+    "raw_type": "proceedings-article"
+  },
+  "type": "article",
+  "indexed_in": [
+    "arxiv",
+    "crossref"
+  ],
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://lirias.kuleuven.be/handle/20.500.12942/758018",
+    "any_repository_has_fulltext": false
+  },
+  "authorships": [
+    {
+      "author_position": "first",
+      "author": {
+        "id": "https://openalex.org/A5024274901",
+        "display_name": "Romain Laugier",
+        "orcid": "https://orcid.org/0000-0002-2215-9413"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": true,
+      "raw_author_name": "Romain Laugier",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5041770370",
+        "display_name": "Denis Defr\u00e8re",
+        "orcid": "https://orcid.org/0000-0003-3499-2506"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "Denis Defr\u00e8re",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5044187868",
+        "display_name": "Michael Ireland",
+        "orcid": "https://orcid.org/0000-0002-6194-043X"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "Michael J. Ireland",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5006839741",
+        "display_name": "Germain Garreau",
+        "orcid": "https://orcid.org/0000-0001-6282-1339"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "Germain Garreau",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5060123759",
+        "display_name": "Olivier Absil",
+        "orcid": "https://orcid.org/0000-0002-4006-6237"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "Olivier Absil",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5040732609",
+        "display_name": "A. Matter",
+        "orcid": null
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "Alexis Matter",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5055323394",
+        "display_name": "R. Petrov",
+        "orcid": "https://orcid.org/0000-0003-4759-6051"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "Romain G. Petrov",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5108137707",
+        "display_name": "P. B\u00e9rio",
+        "orcid": null
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "Philippe Berio",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5016960997",
+        "display_name": "Peter Tuthill",
+        "orcid": "https://orcid.org/0000-0001-7026-6291"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "Peter G. Tuthill",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5034268747",
+        "display_name": "Lucas Labadie",
+        "orcid": "https://orcid.org/0000-0001-5342-5713"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "Lucas Labadie",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5012978801",
+        "display_name": "Marc-Antoine Martinod",
+        "orcid": "https://orcid.org/0000-0002-0989-9302"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "Marc-Antoine Martinod",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "last",
+      "author": {
+        "id": "https://openalex.org/A5034268747",
+        "display_name": "Lucas Labadie",
+        "orcid": "https://orcid.org/0000-0001-5342-5713"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "Lucas Labadie",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "countries_distinct_count": 0,
+  "institutions_distinct_count": 12,
+  "corresponding_author_ids": [
+    "https://openalex.org/A5024274901"
+  ],
+  "corresponding_institution_ids": [],
+  "apc_list": null,
+  "apc_paid": null,
+  "fwci": 0.0,
+  "has_fulltext": false,
+  "cited_by_count": 0,
+  "citation_normalized_percentile": {
+    "value": 0.16358999,
+    "is_in_top_1_percent": false,
+    "is_in_top_10_percent": false
+  },
+  "cited_by_percentile_year": null,
+  "biblio": {
+    "volume": "9146",
+    "issue": null,
+    "first_page": "83",
+    "last_page": "83"
+  },
+  "is_retracted": false,
+  "is_paratext": false,
+  "is_xpac": false,
+  "primary_topic": {
+    "id": "https://openalex.org/T11012",
+    "display_name": "Gas Dynamics and Kinetic Theory",
+    "score": 0.7458000183105469,
+    "subfield": {
+      "id": "https://openalex.org/subfields/2604",
+      "display_name": "Applied Mathematics"
+    },
+    "field": {
+      "id": "https://openalex.org/fields/26",
+      "display_name": "Mathematics"
+    },
+    "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+    }
+  },
+  "topics": [
+    {
+      "id": "https://openalex.org/T11012",
+      "display_name": "Gas Dynamics and Kinetic Theory",
+      "score": 0.7458000183105469,
+      "subfield": {
+        "id": "https://openalex.org/subfields/2604",
+        "display_name": "Applied Mathematics"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/26",
+        "display_name": "Mathematics"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    },
+    {
+      "id": "https://openalex.org/T13200",
+      "display_name": "Spacecraft and Cryogenic Technologies",
+      "score": 0.7199000120162964,
+      "subfield": {
+        "id": "https://openalex.org/subfields/2202",
+        "display_name": "Aerospace Engineering"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/22",
+        "display_name": "Engineering"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    },
+    {
+      "id": "https://openalex.org/T11320",
+      "display_name": "Atmospheric Ozone and Climate",
+      "score": 0.7075999975204468,
+      "subfield": {
+        "id": "https://openalex.org/subfields/1902",
+        "display_name": "Atmospheric Science"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/19",
+        "display_name": "Earth and Planetary Sciences"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "https://openalex.org/keywords/dispersion",
+      "display_name": "Dispersion (optics)",
+      "score": 0.6817836761474609
+    },
+    {
+      "id": "https://openalex.org/keywords/compensation",
+      "display_name": "Compensation (psychology)",
+      "score": 0.6548287868499756
+    },
+    {
+      "id": "https://openalex.org/keywords/water-vapor",
+      "display_name": "Water vapor",
+      "score": 0.6345242857933044
+    },
+    {
+      "id": "https://openalex.org/keywords/materials-science",
+      "display_name": "Materials science",
+      "score": 0.5414341688156128
+    },
+    {
+      "id": "https://openalex.org/keywords/environmental-science",
+      "display_name": "Environmental science",
+      "score": 0.48886293172836304
+    },
+    {
+      "id": "https://openalex.org/keywords/meteorology",
+      "display_name": "Meteorology",
+      "score": 0.23561933636665344
+    },
+    {
+      "id": "https://openalex.org/keywords/optics",
+      "display_name": "Optics",
+      "score": 0.18857645988464355
+    },
+    {
+      "id": "https://openalex.org/keywords/physics",
+      "display_name": "Physics",
+      "score": 0.07304659485816956
+    }
+  ],
+  "concepts": [
+    {
+      "id": "https://openalex.org/C177562468",
+      "wikidata": "https://www.wikidata.org/wiki/Q182893",
+      "display_name": "Dispersion (optics)",
+      "level": 2,
+      "score": 0.6817836761474609
+    },
+    {
+      "id": "https://openalex.org/C2780023022",
+      "wikidata": "https://www.wikidata.org/wiki/Q1338171",
+      "display_name": "Compensation (psychology)",
+      "level": 2,
+      "score": 0.6548287868499756
+    },
+    {
+      "id": "https://openalex.org/C147534773",
+      "wikidata": "https://www.wikidata.org/wiki/Q190120",
+      "display_name": "Water vapor",
+      "level": 2,
+      "score": 0.6345242857933044
+    },
+    {
+      "id": "https://openalex.org/C192562407",
+      "wikidata": "https://www.wikidata.org/wiki/Q228736",
+      "display_name": "Materials science",
+      "level": 0,
+      "score": 0.5414341688156128
+    },
+    {
+      "id": "https://openalex.org/C39432304",
+      "wikidata": "https://www.wikidata.org/wiki/Q188847",
+      "display_name": "Environmental science",
+      "level": 0,
+      "score": 0.48886293172836304
+    },
+    {
+      "id": "https://openalex.org/C153294291",
+      "wikidata": "https://www.wikidata.org/wiki/Q25261",
+      "display_name": "Meteorology",
+      "level": 1,
+      "score": 0.23561933636665344
+    },
+    {
+      "id": "https://openalex.org/C120665830",
+      "wikidata": "https://www.wikidata.org/wiki/Q14620",
+      "display_name": "Optics",
+      "level": 1,
+      "score": 0.18857645988464355
+    },
+    {
+      "id": "https://openalex.org/C121332964",
+      "wikidata": "https://www.wikidata.org/wiki/Q413",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.07304659485816956
+    },
+    {
+      "id": "https://openalex.org/C11171543",
+      "wikidata": "https://www.wikidata.org/wiki/Q41630",
+      "display_name": "Psychoanalysis",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "https://openalex.org/C15744967",
+      "wikidata": "https://www.wikidata.org/wiki/Q9418",
+      "display_name": "Psychology",
+      "level": 0,
+      "score": 0.0
+    }
+  ],
+  "mesh": [],
+  "locations_count": 4,
+  "locations": [
+    {
+      "id": "doi:10.1117/12.3018150",
+      "is_oa": false,
+      "landing_page_url": "http://dx.doi.org/10.1117/12.3018150",
+      "pdf_url": null,
+      "source": null,
+      "license": null,
+      "license_id": null,
+      "version": "publishedVersion",
+      "is_accepted": true,
+      "is_published": true,
+      "raw_source_name": "Optical and Infrared Interferometry and Imaging IX",
+      "raw_type": "proceedings-article"
+    },
+    {
+      "id": "pmh:oai:lirias2repo.kuleuven.be:20.500.12942/758018",
+      "is_oa": true,
+      "landing_page_url": "https://lirias.kuleuven.be/handle/20.500.12942/758018",
+      "pdf_url": null,
+      "source": {
+        "id": "https://openalex.org/S4306401954",
+        "display_name": "Lirias (KU Leuven)",
+        "issn_l": null,
+        "issn": null,
+        "is_oa": false,
+        "is_in_doaj": false,
+        "is_core": false,
+        "host_organization": "https://openalex.org/I99464096",
+        "host_organization_name": "KU Leuven",
+        "host_organization_lineage": [
+          "https://openalex.org/I99464096"
+        ],
+        "host_organization_lineage_names": [],
+        "type": "repository"
+      },
+      "license": "other-oa",
+      "license_id": "https://openalex.org/licenses/other-oa",
+      "version": "acceptedVersion",
+      "is_accepted": true,
+      "is_published": false,
+      "raw_source_name": "Conference on Optical and Infrared Interferometry and Imaging IX, JAPAN, Yokohama, 17-22 June 2024",
+      "raw_type": "info:eu-repo/semantics/publishedVersion"
+    },
+    {
+      "id": "pmh:oai:arXiv.org:2407.17177",
+      "is_oa": true,
+      "landing_page_url": "http://arxiv.org/abs/2407.17177",
+      "pdf_url": "https://arxiv.org/pdf/2407.17177",
+      "source": {
+        "id": "https://openalex.org/S4306400194",
+        "display_name": "arXiv (Cornell University)",
+        "issn_l": null,
+        "issn": null,
+        "is_oa": true,
+        "is_in_doaj": false,
+        "is_core": false,
+        "host_organization": "https://openalex.org/I205783295",
+        "host_organization_name": "Cornell University",
+        "host_organization_lineage": [
+          "https://openalex.org/I205783295"
+        ],
+        "host_organization_lineage_names": [],
+        "type": "repository"
+      },
+      "license": null,
+      "license_id": null,
+      "version": "submittedVersion",
+      "is_accepted": false,
+      "is_published": false,
+      "raw_source_name": null,
+      "raw_type": "text"
+    },
+    {
+      "id": "pmh:oai:orbi.ulg.ac.be:2268/325892",
+      "is_oa": true,
+      "landing_page_url": "https://orbi.uliege.be/handle/2268/325892",
+      "pdf_url": null,
+      "source": {
+        "id": "https://openalex.org/S4306400651",
+        "display_name": "Open Repository and Bibliography (University of Li\u00e8ge)",
+        "issn_l": null,
+        "issn": null,
+        "is_oa": false,
+        "is_in_doaj": false,
+        "is_core": false,
+        "host_organization": "https://openalex.org/I157674565",
+        "host_organization_name": "University of Li\u00e8ge",
+        "host_organization_lineage": [
+          "https://openalex.org/I157674565"
+        ],
+        "host_organization_lineage_names": [],
+        "type": "repository"
+      },
+      "license": "other-oa",
+      "license_id": "https://openalex.org/licenses/other-oa",
+      "version": "submittedVersion",
+      "is_accepted": false,
+      "is_published": false,
+      "raw_source_name": "Optical and Infrared Interferometry and Imaging IX, 130952C (2024-08-28); SPIE Astronomical Telescopes + Instrumentation 2024, Yokohama, Japan [JP], 16-21 June 2024",
+      "raw_type": "editorial reviewed"
+    }
+  ],
+  "best_oa_location": {
+    "id": "pmh:oai:lirias2repo.kuleuven.be:20.500.12942/758018",
+    "is_oa": true,
+    "landing_page_url": "https://lirias.kuleuven.be/handle/20.500.12942/758018",
+    "pdf_url": null,
+    "source": {
+      "id": "https://openalex.org/S4306401954",
+      "display_name": "Lirias (KU Leuven)",
+      "issn_l": null,
+      "issn": null,
+      "is_oa": false,
+      "is_in_doaj": false,
+      "is_core": false,
+      "host_organization": "https://openalex.org/I99464096",
+      "host_organization_name": "KU Leuven",
+      "host_organization_lineage": [
+        "https://openalex.org/I99464096"
+      ],
+      "host_organization_lineage_names": [],
+      "type": "repository"
+    },
+    "license": "other-oa",
+    "license_id": "https://openalex.org/licenses/other-oa",
+    "version": "acceptedVersion",
+    "is_accepted": true,
+    "is_published": false,
+    "raw_source_name": "Conference on Optical and Infrared Interferometry and Imaging IX, JAPAN, Yokohama, 17-22 June 2024",
+    "raw_type": "info:eu-repo/semantics/publishedVersion"
+  },
+  "sustainable_development_goals": [],
+  "awards": [],
+  "funders": [],
+  "has_content": {
+    "grobid_xml": false,
+    "pdf": false
+  },
+  "referenced_works_count": 17,
+  "referenced_works": [
+    "https://openalex.org/W4244927098",
+    "https://openalex.org/W2079727328",
+    "https://openalex.org/W2018043684",
+    "https://openalex.org/W6649905332",
+    "https://openalex.org/W6842627202",
+    "https://openalex.org/W2783013714",
+    "https://openalex.org/W4298224921",
+    "https://openalex.org/W4382246850",
+    "https://openalex.org/W4285489925",
+    "https://openalex.org/W4298864575",
+    "https://openalex.org/W4391835815",
+    "https://openalex.org/W1992655382",
+    "https://openalex.org/W2092593075",
+    "https://openalex.org/W4317393277",
+    "https://openalex.org/W4391786943",
+    "https://openalex.org/W4231894488",
+    "https://openalex.org/W4253075654"
+  ],
+  "related_works": [
+    "https://openalex.org/W4246450666",
+    "https://openalex.org/W4388998267",
+    "https://openalex.org/W2898370298",
+    "https://openalex.org/W2137437058",
+    "https://openalex.org/W4396520874",
+    "https://openalex.org/W4390401159",
+    "https://openalex.org/W2744391499",
+    "https://openalex.org/W4230250635",
+    "https://openalex.org/W3041790586",
+    "https://openalex.org/W2018879842"
+  ],
+  "abstract_inverted_index": {
+    "sponsorship:": [
+      0
+    ],
+    "This": [
+      1
+    ],
+    "work": [
+      2
+    ],
+    "has": [
+      3,
+      18
+    ],
+    "received": [
+      4,
+      19
+    ],
+    "funding": [
+      5,
+      20
+    ],
+    "from": [
+      6,
+      21
+    ],
+    "the": [
+      7,
+      13,
+      22,
+      28,
+      50
+    ],
+    "Research": [
+      8,
+      24,
+      46
+    ],
+    "Foundation": [
+      9,
+      42
+    ],
+    "-Flanders": [
+      10,
+      43
+    ],
+    "(FWO)": [
+      11
+    ],
+    "under": [
+      12,
+      27,
+      49
+    ],
+    "grant": [
+      14
+    ],
+    "number": [
+      15
+    ],
+    "1234224N.": [
+      16
+    ],
+    "SCIFY": [
+      17
+    ],
+    "European": [
+      23,
+      29,
+      45,
+      51
+    ],
+    "Council": [
+      25,
+      47
+    ],
+    "(ERC)": [
+      26,
+      48
+    ],
+    "Union's": [
+      30
+    ],
+    "Horizon": [
+      31
+    ],
+    "2020": [
+      32
+    ],
+    "research": [
+      33
+    ],
+    "and": [
+      34
+    ],
+    "innovation": [
+      35
+    ],
+    "program": [
+      36
+    ],
+    "(grant": [
+      37
+    ],
+    "agreement": [
+      38
+    ],
+    "CoG": [
+      39
+    ],
+    "-866070).": [
+      40
+    ],
+    "(Research": [
+      41
+    ],
+    "(FWO)|1234224N,": [
+      44
+    ],
+    "Union|CoG": [
+      52
+    ],
+    "-866070)": [
+      53
+    ]
+  },
+  "counts_by_year": [],
+  "updated_date": "2025-12-26T23:08:49.675405",
+  "created_date": "2025-10-10T00:00:00"
+}

@@ -1,0 +1,2314 @@
+{
+  "id": "https://openalex.org/W2159317061",
+  "doi": "https://doi.org/10.1051/0004-6361/201219825",
+  "title": "The expanding dusty bipolar nebula around the nova V1280 Scorpi",
+  "display_name": "The expanding dusty bipolar nebula around the nova V1280 Scorpi",
+  "publication_year": 2012,
+  "publication_date": "2012-07-23",
+  "ids": {
+    "openalex": "https://openalex.org/W2159317061",
+    "doi": "https://doi.org/10.1051/0004-6361/201219825",
+    "mag": "2159317061"
+  },
+  "language": "en",
+  "primary_location": {
+    "id": "doi:10.1051/0004-6361/201219825",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.1051/0004-6361/201219825",
+    "pdf_url": "https://www.aanda.org/articles/aa/pdf/2012/09/aa19825-12.pdf",
+    "source": {
+      "id": "https://openalex.org/S205231332",
+      "display_name": "Astronomy and Astrophysics",
+      "issn_l": "0004-6361",
+      "issn": [
+        "0004-6361",
+        "1432-0746"
+      ],
+      "is_oa": false,
+      "is_in_doaj": true,
+      "is_core": true,
+      "host_organization": "https://openalex.org/P4310319748",
+      "host_organization_name": "EDP Sciences",
+      "host_organization_lineage": [
+        "https://openalex.org/P4310319748"
+      ],
+      "host_organization_lineage_names": [
+        "EDP Sciences"
+      ],
+      "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Astronomy &amp; Astrophysics",
+    "raw_type": "journal-article"
+  },
+  "type": "article",
+  "indexed_in": [
+    "arxiv",
+    "crossref",
+    "doaj"
+  ],
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_url": "https://www.aanda.org/articles/aa/pdf/2012/09/aa19825-12.pdf",
+    "any_repository_has_fulltext": false
+  },
+  "authorships": [
+    {
+      "author_position": "first",
+      "author": {
+        "id": "https://openalex.org/A5007221555",
+        "display_name": "O. Chesneau",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "O. Chesneau",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, UMR 7293, Univ. Nice Sophia-Antipolis, CNRS, Observatoire de la C\u00f4te d\u2019Azur, 06300 Nice, France",
+        "Laboratoire Lagrange, UMR 7293, Univ. Nice Sophia-Antipolis, CNRS, Observatoire de la C\u00f4te d'Azur, 06300 Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, UMR 7293, Univ. Nice Sophia-Antipolis, CNRS, Observatoire de la C\u00f4te d\u2019Azur, 06300 Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, UMR 7293, Univ. Nice Sophia-Antipolis, CNRS, Observatoire de la C\u00f4te d'Azur, 06300 Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5088644422",
+        "display_name": "E. Lagadec",
+        "orcid": "https://orcid.org/0000-0002-1335-5623"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I1321434546",
+          "display_name": "European Southern Observatory",
+          "ror": "https://ror.org/01qtasp15",
+          "country_code": "DE",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I1321434546"
+          ]
+        }
+      ],
+      "countries": [
+        "DE"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "E. Lagadec",
+      "raw_affiliation_strings": [
+        "European Southern Observatory, Karl-Schwarzschild-Strasse 2, 85748 Garching bei M\u00fcnchen, Germany"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "European Southern Observatory, Karl-Schwarzschild-Strasse 2, 85748 Garching bei M\u00fcnchen, Germany",
+          "institution_ids": [
+            "https://openalex.org/I1321434546"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5055272620",
+        "display_name": "M. Otulakowska-Hypka",
+        "orcid": "https://orcid.org/0000-0003-1564-7029"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210138771",
+          "display_name": "Nicolaus Copernicus Astronomical Center",
+          "ror": "https://ror.org/040r57n67",
+          "country_code": "PL",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I4210138771",
+            "https://openalex.org/I99542240"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I99542240",
+          "display_name": "Polish Academy of Sciences",
+          "ror": "https://ror.org/01dr6c206",
+          "country_code": "PL",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I99542240"
+          ]
+        }
+      ],
+      "countries": [
+        "PL"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Otulakowska-Hypka",
+      "raw_affiliation_strings": [
+        "N. Copernicus Astronomical Center, Polish Academy of Sciences, Bartycka 18, 00-716 Warsaw, Poland"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "N. Copernicus Astronomical Center, Polish Academy of Sciences, Bartycka 18, 00-716 Warsaw, Poland",
+          "institution_ids": [
+            "https://openalex.org/I4210138771",
+            "https://openalex.org/I99542240"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5101537752",
+        "display_name": "D. P. K. Banerjee",
+        "orcid": "https://orcid.org/0000-0003-4896-2543"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I121502294",
+          "display_name": "Physical Research Laboratory",
+          "ror": "https://ror.org/02p0p4q62",
+          "country_code": "IN",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I121502294"
+          ]
+        }
+      ],
+      "countries": [
+        "IN"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. P. K. Banerjee",
+      "raw_affiliation_strings": [
+        "Physical Research Laboratory, Navrangpura, Ahmedabad, Gujarat, India"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Physical Research Laboratory, Navrangpura, Ahmedabad, Gujarat, India",
+          "institution_ids": [
+            "https://openalex.org/I121502294"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5071129810",
+        "display_name": "C. E. Woodward",
+        "orcid": "https://orcid.org/0000-0001-6567-627X"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I130238516",
+          "display_name": "University of Minnesota",
+          "ror": "https://ror.org/017zqws13",
+          "country_code": "US",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I130238516"
+          ]
+        }
+      ],
+      "countries": [
+        "US"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C. E. Woodward",
+      "raw_affiliation_strings": [
+        "Minnesota Institute for Astrophysics, University of Minnesota, Minneapolis, MN 55455, USA"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Minnesota Institute for Astrophysics, University of Minnesota, Minneapolis, MN 55455, USA",
+          "institution_ids": [
+            "https://openalex.org/I130238516"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5054267411",
+        "display_name": "E. Harvey",
+        "orcid": "https://orcid.org/0000-0002-3014-3665"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "E. Harvey",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, UMR 7293, Univ. Nice Sophia-Antipolis, CNRS, Observatoire de la C\u00f4te d\u2019Azur, 06300 Nice, France",
+        "Laboratoire Lagrange, UMR 7293, Univ. Nice Sophia-Antipolis, CNRS, Observatoire de la C\u00f4te d'Azur, 06300 Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, UMR 7293, Univ. Nice Sophia-Antipolis, CNRS, Observatoire de la C\u00f4te d\u2019Azur, 06300 Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, UMR 7293, Univ. Nice Sophia-Antipolis, CNRS, Observatoire de la C\u00f4te d'Azur, 06300 Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5066305061",
+        "display_name": "A. Spang",
+        "orcid": "https://orcid.org/0000-0002-7838-1304"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Spang",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, UMR 7293, Univ. Nice Sophia-Antipolis, CNRS, Observatoire de la C\u00f4te d\u2019Azur, 06300 Nice, France",
+        "Laboratoire Lagrange, UMR 7293, Univ. Nice Sophia-Antipolis, CNRS, Observatoire de la C\u00f4te d'Azur, 06300 Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, UMR 7293, Univ. Nice Sophia-Antipolis, CNRS, Observatoire de la C\u00f4te d\u2019Azur, 06300 Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, UMR 7293, Univ. Nice Sophia-Antipolis, CNRS, Observatoire de la C\u00f4te d'Azur, 06300 Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5077171851",
+        "display_name": "P. Kervella",
+        "orcid": "https://orcid.org/0000-0003-0626-1749"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I204730241",
+          "display_name": "Universit\u00e9 Paris Cit\u00e9",
+          "ror": "https://ror.org/05f82e368",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I204730241"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210120578",
+          "display_name": "Laboratoire d\u2019\u00e9tudes spatiales et d\u2019instrumentation en astrophysique",
+          "ror": "https://ror.org/02eptjh02",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I1294671590",
+            "https://openalex.org/I204730241",
+            "https://openalex.org/I2746051580",
+            "https://openalex.org/I2800004676",
+            "https://openalex.org/I39804081",
+            "https://openalex.org/I4210120578",
+            "https://openalex.org/I4210148025"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I169173203",
+          "display_name": "D\u00e9l\u00e9gation Paris 7",
+          "ror": "https://ror.org/00bw5n526",
+          "country_code": "FR",
+          "type": "government",
+          "lineage": [
+            "https://openalex.org/I154526488",
+            "https://openalex.org/I169173203"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I2800004676",
+          "display_name": "Observatoire de Paris",
+          "ror": "https://ror.org/029nkcm90",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I2746051580",
+            "https://openalex.org/I2800004676"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I39804081",
+          "display_name": "Sorbonne Universit\u00e9",
+          "ror": "https://ror.org/02en5vm52",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I39804081"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I195731000",
+          "display_name": "Universit\u00e9 de Versailles Saint-Quentin-en-Yvelines",
+          "ror": "https://ror.org/03mkjjy25",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I195731000",
+            "https://openalex.org/I277688954"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P. Kervella",
+      "raw_affiliation_strings": [
+        "LESIA, Observatoire de Paris, CNRS UMR 8109, UPMC, Universit\u00e9 Paris Diderot, 5 place J. Janssen, 92195 Meudon, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "LESIA, Observatoire de Paris, CNRS UMR 8109, UPMC, Universit\u00e9 Paris Diderot, 5 place J. Janssen, 92195 Meudon, France",
+          "institution_ids": [
+            "https://openalex.org/I169173203",
+            "https://openalex.org/I4210120578",
+            "https://openalex.org/I195731000",
+            "https://openalex.org/I39804081",
+            "https://openalex.org/I204730241",
+            "https://openalex.org/I2800004676",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5069324182",
+        "display_name": "F. Millour",
+        "orcid": "https://orcid.org/0000-0002-9765-7783"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "F. Millour",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, UMR 7293, Univ. Nice Sophia-Antipolis, CNRS, Observatoire de la C\u00f4te d\u2019Azur, 06300 Nice, France",
+        "Laboratoire Lagrange, UMR 7293, Univ. Nice Sophia-Antipolis, CNRS, Observatoire de la C\u00f4te d'Azur, 06300 Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, UMR 7293, Univ. Nice Sophia-Antipolis, CNRS, Observatoire de la C\u00f4te d\u2019Azur, 06300 Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, UMR 7293, Univ. Nice Sophia-Antipolis, CNRS, Observatoire de la C\u00f4te d'Azur, 06300 Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5013836519",
+        "display_name": "N. Nardetto",
+        "orcid": "https://orcid.org/0000-0002-7399-0231"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "N. Nardetto",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, UMR 7293, Univ. Nice Sophia-Antipolis, CNRS, Observatoire de la C\u00f4te d\u2019Azur, 06300 Nice, France",
+        "Laboratoire Lagrange, UMR 7293, Univ. Nice Sophia-Antipolis, CNRS, Observatoire de la C\u00f4te d'Azur, 06300 Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, UMR 7293, Univ. Nice Sophia-Antipolis, CNRS, Observatoire de la C\u00f4te d\u2019Azur, 06300 Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, UMR 7293, Univ. Nice Sophia-Antipolis, CNRS, Observatoire de la C\u00f4te d'Azur, 06300 Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5019639264",
+        "display_name": "N. M. Ashok",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I121502294",
+          "display_name": "Physical Research Laboratory",
+          "ror": "https://ror.org/02p0p4q62",
+          "country_code": "IN",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I121502294"
+          ]
+        }
+      ],
+      "countries": [
+        "IN"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "N. M. Ashok",
+      "raw_affiliation_strings": [
+        "Physical Research Laboratory, Navrangpura, Ahmedabad, Gujarat, India"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Physical Research Laboratory, Navrangpura, Ahmedabad, Gujarat, India",
+          "institution_ids": [
+            "https://openalex.org/I121502294"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5016300535",
+        "display_name": "M. J. Barlow",
+        "orcid": "https://orcid.org/0000-0002-3875-1171"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I45129253",
+          "display_name": "University College London",
+          "ror": "https://ror.org/02jx3x895",
+          "country_code": "GB",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I124357947",
+            "https://openalex.org/I45129253"
+          ]
+        }
+      ],
+      "countries": [
+        "GB"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. J. Barlow",
+      "raw_affiliation_strings": [
+        "Department of Physics and Astronomy, University College London, Gower Street, London, WC1E 6BT, UK"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Department of Physics and Astronomy, University College London, Gower Street, London, WC1E 6BT, UK",
+          "institution_ids": [
+            "https://openalex.org/I45129253"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5061419414",
+        "display_name": "M. F. Bode",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I63098007",
+          "display_name": "Liverpool John Moores University",
+          "ror": "https://ror.org/04zfme737",
+          "country_code": "GB",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I63098007"
+          ]
+        }
+      ],
+      "countries": [
+        "GB"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Bode",
+      "raw_affiliation_strings": [
+        "Astrophysics Research Institute, Liverpool John Moores University, Birkenhead, CH41 1LD, UK"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Astrophysics Research Institute, Liverpool John Moores University, Birkenhead, CH41 1LD, UK",
+          "institution_ids": [
+            "https://openalex.org/I63098007"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5063322754",
+        "display_name": "A. Evans",
+        "orcid": "https://orcid.org/0000-0002-3142-8953"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I56007636",
+          "display_name": "Keele University",
+          "ror": "https://ror.org/00340yn33",
+          "country_code": "GB",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I56007636"
+          ]
+        }
+      ],
+      "countries": [
+        "GB"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Evans",
+      "raw_affiliation_strings": [
+        "Astrophysics Group, Keele University, Keele, Staffordshire ST5 5BG, UK"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Astrophysics Group, Keele University, Keele, Staffordshire ST5 5BG, UK",
+          "institution_ids": [
+            "https://openalex.org/I56007636"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5014779509",
+        "display_name": "D. K. Lynch",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I169540460",
+          "display_name": "The Aerospace Corporation",
+          "ror": "https://ror.org/01ar9e455",
+          "country_code": "US",
+          "type": "nonprofit",
+          "lineage": [
+            "https://openalex.org/I169540460"
+          ]
+        }
+      ],
+      "countries": [
+        "US"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. K. Lynch",
+      "raw_affiliation_strings": [
+        "Space Science Applications Laboratory, The Aerospace Corporation, M2/266, PO Box 92957, Los Angeles, CA 90009, USA"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Space Science Applications Laboratory, The Aerospace Corporation, M2/266, PO Box 92957, Los Angeles, CA 90009, USA",
+          "institution_ids": [
+            "https://openalex.org/I169540460"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5048784797",
+        "display_name": "T. J. O\u2019Brien",
+        "orcid": "https://orcid.org/0000-0001-7687-3543"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I28407311",
+          "display_name": "University of Manchester",
+          "ror": "https://ror.org/027m9bs27",
+          "country_code": "GB",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I28407311"
+          ]
+        }
+      ],
+      "countries": [
+        "GB"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "T. J. O\u2019Brien",
+      "raw_affiliation_strings": [
+        "Jodrell Bank Cent. for Astrophysics, School of Physics and Astronomy, Univ. of Manchester, Oxford Road, Manchester, M13 9PL, UK"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Jodrell Bank Cent. for Astrophysics, School of Physics and Astronomy, Univ. of Manchester, Oxford Road, Manchester, M13 9PL, UK",
+          "institution_ids": [
+            "https://openalex.org/I28407311"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5091075002",
+        "display_name": "R. J. Rudy",
+        "orcid": "https://orcid.org/0000-0003-3096-759X"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I169540460",
+          "display_name": "The Aerospace Corporation",
+          "ror": "https://ror.org/01ar9e455",
+          "country_code": "US",
+          "type": "nonprofit",
+          "lineage": [
+            "https://openalex.org/I169540460"
+          ]
+        }
+      ],
+      "countries": [
+        "US"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. J. Rudy",
+      "raw_affiliation_strings": [
+        "Space Science Applications Laboratory, The Aerospace Corporation, M2/266, PO Box 92957, Los Angeles, CA 90009, USA"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Space Science Applications Laboratory, The Aerospace Corporation, M2/266, PO Box 92957, Los Angeles, CA 90009, USA",
+          "institution_ids": [
+            "https://openalex.org/I169540460"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "last",
+      "author": {
+        "id": "https://openalex.org/A5025103816",
+        "display_name": "R. W. Russell",
+        "orcid": "https://orcid.org/0000-0002-7818-2305"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I169540460",
+          "display_name": "The Aerospace Corporation",
+          "ror": "https://ror.org/01ar9e455",
+          "country_code": "US",
+          "type": "nonprofit",
+          "lineage": [
+            "https://openalex.org/I169540460"
+          ]
+        }
+      ],
+      "countries": [
+        "US"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. W. Russell",
+      "raw_affiliation_strings": [
+        "Space Science Applications Laboratory, The Aerospace Corporation, M2/266, PO Box 92957, Los Angeles, CA 90009, USA"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Space Science Applications Laboratory, The Aerospace Corporation, M2/266, PO Box 92957, Los Angeles, CA 90009, USA",
+          "institution_ids": [
+            "https://openalex.org/I169540460"
+          ]
+        }
+      ]
+    }
+  ],
+  "institutions": [],
+  "countries_distinct_count": 6,
+  "institutions_distinct_count": 18,
+  "corresponding_author_ids": [
+    "https://openalex.org/A5007221555"
+  ],
+  "corresponding_institution_ids": [
+    "https://openalex.org/I4210126779",
+    "https://openalex.org/I1294671590"
+  ],
+  "apc_list": null,
+  "apc_paid": null,
+  "fwci": 3.3745978,
+  "has_fulltext": true,
+  "cited_by_count": 39,
+  "citation_normalized_percentile": {
+    "value": 0.92760401,
+    "is_in_top_1_percent": false,
+    "is_in_top_10_percent": true
+  },
+  "cited_by_percentile_year": {
+    "min": 89,
+    "max": 99
+  },
+  "biblio": {
+    "volume": "545",
+    "issue": null,
+    "first_page": "A63",
+    "last_page": "A63"
+  },
+  "is_retracted": false,
+  "is_paratext": false,
+  "is_xpac": false,
+  "primary_topic": {
+    "id": "https://openalex.org/T10744",
+    "display_name": "Astrophysical Phenomena and Observations",
+    "score": 0.9998999834060669,
+    "subfield": {
+      "id": "https://openalex.org/subfields/3103",
+      "display_name": "Astronomy and Astrophysics"
+    },
+    "field": {
+      "id": "https://openalex.org/fields/31",
+      "display_name": "Physics and Astronomy"
+    },
+    "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+    }
+  },
+  "topics": [
+    {
+      "id": "https://openalex.org/T10744",
+      "display_name": "Astrophysical Phenomena and Observations",
+      "score": 0.9998999834060669,
+      "subfield": {
+        "id": "https://openalex.org/subfields/3103",
+        "display_name": "Astronomy and Astrophysics"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/31",
+        "display_name": "Physics and Astronomy"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    },
+    {
+      "id": "https://openalex.org/T11323",
+      "display_name": "Gamma-ray bursts and supernovae",
+      "score": 0.9980999827384949,
+      "subfield": {
+        "id": "https://openalex.org/subfields/3103",
+        "display_name": "Astronomy and Astrophysics"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/31",
+        "display_name": "Physics and Astronomy"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    },
+    {
+      "id": "https://openalex.org/T10039",
+      "display_name": "Stellar, planetary, and galactic studies",
+      "score": 0.9973000288009644,
+      "subfield": {
+        "id": "https://openalex.org/subfields/3103",
+        "display_name": "Astronomy and Astrophysics"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/31",
+        "display_name": "Physics and Astronomy"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "https://openalex.org/keywords/ejecta",
+      "display_name": "Ejecta",
+      "score": 0.9156777262687683
+    },
+    {
+      "id": "https://openalex.org/keywords/physics",
+      "display_name": "Physics",
+      "score": 0.8621506690979004
+    },
+    {
+      "id": "https://openalex.org/keywords/astrophysics",
+      "display_name": "Astrophysics",
+      "score": 0.8076072335243225
+    },
+    {
+      "id": "https://openalex.org/keywords/nebula",
+      "display_name": "Nebula",
+      "score": 0.6364353895187378
+    },
+    {
+      "id": "https://openalex.org/keywords/astronomy",
+      "display_name": "Astronomy",
+      "score": 0.5002753734588623
+    },
+    {
+      "id": "https://openalex.org/keywords/flux",
+      "display_name": "Flux (metallurgy)",
+      "score": 0.4451954960823059
+    },
+    {
+      "id": "https://openalex.org/keywords/polar",
+      "display_name": "Polar",
+      "score": 0.4184882640838623
+    },
+    {
+      "id": "https://openalex.org/keywords/light-curve",
+      "display_name": "Light curve",
+      "score": 0.4140700697898865
+    },
+    {
+      "id": "https://openalex.org/keywords/stars",
+      "display_name": "Stars",
+      "score": 0.3131163716316223
+    },
+    {
+      "id": "https://openalex.org/keywords/supernova",
+      "display_name": "Supernova",
+      "score": 0.12897402048110962
+    }
+  ],
+  "concepts": [
+    {
+      "id": "https://openalex.org/C92150305",
+      "wikidata": "https://www.wikidata.org/wiki/Q1321876",
+      "display_name": "Ejecta",
+      "level": 3,
+      "score": 0.9156777262687683
+    },
+    {
+      "id": "https://openalex.org/C121332964",
+      "wikidata": "https://www.wikidata.org/wiki/Q413",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.8621506690979004
+    },
+    {
+      "id": "https://openalex.org/C44870925",
+      "wikidata": "https://www.wikidata.org/wiki/Q37547",
+      "display_name": "Astrophysics",
+      "level": 1,
+      "score": 0.8076072335243225
+    },
+    {
+      "id": "https://openalex.org/C2779496878",
+      "wikidata": "https://www.wikidata.org/wiki/Q42372",
+      "display_name": "Nebula",
+      "level": 3,
+      "score": 0.6364353895187378
+    },
+    {
+      "id": "https://openalex.org/C1276947",
+      "wikidata": "https://www.wikidata.org/wiki/Q333",
+      "display_name": "Astronomy",
+      "level": 1,
+      "score": 0.5002753734588623
+    },
+    {
+      "id": "https://openalex.org/C68709404",
+      "wikidata": "https://www.wikidata.org/wiki/Q1134475",
+      "display_name": "Flux (metallurgy)",
+      "level": 2,
+      "score": 0.4451954960823059
+    },
+    {
+      "id": "https://openalex.org/C29705727",
+      "wikidata": "https://www.wikidata.org/wiki/Q294562",
+      "display_name": "Polar",
+      "level": 2,
+      "score": 0.4184882640838623
+    },
+    {
+      "id": "https://openalex.org/C130726490",
+      "wikidata": "https://www.wikidata.org/wiki/Q675076",
+      "display_name": "Light curve",
+      "level": 2,
+      "score": 0.4140700697898865
+    },
+    {
+      "id": "https://openalex.org/C150846664",
+      "wikidata": "https://www.wikidata.org/wiki/Q7602306",
+      "display_name": "Stars",
+      "level": 2,
+      "score": 0.3131163716316223
+    },
+    {
+      "id": "https://openalex.org/C127592171",
+      "wikidata": "https://www.wikidata.org/wiki/Q3937",
+      "display_name": "Supernova",
+      "level": 2,
+      "score": 0.12897402048110962
+    },
+    {
+      "id": "https://openalex.org/C191897082",
+      "wikidata": "https://www.wikidata.org/wiki/Q11467",
+      "display_name": "Metallurgy",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "https://openalex.org/C192562407",
+      "wikidata": "https://www.wikidata.org/wiki/Q228736",
+      "display_name": "Materials science",
+      "level": 0,
+      "score": 0.0
+    }
+  ],
+  "mesh": [],
+  "locations_count": 6,
+  "locations": [
+    {
+      "id": "doi:10.1051/0004-6361/201219825",
+      "is_oa": true,
+      "landing_page_url": "https://doi.org/10.1051/0004-6361/201219825",
+      "pdf_url": "https://www.aanda.org/articles/aa/pdf/2012/09/aa19825-12.pdf",
+      "source": {
+        "id": "https://openalex.org/S205231332",
+        "display_name": "Astronomy and Astrophysics",
+        "issn_l": "0004-6361",
+        "issn": [
+          "0004-6361",
+          "1432-0746"
+        ],
+        "is_oa": false,
+        "is_in_doaj": true,
+        "is_core": true,
+        "host_organization": "https://openalex.org/P4310319748",
+        "host_organization_name": "EDP Sciences",
+        "host_organization_lineage": [
+          "https://openalex.org/P4310319748"
+        ],
+        "host_organization_lineage_names": [
+          "EDP Sciences"
+        ],
+        "type": "journal"
+      },
+      "license": null,
+      "license_id": null,
+      "version": "publishedVersion",
+      "is_accepted": true,
+      "is_published": true,
+      "raw_source_name": "Astronomy &amp; Astrophysics",
+      "raw_type": "journal-article"
+    },
+    {
+      "id": "pmh:oai:arXiv.org:1207.5301",
+      "is_oa": true,
+      "landing_page_url": "http://arxiv.org/abs/1207.5301",
+      "pdf_url": "https://arxiv.org/pdf/1207.5301",
+      "source": {
+        "id": "https://openalex.org/S4306400194",
+        "display_name": "arXiv (Cornell University)",
+        "issn_l": null,
+        "issn": null,
+        "is_oa": true,
+        "is_in_doaj": false,
+        "is_core": false,
+        "host_organization": "https://openalex.org/I205783295",
+        "host_organization_name": "Cornell University",
+        "host_organization_lineage": [
+          "https://openalex.org/I205783295"
+        ],
+        "host_organization_lineage_names": [],
+        "type": "repository"
+      },
+      "license": null,
+      "license_id": null,
+      "version": "submittedVersion",
+      "is_accepted": false,
+      "is_published": false,
+      "raw_source_name": null,
+      "raw_type": "text"
+    },
+    {
+      "id": "pmh:oai:HAL:hal-00779110v1",
+      "is_oa": false,
+      "landing_page_url": "https://hal.science/hal-00779110",
+      "pdf_url": null,
+      "source": {
+        "id": "https://openalex.org/S4306402512",
+        "display_name": "HAL (Le Centre pour la Communication Scientifique Directe)",
+        "issn_l": null,
+        "issn": null,
+        "is_oa": false,
+        "is_in_doaj": false,
+        "is_core": false,
+        "host_organization": "https://openalex.org/I1294671590",
+        "host_organization_name": "Centre National de la Recherche Scientifique",
+        "host_organization_lineage": [
+          "https://openalex.org/I1294671590"
+        ],
+        "host_organization_lineage_names": [],
+        "type": "repository"
+      },
+      "license": null,
+      "license_id": null,
+      "version": "submittedVersion",
+      "is_accepted": false,
+      "is_published": false,
+      "raw_source_name": "Astronomy & Astrophysics - A&A, 2012, 545, pp.A63. &#x27E8;10.1051/0004-6361/201219825&#x27E9;",
+      "raw_type": "Journal articles"
+    },
+    {
+      "id": "pmh:oai:edpsciences.org:dkey/10.1051/0004-6361/201219825",
+      "is_oa": false,
+      "landing_page_url": null,
+      "pdf_url": null,
+      "source": {
+        "id": "https://openalex.org/S4306400744",
+        "display_name": "Springer Link (Chiba Institute of Technology)",
+        "issn_l": null,
+        "issn": null,
+        "is_oa": false,
+        "is_in_doaj": false,
+        "is_core": false,
+        "host_organization": "https://openalex.org/I8488066",
+        "host_organization_name": "Chiba Institute of Technology",
+        "host_organization_lineage": [
+          "https://openalex.org/I8488066"
+        ],
+        "host_organization_lineage_names": [],
+        "type": "repository"
+      },
+      "license": null,
+      "license_id": null,
+      "version": "submittedVersion",
+      "is_accepted": false,
+      "is_published": false,
+      "raw_source_name": "https://doi.org/10.1051/0004-6361/201219825",
+      "raw_type": "Text"
+    },
+    {
+      "id": "pmh:oai:pure.atira.dk:openaire_cris_publications/786abe9e-64c3-426d-975b-451fbbfe48e7",
+      "is_oa": false,
+      "landing_page_url": "https://research.manchester.ac.uk/en/publications/786abe9e-64c3-426d-975b-451fbbfe48e7",
+      "pdf_url": null,
+      "source": {
+        "id": "https://openalex.org/S4306400216",
+        "display_name": "Research Portal (King's College London)",
+        "issn_l": null,
+        "issn": null,
+        "is_oa": false,
+        "is_in_doaj": false,
+        "is_core": false,
+        "host_organization": "https://openalex.org/I183935753",
+        "host_organization_name": "King's College London",
+        "host_organization_lineage": [
+          "https://openalex.org/I183935753"
+        ],
+        "host_organization_lineage_names": [],
+        "type": "repository"
+      },
+      "license": null,
+      "license_id": null,
+      "version": "submittedVersion",
+      "is_accepted": false,
+      "is_published": false,
+      "raw_source_name": "Chesneau, O, Lagadec, E, Otulakowska-Hypka, M, Banerjee, D P K, Woodward, C E, Harvey, E, Spang, A, Kervella, P, Millour, F, Nardetto, N, Ashok, N M, Barlow, M J, Bode, M, Evans, A, Lynch, D K, O'Brien, T J, Rudy, R J & Russell, R W 2012, 'The expanding dusty bipolar nebula around the nova V1280 Scorpi', Astronomy and Astrophysics, vol. 545, A63. https://doi.org/10.1051/0004-6361/201219825",
+      "raw_type": "article"
+    },
+    {
+      "id": "pmh:oai:pure.atira.dk:publications/786abe9e-64c3-426d-975b-451fbbfe48e7",
+      "is_oa": false,
+      "landing_page_url": "https://www.research.manchester.ac.uk/portal/en/publications/the-expanding-dusty-bipolar-nebula-around-the-nova-v1280-scorpi(786abe9e-64c3-426d-975b-451fbbfe48e7).html",
+      "pdf_url": null,
+      "source": {
+        "id": "https://openalex.org/S4306400216",
+        "display_name": "Research Portal (King's College London)",
+        "issn_l": null,
+        "issn": null,
+        "is_oa": false,
+        "is_in_doaj": false,
+        "is_core": false,
+        "host_organization": "https://openalex.org/I183935753",
+        "host_organization_name": "King's College London",
+        "host_organization_lineage": [
+          "https://openalex.org/I183935753"
+        ],
+        "host_organization_lineage_names": [],
+        "type": "repository"
+      },
+      "license": null,
+      "license_id": null,
+      "version": "submittedVersion",
+      "is_accepted": false,
+      "is_published": false,
+      "raw_source_name": "Chesneau, O, Lagadec, E, Otulakowska-Hypka, M, Banerjee, D P K, Woodward, C E, Harvey, E, Spang, A, Kervella, P, Millour, F, Nardetto, N, Ashok, N M, Barlow, M J, Bode, M, Evans, A, Lynch, D K, O'Brien, T J, Rudy, R J & Russell, R W 2012, 'The expanding dusty bipolar nebula around the nova V1280 Scorpi', Astronomy and Astrophysics, vol. 545, A63. https://doi.org/10.1051/0004-6361/201219825",
+      "raw_type": "article"
+    }
+  ],
+  "best_oa_location": {
+    "id": "doi:10.1051/0004-6361/201219825",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.1051/0004-6361/201219825",
+    "pdf_url": "https://www.aanda.org/articles/aa/pdf/2012/09/aa19825-12.pdf",
+    "source": {
+      "id": "https://openalex.org/S205231332",
+      "display_name": "Astronomy and Astrophysics",
+      "issn_l": "0004-6361",
+      "issn": [
+        "0004-6361",
+        "1432-0746"
+      ],
+      "is_oa": false,
+      "is_in_doaj": true,
+      "is_core": true,
+      "host_organization": "https://openalex.org/P4310319748",
+      "host_organization_name": "EDP Sciences",
+      "host_organization_lineage": [
+        "https://openalex.org/P4310319748"
+      ],
+      "host_organization_lineage_names": [
+        "EDP Sciences"
+      ],
+      "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Astronomy &amp; Astrophysics",
+    "raw_type": "journal-article"
+  },
+  "sustainable_development_goals": [
+    {
+      "display_name": "Life below water",
+      "id": "https://metadata.un.org/sdg/14",
+      "score": 0.6600000262260437
+    }
+  ],
+  "awards": [
+    {
+      "id": "https://openalex.org/G2487892623",
+      "display_name": null,
+      "funder_award_id": "ST/I001425/1",
+      "funder_id": "https://openalex.org/F4320334632",
+      "funder_display_name": "Science and Technology Facilities Council"
+    },
+    {
+      "id": "https://openalex.org/G2619809152",
+      "display_name": null,
+      "funder_award_id": "PP/E001149/1",
+      "funder_id": "https://openalex.org/F4320334632",
+      "funder_display_name": "Science and Technology Facilities Council"
+    },
+    {
+      "id": "https://openalex.org/G386994416",
+      "display_name": null,
+      "funder_award_id": "ST/J001465/1",
+      "funder_id": "https://openalex.org/F4320334632",
+      "funder_display_name": "Science and Technology Facilities Council"
+    },
+    {
+      "id": "https://openalex.org/G8715759393",
+      "display_name": null,
+      "funder_award_id": "ST/H002391/1",
+      "funder_id": "https://openalex.org/F4320334632",
+      "funder_display_name": "Science and Technology Facilities Council"
+    }
+  ],
+  "funders": [
+    {
+      "id": "https://openalex.org/F4320334632",
+      "display_name": "Science and Technology Facilities Council",
+      "ror": "https://ror.org/057g20z61"
+    }
+  ],
+  "has_content": {
+    "pdf": true,
+    "grobid_xml": true
+  },
+  "referenced_works_count": 54,
+  "referenced_works": [
+    "https://openalex.org/W2077342601",
+    "https://openalex.org/W1623965475",
+    "https://openalex.org/W2048885497",
+    "https://openalex.org/W2108286842",
+    "https://openalex.org/W2082082939",
+    "https://openalex.org/W2116344390",
+    "https://openalex.org/W1974291694",
+    "https://openalex.org/W1975879771",
+    "https://openalex.org/W2146028974",
+    "https://openalex.org/W2081798930",
+    "https://openalex.org/W2010441402",
+    "https://openalex.org/W2079668139",
+    "https://openalex.org/W2160633618",
+    "https://openalex.org/W1879113091",
+    "https://openalex.org/W4292399985",
+    "https://openalex.org/W2070484629",
+    "https://openalex.org/W2142258427",
+    "https://openalex.org/W2038228174",
+    "https://openalex.org/W2067649501",
+    "https://openalex.org/W2170369796",
+    "https://openalex.org/W1808792834",
+    "https://openalex.org/W2015359974",
+    "https://openalex.org/W2029769752",
+    "https://openalex.org/W2126308911",
+    "https://openalex.org/W2031661195",
+    "https://openalex.org/W2129367836",
+    "https://openalex.org/W2615146454",
+    "https://openalex.org/W2139319139",
+    "https://openalex.org/W2155257897",
+    "https://openalex.org/W2154022745",
+    "https://openalex.org/W2081436108",
+    "https://openalex.org/W2138791305",
+    "https://openalex.org/W2166945659",
+    "https://openalex.org/W2169399148",
+    "https://openalex.org/W2032936761",
+    "https://openalex.org/W2088811737",
+    "https://openalex.org/W1991579086",
+    "https://openalex.org/W2147475188",
+    "https://openalex.org/W3099126827",
+    "https://openalex.org/W3099797123",
+    "https://openalex.org/W3101557043",
+    "https://openalex.org/W3103890629",
+    "https://openalex.org/W3104779943",
+    "https://openalex.org/W3103293362",
+    "https://openalex.org/W2950184319",
+    "https://openalex.org/W3129060700",
+    "https://openalex.org/W2138613133",
+    "https://openalex.org/W3099722587",
+    "https://openalex.org/W1645631834",
+    "https://openalex.org/W2994821274",
+    "https://openalex.org/W3101798058",
+    "https://openalex.org/W3103853558",
+    "https://openalex.org/W3099942032",
+    "https://openalex.org/W3101039842"
+  ],
+  "related_works": [
+    "https://openalex.org/W2129216900",
+    "https://openalex.org/W2159352031",
+    "https://openalex.org/W4307386080",
+    "https://openalex.org/W3024704925",
+    "https://openalex.org/W278686475",
+    "https://openalex.org/W3103433187",
+    "https://openalex.org/W2958075768",
+    "https://openalex.org/W3042029401",
+    "https://openalex.org/W181436086",
+    "https://openalex.org/W1491351646"
+  ],
+  "abstract_inverted_index": {
+    "Context.": [
+      0
+    ],
+    "The": [
+      1,
+      145,
+      166,
+      178,
+      285
+    ],
+    "fast": [
+      2,
+      246
+    ],
+    "temporal": [
+      3,
+      328
+    ],
+    "evolution": [
+      4,
+      329
+    ],
+    "of": [
+      5,
+      9,
+      23,
+      26,
+      32,
+      55,
+      60,
+      67,
+      69,
+      125,
+      139,
+      148,
+      194,
+      210,
+      226,
+      264,
+      281,
+      330,
+      348
+    ],
+    "the": [
+      6,
+      21,
+      33,
+      56,
+      65,
+      70,
+      102,
+      108,
+      122,
+      137,
+      149,
+      171,
+      184,
+      195,
+      220,
+      224,
+      227,
+      238,
+      248,
+      268,
+      275,
+      282,
+      292,
+      302,
+      306,
+      313,
+      327,
+      335,
+      349
+    ],
+    "ejecta": [
+      7,
+      251
+    ],
+    "morphology": [
+      8
+    ],
+    "novae": [
+      10
+    ],
+    "can": [
+      11
+    ],
+    "be": [
+      12,
+      340
+    ],
+    "considered": [
+      13
+    ],
+    "as": [
+      14,
+      245,
+      247
+    ],
+    "an": [
+      15,
+      321
+    ],
+    "important": [
+      16
+    ],
+    "test": [
+      17,
+      323
+    ],
+    "bench": [
+      18
+    ],
+    "for": [
+      19,
+      325
+    ],
+    "studying": [
+      20,
+      326
+    ],
+    "shaping": [
+      22
+    ],
+    "many": [
+      24
+    ],
+    "kinds": [
+      25
+    ],
+    "nebulae.": [
+      27
+    ],
+    "V1280": [
+      28,
+      61,
+      75,
+      126,
+      262
+    ],
+    "Sco": [
+      29,
+      62,
+      76,
+      263,
+      319
+    ],
+    "is": [
+      30,
+      173,
+      217,
+      299,
+      320
+    ],
+    "one": [
+      31
+    ],
+    "slowest": [
+      34
+    ],
+    "dust-forming": [
+      35
+    ],
+    "nova": [
+      36
+    ],
+    "ever": [
+      37
+    ],
+    "historically": [
+      38
+    ],
+    "observed": [
+      39,
+      74
+    ],
+    "that": [
+      40,
+      120,
+      170,
+      237,
+      243,
+      312
+    ],
+    "has": [
+      41
+    ],
+    "experienced": [
+      42
+    ],
+    "a": [
+      43,
+      140,
+      232,
+      257,
+      345
+    ],
+    "particularly": [
+      44
+    ],
+    "long": [
+      45
+    ],
+    "common-envelope": [
+      46
+    ],
+    "phase.": [
+      47
+    ],
+    "Aims.": [
+      48
+    ],
+    "We": [
+      49,
+      73,
+      100,
+      135
+    ],
+    "performed": [
+      50
+    ],
+    "multi-epoch": [
+      51
+    ],
+    "high-spatial": [
+      52
+    ],
+    "resolution": [
+      53,
+      98,
+      354
+    ],
+    "observations": [
+      54,
+      130,
+      222,
+      338
+    ],
+    "circumstellar": [
+      57
+    ],
+    "dusty": [
+      58,
+      141,
+      283,
+      331
+    ],
+    "environment": [
+      59
+    ],
+    "to": [
+      63,
+      159,
+      261,
+      274,
+      288
+    ],
+    "investigate": [
+      64
+    ],
+    "level": [
+      66
+    ],
+    "asymmetry": [
+      68
+    ],
+    "ejecta.": [
+      71,
+      284,
+      333
+    ],
+    "Methods.": [
+      72
+    ],
+    "in": [
+      77,
+      107,
+      132,
+      156,
+      163,
+      183,
+      198,
+      204,
+      223,
+      242,
+      253,
+      291,
+      301,
+      305
+    ],
+    "2009,": [
+      78,
+      199
+    ],
+    "2010": [
+      79
+    ],
+    "and": [
+      80,
+      111,
+      128,
+      187,
+      200,
+      278,
+      295,
+      342
+    ],
+    "2011": [
+      81
+    ],
+    "(from": [
+      82
+    ],
+    "t": [
+      83,
+      90
+    ],
+    "=": [
+      84,
+      91
+    ],
+    "877": [
+      85
+    ],
+    "days": [
+      86
+    ],
+    "after": [
+      87
+    ],
+    "discovery": [
+      88,
+      138
+    ],
+    "until": [
+      89
+    ],
+    "1664": [
+      92
+    ],
+    "d)": [
+      93
+    ],
+    "using": [
+      94,
+      351
+    ],
+    "unprecedented": [
+      95
+    ],
+    "high": [
+      96,
+      176,
+      352
+    ],
+    "angular": [
+      97,
+      353
+    ],
+    "techniques.": [
+      99,
+      355
+    ],
+    "used": [
+      101
+    ],
+    "NACO/VLT": [
+      103
+    ],
+    "adaptive": [
+      104
+    ],
+    "optics": [
+      105
+    ],
+    "system": [
+      106
+    ],
+    "J,": [
+      109
+    ],
+    "H": [
+      110
+    ],
+    "K": [
+      112,
+      185
+    ],
+    "bands,": [
+      113
+    ],
+    "together": [
+      114
+    ],
+    "with": [
+      115
+    ],
+    "contemporaneous": [
+      116
+    ],
+    "VISIR/VLT": [
+      117
+    ],
+    "mid-IR": [
+      118
+    ],
+    "imaging": [
+      119
+    ],
+    "resolved": [
+      121
+    ],
+    "dust": [
+      123,
+      239,
+      286
+    ],
+    "envelope": [
+      124
+    ],
+    "Sco,": [
+      127
+    ],
+    "SINFONI/VLT": [
+      129
+    ],
+    "secured": [
+      131
+    ],
+    "2011.": [
+      133,
+      165,
+      205
+    ],
+    "Results.": [
+      134
+    ],
+    "report": [
+      136
+    ],
+    "hourglass-shaped": [
+      142
+    ],
+    "bipolar": [
+      143,
+      332
+    ],
+    "nebula.": [
+      144
+    ],
+    "apparent": [
+      146
+    ],
+    "size": [
+      147
+    ],
+    "nebula": [
+      150,
+      336
+    ],
+    "increased": [
+      151
+    ],
+    "from": [
+      152,
+      219
+    ],
+    "0.30\"": [
+      153
+    ],
+    "\u00d7": [
+      154,
+      161
+    ],
+    "0.17\"": [
+      155
+    ],
+    "July": [
+      157,
+      164
+    ],
+    "2009": [
+      158
+    ],
+    "0.64\"": [
+      160
+    ],
+    "0.42\"": [
+      162
+    ],
+    "aspect": [
+      167
+    ],
+    "ratio": [
+      168
+    ],
+    "suggests": [
+      169
+    ],
+    "source": [
+      172,
+      180,
+      350
+    ],
+    "seen": [
+      174
+    ],
+    "at": [
+      175
+    ],
+    "inclination.": [
+      177
+    ],
+    "central": [
+      179
+    ],
+    "shines": [
+      181
+    ],
+    "efficiently": [
+      182
+    ],
+    "band": [
+      186
+    ],
+    "represents": [
+      188,
+      231
+    ],
+    "more": [
+      189
+    ],
+    "than": [
+      190
+    ],
+    "56": [
+      191
+    ],
+    "\u00b1": [
+      192,
+      202,
+      212
+    ],
+    "5%": [
+      193
+    ],
+    "total": [
+      196
+    ],
+    "flux": [
+      197,
+      298
+    ],
+    "87": [
+      201
+    ],
+    "6%": [
+      203
+    ],
+    "A": [
+      206
+    ],
+    "mean": [
+      207
+    ],
+    "expansion": [
+      208
+    ],
+    "rate": [
+      209
+    ],
+    "0.39": [
+      211
+    ],
+    "0.03": [
+      213
+    ],
+    "milliarcsec": [
+      214
+    ],
+    "per": [
+      215
+    ],
+    "day": [
+      216
+    ],
+    "inferred": [
+      218
+    ],
+    "VISIR": [
+      221
+    ],
+    "direction": [
+      225,
+      244
+    ],
+    "major": [
+      228
+    ],
+    "axis,": [
+      229
+    ],
+    "which": [
+      230
+    ],
+    "projected": [
+      233
+    ],
+    "upper": [
+      234
+    ],
+    "limit.": [
+      235
+    ],
+    "Assuming": [
+      236
+    ],
+    "shell": [
+      240
+    ],
+    "expands": [
+      241
+    ],
+    "low-excitation": [
+      249
+    ],
+    "slow": [
+      250
+    ],
+    "detected": [
+      252,
+      300
+    ],
+    "spectroscopy,": [
+      254
+    ],
+    "this": [
+      255
+    ],
+    "yields": [
+      256
+    ],
+    "lower": [
+      258
+    ],
+    "limit": [
+      259
+    ],
+    "distance": [
+      260
+    ],
+    "~1": [
+      265
+    ],
+    "kpc;": [
+      266
+    ],
+    "however,": [
+      267
+    ],
+    "systematic": [
+      269
+    ],
+    "errors": [
+      270
+    ],
+    "remain": [
+      271
+    ],
+    "large": [
+      272
+    ],
+    "due": [
+      273
+    ],
+    "complex": [
+      276
+    ],
+    "shape": [
+      277
+    ],
+    "velocity": [
+      279
+    ],
+    "field": [
+      280
+    ],
+    "seems": [
+      287
+    ],
+    "reside": [
+      289
+    ],
+    "essentially": [
+      290
+    ],
+    "polar": [
+      293
+    ],
+    "caps": [
+      294
+    ],
+    "no": [
+      296
+    ],
+    "infrared": [
+      297
+    ],
+    "equatorial": [
+      303
+    ],
+    "regions": [
+      304
+    ],
+    "latest": [
+      307
+    ],
+    "dataset.": [
+      308
+    ],
+    "This": [
+      309
+    ],
+    "may": [
+      310
+    ],
+    "imply": [
+      311
+    ],
+    "mass-loss": [
+      314
+    ],
+    "was": [
+      315
+    ],
+    "dominantly": [
+      316
+    ],
+    "polar.": [
+      317
+    ],
+    "Conclusions.V1280": [
+      318
+    ],
+    "excellent": [
+      322
+    ],
+    "case": [
+      324
+    ],
+    "As": [
+      334
+    ],
+    "expands,": [
+      337
+    ],
+    "will": [
+      339
+    ],
+    "easier": [
+      341
+    ],
+    "we": [
+      343
+    ],
+    "advocate": [
+      344
+    ],
+    "yearly": [
+      346
+    ],
+    "monitoring": [
+      347
+    ],
+    "\u00a9": [
+      356
+    ],
+    "2012": [
+      357
+    ],
+    "ESO.": [
+      358
+    ]
+  },
+  "counts_by_year": [
+    {
+      "year": 2025,
+      "cited_by_count": 2
+    },
+    {
+      "year": 2024,
+      "cited_by_count": 1
+    },
+    {
+      "year": 2023,
+      "cited_by_count": 1
+    },
+    {
+      "year": 2022,
+      "cited_by_count": 2
+    },
+    {
+      "year": 2021,
+      "cited_by_count": 1
+    },
+    {
+      "year": 2020,
+      "cited_by_count": 3
+    },
+    {
+      "year": 2019,
+      "cited_by_count": 2
+    },
+    {
+      "year": 2018,
+      "cited_by_count": 2
+    },
+    {
+      "year": 2017,
+      "cited_by_count": 2
+    },
+    {
+      "year": 2016,
+      "cited_by_count": 6
+    },
+    {
+      "year": 2015,
+      "cited_by_count": 8
+    },
+    {
+      "year": 2014,
+      "cited_by_count": 2
+    },
+    {
+      "year": 2013,
+      "cited_by_count": 7
+    }
+  ],
+  "updated_date": "2025-12-29T23:06:16.900395",
+  "created_date": "2020-11-23T00:00:00"
+}

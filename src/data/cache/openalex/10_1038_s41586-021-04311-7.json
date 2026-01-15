@@ -1,0 +1,3168 @@
+{
+  "id": "https://openalex.org/W4213289678",
+  "doi": "https://doi.org/10.1038/s41586-021-04311-7",
+  "title": "Thermal imaging of dust hiding the black hole in NGC 1068",
+  "display_name": "Thermal imaging of dust hiding the black hole in NGC 1068",
+  "publication_year": 2022,
+  "publication_date": "2022-02-16",
+  "ids": {
+    "openalex": "https://openalex.org/W4213289678",
+    "doi": "https://doi.org/10.1038/s41586-021-04311-7",
+    "pmid": "https://pubmed.ncbi.nlm.nih.gov/35173340"
+  },
+  "language": "en",
+  "primary_location": {
+    "id": "doi:10.1038/s41586-021-04311-7",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1038/s41586-021-04311-7",
+    "pdf_url": null,
+    "source": {
+      "id": "https://openalex.org/S137773608",
+      "display_name": "Nature",
+      "issn_l": "0028-0836",
+      "issn": [
+        "0028-0836",
+        "1476-4687"
+      ],
+      "is_oa": false,
+      "is_in_doaj": false,
+      "is_core": true,
+      "host_organization": "https://openalex.org/P4310319908",
+      "host_organization_name": "Nature Portfolio",
+      "host_organization_lineage": [
+        "https://openalex.org/P4310319908",
+        "https://openalex.org/P4310319965"
+      ],
+      "host_organization_lineage_names": [
+        "Nature Portfolio",
+        "Springer Nature"
+      ],
+      "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Nature",
+    "raw_type": "journal-article"
+  },
+  "type": "article",
+  "indexed_in": [
+    "arxiv",
+    "crossref",
+    "pubmed"
+  ],
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://arxiv.org/pdf/2112.13694",
+    "any_repository_has_fulltext": false
+  },
+  "authorships": [
+    {
+      "author_position": "first",
+      "author": {
+        "id": "https://openalex.org/A5089274682",
+        "display_name": "V. G\u00e1mez Rosas",
+        "orcid": "https://orcid.org/0000-0002-8830-6199"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I121797337",
+          "display_name": "Leiden University",
+          "ror": "https://ror.org/027bh9e22",
+          "country_code": "NL",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I121797337"
+          ]
+        }
+      ],
+      "countries": [
+        "NL"
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Violeta G\u00e1mez Rosas",
+      "raw_affiliation_strings": [
+        "Leiden Observatory, Leiden University, Leiden, Netherlands. gamez@strw.leidenuniv.nl",
+        "Leiden Observatory, Leiden University, Leiden, Netherlands"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Leiden Observatory, Leiden University, Leiden, Netherlands. gamez@strw.leidenuniv.nl",
+          "institution_ids": []
+        },
+        {
+          "raw_affiliation_string": "Leiden Observatory, Leiden University, Leiden, Netherlands",
+          "institution_ids": [
+            "https://openalex.org/I121797337"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5073039871",
+        "display_name": "J. W. Isbell",
+        "orcid": "https://orcid.org/0000-0002-1272-6322"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210109156",
+          "display_name": "Max Planck Institute for Astronomy",
+          "ror": "https://ror.org/01vhnrs90",
+          "country_code": "DE",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I149899117",
+            "https://openalex.org/I4210109156"
+          ]
+        }
+      ],
+      "countries": [
+        "DE"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jacob W. Isbell",
+      "raw_affiliation_strings": [
+        "Max Planck Institute for Astronomy, Heidelberg, Germany"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Max Planck Institute for Astronomy, Heidelberg, Germany",
+          "institution_ids": [
+            "https://openalex.org/I4210109156"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5107837041",
+        "display_name": "Walter Jaffe",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I121797337",
+          "display_name": "Leiden University",
+          "ror": "https://ror.org/027bh9e22",
+          "country_code": "NL",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I121797337"
+          ]
+        }
+      ],
+      "countries": [
+        "NL"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Walter Jaffe",
+      "raw_affiliation_strings": [
+        "Leiden Observatory, Leiden University, Leiden, Netherlands"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Leiden Observatory, Leiden University, Leiden, Netherlands",
+          "institution_ids": [
+            "https://openalex.org/I121797337"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5055323394",
+        "display_name": "R. Petrov",
+        "orcid": "https://orcid.org/0000-0003-4759-6051"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I201841394",
+          "display_name": "Universit\u00e9 C\u00f4te d'Azur",
+          "ror": "https://ror.org/019tgvf94",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I201841394"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Romain G. Petrov",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5065941304",
+        "display_name": "J. Leftley",
+        "orcid": "https://orcid.org/0000-0001-6009-1803"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I201841394",
+          "display_name": "Universit\u00e9 C\u00f4te d'Azur",
+          "ror": "https://ror.org/019tgvf94",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I201841394"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "James H. Leftley",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5113851043",
+        "display_name": "K.-H. Hofmann",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210158571",
+          "display_name": "Max Planck Institute for Radio Astronomy",
+          "ror": "https://ror.org/04jvemc39",
+          "country_code": "DE",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I149899117",
+            "https://openalex.org/I4210158571"
+          ]
+        }
+      ],
+      "countries": [
+        "DE"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Karl-Heinz Hofmann",
+      "raw_affiliation_strings": [
+        "Max Planck Institute for Radio Astronomy, Bonn, Germany"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Max Planck Institute for Radio Astronomy, Bonn, Germany",
+          "institution_ids": [
+            "https://openalex.org/I4210158571"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5069324182",
+        "display_name": "F. Millour",
+        "orcid": "https://orcid.org/0000-0002-9765-7783"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I201841394",
+          "display_name": "Universit\u00e9 C\u00f4te d'Azur",
+          "ror": "https://ror.org/019tgvf94",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I201841394"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Florentin Millour",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5071163045",
+        "display_name": "L. Burtscher",
+        "orcid": "https://orcid.org/0000-0003-1014-043X"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I121797337",
+          "display_name": "Leiden University",
+          "ror": "https://ror.org/027bh9e22",
+          "country_code": "NL",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I121797337"
+          ]
+        }
+      ],
+      "countries": [
+        "NL"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Leonard Burtscher",
+      "raw_affiliation_strings": [
+        "Leiden Observatory, Leiden University, Leiden, Netherlands"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Leiden Observatory, Leiden University, Leiden, Netherlands",
+          "institution_ids": [
+            "https://openalex.org/I121797337"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5107392674",
+        "display_name": "Klaus Meisenheimer",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210109156",
+          "display_name": "Max Planck Institute for Astronomy",
+          "ror": "https://ror.org/01vhnrs90",
+          "country_code": "DE",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I149899117",
+            "https://openalex.org/I4210109156"
+          ]
+        }
+      ],
+      "countries": [
+        "DE"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Klaus Meisenheimer",
+      "raw_affiliation_strings": [
+        "Max Planck Institute for Astronomy, Heidelberg, Germany"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Max Planck Institute for Astronomy, Heidelberg, Germany",
+          "institution_ids": [
+            "https://openalex.org/I4210109156"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5054973532",
+        "display_name": "A. Meilland",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I201841394",
+          "display_name": "Universit\u00e9 C\u00f4te d'Azur",
+          "ror": "https://ror.org/019tgvf94",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I201841394"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Anthony Meilland",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5106733136",
+        "display_name": "Laurens B. F. M. Waters",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I49206369",
+          "display_name": "SRON Netherlands Institute for Space Research",
+          "ror": "https://ror.org/02wc0kq10",
+          "country_code": "NL",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I2800991832",
+            "https://openalex.org/I49206369"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I145872427",
+          "display_name": "Radboud University Nijmegen",
+          "ror": "https://ror.org/016xsfp80",
+          "country_code": "NL",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I145872427"
+          ]
+        }
+      ],
+      "countries": [
+        "NL"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Laurens B. F. M. Waters",
+      "raw_affiliation_strings": [
+        "Department of Astrophysics, IMAPP, Radboud University, Nijmegen, Netherlands",
+        "SRON Netherlands Institute for Space Research, Leiden, Netherlands"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Department of Astrophysics, IMAPP, Radboud University, Nijmegen, Netherlands",
+          "institution_ids": [
+            "https://openalex.org/I145872427"
+          ]
+        },
+        {
+          "raw_affiliation_string": "SRON Netherlands Institute for Space Research, Leiden, Netherlands",
+          "institution_ids": [
+            "https://openalex.org/I49206369"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5103414913",
+        "display_name": "Bruno Lopez",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I201841394",
+          "display_name": "Universit\u00e9 C\u00f4te d'Azur",
+          "ror": "https://ror.org/019tgvf94",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I201841394"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Bruno Lopez",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5111430411",
+        "display_name": "S. Lagarde",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I201841394",
+          "display_name": "Universit\u00e9 C\u00f4te d'Azur",
+          "ror": "https://ror.org/019tgvf94",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I201841394"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "St\u00e9phane Lagarde",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5065652129",
+        "display_name": "G. Weigelt",
+        "orcid": "https://orcid.org/0000-0001-9754-2233"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210158571",
+          "display_name": "Max Planck Institute for Radio Astronomy",
+          "ror": "https://ror.org/04jvemc39",
+          "country_code": "DE",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I149899117",
+            "https://openalex.org/I4210158571"
+          ]
+        }
+      ],
+      "countries": [
+        "DE"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gerd Weigelt",
+      "raw_affiliation_strings": [
+        "Max Planck Institute for Radio Astronomy, Bonn, Germany"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Max Planck Institute for Radio Astronomy, Bonn, Germany",
+          "institution_ids": [
+            "https://openalex.org/I4210158571"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5108137707",
+        "display_name": "P. B\u00e9rio",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I201841394",
+          "display_name": "Universit\u00e9 C\u00f4te d'Azur",
+          "ror": "https://ror.org/019tgvf94",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I201841394"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Philippe Berio",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5080201614",
+        "display_name": "Fatm\u00e9 Allouche",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I201841394",
+          "display_name": "Universit\u00e9 C\u00f4te d'Azur",
+          "ror": "https://ror.org/019tgvf94",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I201841394"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Fatme Allouche",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5013326860",
+        "display_name": "S. Robbe-Dubois",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I201841394",
+          "display_name": "Universit\u00e9 C\u00f4te d'Azur",
+          "ror": "https://ror.org/019tgvf94",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I201841394"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sylvie Robbe-Dubois",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5047163995",
+        "display_name": "P. Cruzal\u00e8bes",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I201841394",
+          "display_name": "Universit\u00e9 C\u00f4te d'Azur",
+          "ror": "https://ror.org/019tgvf94",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I201841394"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Pierre Cruzal\u00e8bes",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5043802171",
+        "display_name": "Felix Bettonvil",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "ror": "https://ror.org/000k1q888",
+          "country_code": "NL",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I2800991832",
+            "https://openalex.org/I922237871"
+          ]
+        }
+      ],
+      "countries": [
+        "NL"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Felix Bettonvil",
+      "raw_affiliation_strings": [
+        "ASTRON, Dwingeloo, Netherlands"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "ASTRON, Dwingeloo, Netherlands",
+          "institution_ids": [
+            "https://openalex.org/I922237871"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5080805971",
+        "display_name": "Thomas Henning",
+        "orcid": "https://orcid.org/0000-0002-1493-300X"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210109156",
+          "display_name": "Max Planck Institute for Astronomy",
+          "ror": "https://ror.org/01vhnrs90",
+          "country_code": "DE",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I149899117",
+            "https://openalex.org/I4210109156"
+          ]
+        }
+      ],
+      "countries": [
+        "DE"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Thomas Henning",
+      "raw_affiliation_strings": [
+        "Max Planck Institute for Astronomy, Heidelberg, Germany"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Max Planck Institute for Astronomy, Heidelberg, Germany",
+          "institution_ids": [
+            "https://openalex.org/I4210109156"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5000384663",
+        "display_name": "J.\u2010C. Augereau",
+        "orcid": "https://orcid.org/0000-0002-2725-6415"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I899635006",
+          "display_name": "Universit\u00e9 Grenoble Alpes",
+          "ror": "https://ror.org/02rx3b187",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I899635006"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jean-Charles Augereau",
+      "raw_affiliation_strings": [
+        "Universit\u00e9 Grenoble Alpes, CNRS, IPAG, Grenoble, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Universit\u00e9 Grenoble Alpes, CNRS, IPAG, Grenoble, France",
+          "institution_ids": [
+            "https://openalex.org/I899635006",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5000384663",
+        "display_name": "J.\u2010C. Augereau",
+        "orcid": "https://orcid.org/0000-0002-2725-6415"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I201841394",
+          "display_name": "Universit\u00e9 C\u00f4te d'Azur",
+          "ror": "https://ror.org/019tgvf94",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I201841394"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Pierre Antonelli",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5076026413",
+        "display_name": "U. Beckmann",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210158571",
+          "display_name": "Max Planck Institute for Radio Astronomy",
+          "ror": "https://ror.org/04jvemc39",
+          "country_code": "DE",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I149899117",
+            "https://openalex.org/I4210158571"
+          ]
+        }
+      ],
+      "countries": [
+        "DE"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Udo Beckmann",
+      "raw_affiliation_strings": [
+        "Max Planck Institute for Radio Astronomy, Bonn, Germany"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Max Planck Institute for Radio Astronomy, Bonn, Germany",
+          "institution_ids": [
+            "https://openalex.org/I4210158571"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5037607508",
+        "display_name": "R. van Boekel",
+        "orcid": "https://orcid.org/0000-0002-2190-3108"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210109156",
+          "display_name": "Max Planck Institute for Astronomy",
+          "ror": "https://ror.org/01vhnrs90",
+          "country_code": "DE",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I149899117",
+            "https://openalex.org/I4210109156"
+          ]
+        }
+      ],
+      "countries": [
+        "DE"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Roy van Boekel",
+      "raw_affiliation_strings": [
+        "Max Planck Institute for Astronomy, Heidelberg, Germany"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Max Planck Institute for Astronomy, Heidelberg, Germany",
+          "institution_ids": [
+            "https://openalex.org/I4210109156"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5088868246",
+        "display_name": "Philippe Bendjoya",
+        "orcid": "https://orcid.org/0000-0002-4278-1437"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I201841394",
+          "display_name": "Universit\u00e9 C\u00f4te d'Azur",
+          "ror": "https://ror.org/019tgvf94",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I201841394"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Philippe Bendjoya",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5048130666",
+        "display_name": "W. C. Danchi",
+        "orcid": "https://orcid.org/0000-0002-9209-5830"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I1306266525",
+          "display_name": "Goddard Space Flight Center",
+          "ror": "https://ror.org/0171mag52",
+          "country_code": "US",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I1306266525",
+            "https://openalex.org/I4210124779"
+          ]
+        }
+      ],
+      "countries": [
+        "US"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "William C. Danchi",
+      "raw_affiliation_strings": [
+        "Goddard Space Flight Center, NASA, Greenbelt, MD, USA"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Goddard Space Flight Center, NASA, Greenbelt, MD, USA",
+          "institution_ids": [
+            "https://openalex.org/I1306266525"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5067890007",
+        "display_name": "C. Dominik",
+        "orcid": "https://orcid.org/0000-0002-3393-2459"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I887064364",
+          "display_name": "University of Amsterdam",
+          "ror": "https://ror.org/04dkp9463",
+          "country_code": "NL",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I887064364"
+          ]
+        }
+      ],
+      "countries": [
+        "NL"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Carsten Dominik",
+      "raw_affiliation_strings": [
+        "Anton Pannekoek Institute, University of Amsterdam, Amsterdam, Netherlands"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Anton Pannekoek Institute, University of Amsterdam, Amsterdam, Netherlands",
+          "institution_ids": [
+            "https://openalex.org/I887064364"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5025352654",
+        "display_name": "J. Drevon",
+        "orcid": "https://orcid.org/0000-0002-6806-3089"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I201841394",
+          "display_name": "Universit\u00e9 C\u00f4te d'Azur",
+          "ror": "https://ror.org/019tgvf94",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I201841394"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Julien Drevon",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5017427593",
+        "display_name": "J. F. Gallimore",
+        "orcid": "https://orcid.org/0000-0002-6972-2760"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I131221577",
+          "display_name": "Bucknell University",
+          "ror": "https://ror.org/00fc1qt65",
+          "country_code": "US",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I131221577"
+          ]
+        }
+      ],
+      "countries": [
+        "US"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jack F. Gallimore",
+      "raw_affiliation_strings": [
+        "Department of Physics and Astronomy, Bucknell University, Lewisburg, PA, USA"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Department of Physics and Astronomy, Bucknell University, Lewisburg, PA, USA",
+          "institution_ids": [
+            "https://openalex.org/I131221577"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5003166079",
+        "display_name": "U. Graser",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210109156",
+          "display_name": "Max Planck Institute for Astronomy",
+          "ror": "https://ror.org/01vhnrs90",
+          "country_code": "DE",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I149899117",
+            "https://openalex.org/I4210109156"
+          ]
+        }
+      ],
+      "countries": [
+        "DE"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Uwe Graser",
+      "raw_affiliation_strings": [
+        "Max Planck Institute for Astronomy, Heidelberg, Germany"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Max Planck Institute for Astronomy, Heidelberg, Germany",
+          "institution_ids": [
+            "https://openalex.org/I4210109156"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5022846249",
+        "display_name": "M. Heininger",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210158571",
+          "display_name": "Max Planck Institute for Radio Astronomy",
+          "ror": "https://ror.org/04jvemc39",
+          "country_code": "DE",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I149899117",
+            "https://openalex.org/I4210158571"
+          ]
+        }
+      ],
+      "countries": [
+        "DE"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Matthias Heininger",
+      "raw_affiliation_strings": [
+        "Max Planck Institute for Radio Astronomy, Bonn, Germany"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Max Planck Institute for Radio Astronomy, Bonn, Germany",
+          "institution_ids": [
+            "https://openalex.org/I4210158571"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5040543447",
+        "display_name": "V. Hocd\u00e9",
+        "orcid": "https://orcid.org/0000-0002-3643-0366"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I201841394",
+          "display_name": "Universit\u00e9 C\u00f4te d'Azur",
+          "ror": "https://ror.org/019tgvf94",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I201841394"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Vincent Hocd\u00e9",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5015425497",
+        "display_name": "M. R. Hogerheijde",
+        "orcid": "https://orcid.org/0000-0001-5217-537X"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I887064364",
+          "display_name": "University of Amsterdam",
+          "ror": "https://ror.org/04dkp9463",
+          "country_code": "NL",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I887064364"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I121797337",
+          "display_name": "Leiden University",
+          "ror": "https://ror.org/027bh9e22",
+          "country_code": "NL",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I121797337"
+          ]
+        }
+      ],
+      "countries": [
+        "NL"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michiel Hogerheijde",
+      "raw_affiliation_strings": [
+        "Anton Pannekoek Institute, University of Amsterdam, Amsterdam, Netherlands",
+        "Leiden Observatory, Leiden University, Leiden, Netherlands"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Anton Pannekoek Institute, University of Amsterdam, Amsterdam, Netherlands",
+          "institution_ids": [
+            "https://openalex.org/I887064364"
+          ]
+        },
+        {
+          "raw_affiliation_string": "Leiden Observatory, Leiden University, Leiden, Netherlands",
+          "institution_ids": [
+            "https://openalex.org/I121797337"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5103706476",
+        "display_name": "Josef Hron",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I129774422",
+          "display_name": "University of Vienna",
+          "ror": "https://ror.org/03prydq77",
+          "country_code": "AT",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I129774422"
+          ]
+        }
+      ],
+      "countries": [
+        "AT"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Josef Hron",
+      "raw_affiliation_strings": [
+        "Department of Astrophysics University of Vienna, Vienna, Austria"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Department of Astrophysics University of Vienna, Vienna, Austria",
+          "institution_ids": [
+            "https://openalex.org/I129774422"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5061173591",
+        "display_name": "C. M. Violette Impellizzeri",
+        "orcid": "https://orcid.org/0000-0002-3443-2472"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I121797337",
+          "display_name": "Leiden University",
+          "ror": "https://ror.org/027bh9e22",
+          "country_code": "NL",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I121797337"
+          ]
+        }
+      ],
+      "countries": [
+        "NL"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Caterina M. V. Impellizzeri",
+      "raw_affiliation_strings": [
+        "Leiden Observatory, Leiden University, Leiden, Netherlands"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Leiden Observatory, Leiden University, Leiden, Netherlands",
+          "institution_ids": [
+            "https://openalex.org/I121797337"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5106699559",
+        "display_name": "Lucia Klarmann",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210109156",
+          "display_name": "Max Planck Institute for Astronomy",
+          "ror": "https://ror.org/01vhnrs90",
+          "country_code": "DE",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I149899117",
+            "https://openalex.org/I4210109156"
+          ]
+        }
+      ],
+      "countries": [
+        "DE"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lucia Klarmann",
+      "raw_affiliation_strings": [
+        "Max Planck Institute for Astronomy, Heidelberg, Germany"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Max Planck Institute for Astronomy, Heidelberg, Germany",
+          "institution_ids": [
+            "https://openalex.org/I4210109156"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5023954854",
+        "display_name": "\u0415. \u0421. \u041a\u043e\u043a\u043e\u0443\u043b\u0438\u043d\u0430",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I201841394",
+          "display_name": "Universit\u00e9 C\u00f4te d'Azur",
+          "ror": "https://ror.org/019tgvf94",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I201841394"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Elena Kokoulina",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5057570788",
+        "display_name": "Lucas Labadie",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I180923762",
+          "display_name": "University of Cologne",
+          "ror": "https://ror.org/00rcxh774",
+          "country_code": "DE",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I180923762"
+          ]
+        }
+      ],
+      "countries": [
+        "DE"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lucas Labadie",
+      "raw_affiliation_strings": [
+        "Physikalisches Institut der Universit\u00e4t zu K\u00f6ln, Cologne, Germany"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Physikalisches Institut der Universit\u00e4t zu K\u00f6ln, Cologne, Germany",
+          "institution_ids": [
+            "https://openalex.org/I180923762"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5108091193",
+        "display_name": "Michael Lehmitz",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210109156",
+          "display_name": "Max Planck Institute for Astronomy",
+          "ror": "https://ror.org/01vhnrs90",
+          "country_code": "DE",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I149899117",
+            "https://openalex.org/I4210109156"
+          ]
+        }
+      ],
+      "countries": [
+        "DE"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael Lehmitz",
+      "raw_affiliation_strings": [
+        "Max Planck Institute for Astronomy, Heidelberg, Germany"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Max Planck Institute for Astronomy, Heidelberg, Germany",
+          "institution_ids": [
+            "https://openalex.org/I4210109156"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5040732609",
+        "display_name": "A. Matter",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I201841394",
+          "display_name": "Universit\u00e9 C\u00f4te d'Azur",
+          "ror": "https://ror.org/019tgvf94",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I201841394"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alexis Matter",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5013657336",
+        "display_name": "C. Paladini",
+        "orcid": "https://orcid.org/0000-0003-4974-7239"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210129531",
+          "display_name": "European Southern Observatory",
+          "ror": "https://ror.org/0377t1328",
+          "country_code": "CL",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I4210129531"
+          ]
+        }
+      ],
+      "countries": [
+        "CL"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Claudia Paladini",
+      "raw_affiliation_strings": [
+        "European Southern Observatory, Santiago, Chile"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "European Southern Observatory, Santiago, Chile",
+          "institution_ids": [
+            "https://openalex.org/I4210129531"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5056654584",
+        "display_name": "E. Pantin",
+        "orcid": "https://orcid.org/0000-0001-6472-2844"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210128565",
+          "display_name": "CEA Paris-Saclay",
+          "ror": "https://ror.org/03n15ch10",
+          "country_code": "FR",
+          "type": "government",
+          "lineage": [
+            "https://openalex.org/I2738703131",
+            "https://openalex.org/I277688954",
+            "https://openalex.org/I4210128565"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Eric Pantin",
+      "raw_affiliation_strings": [
+        "Centre d'Etudes de Saclay, Gif-sur-Yvette, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Centre d'Etudes de Saclay, Gif-sur-Yvette, France",
+          "institution_ids": [
+            "https://openalex.org/I4210128565"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5036085238",
+        "display_name": "J\u00f6rg\u2010Uwe Pott",
+        "orcid": "https://orcid.org/0000-0003-4291-2078"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210109156",
+          "display_name": "Max Planck Institute for Astronomy",
+          "ror": "https://ror.org/01vhnrs90",
+          "country_code": "DE",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I149899117",
+            "https://openalex.org/I4210109156"
+          ]
+        }
+      ],
+      "countries": [
+        "DE"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J\u00f6rg-Uwe Pott",
+      "raw_affiliation_strings": [
+        "Max Planck Institute for Astronomy, Heidelberg, Germany"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Max Planck Institute for Astronomy, Heidelberg, Germany",
+          "institution_ids": [
+            "https://openalex.org/I4210109156"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5104955958",
+        "display_name": "Dieter Schertl",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210158571",
+          "display_name": "Max Planck Institute for Radio Astronomy",
+          "ror": "https://ror.org/04jvemc39",
+          "country_code": "DE",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I149899117",
+            "https://openalex.org/I4210158571"
+          ]
+        }
+      ],
+      "countries": [
+        "DE"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dieter Schertl",
+      "raw_affiliation_strings": [
+        "Max Planck Institute for Radio Astronomy, Bonn, Germany"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Max Planck Institute for Radio Astronomy, Bonn, Germany",
+          "institution_ids": [
+            "https://openalex.org/I4210158571"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5008275046",
+        "display_name": "A. Soulain",
+        "orcid": "https://orcid.org/0000-0001-7661-5130"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I129604602",
+          "display_name": "University of Sydney",
+          "ror": "https://ror.org/0384j8v12",
+          "country_code": "AU",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I129604602"
+          ]
+        }
+      ],
+      "countries": [
+        "AU"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Anthony Soulain",
+      "raw_affiliation_strings": [
+        "Sydney Institute for Astronomy, University of Sydney, Sydney, Australia"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Sydney Institute for Astronomy, University of Sydney, Sydney, Australia",
+          "institution_ids": [
+            "https://openalex.org/I129604602"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5077549364",
+        "display_name": "P. Stee",
+        "orcid": "https://orcid.org/0000-0001-8220-0636"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I201841394",
+          "display_name": "Universit\u00e9 C\u00f4te d'Azur",
+          "ror": "https://ror.org/019tgvf94",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I201841394"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Philippe Stee",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5036302550",
+        "display_name": "K. R. W. Tristram",
+        "orcid": "https://orcid.org/0000-0001-8281-5059"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210129531",
+          "display_name": "European Southern Observatory",
+          "ror": "https://ror.org/0377t1328",
+          "country_code": "CL",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I4210129531"
+          ]
+        }
+      ],
+      "countries": [
+        "CL"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Konrad Tristram",
+      "raw_affiliation_strings": [
+        "European Southern Observatory, Santiago, Chile"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "European Southern Observatory, Santiago, Chile",
+          "institution_ids": [
+            "https://openalex.org/I4210129531"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5033148774",
+        "display_name": "J. Varga",
+        "orcid": "https://orcid.org/0000-0003-4989-575X"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I121797337",
+          "display_name": "Leiden University",
+          "ror": "https://ror.org/027bh9e22",
+          "country_code": "NL",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I121797337"
+          ]
+        }
+      ],
+      "countries": [
+        "NL"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jozsef Varga",
+      "raw_affiliation_strings": [
+        "Leiden Observatory, Leiden University, Leiden, Netherlands"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Leiden Observatory, Leiden University, Leiden, Netherlands",
+          "institution_ids": [
+            "https://openalex.org/I121797337"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5055046605",
+        "display_name": "J. Woillez",
+        "orcid": "https://orcid.org/0000-0002-2958-4738"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I1321434546",
+          "display_name": "European Southern Observatory",
+          "ror": "https://ror.org/01qtasp15",
+          "country_code": "DE",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I1321434546"
+          ]
+        }
+      ],
+      "countries": [
+        "DE"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Julien Woillez",
+      "raw_affiliation_strings": [
+        "European Southern Observatory, Garching, Germany"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "European Southern Observatory, Garching, Germany",
+          "institution_ids": [
+            "https://openalex.org/I1321434546"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5043157830",
+        "display_name": "S. Wolf",
+        "orcid": "https://orcid.org/0000-0001-7841-3452"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I32021983",
+          "display_name": "Kiel University",
+          "ror": "https://ror.org/04v76ef78",
+          "country_code": "DE",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I32021983"
+          ]
+        }
+      ],
+      "countries": [
+        "DE"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sebastian Wolf",
+      "raw_affiliation_strings": [
+        "Institute of Theoretical Physics and Astrophysics, University of Kiel, Kiel, Germany"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Institute of Theoretical Physics and Astrophysics, University of Kiel, Kiel, Germany",
+          "institution_ids": [
+            "https://openalex.org/I32021983"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5107396644",
+        "display_name": "Gideon Yoffe",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210109156",
+          "display_name": "Max Planck Institute for Astronomy",
+          "ror": "https://ror.org/01vhnrs90",
+          "country_code": "DE",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I149899117",
+            "https://openalex.org/I4210109156"
+          ]
+        }
+      ],
+      "countries": [
+        "DE"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gideon Yoffe",
+      "raw_affiliation_strings": [
+        "Max Planck Institute for Astronomy, Heidelberg, Germany"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Max Planck Institute for Astronomy, Heidelberg, Germany",
+          "institution_ids": [
+            "https://openalex.org/I4210109156"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "last",
+      "author": {
+        "id": "https://openalex.org/A5071723777",
+        "display_name": "G. Zins",
+        "orcid": "https://orcid.org/0000-0001-8862-7702"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210129531",
+          "display_name": "European Southern Observatory",
+          "ror": "https://ror.org/0377t1328",
+          "country_code": "CL",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I4210129531"
+          ]
+        }
+      ],
+      "countries": [
+        "CL"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gerard Zins",
+      "raw_affiliation_strings": [
+        "European Southern Observatory, Santiago, Chile"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "European Southern Observatory, Santiago, Chile",
+          "institution_ids": [
+            "https://openalex.org/I4210129531"
+          ]
+        }
+      ]
+    }
+  ],
+  "institutions": [],
+  "countries_distinct_count": 7,
+  "institutions_distinct_count": 52,
+  "corresponding_author_ids": [
+    "https://openalex.org/A5089274682"
+  ],
+  "corresponding_institution_ids": [
+    "https://openalex.org/I121797337"
+  ],
+  "apc_list": {
+    "value": 9750,
+    "currency": "EUR",
+    "value_usd": 11690
+  },
+  "apc_paid": null,
+  "fwci": 60.84112954,
+  "has_fulltext": false,
+  "cited_by_count": 81,
+  "citation_normalized_percentile": {
+    "value": 0.99190255,
+    "is_in_top_1_percent": true,
+    "is_in_top_10_percent": true
+  },
+  "cited_by_percentile_year": {
+    "min": 99,
+    "max": 100
+  },
+  "biblio": {
+    "volume": "602",
+    "issue": "7897",
+    "first_page": "403",
+    "last_page": "407"
+  },
+  "is_retracted": false,
+  "is_paratext": false,
+  "is_xpac": false,
+  "primary_topic": {
+    "id": "https://openalex.org/T10744",
+    "display_name": "Astrophysical Phenomena and Observations",
+    "score": 0.9995999932289124,
+    "subfield": {
+      "id": "https://openalex.org/subfields/3103",
+      "display_name": "Astronomy and Astrophysics"
+    },
+    "field": {
+      "id": "https://openalex.org/fields/31",
+      "display_name": "Physics and Astronomy"
+    },
+    "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+    }
+  },
+  "topics": [
+    {
+      "id": "https://openalex.org/T10744",
+      "display_name": "Astrophysical Phenomena and Observations",
+      "score": 0.9995999932289124,
+      "subfield": {
+        "id": "https://openalex.org/subfields/3103",
+        "display_name": "Astronomy and Astrophysics"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/31",
+        "display_name": "Physics and Astronomy"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    },
+    {
+      "id": "https://openalex.org/T10026",
+      "display_name": "Galaxies: Formation, Evolution, Phenomena",
+      "score": 0.9972000122070312,
+      "subfield": {
+        "id": "https://openalex.org/subfields/3103",
+        "display_name": "Astronomy and Astrophysics"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/31",
+        "display_name": "Physics and Astronomy"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    },
+    {
+      "id": "https://openalex.org/T11945",
+      "display_name": "Heat Transfer Mechanisms",
+      "score": 0.9793999791145325,
+      "subfield": {
+        "id": "https://openalex.org/subfields/2210",
+        "display_name": "Mechanical Engineering"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/22",
+        "display_name": "Engineering"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "https://openalex.org/keywords/physics",
+      "display_name": "Physics",
+      "score": 0.7368723750114441
+    },
+    {
+      "id": "https://openalex.org/keywords/torus",
+      "display_name": "Torus",
+      "score": 0.7328870892524719
+    },
+    {
+      "id": "https://openalex.org/keywords/astrophysics",
+      "display_name": "Astrophysics",
+      "score": 0.7206860780715942
+    },
+    {
+      "id": "https://openalex.org/keywords/astronomy",
+      "display_name": "Astronomy",
+      "score": 0.565650224685669
+    },
+    {
+      "id": "https://openalex.org/keywords/galaxy",
+      "display_name": "Galaxy",
+      "score": 0.5650568604469299
+    },
+    {
+      "id": "https://openalex.org/keywords/milky-way",
+      "display_name": "Milky Way",
+      "score": 0.547295331954956
+    },
+    {
+      "id": "https://openalex.org/keywords/black-hole",
+      "display_name": "Black hole (networking)",
+      "score": 0.5166154503822327
+    },
+    {
+      "id": "https://openalex.org/keywords/dust-lane",
+      "display_name": "Dust lane",
+      "score": 0.5059682726860046
+    },
+    {
+      "id": "https://openalex.org/keywords/radius",
+      "display_name": "RADIUS",
+      "score": 0.47507089376449585
+    },
+    {
+      "id": "https://openalex.org/keywords/extinction",
+      "display_name": "Extinction (optical mineralogy)",
+      "score": 0.4708927273750305
+    },
+    {
+      "id": "https://openalex.org/keywords/active-galactic-nucleus",
+      "display_name": "Active galactic nucleus",
+      "score": 0.42655882239341736
+    },
+    {
+      "id": "https://openalex.org/keywords/ring",
+      "display_name": "Ring (chemistry)",
+      "score": 0.42611610889434814
+    },
+    {
+      "id": "https://openalex.org/keywords/accretion",
+      "display_name": "Accretion (finance)",
+      "score": 0.42493462562561035
+    },
+    {
+      "id": "https://openalex.org/keywords/polar",
+      "display_name": "Polar",
+      "score": 0.41718918085098267
+    },
+    {
+      "id": "https://openalex.org/keywords/star-formation",
+      "display_name": "Star formation",
+      "score": 0.2091795802116394
+    },
+    {
+      "id": "https://openalex.org/keywords/geometry",
+      "display_name": "Geometry",
+      "score": 0.1586574912071228
+    }
+  ],
+  "concepts": [
+    {
+      "id": "https://openalex.org/C121332964",
+      "wikidata": "https://www.wikidata.org/wiki/Q413",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.7368723750114441
+    },
+    {
+      "id": "https://openalex.org/C9767117",
+      "wikidata": "https://www.wikidata.org/wiki/Q12510",
+      "display_name": "Torus",
+      "level": 2,
+      "score": 0.7328870892524719
+    },
+    {
+      "id": "https://openalex.org/C44870925",
+      "wikidata": "https://www.wikidata.org/wiki/Q37547",
+      "display_name": "Astrophysics",
+      "level": 1,
+      "score": 0.7206860780715942
+    },
+    {
+      "id": "https://openalex.org/C1276947",
+      "wikidata": "https://www.wikidata.org/wiki/Q333",
+      "display_name": "Astronomy",
+      "level": 1,
+      "score": 0.565650224685669
+    },
+    {
+      "id": "https://openalex.org/C98444146",
+      "wikidata": "https://www.wikidata.org/wiki/Q318",
+      "display_name": "Galaxy",
+      "level": 2,
+      "score": 0.5650568604469299
+    },
+    {
+      "id": "https://openalex.org/C555520305",
+      "wikidata": "https://www.wikidata.org/wiki/Q321",
+      "display_name": "Milky Way",
+      "level": 3,
+      "score": 0.547295331954956
+    },
+    {
+      "id": "https://openalex.org/C50341732",
+      "wikidata": "https://www.wikidata.org/wiki/Q880302",
+      "display_name": "Black hole (networking)",
+      "level": 5,
+      "score": 0.5166154503822327
+    },
+    {
+      "id": "https://openalex.org/C132645408",
+      "wikidata": "https://www.wikidata.org/wiki/Q5317012",
+      "display_name": "Dust lane",
+      "level": 4,
+      "score": 0.5059682726860046
+    },
+    {
+      "id": "https://openalex.org/C178635117",
+      "wikidata": "https://www.wikidata.org/wiki/Q747499",
+      "display_name": "RADIUS",
+      "level": 2,
+      "score": 0.47507089376449585
+    },
+    {
+      "id": "https://openalex.org/C101991246",
+      "wikidata": "https://www.wikidata.org/wiki/Q5422078",
+      "display_name": "Extinction (optical mineralogy)",
+      "level": 2,
+      "score": 0.4708927273750305
+    },
+    {
+      "id": "https://openalex.org/C43481613",
+      "wikidata": "https://www.wikidata.org/wiki/Q46587",
+      "display_name": "Active galactic nucleus",
+      "level": 3,
+      "score": 0.42655882239341736
+    },
+    {
+      "id": "https://openalex.org/C2780378348",
+      "wikidata": "https://www.wikidata.org/wiki/Q25351438",
+      "display_name": "Ring (chemistry)",
+      "level": 2,
+      "score": 0.42611610889434814
+    },
+    {
+      "id": "https://openalex.org/C2776401274",
+      "wikidata": "https://www.wikidata.org/wiki/Q3756855",
+      "display_name": "Accretion (finance)",
+      "level": 2,
+      "score": 0.42493462562561035
+    },
+    {
+      "id": "https://openalex.org/C29705727",
+      "wikidata": "https://www.wikidata.org/wiki/Q294562",
+      "display_name": "Polar",
+      "level": 2,
+      "score": 0.41718918085098267
+    },
+    {
+      "id": "https://openalex.org/C125857072",
+      "wikidata": "https://www.wikidata.org/wiki/Q16744",
+      "display_name": "Star formation",
+      "level": 3,
+      "score": 0.2091795802116394
+    },
+    {
+      "id": "https://openalex.org/C2524010",
+      "wikidata": "https://www.wikidata.org/wiki/Q8087",
+      "display_name": "Geometry",
+      "level": 1,
+      "score": 0.1586574912071228
+    },
+    {
+      "id": "https://openalex.org/C38652104",
+      "wikidata": "https://www.wikidata.org/wiki/Q3510521",
+      "display_name": "Computer security",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "https://openalex.org/C178790620",
+      "wikidata": "https://www.wikidata.org/wiki/Q11351",
+      "display_name": "Organic chemistry",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "https://openalex.org/C41008148",
+      "wikidata": "https://www.wikidata.org/wiki/Q21198",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "https://openalex.org/C185592680",
+      "wikidata": "https://www.wikidata.org/wiki/Q2329",
+      "display_name": "Chemistry",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "https://openalex.org/C104954878",
+      "wikidata": "https://www.wikidata.org/wiki/Q1648707",
+      "display_name": "Routing protocol",
+      "level": 3,
+      "score": 0.0
+    },
+    {
+      "id": "https://openalex.org/C31258907",
+      "wikidata": "https://www.wikidata.org/wiki/Q1301371",
+      "display_name": "Computer network",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "https://openalex.org/C120665830",
+      "wikidata": "https://www.wikidata.org/wiki/Q14620",
+      "display_name": "Optics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "https://openalex.org/C74172769",
+      "wikidata": "https://www.wikidata.org/wiki/Q1446839",
+      "display_name": "Routing (electronic design automation)",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "https://openalex.org/C89305328",
+      "wikidata": "https://www.wikidata.org/wiki/Q1755411",
+      "display_name": "Link-state routing protocol",
+      "level": 4,
+      "score": 0.0
+    },
+    {
+      "id": "https://openalex.org/C33923547",
+      "wikidata": "https://www.wikidata.org/wiki/Q395",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.0
+    }
+  ],
+  "mesh": [],
+  "locations_count": 8,
+  "locations": [
+    {
+      "id": "doi:10.1038/s41586-021-04311-7",
+      "is_oa": false,
+      "landing_page_url": "https://doi.org/10.1038/s41586-021-04311-7",
+      "pdf_url": null,
+      "source": {
+        "id": "https://openalex.org/S137773608",
+        "display_name": "Nature",
+        "issn_l": "0028-0836",
+        "issn": [
+          "0028-0836",
+          "1476-4687"
+        ],
+        "is_oa": false,
+        "is_in_doaj": false,
+        "is_core": true,
+        "host_organization": "https://openalex.org/P4310319908",
+        "host_organization_name": "Nature Portfolio",
+        "host_organization_lineage": [
+          "https://openalex.org/P4310319908",
+          "https://openalex.org/P4310319965"
+        ],
+        "host_organization_lineage_names": [
+          "Nature Portfolio",
+          "Springer Nature"
+        ],
+        "type": "journal"
+      },
+      "license": null,
+      "license_id": null,
+      "version": "publishedVersion",
+      "is_accepted": true,
+      "is_published": true,
+      "raw_source_name": "Nature",
+      "raw_type": "journal-article"
+    },
+    {
+      "id": "pmid:35173340",
+      "is_oa": false,
+      "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/35173340",
+      "pdf_url": null,
+      "source": {
+        "id": "https://openalex.org/S4306525036",
+        "display_name": "PubMed",
+        "issn_l": null,
+        "issn": null,
+        "is_oa": false,
+        "is_in_doaj": false,
+        "is_core": false,
+        "host_organization": "https://openalex.org/I1299303238",
+        "host_organization_name": "National Institutes of Health",
+        "host_organization_lineage": [
+          "https://openalex.org/I1299303238"
+        ],
+        "host_organization_lineage_names": [],
+        "type": "repository"
+      },
+      "license": null,
+      "license_id": null,
+      "version": "publishedVersion",
+      "is_accepted": true,
+      "is_published": true,
+      "raw_source_name": "Nature",
+      "raw_type": null
+    },
+    {
+      "id": "pmh:oai:arXiv.org:2112.13694",
+      "is_oa": true,
+      "landing_page_url": "http://arxiv.org/abs/2112.13694",
+      "pdf_url": "https://arxiv.org/pdf/2112.13694",
+      "source": {
+        "id": "https://openalex.org/S4306400194",
+        "display_name": "arXiv (Cornell University)",
+        "issn_l": null,
+        "issn": null,
+        "is_oa": true,
+        "is_in_doaj": false,
+        "is_core": false,
+        "host_organization": "https://openalex.org/I205783295",
+        "host_organization_name": "Cornell University",
+        "host_organization_lineage": [
+          "https://openalex.org/I205783295"
+        ],
+        "host_organization_lineage_names": [],
+        "type": "repository"
+      },
+      "license": null,
+      "license_id": null,
+      "version": "submittedVersion",
+      "is_accepted": false,
+      "is_published": false,
+      "raw_source_name": null,
+      "raw_type": "text"
+    },
+    {
+      "id": "pmh:ul:oai:scholarlypublications.universiteitleiden.nl:item_3515459",
+      "is_oa": true,
+      "landing_page_url": "https://ui.adsabs.harvard.edu/abs/2022Natur.602..403G",
+      "pdf_url": null,
+      "source": {
+        "id": "https://openalex.org/S4306401843",
+        "display_name": "Data Archiving and Networked Services (DANS)",
+        "issn_l": null,
+        "issn": null,
+        "is_oa": false,
+        "is_in_doaj": false,
+        "is_core": false,
+        "host_organization": "https://openalex.org/I1322597698",
+        "host_organization_name": "Royal Netherlands Academy of Arts and Sciences",
+        "host_organization_lineage": [
+          "https://openalex.org/I1322597698"
+        ],
+        "host_organization_lineage_names": [],
+        "type": "repository"
+      },
+      "license": "other-oa",
+      "license_id": "https://openalex.org/licenses/other-oa",
+      "version": "submittedVersion",
+      "is_accepted": false,
+      "is_published": false,
+      "raw_source_name": "Nature, 602(7897), 403 - 407",
+      "raw_type": "info:eu-repo/semantics/article"
+    },
+    {
+      "id": "pmh:oai:HAL:hal-03801290v1",
+      "is_oa": true,
+      "landing_page_url": "https://cnrs.hal.science/hal-03801290",
+      "pdf_url": null,
+      "source": {
+        "id": "https://openalex.org/S4306402512",
+        "display_name": "HAL (Le Centre pour la Communication Scientifique Directe)",
+        "issn_l": null,
+        "issn": null,
+        "is_oa": false,
+        "is_in_doaj": false,
+        "is_core": false,
+        "host_organization": "https://openalex.org/I1294671590",
+        "host_organization_name": "Centre National de la Recherche Scientifique",
+        "host_organization_lineage": [
+          "https://openalex.org/I1294671590"
+        ],
+        "host_organization_lineage_names": [],
+        "type": "repository"
+      },
+      "license": "other-oa",
+      "license_id": "https://openalex.org/licenses/other-oa",
+      "version": "submittedVersion",
+      "is_accepted": false,
+      "is_published": false,
+      "raw_source_name": "Nature, 2022, 602 (7897), pp.403-407. &#x27E8;10.1038/s41586-021-04311-7&#x27E9;",
+      "raw_type": "Journal articles"
+    },
+    {
+      "id": "pmh:oai:repository.ubn.ru.nl:2066/247416",
+      "is_oa": false,
+      "landing_page_url": "https://repository.ubn.ru.nl/handle/2066/247416",
+      "pdf_url": null,
+      "source": {
+        "id": "https://openalex.org/S4306401067",
+        "display_name": "Radboud Repository (Radboud University)",
+        "issn_l": null,
+        "issn": null,
+        "is_oa": false,
+        "is_in_doaj": false,
+        "is_core": false,
+        "host_organization": "https://openalex.org/I145872427",
+        "host_organization_name": "Radboud University Nijmegen",
+        "host_organization_lineage": [
+          "https://openalex.org/I145872427"
+        ],
+        "host_organization_lineage_names": [],
+        "type": "repository"
+      },
+      "license": null,
+      "license_id": null,
+      "version": "submittedVersion",
+      "is_accepted": false,
+      "is_published": false,
+      "raw_source_name": "Nature, 602, 7897, pp. 403-407",
+      "raw_type": "Article / Letter to editor"
+    },
+    {
+      "id": "pmh:ru:oai:repository.ubn.ru.nl:2066/247416",
+      "is_oa": false,
+      "landing_page_url": "http://hdl.handle.net/2066/247416",
+      "pdf_url": null,
+      "source": {
+        "id": "https://openalex.org/S4306401843",
+        "display_name": "Data Archiving and Networked Services (DANS)",
+        "issn_l": null,
+        "issn": null,
+        "is_oa": false,
+        "is_in_doaj": false,
+        "is_core": false,
+        "host_organization": "https://openalex.org/I1322597698",
+        "host_organization_name": "Royal Netherlands Academy of Arts and Sciences",
+        "host_organization_lineage": [
+          "https://openalex.org/I1322597698"
+        ],
+        "host_organization_lineage_names": [],
+        "type": "repository"
+      },
+      "license": null,
+      "license_id": null,
+      "version": "submittedVersion",
+      "is_accepted": false,
+      "is_published": false,
+      "raw_source_name": "Nature, 602, 403 - 407",
+      "raw_type": "info:eu-repo/semantics/article"
+    },
+    {
+      "id": "pmh:uvapub:oai:dare.uva.nl:openaire_cris_publications/e0f9a023-f17e-415d-b0b7-9b44a4ed48e2",
+      "is_oa": false,
+      "landing_page_url": "https://dare.uva.nl/personal/pure/en/publications/thermal-imaging-of-dust-hiding-the-black-hole-in-ngc-1068(e0f9a023-f17e-415d-b0b7-9b44a4ed48e2).html",
+      "pdf_url": null,
+      "source": {
+        "id": "https://openalex.org/S4306401843",
+        "display_name": "Data Archiving and Networked Services (DANS)",
+        "issn_l": null,
+        "issn": null,
+        "is_oa": false,
+        "is_in_doaj": false,
+        "is_core": false,
+        "host_organization": "https://openalex.org/I1322597698",
+        "host_organization_name": "Royal Netherlands Academy of Arts and Sciences",
+        "host_organization_lineage": [
+          "https://openalex.org/I1322597698"
+        ],
+        "host_organization_lineage_names": [],
+        "type": "repository"
+      },
+      "license": null,
+      "license_id": null,
+      "version": "submittedVersion",
+      "is_accepted": false,
+      "is_published": false,
+      "raw_source_name": "Nature, 602(7897), 403 - 407. Nature Publishing Group",
+      "raw_type": "info:eu-repo/semantics/article"
+    }
+  ],
+  "best_oa_location": {
+    "id": "pmh:oai:arXiv.org:2112.13694",
+    "is_oa": true,
+    "landing_page_url": "http://arxiv.org/abs/2112.13694",
+    "pdf_url": "https://arxiv.org/pdf/2112.13694",
+    "source": {
+      "id": "https://openalex.org/S4306400194",
+      "display_name": "arXiv (Cornell University)",
+      "issn_l": null,
+      "issn": null,
+      "is_oa": true,
+      "is_in_doaj": false,
+      "is_core": false,
+      "host_organization": "https://openalex.org/I205783295",
+      "host_organization_name": "Cornell University",
+      "host_organization_lineage": [
+        "https://openalex.org/I205783295"
+      ],
+      "host_organization_lineage_names": [],
+      "type": "repository"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "submittedVersion",
+    "is_accepted": false,
+    "is_published": false,
+    "raw_source_name": null,
+    "raw_type": "text"
+  },
+  "sustainable_development_goals": [
+    {
+      "id": "https://metadata.un.org/sdg/14",
+      "score": 0.5,
+      "display_name": "Life below water"
+    }
+  ],
+  "awards": [],
+  "funders": [],
+  "has_content": {
+    "grobid_xml": false,
+    "pdf": false
+  },
+  "referenced_works_count": 75,
+  "referenced_works": [
+    "https://openalex.org/W2124219338",
+    "https://openalex.org/W2290875578",
+    "https://openalex.org/W2296241659",
+    "https://openalex.org/W2992374467",
+    "https://openalex.org/W2031652044",
+    "https://openalex.org/W2024235708",
+    "https://openalex.org/W3174262523",
+    "https://openalex.org/W3172125643",
+    "https://openalex.org/W2974275772",
+    "https://openalex.org/W2029547539",
+    "https://openalex.org/W2766147632",
+    "https://openalex.org/W2136749628",
+    "https://openalex.org/W2022902488",
+    "https://openalex.org/W2019243050",
+    "https://openalex.org/W3209734624",
+    "https://openalex.org/W2029422149",
+    "https://openalex.org/W1981343827",
+    "https://openalex.org/W2153931839",
+    "https://openalex.org/W2093342499",
+    "https://openalex.org/W2100272890",
+    "https://openalex.org/W2969693406",
+    "https://openalex.org/W1980625659",
+    "https://openalex.org/W2031592379",
+    "https://openalex.org/W2053483836",
+    "https://openalex.org/W2142093613",
+    "https://openalex.org/W2981670570",
+    "https://openalex.org/W1985726073",
+    "https://openalex.org/W1986161569",
+    "https://openalex.org/W2001262315",
+    "https://openalex.org/W3172073919",
+    "https://openalex.org/W2135592571",
+    "https://openalex.org/W2979075583",
+    "https://openalex.org/W2068615975",
+    "https://openalex.org/W2040047274",
+    "https://openalex.org/W1996833055",
+    "https://openalex.org/W2069105369",
+    "https://openalex.org/W3111351993",
+    "https://openalex.org/W4289253637",
+    "https://openalex.org/W3138338289",
+    "https://openalex.org/W1978618727",
+    "https://openalex.org/W2000359198",
+    "https://openalex.org/W2005126631",
+    "https://openalex.org/W2101458338",
+    "https://openalex.org/W2063397409",
+    "https://openalex.org/W109480519",
+    "https://openalex.org/W1665346145",
+    "https://openalex.org/W2130736142",
+    "https://openalex.org/W2171199234",
+    "https://openalex.org/W1965372241",
+    "https://openalex.org/W1984811360",
+    "https://openalex.org/W2167744905",
+    "https://openalex.org/W2075237489",
+    "https://openalex.org/W1977914968",
+    "https://openalex.org/W3144114485",
+    "https://openalex.org/W2087217833",
+    "https://openalex.org/W2007140208",
+    "https://openalex.org/W2015322319",
+    "https://openalex.org/W2502185915",
+    "https://openalex.org/W3162506046",
+    "https://openalex.org/W3105249828",
+    "https://openalex.org/W3098845413",
+    "https://openalex.org/W3102014803",
+    "https://openalex.org/W3106337366",
+    "https://openalex.org/W3099019368",
+    "https://openalex.org/W3102782160",
+    "https://openalex.org/W3102262863",
+    "https://openalex.org/W3102993162",
+    "https://openalex.org/W3106197220",
+    "https://openalex.org/W3101569711",
+    "https://openalex.org/W3106229304",
+    "https://openalex.org/W3034380825",
+    "https://openalex.org/W3015586667",
+    "https://openalex.org/W2980404162",
+    "https://openalex.org/W4249468231",
+    "https://openalex.org/W1613559169"
+  ],
+  "related_works": [
+    "https://openalex.org/W1668565945",
+    "https://openalex.org/W2298448003",
+    "https://openalex.org/W2625331563",
+    "https://openalex.org/W1736016406",
+    "https://openalex.org/W3098039153",
+    "https://openalex.org/W2943155809",
+    "https://openalex.org/W4288359478",
+    "https://openalex.org/W3006725784",
+    "https://openalex.org/W1672899537",
+    "https://openalex.org/W2000878451"
+  ],
+  "abstract_inverted_index": null,
+  "counts_by_year": [
+    {
+      "year": 2026,
+      "cited_by_count": 2
+    },
+    {
+      "year": 2025,
+      "cited_by_count": 20
+    },
+    {
+      "year": 2024,
+      "cited_by_count": 17
+    },
+    {
+      "year": 2023,
+      "cited_by_count": 25
+    },
+    {
+      "year": 2022,
+      "cited_by_count": 17
+    }
+  ],
+  "updated_date": "2026-01-13T01:12:25.745995",
+  "created_date": "2025-10-10T00:00:00"
+}

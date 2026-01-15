@@ -1,7 +1,7 @@
 import arxiv
 import logging
 from collections import Counter
-from typing import List, Dict, Set, Tuple, Optional
+from typing import List, Dict, Any
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -32,16 +32,21 @@ def is_first_author(paper: arxiv.Result, author_name: str) -> bool:
     """
     Checks if the given author is the first author of the paper.
     Checks index 0 of the authors list.
-    Approximate match for name comparison.
+    Approximate match for name comparison (bidirectional substring match).
     """
     if not paper.authors:
         return False
     first_author = paper.authors[0].name
 
     def normalize(name):
-        return name.lower().replace(".", "").replace(" ", "")
+        return name.lower().replace(".", "").replace(" ", "").replace(",", "")
 
-    return normalize(author_name) in normalize(first_author)
+    normalized_query = normalize(author_name)
+    normalized_first = normalize(first_author)
+
+    # Bidirectional substring match to handle different name orderings
+    # e.g., "Adya, V B" vs "V. B. Adya"
+    return normalized_query in normalized_first or normalized_first in normalized_query
 
 
 def get_co_authors(entry: str, n: int) -> List[str]:
@@ -111,7 +116,7 @@ def get_author_papers(author: str, j: int, k: int) -> List[arxiv.Result]:
     return selected_first + selected_non_first
 
 
-def generate_research_summary(entry: str, n: int, j: int, k: int) -> Dict:
+def get_papers(entry: str, n: int, j: int, k: int) -> set[Any]:
     """
     Args:
         entry: Entry point author name
@@ -144,39 +149,7 @@ def generate_research_summary(entry: str, n: int, j: int, k: int) -> Dict:
         for p in new_papers:
             all_arxiv_ids.add(p.entry_id)
 
-        # Calculate stats
-        first_author_count = sum(1 for p in new_papers if is_first_author(p, author))
-        non_first_author_count = len(new_papers) - first_author_count
-
-        author_data = {
-            'author': author,
-            'papers': new_papers,
-            'first_author_count': first_author_count,
-            'non_first_author_count': non_first_author_count,
-            'total_papers': len(new_papers)
-        }
-
-        summary_data.append(author_data)
-        logger.info(f"{author}: {len(new_papers)} unique papers ({first_author_count} first-author, {non_first_author_count} non-first-author)")
-
-    # Step 3: Compile final summary
-    all_unique_papers = []
-    for data in summary_data:
-        all_unique_papers.extend(data['papers'])
-
-    summary = {
-        'entry_author': entry,
-        'n_co_authors': n,
-        'authors': all_authors,
-        'author_data': summary_data,
-        'total_unique_papers': len(all_unique_papers),
-        'all_papers': all_unique_papers,
-        'all_arxiv_ids': list(all_arxiv_ids)
-    }
-
-    logger.info(f"Summary complete: {len(all_authors)} authors, {len(all_unique_papers)} unique papers")
-
-    return summary
+    return all_arxiv_ids
 
 
 def select_papers_by_author(authors: List[str], n: int = 5) -> Dict[str, List[str]]:
@@ -280,24 +253,12 @@ def select_papers_at_least_k_authors(authors: List[str], n: int = 10, k: int = 2
 
 if __name__ == "__main__":
     # Test the new integrated functionality
-    summary = generate_research_summary(
-        entry="Alec Radford",
-        n=2,  # Get 2 co-authors
-        j=3,  # 3 first-author papers per author
-        k=2   # 2 non-first-author papers per author
+    all_papers = get_papers(
+        entry="Riccardo Salami",
+        n=5,  # Get co-authors
+        j=5,  # first-author papers per author
+        k=5   # non-first-author papers per author
     )
 
-    print(f"\nResearch Summary:")
-    print(f"Entry Author: {summary['entry_author']}")
-    print(f"All Authors: {summary['authors']}")
-    print(f"Total Unique Papers: {summary['total_unique_papers']}")
-    print(f"\nPer-Author Breakdown:")
-    for author_data in summary['author_data']:
-        print(f"  {author_data['author']}: {author_data['total_papers']} papers "
-              f"({author_data['first_author_count']} first-author, "
-              f"{author_data['non_first_author_count']} non-first-author)")
-    print(f"\nAll arXiv IDs ({len(summary['all_arxiv_ids'])}):")
-    for id in summary['all_arxiv_ids'][:5]:  # Show first 5
-        print(f"  - {id}")
-    if len(summary['all_arxiv_ids']) > 5:
-        print(f"  ... and {len(summary['all_arxiv_ids']) - 5} more")
+    print(f"Testing with {len(all_papers)} arXiv papers:")
+    print(all_papers)

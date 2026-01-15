@@ -1,0 +1,1576 @@
+{
+  "id": "https://openalex.org/W4406536360",
+  "doi": "https://doi.org/10.1038/s41550-024-02461-y",
+  "title": "Direct imaging of active galactic nucleus outflows and their origin with the 23 m Large Binocular Telescope",
+  "display_name": "Direct imaging of active galactic nucleus outflows and their origin with the 23 m Large Binocular Telescope",
+  "publication_year": 2025,
+  "publication_date": "2025-01-17",
+  "ids": {
+    "openalex": "https://openalex.org/W4406536360",
+    "doi": "https://doi.org/10.1038/s41550-024-02461-y"
+  },
+  "language": "en",
+  "primary_location": {
+    "id": "doi:10.1038/s41550-024-02461-y",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1038/s41550-024-02461-y",
+    "pdf_url": null,
+    "source": {
+      "id": "https://openalex.org/S2764494557",
+      "display_name": "Nature Astronomy",
+      "issn_l": "2397-3366",
+      "issn": [
+        "2397-3366"
+      ],
+      "is_oa": false,
+      "is_in_doaj": false,
+      "is_core": true,
+      "host_organization": "https://openalex.org/P4310319908",
+      "host_organization_name": "Nature Portfolio",
+      "host_organization_lineage": [
+        "https://openalex.org/P4310319908",
+        "https://openalex.org/P4310319965"
+      ],
+      "host_organization_lineage_names": [
+        "Nature Portfolio",
+        "Springer Nature"
+      ],
+      "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Nature Astronomy",
+    "raw_type": "journal-article"
+  },
+  "type": "article",
+  "indexed_in": [
+    "arxiv",
+    "crossref"
+  ],
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://arxiv.org/pdf/2502.01840",
+    "any_repository_has_fulltext": false
+  },
+  "authorships": [
+    {
+      "author_position": "first",
+      "author": {
+        "id": "https://openalex.org/A5073039871",
+        "display_name": "J. W. Isbell",
+        "orcid": "https://orcid.org/0000-0002-1272-6322"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I138006243",
+          "display_name": "University of Arizona",
+          "ror": "https://ror.org/03m2x1q45",
+          "country_code": "US",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I138006243"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210109156",
+          "display_name": "Max Planck Institute for Astronomy",
+          "ror": "https://ror.org/01vhnrs90",
+          "country_code": "DE",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I149899117",
+            "https://openalex.org/I4210109156"
+          ]
+        }
+      ],
+      "countries": [
+        "DE",
+        "US"
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "J. W. Isbell",
+      "raw_affiliation_strings": [
+        "Department of Astronomy and Steward Observatory, The University of Arizona, Tucson, AZ, USA",
+        "Max-Planck-Institut f\u00fcr Astronomie, Heidelberg, Germany"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Department of Astronomy and Steward Observatory, The University of Arizona, Tucson, AZ, USA",
+          "institution_ids": [
+            "https://openalex.org/I138006243"
+          ]
+        },
+        {
+          "raw_affiliation_string": "Max-Planck-Institut f\u00fcr Astronomie, Heidelberg, Germany",
+          "institution_ids": [
+            "https://openalex.org/I4210109156"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5074813346",
+        "display_name": "Steve Ertel",
+        "orcid": "https://orcid.org/0000-0002-2314-7289"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I1287402277",
+          "display_name": "Las Cumbres Observatory Global Telescope Network",
+          "ror": "https://ror.org/02ar7h206",
+          "country_code": "US",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I1287402277"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I138006243",
+          "display_name": "University of Arizona",
+          "ror": "https://ror.org/03m2x1q45",
+          "country_code": "US",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I138006243"
+          ]
+        }
+      ],
+      "countries": [
+        "US"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Ertel",
+      "raw_affiliation_strings": [
+        "Department of Astronomy and Steward Observatory, The University of Arizona, Tucson, AZ, USA",
+        "Large Binocular Telescope Observatory, The University of Arizona, Tucson, AZ, USA"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Department of Astronomy and Steward Observatory, The University of Arizona, Tucson, AZ, USA",
+          "institution_ids": [
+            "https://openalex.org/I138006243"
+          ]
+        },
+        {
+          "raw_affiliation_string": "Large Binocular Telescope Observatory, The University of Arizona, Tucson, AZ, USA",
+          "institution_ids": [
+            "https://openalex.org/I1287402277",
+            "https://openalex.org/I138006243"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5036085238",
+        "display_name": "J\u00f6rg\u2010Uwe Pott",
+        "orcid": "https://orcid.org/0000-0003-4291-2078"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210109156",
+          "display_name": "Max Planck Institute for Astronomy",
+          "ror": "https://ror.org/01vhnrs90",
+          "country_code": "DE",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I149899117",
+            "https://openalex.org/I4210109156"
+          ]
+        }
+      ],
+      "countries": [
+        "DE"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J.-U. Pott",
+      "raw_affiliation_strings": [
+        "Max-Planck-Institut f\u00fcr Astronomie, Heidelberg, Germany"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Max-Planck-Institut f\u00fcr Astronomie, Heidelberg, Germany",
+          "institution_ids": [
+            "https://openalex.org/I4210109156"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5065652129",
+        "display_name": "G. Weigelt",
+        "orcid": "https://orcid.org/0000-0001-9754-2233"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210158571",
+          "display_name": "Max Planck Institute for Radio Astronomy",
+          "ror": "https://ror.org/04jvemc39",
+          "country_code": "DE",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I149899117",
+            "https://openalex.org/I4210158571"
+          ]
+        }
+      ],
+      "countries": [
+        "DE"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "G. Weigelt",
+      "raw_affiliation_strings": [
+        "Max-Planck-Institut f\u00fcr Radioastronomie, Bonn, Germany"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Max-Planck-Institut f\u00fcr Radioastronomie, Bonn, Germany",
+          "institution_ids": [
+            "https://openalex.org/I4210158571"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5081001890",
+        "display_name": "Marko Stalevski",
+        "orcid": "https://orcid.org/0000-0001-5146-8330"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I32597200",
+          "display_name": "Ghent University",
+          "ror": "https://ror.org/00cv9y106",
+          "country_code": "BE",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I32597200"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210155633",
+          "display_name": "Astronomical Observatory",
+          "ror": "https://ror.org/04t4pcw17",
+          "country_code": "RS",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I4210155633"
+          ]
+        }
+      ],
+      "countries": [
+        "BE",
+        "RS"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Stalevski",
+      "raw_affiliation_strings": [
+        "Astronomical Observatory, Belgrade, Serbia",
+        "Sterrenkundig Observatorium, Universiteit Gent, Gent, Belgium"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Astronomical Observatory, Belgrade, Serbia",
+          "institution_ids": [
+            "https://openalex.org/I4210155633"
+          ]
+        },
+        {
+          "raw_affiliation_string": "Sterrenkundig Observatorium, Universiteit Gent, Gent, Belgium",
+          "institution_ids": [
+            "https://openalex.org/I32597200"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5065941304",
+        "display_name": "J. Leftley",
+        "orcid": "https://orcid.org/0000-0001-6009-1803"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I201841394",
+          "display_name": "Universit\u00e9 C\u00f4te d'Azur",
+          "ror": "https://ror.org/019tgvf94",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I201841394"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Leftley",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, Observatoire de la C\u00f4te d\u2019Azur, Universit\u00e9 C\u00f4te d\u2019Azur, CNRS, Nice, France",
+        "Laboratoire Lagrange, Observatoire de la C\u00f4te d'Azur, Universit\u00e9 C\u00f4te d'Azur, CNRS, Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, Observatoire de la C\u00f4te d\u2019Azur, Universit\u00e9 C\u00f4te d\u2019Azur, CNRS, Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, Observatoire de la C\u00f4te d'Azur, Universit\u00e9 C\u00f4te d'Azur, CNRS, Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5105471899",
+        "display_name": "W. Jaffe",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I121797337",
+          "display_name": "Leiden University",
+          "ror": "https://ror.org/027bh9e22",
+          "country_code": "NL",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I121797337"
+          ]
+        }
+      ],
+      "countries": [
+        "NL"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "W. Jaffe",
+      "raw_affiliation_strings": [
+        "Leiden Observatory, Leiden University, Leiden, the Netherlands"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Leiden Observatory, Leiden University, Leiden, the Netherlands",
+          "institution_ids": [
+            "https://openalex.org/I121797337"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5055323394",
+        "display_name": "R. Petrov",
+        "orcid": "https://orcid.org/0000-0003-4759-6051"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I201841394",
+          "display_name": "Universit\u00e9 C\u00f4te d'Azur",
+          "ror": "https://ror.org/019tgvf94",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I201841394"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210126779",
+          "display_name": "Observatoire de la C\u00f4te d\u2019Azur",
+          "ror": "https://ror.org/039fj2469",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. G. Petrov",
+      "raw_affiliation_strings": [
+        "Laboratoire Lagrange, Observatoire de la C\u00f4te d\u2019Azur, Universit\u00e9 C\u00f4te d\u2019Azur, CNRS, Nice, France",
+        "Laboratoire Lagrange, Observatoire de la C\u00f4te d'Azur, Universit\u00e9 C\u00f4te d'Azur, CNRS, Nice, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, Observatoire de la C\u00f4te d\u2019Azur, Universit\u00e9 C\u00f4te d\u2019Azur, CNRS, Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "raw_affiliation_string": "Laboratoire Lagrange, Observatoire de la C\u00f4te d'Azur, Universit\u00e9 C\u00f4te d'Azur, CNRS, Nice, France",
+          "institution_ids": [
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210126779",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5093549080",
+        "display_name": "N. Moszczynski",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I204730241",
+          "display_name": "Universit\u00e9 Paris Cit\u00e9",
+          "ror": "https://ror.org/05f82e368",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I204730241"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I39804081",
+          "display_name": "Sorbonne Universit\u00e9",
+          "ror": "https://ror.org/02en5vm52",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I39804081"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I2746051580",
+          "display_name": "Universit\u00e9 Paris Sciences et Lettres",
+          "ror": "https://ror.org/013cjyk83",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I2746051580"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210120578",
+          "display_name": "Laboratoire d\u2019\u00e9tudes spatiales et d\u2019instrumentation en astrophysique",
+          "ror": "https://ror.org/02eptjh02",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I1294671590",
+            "https://openalex.org/I204730241",
+            "https://openalex.org/I2746051580",
+            "https://openalex.org/I2800004676",
+            "https://openalex.org/I39804081",
+            "https://openalex.org/I4210120578",
+            "https://openalex.org/I4210148025"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "N. Moszczynski",
+      "raw_affiliation_strings": [
+        "LESIA, Observatoire de Paris, Universit\u00e9 PSL, CNRS, Sorbonne Universit\u00e9, Universit\u00e9 de Paris Cit\u00e9, Meudon, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "LESIA, Observatoire de Paris, Universit\u00e9 PSL, CNRS, Sorbonne Universit\u00e9, Universit\u00e9 de Paris Cit\u00e9, Meudon, France",
+          "institution_ids": [
+            "https://openalex.org/I204730241",
+            "https://openalex.org/I4210120578",
+            "https://openalex.org/I1294671590",
+            "https://openalex.org/I39804081",
+            "https://openalex.org/I2746051580"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5074775083",
+        "display_name": "P. Vermot",
+        "orcid": "https://orcid.org/0000-0002-6126-3264"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I204730241",
+          "display_name": "Universit\u00e9 Paris Cit\u00e9",
+          "ror": "https://ror.org/05f82e368",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I204730241"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I39804081",
+          "display_name": "Sorbonne Universit\u00e9",
+          "ror": "https://ror.org/02en5vm52",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I39804081"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210120578",
+          "display_name": "Laboratoire d\u2019\u00e9tudes spatiales et d\u2019instrumentation en astrophysique",
+          "ror": "https://ror.org/02eptjh02",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I1294671590",
+            "https://openalex.org/I204730241",
+            "https://openalex.org/I2746051580",
+            "https://openalex.org/I2800004676",
+            "https://openalex.org/I39804081",
+            "https://openalex.org/I4210120578",
+            "https://openalex.org/I4210148025"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I2746051580",
+          "display_name": "Universit\u00e9 Paris Sciences et Lettres",
+          "ror": "https://ror.org/013cjyk83",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I2746051580"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P. Vermot",
+      "raw_affiliation_strings": [
+        "LESIA, Observatoire de Paris, Universit\u00e9 PSL, CNRS, Sorbonne Universit\u00e9, Universit\u00e9 de Paris Cit\u00e9, Meudon, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "LESIA, Observatoire de Paris, Universit\u00e9 PSL, CNRS, Sorbonne Universit\u00e9, Universit\u00e9 de Paris Cit\u00e9, Meudon, France",
+          "institution_ids": [
+            "https://openalex.org/I204730241",
+            "https://openalex.org/I4210120578",
+            "https://openalex.org/I1294671590",
+            "https://openalex.org/I39804081",
+            "https://openalex.org/I2746051580"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5082115147",
+        "display_name": "Philip M. Hinz",
+        "orcid": "https://orcid.org/0000-0002-1954-4564"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I185103710",
+          "display_name": "University of California, Santa Cruz",
+          "ror": "https://ror.org/03s65by71",
+          "country_code": "US",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I185103710"
+          ]
+        }
+      ],
+      "countries": [
+        "US"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P. Hinz",
+      "raw_affiliation_strings": [
+        "University of California, Santa Cruz, CA, USA"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "University of California, Santa Cruz, CA, USA",
+          "institution_ids": [
+            "https://openalex.org/I185103710"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5071163045",
+        "display_name": "L. Burtscher",
+        "orcid": "https://orcid.org/0000-0003-1014-043X"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "L. Burtscher",
+      "raw_affiliation_strings": [
+        "Umweltinstitut M\u00fcnchen, M\u00fcnchen, Germany"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Umweltinstitut M\u00fcnchen, M\u00fcnchen, Germany",
+          "institution_ids": []
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5089274682",
+        "display_name": "V. G\u00e1mez Rosas",
+        "orcid": "https://orcid.org/0000-0002-8830-6199"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I121797337",
+          "display_name": "Leiden University",
+          "ror": "https://ror.org/027bh9e22",
+          "country_code": "NL",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I121797337"
+          ]
+        }
+      ],
+      "countries": [
+        "NL"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "V. G\u00e1mez Rosas",
+      "raw_affiliation_strings": [
+        "Leiden Observatory, Leiden University, Leiden, the Netherlands"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Leiden Observatory, Leiden University, Leiden, the Netherlands",
+          "institution_ids": [
+            "https://openalex.org/I121797337"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5108696187",
+        "display_name": "A. C. Becker",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I1287402277",
+          "display_name": "Las Cumbres Observatory Global Telescope Network",
+          "ror": "https://ror.org/02ar7h206",
+          "country_code": "US",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I1287402277"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I138006243",
+          "display_name": "University of Arizona",
+          "ror": "https://ror.org/03m2x1q45",
+          "country_code": "US",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I138006243"
+          ]
+        }
+      ],
+      "countries": [
+        "US"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Becker",
+      "raw_affiliation_strings": [
+        "Large Binocular Telescope Observatory, The University of Arizona, Tucson, AZ, USA"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Large Binocular Telescope Observatory, The University of Arizona, Tucson, AZ, USA",
+          "institution_ids": [
+            "https://openalex.org/I1287402277",
+            "https://openalex.org/I138006243"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5016888574",
+        "display_name": "John E. Carlson",
+        "orcid": "https://orcid.org/0000-0001-9129-1867"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I138006243",
+          "display_name": "University of Arizona",
+          "ror": "https://ror.org/03m2x1q45",
+          "country_code": "US",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I138006243"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I1287402277",
+          "display_name": "Las Cumbres Observatory Global Telescope Network",
+          "ror": "https://ror.org/02ar7h206",
+          "country_code": "US",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I1287402277"
+          ]
+        }
+      ],
+      "countries": [
+        "US"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Carlson",
+      "raw_affiliation_strings": [
+        "Large Binocular Telescope Observatory, The University of Arizona, Tucson, AZ, USA"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Large Binocular Telescope Observatory, The University of Arizona, Tucson, AZ, USA",
+          "institution_ids": [
+            "https://openalex.org/I1287402277",
+            "https://openalex.org/I138006243"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5092609681",
+        "display_name": "V. Faramaz-Gorka",
+        "orcid": "https://orcid.org/0000-0001-6403-841X"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I138006243",
+          "display_name": "University of Arizona",
+          "ror": "https://ror.org/03m2x1q45",
+          "country_code": "US",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I138006243"
+          ]
+        }
+      ],
+      "countries": [
+        "US"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "V. Faramaz-Gorka",
+      "raw_affiliation_strings": [
+        "Department of Astronomy and Steward Observatory, The University of Arizona, Tucson, AZ, USA"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Department of Astronomy and Steward Observatory, The University of Arizona, Tucson, AZ, USA",
+          "institution_ids": [
+            "https://openalex.org/I138006243"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5082573055",
+        "display_name": "W. F. Hoffmann",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I138006243",
+          "display_name": "University of Arizona",
+          "ror": "https://ror.org/03m2x1q45",
+          "country_code": "US",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I138006243"
+          ]
+        }
+      ],
+      "countries": [
+        "US"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "W. F. Hoffmann",
+      "raw_affiliation_strings": [
+        "Department of Astronomy and Steward Observatory, The University of Arizona, Tucson, AZ, USA"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Department of Astronomy and Steward Observatory, The University of Arizona, Tucson, AZ, USA",
+          "institution_ids": [
+            "https://openalex.org/I138006243"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5083186457",
+        "display_name": "Jarron Leisenring",
+        "orcid": "https://orcid.org/0000-0002-0834-6140"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I138006243",
+          "display_name": "University of Arizona",
+          "ror": "https://ror.org/03m2x1q45",
+          "country_code": "US",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I138006243"
+          ]
+        }
+      ],
+      "countries": [
+        "US"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Leisenring",
+      "raw_affiliation_strings": [
+        "Department of Astronomy and Steward Observatory, The University of Arizona, Tucson, AZ, USA"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Department of Astronomy and Steward Observatory, The University of Arizona, Tucson, AZ, USA",
+          "institution_ids": [
+            "https://openalex.org/I138006243"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5112488067",
+        "display_name": "J. Power",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I138006243",
+          "display_name": "University of Arizona",
+          "ror": "https://ror.org/03m2x1q45",
+          "country_code": "US",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I138006243"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I1287402277",
+          "display_name": "Las Cumbres Observatory Global Telescope Network",
+          "ror": "https://ror.org/02ar7h206",
+          "country_code": "US",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I1287402277"
+          ]
+        }
+      ],
+      "countries": [
+        "US"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Power",
+      "raw_affiliation_strings": [
+        "Large Binocular Telescope Observatory, The University of Arizona, Tucson, AZ, USA"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Large Binocular Telescope Observatory, The University of Arizona, Tucson, AZ, USA",
+          "institution_ids": [
+            "https://openalex.org/I1287402277",
+            "https://openalex.org/I138006243"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "last",
+      "author": {
+        "id": "https://openalex.org/A5054678699",
+        "display_name": "Kevin Wagner",
+        "orcid": "https://orcid.org/0000-0002-4309-6343"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I138006243",
+          "display_name": "University of Arizona",
+          "ror": "https://ror.org/03m2x1q45",
+          "country_code": "US",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I138006243"
+          ]
+        }
+      ],
+      "countries": [
+        "US"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "K. Wagner",
+      "raw_affiliation_strings": [
+        "Department of Astronomy and Steward Observatory, The University of Arizona, Tucson, AZ, USA"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Department of Astronomy and Steward Observatory, The University of Arizona, Tucson, AZ, USA",
+          "institution_ids": [
+            "https://openalex.org/I138006243"
+          ]
+        }
+      ]
+    }
+  ],
+  "institutions": [],
+  "countries_distinct_count": 6,
+  "institutions_distinct_count": 20,
+  "corresponding_author_ids": [
+    "https://openalex.org/A5073039871"
+  ],
+  "corresponding_institution_ids": [
+    "https://openalex.org/I138006243",
+    "https://openalex.org/I4210109156"
+  ],
+  "apc_list": {
+    "value": 9750,
+    "currency": "EUR",
+    "value_usd": 11690
+  },
+  "apc_paid": null,
+  "fwci": 13.11462854,
+  "has_fulltext": false,
+  "cited_by_count": 4,
+  "citation_normalized_percentile": {
+    "value": 0.95409619,
+    "is_in_top_1_percent": false,
+    "is_in_top_10_percent": true
+  },
+  "cited_by_percentile_year": {
+    "min": 97,
+    "max": 98
+  },
+  "biblio": {
+    "volume": "9",
+    "issue": "3",
+    "first_page": "417",
+    "last_page": "427"
+  },
+  "is_retracted": false,
+  "is_paratext": false,
+  "is_xpac": false,
+  "primary_topic": {
+    "id": "https://openalex.org/T10026",
+    "display_name": "Galaxies: Formation, Evolution, Phenomena",
+    "score": 0.9998000264167786,
+    "subfield": {
+      "id": "https://openalex.org/subfields/3103",
+      "display_name": "Astronomy and Astrophysics"
+    },
+    "field": {
+      "id": "https://openalex.org/fields/31",
+      "display_name": "Physics and Astronomy"
+    },
+    "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+    }
+  },
+  "topics": [
+    {
+      "id": "https://openalex.org/T10026",
+      "display_name": "Galaxies: Formation, Evolution, Phenomena",
+      "score": 0.9998000264167786,
+      "subfield": {
+        "id": "https://openalex.org/subfields/3103",
+        "display_name": "Astronomy and Astrophysics"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/31",
+        "display_name": "Physics and Astronomy"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    },
+    {
+      "id": "https://openalex.org/T10744",
+      "display_name": "Astrophysical Phenomena and Observations",
+      "score": 0.9984999895095825,
+      "subfield": {
+        "id": "https://openalex.org/subfields/3103",
+        "display_name": "Astronomy and Astrophysics"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/31",
+        "display_name": "Physics and Astronomy"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    },
+    {
+      "id": "https://openalex.org/T11484",
+      "display_name": "Adaptive optics and wavefront sensing",
+      "score": 0.9980000257492065,
+      "subfield": {
+        "id": "https://openalex.org/subfields/3107",
+        "display_name": "Atomic and Molecular Physics, and Optics"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/31",
+        "display_name": "Physics and Astronomy"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "https://openalex.org/keywords/physics",
+      "display_name": "Physics",
+      "score": 0.8942286968231201
+    },
+    {
+      "id": "https://openalex.org/keywords/large-binocular-telescope",
+      "display_name": "Large Binocular Telescope",
+      "score": 0.885047197341919
+    },
+    {
+      "id": "https://openalex.org/keywords/astrophysics",
+      "display_name": "Astrophysics",
+      "score": 0.656570553779602
+    },
+    {
+      "id": "https://openalex.org/keywords/telescope",
+      "display_name": "Telescope",
+      "score": 0.6230612993240356
+    },
+    {
+      "id": "https://openalex.org/keywords/astronomy",
+      "display_name": "Astronomy",
+      "score": 0.5857119560241699
+    },
+    {
+      "id": "https://openalex.org/keywords/supermassive-black-hole",
+      "display_name": "Supermassive black hole",
+      "score": 0.5477969646453857
+    },
+    {
+      "id": "https://openalex.org/keywords/active-galactic-nucleus",
+      "display_name": "Active galactic nucleus",
+      "score": 0.5219659209251404
+    },
+    {
+      "id": "https://openalex.org/keywords/interferometry",
+      "display_name": "Interferometry",
+      "score": 0.5213555097579956
+    },
+    {
+      "id": "https://openalex.org/keywords/fizeau-interferometer",
+      "display_name": "Fizeau interferometer",
+      "score": 0.47527876496315
+    },
+    {
+      "id": "https://openalex.org/keywords/spitzer-space-telescope",
+      "display_name": "Spitzer Space Telescope",
+      "score": 0.4621243476867676
+    },
+    {
+      "id": "https://openalex.org/keywords/surface-brightness",
+      "display_name": "Surface brightness",
+      "score": 0.4615905284881592
+    },
+    {
+      "id": "https://openalex.org/keywords/very-large-telescope",
+      "display_name": "Very Large Telescope",
+      "score": 0.43110933899879456
+    },
+    {
+      "id": "https://openalex.org/keywords/infrared-telescope",
+      "display_name": "Infrared telescope",
+      "score": 0.427204430103302
+    },
+    {
+      "id": "https://openalex.org/keywords/quasar",
+      "display_name": "Quasar",
+      "score": 0.42535555362701416
+    },
+    {
+      "id": "https://openalex.org/keywords/galaxy",
+      "display_name": "Galaxy",
+      "score": 0.3598501682281494
+    },
+    {
+      "id": "https://openalex.org/keywords/astronomical-interferometer",
+      "display_name": "Astronomical interferometer",
+      "score": 0.19976526498794556
+    }
+  ],
+  "concepts": [
+    {
+      "id": "https://openalex.org/C121332964",
+      "wikidata": "https://www.wikidata.org/wiki/Q413",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.8942286968231201
+    },
+    {
+      "id": "https://openalex.org/C2779710718",
+      "wikidata": "https://www.wikidata.org/wiki/Q845304",
+      "display_name": "Large Binocular Telescope",
+      "level": 3,
+      "score": 0.885047197341919
+    },
+    {
+      "id": "https://openalex.org/C44870925",
+      "wikidata": "https://www.wikidata.org/wiki/Q37547",
+      "display_name": "Astrophysics",
+      "level": 1,
+      "score": 0.656570553779602
+    },
+    {
+      "id": "https://openalex.org/C2780848835",
+      "wikidata": "https://www.wikidata.org/wiki/Q4213",
+      "display_name": "Telescope",
+      "level": 2,
+      "score": 0.6230612993240356
+    },
+    {
+      "id": "https://openalex.org/C1276947",
+      "wikidata": "https://www.wikidata.org/wiki/Q333",
+      "display_name": "Astronomy",
+      "level": 1,
+      "score": 0.5857119560241699
+    },
+    {
+      "id": "https://openalex.org/C173120059",
+      "wikidata": "https://www.wikidata.org/wiki/Q40392",
+      "display_name": "Supermassive black hole",
+      "level": 3,
+      "score": 0.5477969646453857
+    },
+    {
+      "id": "https://openalex.org/C43481613",
+      "wikidata": "https://www.wikidata.org/wiki/Q46587",
+      "display_name": "Active galactic nucleus",
+      "level": 3,
+      "score": 0.5219659209251404
+    },
+    {
+      "id": "https://openalex.org/C166689943",
+      "wikidata": "https://www.wikidata.org/wiki/Q850283",
+      "display_name": "Interferometry",
+      "level": 2,
+      "score": 0.5213555097579956
+    },
+    {
+      "id": "https://openalex.org/C2776904371",
+      "wikidata": "https://www.wikidata.org/wiki/Q1422100",
+      "display_name": "Fizeau interferometer",
+      "level": 4,
+      "score": 0.47527876496315
+    },
+    {
+      "id": "https://openalex.org/C522977591",
+      "wikidata": "https://www.wikidata.org/wiki/Q201953",
+      "display_name": "Spitzer Space Telescope",
+      "level": 3,
+      "score": 0.4621243476867676
+    },
+    {
+      "id": "https://openalex.org/C91228026",
+      "wikidata": "https://www.wikidata.org/wiki/Q1048103",
+      "display_name": "Surface brightness",
+      "level": 3,
+      "score": 0.4615905284881592
+    },
+    {
+      "id": "https://openalex.org/C2780174078",
+      "wikidata": "https://www.wikidata.org/wiki/Q265628",
+      "display_name": "Very Large Telescope",
+      "level": 3,
+      "score": 0.43110933899879456
+    },
+    {
+      "id": "https://openalex.org/C2776163771",
+      "wikidata": "https://www.wikidata.org/wiki/Q3370723",
+      "display_name": "Infrared telescope",
+      "level": 3,
+      "score": 0.427204430103302
+    },
+    {
+      "id": "https://openalex.org/C135041427",
+      "wikidata": "https://www.wikidata.org/wiki/Q83373",
+      "display_name": "Quasar",
+      "level": 3,
+      "score": 0.42535555362701416
+    },
+    {
+      "id": "https://openalex.org/C98444146",
+      "wikidata": "https://www.wikidata.org/wiki/Q318",
+      "display_name": "Galaxy",
+      "level": 2,
+      "score": 0.3598501682281494
+    },
+    {
+      "id": "https://openalex.org/C23576306",
+      "wikidata": "https://www.wikidata.org/wiki/Q17004698",
+      "display_name": "Astronomical interferometer",
+      "level": 3,
+      "score": 0.19976526498794556
+    }
+  ],
+  "mesh": [],
+  "locations_count": 3,
+  "locations": [
+    {
+      "id": "doi:10.1038/s41550-024-02461-y",
+      "is_oa": false,
+      "landing_page_url": "https://doi.org/10.1038/s41550-024-02461-y",
+      "pdf_url": null,
+      "source": {
+        "id": "https://openalex.org/S2764494557",
+        "display_name": "Nature Astronomy",
+        "issn_l": "2397-3366",
+        "issn": [
+          "2397-3366"
+        ],
+        "is_oa": false,
+        "is_in_doaj": false,
+        "is_core": true,
+        "host_organization": "https://openalex.org/P4310319908",
+        "host_organization_name": "Nature Portfolio",
+        "host_organization_lineage": [
+          "https://openalex.org/P4310319908",
+          "https://openalex.org/P4310319965"
+        ],
+        "host_organization_lineage_names": [
+          "Nature Portfolio",
+          "Springer Nature"
+        ],
+        "type": "journal"
+      },
+      "license": null,
+      "license_id": null,
+      "version": "publishedVersion",
+      "is_accepted": true,
+      "is_published": true,
+      "raw_source_name": "Nature Astronomy",
+      "raw_type": "journal-article"
+    },
+    {
+      "id": "pmh:oai:arXiv.org:2502.01840",
+      "is_oa": true,
+      "landing_page_url": "http://arxiv.org/abs/2502.01840",
+      "pdf_url": "https://arxiv.org/pdf/2502.01840",
+      "source": {
+        "id": "https://openalex.org/S4306400194",
+        "display_name": "arXiv (Cornell University)",
+        "issn_l": null,
+        "issn": null,
+        "is_oa": true,
+        "is_in_doaj": false,
+        "is_core": false,
+        "host_organization": "https://openalex.org/I205783295",
+        "host_organization_name": "Cornell University",
+        "host_organization_lineage": [
+          "https://openalex.org/I205783295"
+        ],
+        "host_organization_lineage_names": [],
+        "type": "repository"
+      },
+      "license": null,
+      "license_id": null,
+      "version": "submittedVersion",
+      "is_accepted": false,
+      "is_published": false,
+      "raw_source_name": null,
+      "raw_type": "text"
+    },
+    {
+      "id": "pmh:oai:HAL:hal-05123198v1",
+      "is_oa": true,
+      "landing_page_url": "https://hal.science/hal-05123198",
+      "pdf_url": null,
+      "source": {
+        "id": "https://openalex.org/S4306402512",
+        "display_name": "HAL (Le Centre pour la Communication Scientifique Directe)",
+        "issn_l": null,
+        "issn": null,
+        "is_oa": false,
+        "is_in_doaj": false,
+        "is_core": false,
+        "host_organization": "https://openalex.org/I1294671590",
+        "host_organization_name": "Centre National de la Recherche Scientifique",
+        "host_organization_lineage": [
+          "https://openalex.org/I1294671590"
+        ],
+        "host_organization_lineage_names": [],
+        "type": "repository"
+      },
+      "license": "cc-by",
+      "license_id": "https://openalex.org/licenses/cc-by",
+      "version": "submittedVersion",
+      "is_accepted": false,
+      "is_published": false,
+      "raw_source_name": "Nature Astronomy, 2025, 9 (3), pp.417-427. &#x27E8;10.1038/s41550-024-02461-y&#x27E9;",
+      "raw_type": "Journal articles"
+    }
+  ],
+  "best_oa_location": {
+    "id": "pmh:oai:arXiv.org:2502.01840",
+    "is_oa": true,
+    "landing_page_url": "http://arxiv.org/abs/2502.01840",
+    "pdf_url": "https://arxiv.org/pdf/2502.01840",
+    "source": {
+      "id": "https://openalex.org/S4306400194",
+      "display_name": "arXiv (Cornell University)",
+      "issn_l": null,
+      "issn": null,
+      "is_oa": true,
+      "is_in_doaj": false,
+      "is_core": false,
+      "host_organization": "https://openalex.org/I205783295",
+      "host_organization_name": "Cornell University",
+      "host_organization_lineage": [
+        "https://openalex.org/I205783295"
+      ],
+      "host_organization_lineage_names": [],
+      "type": "repository"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "submittedVersion",
+    "is_accepted": false,
+    "is_published": false,
+    "raw_source_name": null,
+    "raw_type": "text"
+  },
+  "sustainable_development_goals": [],
+  "awards": [
+    {
+      "id": "https://openalex.org/G293688979",
+      "display_name": null,
+      "funder_award_id": "ANR-21-CE31-0011",
+      "funder_id": "https://openalex.org/F4320320883",
+      "funder_display_name": "Agence Nationale de la Recherche"
+    },
+    {
+      "id": "https://openalex.org/G7071935555",
+      "display_name": null,
+      "funder_award_id": "ERP-80NSSC21K0394",
+      "funder_id": "https://openalex.org/F4320306101",
+      "funder_display_name": "National Aeronautics and Space Administration"
+    }
+  ],
+  "funders": [
+    {
+      "id": "https://openalex.org/F4320306101",
+      "display_name": "National Aeronautics and Space Administration",
+      "ror": "https://ror.org/027ka1x80"
+    },
+    {
+      "id": "https://openalex.org/F4320320883",
+      "display_name": "Agence Nationale de la Recherche",
+      "ror": "https://ror.org/00rbzpz17"
+    }
+  ],
+  "has_content": {
+    "pdf": false,
+    "grobid_xml": false
+  },
+  "referenced_works_count": 70,
+  "referenced_works": [
+    "https://openalex.org/W2124219338",
+    "https://openalex.org/W1882938068",
+    "https://openalex.org/W2005783017",
+    "https://openalex.org/W2512693666",
+    "https://openalex.org/W2904699985",
+    "https://openalex.org/W2977252639",
+    "https://openalex.org/W3029662278",
+    "https://openalex.org/W2092750450",
+    "https://openalex.org/W4295695032",
+    "https://openalex.org/W2276031254",
+    "https://openalex.org/W4229458093",
+    "https://openalex.org/W4386448152",
+    "https://openalex.org/W4213289678",
+    "https://openalex.org/W2992374467",
+    "https://openalex.org/W2319865874",
+    "https://openalex.org/W2969693406",
+    "https://openalex.org/W2981670570",
+    "https://openalex.org/W2031592379",
+    "https://openalex.org/W4390692926",
+    "https://openalex.org/W2606442456",
+    "https://openalex.org/W2489420726",
+    "https://openalex.org/W3110860872",
+    "https://openalex.org/W2119696842",
+    "https://openalex.org/W1991036472",
+    "https://openalex.org/W2613386482",
+    "https://openalex.org/W2077262080",
+    "https://openalex.org/W2488711681",
+    "https://openalex.org/W2071702124",
+    "https://openalex.org/W2054963562",
+    "https://openalex.org/W1941977595",
+    "https://openalex.org/W4383557548",
+    "https://openalex.org/W4393951668",
+    "https://openalex.org/W4386554295",
+    "https://openalex.org/W2029547539",
+    "https://openalex.org/W3016151600",
+    "https://openalex.org/W3144114485",
+    "https://openalex.org/W2910468075",
+    "https://openalex.org/W2019579421",
+    "https://openalex.org/W3159278787",
+    "https://openalex.org/W2984041077",
+    "https://openalex.org/W2990380285",
+    "https://openalex.org/W4401979272",
+    "https://openalex.org/W1967952738",
+    "https://openalex.org/W2887735776",
+    "https://openalex.org/W3138338289",
+    "https://openalex.org/W2979075583",
+    "https://openalex.org/W2042427766",
+    "https://openalex.org/W4391605372",
+    "https://openalex.org/W2170608748",
+    "https://openalex.org/W2088909704",
+    "https://openalex.org/W4301447394",
+    "https://openalex.org/W2151430481",
+    "https://openalex.org/W2039851596",
+    "https://openalex.org/W2140954888",
+    "https://openalex.org/W2806641950",
+    "https://openalex.org/W4292691071",
+    "https://openalex.org/W1624693442",
+    "https://openalex.org/W2980404162",
+    "https://openalex.org/W2990599075",
+    "https://openalex.org/W3102830584",
+    "https://openalex.org/W3099880957",
+    "https://openalex.org/W3105066599",
+    "https://openalex.org/W3104045735",
+    "https://openalex.org/W3105249828",
+    "https://openalex.org/W3162506046",
+    "https://openalex.org/W3099055639",
+    "https://openalex.org/W3162637845",
+    "https://openalex.org/W3106180996",
+    "https://openalex.org/W3098843158",
+    "https://openalex.org/W3106197220"
+  ],
+  "related_works": [
+    "https://openalex.org/W1965386667",
+    "https://openalex.org/W2963368667",
+    "https://openalex.org/W2063492982",
+    "https://openalex.org/W4301265537",
+    "https://openalex.org/W2808621353",
+    "https://openalex.org/W1624451558",
+    "https://openalex.org/W1485750281",
+    "https://openalex.org/W2996376108",
+    "https://openalex.org/W1965009781",
+    "https://openalex.org/W2517700549"
+  ],
+  "abstract_inverted_index": null,
+  "counts_by_year": [
+    {
+      "year": 2025,
+      "cited_by_count": 4
+    }
+  ],
+  "updated_date": "2026-01-13T21:40:15.123406",
+  "created_date": "2025-01-18T00:00:00"
+}

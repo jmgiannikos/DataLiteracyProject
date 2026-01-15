@@ -1,0 +1,1548 @@
+{
+  "id": "https://openalex.org/W7105605537",
+  "doi": "https://doi.org/10.1051/0004-6361/202556615",
+  "title": "Multi-band infrared imaging reveals dusty spiral arcs around the binary B[e] star 3 Puppis",
+  "display_name": "Multi-band infrared imaging reveals dusty spiral arcs around the binary B[e] star 3 Puppis",
+  "publication_year": 2025,
+  "publication_date": "2025-11-13",
+  "ids": {
+    "openalex": "https://openalex.org/W7105605537",
+    "doi": "https://doi.org/10.1051/0004-6361/202556615"
+  },
+  "language": null,
+  "primary_location": {
+    "id": "doi:10.1051/0004-6361/202556615",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1051/0004-6361/202556615",
+    "pdf_url": null,
+    "source": {
+      "id": "https://openalex.org/S205231332",
+      "display_name": "Astronomy and Astrophysics",
+      "issn_l": "0004-6361",
+      "issn": [
+        "0004-6361",
+        "1432-0746"
+      ],
+      "is_oa": false,
+      "is_in_doaj": false,
+      "is_core": true,
+      "host_organization": "https://openalex.org/P4310319748",
+      "host_organization_name": "EDP Sciences",
+      "host_organization_lineage": [
+        "https://openalex.org/P4310319748"
+      ],
+      "host_organization_lineage_names": [],
+      "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Astronomy &amp; Astrophysics",
+    "raw_type": "journal-article"
+  },
+  "type": "article",
+  "indexed_in": [
+    "crossref"
+  ],
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "authorships": [
+    {
+      "author_position": "first",
+      "author": {
+        "id": "https://openalex.org/A2120027268",
+        "display_name": "M. Abello",
+        "orcid": null
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": true,
+      "raw_author_name": "M. Abello",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A2463193648",
+        "display_name": "J Drevon",
+        "orcid": "https://orcid.org/0000-0002-6806-3089"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "J. Drevon",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A2137808065",
+        "display_name": "A. Meilland",
+        "orcid": null
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "A. Meilland",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A2142888835",
+        "display_name": "A. Domiciano de Souza",
+        "orcid": "https://orcid.org/0000-0002-4050-601X"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "A. Domiciano de Souza",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A2340523316",
+        "display_name": "F. Millour",
+        "orcid": "https://orcid.org/0000-0002-9765-7783"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "F. Millour",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A2581237284",
+        "display_name": "R. Flor",
+        "orcid": null
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "R. Flor",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": null,
+        "display_name": "J.H. Leftley",
+        "orcid": null
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "J.H. Leftley",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A2107489990",
+        "display_name": "C. Paladini",
+        "orcid": "https://orcid.org/0000-0003-4974-7239"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "C. Paladini",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A2035552896",
+        "display_name": "Ph. Stee",
+        "orcid": null
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "Ph. Stee",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A2119677122",
+        "display_name": "A. Matter",
+        "orcid": "https://orcid.org/0000-0001-7887-7898"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "A. Matter",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A2002704612",
+        "display_name": "S. Lagarde",
+        "orcid": null
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "S. Lagarde",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A2107289059",
+        "display_name": "Beatriz L\u00f3pez",
+        "orcid": "https://orcid.org/0000-0001-9703-8416"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "B. Lopez",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A2124231803",
+        "display_name": "P. Abraham",
+        "orcid": "https://orcid.org/0000-0001-6015-646X"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "P. \u00c1brah\u00e1m",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A2341750535",
+        "display_name": "J. C. Augereau",
+        "orcid": "https://orcid.org/0000-0002-2725-6415"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "J.-C. Augereau",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A2314144340",
+        "display_name": "P. Cruzal\u00e8bes",
+        "orcid": null
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "P. Cruzal\u00e8bes",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A2633954578",
+        "display_name": "W. Danchi",
+        "orcid": null
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "W. Danchi",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A2060852100",
+        "display_name": "T. Henning",
+        "orcid": "https://orcid.org/0000-0002-9405-7491"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "T. Henning",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A2577985299",
+        "display_name": "T. Juh\u00e1sz",
+        "orcid": null
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "T. Juh\u00e1sz",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A2316574230",
+        "display_name": "F. Kerschbaum",
+        "orcid": "https://orcid.org/0000-0001-6320-0980"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "F. Kerschbaum",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A2779149718",
+        "display_name": "F. Lykou",
+        "orcid": null
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "F. Lykou",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5116316550",
+        "display_name": "P. Priolet",
+        "orcid": "https://orcid.org/0009-0000-4227-5449"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "P. Priolet",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A4201963835",
+        "display_name": "S. Robbe-Dubois",
+        "orcid": "https://orcid.org/0000-0003-3178-4090"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "S. Robbe-Dubois",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A1933265662",
+        "display_name": "J Varga",
+        "orcid": "https://orcid.org/0000-0002-5582-1514"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "J. Varga",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A2152235460",
+        "display_name": "L. B. F. M. Waters",
+        "orcid": null
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "L.B.F.M. Waters",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A1909830013",
+        "display_name": "G. Weigelt",
+        "orcid": "https://orcid.org/0000-0001-9754-2233"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "G. Weigelt",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A2098570025",
+        "display_name": "S. Wolf",
+        "orcid": "https://orcid.org/0000-0001-7841-3452"
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "S. Wolf",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    },
+    {
+      "author_position": "last",
+      "author": {
+        "id": "https://openalex.org/A5120268268",
+        "display_name": "MATISSE collaboration",
+        "orcid": null
+      },
+      "institutions": [],
+      "countries": [],
+      "is_corresponding": false,
+      "raw_author_name": "MATISSE collaboration",
+      "raw_affiliation_strings": [],
+      "affiliations": []
+    }
+  ],
+  "institutions": [],
+  "countries_distinct_count": 0,
+  "institutions_distinct_count": 27,
+  "corresponding_author_ids": [],
+  "corresponding_institution_ids": [],
+  "apc_list": null,
+  "apc_paid": null,
+  "fwci": 0.0,
+  "has_fulltext": false,
+  "cited_by_count": 0,
+  "citation_normalized_percentile": {
+    "value": 0.79938426,
+    "is_in_top_1_percent": false,
+    "is_in_top_10_percent": false
+  },
+  "cited_by_percentile_year": null,
+  "biblio": {
+    "volume": null,
+    "issue": null,
+    "first_page": null,
+    "last_page": null
+  },
+  "is_retracted": false,
+  "is_paratext": false,
+  "is_xpac": false,
+  "primary_topic": {
+    "id": "https://openalex.org/T10477",
+    "display_name": "Astrophysics and Star Formation Studies",
+    "score": 0.9109076857566833,
+    "subfield": {
+      "id": "https://openalex.org/subfields/3103",
+      "display_name": "Astronomy and Astrophysics"
+    },
+    "field": {
+      "id": "https://openalex.org/fields/31",
+      "display_name": "Physics and Astronomy"
+    },
+    "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+    }
+  },
+  "topics": [
+    {
+      "id": "https://openalex.org/T10477",
+      "display_name": "Astrophysics and Star Formation Studies",
+      "score": 0.9109076857566833,
+      "subfield": {
+        "id": "https://openalex.org/subfields/3103",
+        "display_name": "Astronomy and Astrophysics"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/31",
+        "display_name": "Physics and Astronomy"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    },
+    {
+      "id": "https://openalex.org/T10039",
+      "display_name": "Stellar, planetary, and galactic studies",
+      "score": 0.05255822837352753,
+      "subfield": {
+        "id": "https://openalex.org/subfields/3103",
+        "display_name": "Astronomy and Astrophysics"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/31",
+        "display_name": "Physics and Astronomy"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    },
+    {
+      "id": "https://openalex.org/T12917",
+      "display_name": "Astronomy and Astrophysical Research",
+      "score": 0.011436766013503075,
+      "subfield": {
+        "id": "https://openalex.org/subfields/3105",
+        "display_name": "Instrumentation"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/31",
+        "display_name": "Physics and Astronomy"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "https://openalex.org/keywords/angular-diameter",
+      "display_name": "Angular diameter",
+      "score": 0.6635305881500244
+    },
+    {
+      "id": "https://openalex.org/keywords/wavelength",
+      "display_name": "Wavelength",
+      "score": 0.5053529739379883
+    },
+    {
+      "id": "https://openalex.org/keywords/angular-resolution",
+      "display_name": "Angular resolution (graph drawing)",
+      "score": 0.5018662810325623
+    },
+    {
+      "id": "https://openalex.org/keywords/binary-number",
+      "display_name": "Binary number",
+      "score": 0.48517394065856934
+    },
+    {
+      "id": "https://openalex.org/keywords/interferometry",
+      "display_name": "Interferometry",
+      "score": 0.48193883895874023
+    },
+    {
+      "id": "https://openalex.org/keywords/binary-star",
+      "display_name": "Binary star",
+      "score": 0.4107271730899811
+    },
+    {
+      "id": "https://openalex.org/keywords/supergiant",
+      "display_name": "Supergiant",
+      "score": 0.3982345163822174
+    },
+    {
+      "id": "https://openalex.org/keywords/brightness",
+      "display_name": "Brightness",
+      "score": 0.35944414138793945
+    },
+    {
+      "id": "https://openalex.org/keywords/stars",
+      "display_name": "Stars",
+      "score": 0.3372170329093933
+    }
+  ],
+  "concepts": [
+    {
+      "id": "https://openalex.org/C121332964",
+      "wikidata": "https://www.wikidata.org/wiki/Q413",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.9430570602416992
+    },
+    {
+      "id": "https://openalex.org/C44870925",
+      "wikidata": "https://www.wikidata.org/wiki/Q37547",
+      "display_name": "Astrophysics",
+      "level": 1,
+      "score": 0.8191066980361938
+    },
+    {
+      "id": "https://openalex.org/C153465967",
+      "wikidata": "https://www.wikidata.org/wiki/Q718647",
+      "display_name": "Angular diameter",
+      "level": 3,
+      "score": 0.6635305881500244
+    },
+    {
+      "id": "https://openalex.org/C6260449",
+      "wikidata": "https://www.wikidata.org/wiki/Q41364",
+      "display_name": "Wavelength",
+      "level": 2,
+      "score": 0.5053529739379883
+    },
+    {
+      "id": "https://openalex.org/C133848361",
+      "wikidata": "https://www.wikidata.org/wiki/Q4764027",
+      "display_name": "Angular resolution (graph drawing)",
+      "level": 2,
+      "score": 0.5018662810325623
+    },
+    {
+      "id": "https://openalex.org/C48372109",
+      "wikidata": "https://www.wikidata.org/wiki/Q3913",
+      "display_name": "Binary number",
+      "level": 2,
+      "score": 0.48517394065856934
+    },
+    {
+      "id": "https://openalex.org/C166689943",
+      "wikidata": "https://www.wikidata.org/wiki/Q850283",
+      "display_name": "Interferometry",
+      "level": 2,
+      "score": 0.48193883895874023
+    },
+    {
+      "id": "https://openalex.org/C193786831",
+      "wikidata": "https://www.wikidata.org/wiki/Q50053",
+      "display_name": "Binary star",
+      "level": 3,
+      "score": 0.4107271730899811
+    },
+    {
+      "id": "https://openalex.org/C198785896",
+      "wikidata": "https://www.wikidata.org/wiki/Q193599",
+      "display_name": "Supergiant",
+      "level": 3,
+      "score": 0.3982345163822174
+    },
+    {
+      "id": "https://openalex.org/C1276947",
+      "wikidata": "https://www.wikidata.org/wiki/Q333",
+      "display_name": "Astronomy",
+      "level": 1,
+      "score": 0.389171838760376
+    },
+    {
+      "id": "https://openalex.org/C125245961",
+      "wikidata": "https://www.wikidata.org/wiki/Q221656",
+      "display_name": "Brightness",
+      "level": 2,
+      "score": 0.35944414138793945
+    },
+    {
+      "id": "https://openalex.org/C150846664",
+      "wikidata": "https://www.wikidata.org/wiki/Q7602306",
+      "display_name": "Stars",
+      "level": 2,
+      "score": 0.3372170329093933
+    },
+    {
+      "id": "https://openalex.org/C124967146",
+      "wikidata": "https://www.wikidata.org/wiki/Q3457898",
+      "display_name": "Spectral resolution",
+      "level": 3,
+      "score": 0.3331620395183563
+    },
+    {
+      "id": "https://openalex.org/C158355884",
+      "wikidata": "https://www.wikidata.org/wiki/Q11388",
+      "display_name": "Infrared",
+      "level": 2,
+      "score": 0.31568026542663574
+    },
+    {
+      "id": "https://openalex.org/C63479239",
+      "wikidata": "https://www.wikidata.org/wiki/Q7353546",
+      "display_name": "Robustness (evolution)",
+      "level": 3,
+      "score": 0.3086089491844177
+    },
+    {
+      "id": "https://openalex.org/C2780897414",
+      "wikidata": "https://www.wikidata.org/wiki/Q7600592",
+      "display_name": "Star (game theory)",
+      "level": 2,
+      "score": 0.3079918622970581
+    },
+    {
+      "id": "https://openalex.org/C38976095",
+      "wikidata": "https://www.wikidata.org/wiki/Q752641",
+      "display_name": "Asymmetry",
+      "level": 2,
+      "score": 0.2982040047645569
+    },
+    {
+      "id": "https://openalex.org/C179801107",
+      "wikidata": "https://www.wikidata.org/wiki/Q5898",
+      "display_name": "Red supergiant",
+      "level": 4,
+      "score": 0.2940874695777893
+    },
+    {
+      "id": "https://openalex.org/C205372480",
+      "wikidata": "https://www.wikidata.org/wiki/Q210521",
+      "display_name": "Image resolution",
+      "level": 2,
+      "score": 0.29340994358062744
+    },
+    {
+      "id": "https://openalex.org/C68709404",
+      "wikidata": "https://www.wikidata.org/wiki/Q1134475",
+      "display_name": "Flux (metallurgy)",
+      "level": 2,
+      "score": 0.2820822298526764
+    },
+    {
+      "id": "https://openalex.org/C8865038",
+      "wikidata": "https://www.wikidata.org/wiki/Q1012875",
+      "display_name": "Circumstellar dust",
+      "level": 3,
+      "score": 0.2812248766422272
+    },
+    {
+      "id": "https://openalex.org/C2779699494",
+      "wikidata": "https://www.wikidata.org/wiki/Q812800",
+      "display_name": "Be star",
+      "level": 3,
+      "score": 0.27996209263801575
+    },
+    {
+      "id": "https://openalex.org/C2780928442",
+      "wikidata": "https://www.wikidata.org/wiki/Q6553027",
+      "display_name": "Line-of-sight",
+      "level": 2,
+      "score": 0.27817502617836
+    },
+    {
+      "id": "https://openalex.org/C63585750",
+      "wikidata": "https://www.wikidata.org/wiki/Q2488",
+      "display_name": "Spiral galaxy",
+      "level": 3,
+      "score": 0.2754055857658386
+    },
+    {
+      "id": "https://openalex.org/C125857072",
+      "wikidata": "https://www.wikidata.org/wiki/Q16744",
+      "display_name": "Star formation",
+      "level": 3,
+      "score": 0.27286380529403687
+    },
+    {
+      "id": "https://openalex.org/C3232514",
+      "wikidata": "https://www.wikidata.org/wiki/Q7575196",
+      "display_name": "Spectral imaging",
+      "level": 2,
+      "score": 0.25988757610321045
+    },
+    {
+      "id": "https://openalex.org/C132771110",
+      "wikidata": "https://www.wikidata.org/wiki/Q506922",
+      "display_name": "Adaptive optics",
+      "level": 2,
+      "score": 0.25952282547950745
+    },
+    {
+      "id": "https://openalex.org/C91228026",
+      "wikidata": "https://www.wikidata.org/wiki/Q1048103",
+      "display_name": "Surface brightness",
+      "level": 3,
+      "score": 0.2504425644874573
+    }
+  ],
+  "mesh": [],
+  "locations_count": 1,
+  "locations": [
+    {
+      "id": "doi:10.1051/0004-6361/202556615",
+      "is_oa": false,
+      "landing_page_url": "https://doi.org/10.1051/0004-6361/202556615",
+      "pdf_url": null,
+      "source": {
+        "id": "https://openalex.org/S205231332",
+        "display_name": "Astronomy and Astrophysics",
+        "issn_l": "0004-6361",
+        "issn": [
+          "0004-6361",
+          "1432-0746"
+        ],
+        "is_oa": false,
+        "is_in_doaj": false,
+        "is_core": true,
+        "host_organization": "https://openalex.org/P4310319748",
+        "host_organization_name": "EDP Sciences",
+        "host_organization_lineage": [
+          "https://openalex.org/P4310319748"
+        ],
+        "host_organization_lineage_names": [],
+        "type": "journal"
+      },
+      "license": null,
+      "license_id": null,
+      "version": "publishedVersion",
+      "is_accepted": true,
+      "is_published": true,
+      "raw_source_name": "Astronomy &amp; Astrophysics",
+      "raw_type": "journal-article"
+    }
+  ],
+  "best_oa_location": null,
+  "sustainable_development_goals": [],
+  "awards": [],
+  "funders": [],
+  "has_content": {
+    "pdf": false,
+    "grobid_xml": false
+  },
+  "referenced_works_count": 0,
+  "referenced_works": [],
+  "related_works": [],
+  "abstract_inverted_index": {
+    "The": [
+      0,
+      144
+    ],
+    "star": [
+      1,
+      21
+    ],
+    "$3$": [
+      2,
+      256
+    ],
+    "Puppis": [
+      3,
+      257
+    ],
+    "is": [
+      4
+    ],
+    "the": [
+      5,
+      10,
+      23,
+      26,
+      33,
+      60,
+      66,
+      72,
+      88,
+      103,
+      112,
+      117,
+      151,
+      178,
+      181,
+      194,
+      209,
+      216,
+      223,
+      249,
+      268,
+      275,
+      286,
+      290,
+      294,
+      300
+    ],
+    "brightest": [
+      6
+    ],
+    "known": [
+      7
+    ],
+    "to": [
+      8,
+      39,
+      91,
+      96,
+      130,
+      177,
+      193
+    ],
+    "exhibit": [
+      9
+    ],
+    "B": [
+      11
+    ],
+    "e": [
+      12
+    ],
+    "phenomenon.": [
+      13
+    ],
+    "Although": [
+      14
+    ],
+    "recent": [
+      15
+    ],
+    "studies": [
+      16
+    ],
+    "have": [
+      17
+    ],
+    "classified": [
+      18
+    ],
+    "this": [
+      19,
+      99
+    ],
+    "A-type": [
+      20
+    ],
+    "within": [
+      22,
+      285
+    ],
+    "supergiant": [
+      24
+    ],
+    "group,": [
+      25
+    ],
+    "influence": [
+      27
+    ],
+    "of": [
+      28,
+      49,
+      105,
+      109,
+      116,
+      180,
+      188,
+      222,
+      255,
+      299
+    ],
+    "its": [
+      29,
+      43,
+      226
+    ],
+    "binary": [
+      30
+    ],
+    "nature": [
+      31
+    ],
+    "on": [
+      32,
+      87,
+      215,
+      261
+    ],
+    "circumstellar": [
+      34
+    ],
+    "environment": [
+      35
+    ],
+    "(CE)": [
+      36
+    ],
+    "remains": [
+      37
+    ],
+    "difficult": [
+      38
+    ],
+    "model.": [
+      40
+    ],
+    "To": [
+      41
+    ],
+    "resolve": [
+      42
+    ],
+    "dusty": [
+      44
+    ],
+    "regions": [
+      45,
+      254
+    ],
+    "at": [
+      46,
+      169,
+      174,
+      282
+    ],
+    "angular": [
+      47,
+      55
+    ],
+    "scales": [
+      48
+    ],
+    "5--10,milliarcseconds": [
+      50
+    ],
+    "(mas),": [
+      51
+    ],
+    "we": [
+      52,
+      78,
+      265
+    ],
+    "conducted": [
+      53
+    ],
+    "high": [
+      54
+    ],
+    "resolution": [
+      56
+    ],
+    "interferometric": [
+      57,
+      83
+    ],
+    "observations": [
+      58,
+      237
+    ],
+    "with": [
+      59,
+      132,
+      147,
+      184,
+      234,
+      245
+    ],
+    "mid-infrared": [
+      61
+    ],
+    "beam": [
+      62
+    ],
+    "combiner": [
+      63
+    ],
+    "VLTI/MATISSE": [
+      64
+    ],
+    "across": [
+      65,
+      304
+    ],
+    "$3--12": [
+      67
+    ],
+    "\u03bc$m": [
+      68
+    ],
+    "wavelength": [
+      69
+    ],
+    "range.": [
+      70
+    ],
+    "Since": [
+      71
+    ],
+    "$(u,v)$": [
+      73
+    ],
+    "coverage": [
+      74
+    ],
+    "enables": [
+      75
+    ],
+    "image": [
+      76,
+      182
+    ],
+    "reconstruction,": [
+      77
+    ],
+    "present": [
+      79
+    ],
+    "an": [
+      80,
+      106,
+      124,
+      164
+    ],
+    "innovative": [
+      81
+    ],
+    "statistical": [
+      82
+    ],
+    "imaging": [
+      84,
+      126
+    ],
+    "technique": [
+      85
+    ],
+    "based": [
+      86,
+      260
+    ],
+    "MiRA": [
+      89
+    ],
+    "software": [
+      90
+    ],
+    "produce": [
+      92
+    ],
+    "averaged": [
+      93
+    ],
+    "images.": [
+      94
+    ],
+    "Applied": [
+      95
+    ],
+    "MATISSE": [
+      97,
+      230
+    ],
+    "data,": [
+      98
+    ],
+    "systematic": [
+      100
+    ],
+    "approach": [
+      101
+    ],
+    "facilitates": [
+      102
+    ],
+    "selection": [
+      104
+    ],
+    "optimal": [
+      107
+    ],
+    "set": [
+      108
+    ],
+    "reconstructions,": [
+      110
+    ],
+    "improving": [
+      111
+    ],
+    "robustness": [
+      113
+    ],
+    "and": [
+      114,
+      141,
+      154,
+      161,
+      196,
+      219,
+      225,
+      251,
+      297
+    ],
+    "fidelity": [
+      115
+    ],
+    "recovered": [
+      118
+    ],
+    "features.": [
+      119
+    ],
+    "We": [
+      120
+    ],
+    "also": [
+      121,
+      202,
+      239
+    ],
+    "applied": [
+      122
+    ],
+    "SPARCO": [
+      123
+    ],
+    "independent": [
+      125
+    ],
+    "tool": [
+      127
+    ],
+    "well": [
+      128
+    ],
+    "suited": [
+      129
+    ],
+    "systems": [
+      131
+    ],
+    "a": [
+      133,
+      139,
+      185,
+      197,
+      241,
+      262
+    ],
+    "bright": [
+      134
+    ],
+    "central": [
+      135,
+      276
+    ],
+    "source": [
+      136
+    ],
+    "surrounded": [
+      137
+    ],
+    "by": [
+      138,
+      208,
+      274
+    ],
+    "fainter": [
+      140
+    ],
+    "extended": [
+      142
+    ],
+    "CE.": [
+      143
+    ],
+    "images": [
+      145,
+      231
+    ],
+    "obtained": [
+      146
+    ],
+    "both": [
+      148
+    ],
+    "tools": [
+      149
+    ],
+    "in": [
+      150,
+      248
+    ],
+    "L,": [
+      152
+    ],
+    "M,": [
+      153
+    ],
+    "N": [
+      155
+    ],
+    "spectral": [
+      156
+    ],
+    "bands": [
+      157
+    ],
+    "show": [
+      158
+    ],
+    "good": [
+      159
+    ],
+    "agreement": [
+      160
+    ],
+    "clearly": [
+      162
+    ],
+    "reveal": [
+      163,
+      240
+    ],
+    "asymmetric": [
+      165
+    ],
+    "elongated": [
+      166,
+      301
+    ],
+    "structure": [
+      167
+    ],
+    "located": [
+      168
+    ],
+    "\u223c17": [
+      170
+    ],
+    "mas": [
+      171
+    ],
+    "(\u223c10": [
+      172
+    ],
+    "au": [
+      173
+    ],
+    "631": [
+      175
+    ],
+    "pc)": [
+      176
+    ],
+    "south-east": [
+      179,
+      250
+    ],
+    "centre,": [
+      183
+    ],
+    "density": [
+      186
+    ],
+    "contrast": [
+      187
+    ],
+    "\u223c20%.": [
+      189
+    ],
+    "A": [
+      190
+    ],
+    "second": [
+      191
+    ],
+    "asymmetry": [
+      192
+    ],
+    "north-west": [
+      195,
+      252
+    ],
+    "skewed": [
+      198
+    ],
+    "inner": [
+      199
+    ],
+    "rim": [
+      200
+    ],
+    "are": [
+      201,
+      232,
+      279
+    ],
+    "detected.": [
+      203
+    ],
+    "Simple": [
+      204
+    ],
+    "geometric": [
+      205
+    ],
+    "modelling,": [
+      206
+    ],
+    "inspired": [
+      207
+    ],
+    "reconstructed": [
+      210
+    ],
+    "images,": [
+      211
+    ],
+    "provides": [
+      212
+    ],
+    "quantitative": [
+      213
+    ],
+    "constraints": [
+      214
+    ],
+    "morphology,": [
+      217
+    ],
+    "position,": [
+      218
+    ],
+    "flux": [
+      220
+    ],
+    "contribution": [
+      221
+    ],
+    "CE": [
+      224,
+      244
+    ],
+    "asymmetries.": [
+      227
+    ],
+    "Our": [
+      228
+    ],
+    "final": [
+      229
+    ],
+    "consistent": [
+      233
+    ],
+    "previous": [
+      235
+    ],
+    "VLTI": [
+      236
+    ],
+    "but": [
+      238
+    ],
+    "more": [
+      242
+    ],
+    "complex": [
+      243
+    ],
+    "large-scale": [
+      246
+    ],
+    "clumps": [
+      247
+    ],
+    "disc": [
+      253
+    ],
+    ".": [
+      258
+    ],
+    "Finally,": [
+      259
+    ],
+    "hydrodynamic": [
+      263
+    ],
+    "simulation,": [
+      264
+    ],
+    "conclude": [
+      266
+    ],
+    "that": [
+      267
+    ],
+    "tidal": [
+      269
+    ],
+    "spiral": [
+      270
+    ],
+    "wake": [
+      271
+    ],
+    "perturbations": [
+      272
+    ],
+    "driven": [
+      273
+    ],
+    "binary,": [
+      277
+    ],
+    "which": [
+      278
+    ],
+    "dynamically": [
+      280
+    ],
+    "excited": [
+      281
+    ],
+    "Lindblad": [
+      283
+    ],
+    "resonances": [
+      284
+    ],
+    "circumbinary": [
+      287
+    ],
+    "disc,": [
+      288
+    ],
+    "provide": [
+      289
+    ],
+    "best": [
+      291
+    ],
+    "interpretation": [
+      292
+    ],
+    "for": [
+      293
+    ],
+    "radial": [
+      295
+    ],
+    "extent": [
+      296
+    ],
+    "curvature": [
+      298
+    ],
+    "structures": [
+      302
+    ],
+    "observed": [
+      303
+    ],
+    "all": [
+      305
+    ],
+    "bands.": [
+      306
+    ]
+  },
+  "counts_by_year": [],
+  "updated_date": "2025-11-13T23:12:55.436763",
+  "created_date": "2025-11-13T00:00:00"
+}

@@ -1,0 +1,24 @@
+{
+  "arxiv_id": "2508.21421",
+  "found": true,
+  "title": "Rethinking Layer-wise Model Merging through Chain of Merges",
+  "authors": [
+    "Pietro Buzzega",
+    "Riccardo Salami",
+    "Angelo Porrello",
+    "Simone Calderara"
+  ],
+  "first_author": "Pietro Buzzega",
+  "summary": "Fine-tuning pretrained models has become a standard pathway to achieve state-of-the-art performance across a wide range of domains, leading to a proliferation of task-specific model variants. As the number of such specialized models increases, merging them into a unified model without retraining has become a critical challenge. Existing merging techniques operate at the level of individual layers, thereby overlooking the inter-layer dependencies inherent in deep networks. We show that this simplification leads to distributional mismatches, particularly in methods that rely on intermediate activations, as changes in early layers are not properly propagated to downstream layers during merging. We identify these mismatches as a form of internal covariate shift, comparable to the phenomenon encountered in the initial phases of neural networks training. To address this, we propose Chain of Merges (CoM), a layer-wise merging procedure that sequentially merges weights across layers while sequentially updating activation statistics. By explicitly accounting for inter-layer interactions, CoM mitigates covariate shift and produces a coherent merged model through a series of conditionally optimal updates. Experiments on standard benchmarks demonstrate that CoM achieves state-of-the-art performance.",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "published": "2025-08-29T08:44:47+00:00",
+  "updated": "2025-10-01T11:54:45+00:00",
+  "doi": null,
+  "journal_ref": null,
+  "comment": null,
+  "pdf_url": "https://arxiv.org/pdf/2508.21421v2",
+  "entry_id": "http://arxiv.org/abs/2508.21421v2"
+}

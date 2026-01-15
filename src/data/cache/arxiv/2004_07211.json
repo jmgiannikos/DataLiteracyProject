@@ -1,0 +1,26 @@
+{
+  "arxiv_id": "2004.07211",
+  "found": true,
+  "title": "Dark Experience for General Continual Learning: a Strong, Simple Baseline",
+  "authors": [
+    "Pietro Buzzega",
+    "Matteo Boschini",
+    "Angelo Porrello",
+    "Davide Abati",
+    "Simone Calderara"
+  ],
+  "first_author": "Pietro Buzzega",
+  "summary": "Continual Learning has inspired a plethora of approaches and evaluation settings; however, the majority of them overlooks the properties of a practical scenario, where the data stream cannot be shaped as a sequence of tasks and offline training is not viable. We work towards General Continual Learning (GCL), where task boundaries blur and the domain and class distributions shift either gradually or suddenly. We address it through mixing rehearsal with knowledge distillation and regularization; our simple baseline, Dark Experience Replay, matches the network's logits sampled throughout the optimization trajectory, thus promoting consistency with its past. By conducting an extensive analysis on both standard benchmarks and a novel GCL evaluation setting (MNIST-360), we show that such a seemingly simple baseline outperforms consolidated approaches and leverages limited resources. We further explore the generalization capabilities of our objective, showing its regularization being beneficial beyond mere performance.",
+  "primary_category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.LG"
+  ],
+  "published": "2020-04-15T17:13:05+00:00",
+  "updated": "2020-10-22T14:00:23+00:00",
+  "doi": null,
+  "journal_ref": null,
+  "comment": "24 pages, 4 figures. Accepted at 34th Conference on Neural Information Processing Systems (NeurIPS 2020), Vancouver, Canada",
+  "pdf_url": "https://arxiv.org/pdf/2004.07211v2",
+  "entry_id": "http://arxiv.org/abs/2004.07211v2"
+}

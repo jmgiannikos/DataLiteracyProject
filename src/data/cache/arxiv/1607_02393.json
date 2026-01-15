@@ -1,0 +1,43 @@
+{
+  "arxiv_id": "1607.02393",
+  "found": true,
+  "title": "Grown-up stars physics with MATISSE",
+  "authors": [
+    "Florentin Millour",
+    "J Hron",
+    "A Chiavassa",
+    "G Weigelt",
+    "A Soulain",
+    "Z Khorrami",
+    "A Meilland",
+    "N Nardetto",
+    "C Paladini",
+    "A Domiciano de Souza",
+    "G Niccolini",
+    "K. -H Hofmann",
+    "D Schertl",
+    "P Stee",
+    "P Bendjoya",
+    "F Th\u00e9venin",
+    "F Vakili",
+    "P Berio",
+    "T Lanz",
+    "A Matter",
+    "P Cruzal\u00e8bes",
+    "R Petrov",
+    "B Lopez"
+  ],
+  "first_author": "Florentin Millour",
+  "summary": "MATISSE represents a great opportunity to image the environment around massive and evolved stars. This will allow one to put constraints on the circumstellar structure, on the mass ejection of dust and its reorganization , and on the dust-nature and formation processes. MATISSE measurements will often be pivotal for the understanding of large multiwavelength datasets on the same targets collected through many high-angular resolution facilities at ESO like sub-millimeter interferometry (ALMA), near-infrared adaptive optics (NACO, SPHERE), interferometry (PIONIER, GRAVITY), spectroscopy (CRIRES), and mid-infrared imaging (VISIR). Among main sequence and evolved stars, several cases of interest have been identified that we describe in this paper.",
+  "primary_category": "astro-ph.SR",
+  "categories": [
+    "astro-ph.SR"
+  ],
+  "published": "2016-07-08T14:50:35+00:00",
+  "updated": "2016-07-08T14:50:35+00:00",
+  "doi": "10.1117/12.2232350",
+  "journal_ref": null,
+  "comment": "SPIE, Jun 2016, Edimbourgh, France",
+  "pdf_url": "https://arxiv.org/pdf/1607.02393v1",
+  "entry_id": "http://arxiv.org/abs/1607.02393v1"
+}

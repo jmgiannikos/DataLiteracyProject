@@ -1,0 +1,23 @@
+{
+  "arxiv_id": "2510.13606",
+  "found": true,
+  "title": "Towards Robust Knowledge Removal in Federated Learning with High Data Heterogeneity",
+  "authors": [
+    "Riccardo Santi",
+    "Riccardo Salami",
+    "Simone Calderara"
+  ],
+  "first_author": "Riccardo Santi",
+  "summary": "Nowdays, there are an abundance of portable devices capable of collecting large amounts of data and with decent computational power. This opened the possibility to train AI models in a distributed manner, preserving the participating clients' privacy. However, because of privacy regulations and safety requirements, elimination upon necessity of a client contribution to the model has become mandatory. The cleansing process must satisfy specific efficacy and time requirements. In recent years, research efforts have produced several knowledge removal methods, but these require multiple communication rounds between the data holders and the process coordinator. This can cause the unavailability of an effective model up to the end of the removal process, which can result in a disservice to the system users. In this paper, we introduce an innovative solution based on Task Arithmetic and the Neural Tangent Kernel, to rapidly remove a client's influence from a model.",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "published": "2025-10-15T14:36:36+00:00",
+  "updated": "2025-10-15T14:36:36+00:00",
+  "doi": null,
+  "journal_ref": null,
+  "comment": null,
+  "pdf_url": "https://arxiv.org/pdf/2510.13606v1",
+  "entry_id": "http://arxiv.org/abs/2510.13606v1"
+}

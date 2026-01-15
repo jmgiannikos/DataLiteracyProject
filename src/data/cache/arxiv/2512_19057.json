@@ -1,0 +1,26 @@
+{
+  "arxiv_id": "2512.19057",
+  "found": true,
+  "title": "Efficient Personalization of Generative Models via Optimal Experimental Design",
+  "authors": [
+    "Guy Schacht",
+    "Ziyad Sheebaelhamd",
+    "Riccardo De Santi",
+    "Mojm\u00edr Mutn\u00fd",
+    "Andreas Krause"
+  ],
+  "first_author": "Guy Schacht",
+  "summary": "Preference learning from human feedback has the ability to align generative models with the needs of end-users. Human feedback is costly and time-consuming to obtain, which creates demand for data-efficient query selection methods. This work presents a novel approach that leverages optimal experimental design to ask humans the most informative preference queries, from which we can elucidate the latent reward function modeling user preferences efficiently. We formulate the problem of preference query selection as the one that maximizes the information about the underlying latent preference model. We show that this problem has a convex optimization formulation, and introduce a statistically and computationally efficient algorithm ED-PBRL that is supported by theoretical guarantees and can efficiently construct structured queries such as images or text. We empirically present the proposed framework by personalizing a text-to-image generative model to user-specific styles, showing that it requires less preference queries compared to random query selection.",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.IT"
+  ],
+  "published": "2025-12-22T05:47:25+00:00",
+  "updated": "2025-12-22T05:47:25+00:00",
+  "doi": null,
+  "journal_ref": null,
+  "comment": null,
+  "pdf_url": "https://arxiv.org/pdf/2512.19057v1",
+  "entry_id": "http://arxiv.org/abs/2512.19057v1"
+}

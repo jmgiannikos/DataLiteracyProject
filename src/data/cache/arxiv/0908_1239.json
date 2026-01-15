@@ -1,0 +1,24 @@
+{
+  "arxiv_id": "0908.1239",
+  "found": true,
+  "title": "VLTI/MIDI observations of 7 classical Be stars",
+  "authors": [
+    "Anthony Meilland",
+    "Philippe Stee",
+    "Olivier Chesneau",
+    "Carol Jones"
+  ],
+  "first_author": "Anthony Meilland",
+  "summary": "We measured the mid-infrared extension of the gaseous disk surrounding seven Be stars in order to constrain the geometry of their circumstellar environments and to try to infer physical parameters characterizing these disks. We used the VLTI/MIDI instrument with baselines up to 130 m to obtain an angular resolution of about 15 mas in the N band and compared our results with previous K band measurements obtained with the VLTI/AMBER instrument and/or the CHARA interferometer. We obtained one calibrated visibility measurement for each of the four stars, p Car, zeta Tau, kappa CMa, and alpha Col, two for delta Cen and beta CMi, and three for alpha Ara. Almost all targets remain unresolved even with the largest VLTI baseline of 130m, evidence that their circumstellar disk extension is less than 10 mas. The only exception is alpha Ara, which is clearly resolved and well-fitted by an elliptical envelope with a major axis a=5.8+-0.8mas and an axis ratio a/b=2.4+-1 at 8 microns. This extension is similar to the size and flattening measured with the VLTI/AMBER instrument in the K band at 2 microns. The size of the circumstellar envelopes for these classical Be stars does not seem to vary strongly on the observed wavelength between 8 and 12microns. Moreover, the size and shape of Alpha Ara's disk is almost identical at 2, 8, and 12microns.",
+  "primary_category": "astro-ph.SR",
+  "categories": [
+    "astro-ph.SR"
+  ],
+  "published": "2009-08-09T15:15:21+00:00",
+  "updated": "2009-08-09T15:15:21+00:00",
+  "doi": "10.1051/0004-6361/200911960",
+  "journal_ref": null,
+  "comment": null,
+  "pdf_url": "https://arxiv.org/pdf/0908.1239v1",
+  "entry_id": "http://arxiv.org/abs/0908.1239v1"
+}
