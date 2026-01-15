@@ -210,3 +210,9 @@ __marimo__/
 /tex_sources/*
 /staging
 /processed_tex_sources/*
+
+# old files
+/old
+
+# todos
+todo.md
