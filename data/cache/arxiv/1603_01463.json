@@ -1,0 +1,21 @@
+{
+  "arxiv_id": "1603.01463",
+  "found": true,
+  "title": "Interferometry concepts",
+  "authors": [
+    "Florentin Millour"
+  ],
+  "first_author": "Florentin Millour",
+  "summary": "This paper serves as an introduction to the current book. It provides the basic notions of long-baseline optical/infrared interferome-try prior to reading all the subsequent chapters, and is not an extended introduction to the field.",
+  "primary_category": "astro-ph.IM",
+  "categories": [
+    "astro-ph.IM"
+  ],
+  "published": "2016-03-04T13:48:22+00:00",
+  "updated": "2016-03-04T13:48:22+00:00",
+  "doi": "10.1051/eas/1569003",
+  "journal_ref": "EAS publications series, Vol. 69-70, 2014",
+  "comment": "35 pages, 13 figures",
+  "pdf_url": "https://arxiv.org/pdf/1603.01463v1",
+  "entry_id": "http://arxiv.org/abs/1603.01463v1"
+}

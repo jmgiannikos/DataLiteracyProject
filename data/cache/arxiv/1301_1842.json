@@ -1,0 +1,26 @@
+{
+  "arxiv_id": "1301.1842",
+  "found": true,
+  "title": "The binary Be star $\u03b4$ Scorpii at high spectral and spatial resolution : II The circumstellar disk evolution after the periastron",
+  "authors": [
+    "Anthony Meilland",
+    "Philippe Stee",
+    "Alain Spang",
+    "Fabien Malbet",
+    "Fabrizio Massi",
+    "Dieter Schertl"
+  ],
+  "first_author": "Anthony Meilland",
+  "summary": "Classical Be stars are hot non-supergiant stars surrounded by a gaseous circumstellar disk that is responsible for the observed infrared (IR) excess and emission lines. The influence of binarity on these phenomena remains controversial. We followed the evolution of the environment surrounding the binary Be star $\u03b4$ Scorpii one year before and one year after the 2011 periastron to check for any evidence of a strong interaction between its companion and the primary circumstellar disk. We used the VLTI/AMBER spectro-interferometric instrument operating in the K band in high (12000) spectral resolution to obtain information on both the disk geometry and kinematics. Observations were carried out in two emission lines: Br$\u03b3$ (2.172\\,$\u03bc$m) and $\\ion{He}{i}$ (2.056\\,$\u03bc$m). We detected some important changes in $\u03b4$ Scorpii's circumstellar disk geometry between the first observation made in April 2010 and the new observation made in June 2012. During the last two years the disk has grown at a mean velocity of 0.2\\,km\\,s$^{-1}$. This is compatible with the expansion velocity previously found during the 2001-2007 period. The disk was also found to be asymmetric at both epochs, but with a different morphology in 2010 and 2012. Considering the available spectroscopic data showing that the main changes in the emission-line profiles occurred quickly during the periastron, it is probable that the differences between the 2010 and 2012 disk geometry seen in our interferometric data stem from a disk perturbation caused by the companion tidal effects. However, taking into account that no significant changes have occurred in the disk since the end of the 2011 observing season, it is difficult to understand how this induced inhomogeneity has been \"frozen\" in the disk for such a long period.",
+  "primary_category": "astro-ph.SR",
+  "categories": [
+    "astro-ph.SR"
+  ],
+  "published": "2013-01-09T13:08:44+00:00",
+  "updated": "2013-01-09T13:08:44+00:00",
+  "doi": "10.1051/0004-6361/201220712",
+  "journal_ref": null,
+  "comment": "Astronomy and Astrophysics (2013)",
+  "pdf_url": "https://arxiv.org/pdf/1301.1842v1",
+  "entry_id": "http://arxiv.org/abs/1301.1842v1"
+}

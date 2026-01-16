@@ -1,0 +1,39 @@
+{
+  "arxiv_id": "1608.01913",
+  "found": true,
+  "title": "Data reduction for the MATISSE instrument",
+  "authors": [
+    "Florentin Millour",
+    "P Berio",
+    "M Heininger",
+    "K. -H Hofmann",
+    "D Schertl",
+    "G Weigelt",
+    "F Guitton",
+    "W Jaffe",
+    "U Beckmann",
+    "R Petrov",
+    "F Allouche",
+    "S Robbe-Dubois",
+    "S Lagarde",
+    "A Soulain",
+    "A Meilland",
+    "A Matter",
+    "P Cruzal\u00e8bes",
+    "B Lopez"
+  ],
+  "first_author": "Florentin Millour",
+  "summary": "We present in this paper the general formalism and data processing steps used in the MATISSE data reduction software, as it has been developed by the MATISSE consortium. The MATISSE instrument is the mid-infrared new generation interferometric instrument of the Very Large Telescope Interferometer (VLTI). It is a 2-in-1 instrument with 2 cryostats and 2 detectors: one 2k x 2k Rockwell Hawaii 2RG detector for L\\&M-bands, and one 1k x 1k Raytheon Aquarius detector for N-band, both read at high framerates, up to 30 frames per second. MATISSE is undergoing its first tests in laboratory today.",
+  "primary_category": "astro-ph.IM",
+  "categories": [
+    "astro-ph.IM",
+    "astro-ph.SR"
+  ],
+  "published": "2016-07-08T06:54:22+00:00",
+  "updated": "2018-11-15T13:46:26+00:00",
+  "doi": null,
+  "journal_ref": null,
+  "comment": "SPIE, Jun 2016, Edimbourgh, France",
+  "pdf_url": "https://arxiv.org/pdf/1608.01913v2",
+  "entry_id": "http://arxiv.org/abs/1608.01913v2"
+}

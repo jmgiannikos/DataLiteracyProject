@@ -1,0 +1,39 @@
+{
+  "arxiv_id": "1709.04872",
+  "found": true,
+  "title": "The peculiar fast-rotating star 51 Oph probed by VEGA/CHARA",
+  "authors": [
+    "Narges Jamialahmadi",
+    "Philippe Berio",
+    "Anthony Meilland",
+    "Karine Perraut",
+    "Denis Mourard",
+    "Bruno Lopez",
+    "Philippe Stee",
+    "Nicolas Nardetto",
+    "B. Pichon",
+    "J. M. Clausse",
+    "A. Spang",
+    "H. McAlister",
+    "T. ten Brummelaar",
+    "J. Sturmann",
+    "N. Turner",
+    "C. Farrington",
+    "N. Vargas",
+    "N. Scott"
+  ],
+  "first_author": "Narges Jamialahmadi",
+  "summary": "Stellar rotation is a key in our understanding of both mass-loss and evolution of intermediate and massive stars. It can lead to anisotropic mass-loss in the form of radiative wind or an excretion disk. We wished to spatially resolve the photosphere and gaseous environment of 51 Oph, a peculiar star with a very high vsin(i) of 267km s$^{-1}$ and an evolutionary status that remains unsettled. It has been classified by different authors as a Herbig, a $\u03b2$ Pic, or a classical Be star. We used the VEGA visible beam combiner installed on the CHARA array that reaches a submilliarcsecond resolution. Observation were centered on the H$\u03b1$ emission line. We derived, for the first time, the extension and flattening of 51 Oph photosphere. We found a major axis of $\u03b8_{\\mathrm{eq}}$=8.08$\\pm$0.70$R_\\odot$ and a minor axis of $\u03b8_{\\mathrm{pol}}$=5.66$\\pm$0.23$R_\\odot$ .\n  This high photosphere distortion shows that the star is rotating close to its critical velocity. Finally, using spectro-interferometric measurements in the H$ \u03b1$ line, we constrained the circumstellar environment geometry and kinematics and showed that the emission is produced in a 5.2$\\pm$2R$_{*}$ disk in Keplerian rotation. From the visible point of view, 51 Oph presents all the features of a classical Be star: near critical-rotation and double-peaked H$\u03b1$ line in emission produced in a gaseous disk in Keplerian rotation. However, this does not explain the presence of dust as seen in the mid-infrared and millimeter spectra, and the evolutionary status of 51 Oph remains unsettled.",
+  "primary_category": "astro-ph.EP",
+  "categories": [
+    "astro-ph.EP",
+    "astro-ph.SR"
+  ],
+  "published": "2017-09-14T16:45:50+00:00",
+  "updated": "2017-09-14T16:45:50+00:00",
+  "doi": "10.1051/0004-6361/201425473",
+  "journal_ref": "2015A&A...579A..81J",
+  "comment": "Published in A&A Letter. 5 pages, 3 figures, 3 tables",
+  "pdf_url": "https://arxiv.org/pdf/1709.04872v1",
+  "entry_id": "http://arxiv.org/abs/1709.04872v1"
+}

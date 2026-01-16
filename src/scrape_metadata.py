@@ -10,8 +10,8 @@ from datetime import datetime
 from typing import Optional, Dict, Any, List, Set
 from urllib.parse import quote
 
-from scrape_paper_ids import get_papers, extract_arxiv_id
-from utils import sanitize_article_id as sanitize_filename
+from src.scrape_paper_ids import get_papers, extract_arxiv_id
+from src.utils import sanitize_article_id as sanitize_filename
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -542,8 +542,8 @@ def scrape_paper_metadata(arxiv_id: str,
     return result
 
 
-def run(arxiv_ids: Set[str], contact_email: Optional[str] = None,
-        cache_dir: str = "data/cache", output_path: str = "data/metadata.csv") -> pd.DataFrame:
+def scrape_metadata_arxivIDs(arxiv_ids: Set[str], contact_email: Optional[str] = None,
+                             cache_dir: str = "data/cache", output_path: str = "data/metadata.csv") -> pd.DataFrame:
     """
     Takes a list of arXiv IDs, fetches DOIs from arXiv API, then enriches with
     metadata from OpenAlex/Crossref.
@@ -626,7 +626,7 @@ if __name__ == "__main__":
         print(f"  - {arxiv_id}")
     print()
 
-    result_df = run(test_arxiv_ids)
+    result_df = scrape_metadata_arxivIDs(test_arxiv_ids)
 
     print(f"\n{'='*60}")
     print(f"Processed {len(result_df)} papers")

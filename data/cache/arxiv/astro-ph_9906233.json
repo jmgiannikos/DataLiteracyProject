@@ -1,0 +1,26 @@
+{
+  "arxiv_id": "astro-ph/9906233",
+  "found": true,
+  "title": "Bispectrum speckle interferometry of the Orion Trapezium stars: detection of a close (33 mas) companion of Theta1 Ori C",
+  "authors": [
+    "Gerd Weigelt",
+    "Yuri Balega",
+    "Thomas Preibisch",
+    "Dieter Schertl",
+    "Markus Schoeller",
+    "Hans Zinnecker"
+  ],
+  "first_author": "Gerd Weigelt",
+  "summary": "We present bispectrum speckle interferometry observations with the SAO 6 m telescope of the four brightest stars in the Orion Trapezium. Diffraction-limited images with an unprecedented resolution lambda/D of 57 mas and 76 mas were obtained in the H- and K-band, respectively. The The H and K images of Theta1 Ori C (the star responsible for the proplyds) show for the first time that Theta1 Ori C is a close binary with a separation of only 33 mas (H-band observation). The sub-arcsecond companions of Theta1 Ori A and Theta1 Ori B reported by Petr et al. (1998) are confirmed. We use the magnitudes and colors of the companions to derive information about their stellar properties from the HR-diagram. In addition we briefly discuss the multiplicity of the Trapezium stars. Considering both, the visual and the spectroscopic companions of the 4 Trapezium stars, there are at least 7 companions, i.e. at least 1.75 companions per primary on average. This number is clearly higher than that found for the low-mass stars in the Orion Nebula cluster as well as in the field population. This suggests that a different mechanism is at work in the formation of high-mass multiple systems in the dense Trapezium cluster than for low-mass stars.",
+  "primary_category": "astro-ph",
+  "categories": [
+    "astro-ph"
+  ],
+  "published": "1999-06-14T12:44:08+00:00",
+  "updated": "1999-06-14T12:44:08+00:00",
+  "doi": null,
+  "journal_ref": null,
+  "comment": "4 pages, 3 figures",
+  "pdf_url": "https://arxiv.org/pdf/astro-ph/9906233v1",
+  "entry_id": "http://arxiv.org/abs/astro-ph/9906233v1"
+}

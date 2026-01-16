@@ -1,0 +1,32 @@
+{
+  "arxiv_id": "1810.07425",
+  "found": true,
+  "title": "Perspectives of a visible instrument on the VLTI",
+  "authors": [
+    "Florentin Millour",
+    "Denis Mourard",
+    "Julien Woillez",
+    "Philippe Berio",
+    "Andrea Chiavassa",
+    "Orlagh Creevey",
+    "Eric Lagadec",
+    "Marc-Antoine Martinod",
+    "Anthony Meilland",
+    "Nicolas Nardetto",
+    "Karine Perraut",
+    "Philippe Stee"
+  ],
+  "first_author": "Florentin Millour",
+  "summary": "In this paper we present the most promising science cases for a new generation visible instrument on the VLTI and the conceptual idea for the instrumental configuration. We also present a statistical study of the potential targets that may be accessible for the different classes of objects and for the required spectral resolutions.",
+  "primary_category": "astro-ph.IM",
+  "categories": [
+    "astro-ph.IM"
+  ],
+  "published": "2018-10-17T08:21:20+00:00",
+  "updated": "2018-11-26T09:39:05+00:00",
+  "doi": "10.1007/s10686-018-9615-0",
+  "journal_ref": null,
+  "comment": "Experimental Astronomy, Springer Link, In press",
+  "pdf_url": "https://arxiv.org/pdf/1810.07425v2",
+  "entry_id": "http://arxiv.org/abs/1810.07425v2"
+}
