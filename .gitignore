@@ -211,8 +211,5 @@ __marimo__/
 /staging
 /processed_tex_sources/*
 
-# old files
-/old
-
 # data and cache
-/src/data/*
+/src/data/

@@ -9,11 +9,13 @@ from pylatexenc.latex2text import LatexNodes2Text
 import tempfile
 from pathlib import Path
 
-# Configure logging
+# Rate limiting
+ARXIV_DELAY_LIMIT = 3
+
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-CACHE_DIR = Path("src/data/cache")
+CACHE_DIR = Path("src/data/cache/raw_text")
 METADATA_FILE = Path("src/data/metadata.csv")
 
 def ensure_cache_dir():
@@ -34,8 +36,32 @@ def download_source(arxiv_id, output_path):
         logger.error(f"Failed to download source for {arxiv_id}: {e}")
         return False
 
+try:
+    from src.clean_text import TEX_PARSING_RULES_LIST
+except ImportError:
+    try:
+        from clean_text import TEX_PARSING_RULES_LIST
+    except ImportError:
+        # If running from root and src is not a package, but we need strictly local
+        import sys
+        sys.path.append(str(Path(__file__).parent))
+        from clean_text import TEX_PARSING_RULES_LIST
+import re
+
+def preprocess_tex_string(tex_string):
+    for rule in TEX_PARSING_RULES_LIST:
+        tex_string = rule(tex_string)
+    return tex_string
+
+def postprocess_tex_string(tex_string):
+    tex_string = re.sub(r"< g r a p h i c s >", "", tex_string)
+    tex_string = re.sub("\n{2,}\s*", "\n", tex_string) # collapse long chains of newlines
+    tex_string = re.sub(r"\\n{2,}\s*", "\n", tex_string)
+    tex_string = tex_string.lower()
+    return tex_string
+
 def extract_text_from_source(source_path):
-    """Extracts text from a tar.gz source file containing LaTeX."""
+    """Extracts text from a tar.gz source file containing LaTeX using advanced parsing rules."""
     text_content = ""
     with tempfile.TemporaryDirectory() as temp_dir:
         try:
@@ -44,32 +70,31 @@ def extract_text_from_source(source_path):
                 with tarfile.open(source_path) as tar:
                     tar.extractall(path=temp_dir)
             else:
-                 # Sometimes it's a single .tex file or pdf (if no source)
-                 # If it's not a tar, we might check if it's a gzipped file or just a pdf
-                 # For now, let's assume if it's not tar, we might just try to read it if it's tex,
-                 # or if it's PDF we can't do much with latex learner.
-                 # Let's check headers or extension? Arxiv usually sends a tar.gz or a pdf.
-                 # If it is a PDF we skip for now as we want latex.
+                 # If not tar, assume it might be a single file or handle widely 
+                 # For now, if it's not a tar, we skip complex extraction or treat as single tex
                  pass
 
             # Find all .tex files
             tex_files = list(Path(temp_dir).rglob("*.tex"))
             
-            # Simple heuristic: concatenate all tex files, main file usually includes others.
-            # But order matters. Often the largest file is the main one.
-            # Or we can just convert all of them and append.
-            
             full_latex = ""
             for tex_file in tex_files:
                 try:
                     with open(tex_file, 'r', encoding='utf-8', errors='replace') as f:
-                        full_latex += f.read() + "\n"
+                        # Append with a dot to ensure sentence boundaries are respected (legacy logic)
+                        full_latex += "." + f.read() 
                 except Exception as e:
                     logger.warning(f"Could not read {tex_file}: {e}")
 
             if full_latex:
+                # Preprocessing
+                full_latex = preprocess_tex_string(full_latex)
+                
                 converter = LatexNodes2Text()
-                text_content = converter.latex_to_text(full_latex)
+                doc_string = converter.latex_to_text(full_latex)
+                
+                # Postprocessing
+                text_content = postprocess_tex_string(doc_string)
 
         except tarfile.ReadError:
             logger.error(f"File {source_path} is not a valid tar file.")
@@ -131,7 +156,7 @@ def main():
                         logger.warning(f"No text extracted for {arxiv_id}")
             
         # Rate limiting
-        time.sleep(3) # Wait 3 seconds between requests
+        time.sleep(ARXIV_DELAY_LIMIT)
 
 if __name__ == "__main__":
     main()
