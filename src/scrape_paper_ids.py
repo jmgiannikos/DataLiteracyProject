@@ -120,6 +120,122 @@ def get_co_authors(entry: str, n: int, strict: bool = False) -> List[str]:
 
     return top_co_authors
 
+
+# =============================================================================
+# RECURSIVE CO-AUTHOR DISCOVERY (from origin/retrieve-data)
+# =============================================================================
+
+def get_papers_by_first_author(author_name: str, max_results: int = MAX_RESULTS) -> List[arxiv.Result]:
+    """
+    Get all first-author papers for a given author.
+
+    Args:
+        author_name: Author name to search for
+        max_results: Maximum papers to fetch from arXiv
+
+    Returns:
+        List of arxiv.Result objects where author is first author
+
+    Source: retrieve-data/arxiv_handler.py
+    """
+    papers = get_papers_by_author(author_name, max_results)
+    return [p for p in papers if is_first_author(p, author_name)]
+
+
+def get_all_coauthors_recursive(
+    current_author: str,
+    all_authors: Set[str],
+    excluded_authors: Set[str],
+    min_req_papers: int = 4
+) -> tuple:
+    """
+    Recursively discover co-authors who have at least min_req_papers first-author papers.
+
+    Args:
+        current_author: Author to analyze for co-authors
+        all_authors: Set of already discovered valid authors
+        excluded_authors: Set of authors excluded due to insufficient papers
+        min_req_papers: Minimum first-author papers required for inclusion
+
+    Returns:
+        Tuple of (all_authors, excluded_authors) sets
+
+    Source: retrieve-data/get_author_and_paper_data.py
+    """
+    papers = get_papers_by_first_author(current_author)
+
+    for paper in papers:
+        if paper.authors:
+            for coauthor in paper.authors:
+                name = coauthor.name
+                if name not in all_authors and name not in excluded_authors:
+                    # Check if coauthor has enough first-author papers
+                    coauthor_papers = get_papers_by_first_author(name)
+                    if len(coauthor_papers) >= min_req_papers:
+                        logger.info(f"Adding co-author: {name}")
+                        all_authors.add(name)
+                    else:
+                        logger.debug(f"Excluding {name} (only {len(coauthor_papers)} first-author papers)")
+                        excluded_authors.add(name)
+
+    return all_authors, excluded_authors
+
+
+def collect_author_dict(
+    starting_author: str,
+    max_authors: int = 20,
+    min_req_papers: int = 4
+) -> Dict[str, List[arxiv.Result]]:
+    """
+    Build a dictionary of authors and their first-author papers via recursive co-author discovery.
+
+    Starting from a seed author, recursively discovers co-authors who have at least
+    min_req_papers first-author publications, up to max_authors total.
+
+    Args:
+        starting_author: Seed author to start discovery from
+        max_authors: Maximum number of authors to discover
+        min_req_papers: Minimum first-author papers for author inclusion
+
+    Returns:
+        Dictionary mapping author name to list of their first-author arxiv.Result objects
+
+    Source: retrieve-data/get_author_and_paper_data.py
+    """
+    def iterate_authors(all_authors: Set[str], auth_checked: Set[str], excluded_auth: Set[str]) -> List[str]:
+        authors_to_check = list(all_authors.difference(auth_checked))
+        logger.info(f"Authors to check: {authors_to_check}")
+
+        if len(authors_to_check) == 0 or len(all_authors) > max_authors:
+            logger.info("Finished searching for authors")
+            return list(all_authors)
+
+        current_author = authors_to_check[0]
+        coauthors, excluded_auth = get_all_coauthors_recursive(
+            current_author, all_authors, excluded_auth, min_req_papers
+        )
+        all_authors.update(coauthors)
+        auth_checked.add(current_author)
+
+        logger.info(f"Found {len(all_authors)} authors so far: {list(all_authors)}")
+        return iterate_authors(all_authors, auth_checked, excluded_auth)
+
+    authors = iterate_authors({starting_author}, set(), set())
+
+    if not authors:
+        logger.error("No authors found")
+        return {}
+
+    logger.info(f"Found {len(authors)} authors total. Retrieving papers...")
+
+    author_dict = {}
+    for author in authors:
+        papers = get_papers_by_first_author(author)
+        author_dict[author] = papers
+
+    return author_dict
+
+
 def get_author_papers(author: str, j: int, k: int, strict: bool = False) -> List[arxiv.Result]:
     """
     Get j first-author papers and k non-first-author papers for an author.

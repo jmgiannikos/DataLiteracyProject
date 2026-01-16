@@ -11,6 +11,7 @@ from typing import Optional, Dict, Any, List, Set
 from urllib.parse import quote
 
 from scrape_paper_ids import get_papers, extract_arxiv_id
+from utils import sanitize_article_id as sanitize_filename
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -58,11 +59,6 @@ def ensure_cache_dirs(base_dir: str = "data/cache"):
     Path(f"{base_dir}/arxiv").mkdir(parents=True, exist_ok=True)
     Path(f"{base_dir}/openalex").mkdir(parents=True, exist_ok=True)
     Path(f"{base_dir}/crossref").mkdir(parents=True, exist_ok=True)
-
-
-def sanitize_filename(identifier: str) -> str:
-    """Convert DOI or arXiv ID to safe filename."""
-    return identifier.replace("/", "_").replace(":", "_").replace(".", "_")
 
 
 def load_cached_response(doi: str, source: str, cache_dir: str = "data/cache") -> Optional[Dict]:
