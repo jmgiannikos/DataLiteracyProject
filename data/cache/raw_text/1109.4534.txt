@@ -1,0 +1,256 @@
+.
+();a,
+m
+"
+a&a
+a&as
+apj
+apjl
+apss
+nature
+science
+mnras
+v_∞
+km s
+ yr
+≲4pt
+≳4pt
+/bdocument/
+olivier.chesneau@oca.eu
+umr 6525 fizeau, univ. nice sophia antipolis, cnrs, obs. de la côte d'azur, 
+bvd de l'obs., bp4229 f-06304 nice cedex 4
+              physical research laboratory, navrangpura, ahmedabad, gujarat, india
+ujf-grenoble 1/cnrs-insu, institut de planétologie et d'astrophysique de grenoble (ipag), umr 5274, grenoble, france
+georgia state university, p.o. box 3969, atlanta ga 30302-3969, usa
+ chara array, mount wilson observatory, 91023 mount wilson ca, usa
+national optical astronomy observatories, 950 north cherry avenue, tucson, az, 85719, usa
+european southern observatory, karl-schwarzschild-strasse 2, d-85748 garching bei münchen, germany
+max planck institut für astronomie, königstuhl 17, 69117 heidelberg, germany 
+european southern observatory, casilla 19001, santiago 19, chile
+t pyx is the first recurrent nova historically studied, seen in outburst six times between 1890 and 1966 and then not for 45 years. we report on near-ir interferometric observations of the recent outburst of 2011. we compare expansion of the h and k band continua and the br emission line, and infer information on the kinematics and morphology of the early ejecta. 
+we obtained near-ir observations of t pyx at dates ranging from t=2.37d to t=48.2d after the outburst, with the classic recombiner, located at the chara array, and with the pionier and amber recombiners, located at the vlti array. these data are supplemented with near-ir photometry and spectra obtained at mount abu, india. 
+slow expansion velocities were measured (300) before t=20d. from t=28d on, the amber and pionier continuum visibilities (k and h band, respectively) are best simulated with a two component model consisting of an unresolved source plus an extended source whose expansion velocity onto the sky plane is lower than 700. the expansion of the br line forming region, as inferred at t=28d and t=35d is slightly larger, implying velocities in the range 500-800, still strikingly lower than the velocities of 1300-1600inferred from the doppler width of the line. moreover, a remarkable pattern was observed in the br differential phases. a semi-quantitative model using a bipolar flow with a contrast of 2 between the pole and equator velocities, an inclination of i=15 and a position angle p.a.=110 provides a good match to the amber observables (spectra, differential visibilities and phases). at t=48d, a pionier dataset confirms the two component nature of the h band emission, consisting of an unresolved stellar source and an extended region whose appearance is circular and symmetric within error bars.
+these observations are most simply interpreted within the frame of a bipolar model, oriented nearly face-on. this finding has profound implications for the interpretation of past, current and future observations of the expanding nebula.
+the 2011 outburst of the recurrent nova t pyx.
+chesneau et al.
+the 2011 outburst of the recurrent nova t pyx.
+ evidence for a face-on bipolar ejection.
+    o. chesneau1 
+          a. meilland1
+          d. p. k. banerjee2
+          j.-b. le bouquin3
+          h. mcalister4,5
+          f. millour1
+          s.t. ridgway6
+          a. spang1
+       t. ten brummelaar5
+       m. wittkowski7
+          n.m. ashok2
+          m. benisty8
+          j.-p. berger9
+          t. boyajian4
+          ch. farrington5
+          p.j. goldfinger5
+           a. merand9
+          n. nardetto1
+          r. petrov1 
+          th. rivinius9
+           g. schaefer4
+           y. touhami4      
+           g. zins3
+           based on observations made with chara at mount wilson observatory and the vlti at paranal observatory under program 287.d-5012, 287.d-5023, 087.c-0702
+	
+    received, accepted.
+=====================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+§ introduction
+a classical nova eruption results from a thermonuclear runaway on the surface of a white dwarf which is accreting material from a companion star in a close binary system. t pyxidis (t pyx) is a unique recurrent nova that was in outburst six times between 1890 and 1966 (intervals of 20yr). t pyx was discovered in outburst at a visual magnitude of 13.0 on 2011 april 14.29 ut (jd=2455665.79); which we take as t=0  . this is the first outburst of t pyx since december 7, 1966, nearly 45 years before.
+the evolution of the nova is relatively slow, thereby providing
+time and scope for organizing joint observations with optical interferometry arrays such as chara and the vlti.
+t pyx is surrounded by an interesting nebula in expansion that has been investigated by the hst during more than 10yr <cit.>. the knots are expanding in the plane of the sky with velocities ranging from roughly 500 to 715 .  in contrast, the velocities inferred from doppler widths of the ejecta of recent outbursts were observed to be much faster at about 1500 . although t pyx is a well-observed system, it still has many mysteries. why did the ejecta expand so slowly in the plane of the sky? an important spectroscopic study of the binary system from  provided evidence of a low-inclination for the system orbit (i=102), a particularly important constraint for the interpretation of interferometric data, as it appears that the ejecta emitted around these outbursting sources are rarely spherical. 
+this letter presents optical interferometry measurements obtained from different facilities which provide important information when included within a common frame of interpretation. the observations are presented in
+sect. . in sect.  we analyze the continuum measurements by means of simple geometrical model, and the differential observables through the br line using a simple model and then discuss the results
+in sect. .
+[]journal of interferometric observations.
+date     mjd     t-t     instrument     base   	2cprojected baselines    calibrators
+2450000.5+   phase           	length []   	p.a. []    
+2011/04/17    5668.16     2.92     classic     w1-w2    107.4    87     hd 78752, hd 79290
+2011/04/23    5674.04     8.81     amber     k0-a1-i1     45.4/100.3/120.2     159.0/96.2/ 105.0    hd 73947
+ 
+	2011/04/26     5678.06     12.81     pionier    a1-g1-i1-k0    74/94/42/113/82/44     52/74/127/81/39/23    hd 78739
+ 
+	2011/04/28    5679.18     13.93     classic     w1-e2    202.1/213.3     79.4/82.8    hd 78752, hd 79290
+2011/05/12    5694.00     28.76     amber     ut1-3-4    59.5/95.6/117.7     127.1/43.1/73.3    hd 73947
+2011/05/20    5701.02     35.77     amber     ut1-3-4    56.2/89.9/105.6     136.9/133/78.6    hd 73947, hd 87303
+2011/06/01    5713.99     48.74     pionier     d0-g1-h0-i1     68/47/63/67/37/40     171/96/132/25/57/180     hd 78739 
+calibrator angular diameters from searchcal@jmmc: hd 78752 (g0v, 0.220.02mas), hd 79290 (a0v, 0.130.01mas), hd 73947 (k2iii, 0.860.02mas), hd 87303 (k2iii, 0.900.07mas), hd 78739 (k0iii, 0.320.02mas).
+	
+§ observations
+near-infrared jhk photometric and spectroscopic observations were
+obtained on a regular basis from the 1.2m telescope at the mt. abu
+observatory, india.  these measurements helped to prepare the
+interferometric observations and to evaluate the relative contribution of
+the various continuum and line components (fig.).  initial observations
+are  reported  in  while a fuller study is in
+preparation.
+[]light curve of t pyx with the dates of the optical interferometry observations. blue diamonds indicate a subset of aavso data in v, and green squares in i. orange triangles and red stars indicate h and k band photometry from mt abu (india) . 
+k-band interferometric visibilities obtained with classic at t=2.92 (green diamond) and t=13.93 (red triangles). the thick dotted and dashed lines indicate are the ud curves corresponding to table 2.   
+prompt broad-band interferometric observations were secured with classic, a two-telescope high sensitivity system located at chara on mt. wilson . despite the faintness and low declination of the source, observations in the k-band were obtained at t=2.92d (k6.4, from mt abu observations) and t=13.93d (k5.7). the log of the observations is presented in table  and the data in fig..
+several interferometric observations at medium spectral resolution (r=1500) across the br- line were obtained with amber, a 3-telescope combiner located at the vlti  . the first observations were performed with the 1.8m auxiliary telescopes (ats) at t=8.81d, when the source was below the interferometric sensitivity limit of amber (k5.7), but a useful spectrum was obtained. the second and third measurements, obtained with the 8.2m unit telescopes (uts) at t=28.76 (k4.9) and t=35.77d (k5), provided good quality dispersed visibilities, closure and differential phases (see fig.). unfortunately, the calibrator measurement for the last date is of poor quality preventing any reliable calibration of the absolute visibility.
+imaging broad-band interferometric observations were obtained at t=12.81d (h6) with the pionier visitor instrument . these observations provided the simultaneous measurement of 6 absolutely calibrated visibilities and 4 closure-phases in the h-band, therefore allowing the study of the spatial morphology of the near-infrared emission. a critical second observation was obtained at t=48.74d (h6), again with the ats (fig.).
+ 
+h-band interferometric visibilities obtained with pionier at t=12.81  (open red) and t=48.74 (filled green). the corresponding uv-plane is displayed in the subpanel. 
+§ analysis
+[]analysis of the v using geometrical models.
+instrument    spectral band     t-t     single component model    3cdouble components model
+day     ud diameter     unres.  flux     	 ud flux    	ud diam.   
+[]     []    	 []    	[] 
+chara/classic     broad k     2.92    1.0.2    -     -      -
+vlti/pionier     broad h     12.81    0.60.1      -     -    -
+chara/classic     broad k     13.93     1.120.14      -    -     -
+vlti/amber     2.10.05m    28.76     2.580.3    6512     358     7.30.3
+vlti/pionier     broad h     48.74     2.230.1    839    172     8.50.2 
+the absolute visibility measurements were fitted with simple geometrical models using the litpro software <cit.>.
+the results are shown in table . a simple uniform disk (ud) model, i.e. a circular disk of uniform brightness in the plane of the sky, was fitted to the measurements for the early observations. for later observations, a two component model consisting in an unresolved component, and a co-centered uniform disk was used. no evidence of asymmetry was detected in the data.
+ 
+the first k-band classic measurement, obtained with a 100m baseline was consistent with a weakly resolved source, while the second set (t=13.93d) with a baseline about twice as long, shows a resolved source whose size does not seem to be dramatically changed. the first pionier measurements (t=12.81d) provided a h-band ud diameter significantly smaller than the classic k band measurements, even taking into account the small time difference between the two measurements. this effect cannot be attributed to emission lines seen at these dates, that contribute less than 10-15% of the flux in the h band and less than 5% in the k band. a large scale component with a rising flux contribution in the k band may account for the observations, and is consistent with a h-k flux difference of 0.33 mag that is observed consistently during the event. assuming a two component model, with a fixed contribution of 7010% from a 'stellar' source with a diameter of 0.6mas, the extended k-band source should have a diameter larger than 1.5-2mas, and therefore be almost fully resolved by classic. assuming a distance of d=3.51kpc from , that may be a lower limit , the expansion velocity inferred from such an extended component is about 500, while the h-band core expansion is estimated to be 100(fig.). interestingly, the fwhm of the br measured from the amber spectrum at t=8.81d is 590, i.e. is consistent with our hypothesis of the expanding extended  component (fig.). 
+then follows a second epoch during which amber interferometric data were obtained on two dates, yet providing calibrated visibilities only at t=28.76d. a single ud does not account well for the observed visibilities at t=28.76d (reduced =35), the two component model provides a better fit to the data (=5).  this gives an upper limit for the expansion of the extended  continuum component of 700. this is in contrast with the width of the  br line, for which we measured a fwhm of 105050. furthermore, the doppler velocity associated with the p-cygni absorption in the line is found to be 100(fig.). the br line-forming region should therefore expand much faster, and a large visibility drop should be measured through the br line, as seen for rs oph . however, the dispersed br visibilities are only slightly lower than the nearby continuum, implying a moderate diameter increase of less than 10%. one week later, the visibilities dropped in the line indicating a large expansion of the br line-forming region (taking into account the 25% increase of the line flux). at that time the line fwhm was measured to be 160050 and the p-cygni absorption indicated a wind velocity of 1800100. the differential phases show a complex structured signal that can be described by 2 opposite s-shaped signals, with variations related to the baseline lengths and p.a. dependency. the pattern is symmetrical about the line center, with the width and amplitude of the signal increasing between the two dates, although the amplitude never went beyond 10 (again by contrast with what was observed for rs oph). 
+[]
+result of the uniform disk (ud) estimates from the continuum  measurements from the various interferometers. before t=20d, the source size is estimated using a single ud in the h and k bands (pionier: orange triangle; classic: red diamonds). the last points indicate the extended source in the double component model (amber: red square; pionier: orange triangle) 
+the last observations, performed at t=48.74d with pionier, bring complementary and crucial information, owing to the larger  coverage involved. the h band source is now well resolved and departs from a simple model. a good fit () is reached using the two component model (table ). the extended component estimated expansion velocity in the plane of the sky is lower than 700. the closure phases do not exceed 2.5. moreover using a flattened structure for the extended component does not improve the fit and constrains the aspect  ratio to 10.07. this implies that the complex yet weak phase signal seen by amber originates from a source with a predominantly symmetrical appearance.
+§ a face-on bipolar event
+[]amber data.  top: comparison between the br line at t=8.81 (blue curve), t=28.76d (red curve) and t=35.77d (green curve). bottom: above - differential visibility comparison between t=28.76d and t=35.77d (scaled to the continuum  at t=28.76). below: same with differential phases. the phases are compared with the phases from the model (dashed line, =1.1 and 1.4, respectively). 
+ 
+[] br bipolar-flow model (without central source) seen at i=90 (right) and i=10 (left , the best model) and p.a.=110 (best model).  
+the heterogeneous data set originating from different instruments provides intriguing data, and is unique in view of the complementary  constraints provided for the analysis. the interpretation of these data can be divided into several key temporal steps.
+eginitemize
+* classic and pionier data obtained at t=2.92d, 12.81d and t=13.93d show an extended h and k band source. the fact that t pyx is resolved so early is intriguing. an hypothesis might be a light echo witnessing a close-by circumbinary environment, adding incoherent flux to the measurement. the expansion rate is then low between the first and second measurements, and a striking difference is observed between the h and the k band inferred diameters. this suggests an advanced decoupling between a shrinking optically thick core and an expanding free-free emitting optically thin envelope. 
+* the amber data obtained at t=28.76d provide evidence that the br line forming region projected onto the sky is formed close to the expanding continuum, while being more extended at t=35.77d. the doppler velocity accelerated from 1300 to 1600 in the time interval. a striking differential phase pattern is observed. 
+* the pionier dataset secured at t=48.74d is critical for establishing the two component nature of the emission, consisting in an unresolved stellar source and an extended region whose appearance is circular and symmetric  within error bars.  
+a face-on bipolar event could account for the ensemble of information described above, in accordance with the finding of a low inclination for the system  . in particular, the differential phase pattern can be linked to the geometry and kinematics of the ejecta. we developed a `toy' model that provides a good match to the observations. given two ad-hoc three-dimensional distributions, one for the `emission' of the ejecta and one for the velocity field, we reconstructed intensity maps in narrow spectral bands in the emission line and then computed the corresponding visibilities and differential phases. the intensity map is created considering that the matter was ejected during a brief outburst (best ascribed by a shell), propagating at v(). consequently, the geometry is directly related to kinematics of the ejecta. we used the following radial expansion law:
+where  is the colatitude, and v and v are the polar and equatorial radial velocities, respectively.
+we also considered an emission decreasing according to a power law of the distance. at a given epoch t the 3d intensity distribution is proportional to:
+using this model we were able to fit the br differential visibilities and phases, as well as the line profile for the two epochs. the parameters of the best model are: i=15, p.a. of the polar axis of 110, =2 and the velocities for the two epochs:
+eginitemize
+* v=1200 km s and  v=600 km s at t=28.76d
+* v=1600 km s and  v=700 km s at t=35.77d
+the fit of the differential phases at the two epochs and the model images are presented in fig  and the model in fig . the polar and equatorial velocities are in good agreement with the doppler and sky plane velocities estimated in sect.. furthermore, the p.a. of the equatorial plane overdensity is oriented in a direction similar to the p.a. of the faint x-ray nebula .
+the face-on bipolar nebula allows one to better understand the curious nebula scrutinized with hst  . the knots are concentrated in a ring (3.2-6), expanding radially with a velocity in the restricted range of 500-700, and with a mean radial velocity of about 500. deciphering between a projected sphere and a bipolar structure producing a dense, face-on ring is difficult, considering that radial velocity measurements of individual clumps are missing.
+some recent examples suggest that bipolarity in the ejecta of classical/recurrent novae may be relatively frequent: rs oph , v445 pup , v1280 sco <cit.> or hr del . a significant difference though exists between the t pyx and rs oph environments: the lack of material around t pyx, witnessed for instance by the lack of hard x-rays , leads us to favor a bipolarity induced by a process internal to the system, whether by the common envelope interaction with the companion, since the development of the event is relatively slow, or by invoking an intrinsically bipolar ejection related to a spun-up central star . 
+the chara array is funded by the national science foundation through nsf grant ast-0908253, by georgia state university, the w. m. keck foundation, the packard foundation, and the nasa exoplanet science institute. research at the  physical research laboratory is funded by the dept. of space, govt. of india. str acknowledges partial support from nasa grant nnh09ak731.
+24
+natexlab#1#1
+[balman(2010)]2010mnras.404l..26b
+balman, ş. 2010, , 404, l26
+[banerjee & ashok(2011)]2011atel.3297....1b
+banerjee, d. p. k. & ashok, n. m. 2011, the astronomer's telegram, 3297, 1
+[berger et al.(2010)berger, zins, lazareff, lebouquin,
+  jocou, kern, millan-gabet, traub, haguenauer, absil, augereau,
+  benisty, blind, bonfils, delboulbe, feautrier, germain,
+  gillier, gitton, kiekebusch, knudstrup, lizon, magnard, malbet,
+  maurel, menard, micallef, michaud, morel, moulin, popovic,
+  perraut, rabou, rochat, roussel, roux, stadler, &
+  tatulli]2010spie.7734e..99b
+berger, j.-p., zins, g., lazareff, b., et al. 2010, in society of
+  photo-optical instrumentation engineers (spie) conference series, vol. 7734
+[bode et al.(2007)bode, harman, o'brien, bond,
+  starrfield, darnley, evans, & eyres]2007apj...665l..63b
+bode, m. f., harman, d. j., o'brien, t. j., et al. 2007, , 665,
+  l63
+[bonneau et al.(2006)bonneau, clausse, delfosse, mourard,
+  cetre, chelli, cruzalèbes, duvert, &
+  zins]2006a   a...456..789b
+bonneau, d., clausse, j.-m., delfosse, x., et al. 2006, , 456, 789
+[chesneau et al.(2008)chesneau, banerjee, millour,
+  nardetto, sacuto, spang, wittkowski, ashok, das, hummel,
+  kraus, lagadec, morel, petr-gotzens, rantakyro, &
+  schöller]2008a   a...487..223c
+chesneau, o., banerjee, d. p. k., millour, f., et al. 2008, , 487,
+  223
+[chesneau et al.(2007)chesneau, nardetto, millour, hummel,
+  domiciano de souza, bonneau, vannier, rantakyrö, spang,
+  malbet, mourard, bode, o'brien, skinner, petrov, stee,
+  tatulli, & vakili]2007a   a...464..119c
+chesneau, o., nardetto, n., millour, f., et al. 2007, , 464, 119
+[harman & o'brien(2003)]2003mnras.344.1219h
+harman, d. j. & o'brien, t. j. 2003, , 344, 1219
+[kuulkers et al.(2011)kuulkers, page, ness, osborne,
+  balman, starrfield, beardmore, bode, darnley, drake, evans,
+  eyres, o'brien, orio, schaefer, schwarz, takei, &
+  walter]2011atel.3285....1k
+kuulkers, e., page, k. l., ness, j.-u., et al. 2011, the astronomer's
+  telegram, 3285, 1
+[le bouquin et al.(2011)le bouquin, berger, zins,
+  lazareff, jocou, kern, millan-gabet, traub, haguenauer, &
+  absil]2011aa.pionier
+le bouquin, j.-b., berger, j.-p., zins, g., et al. 2011, submitted in
+  
+[lloyd et al.(1997)lloyd, o'brien, &
+  bode]1997mnras.284..137l
+lloyd, h. m., o'brien, t. j., & bode, m. f. 1997, , 284, 137
+[o'brien & cohen(1998)]1998apj...498l..59o
+o'brien, t. j. & cohen, j. g. 1998, , 498, l59+
+[petrov et al.(2007)petrov, malbet, weigelt, antonelli,
+  beckmann, bresson, chelli, dugué, duvert, gennari,
+  glück, kern, lagarde, le coarer, lisi, millour, perraut,
+  puget, rantakyrö, robbe-dubois, roussel, salinari, tatulli,
+  zins, accardo, acke, agabi, altariba, arezki, aristidi,
+  baffa, behrend, blöcker, bonhomme, busoni, cassaing,
+  clausse, colin, connot, delboulbé, domiciano de souza,
+  driebe, feautrier, ferruzzi, forveille, fossat, foy,
+  fraix-burnet, gallardo, giani, gil, glentzlin, heiden,
+  heininger, hernandez utrera, hofmann, kamm, kiekebusch, kraus,
+  le contel, le contel, lesourd, lopez, lopez, magnard, marconi,
+  mars, martinot-lagarde, mathias, mège, monin, mouillet,
+  mourard, nussbaum, ohnaka, pacheco, perrier, rabbia, rebattu,
+  reynaud, richichi, robini, sacchettini, schertl, schöller,
+  solscheid, spang, stee, stefanini, tallon, tallon-bosc, tasso,
+  testi, vakili, von der lühe, valtier, vannier, &
+  ventura]2007a   a...464....1p
+petrov, r. g., malbet, f., weigelt, g., et al. 2007, , 464, 1
+[porter et al.(1998)porter, o'brien, &
+  bode]1998mnras.296..943p
+porter, j. m., o'brien, t. j., & bode, m. f. 1998, , 296, 943
+[ribeiro et al.(2009)ribeiro, bode, darnley, harman,
+  newsam, o'brien, bohigas, echevarría, bond, chavushyan,
+  costero, coziol, evans, eyres, león-tavares, richer,
+  tovmassian, starrfield, & zharikov]2009apj...703.1955r
+ribeiro, v. a. r. m., bode, m. f., darnley, m. j., et al. 2009, ,
+  703, 1955
+[schaefer et al.(2010)schaefer, pagnotta, &
+  shara]2010apj...708..381s
+schaefer, b. e., pagnotta, a., & shara, m. m. 2010, , 708, 381
+[shara et al.(1989)shara, moffat, williams, &
+  cohen]1989apj...337..720s
+shara, m. m., moffat, a. f. j., williams, r. e., & cohen, j. g. 1989,
+  , 337, 720
+[shara et al.(1997)shara, zurek, williams, prialnik,
+  gilmozzi, & moffat]1997aj....114..258s
+shara, m. m., zurek, d. r., williams, r. e., et al. 1997, , 114, 258
+[shore et al.(2011)shore, augusteijn, ederoclite, &
+  uthas]2011a   a...533l...8s
+shore, s. n., augusteijn, t., ederoclite, a., & uthas, h. 2011, ,
+  533, l8+
+[tallon-bosc et al.(2008)tallon-bosc, tallon, thiébaut,
+  béchet, mella, lafrasse, chesneau, domiciano de souza,
+  duvert, mourard, petrov, & vannier]2008spie.7013e..44t
+tallon-bosc, i., tallon, m., thiébaut, e., et al. 2008, in society
+  of photo-optical instrumentation engineers (spie) conference series, vol.
+  7013
+[ten brummelaar et al.(2005)ten brummelaar, mcalister,
+  ridgway, bagnuolo, turner, sturmann, sturmann, berger, ogden,
+  cadman, hartkopf, hopper, & shure]2005apj...628..453t
+ten brummelaar, t. a., mcalister, h. a., ridgway, s. t., et al. 2005,
+  , 628, 453
+[uthas et al.(2010)uthas, knigge, &
+  steeghs]2010mnras.409..237u
+uthas, h., knigge, c., & steeghs, d. 2010, , 409, 237
+[waagan et al.(2011)waagan, linnolt, bolzoni, amorim,
+  plummer, williams, matsuyama, kerr, &
+  pearce]2011cbet.2700....1w
+waagan, e., linnolt, m., bolzoni, s., et al. 2011, central bureau
+  electronic telegrams, 2700, 1
+[woudt et al.(2009)woudt, steeghs, karovska, warner,
+  groot, nelemans, roelofs, marsh, nagayama, smits, &
+  o'brien]2009apj...706..738w
+woudt, p. a., steeghs, d., karovska, m., et al. 2009, , 706, 738
+/edocument/ 

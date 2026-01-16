@@ -3039,16 +3039,16 @@
   },
   "sustainable_development_goals": [
     {
+      "id": "https://metadata.un.org/sdg/14",
       "score": 0.5,
-      "display_name": "Life below water",
-      "id": "https://metadata.un.org/sdg/14"
+      "display_name": "Life below water"
     }
   ],
   "awards": [],
   "funders": [],
   "has_content": {
-    "pdf": false,
-    "grobid_xml": false
+    "grobid_xml": false,
+    "pdf": false
   },
   "referenced_works_count": 75,
   "referenced_works": [

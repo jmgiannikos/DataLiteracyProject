@@ -1,0 +1,434 @@
+.
+	best-fit light-curve parameters and  uncertainties
+	
+	
+		solution                                                                                                                                                                              
+close a                                                             
+1005.3                                                             
+close a                                                             
+1013.5                                                             
+close b                                                             
+1025.9                                            
+                
+wide a                                                             
+1028.4                                                             
+wide a                                                             
+948.9                                                             
+wide b                                                             
+999.6                                                             
+for close solutions (),  and  are defined relative to the barycenter of the lens system, and the parameters  are in units of the  of the total mass. for wide solutions (),  and  are defined relative to the magnification center of the primary lens , and the parameters  are defined in units of the  of the primary lens. the favored solution  is in boldface.
+.
+./figures/
+au 
+sinc 
+km s^-1
+mas yr^-1
+yr
+kpc
+mas
+sat
+μas
+var
+pc
+orb
+obs
+maxmax
+minmin
+rel
+∗ast
+eff
+rot
+lsr
+hel
+geo
+b
+s
+łl
+e
+π
+μ
+α
+γ
+δ
+θ
+ϕ
+p
+v
+u
+^∘
+“close a”
+“wide a”
+/bdocument/
+subo dong
+dongsubo@pku.edu.cn
+0009-0007-5754-6206]zexuan wu
+department of astronomy, school of physics, peking university,
+	5 yiheyuan road, haidian district, beijing 100871, people's republic of china 
+kavli institute of astronomy and astrophysics, peking university,
+	5 yiheyuan road, haidian district, beijing 100871, people's republic of china 
+0000-0002-1027-0990]subo dong
+department of astronomy, school of physics, peking university,
+	5 yiheyuan road, haidian district, beijing 100871, people's republic of china 
+kavli institute of astronomy and astrophysics, peking university,
+	5 yiheyuan road, haidian district, beijing 100871, people's republic of china 
+national astronomical observatories, chinese academy of science, 20a datun road, chaoyang district, beijing 100101, people's republic of china
+0000-0003-2125-0183]a. mérand
+european southern observatory, karl-schwarzschild-straße 2, d-85748 garching, germany
+department of astronomy, ohio state university, 140 w. 18th ave., columbus, oh 43210, usa
+center for cosmology and astroparticle physics (ccapp), the ohio state university, 191 w. woodruff avenue, columbus, oh 43210, usa.
+0000-0001-7016-1692]przemek mróz
+astronomical observatory, university of warsaw, al. ujazdowskie 4, 00-478 warszawa, poland
+max planck institute for extraterrestrial physics, giessenbachstraße 1, d-85748 garching, germany
+auckland observatory, auckland, new zealand
+0000-0001-5603-6895]thiam-guan tan
+perth exoplanet survey telescope, perth, australia
+0000-0003-3978-1409]thomas bensby
+lund observatory, division of astrophysics, department of physics, lund university, box 118, se-22100 lund, sweden
+0000-0001-7516-4016]joss bland-hawthorn
+sydney institute for astronomy, school of physics, a28, the university of sydney, nsw 2006, australia
+arc centre of excellence for all sky astrophysics in 3 dimensions (astro 3d), australia
+0000-0002-4031-8553]sven buder
+research school of astronomy and astrophysics, the australian national university, canberra act2611, australia
+arc centre of excellence for all sky astrophysics in 3 dimensions (astro 3d), australia
+max planck institute for extraterrestrial physics, giessenbachstraße 1, d-85748 garching, germany
+department of physics, technical university of munich, 85748 garching, germany
+max planck institute for astronomy, königstuhl 17, 69117 heidelberg, germany
+department of astronomy, ohio state university, 140 w. 18th ave., columbus, oh 43210, usa
+0000-0003-2533-6056]janez kos
+faculty of mathematics and physics, university of ljubljana, jadranska 19, 1000 ljubljana, slovenia
+mathematical sciences department, auckland university of technology, auckland, new zealand
+auckland observatory, auckland, new zealand
+0000-0002-0920-809x]sanjib sharma
+sydney institute for astronomy, school of physics, a28, the university of sydney, nsw 2006, australia
+arc centre of excellence for all sky astrophysics in 3 dimensions (astro 3d), australia
+0000-0001-5207-5619]andrzej udalski
+astronomical observatory, university of warsaw, al. ujazdowskie 4, 00-478 warszawa, poland
+european southern observatory, karl-schwarzschild-straße 2, d-85748 garching, germany
+south african astronomical observatory, p.o. box 9, observatory 7935, cape town, south africa
+carnegie observatories, 813 santa barbara street, pasadena, ca 91101-1292, usa
+20
+lesia, observatoire de paris, université psl, sorbonne université, université paris cité, cnrs, 5 place jules janssen, 92195 meudon, france
+lesia, observatoire de paris, université psl, sorbonne université, université paris cité, cnrs, 5 place jules janssen, 92195 meudon, france
+univ. grenoble alpes, cnrs, ipag, 38000 grenoble, france
+max planck institute for extraterrestrial physics, giessenbachstraße 1, d-85748 garching, germany
+max planck institute for astronomy, königstuhl 17, 69117 heidelberg, germany
+max planck institute for extraterrestrial physics, giessenbachstraße 1, d-85748 garching, germany
+institute of astronomy, ku leuven, celestijnenlaan 200d, 3001, leuven, belgium
+univ. grenoble alpes, cnrs, ipag, 38000 grenoble, france
+max planck institute for extraterrestrial physics, giessenbachstraße 1, d-85748 garching, germany
+1st institute of physics, university of cologne, zülpicher straße 77, 50937 cologne, germany
+max planck institute for radio astronomy, auf dem hügel 69, 53121 bonn, germany
+max planck institute for extraterrestrial physics, giessenbachstraße 1, d-85748 garching, germany
+max planck institute for extraterrestrial physics, giessenbachstraße 1, d-85748 garching, germany
+max planck institute for extraterrestrial physics, giessenbachstraße 1, d-85748 garching, germany
+faculdade de engenharia, universidade do porto, r dr. roberto frias s/n, 4200-465 porto, portugal
+centra – centro de astrofísica e gravitação, ist, universidade de lisboa, 1049-001 lisboa, portugal 
+max planck institute for extraterrestrial physics, giessenbachstraße 1, d-85748 garching, germany
+departments of physics and astronomy, le conte hall, university of california, berkeley, ca 94720, usa
+max planck institute for extraterrestrial physics, giessenbachstraße 1, d-85748 garching, germany
+lesia, observatoire de paris, université psl, sorbonne université, université paris cité, cnrs, 5 place jules janssen, 92195 meudon, france
+school of physics & astronomy, university of southampton, university road, southampton so17 1bj, uk
+université còte d’azur, observatoire de la còte d’azur, cnrs, laboratoire lagrange, cs 34229, f-06304 nice cedex 4, france
+lesia, observatoire de paris, université psl, sorbonne université, université paris cité, cnrs, 5 place jules janssen, 92195 meudon, france
+max planck institute for astronomy, königstuhl 17, 69117 heidelberg, germany
+lesia, observatoire de paris, université psl, sorbonne université, université paris cité, cnrs, 5 place jules janssen, 92195 meudon, france
+european southern observatory, karl-schwarzschild-straße 2, d-85748 garching, germany
+université còte d’azur, observatoire de la còte d’azur, cnrs, laboratoire lagrange, cs 34229, f-06304 nice cedex 4, france
+institute of astronomy, ku leuven, celestijnenlaan 200d, 3001, leuven, belgium
+univ. grenoble alpes, cnrs, ipag, 38000 grenoble, france
+université còte d’azur, observatoire de la còte d’azur, cnrs, laboratoire lagrange, cs 34229, f-06304 nice cedex 4, france
+université còte d’azur, observatoire de la còte d’azur, cnrs, laboratoire lagrange, cs 34229, f-06304 nice cedex 4, france
+max planck institute for extraterrestrial physics, giessenbachstraße 1, d-85748 garching, germany
+max planck institute for extraterrestrial physics, giessenbachstraße 1, d-85748 garching, germany
+université còte d’azur, observatoire de la còte d’azur, cnrs, laboratoire lagrange, cs 34229, f-06304 nice cedex 4, france
+lesia, observatoire de paris, université psl, sorbonne université, université paris cité, cnrs, 5 place jules janssen, 92195 meudon, france
+univ. grenoble alpes, cnrs, ipag, 38000 grenoble, france
+lesia, observatoire de paris, université psl, sorbonne université, université paris cité, cnrs, 5 place jules janssen, 92195 meudon, france
+max planck institute for extraterrestrial physics, giessenbachstraße 1, d-85748 garching, germany
+lesia, observatoire de paris, université psl, sorbonne université, université paris cité, cnrs, 5 place jules janssen, 92195 meudon, france
+univ. grenoble alpes, cnrs, ipag, 38000 grenoble, france
+lesia, observatoire de paris, université psl, sorbonne université, université paris cité, cnrs, 5 place jules janssen, 92195 meudon, france
+université còte d’azur, observatoire de la còte d’azur, cnrs, laboratoire lagrange, cs 34229, f-06304 nice cedex 4, france
+univ. grenoble alpes, cnrs, ipag, 38000 grenoble, france
+univ. grenoble alpes, cnrs, ipag, 38000 grenoble, france
+max planck institute for extraterrestrial physics, giessenbachstraße 1, d-85748 garching, germany
+max planck institute for extraterrestrial physics, giessenbachstraße 1, d-85748 garching, germany
+université còte d’azur, observatoire de la còte d’azur, cnrs, laboratoire lagrange, cs 34229, f-06304 nice cedex 4, france
+max planck institute for extraterrestrial physics, giessenbachstraße 1, d-85748 garching, germany
+max planck institute for extraterrestrial physics, giessenbachstraße 1, d-85748 garching, germany
+max planck institute for astronomy, königstuhl 17, 69117 heidelberg, germany
+université còte d’azur, observatoire de la còte d’azur, cnrs, laboratoire lagrange, cs 34229, f-06304 nice cedex 4, france
+max planck institute for extraterrestrial physics, giessenbachstraße 1, d-85748 garching, germany
+1st institute of physics, university of cologne, zülpicher straße 77, 50937 cologne, germany
+max planck institute for extraterrestrial physics, giessenbachstraße 1, d-85748 garching, germany
+1st institute of physics, university of cologne, zülpicher straße 77, 50937 cologne, germany
+school of physics & astronomy, university of southampton, university road, southampton so17 1bj, uk
+max planck institute for extraterrestrial physics, giessenbachstraße 1, d-85748 garching, germany
+lesia, observatoire de paris, université psl, sorbonne université, université paris cité, cnrs, 5 place jules janssen, 92195 meudon, france
+max planck institute for extraterrestrial physics, giessenbachstraße 1, d-85748 garching, germany
+58(the gravity+ collaboration)
+we resolve the multiple images of the binary-lens microlensing event asassn-22av using the gravity instrument of the very large telescope interferometer (vlti). the light curves show weak binary-lens perturbations, complicating the analysis, but the joint modeling with the vlti data breaks several degeneracies, arriving at a strongly favored solution. thanks to precise measurements of angular einstein radius  mas and microlens parallax, we determine that the lens system consists of two m dwarfs with masses of  and , a projected separation of  and a distance of  kpc. the successful vlti observations of asassn-22av open up a new path for studying intermediate-separation (i.e., a few astronomical units) stellar-mass binaries, including those containing dark compact objects such as neutron stars and stellar-mass black holes.
+§ introduction
+ 
+in recent years, the enhanced sensitivity of advanced instrumentation  at the very large telescope interferometer (vlti) of the european southern observatory (eso) has facilitated the interferometric resolution of microlensed images , with the first successful case achieved by  using the gravity instrument . by enabling direct mass determinations, interferometric microlensing opens up a new path into studying galactic stellar-mass systems, including dark compact objects such as neutron stars and black holes.
+the observable effect of microlensing  is the magnified flux of a background star (i.e., the “source”) due to the gravitational deflection by a foreground object (i.e., the “lens”), and thus microlensing is a sensitive probe of the mass of the lens system, irrespective of its brightness. however, the most easily extracted quantity, the einstein timescale  is a degenerate combination of the lens mass , the lens-source relative parallax  and the proper motion :
+where  is the angular einstein radius, which is of the order of milliarcseconds for stellar-mass microlenses in the galaxy.
+to break this degeneracy, a common approach is to measure both  and the so-called “microlens parallax”  to determine the lens mass :
+where  is a two-dimensional vector  along the same direction as the lens-source relative proper motion vector :
+the key advantage of the interferometric microlensing method is that it yields not only precise , from measuring the angular separation of images, but also constraints on the direction of .
+one often obtains “one-dimensional” microlens parallax from the light curves; that is, the component of  parallel to the earth's acceleration is generally much better constrained than the perpendicular component . as demonstrated by , , and , vlti microlensing can drastically improve the  measurements from accurate directional constraints via measuring the position angles of images.
+a long-adopted method for determining  is via the “finite-source effects” , when the source transits/approaches a caustic (a set of positions that, for a point source, induce infinite magnification).  modeling the finite-source effects in the microlensing light curve measures the ratio between  and the angular radius of the source star , where  can be derived from the photometric properties of the source.  for a single lens, the caustic is  point-like, so finite-source detections in stellar single-lens events are usually restricted to rare cases reaching a high peak magnification of . in contrast, binary lenses have extended caustic structures, and thus finite-source effects manifest more often in binary-lens events. the first microlens mass measurement by  is from such a caustic-crossing binary-lens event. however, this method is ineffective for studying events with weak binary-lens perturbations (e.g., non-caustic-crossing). one such weak-binary event was ogle-2005-smc-001, for which  detected the space-based microlens parallax  for the first time, and since no finite-source effects were detected, it was not possible to definitively determine the lens mass due to the absence of a  measurement. while the exact fraction of weak binary-lens events is still an open question,  predicted and  confirmed that half of planetary events would lack caustic crossings, despite their continuous and high-cadence coverages, implying that weak binaries may encompass a significant fraction of binary-lens parameter space.
+with milliarcsecond resolution, vlti can resolve the microlensed images with angular separations around  for a stellar-mass-lens microlensing event  and then can determine  at percent precision.  measured  for tcp j05074264+2447555 (aka kojima-1) with vlti gravity, leading to a mass measurement of  when combined with the microlens parallax .
+ obtained  for gaia19bld  with vlti pionier  and then determined that  . both events were exceptionally bright, since vlti observations were limited by the instrument's sensitivity, with  for the on-axis mode of gravity and   for pionier. gravity has recently been upgraded to enable dual-beam capability (known as “gravity wide”; ) with a boosted sensitivity, and using gravity wide,  measured that ogle-2023-blg-0061/kmt-2023-blg-0496 has  mas and inferred its lens mass . future upgrades to gravity+ are expected to significantly improve the sensitivity  and consequently the number of accessible microlensing events.
+the vlti microlensing observations published so far have been exclusively on single-lens events (or hosts of extremely low-mass companions). here, we analyze asassn-22av, the first binary-lens microlensing event with multiple images resolved by vlti.
+§ observations and data reduction
+ 
+asassn-22av was discovered as a microlensing event candidate[] on ut 2022-01-19.10 by the all-sky automatic survey for supernovae <cit.>. its gaia dr3   is 5887701839850363776 and coordinates are , corresponding to galactic coordinates . following its discovery, we modeled the real-time asas-sn light curve[]  and found that it was consistent with a point-source point-lens (pspl; ) model, reaching a peak magnification of – around ut 2022 january 20. its baseline is at  (two micron all sky survey or 2mass id: j150100665423599) and , and the magnified brightness was well above the limit for conducting on-axis gravity observations with multi-application curvature adaptive optics (macao).
+we began to conduct vlti gravity observations
+on the night of ut 2022 january 21 and subsequently made ongoing observations until 2022 january 25. we discuss the vlti observations and data reduction in   . we also started photometric follow-up observations on ut 2022 january 20 (see   for detailed descriptions of photometric data). on ut 2022 january 21, our light-curve modeling suggested significant deviations from the best-fit pspl model, and we found that a finite-source point-lens (fspl) model was now preferred. aiming at performing “stellar atmosphere tomography”  <cit.> near the caustic exit, we initiated a campaign of time-series high-resolution spectroscopy.  on ut 2022 january 24, we noticed that the light curve declined faster than expected from the best-fit fspl model and considered the possibility of a binary-lens perturbation, which was confirmed by our later analysis (see   for detailed discussions on light-curve modeling). we obtained high-resolution spectra from the high resolution spectrograph (hrs) on the southern african large telescope (salt; ),  the mike spectrograph  on the magellan clay 6.5 m telescope, the high efficiency and resolution multi element spectrograph (hermes; )  on the anglo-australian telescope (aat), and the harps spectrograph  on the eso's 3.6 m telescope, from ut 2022 january 25 to ut 2022 january 30. the full description of the spectroscopic data and the stellar atmosphere tomography analysis will be presented in a future paper. in this work, we utilize the stellar parameters of the source extracted from the hermes data presented in  .
+§.§ interferometric data
+we observed asassn-22av with the gravity instrument  and four 8 m unit telescopes (uts) on the four nights of 2022 january 21, 22, 24, and 25. the observations were executed with the single-field on-axis mode at medium resolution (. we use all data except those on 2022 january 21, when there was significant flux loss in ut2 and poor fringe-tracking performance. the remaining three nights of data are reduced with the standard gravity pipeline (version 1.6.6), and there are two, four, and two exposures on the nights of 22, 24, and 25, respectively. throughout this paper, we refer to these three nights as nights 1, 2, and 3, respectively. we first use the python script  to reduce the raw data up to the application of the pixel-to-visibility matrix (p2vm). the default options are used except for adopting  to calculate the internal differential phase between each spectral channel. the pipeline performed the bias and sky subtraction, flat-fielding, wavelength calibration, and spectral extraction. application of the p2vm converts the pixel detector counts into complex visibilities, taking into account all instrumental effects, including relative throughput, coherence, phase shift, and crosstalk.
+the dark, bad-pixel, flat-field, wavelength calibration, and p2vm matrix data are reduced from the daily calibration data obtained close in time to our observations.
+we then use  to calibrate the closure phase with the calibrator observation of hd 134122 next to the science target observations.
+the observations employed four uts and thus there are four closure phases for every spectral channel.
+in principle, the four closure phases are not independent and should sum up to zero.
+we examine the calibrator data and find that the standard deviation of the sum of the closure phases is , comparable to the pipeline-reported closure-phase uncertainties in the science data.
+thus, we take the simplified approach and treat the four closure phases as uncorrelated observables rather than the more sophisticated approach of treating the correlated noise employed by .
+on each night, we have two exposures for the calibrator star, and we find the closure-phase differences of the two exposures have scatters of  on night 1, 2, and 3, respectively. we adopt these values as the uncertainties introduced in the calibration process and add them quadratically to the closure-phase errors.
+the medium-resolution spectrograph samples 233 wavelengths spanning .
+to speed up computation, the 233 closure phases are binned into 10 phases in our modeling process. the first and last phases are discarded due to the low signal-to-noise ratios and significant deviations from the model.
+see appendix  for the description of the binning process.
+§.§ photometric data
+we obtained follow-up imaging data taken with the 1 m telescopes of the las cumbres observatory global telescope network <cit.> in the sloan  filters, the 0.4 m telescope of auckland observatory (ao) at auckland (new zealand) in the  filters, and the 30 cm perth exoplanet survey telescope (pest) in the  filters.
+we use the  pipeline  to do the photometry on these follow-up images.
+for lcogt and pest data, we conduct image subtractions with the [] code , and then we employ aperture photometry on the subtracted images.
+for the ao data, we performed point-spread function (psf) photometry using  .
+we coadded and analyzed the -band asas-sn images using the standard asas-sn photometric pipeline based on the isis image-subtraction code . the baseline () is too faint to obtain precise photometry for asas-sn, and we analyze the magnified asas-sn epochs with . there are data from three asas-sn cameras (be, bi and bm), and they are analyzed independently in the modeling.
+this event was announced[] as gaia22ahy by gaia science alerts <cit.> on ut 2022-01-25.4.
+the gaia -band light curve available on gsa website does not have uncertainties, and we adopt the same error bar () for all data points. we noticed that the data in 2015 exhibit systematically larger scatter than the rest of the gaia baseline. by inspecting a few other gsa microlensing light curves , we found similar patterns at the beginning of the gaia mission, possibly due to the continued contamination by water ice . we conservatively remove all gaia data before the last decontamination run on 2016 august 22  from our analysis.
+we follow the standard procedure  of renormalizing the error bars such that degrees of freedom (dof) is unity for each data set for the best-fit model. we reject the 3 outliers and thereby exclude four out of 983 photometric data points from the analysis (the rejected data consist of one data point each from lcogt  and  and one epoch each from the asas-sn bi and bm cameras). figure  shows the multiband light curves of asassn-22av.
+§.§ hermes spectroscopic data and stellar parameters
+we obtained a high-resolution optical spectrum ( 220125001601051) on ut 2022-01-25.75 as part of ongoing observations of the galactic archaeology with hermes survey . the total exposure time is 3600 s. the hermes spectrograph on the 3.9 m aat at siding spring observatory covers four wavelength regions (4713–4903, 5648–5873, 6478–6737, and 7585–7887 å) that can show absorption features from up to 31 elements, including the two strong balmer lines  and .
+we use the observations and analysis of the most recent analysis cycle, which will be published as the fourth galah data release (). the spectra are reduced using a similar analysis as that for the third data release , with a custom-built reduction pipeline . stellar parameters—that is, effective temperature (), surface gravity (), and radial, microturbulence, and rotational velocities (,  and ), as well as up to 31 elemental abundances—are then simultaneously estimated by minimizing the weighted residuals between the observed and synthetic stellar spectra. the latter are interpolated with a high-dimensional neural network <cit.>, trained on synthetic stellar spectra generated with the spectrum synthesis code spectroscopy made easy , and degraded to the measured instrumental resolution of the spectrum. this change with respect to the third data release, which used wavelength regions of carefully selected unblended lines, allows 94% of the observed wavelength range to be used and thus considerably increases the measurement precision.
+the spectroscopic fit also includes photometric and astrometric information from the 2mass  and gaia surveys  to constrain the surface gravity. this leads to more accurate stellar parameters, as shown in the previous hermes analyses , particularly for cool giant stars such as the target of this study, where molecular features complicate the spectroscopic analysis. the fit is very good, with the signal-to-noise ratio increasing across the four wavelength regions (16, 107, 194, and 254), as can be seen from figure . we do not expect a good fit to the balmer-line cores or the lithium lines at , , and , respectively. no quality concerns are raised by the automatic pipeline ( = 0).
+the final radial velocity of  is in very good agreement with the value from the gaia dr3 spectrum—that is,  . the final stellar parameters are , , , , and . the stellar abundances are close to the solar values; for example, .
+§ light-curve analysis
+§.§ single-lens model
+in a microlensing event, the flux is modeled as
+where  is the magnification as a function of time, and  and  are the source flux and the blended flux within the psf, respectively.
+in the simplest single-lens single-source (1l1s) model, i.e., the pspl model , the magnification is given by
+where  is the angular lens-source separation normalized by , and (, ) are the time of the closest source-lens approach and the impact parameter normalized by , respectively.
+the peak of the light curve (figure ) is flattened compared to the pspl model, suggesting possible finite-source effects . we fit the fspl model to the light curve by introducing an additional parameter, . in the fspl model,  is calculated by integrating  over a limb-darkened source disk. using the best-fit spectroscopic parameters (see  ), we estimate the limb-darkening coefficients  based on  and .
+the best-fit fspl model is shown as a dashed black line in the top panel of figure , and the residuals are shown in the bottom panel. the residuals exhibit significant trends deviating from the fspl model, spanning  days around the peak (at ). these systematic deviations cannot be absorbed by adjusting either the limb-darkening coefficients or the free parameters in the fspl models.  deviations from single-lens models suggest the possible existence of a companion to the lens or the source. there is also a  mag broad bump-like feature in the gaia -band light curve at around  days before the peak  (see the right panel of figure ). such an additional feature excludes single-lens binary-source models, and we study binary-lens models in the following.
+§.§ binary-lens model
+the light curve can be well described by the binary-lens single-source (2l1s) model.
+we start the analysis with the static binary-lens model, which includes three additional parameters  to describe a nonrotating binary-lens system:  is the projected angular separation of the binary components normalized by ,  is the binary mass ratio, and  is the angle between the source-lens trajectory and the binary-lens axis.
+we use the advanced contour integration package   to calculate the binary-lens magnification , given the parameters .
+we start by scanning the seven-dimensional parameter space on a fixed  grid with ,   and . at each grid point, we minimize the  by setting the four remaining parameters  free in markov chain monte carlo (mcmc) using the  package . the resulting  map is shown in figure , from which we identify five local minima in the close-binary  regime and nine local minima in the wide-binary  regime. the severe finite-source effects smear out the sharp magnification structure of caustics, leading to a plethora of local minima over a broad range of .
+for close solutions, there is a perfect degeneracy of , and therefore we only conduct the grid search with  .
+for wide solutions, we have a fourfold degeneracy in . when , the “planetary” caustic associated with secondary mass is reduced to a chang-refsdal  caustic with shear . the four identical cusps of chang-refsdal lead to a degeneracy of , as shown in figure . the solutions with  can correspond to an unrealistic value of . we limit our analysis to , which corresponds to an upper limit of days.
+then we probe all local minima by setting all the parameters free in mcmc. we also introduce higher-order effects into the modeling. we include the annual microlens parallax effects , which are the light-curve distortions due to the earth's orbital acceleration toward the sun. the static binary-lens model has a perfect geometric degeneracy , which is broken when taking the microlens parallax into account.
+for the  and  geometry, the lens takes different sides of the source trajectory, leading to different magnifications. as defined in , the microlens parallax vector  is described by the east and north components .
+we also consider the orbital motion of the binary lens, which can have degeneracies with microlens parallax  .
+we apply the linearized orbital motion
+with the two parameters  and .
+this approximation is subject to physical constraints, as discussed in . for a bound system, the ratio of the projected kinetic to the potential energy  should be less than unity:
+where  and  is the trigonometric parallax of the source star.
+we adopt  and  (see  ) and restrict the mcmc exploration to .
+we find that the best-fit solution is a wide binary with  and we label it as . the source trajectory and caustics are shown in the upper left subpanel of figure . the  solution has , and all other solutions are worse by . nevertheless, we keep all solutions with  (listed in table ) for further analysis incorporating the vlti gravity data.
+§ interferometric data analysis
+§.§ parameterization
+the images generated from the binary-lens equation are oriented with respect to the binary-lens axis and in the units of the einstein radius, so they need to be rotated to the sky plane and scaled by  to compute the closure phases. we define  as the position angle of the binary-lens axis. the direction of the lens-source relative motion  , which is the same as that of the microlens parallax , can be expressed as
+we incorporate the two parameters  in addition to the 2l1s parameters  for modeling the interferometric data. the microlens parallax is reparameterized by  with .
+§.§ probing interferometric observables
+prior to carrying out the full joint analysis of vlti and light curve, we first investigate the vlti parameters with limited input from the light-curve models.
+we start the investigation using only  from the best-fit light-curve model “wide a.” we perform a four-dimensional grid search on  to fit the closure-phase data from each of the eight vlti exposures, where  are the source's coordinates on the binary-lens plane.
+at each grid point, we generate the images scaled and rotated to the sky plane based on  and then calculate the closure phases and corresponding  for every vlti exposure . we describe our method of calculating the closure phase from the binary-lens images in appendix . our closure-phase calculations from the images are validated with the pmoired software[] .
+to exclude unreasonable source positions, we add a penalty term,
+for the deviation from light-curve magnification for each vlti exposure , where  is the magnification from the  model at the th vlti exposure, and we adopt a fractional error of   so that  are only subject to loose light-curve magnification constraints.
+a self-consistent vlti model should have the same values of  on all the exposures. therefore, for each set of , we calculate
+where  is the minimum  for a given  in the -th vlti exposure.
+the left panel of figure  shows the  map, from which we identify four local minima. the  is within a broad range of , and  is subject to a fourfold degeneracy around , each with an uncertainty of .
+the fourfold degeneracy corresponds to having the source positions near the four cusps of the “central” caustic associated with the primary mass, resulting in similar image morphologies that are compatible with the vlti data (see the subpanels on the right of figure ).
+next, we further probe the four local minima by jointly fitting all epochs of vlti data. in a satisfactory vlti microlensing model, the source positions should lie approximately on a straight line, following the source-lens relative motion, so we parameterize the source positions  with  as
+u_x   = u_0 sinα - τcosα,
+    
+    	u_y   = -u_0 cosα - τsinα,
+where .  the interferometric parameters  are seeded from the abovementioned four local minima. we allow  to freely vary, and we no longer add the  penalty term as in eq. .  the four best-fit solutions have similar  (), so the vlti data alone cannot distinguish between them. all the solutions strongly prefer . as in the previous single-lens events,  and  solutions can be distinguished with two or more epochs of vlti data  . the four degenerate solutions correspond to four distinct  values, denoted as , which are displayed as the shaded regions in figure . the allowed  from the posteriors have broad ranges, suggesting that the resulting constraints on  are not specific to the seed solution of “wide a,” so we use them as the starting point for the joint analysis with the light curves in   .
+§.§ joint analysis with light curves
+in this section, we present the joint analysis of vlti and light-curve modeling.
+we begin by comparing the light-curve parameters and vlti constraints. figure  shows the comparisons between the  parameters  derived from the light-curve solutions with . the three solutions are mutually compatible within , and they are all at . these include one close solution () and two wide solutions ( and “wide b”). next we check the consistency of the direction  between the light-curve solutions and vlti solution at . figure  displays the posterior distribution of  and the  constraint from vlti. for three light-curve solutions (, “wide b”, and ), the two directions agree to .
+then we perform a joint fit to the vlti and light-curve data for the , “wide b”, and  solutions. we include the higher-order effects of the microlens parallax and binary orbital motion.
+	in addition, we account for the limb-darkening effects in the closure-phase modeling by adopting , based on our adopted source stellar parameters ( ). compared to the uniform-brightness profile, limb darkening presents minor improvements in the goodness of fit, with  for the solutions (wide a, wide b, close a), respectively, and the best-fit parameters with and without the limb-darkening effects are consistent with each other. thus, the non-limb-darkening approximation adopted in the closure-phase analysis is adequate for probing local minima with grid searches ( ). nevertheless, we consider the limb-darkening effects to derive the final results from the joint fit.
+table  lists the best-fit parameters and their uncertainties. the global best fit is the  solution, and figure  shows its best-fit closure-phase models along with the geometric configurations of the source, caustic, and images. the  solution is worse by , which is somewhat () less compared with the light-curve-only . therefore, the preference for the  over the  comes from the light-curve fitting. it mainly stems from the  mag broad bump around  in the gaia light curve, as mentioned in  . this feature can be well matched by the wide solutions. in contrast, for the “close a” solutions, the orbital motion parameters can be tuned to induce source crossing of a planetary caustic at , but the corresponding perturbation is too sharply peaked to reproduce the observed broad feature (see the right panel of figure ). among the wide solutions, the “wide b” model fit is worse by  with respect to “wide a,” significantly increased by  compared with light curve only. as discussed in  , such  geometries are strongly disfavored by the constraints from multi-epoch vlti data.
+to further understand the vlti constraints on these three solutions, we performed additional fitting with the interferometric data only. we hold the parameters , which define the caustics' configuration, fixed at their best-fit values from the joint modeling, while the source positions  of the three nights are allowed to vary. figure  shows the   contours (magenta) compared with the expected source positions (black dots) on the best-fit trajectory (black solid line) from the joint modeling for each solution. for the  solution, there is a  discrepancy in  during night 1, which corresponds to the  systematic residuals of the closure phases for u4u2u1 and u4u3u2 in both exposures of that night, as displayed in the top two subpanels of figure . during the other two nights, the source positions are in good agreement with the  solution. note that such  systematic offsets also show up in the third exposure of night 2 (see figure ), but they are not present in the other three exposures (i.e., night 2-1, 2-2, and 2-4), which are in good agreement with the model. this suggests the existence of sub-degree-level systematic error in the closure-phase data. the  solution shows a similar degree of consistency to the “wide a.” in contrast, for the “wide b+” solution, which is ruled out by the vlti data, the source positions of all three nights deviate by  from the expectation.
+in conclusion, because the  solution is preferred over all other local minima by , we regard it as the only favored solution of asassn-22av.
+§ physical parameters
+§.§ source properties and finite-source effects
+the finite-source effects exhibited in asassn-22av's light curves provide an opportunity to cross-check the vlti-measured  with . the standard method  for deriving  for bulge microlensing events uses the source's dereddened color and magnitude with the extinction coefficients estimated from the location of bulge red clump (rc) stars in a color-magnitude diagram (cmd). in our case, the source star is not toward the bulge, and the cmd contains rc stars at a variety of distances, making it difficult to apply the standard method.
+	gaia dr3 reports a trigonometric parallax . we adopt  after applying the preliminary zero-point correction from . the independent investigation on the gaia parallax zero-point offset by  yields a consistent value of .
+we fit the spectral energy distribution (sed) using photometric data from 2mass, gaia and skymapper southern survey dr4 . we employ the mesa isochrones and stellar tracks <cit.> to generate synthetic magnitudes as a function of stellar mass, age, and metallicity.
+the extinction  is taken as a free parameter with a flat prior, and we assume that . we use the corrected gaia parallax as a prior for source distance.
+mist returns the stellar radius , and hence the angular radius  can be estimated with mcmc. the photometric error bars are inflated by a factor of 2, so that dof . we find that the best-fit , which is consistent with the lower limit of  (for distance greater than  kpc), according to the three-dimensional dust map of .
+the best-fit stellar parameters are  and , arriving at . the sed-derived stellar parameters are consistent with the spectroscopic ones from  .
+for the best-fit  solution with , we find , which differs by  from the  determined by vlti gravity.
+in comparison, for the  solution, where , the corresponding  deviates from the vlti gravity value of  by . note that the  error of our  estimate is likely an underestimate, due to unaccounted-for systematic uncertainties. for example,  inferences from the empirical color/surface brightness relations such as  generally have errors of –. in any case, for the  solution,  derived from vlti and finite-source effects are basically consistent.
+§.§ physical properties of the lens system
+with measurements of the angular einstein radius  and the microlens parallax , the physical parameters of the lens system can be unambiguously derived from microlensing observables:
+and adopting , we can also infer the lens distance:
+the lens properties of the favored solution () are listed in table . the lens system is composed of two m dwarfs with  and , separated by a projected separation of  and at a distance of  kpc.
+based on mist isochrones, we estimate that the lens system has  (assuming zero extinction). in comparison, the source's 2mass magnitude is . during the vlti observations, the magnification is more than , and thus the flux ratio between the lens and magnified source is .  therefore, the lens light has a negligible effect on the closure phase, justifying our approach of calculating closure phases without the lens flux contribution.
+§ discussion and conclusion
+asassn-22av is the first binary-lens microlensing event with multiple images resolved by interferometry. the modeling is considerably more complex than for a single-lens event. for a typical single-lens event, the simple model of two point images is generally satisfactory for fitting the closure-phase data , and thus closure-phase modeling can, in principle, be performed separately from the light curve. in contrast, a binary lens has three or five images for a point source, depending on whether the source is outside or inside the caustics. during the vlti observations of asassn-22av, the images, formed from a finite source crossing caustics, morphed from a nearly complete einstein ring to separated arcs over a period of several nights. thus, the interpretation of the closure-phase data from such a binary-lens event requires inputs from light-curve modeling.
+the weak binary-lens perturbation and sparse pre-peak photometric coverage make the light-curve modeling particularly complicated for asassn-22av. in the early stages of our work, where we did not include the gaia light curve, we found 25 local minima in our binary-lens grid search. after incorporating the vlti data, the best-fit solution, which is the same as the presently favored  solution, `predicted' the existence of the bump at  shown in the gaia light curve. we only realized this `prediction' later, after conducting light-curve modeling after the inclusion of gaia data. the predictive power of the  solution offers good evidence for its validity.
+we also made several consistency checks between the light curve and multi-epoch vlti data. for the favored solution, there are good agreements in multiple aspects, including  (figure ), direction of  (figure ), source trajectory (figure ), and  (see the discussion in  ), further demonstrating the model's robustness.
+the agreement between the best-fit model and the closure-phase data is at  (figure , ), which likely reflects the instrument's systematics floor. we measure the einstein radius  mas with  precision, even though it is close to the smallest value resolvable by vlti gravity. the expected closure phase would be  for  to  and  for .
+the lens system consists of two m dwarfs separated by  at , with . the primary mass is more precisely determined than the secondary ( versus ). this is because, in the wide-binary () regime, the scale of images (measured by vlti gravity) is proportional to  of the primary mass rather than the total mass. hence, the uncertainty of the secondary mass  is contributed by an additional uncertainty from the mass ratio.
+the estimated orbital period is  for a circular orbit, and the angular separation between the binaries is  at . such faint low-mass binary systems at intermediate orbital separations have so far been inaccessible by any other method <cit.>. similar vlti microlensing observations will be able to identify and characterize intermediate binaries containing dark compact objects like neutron stars and stellar-mass black holes to complement other detection techniques.
+§ acknowledgment
+we thank cheongho han and gregory green for helpful discussions. this work is based on observations collected at the european southern observatory under director discretionary time program 108.23mk. this work is supported by the national natural science foundation of china (grant no. 12133005) and the science research grants from the china manned space project with no. cms-csst-2021-b12. s.d. acknowledges the new cornerstone science foundation through the xplorer prize. c.s.k. is supported by nsf grants ast-2307385 and 2407206. this research was funded in part by the national science centre, poland, and grants opus 2021/41/b/st9/00252 and sonata 2023/51/d/st9/00187 awarded to p.m.
+this research uses data obtained through the telescope access program (tap), which has been funded by the tap member institutes. this work has made use of data from the european space agency (esa) mission gaia (), processed by the gaia data processing and analysis consortium (dpac;
+). funding for the dpac has been provided by national institutions, in particular the institutions participating in the gaia multilateral agreement. we acknowledge the gaia photometric science alerts team. we also acknowledge the devoted staff of the anglo-australian telescope who have maintained the hermes spectrograph over a decade.
+this research has made use of the vizier catalog access tool, cds, strasbourg, france. this publication makes use of data products from the two micron all sky survey, which is a joint project of the university of massachusetts and the infrared processing and analysis center/california institute of technology, funded by the national aeronautics and space administration and the national science foundation.
+§ binning the closure-phase data
+the interferometric observables are the complex visibilities  and closure phases , with
+where  is the on-sky target intensity distribution centered on the light of sight  and  is the on-sky projection of the baseline vector over wavelength.
+the closure phase is defined for a three-telescope array as . for a list of closure phases , the mean closure phase  is calculated by assigning  to the unit complex and summing them up for binning as
+the uncertainty of  is estimated using bootstrap resampling.
+§ image generation and visibility calculation
+for a given set of source coordinate  and binary configuration , we extract the image contours used for the magnification calculation in  package. the contours are then converted to two-dimensional images using the loop-linking method , which combines the contour integration and inverse-ray-shooting methods.
+the loop-linking method fills the contour with a uniform grid of points organized in links.
+	at a given step size , our code returns the head  and the number of points  of the th link, which contains a set of points  with . for any baseline coordinate , the complex visibility is calculated by summing up the contribution from all links (assuming ) as
+𝒱(u, v)     = ∑_k ∑_j=0^n_k - 1 e^-2π i (v x_k + u (y_k + jδ ))
+        = ∑_k  e^-2π i (v x_k + u y_k)∑_j=0^n_k - 1 (e^-2π i uδ)^j                  
+        = ∑_k  e^-2π i (v x_k + u y_k)1 - e^-2π i uδ n_k/1 - e^-2π i uδ.
+the calculation is optimized by grouping the links by  and summing up them first, which reduces the number of calculations by a factor of .
+we caution that the dot product of  and  is not arbitrary. in our case, it has to be . otherwise, the transformation from the image plane to the sky plane is not positive-definite and the angle  is not well-defined.
+an alternative method for computing the visibility is applying the divergence theorem on the closed image contour  with
+where  is the unit vector normal to the boundary  at .
+for a closed polygon with vertices , the integration for edge  is
+the visibility is then the sum over all edges. this method is faster than the loop-linking method for convex images, while the loop-linking method is faster for concave images. in our case, the images are ring-like arcs, and thus we adopt the loop-linking method.
+pmpyeasy, hotpants, dophot, vbbinarylensing, emcee, pmoired, mist
+top: the multiband light curves of the microlensing event asassn-22av, which are well described by the best-fit 2l1s model (black solid line) from the joint vlti and light-curve analysis. the light curves deviate from the best-fit 1l1s model with finite-source effects (black dashed line) near the peak, as shown with the enlarged view in the inset. we analyze three nights of vlti gravity observations taken after the peak, and their epochs are marked with the red dashed lines.
+		middle: the residuals of the best-fit  2l1s model.
+		bottom: the best-fit 1l1s model shows significant residuals for the  days around the peak.
+	
+the observed (black) and fitted (red) synthetic hermes spectra from galah dr4, showing generally good agreement and small residuals (blue) across the entire spectrum. while some individual lines are deviating, the overall fit is well aligned with the observations, whose continuum is suppressed by molecular absorption features across the entire wavelength region of this luminous cool giant star.
+	
+the source trajectories and light curves of three 2l1s models (, “wide ”, and ) taking the microlens parallax and binary orbital motion into account. left:
+		the upper, middle, and lower subpanels show the caustics (blue) and source trajectories (black curves with arrows) for the “wide a” (best-fit), “wide b”, and “close a” solutions, respectively. in each subpanel, we show the source positions (red circles) and caustics at  and , with increased opacity for the latter. the inset of each subpanel displays the source positions and caustics on the three nights of the vlti gravity observations. right: the gaia -band light curve shows a broad feature at , and the three best-fit 2l1s models are shown with solid (wide a), dashed (wide b), and dotted (close a) lines, respectively. the wide solutions can match this feature well, while the “close a” solution cannot. the sharply peaked spike of the “close a” solution is induced by the source crossing a planetary caustic due to dramatic orbital motions, but even this finely tuned configuration fails to reproduce the observed feature.
+	
+map for the grid search of 2l1s light-curve models, in the  (upper panel) and  (lower panel) planes. for , there is a perfect degeneracy , and thus the search is only conducted with . the regions with , and  with respect to the best fit are color-coded with red, yellow, green, blue, and light gray, respectively.
+	
+left: the  map from fitting the vlti data evaluated at . areas with , and  are color-coded in red, yellow, green, blue, and gray, respectively. there are four local minima around . right: images and geometry of the four local minima. the four rows from top to bottom correspond to local minima at  and , respectively. the first three columns show the model images oriented in the east and north directions on the three vlti nights. the last column shows the source positions (solid dots) on the three vlti nights and the caustics (black closed curve).
+	
+the comparisons of  derived from light-curve fitting with  inferred from vlti data. the colored arcs denote the 1 range of  for the solutions “close a” (black), “close a” (red), “close b” (cyan), “wide a” (blue), “wide a” (green), and “wide b” (yellow), respectively. the shaded regions indicate the 3 range of  at , and . three solutions (“wide a”, “wide b” and “close a”) have consistent  with .
+	
+the 1 and 2 posterior distributions of the microlens parallax vector  from light-curve analysis for the “close a” (red contours), “close b” (cyan contours), “wide a” (green contours), and “wide b” (yellow contours) solutions, respectively. the shaded regions are the 1, 2, and 3 constraints on  derived from the interferometric data for the local minimum of . the light-curve and vlti constraints are consistent for the “wide a”, “wide b” and “close a” solutions. 
+	
+four  two panel groups showing the closure-phase data and the best-fit microlensing model () for the eight vlti gravity exposures obtained over three nights. within each group, the left subpanel shows the closure-phase data as a function of wavelength, with the best-fit model overplotted as solid lines; the right subpanel shows the caustics (blue), source trajectory (black line with an arrow), and source position (red circle) at the time of the vlti observation, with the microlensed images displayed as shaded regions and the critical curves as blue dashed lines.
+	
+the source trajectory (black solid line) and caustics (blue closed curves) for  (top panel), “wide b” (middle panel), and  (bottom panel) solutions. the solid dots denote the source positions on the three nights of vlti gravity observations. the  contours in magenta show the posteriors of the source positions inferred from the interferometric data only, with the geometric parameters  held fixed to the values in table . 
+	
+/edocument/
+.
+	derived physical parameters of the lens system
+	
+	
+		                                                                                                    
+.99
+    [afonso et al.(2001)]afonso2001 afonso, c., albert, j. n., andersen, j., et al. 2001, , 378, 1014. doi:10.1051/0004-6361:20011204
+    [alard & lupton(1998)]alard_luption1998 alard, c. & lupton, r. h. 1998, , 503, 325. doi:10.1086/305984
+    [alard(2000)]alard_image_sub2000 alard, c. 2000, , 144, 363. doi:10.1051/aas:2000214
+    [albrow et al.(2001)]albrow2001 albrow, m., an, j., beaulieu, j.-p., et al. 2001, , 550, l173. doi:10.1086/319635
+    [an et al.(2002)]an2002 an, j. h., albrow, m. d., beaulieu, j.-p., et al. 2002, , 572, 521. doi:10.1086/340191
+	[batista et al.(2011)]batista2011 batista, v., gould, a., dieters, s., et al. 2011, , 529, a102. doi:10.1051/0004-6361/201016111
+	[becker(2015)]becker2015 becker, a. 2015, astrophysics source code library. ascl:1504.004
+	[bernstein et al.(2003)]mike bernstein, r., shectman, s. a., gunnels, s. m., et al. 2003, , 4841, 1694. doi:10.1117/12.461502
+	[bozza(2010)]vbbl2010 bozza, v. 2010, , 408, 2188. doi:10.1111/j.1365-2966.2010.17265.x
+	[bozza et al.(2018)]vbbl2018 bozza, v., bachelet, e., bartolić, f., et al. 2018, , 479, 5157. doi:10.1093/mnras/sty1791
+	[brown et al.(2013)]brown2013 brown, t. m., baliber, n., bianco, f. b., et al. 2013, , 125, 1031. doi:10.1086/673168
+	[buckley et al.(2006)]salt buckley, d. a. h., swart, g. p., & meiring, j. g. 2006, , 6267, 62670z. doi:10.1117/12.673750
+    [buder et al.(2018)]buder2018 buder, s., asplund, m., duong, l., et al. 2018, , 478, 4513. doi:10.1093/mnras/sty1281
+    [buder et al.(2019)]buder2019 buder, s., lind, k., ness, m. k., et al. 2019, , 624, a19. doi:10.1051/0004-6361/201833218
+    [buder et al.(2021)]buder2021 buder, s., sharma, s., kos, j., et al. 2021, , 506, 150. doi:10.1093/mnras/stab1242
+    [buder et al.(2024)]buder2024 buder, s., kos, j., wang, e. x., et al. 2024, arxiv:2409.19858. doi:10.48550/arxiv.2409.19858
+	[cassan & ranc(2016)]vltimicrolens4 cassan, a., & ranc, c. 2016, , 458, 2074
+    [cassan et al.(2022)]cassan2022 cassan, a., ranc, c., absil, o., et al. 2022, nature astronomy, 6, 121. doi:10.1038/s41550-021-01514-w
+	[chang & refsdal(1979)]changrefsdal1979 chang, k. & refsdal, s. 1979, , 282, 561. doi:10.1038/282561a0
+	[chen et al.(2022)]chen2022 chen, p., dong, s., kochanek, c. s., et al. 2022, , 259, 53. doi:10.3847/1538-4365/ac50b7
+    [choi et al.(2016)]mist choi, j., dotter, a., conroy, c., et al. 2016, , 823, 102. doi:10.3847/0004-637x/823/2/102
+	[claret & bloemen(2011)]claret2011 claret, a. & bloemen, s. 2011, , 529, a75. doi:10.1051/0004-6361/201116451
+    [claret(2019)]claret2019 claret, a. 2019, vizier online data catalog, 6154. vi/154
+	[dalal & lane(2003)]vltimicrolens2 dalal, n., & lane, b. f. 2003, , 589, 199
+	[delplancke et al.(2001)]vltimicrolens1 delplancke, f., górski, k. m., & richichi, a. 2001, , 375, 701
+    [de silva et al.(2015)]desilva2015 de silva, g. m., freeman, k. c., bland-hawthorn, j., et al. 2015, , 449, 2604. doi:10.1093/mnras/stv327
+	[dong et al.(2006)]dong2006 dong, s., depoy, d. l., gaudi, b. s., et al. 2006, , 642, 842. doi:10.1086/501224
+	[dong et al.(2007)]dong2007 dong, s., udalski, a., gould, a., et al. 2007, , 664, 862. doi:10.1086/518536
+	[dong et al.(2009)]dong2009 dong, s., gould, a., udalski, a., et al. 2009, , 695, 970. doi:10.1088/0004-637x/695/2/970
+    [dong et al.(2019)]dong2019 dong, s., mérand, a., delplancke-ströbele, f., et al. 2019, , 871, 70. doi:10.3847/1538-4357/aaeffb
+    [einstein(1936)]einstein1936 einstein, a. 1936, science, 84, 506. doi:10.1126/science.84.2188.506
+    [eisenhauer et al.(2023)]eisenhauer2023 eisenhauer, f., monnier, j. d., & pfuhl, o. 2023, , 61, 237. doi:10.1146/annurev-astro-121622-045019
+    [el-badry(2024)]binarydetection el-badry, k. 2024, , 98, 101694. doi:10.1016/j.newar.2024.101694
+	[foreman-mackey et al.(2013)]foreman-mackey2013 foreman-mackey, d., hogg, d. w., lang, d., et al. 2013, , 125, 306. doi:10.1086/670067
+	[gaia collaboration et al.(2016)]gaia2016 gaia collaboration, prusti, t., de bruijne, j. h. j., et al. 2016, , 595, a1. doi:10.1051/0004-6361/201629272
+	[gaia collaboration et al.(2023)]gaiadr3 gaia collaboration, vallenari, a., brown, a. g. a., et al. 2023, , 674, a1. doi:10.1051/0004-6361/202243940
+ 	[gould(1992)]gould1992 gould, a. 1992, , 392, 442. doi:10.1086/171443
+	[gould(1994a)]gould1994a gould, a. 1994, , 421, l71. doi:10.1086/187190
+	[gould(1994b)]gould1994b gould, a. 1994, , 421, l75. doi:10.1086/187191
+	[gould et al.(1994)]gould1d1994 gould, a., miralda-escude, j., & bahcall, j. n. 1994, , 423, l105. doi:10.1086/187247
+	[gould(2000)]gould2000 gould, a. 2000, , 542, 785
+	[gould(2004)]gould2004 gould, a. 2004, , 606, 319. doi:10.1086/382782
+    [gravity collaboration et al.(2017)]gravity2017 gravity collaboration, abuter, r., accardo, m., et al. 2017, , 602, a94. doi:10.1051/0004-6361/201730838
+    [gravity+ collaboration et al.(2022a)]gravitywide gravity+ collaboration, abuter, r., allouche, f., et al. 2022a, , 665, a75. doi:10.1051/0004-6361/202243941
+    [gravity+ collaboration et al.(2022b)]gravityplus gravity+ collaboration, abuter, r., alarcon, p., et al. 2022b, the messenger, 189, 17. doi:10.18727/0722-6691/5285
+   [groenewegen(2021)]parallax_zero_point2 groenewegen, m. a. t. 2021, , 654, a20. doi:10.1051/0004-6361/202140862
+	[guo et al.(2021)]guo2021 guo, h.-l., chen, b.-q., yuan, h.-b., et al. 2021, , 906, 47. doi:10.3847/1538-4357/abc68a
+ 	[hodgkin et al.(2021)]hodgkin2021 hodgkin, s. t., harrison, d. l., breedt, e., et al. 2021, , 652, a76. doi:10.1051/0004-6361/202140735
+	[jung et al.(2022)]jung2022 jung, y. k., zang, w., han, c., et al. 2022, , 164, 262. doi:10.3847/1538-3881/ac9c5c
+	[kammerer et al.(2020)]kammerer2020 kammerer, j., mérand, a., ireland, m. j., et al. 2020, , 644, a110. doi:10.1051/0004-6361/202038563
+	[kervella et al.(2004)]kervella04 kervella, p., bersier, d., mourard, d., et al. 2004, , 428, 587
+	[kochanek et al.(2017)]asassn_v1 kochanek, c. s., shappee, b. j., stanek, k. z., et al. 2017, , 129, 104502. doi:10.1088/1538-3873/aa80d9
+    [kos et al.(2017)]kos2017 kos, j., lin, j., zwitter, t., et al. 2017, , 464, 1259. doi:10.1093/mnras/stw2064
+    [le bouquin et al.(2011b)]lebouquin2011 le bouquin, j.-b., berger, j.-p., lazareff, b., et al. 2011, , 535, a67. doi:10.1051/0004-6361/201117586
+    [lindegren et al.(2021a)]lindegren2021a lindegren, l., klioner, s. a., hernández, j., et al. 2021a, , 649, a2. doi:10.1051/0004-6361/202039709
+    [lindegren et al.(2021b)]parallax_zero_point lindegren, l., bastian, u., biermann, m., et al. 2021b, , 649, a4. doi:10.1051/0004-6361/202039653
+    [mayor et al.(2003)]harps mayor, m., pepe, f., queloz, d., et al. 2003, the messenger, 114, 20
+    [mérand(2022)]pmoired mérand, a. 2022, , 12183, 121831n. doi:10.1117/12.2626700
+    [mróz et al.(2024)]mroz24 mróz, p., dong, s., mérand, a., et al. 2024, in press, arxiv:2409.12227
+    [onken et al.(2024)]smssdr4 onken, c. a., wolf, c., bessell, m. s., et al. 2024, , 41, e061. doi:10.1017/pasa.2024.53
+	[paczyński(1986)]paczynski1986 paczyński, b. 1986, , 304, 1. doi:10.1086/164140
+    [piskunov & valenti(2017)]piskunov2017 piskunov, n. & valenti, j. a. 2017, , 597, a16. doi:10.1051/0004-6361/201629124
+	[rattenbury & mao(2006)]vltimicrolens3 rattenbury, n. j., & mao, s. 2006, , 365, 792
+    [recio-blanco et al.(2023)]recioblanco2023 recio-blanco, a., de laverny, p., palicio, p. a., et al. 2023, , 674, a29. doi:10.1051/0004-6361/202243750
+	[refsdal(1966)]refsdal1966 refsdal, s. 1966, , 134, 315
+	[riello et al.(2021)]gaiaphotometry riello, m., de angeli, f., evans, d. w., et al. 2021, , 649, a3. doi:10.1051/0004-6361/202039587
+    [rybicki et al.(2022)]rybicki2022 rybicki, k. a., wyrzykowski, ł., bachelet, e., et al. 2022, , 657, a18. doi:10.1051/0004-6361/202039542
+	[schechter et al.(1993)]schechter1993 schechter, p. l., mateo, m., & saha, a. 1993, , 105, 1342. doi:10.1086/133316
+	[shappee et al.(2014)]shappee2014 shappee, b. j., prieto, j. l., grupe, d., et al. 2014, , 788, 48. doi:10.1088/0004-637x/788/1/48
+	[sheinis et al.(2015)]hermes sheinis, a., anguiano, b., asplund, m., et al. 2015, journal of astronomical telescopes, instruments, and systems, 1, 035002. doi:10.1117/1.jatis.1.3.035002
+	[skowron et al.(2011)]skowron2011 skowron, j., udalski, a., gould, a., et al. 2011, , 738, 87. doi:10.1088/0004-637x/738/1/87
+    [skrutskie et al.(2006)]skrutskie2006 skrutskie, m. f., cutri, r. m., stiening, r., et al. 2006, , 131, 1163. doi:10.1086/498708
+	[smith et al.(2003)]smith2003 smith, m. c., mao, s., & paczyński, b. 2003, , 339, 925. doi:10.1046/j.1365-8711.2003.06183.x
+    [ting et al.(2019)]ting2019 ting, y.-s., conroy, c., rix, h.-w., et al. 2019, , 879, 69. doi:10.3847/1538-4357/ab2331
+	[yee et al.(2012)]yee2012 yee, j. c., shvartzvald, y., gal-yam, a., et al. 2012, , 755, 102. doi:10.1088/0004-637x/755/2/102
+	[yoo et al.(2004)]yoo2004 yoo, j., depoy, d. l., gal-yam, a., et al. 2004, , 603, 139. doi:10.1086/381241
+	[van cittert(1934)]vancittert1934 van cittert, p. h. 1934, physica, 1, 201. doi:10.1016/s0031-8914(34)90026-4
+    [wyrzykowski et al.(2023)]gaiamicrolensing wyrzykowski, ł., kruszyńska, k., rybicki, k. a., et al. 2023, , 674, a23. doi:10.1051/0004-6361/202243756
+    [zang et al.(2020)]zang2020 zang, w., dong, s., gould, a., et al. 2020, , 897, 180. doi:10.3847/1538-4357/ab9749
+	[zernike(1938)]zernike1938 zernike, f. 1938, physica, 5, 785. doi:10.1016/s0031-8914(38)80203-2
+    [zhu et al.(2014)]zhu2014 zhu, w., penny, m., mao, s., et al. 2014, , 788, 73. doi:10.1088/0004-637x/788/1/73
+	
+	
+.
+	best-fit parameters and  uncertainties from the joint vlti and light-curve analysis
+	
+	
+		solution                                                                                                                                                                                                      
+close a                                                                                                                                                                                                                    
+1220.0                                                                      
+wide a                                                                                                                                                                                                                   
+1174.8                                                                      
+wide b                                                                                                                                                                                                                    
+1470.5                                                                      
+the light-curve parameters are defined in the same fashion as in  table . for wide solutions,  is defined by the mass of the primary lens, while for close solutions, it is defined by the total mass of the lens system. the favored solution  is in boldface.

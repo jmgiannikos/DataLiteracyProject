@@ -797,8 +797,8 @@
   "sustainable_development_goals": [
     {
       "score": 0.7099999785423279,
-      "id": "https://metadata.un.org/sdg/7",
-      "display_name": "Affordable and clean energy"
+      "display_name": "Affordable and clean energy",
+      "id": "https://metadata.un.org/sdg/7"
     }
   ],
   "awards": [],

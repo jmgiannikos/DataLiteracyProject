@@ -1,0 +1,328 @@
+.
+/bdocument/
+the multirow,
+  bigstrut and
+  bigdelim packages
+    piet van oostrumcatalogued “active author”
+øystein bache
+jerry leichterdocumentation put together by robin
+    fairbairns
+    january 16, 2026
+===================================================================================================================================
+§ introduction
+these packages offer a series of extensions to the standard 
+ environment.  their respective functions are:
+multirow which provides a construction for table cells
+  that span more than one row of the table;
+bigdelim which creates an appropriately-sized
+  delimiter (for example, brace, parenthesis or bracket) to fit in a
+  single multirow, to indicate a relationship between other rows; and
+bigstrut which creates struts which (slightly) stretch
+  the table row in which they sit.
+§ using multirow
+the basic syntax is:
+*multirownrows[bigstruts]width[fixup]text
+where
+nrows is the number of rows to span.  it's up to you to
+  leave the other rows empty, or the stuff created by multirow
+  will over-write it. with a positive value of nrows the
+  spanned columns are this row and (nrows-1) rows below
+  it. with a negative value of nrows they are this row and
+  (1-nrows) above it. 
+bigstruts is mainly used if you've used the
+  bigstrut.  in that case it is the total number of uses of
+  bigstrut within the rows being spanned.  count 2 uses for each
+  bigstrut, 1 for each *bigstrut[x] where x is
+  either  or .  the default is 0.
+width is the width to which the text is to be set, or
+   to indicate that the text argument's natural width is to
+  be used.
+text is the actual text of the construct.  if the width
+  was set explicitly, the text will be set in a parbox of that
+  width; you can use  to force linebreaks where you like.
+if the width was given as  the text will be set in lr
+  mode.  if you want a multiline entry in this case you should use a
+   or  environment in the text
+  parameter.
+fixup is a length used for fine tuning: the text will be
+  raised (or lowered, if fixup is negative) by that length
+  above (below) wherever it would otherwise have gone.
+for example (using both multirow and bigstrut):
+which will appear as:
+41incommon g text     column g2a
+column g2b 
+column g2c 
+column g2d 
+3[6]*common g text     column g2a
+2-2
+          column g2b 
+2-2
+          column g2c 
+4[8]1incommon g text     column g2a
+2-2
+          column g2b 
+2-2
+          column g2c 
+2-2
+          column g2d 
+4*[c]common 
+ g text     column g2a
+column g2b 
+column g2c 
+column g2d 
+if any of the spanned rows are unusually large, or if you're using the
+bigstrut and bigstruts are used asymetrically about the
+centerline of the spanned rows, the vertical centering may not come
+out right.  use the fixup argument in this case.
+just before text is expanded, the multirowsetup macro is
+expanded to set up any special environment.  initially,
+multirowsetup contains just raggedright.  it may be
+redefined with renewcommand.
+it's just about impossible to deal correctly with descenders.  the
+text will be set up centred, but it may then have a baseline that
+doesn't match the baseline of the stuff beside it, in particular if
+the stuff beside it has descenders and text does not.  this may
+result in a small misalignment.  about all that can be done is to do a
+final touchup on text, using the fixup optional argument.
+(hint:  if you use a measure like , there's a reasonable
+chance that the fixup will still be correct if you change the point
+size.)
+multirow is mainly designed for use with table, as
+opposed to array, environments.  it will not work well in an
+array environment since the lines have an extra  of space
+between them which it won't account for.  fixing this is difficult in
+general, and doesn't seem worth it.  the bigstruts argument may
+be used to provide a semi-automatic fix: first set bigstrutjot to
+jot.  then simply repeat nrows as the bigstruts
+argument.  this will be close, but probably not exact; you can use the
+fixup argument to refine the result.  (if you do this repeatedly,
+you'll probably want to wrap these steps up in a simple macro.  note
+that the modified bigstrutjot value will not give reasonable
+results if you have bigstruts and use this argument for its intended
+purpose elsewhere.  in that case, you might want to set it locally.)
+if you use multirow with the colortbl package you have
+to take precautions if you want to colour the column that has the
+multirow in it.  colortbl works by colouring each cell
+separately.  so if you use multirow with a positive nrows
+value, colortbl will first color the top cell, then
+multirow will typeset nrows cells starting with this cell,
+and later colortbl will color the other cells, effectively
+hiding the text in that area.  this can be solved by putting the
+multirow in the last row with a negative nrows value.
+see, for example:
+which will produce:
+aaaa     
+cccc     
+dddd     -3*bbbb
+§ using bigstrut
+*bigstrut[x] produces a strut which is bigstrutjot
+( by default) higher, lower, or both than the standard
+array/table strut.  use it in table entries that are adjacent to
+hlines to leave an extra bit of space — according to the
+texbook (page 246), “this is a little touch that improves the
+appearance of boxed tables; look for it as a mark of quality.”
+although you could use bigstrut in an array, there isn't normally
+much point since arrays are `opened up' by jot anyway.
+bigstrut[t] adds height; bigstrut[b] adds
+depth.  just bigstrut adds both.  so:  use
+bigstrut[t] in the row just after an hline;
+bigstrut[b] in the row just before; and
+bigstrut if there are hlines both before and after.
+spaces after the bigstrut are ignored, even if it has an optional
+argument.  spaces before the bigstrut are generally ignored (by a
+single ).
+note: the multirow package makes use of bigstrutjot.  if
+both styles are used, they can be used in either order, as each checks
+to see if the other has already defined bigstrutjot.  however,
+the default values they set are different: if only multirow
+is used, bigstrutjot will be set to .  if
+bigstrut is used, with or without multirow,
+bigstrutjot will be .
+§ using bigdelim
+the package is for working in a table or array
+environment, in which the multirow packages is also used.
+syntax of use is
+*ldelim(nwidth[text]
+*rdelim)nwidth[text]
+the commands are used in a column of a tabular or
+array; they create a big parenthesis, brace or whatever
+delimiter that extends over the n rows starting at the one
+containing the command.  corresponding cells in the following rows
+must be explicitly given (as empty cells).
+the first parameter is a delimiter to be used, e.g., `{
+`}     — in fact,
+anything that can be used with left or right, as appropriate.
+the optional text is set centred to the left of ldelim or
+to the right of rdelim.  the width is that reserved for
+the delimiter and its text; with a current copy of the
+multirow package, the width may be given as
+, but that may cause the delimiters to be too small.
+also with a recent version of multirow the commands may be
+used in the last row of the extension with a negative n
+parameter.  this is useful in combination with colortbl (see
+the discussion in section  on multirow).
+if there are unusually tall rows you may have to enlarge n (you
+can use non-integral values).
+/edocument/
+.
+^∘
+∬∫∫
+a&a
+/bdocument/ 
+  
+  
+   
+  
+european southern observatory, karl-schwarzschild-str. 2, d-85748 garching, munich, germany
+njamiala@eso.eu  and  jami@oca.eu 
+  laboratoire lagrange, umr 7293, univ. nice sophia-antipolis, cnrs, observatoire de la côte d'azur, 06304 nice, france   
+   institut d'astrophysique et de planétologie de grenoble, cnrs-ujf umr 5571, 414 rue de la piscine, 38400 st-martin d'hères, france
+    georgia state university, po box 3969, atlanta ga 30302-3969, usa
+    chara array, mount wilson observatory, 91023 mount wilson ca, usa
+    
+stellar rotation is a key in our understanding of both mass-loss and evolution of intermediate and massive stars. it can lead to anisotropic mass-loss in the form of radiative wind or an
+excretion disk.
+   we wished to spatially resolve the photosphere and gaseous environment of 51 oph, a peculiar star with a very high v sin i of 267km s and an evolutionary status that remains unsettled. it has been classified by different authors as a herbig, a  pic, or a classical be star.
+   we used the vega visible beam combiner installed on the chara array that reaches a submilliarcsecond resolution. observation were centered on the h emission line.
+    we derived, for the first time, the extension and flattening of 51 oph photosphere. we found a major axis of =8.08 0.70  and a minor axis of =5.66 0.23  . this high photosphere distortion shows that the star is rotating close to its critical velocity. finally, using spectro-interferometric measurements in the h line, we constrained the circumstellar environment geometry and kinematics and showed that the emission is produced in a 5.22 r disk in keplerian rotation.
+     from the visible point of view, 51 oph presents all the features of a classical be star: near critical-rotation and double-peaked h line in emission produced in a gaseous disk in keplerian rotation. however, this does not explain the presence of dust as seen in the mid-infrared and millimeter spectra, and the evolutionary status of 51 oph remains unsettled. 
+the peculiar fast-rotating star 51 oph probed by vega/chara
+    n. jamialahmadi 1,2
+          p. berio2
+          a. meilland2 
+          k. perraut3
+          d. mourard2
+          b. lopez2 
+          p. stee2
+          n. nardetto2
+          b. pichon 2
+          j.m. clausse 2
+          a. spang 2
+          h. mcalister4,5 
+          t. ten brummelaar5
+          j. sturmann 5
+          l. sturmann 5
+          n. turner 5
+          c. farrington 5
+          n. vargas 5
+          n. scott 5
+    january 16, 2026
+=====================================================================================================================================================================================================================================================================================================================================================================================================================================================
+§ introduction
+many hot stars are observed to be rotating with equatorial velocities higher than 120 km  . this fast stellar rotation can have strong effects on the observed stellar shape and the intensity distribution (gravity darkening). some hot stars show emission lines in their spectra. these features indicate that a gaseous circumstellar environment surrounds these stars. 
+the study of the stellar photosphere and circumstellar environment of fast-rotating stars is limited by the lack of spatial resolution of single telescopes. an important and reliable way to extract this information is through long-baseline optical interferometry, which allows us to study the detailed stellar surface properties and the close-by environment through emission lines. several rapid rotators have been studied using these techniques, including altair, vega, achernar, alderamin, regulus, and rasalhague <cit.>.
+this paper is dedicated to the study of 51 oph: a rapidly rotating star, =267 km.s with an age of 0.3 myr and a mass of 4  (van den ancker et al. 1998). this star appears to be a peculiar source in an unusual transitional state. compared with herbig ae/be stars,  and
+ confirmed by analyzing iso spectra that 51 oph has more gas than other haebe stars. in addition, malfait et al. (1998) and leinert et al. (2004) found that the dusty disk of 51 oph is much smaller (2au) than the disk of most haebe stars.
+compared with  pic-like stars, 51 oph does not exhibit a far-infrared-excess bump, which is inconsistent with the presence of an outer dusty disk .  suggested a difference between 51 oph and  pic because the 51 oph dust grains can be primordial, while the dust grains in an exozodiacal ring around  pic have to be replenished. furthermore, 51 oph does exhibit an  line in emission, which is not the case of  pic stars.  and   concluded that 51 oph is most likely a classical be star surrounded by a compact gaseous disk. this scenario agrees well with the following properties reported in previous studies: high rotational velocity, most of the near-infrared continuum emission arising from the gaseous disk, and hot co gas in a rotating keplerian disk. however, the remaining presence of dust around 51 oph is not supported by this scenario and suggests that this star follows an intriguing evolution scheme.
+we here report new elements that lend credit to the hypothesis that 51 oph is a be star. hereafter, we present observations of 51 oph with a spectro-interferometer operating at optical wavelengths, the vega instrument  installed at the chara array . this unique combination of spectrally and spatially resolved information allowed us to resolve the photosphere of the star and to probe the kinematics of the gaseous component producing the h line on sub-au scales.
+chara/vega observing log of 51 oph. for the continuum observations, the calibrators hd 150366 with the uniform disk angular diameter =0.28  0.02 mas and =0.39  0.03 mas for hd 163955 were used. for the observations in the  line, hd 170296 with =0.43  0.03 mas was used. the predicted uniform disk angular diameter (in mas) in r band were derived from the jmmc searchcal software .
+2|c continuum     2c| line 
+ 
+obs. time     telescopes     obs. time    telescopes
+ [0.5ex] 
+(utc)    conf.    (utc)    (conf. ) 
+ [0.5ex]
+2014-07-04 05:40     e2-s2-w2   ———    —–
+2014-07-04 06:15     e2-s2-w2   2013-05-25 07:12   e1-e2
+2014-07-04 06:49     e2-s2-w2   2013-07-28 03:39   s1-s2 (1)
+2014-07-08 05:53     e2-s2-w2   2013-07-28 05:43   s1-s2 (2)
+2014-07-08 06:18     e2-s2-w2   2014-05-02 10:04   w1-w2 (1)
+2014-07-08 06:43     e2-s2-w2   2014-05-02 10:47   w1-w2 (2)
+§ observations and data processes
+observations were performed around the h line, between 630 and 670 nm, using the vega  medium spectral resolution (mr)(r=5000) to study the gaseous disk by combining three pairs of telescopes: w1w2, e1e2, and s1s2. the observation log is given in table 1.
+     the source 51 oph was also observed in the continuum at 700 nm using the triplet e2s2w2 to study its photosphere. the (u,v) plane coverage corresponding to these data is presented in the left panel of fig. 1 in continuum and in the right panel in the h line.
+(12, 4)
+     (0,0) 
+    
+(4.5,0) 
+    
+(u,v) coverage obtained for the observations of 51 oph in the continuum (left) and the in the h line (right).
+  
+the data processing of vega is composed of two parts. the data in the continuum are processed using the power spectral method giving the squared visibilities <cit.>. for this analysis, we used a spectral bandwidth of 15 nm. the processing of the data in the spectral line is based on the cross-spectrum method, which provides differential visibilities and phases across the line. this method was applied with a spectral bandwidth of 0.2 nm.
+the normalized residuals between the continuum data and an elongated disk model (top) and a uniform disk model (bottom) are represented for three pairs of telescopes. the black points represent the residual average for each baseline. 
+        
+ 
+§ continuum emission: stellar photosphere
+we used the litpro2 model-fitting software for optical-to-infrared interferometric data developed by the jean-marie mariotti center (jmmc) to interpret our data. figure 2 shows that the elongated disk model is more consistent with the data than the uniform disk model for the stellar photosphere for the baselines s2-w2 and e2-s2: the mean of the residuals of s2-w2 and e2-s2 is not equal to zero for the uniform disk model. however, both models have nearly the same normalized residuals for the baseline w2-e2. according to table 2, we found the major axis, , the minor axis, , the elongated ratio, / , and the major axis orientation, pa, using an elliptical model. using hipparcos 2007 data  and calculating the distance from the parallax (d=124  pc), we derived an equatorial radius  = 8.08  0.7  and a polar radius  = 5.66  0.23  from  and  , respectively. we assumed the continuum flux to exclusively
+come from the central star. 
+a comparison of the h emission line of 51 oph with classical be stars shows that the intensity level of 51 oph is low (only 1.2 time above the continuum, see fig. 3). the flux ratio between the disk and the central star is therefore lower than in classical be stars. in classical be stars, this flux ratio in the continuum is between 5  and 20  in the visible. we therefore assumed that the disk contribution in the continuum is negligible. the fit of an elliptical model for the stellar photosphere produces a reduced  () of 1.52.
+best-fit parameters obtained from the elliptical model for the stellar photosphere.  is the total reduced 
+parameter   value
+ [0.5ex]
+major axis of    0.60.05 mas
+minor axis of    0.420.01 mas
+elongated ratio (/)    1.45   0.12
+position angle (pa)      
+ [0.5ex]
+     1.52 
+ [0.5ex]
+§ h emission line
+§.§ qualitative analysis
+the differential visibility and phase for the five baselines are plotted in fig. 3. the visibility exhibits a drop in the emission line that is caused by a variation of the circumstellar environment extension and relative flux between the continuum and the line, as already explained in . the phase shows s-shaped variations in the line. this is characteristic of a rotating equatorial disk, as described in . for the longest baseline, w1w2 the disk is probably over-resolved, so that the differential phase deviates from the s shape, as explained in . the vega spectrum of 51 oph obtained during our observations exhibits an h emission line with a double-peak similar to the spectrum found by , which reflects the presence of the circumstellar disk. h profile wings clearly show that the disk is seen nearly edge-on.
+    
+§.§ kinematic model
+to model the wavelength dependence of the visibility, the differential phase and the intensity profile of h line emission, we used a simple kinematic model of an expanding and/or rotating thin equatorial disk[as input of our model, we used a synthetic absorption in  line calculated with the tlusty code .]. this model has prviously been used for some classical be stars, for instance, by  and  and is described in detail by . assuming no expansion, the model free-parameters can be classified into three categories:
+eginenumerate
+1. the geometric parameters: stellar radius (), distance (d), inclination angle (i), and disk major-axis position angle (p.a.),
+2. the kinematic parameters: rotational velocity () at the disk inner radius (i.e., photosphere) and the rotation () velocity laws,
+and
+  3. the disk emission line parameters: disk fwhm in the line (a) and the line equivalent width (ew).
+best-fit parameters obtained from our simple kinematic model of the circumstellar disk.
+parameter   value   remarks
+ [0.5ex]
+    geometric parameters        
+                  
+   ∗   8.08    this work (sect 4)
+d∗   124 pc    (van leeuwen 2007)
+i    deg    this work
+ [0.5ex]
+   pa    deg    this work
+ [0.5ex]
+    kinematic parameter        
+ 
+∗   267 km.s      (dunkin et al. 1997a) 
+ [0.5ex]
+     line parameters       
+ 
+a        this work
+ [0.5ex]
+ew        this work
+ [0.5ex]
+     0.7     
+ [0.5ex]
+∗fixed parameters.
+the star distance was calculated following . , the equator stellar radius, was derived from the fit of the elliptical model according to sect. 3 (in solar radius). we assumed that the disk is directly connected to the stellar surface, therefore the rotational velocity () should be equal to the stellar rotational velocity. we also assumed that the gaseous disk surrounding 51 oph is keplerian, so that we set , the rotation velocity law, to -0.5. the other four parameters were left free.
+(20, 7.4)
+     (0,0) 
+    
+(12.8,2.85) 
+    
+(12.4,0.3) 
+    
+visibility and differential phase variations in the h emission line and in the surrounding continuum obtained from our medium spectral-resolution (mr) chara/vega observations (red). the best-fit kinematic model for this dataset is overplotted in blue. the plot (right bottom panel) corresponds to the h intensity profile. the top right panel of the figure shows the elliptical model for the central star 51 oph and our kinematic model for a purely rotating disk.
+  
+for our target we computed several hundreds of models to constrain the free parameters, determined the uncertainties, and tried to detect any degeneracy or linked parameters.
+to reduce the number of computed models, we started with a qualitative estimation of the parameters from our interferometric data (p.a., i, a, and ew) and explored the parameter space with decreasing steps to converge to the  minimum (). the final parameter values for the best-fit models are presented in table 3. the corresponding differential visibilities and phases are overplotted in fig 3. the final reduced  is 0.7.
+the inclination angle found for the gaseous disk in our study is compatible with the previous estimate of , that is,  and that of , . moreover, the disk position angle that we derived, that is,  , is also compatible with that of ,  , and is likewise consistent with the angle found by , . finally, the position angle of the gaseous disk in our study also agrees well with the position angle found for the major
+axis of the central star, that is,   , showing that the disk is in the equatorial plane. 
+§ discussions
+ 
+the first main result from our  chara/vega observing campaign on 51 oph is the measurement of the highly flattened stellar photosphere. assuming that the photosphere distortion is due to the high rotational velocity of the star, the stellar rotational rate can be inferred. assuming a roche model and for an edge-on star, a 1.450.12 distortion corresponds to an angular rotation rate of /=0.990.02, or a linear one of v/v=0.960.1. another method for deriving the rotational rate is to use the mass and radius of the star and the measured v sin i. the critical velocity is given by  , where the 'e' and 'p' subscripts correspond to the equatorial and polar values. knowing the mass of 51 oph, 4 (van den ancker et al. 1998) and , 8.08, the calculated critical velocity is 308 km.s . neglecting the stellar inclination angle, the rotational velocity of the star, that is, 267 km.s  , is 86  of the critical one in linear velocity. as the star might not be seen fully edge-on, this represents a lower limit of the rotational rate. these two different methods give coherent results, and it is clear that 51 oph is very close to critical rotation. 
+assuming critical rotation for a star with a rotational velocity of 267 km s and a polar radius of r=5.660.23 r, we can deduce a mass of 3.30.1 m. this is 25 lower than the estimate of van den ancker et al. (1998), who assumed pre-main sequence evolutionary tracks, that is, 4 m, and 15 lower than the estimate of van den ancker (2001),
+who  assumed post-main sequence evolutionary tracks, that is, 3.8 m. nevertheless, even if our measurement favors the post-main sequence hypothesis, the difference between the two estimated masses is too small to conclude on the evolutionary
+status of 51 oph evolutionary.
+the second important result of our study is the direct measurement of the polar radius. considering the estimate of the effective temperature by van den ancker et al. (1998) of 10000 k, it is too high for the star to be classified as a main-sequence star. the standard value for a b9.5v to a0v star is about 2.4-2.6 r. accordingly, 51 oph should be classified as a giant star. this distance from the main sequence, which was already found by ancker et al. (1998), was used to compute the age, assuming that 51 oph was a pre-main sequence star still in the contraction phase. nevertheless, as we stated above, this value is also compatible with a post-main sequence star. 
+the last main result from our chara/vega observing campaign concerns the circumstellar environment geometry and kinematics. we first note that the extension in the h line, 0.20au, is compatible with the one found by  in the k-band co lines using the vlti/amber instrument, 0.15 au. this emission is also lower than the dust sublimation radius of 51 oph computed using eq. 1 from dullemond and monnier (2010), 1.17 au (i.e., with t=10000 k t=1500 k and r=r). with our kinematic model, we showed that the spectro-interferometric data in the h emission line are fully compatible with a geometrically thin disk in keplerian rotation. we note that the differential phase variations cannot be reproduced with an expanding wind. the disk features are similar to those of the few classical be stars studied with the same instrument (, ), even if the extension in h is slightly smaller in the case of 51 oph. on the other hand, the emission could come from an accretion disk whose geometry and kinematics would not differ strongly from the one of excretion disk of classical be stars. the main difference between the two models would be the radial velocity, positive for the excretion disk and negative for the accretion disk. however, this low radial velocity of about 0.1 to 1 km s is negligible compared to the high rotational velocity in the disk and cannot be constrained in our data.
+finally, from the visible point of view, 51 oph presents all the features of a classical be star: critical rotation, double-peaked h line in emission, and a circumstellar gas disk of a few stellar radii in keplerian rotation. however, this does not explain the presence of dust as seen in the mid-infrared and millimeter range, and the evolutionary status of 51 oph still remains unclear. nevertheless, even if 51 oph were a pre-main-sequence star, it would make a perfect progenitor for a classical be star
+because it is very unlikely that it will lose enough angular momentum to significantly slow down during its on-going contraction phase.
+the chara array is operated with support from the national science foundation through grant ast- 1211129, the w. m. keck foundation, the nasa exoplanet science institute, and from georgia state university. this research has made use of the searchcal service of the jean-marie mariotti center and of cds astronomical databases simbad and vizier. n.j. warmly thanks all the vega observers that permitted the acquisition of this set of data. n.j. also acknowledges the ph.d. financial support from the observatoire de la côte d'azur and the paca region. we thank t. lanz for useful discussions. this research has largely benefited from the advices of our colleague olivier chesneau, who passed away this spring. the authors wish to acknowledge his help.
+     
+aa
+/edocument/
+examples for figures using graphicx
+a guide "using imported graphics in latex2e"  (keith reckdahl)
+is available on a lot of latex public servers or ctan mirrors.
+the file is : epslatex.pdf 
+...
+lrcrrrrrrrrl
+...

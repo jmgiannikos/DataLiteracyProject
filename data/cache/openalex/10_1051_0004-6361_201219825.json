@@ -1355,9 +1355,9 @@
   },
   "sustainable_development_goals": [
     {
-      "score": 0.6600000262260437,
+      "display_name": "Life below water",
       "id": "https://metadata.un.org/sdg/14",
-      "display_name": "Life below water"
+      "score": 0.6600000262260437
     }
   ],
   "awards": [

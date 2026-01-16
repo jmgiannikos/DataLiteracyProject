@@ -1,0 +1,317 @@
+.
+/bdocument/
+i. observations and constraints on the disk geometry and kinematics
+-
+-
+ame@oca.eu
+umr 6525 cnrs h. fizeau uns, oca, campus valrose, f-06108 nice cedex 2
+departamento de física y astronomía, universidad de valparaíso, chile.
+max-planck-institut für radioastronomie, auf dem hügel 69, d-53121 bonn, germany
+inaf � osservatorio astrofisico di arcetri, istituto nazionale di astrofisica, largo e. fermi 5, 50125 firenze, italy
+ujf-grenoble 1 / cnrs-insu, ipag umr 5274, grenoble, f-38041, france
+classical be stars are hot non-supergiant stars surrounded by a gaseous circumstellar disk that is responsible for the
+observed infrared-excess and emission lines. the phenomena involved in the disk formation still remain highly debated.
+to progress in the understanding of the physical process or processes responsible for the mass ejections and test the hypothesis that they depend on the stellar parameters, we initiated a survey on the circumstellar environment of the brightest be stars.
+to achieve this goal, we used spectro-interferometry, the only technique that  combines high spectral (r=12000) and high spatial (=4 mas) resolutions. observations were carried out at the paranal observatory with the vlti/amber instrument. we concentrated our observations on the br emission line to be able to study the kinematics within the circumstellar disk. our sample is composed of eight bright classical be stars :  col,  cma,  car, p	car,  cen,  cen,  ara, and o aqr.
+we managed to determine the disk extension in the line and the nearby continuum for most targets. we also constrained the disk kinematics, showing that it is dominated by rotation with a rotation law close to the keplerian one. our survey also suggests that these stars are rotating at a mean velocity of v/v = 0.82  0.08. this corresponds to a rotational rate of / = 0.95  0.02
+we did not detect any correlation between the stellar parameters and the structure of the circumstellar environment. moreover, it seems that a simple model of a geometrically thin keplerian disk can explain most of our spectrally resolved k-band data. nevertheless, some small departures from this model have been detected for at least two objects (i.e,  cma and  col). finally, our be stars sample suggests that rotation is the main physical process driving the mass-ejection. nevertheless, smaller effects from other mechanisms have to be taken into account to fully explain how the residual gravity is compensated.
+   
+               
+first spectro-interferometric survey of be stars
+    a. meilland1, f. millour1, s. kanaan2, ph. stee1, r. petrov1, k.-h. hofmann3, a. natta4, and k. perraut5
+    received; accepted 
+============================================================================================================
+be stars observed in this survey and their stellar parameters taken from the literature or estimated from the sed fit.
+name					   hd			    m	   spectral 	   distance	    t	   v sin i			    v					    pol. angle		    estim. r   estim. f
+(mag)				   	class			   (pc)			    (k)						   (km s)	    (km s)	    (deg)					   	(r)			    (in the k band)
+col	   37795	   2.8					   b7iv						   802   12963203	   19212			   35523				   109				   5.8							   0.25
+cma	   50013	   3.5					   b1.5v					   2025   24627590	   24417			   53539				   106				   5.9							   0.47
+car	   89080	   3.5					   b8iii					   1051   11720431	   24513			   32017				   38					   6.2							   0.20
+p	car					   91465	   3.2					   b4v						   1489   17389415	   28520			   40128				   68					   6.0							   0.45
+cen	   105435	   2.7					   b2iv						   1278   22360589	   26314			   52729				   137				   6.5							   0.45
+cen 		   120324	   4.0					   b2iv-v					   1554   22554661	   16610			   50832				   -					   5.5							   0.37
+ara	   158427	   2.5					   b3iv						   825	   18044310	   30515			   47724				   166				   5.5							   0.56
+o aqr   209409	   4.6					   b7iv						   1334   12942402	   28220			   39127				   6					   4.0							   0.31
+§ introduction
+ 
+classical be stars are hot non-supergiant stars that have at least once exhibited  the so called “be-phenomenon", i.e. balmer lines in emission and ir-excess originating from a dense gaseous circumstellar environment. a generally accepted scheme is the presence of two distinct regions in the envelope: a dense equatorial disk dominated by rotation that is responsible for most of the line emission and ir-excess, and a more diluted radiatively driven polar wind  (lamers & waters 1987) with terminal velocities on the order of several hundreds of km.s (marlborough 1982).
+however, the physical process or processes responsible for the mass ejection and reorganization of matter in the circumstellar 
+environment are still highly debated. the relative effect of rotation, radiative pressure, pulsation, and binarity still need to be quantified. for instance, classical be stars are known to be fast-rotators, but estimates of their rotational velocities range from 50 to 100 of the critical velocity which means that rotation alone might not explain the mass-ejection for all cases. cranmer (2005) showed in a statistical study of the velocity of 462 classical be stars that the hottest be stars (i.e., t18000k) have a large spread of rotational velocities, whereas the cooler be stars are more likely to be critical rotators. moreover, abbott (1979) showed that the radiative pressure alone can initiate mass ejection only for the earliest be stars. consequently, it is not yet clear if be stars can be considered as a homogeneous group of stars in terms of mass-ejection processes (stee & meilland 2009).
+an efficient way to test these hypotheses is to constrain the geometry and kinematics of the be stars circumstellar environments because they mainly depend on the mechanisms responsible for the mass-ejection. this can only be performed with long-baseline interferometry with sufficient spectral resolution, as shown by meilland et al. (2007a ; 2007b; 2011) using the vlti/amber on the stars  ara,  cma, and  sco, or delaa et al. (2010) using the chara/vega instrument on 48 per and  per. in a few cases, the stellar photosphere can also be resolved by the interferometer, allowing measuring the photosphere's flattening. in this case the physical stellar parameters can be determined, as for achernar (domiciano de souza et al. 2003). for this specific object, a clear signature of a polar wind was also detected using the same vlti/vinci dataset by kervella et al. (2006).
+before the availability of a new generation of instruments coupling high spectral and spatial resolutions, interferometric studies were conducted in  photometric bands to measure extension and flattening of the circumtellar environments of many be stars. for instance,  cas and  per were observed by  with the npoi interferometer in the h domain. they found that a uniform disk or a ring-like model were inconsistent with their data, whereas a gaussian model well fitted the measurements.  cas' disk was also consistent with the orbital parameters already published. nevertheless, higher precision binary solutions were mandatory to test for a possible disk truncation by the secondary. the disk of  per was found to be truncated by a companion as already predicted by .
+cas,  per,  tau and  dra were also observed with the chara interferometer in the k-band by . using gaussian elliptical fits of visibilities, they found that the disk size in the k-band was smaller than in h owing to a higher h opacity and relatively higher neutral hydrogen fraction with increasing disk radius. all these be stars are known binaries, and this binarity effect was found to be more significant for  per and  dra. 
+ 
+ observed  oph with the npoi interferometer and obtained a good fit of the h emitting disk with a circularly symmetric gaussian, favoring the hypothesis that this object is seen under a very low inclination angle.
+using the mid-infrared vlti/midi instrument,  have observed seven classical be stars between 8 and 12m. they found that the size of the disk does not vary strongly with wavelength within this spectral domain, which is a very different conclusion compared to the results for b[e] stars where increasing  sizes as a function of wavelength where found (millour et al 2009; meilland et al. 2010; borges fernandes et al. 2011). moreover, the size of  arae's disk was found to be identical at 2, 8, and 12 m, which might be because of to a disk truncation by a companion. finally, it seems from meilland et al.'s (2009) studies that the disks of late type be stars might be smaller than those of the early type.
+long-baseline interferometry is also a powerful technique for detecting companions, which was shown in meilland et al. (2008) for the be star  cen and millour et al. (2009) for the b[e] star hd 87643. moreover, in a theoretical study of the formation and dissipation of the be stars' equatorial disks, meilland et al. (2006) showed that interferometric follow-up of these events is the best-suited technique to deduce the physical parameters of the system. however, kanaan et al. (2008) showed that, for achernar, coupling spectroscopic follow-up and large-band interferometric observations at one epoch was sufficient to roughly understand the geometry and kinematics of this star.
+to progress in the understanding of be stars, we initiated an observational campaign of the brightest, closest objects using the vlti/amber (petrov et al. 2007; robbe-dubois et al. 2007) and vlti/midi (leinert et al. 2003) instruments for the southern stars and the chara/vega  (mourard et al. 2009) for the northern ones.  in this paper, we present new vlti/amber spectro-interferometric observations of eight classical be stars :   col,  cma,  car, p	car,  cen,  cen,  ara,  and o aqr.
+the paper is organized as follows. in sect. 2 we briefly introduce each target and constrain their physical parameters from various sources in the literature. the observations and data reduction process are then presented in sect. 3, and in sect. 4 we provide a qualitative analysis of the reduced data for each object. then, in sect. 5, the data are analyzed with various “toy models”. finally, these results are discussed in sect. 6 and a short conclusion is drawn in sect. 7. 
+§ our be star sample
+considering the actual limiting magnitude of the vlti/amber instrument, i.e. h=k=5 for an unresolved source observed with the 1.8m auxiliary telescopes in medium or high spectral resolution modes, about 30 classical be stars are observable. however, to constrain the circumstellar disk kinematics efficiently, we decided to exclude targets with weak emission lines or transient disks. moreover, for this first survey we mainly concentrated on targets with m4. finally, we also decided to include our first attempt to observed a fainter target, i.e. o aqr (m=4.6).
+because one of our goals is to determine whether or not the be phenomenon depends on the basic stellar parameters, we tried to select targets with the widest range of spectral classes possible. finally, the stars selected in our sample, i.e.  col,  cma,  car, p	car,  cen,  cen,  ara,  and o aqr, have spectral types ranging from b1.5 to b8, and luminosity class of iii, iv and v. table  briefly describes the targets:
+eginitemize
+* spectral class and the k-band magnitude (m) are taken from the cds databases. 
+* distance (d) is derived from van leeuwen (2007).
+* effective temperature (t), v sin i, and critical velocity (v) are taken from frémat et al. (2005)
+* polarization measurement is taken from yudin (2001)
+* stellar radius (r) and k-band environment relative flux (f) are estimated by fitting the spectral energy distribution (sed) using reddened kurucz (1979) models for stellar atmospheres and using stellar parameters ( and ) from frémat et al. (2005). the sed is first reconstructed using photometric and spectro-photometric measurements from the ultraviolet (iue specta) to the far-infrared (iras data). to avoid contamination from the circumstellar flux, the fit of the stellar contribution to the flux is made from the ultraviolet to the visible.(see meilland et al. 2009 for more details). 
+vlti/amber observing log. 
+obs. time   telescopes   length   position angle    instrument   dit    coherence   seeing    calibrators 
+(utc)    conf.   (m)    ()    mode   (s)   (ms)   (")   (hd)
+7c col
+2008-01-06 03:39   k0-g1-a0    88.6/ 90.5/126.2   -150.1/ -59.7/-104.3   lr-k-f   0.05   5.4   1.10   81188
+2010-01-09 00:48   d0-h0-k0    60.2/ 30.1/ 90.3     51.4/  51.4/  51.4   hr-k-f   5.00   3.1   1.25   34642
+2010-01-12 00:48   g1-d0-h0    27.3/ 50.0/ 66.6    -68.0/  -3.8/ -25.4   hr-k-f   5.00   3.9   1.06   -
+2010-01-20 01:35   k0-g1-a0    90.0/ 88.7/127.5   -157.9/ -68.9/-113.8   hr-k-f   5.00   5.3   0.85   34642
+2010-01-20 01:56   k0-g1-a0    89.9/ 89.6/128.0   -156.1/ -67.1/-111.7   hr-k-f   5.00   3.8   1.30   34642
+7c cma
+2008-12-18 03:34   u1-u3-u4   102.2/ 55.6/125.3     17.1/  96.1/  42.9   hr-k-f   1.00   5.3   0.63   -
+2008-12-18 07:32   u1-u3-u4    94.5/ 58.9/115.3     43.9/ 129.2/  74.4   hr-k-f   1.00   4.9   0.64   -
+2008-12-20 03:37   k0-g1-a0    90.5/ 81.4/121.3   -167.9/ -77.5/-125.7   lr-k-f   0.25   4.4   0.78   40805
+2008-12-24 03:50   k0-g1-a0    90.5/ 84.8/124.2   -164.3/ -74.5/-121.2   lr-k-f   0.05   4.6   0.79   27442, 57299
+2008-12-24 05:07   k0-g1-a0    89.9/ 90.1/128.0   -154.7/ -65.3/-109.9   lr-k-f   0.05   3.5   1.00   48305, 57299
+2008-12-24 08:01   k0-g1-a0    80.9/ 82.8/102.2   -139.8/ -37.0/ -87.6   lr-k-f   0.05   5.4   0.66   48305, 57299
+2010-01-09 01:39   d0-h0-k0    57.8/ 28.9/ 86.6     46.2/  46.2/  46.2   hr-k-f   5.00   3.1   1.26   34642
+2010-01-18 00:24   h0-g0-e0    27.4/ 13.7/ 41.0   -142.8/-142.8/-142.8   hr-k-f   5.00   3.6   0.71   54173
+7c car
+2008-12-21 04:49   k0-g1-a0    74.2/ 72.9/128.0    175.8/-125.0/-154.9   hr-k-f   5.00   3.8   0.78   75063, 69596
+2008-12-21 07:37   k0-g1-a0    72.1/ 83.0/126.6   -156.4/ -85.7/-118.2   hr-k-f   5.00   3.4   0.89   69596
+2008-12-24 06:33   k0-g1-a0    73.7/ 79.3/127.7   -167.4/-100.5/-132.6   lr-k-f   0.05   3.0   1.20   98134, 57299
+7cp car
+2008-12-23 07:31   k0-g1-a0    79.3/ 82.3/127.8   -161.2/ -85.7/-122.7   mr-k-f   1.00   3.3   1.11   94286, 69596
+2009-03-22 03:59   k0-g1-a0    71.7/ 89.6/120.8   -138.0/ -54.4/ -90.6   mr-k-f   1.00   6.0   0.70   94286
+7c cen
+2009-03-21 04:18   k0-g1-a0    83.9/ 87.9/127.4   -153.8/ -69.5/-110.4   mr-k-f   1.00   10.9   0.74   110458
+2010-01-20 08:12   k0-g1-a0    84.1/ 87.7/127.5   -154.5/ -70.4/-111.4   lr-hk   0.05   2.6   1.27   110458
+2011-05-19 02:41   u1-u2-u4    46.4/ 82.3/111.4     43.8/ 106.6/  84.8   lr-hk   0.025   1.3   1.47   103513
+7c cen
+2011-06-26 23:21   k0-a1-g1   128.9/ 78.1/ 88.2   -121.5/ 100.6/-157.9   hr-k-f   6.00   1.6   0.90   128488
+2011-06-30 00:19   d0-i1-g1    82.3/ 44.5/ 70.8    104.8/-134.5/ 137.5   hr-k-f   5.00   3.4   0.94   128488
+7c ara
+2007-07-28 05:51   g1-d0-h0    71.5/ 44.7/ 55.4     -5.4/ 123.9/  33.3   lr-k   0.025   3.5   0.44   177716, 164371
+2007-04-13 05:47   h0-g0-e0    30.8/ 15.4/ 46.3   -143.4/-143.4/-143.4   lr-k   0.025   3.0   0.63   124454
+2007-06-09 07:11   k0-g1-a0    74.2/ 90.0/112.3   -135.8/ -41.6/ -82.8   lr-k   0.025   2.7   0.57   166460, 164371
+2007-06-09 08:02   k0-g1-a0    68.3/ 88.9/102.5   -130.4/ -30.7/ -71.7   lr-k   0.025   1.6   0.95   166460, 164371
+2007-06-06 07:30   k0-g1-a0    72.5/ 89.6/109.5   -134.2/ -38.5/ -79.7   lr-k   0.025   1.3   1.38   124454, 164371
+2007-06-06 08:50   k0-g1-a0    63.4/ 88.0/ 95.0   -126.9/ -22.7/ -63.0   lr-k   0.025   1.3   1.42   164371
+2007-04-14 06:22   h0-g0-e0    31.4/ 15.7/ 47.2   -133.5/-133.5/-133.5   lr-k   0.025   2.9   0.67   164371
+2007-05-16 07:34   h0-d0-a0    61.1/ 30.6/ 91.7    -96.4/ -96.4/ -96.4   lr-k   0.025   3.0   1.25   124454, 164371
+2007-06-10 07:44   k0-g1-a0    70.2/ 89.2/105.7   -132.0/ -34.1/ -75.2   lr-k   0.025   2.3   0.58   164371, 21201
+2007-05-17 02:34   h0-d0-a0    60.2/ 30.1/ 90.3   -156.3/-156.3/-156.3   lr-k   0.025   3.0   0.79   124454
+2007-05-17 09:53   h0-d0-a0    49.3/ 24.6/ 73.9    -67.2/ -67.2/ -67.2   lr-k   0.025   1.9   1.53   164371
+2011-06-30 02:04   d0-i1-g1    78.2/ 45.8/ 62.7     82.6/-150.7/ 118.4   hr-k-f   5.00   3.7   0.85   163145, 152786
+2011-06-30 03:03   d0-i1-h0    81.4/ 37.2/ 63.8     93.9/ -36.5/  67.6   hr-k-f   5.00   2.9   1.08   163145, 152786
+2011-06-30 03:37   d0-i1-h0    82.2/ 38.1/ 63.2    100.4/ -31.9/  73.9   hr-k-f   5.00   2.9   1.05   163145, 152786
+2011-06-30 04:28   d0-i1-h0    82.0/ 39.0/ 61.2    110.1/ -24.7/  83.3   hr-k-f   5.00   2.4   1.27   163145, 152786
+2011-06-30 05:03   d0-i1-h0    81.0/ 39.4/ 58.9    117.5/ -19.2/  90.2   hr-k-f   5.00   2.9   1.03   163145, 152786
+2011-06-30 06:00   d0-i1-h0    78.5/ 39.8/ 54.4    129.4/ -10.7/ 101.3   hr-k-f   5.00   2.9   1.02   163145, 152786
+2011-06-30 06:38   d0-i1-h0    76.4/ 39.9/ 50.6    138.1/  -4.7/ 109.7   hr-k-f   5.00   3.2   0.92   163145, 152786
+7co aqr
+2011-06-30 10:08   d0-i1-h0    67.4/ 34.3/ 58.8    102.8/ -16.5/  72.2   hr-k-f   5.00   2.9   1.02   209926
+(u,v) plan coverage obtained for the observed be stars. lr mode observations are plotted as squares, mr ones as triangles, and hr ones as circles. each observation, i.e. three baseline measurements, is plotted with a different color.
+§ observations and data reduction process
+the vlti/amber  observations of classical be stars were carried out at paranal observatory between 2007 and 2011. most observations were executed using the 1.8 meters movable auxiliary telescopes (at), a few others were made using 8.0m  unit telescopes (ut). the vlti/amber observing log for the eight targets and their corresponding interferometric calibrators are presented in table . the (u,v) plan coverage for each target is plotted in fig .
+because the observations were spread over a long period of time, starting soon after the opening of amber to the scientific community, the data are quite inhomogeneous, both in terms of quality and observing modes. amber offers three different spectral dispersion modes: the low-resolution (lr) with r=/35, the medium-resolution (mr) with r1500, and the high-resolution (hr) with r12000 . all these modes were used during our observing campaign, depending on their availability at the epoch of observations, on the brightness of the target, and on the seeing conditions. the mr and hr observations were centered on the br emission line to enable the study of the circumstellar gas kinematics through the doppler effect.
+most of the data have benefited from the installation of the fringe tracker finito that enables longer integration time by stabilizing the fringes. the detector integration time (dit) ranges from 25 ms for bright targets in lr mode without finito to several seconds for observations in hr mode with finito. under good seeing conditions (i.e. seeing 0.8”) finito allows one to obtain a significantly higher signal-to-noise ratio (s/n) both for short and long integration time, significantly enhancing the quality of the data for all observing modes.
+data were reduced using the vlti/amber data reduction software, i.e.,  (see tatulli et al. 2007 and chelli et al. 2009 for detailed informations on the amber data reduction). we selected individual exposures with the standard selection criteria (millour et al. 2007). we rejected  80 of frames with the lowest s/n. for observations in lr mode we also rejected the frames with a piston larger than 10m as well as frames with a flux ratio between the beams higher than 3.
+the interferometric observables (visibility, differential phase, and closure phase) were then averaged and calibrated. for this last step we used scripts described in millour et al. (2007) that are now part of the standard amdlib package. the calibration process includes an estimation of the calibrators' size and their uncertainties from various catalogs, a determination of their transfer function and their evolution during the whole night, and a computation of the calibrated visibilities and phases. the final errors on the measurements include uncertainties on the calibrators' diameter, the atmosphere transfer function fluctuations and intrinsic errors on the measurements.
+§ a qualitivative analysis of our dataset
+the br line for all the observed targets is clearly in emission (see fig  and table  for a summary of their main spectral characteristics). in almost all cases, the mr and hr data also exhibit a drop of visibility in the emission line caused by a variation of the circumstellar environment extension and relative flux between the continuum and the line, as already explained in meilland et al. (2007a). they also exhibit an “s” shape or more complex variations of the differential phase in the line, and the hr data clearly show that some visibility variations are “w” shaped (see e.g. fig. 3). these characteristics are clear evidence of a rotating equatorial disk as described in meilland et al. (2011) for  scorpii. the mr and hr data for all targets are presented in figs.  to .
+we note that for the hr observations executed before the replacement of a disturbing optical element in front of the vlti infrared image sensor (iris) in 2010, some instrumental modulations with a very high frequency are seen in the hr data. this is especially the case for  car. to enhance the data quality, we decided to filter these modulations with a standard fourier-transform low-pass-filter technique.
+some targets are also partly resolved in the k-band continuum. however, considering the uncertainties on the calibrated absolute visibilities, it is difficult to determine an accurate extension of the circumstellar disk in the continuum for all targets. therefore, we decided for efficiency to use only the differential visibility (i.e. visibility of each spectral channel divided by the mean visibility) for our kinematics study and the absolute continuum visibility to determine the k-band extension when possible.
+among our sample we did not detect any new companion, and  cen remains the only star for which a companion was visible in the interferometric signal, as already described by meilland et al. (2008). the individual comments for the observed objects are the following:
+br spectra from our vlti/amber observations. the data were taken in hr mode for all observations expect for p car and  cen (mr mode). for  cma the red and green lines represent the 2008 and 2010 observations, respectively. 
+eginitemize
+*  col : we obtained three measurements in hr and one in lr. the data s/n is quite high and the uncertainties on the differential quantities are on the order of a few percents. the target is clearly resolved in the line and the measurements in hr clearly exhibit the typical visibility and phase variations of a rotating disk with the major axis roughly perpendicular to the polarization measurement obtained by yudin 2001 (see table ). the quasi-symmetric double-peaked line profile indicates that the object is seen from an intermediate inclination angle and that no major inhomogeneity is present in the disk. the object is also partly resolved in the continuum, with a visibility of about 0.90.05 for the longest baselines.
+*  cma : this star was observed for the first time in december 2008 and we have obtained two measurements in hr and five in lr. it was observed again in january 2010 and two new measurements in hr were acquired. the s/n is quite high except for the last observations in 2010. all hr measurements at the two epochs show the typical visibility and phase variations of a rotating disk. the disk major axis seems to be roughly perpendicular to the polarization measurement. the double-peaked line profile and some visibility and phase variations are strongly asymmetric. these asymmetries probably stem from an inhomogeneity in the disk that was already described in meilland et al. (2007b). we note that the line profile violet-over-red (v/r) peaks ratio did not significantly vary between our 2008 and 2010 observations. the lr data show that the star is at least partly resolved in the continuum, but the calibration is not accurate enough to fully constrain the continuum extension.
+*  car : we obtained two measurements in hr and one measurement in lr. although the s/n is lower compared to  col, a visibility and phase signals typical of a rotating disk are also present in the data. the major axis does not seem to be aligned or perpendicular to the polarization measurement. because the line profile is double-peaked with a narrow shell line at its center, the star is probably seen from a high inclination angle. the lr data clearly indicate that the object is partly resolved in the continuum, i.e. v0.85 for the longest baseline. we note that the second hr measurement cannot be calibrated accurately.
+* p car : we obtained two measurements in mr, both showing a bright emission line, a drop of visibility, and “s" shaped phase variations in the line. considering the phase amplitude and the lack of spectral resolution, it is hard to qualitatively determine the position of the major axis of the equatorial disk. we note that the profile and phase variations are asymmetric. this is probably cause by an inhomogeneity such as a one-armed oscillation, as proposed by okazaki (1997). the object is barely resolved in the continuum (v0.9 for the longest baselines). 
+*  cen : previous vlti/amber lr and mr observations published by meilland et al. (2008) showed the binarity of this object. the authors found a contribution of the companion to the total k-band flux of 7 and a separation of 68.7 mas. to check their results and constrain the system orbit, the star was observed again in  2009, 2010, and 2011. in the 2009 mr data a bright br emission line, a drop of visibility and “s" shaped phase variations are clearly visible. these data as well as the 2010 lr ones also contain modulations cause by the binarity of the object. we note that no obvious modulation is seen in the 2011 lr dataset. this may mean that the separation is quite small, on the order of a few milli-arcseconds.
+br line characteristics
+star							   ew				   peaks separation			   v/r			   remarks
+(km s)	   					   				
+col			   6.1			   9.9 (138)						   1.04		   -				
+cma(2008)   16.8			   9.9 (138)						   1.13		   -				
+cma(2010)   11.6			   10.4 (144)						   1.10		   -				
+car			   3.5			   14.2 (196)						   1.04		   be-shell
+p car							   8.2			   15 (200)				   1		   mr obs.
+cen			   17.9			   15 (200)				   1   mr obs.
+cen					   3.7			   10.4 (144)						   1.03		   -
+ara			   16.0			   15.1 (209)						   1.01		   -
+o aqr		   12.6			   12.8 (177)						   1.00		   be-shell
+*  cen : we obtained two measurements in hr. because this target is quite faint, i.e., m=4, the s/n is low. however, “s” shaped variations are still clearly present in the differential phases. we also detect a drop of visibility for one baseline, whereas it is clearly below the noise level for the other ones. the line profile is double-peaked and symmetric. the fact that the line intensity is quite low, i.e.  1.3 times the continuum, contributes to the weakness of the visibility drop. the object is unresolved in the continuum.
+*  ara : this star was observed eleven times in lr mode in 2007 but the data quality was too low to obtain more than an estimate of the disk extension (see sect. 5.1). more recently, we have observed  ara again during one full night and obtained seven measurements in hr mode. all data exhibit a clear signature of a rotating disk, with a major axis roughly perpendicular to the polarization measurement and compatible with meilland et al. (2007a) results. the profile is double-peaked and symmetric. the object is partly resolved in the continuum for all baselines, but because of the unstable weather conditions during the observing night, the uncertainties on the absolute visibility remains on the order of 20.
+* o aqr :  this is the faintest target of our sample with m=4.6. we obtained one measurement in hr mode. the s/n is very low, and we were close to the instrumental sensibility limit considering the quite poor weather conditions during the observations (seeing of 1" and a coherence time of less than 3ms). however, an “s" phase signal is still clearly visible in the data, at least for the longest baseline. clues of a small drop of visibility in the line are also present. the profile is typical of be stars seen at high inclination angle, i.e. double-peaked with a shell absorption line at its center. the object is clearly unresolved in the continuum.
+col differential visibility and phase from our four vlti/amber hr measurements (red line). each row corresponds to one vlti/amber measurement (three different baselines). the visibility and phase of the best-fit kinematics model is overplotted in green.
+cma visibility and phase from our four vlti/amber hr measurements (red line). the two first measurements are from 2008 (first two row) and the two other from 2010. the best-fit kinematics model is overplotted in green.
+car visibility and phase from our two vlti/amber hr measurements (red line). the  best-fit kinematics model is overplotted in green.
+p car visibility and phase from our two vlti/amber mr measurements (red line). the  best-fit kinematics model is overplotted in green.
+cen visibility and phase from our vlti/amber hr measurement (red line). the  best-fit kinematics model is overplotted in green.
+cen visibility and phase from our two vlti/amber hr measurements (red line). the  best-fit kinematics model is overplotted in green.
+ara visibility and phase from our seven vlti/amber hr measurements (red line). the best-fit kinematics model is overplotted in green.
+o aqr visibility and phase from our vlti/amber hr measurement (red line). the best-fit kinematics model is overplotted in green.
+§ modeling
+in this section we analyze our interferometric data using “toy models” of increasing complexity. in the first subsection the k-band continuum visibility is used to estimate the circumstellar environment extension. in the case of the be binary star  cen we tried to constrain the components' separation at various epochs. finally, in the last subsection, the differential visibility and phase are used to constrain the circumstellar environment's kinematics.
+§.§ the disk extension in the continuum
+to estimate the circumstellar disk extension in the k-band continuum with our interferometric measurements, we used a simple two components model. because all  central stars are unresolved or barely resolved even with the longest baselines (i.e. v0.95), they were all modeled as point sources. the second contribution is the circumstellar environment. owing to the large uncertainties on most of our absolute visibility measurements, we were unable to determine any flattening of the environment, and we decided to simply model this contribution as a circular gaussian distribution. for the same reason, we decided to set the circumstellar environment relative flux (f) to the value determined from the fit of the sed with a much higher precision than if it had been deduced from the interferometric data only (see section 2 and table 1). finally, the two-dimensional intensity map describing our model is given by
+where x and y are the cartesian coordinates, (x,y) is the dirac function, and  is the standard deviation of the gaussian distribution. in the following, the gaussian distribution is not defined by its  standard deviation, but by its full width at half maximum defined by fwhm2.35.
+for each dataset we separated the low-spectral resolution data from the medium or high-resolution data and fitted the above-described models. the results are summarized in table . in most cases, we see that the accuracy of the lr data is higher than mr or hr, but that stronger biases affect them. few cases were very problematic and no relevant fit to the data could be obtained. these special cases are marked as "n. c." for "not constrained" in this table.
+using the distance and stellar radius from table , we were able to infer the extension in d. these values, also presented in table , clearly show that the k-band continuum is quite compact. however, because of the large uncertainties on our measurements, we were unable to determine whether or not the k-band extension depends on any stellar parameters. nevertheless, we determined a mean size of the environment, i.e. =2.20.3 d for the whole dataset.
+ara and  cma were already observed with the vlti/amber and modeled by meilland et al. (2007a, 2007b). for  ara the authors found a mean continuum k-band extension of 6.00.8 mas, which is significantly higher than our 2.41.1 mas measurement. however, they used an uniform disk component for the environment. because, the environment is not fully resolved, we therefore have to apply a x0.87 correcting factor to their measurements to convert the uniform disk diameter into a gaussian fwhm. nevertheless, this 6.0x0.87=5.30.7 mas is still significantly higher than our measurement (2). in the case of  cma the authors found that the mean k-band continuum extension was lower than 2.7 mas, which is compatible with our  mas extension.
+the k-band continuum extensions of the disks. 
+name							    f	    2cgaussian fwhm			     
+(fixed) 					     mas										   	d		     
+col (hr)	    0.25							    							   1.50.8			   0.7
+col (lr)	    0.25							    							   1.90.4			   2.0
+cma (hr)	    0.47							    n.c. 										   n.c. 						   n.c.
+cma (lr)	    0.47							     						   3.71.1			   4.8
+car (hr)	    0.20							    n.c. 										   n.c. 						   n.c.
+car (lr)	    0.20							    							   3.10.9 			   1.9
+p	car					(mr)    0.45							    							   2.00.5			   3.1
+cen 		(hr)    0.37							    n.c. 										   n.c.							   n.c.
+ara (hr)	    0.56							     						   3.81.7			   7.1
+ara (lr)	    0.56							     						   3.02.1			   5.2
+o aqr(hr)    0.31							    n.c.										   n.c.							   n.c.
+evolution of the  cen component separation.
+2ccartesian coord.	   2cpolar coord.	
+		
+date																														    		     		    sep 			   pa
+(mas)							   (mas)							   (mas)			   (deg)
+2008-01																													     60.9							    -31.7							   68.7				   117.5
+2009-03																													    -34.5							    0.79 							   34.5				   -88.7
+2010-01																													    -73.8							    24.5 							   77.8				   -71.6
+2011-05																													    2.78							    9.25 							   9.7				   16.7
+§.§ the binarity of  cen
+we separately fitted the  cen data with a uniform disk + a companion star model to compare it with meilland et al. 2008. the two-dimensional intensity map is given by 
+where f, f, and f are the stellar, companion, and environment fluxes, respectively,  (,) the components separation in cartesian coordinates, and (t) is the rectangle function defined by (t)=1 for t1/2 and  (t)=0 for t1/2.  
+the fit procedure is similar to that of millour et al. (2009), i.e. a mix of levenberg-marquardt descent with a set of monte carlo initial parameters. the only free parameters are the companion coordinates. the other parameters were set to the values determined by meilland et al. (2008): primary flux f=0.41,  envelope flux f=0.52, companion flux f=0.07, and envelope diameter d=1.6 mas.  the results are presented in table .
+we found that the position of the companion varied significantly between the four epochs separated roughly from one year each. it made an almost complete revolution around the main star during this period, pointing to a typical period of the system of about five years. to constrain the orbital elements significantly, the star should be observed again several times with long-baseline interferometry or speckles interferometry. these data should also be completed by radial velocity measurements.
+nevertheless, we tried to determine a first estimate of a possible orbit. it has a probably very low eccentricity, but a very large inclination angle. we managed to obtain a good fit of the orbit with the following parameters: semi-major axis of 80 mas, periastron in january 2008, period of 5.2 yr, no eccentricity, inclination angle of 81, = 212, and =110. we note that considering the low number of measurements and the probable low eccentricity, this possible orbit, which we overplotted in fig , may not be unique. 
+cen binary separation and possible orbit. the measured separations are plotted as squares. the possible orbit is plotted as an orange solid line and the circles represents the modeled positions at the epochs of observations.
+§.§ the equatorial disk kinematics
+§.§.§ a simple “toy” model
+to quantitatively constrain the velocity fields in the circumstellar environment of the observed be stars using interferometric observations, we developed a simple two-dimensional kinematic model of a rotating and/or expanding equatorial disk. this model has already been used to model three classical be stars (see delaa et al. 2011 and meilland et al. 2011) and one a[e] supergiant star (millour et al. 2011) and it is described in detail in delaa et al. (2011). the model geometry is completely ad-hoc: the star is modeled as a uniform disk and the envelope emission in the continuum and the emission line as two elliptical gaussian distributions of different fwhms but with the same flattening due to a projection effect of the geometrically thin equatorial disk, i.e., , where i is the object inclination angle.
+the emission maps were then combined with a two-dimensional projected velocity map of a geometrically thin expanding and/or rotating equatorial disk. for each spectral channel in the line, an iso-velocity map projected along the line of sight was then calculated and multiplied by the whole emission map in the line. finally, the whole emission map for each wavelength consists of the weighted sum of the stellar map, the disk continuum map and the emission line map within the spectral channel under consideration (see fig  for an example of emission map obtained in a narrow spectral channel).
+the model parameters can be classified into four categories:  
+eginenumerate
+* the stellar parameters: stellar radius (), distance (), inclination angle (), and disk major-axis position angle ().
+* the kinematic parameters: rotational velocity () at the disk inner radius (i.e., photosphere), expansion velocity at the photosphere (), terminal velocity (), and exponents of the expansion () and rotation () velocity laws. 
+* the disk continuum parameters: disk fwhm in the continuum (), disk continuum flux normalized by the total continuum flux (). 
+* the disk emission line parameters: disk fwhm in the line () and line equivalent width (ew). 
+the star distance is taken from van leeuwen (2007) and  and  are derived from the fit of the sed (see table ). the other nine parameters are free. 
+if the disk is directly connected to the stellar surface, the rotational velocity (v) should be equal to the stellar rotational velocity. however, in some cases, v may exceed the stellar velocity if the star is not critically rotating and some additional momentum is transferred to the circumstellar matter. finally, we considered in our modeling that v is free with a higher maximum value equal to the critical velocity (v).
+for each target we computed several hundreds of models to constrain the parameters, determined the uncertainties and tried to detect any degeneracy or linked parameters. owing to the large number of free-parameters, an automatic model-fitting method would have resulted in the computation of millions of models. moreover, we clearly know each parameter effect on the visibility and phase variations (see section 5.3.2.). consequently, we decided to perform the fit manually. for all targets we could exclude models with significant expansion velocity of more than a few km s. consequently, we decided to set the expansion velocities to zero in all our models. we then tried to constrain the seven remaining parameters (, , , , , , and ). to reduce the number of computed models, we started with a qualitative estimation of the parameters from our interferometric data (especially for , , a, a and ) and explored the parameter space with decreasing steps to converge to the  minimum. to check for other minima, we also explored the full range of possible parameter space but with larger steps. finally, the parameter values for the best-fit models are presented in table . the corresponding differential visibilities and phases are overplotted in figs  to . 
+the fit quality is very good for three targets observed in hr mode:  car,  cen, and  ara, and good for the two stars observed in mr mode, i.e., p car and  cen. it is still satisfying for  col (i.e. =4), although the visibility and phase of one of the baselines could not be fitted simultaneously with the other ones. in the case of  cma, the fit is significantly worse  (i.e. =6.8). this is mainly because of the strong asymmetry of this object, which is not taken into account in our simple model. finally, the data obtained on o aqr seem to be insufficient to fully constrain the model for this object (i.e. 1).
+illustration of our kinematic model. left: two-dimensional project velocity map for a purely rotating disk with an inclination angle of 45. the blue and red colors represent the positive and negative projected velocities, respectively. center: global emission map in the br line. it is given by a simple elliptical gaussian with an elongation cause by the projection onto the sky plane. right: emission map in a narrow spectral channel centered around  21664 with a resolution of 1.8. it is obtained using the velocity map and the emission map. see delaa et al. (2011) for more details.
+§.§.§ about the model parameters
+to check the consistency of our modeling, we tried to determine the effects of all model parameters on the visibility and phase variations through the emission line. some of them strongly affect the interferometric observables and are consequently easily and unambiguously constrained with only a few measurements whereas others are more difficult to infer:
+eginitemize
+* the major-axis position angle (pa) has a huge effect on the phase variation amplitude and the shape of the visibility drops, as already explained in meilland et al. (2011). for a non-fully resolved disk, the amplitude of the “s” phase variation is proportional to the baseline length, but it also strongly depends on its orientation. the amplitude is maximum for baselines aligned with the major axis and null for the one aligned with the minor axis. for baselines that overresolve the disk, the differential phase loses its simple “s” shape and secondary effects become visible (for example see the case of  col in fig. 4). the shape of the visibility variations also varies from “w” for baselines aligned with the major axis to “v” for baselines aligned with the minor axis.
+* the line equivalent width (ew) is mainly set by the fit of the line profile. it needs to be corrected by taking into account the photospheric absorption line (see delaa et al. 2011 for more details).
+* the disk fwhm in the emission line (a) influences the drop of visibility amplitude along all baselines and the amplitude of the “s” shape variations. it can also be constrained knowing that the phase variations lose this “s” shape for baselines that fully resolved the disk. this parameter also influences the double-peak separation: the larger the disk, the smaller the separation.
+* the disk fwhm in the continuum (a) is mainly derived from the measurements in the continuum presented in table . however, it also indirectly influences the amplitude of the phase variations because it can modify the ratio between the coherent flux (for an unresolved object) and the incoherent one (for a resolved object). the phase variation is proportional to the photocenter shift only for an unresolved object. therefore, the more resolved an object is in the continuum the smaller will be the phase variations. for example, in the case of  ara, we did not manage to fit the differential phase with a disk in the continuum that extends to fwhm=3.0 mas as measured by the absolute visibility (see table ), but only with disks smaller than 2 mas. this may be due to a truncation of the disk, as explained in chesneau et al. (2005) and meilland et al (2007a), making it depart from a simple gaussian shape.
+* the inclination angle (i) has a significant influence on the visibility drop amplitude for baselines close to the polar orientation. it is well constrained by comparing equatorial and polar baseline measurements. it also has an effect on the double-peak separations since it influences the projected rotational velocity.
+* the rotational velocity (v) mainly influences the double-peak separation and the line “width”. the faster the disk rotates, the larger is the double-peak separation.
+* the exponent of the rotation law () also influences the double-peak separation. with a higher value of , the velocity as a function of the distance drops quicker, and the double-peak separation is smaller. therefore, it is quite hard to distinguish the effect of v and . however,  also influences the shape of wings of the line. the higher the value of , the larger the line wings. but, as already mentioned in delaa et al. (2011), the wings of be star emission lines can be highly affected by non-kinematic broadening cause by non-coherent scattering, so that it remains hard to set both v and  unambiguously. nevertheless, value of  of less than 0.3 yields variations that are too sharp, which are not realistic.
+best-fit parameters obtained from our axisymmetric kinematic model.
+parameter    unit													    col	     cma	    car		   p car				    cen	    cen		   	 ara	   o aqr
+10cglobal geometric parameters
+(r									   	5.8					   	5.9						   	6.8						   	6.0					   	6.5					   	5.5					   	5.5						   	4
+(pc)																   	80					   	202						   	104						   	148					   	127					   	155					   	81						   	133
+(deg)  															   	355		   	3510			   	6510			   	7010		   	3515		   	255		   	455			   	7020
+ 		
+   (deg)															   	10					   	2510			   	55				   	-2510	   	4010		   	8015		   	882			   	12020
+10cglobal kinematic parameters
+(km s) 				   	35010	   	48040		   	30020		   	40030	   	50050	   	51020	   	48020		   	40050
+-																   	0.50.1	   	0.50.2		   	0.450.1	   	0.450.1   	0.50.3	   	0.50.1	   	0.50.1		   0.50.2
+10ck-band continuum disk geometry
+f   -														   	0.25				   	0.5						   	0.2						   	0.45					   	0.45				   	0.37			   	0.56					   	0.31
+(d)							   	2.0.5	   	3.50.5		   31				   	20.5			   	21			   	3			   	2					   	10
+10cbr disk geometry
+(d)							   	5.50.3	    6.52		   	6.51			   	112		   	92			   	41			   	5.80.5		   	141
+()								     	7.00.5	   	132		   	5.80.5		   	101		   	192		   	5.60.3	   	14.51		   	123
+4.0					   6.8					   1.1						   2.5					   2.3					   1.3					   1.7						   0.8
+§ discussions
+§.§ the rotational rate of be stars
+using the inclination angle determined from our kinematic model and the v sin i and the estimate of the critical velocity v from frémat et al. (2005), we were able to determine the rotational velocity of the observed targets and constrain the ratio v/v. these results are presented in table . we found a mean ratio of =0.820.08. in frémat et al. (2005), the rotational rate is defined by the ratio of the stellar angular velocity to its critical one :
+where  and  are the equatorial radii (in polar radii) for stars rotating at v and v, respectively. under the assumption of the roche model, =1.5 and =1.29 for v/v 0.82. consequently, the mean rotational rate for our sample of be stars is =0.950.02. this value is significantly higher than the one determined by frémat et al. (2005), i.e. 0.88, from their fit of photospheric lines of be stars taking into account gravity darkening effects as proposed by townsend et al. (2004). however, our sample is much smaller than theirs and we note that the inclination angle determined from our modeling agrees with the one determined by frémat et al. (2005) within 1 for all targets except  ara (1.3) and  col (2).
+the values of  for each target are also presented in table . we note that the upper value of the uncertainties for some stars are not physically reasonable since stars should not rotate above their critical velocity under the roche model. however, we assume that the equatorial radius remains equal to 1.5 for stars rotating above v. in fig. , the be stars rotational rates are plotted as a function of the effective temperature to see if we find any correlation as proposed by cranmer (2005). we did not detect any correlation between  and t. this striking effect could be real, or due to a small sample and our large uncertainties.  
+two stars in our samples have already been studied using the vlti/amber in mr mode:  ara (meilland et al. 2007a) and  cma (meilland et al. 2007b). the inclination angle found for  ara, i.e. 455, is roughly compatible with the previous estimate, i.e. 55 whereas, for  cma the two estimates are clearly not compatible, i.e. 355 in this work and 6010 in meilland et al. (2007b). the main differences between these previous studies and our current work is that they were conducted at the very beginning of the vlti/amber instrument. at this time, the uncertainties on the absolute visibility measurements were poorly known and had probably been underestimated by the authors. unlike in the present work, these authors mainly used the absolute visibility measurements to determine the disk flattening and thus infer the inclination angle. consequently, their conclusion that  cma rotates at about half its critical velocity is probably biased. nevertheless, with its strong asymmetry cause by the inhomogeneity in the disk it is still hard to accurately determine the  cma rotational velocity.
+rotational rate of our be stars
+star							   v 			   v sin i  			   i						    v/v      / 
+km s			   km s			   	deg					   								   	
+col			   35523				   19212				   355			   0.950.23	    0.99
+cma			   53539				   24417				   3510		   0.800.31	    0.95
+car			   32017				   24513				   6510		   0.840.16	    0.96
+p car							   40128				   28520				   7010		   0.760.15	    0.92
+cen			   52729				   26314				   3515		   0.870.41	    0.97
+cen					   50832				   1554				   255			   0.720.20	    0.90
+ara			   47724				   30515				   455			   0.900.17	    0.98
+o aqr		   39127				   28220				   7020		   0.770.21	    0.93
+§.§ the equatorial disk extension
+all objects we studied are, at least, partly resolved in the br line. we managed to significantly constrain the extension of the line emission for all targets. we found gaussian fwhms that range between 4 to 14 stellar diameters. we found no correlation between the br emission and other properties or characteristics except for the double-peaked separation (see the next subsection for the discussion on the disk kinematics.). it seems that the size is independent of the stellar parameters and of the infrared excess or line equivalent width. the mean fwhm of the br line emission is 6.1  2.9 d
+as already explained in sect. 5.1, most of the targets are also partly resolved in the continuum with fwhm that range between 1.5 and 3.7 d and a mean fwhm of 2.2  0.3 d. this is roughly compatible with k'-band chara interferometer measurements by gies et al. (2007) on the be stars  cas (2.4 d),  per (3.3 d),  tau (5.5 d), and  dra (4.3 d). 
+these typical k-band continuum and br line extensions are significantly smaller than the disk size measured in h. for example a multi-line spectro-interferometric study of the circumstellar environment of the be star  sco published in meilland et al. 2011 shows that the emission extension was 1.6 times more extended in h (9 d) than in br (5.5 d) . other narrow band studies in h published in tycner et al. (2004, 2006) and quirrenbach et al. (1997) also concluded that the typical h extension were of the same order.
+as explained in meilland et al. (2007a, 2007b) using the simeca code (stee et al. 1994) and tycner et al. (2007) using the bedisk code (sigut & jones 2007), these interferometric measurements can be used to constrain the circumstellar environment physical parameters:  mass loss, disk mass, and temperature and density distribution. in a forthcoming paper, we will use these numerical codes and the available r (chara/vega), k (vlti/amber), and n (vlti/midi) band measurements to draw a more complete picture of the be star circumstellar environments.
+§.§ the equatorial disk kinematics
+for all our targets, the simple kinematic model reproduced our vlti/amber measurements  very well. therefore, it is clear that most of the br line emission comes from the equatorial disk. the disk kinematics is dominated by rotation, with a rotational law close to keplerian for all targets. the putative expansion velocity is far below the detectability limit of the instrument (i.e. 10 km s). these results fully agree with previous kinematics studies performed with the vlti/amber (meilland et al. 2007a, 2011) or chara/vega (delaa et al. 2011). 
+if the disks are in keplerian motion and the stars are rotating significantly below their critical velocity, two questions remain: 
+eginitemize
+* what additional mechanisms provide the amount of energy needed to launch the matter from the stellar surface?
+* how does the ejected matter gain sufficient kinetic energy to accelerate up to the keplerian velocity? 
+in other terms, the matter needs to be accelerated both radially and azimuthally. lee et al. (1991) proposed that the disk could be formed by the effect of the gas viscosity that drifts the matter outward. however, in his theory, a source to supply angular momentum at the stellar surface is still needed if the star is not critically rotating. non-radial pulsations as proposed by osaki (1986) could be a good candidate. recently, cranmer (2009) proposed a theory in which  resonant oscillations in the photosphere could inject enough angular momentum to spin up a keplerian disk even for the slowest rotating be stars (down to 60 of v). however, the question remains open and other mechanisms such as magnetism (yudin et al. 2010), radiative pressure (abbott 1979) or binarity could also contribute to the ejection of matter. to solve the question, the connecting layers between the stellar surface and the inner part of the equatorial disk should be carefully studied. this could be done by studying many absorption and emission lines formed close to the photosphere and by comparing their morphology.
+§.§ departures from our simple model
+despite the generally good fit of our interferometric data using the simple kinematic model, there are two significant departures from the model that need to be investigated:
+eginitemize
+* the most important one is the case of  cma that is clearly showing an asymmetric profile and visibility and phase variations. these asymmetries can only originate from inhomogeneities in the circumstellar environment. to determine whether or not these inhomogeneities can be modeled as one-armed oscillation as proposed by okazaki (1997) a dedicated model needs to be developed. such a thorough analysis of  cma data is out of the scope of this paper. we note that despite the lower resolution, the p car data are also showing clues of the same kind of asymmetries.
+* the second most important departure from the model concerns the measurement obtained on  col with the short polar baseline that cannot be fitted simultaneously with the other ones. this measurement shows that the environment is almost fully resolved with b27 m for this orientation, whereas it is clearly less extended with a baseline closer to the equator. this could be a clue of a polar wind, as already detected by kervella & domiciano de souza (2006) on the classical be star achernar. however, a detailed study of the circumstellar environment of be stars along their polar axis is needed to definitively answer the question of the detectability of polar winds in the k-band (see stee 2011 for a detailed discussion on the polar winds of be stars).
+these two questions concerning the circumstellar environments of be stars will be studied in detail in some forthcoming dedicated papers.
+rotational rate of our be stars sample plotted as a function of their effective temperature. our measurements for the eight targets and their relative uncertainties are plotted as blue vertical lines. the orange box represents the mean rotational rate, i.e. 0.950.02.
+§ conclusion
+in this spectro-interferometric survey of classical be stars we managed to resolve all targets, constrain their extension in the br line and, for some of them, in the k-band continuum. using a simple kinematic model of a purely rotating disk, we were able to successfully model all our data, showing that most of the br emission originates from the equatorial region. the disk is fully dominated by rotation, and the rotation law was found to be  keplerian or quasi-keplerian for all targets. we were also able to significantly constrain the stellar rotational velocity with our estimates of the inclination angle. we found a mean rotation rate of =0.950.02. with such a high value of the rotational rate, only a small amount of energy is needed to expel matter from the stellar surface. this conclusion is quite different from the estimate by frémat et al.(2005) obtained by modeling photospheric lines.
+we did not detect any correlation between the stellar parameters and the disk properties. however, the uncertainties on the measurements remain high and our sample of be stars needs to be extended to definitively answer the question on the physical process or processes responsible for the mass ejection and the dependence of the be phenomenon on the stellar parameters.
+in a forthcoming paper, these data will be analyzed using the radiative transfer codes simeca and bedisk to fully constrain the circumstellar environment.
+the programme national de physique stellaire (pnps) and the institut national en sciences de l'univers (insu) are acknowledged for their financial supports. s. kanaan also acknowledges financial support from the gemini-conicyt fund, allocated to the project n� 32090006�.
+abbott d.c., 1979, iaus, 83, 237a
+ borges fernandes m., meilland a., bendjoya p. et al. 2011, a&a, 528, 20
+ cranmer s.r., 2005, apj, 634, 585
+ cranmer s.r., 2009, apj, 701, 413
+[delaa et al. (2011)]delaa11 delaa, o., stee, ph., meilland, a. et al. 2011, a&a, 529, a163
+ domiciano de souza, a., kervella, p., jankov, s., et al. 2003, a&a, 407, l47
+ frémat y, zorec j, hubert a.-m. & floquet m. 2005 a&a, 440, 305
+[gies et al. (2007)]gies07 gies, d.r., bagnuolo, w.g., baines, e.k. et al. 2007, apj, 654, 527
+ kervella p. & domiciano de souza a. 2006, a&a, 453, 1059
+ kurucz, r.l. 1979, apj, 40, 1 
+ lamers h.j.g.l.m. & waters l.b.f.m. 1987, a&a, 182, 80
+ leinert c., graser u., waters, l.b. et al. 2003, spie 4006, 43
+ marlborough j.m 1982, iaus, 98, 361 
+ meilland a., stee, p., vannier m., et al. 2007a, a&a, 464, 59
+ meilland a., millour f., stee ph., et al. 2007b, a&a, 464, 73
+ meilland a., millour f., stee ph., et al. 2008, a&a, 488, 67l 
+[meilland et al. (2009)]meilland09meilland, a., stee, ph. chesneau, o. et al. 2009, a&a, 505, 687
+ meilland a., kanaan s., borges fernandes m. et al. 2010, a&a, 512, 73 
+ meilland a., delaa o., stee ph., et al. 2011, a&a, 532, 80
+ millour f., petrov r.g., chesneau o. et al., 2007, a&a, 464, 107
+ millour f. chesneau o., borges fernandes m., et al. 2009, a&a, 507, 317
+ millour f., meilland a., chesneau o. et al. 2011, a&a, 526, 107
+ mourard d., clausse, j.m., marcotto, a. et al. 2009, a&a, 508, 1073
+ okazaki a.t., 1997, a&a, 318,548
+ petrov, r.g. et al., 2007, a&a , 464, 1
+ quirrenbach a., bjorkman k.s., bjorkman j.e.et al. 1997, apj, 479, 477
+ robbe-dubois s., lagarde s., petrov r.g. et al., a&a, 464, 13
+[schaefer et al. (2010)]schaefer10 schaefer, g.h., gies, d.r., monnier, j.d. et al. 2010, revmexaa (serie de conferencias), 38, 107
+ sigut, t.a.a. & jones, c.e., 2007,  apj, 668, 481
+ stee ph. & de ajaújo f.x. 1994, a&a, 292, 221
+ stee, ph. & meilland a., 2009, lectures notes in physics, 765, 195
+ stee ph. 2011, iaus, 272, 313
+ tatulli e., millour f., chelli a et al. 2007, 464, 29
+ townsend r.h., owocki s.p., & howard i.d., 2004, mnras 350, 189
+ tycner c., hajian a.r., armstrong j.t.et al. , 2004, aj, 127, 194
+[tycner et al. (2006)]tycner06 tycner, c., gilbreath, g.c., zavala, r.t. et al. 2006, aj, 131, 2710
+[tycner et al. (2008)]tycner08tycner, c., jones, c.e., sigut, t.a.a. et al. 2008, apj, 689, 461
+ van leeuwen f. 2007, astrophysics and space science library,volume 350, hipparcos the new reduction of the raw data (springer)
+ yudin r.v, a&a, 2001, 368, 912
+ yudin r.v.,  hubrig s., pogodin m.a. 2010, iaus, 272, 224
+[waters (1986)]waters86 waters, l. b. f. m. 1986, a&a, 162, 121
+[wisniewski et al. (2007)]wisniewski07 wisniewksi, j.p., kowalski, a.f., bjorkman, k.s. et al. 2007, apj, 656, l21
+/edocument/

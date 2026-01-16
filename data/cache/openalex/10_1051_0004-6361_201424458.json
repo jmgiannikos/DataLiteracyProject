@@ -1000,16 +1000,16 @@
   },
   "sustainable_development_goals": [
     {
+      "id": "https://metadata.un.org/sdg/13",
       "display_name": "Climate action",
-      "score": 0.4699999988079071,
-      "id": "https://metadata.un.org/sdg/13"
+      "score": 0.4699999988079071
     }
   ],
   "awards": [],
   "funders": [],
   "has_content": {
-    "pdf": true,
-    "grobid_xml": true
+    "grobid_xml": true,
+    "pdf": true
   },
   "referenced_works_count": 47,
   "referenced_works": [

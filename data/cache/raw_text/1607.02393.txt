@@ -1,0 +1,124 @@
+.
+mnras
+a&a
+pasp
+apj letters
+apj
+m
+further author information:
+ send correspondence to f. millour, lagrange, oca, bd de l'observatoire, cs 34229, 06304, nice, france
+e-mail: , telephone: +33 (0)4 92 00 30 68, or +33 (0)4 92 07 64 89
+/bdocument/
+grown-up stars physics with matisse
+    f. milloura,[  o. chesneau coordinated the
+    stellar physics science group of matisse until his demise in june
+    2014.],
+  j. hronb,
+  a. chiavassaa,
+  g. weigeltc,
+  a. soulaina,
+  z. khorramia,
+  a. meillanda,
+  n. nardettoa,
+  c. paladinid,
+  a. domiciano de souzaa,
+  g. niccolinia,
+  k.-h. hofmanna,
+  d. schertla,
+  p. steea,
+  p. bendjoyaa,
+  f. thévenina,
+  f. vakilia,
+  p. berioa,
+  t. lanza,
+  a. mattera,
+  p. cruzalèbesa,
+  r. petrova, 
+  b. lopeza.
+  auniversité côte d'azur, oca, cnrs, lagrange, france; 
+buniversity of vienna, department of astrophysics, vienna, austria;
+cmax planck institute for radio astronomy, bonn, germany;
+dinstitut d'astronomie et d'astrophysique, université libre de bruxelles, brussels, belgium.
+january 16, 2026
+====================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+matisse represents a great opportunity to image the environment around massive and evolved stars. this will allow one to put constraints on the circumstellar structure, on the mass ejection of dust and its reorganization, and on the dust-nature and formation processes. matisse measurements will often be pivotal for the understanding of large multiwavelength datasets on the same targets collected through many high-angular resolution facilities at eso like sub-millimeter interferometry (alma), near-infrared adaptive optics (naco, sphere), interferometry (pionier, gravity), spectroscopy (crires), and mid-infrared imaging (visir). among main sequence and evolved stars, several cases of interest have been identified that we describe in this paper.
+§ how many evolved stars can be observed with matisse?
+first of all, we need to emphasize that matisse will mainly focus on dusty stars, as the mid-infrared is the perfect match to collect data on the dust quantity and composition around a given object.
+to illustrate that, we selected a few topics of interest that will be developed in this paper, and counted the number of stars that will be observable with vlti/matisse. we included a quantity of non-dusty targets (regular wr stars and be stars) in the sample to compare the performances of matisse with its prime targets. to do so, one need to take into account the sensitivity of the instrument itself in the l- and n-bands, of course, but also the vlti infrastructure subsystems sensitivity, which can be sometimes the limiting factor, especially for red targets. we need therefore to take into account: the telescope guiding limit in the v-band (v=13.5 and v=17 for ats strap tip-tilt and uts macao ao, respectively), and the fringe tracker limit in the k-band for gra4mat and other devices like iris (k=7.5 for ats and k=10 for uts).
+we considered star lists on wolf-rayet stars (wr), red supergiant stars (rsg), asymptotic giant branch stars (agb), be stars and b[e] supergiant stars visible from paranal ; we extracted them from the following catalogs:
+eginitemize
+* rosslowe & crowther (2014) for wr stars,
+* hoffleit (1991) for rsg stars, 
+* we scanned through ads publications on the topic for agb stars,
+* frémat et al. (2005) and yudin (2001) for be stars, 
+* for b[e] supergiant stars we used our own catalog of stars.
+when available, we retrieved the sed of each object  (v, k, l and n magnitudes) and iso/iras spectra (if it exist).
+magnitudes of these targets were compared with the theoretical limits of matisse, considering spectrally-usable data, i.e. data with a snr per spectral channel during the expected optimal dit and exposure time combination, with and without fringe tracker.
+the result of this study is shown in fig. . one can see that, out of our selected catalogs, roughly one third of the considered agb targets, two third of the supergiant b[e] stars, and half of the considered red supergiant stars can be observed with matisse in its low spectral resolution mode (r35). we are likely limited by our sample size in these cases.
+on the other hand, very red targets like dusty wolf-rayet stars, or very blue targets like naked wolf-rayet stars or be stars, will be more difficult to observe with matisse due to either the sensitivity limits of vlti in the v band (very red targets), or to the matisse sensitivity limit (very blue targets). in both cases, the adjunction of a k-band fringe tracker to matisse, like the foreseen gra4mat project of eso, will improve the situation by a large factor (especially when using the ats).
+that matter of fact is even more striking when using the high-spectral resolution, where we will be able to resolve the kinematic motion of gaz in the circumstellar envelopes. from a handful of targets that will be observable with matisse alone, the adjunction of an external fringe tracker will allow the instrument to go at full throttle for the delivery of scientific results.
+[number of targets observable] 
+  
+            left: number of targets observable with matisse in low spectral resolution (r35) for different types of stars, both in l band (, dark blue bars) and n band (, light blue bars). the transparent bars show the improvement of observability when using an external fringe tracker ( and ), like e.g. the foreseen project gra4mat. right: the same plot for the high resolution of matisse (r4500 around the hydrogen brackett  line).
+§ massive stars
+massive stars are stars with a mass above 8 solar masses (). they evolve fast and blast as supernovae at the end of their lives, not without having gone through a fireworks of different physical processes. among them, one can count the main sequence o and b-type stars, red, yellow and blue supergiant stars, wolf-rayet stars, and other types of exotic stars. we invite the reader to take a look to the different other papers of this conference for more details.
+§.§ dusty blue supergiant stars
+several blue supergiant stars (wolf-rayet, luminous blue variable, supergiant b[e] stars) produce large amounts of dust before exploding as supernovae. though they are not the main dust-producers in our galaxy, they do vastly influence their surroundings by inputting kinetic energy and dust in their vicinity. in some cases, they can even trigger star formation.
+the circumstellar environment (ce) around blue supergiant stars is often dense and highly anisotropic. this anisotropy could be driven either by fast-rotation and/or by the presence of a companion star. for example, fast-rotating b and o stars will present a denser and slower wind in the equatorial direction, and a lighter and faster wind at the poles, according to the usual sketch. at the equator, the density can be high-enough to veil the uv radiation from the star, allowing dust to condense into a disk-like structure, visible in the infrared. such a break of symmetry of the ce has strong implications on the later phases of stellar evolution, as it can affect the stellar angular momentum and act as a brake for ejected material.
+on the other hand, a secondary star orbiting around an o or a b star can affect the wind of the main star through gravitational influence, and concentrate material in the orbital plane. the consequence is similar as for rotating stars, i.e. an over-density in the equatorial plane that can trigger dust formation. however, the shape of such a disk-like structure would likely be different than in the first case, and there are opportunities of detecting the companion star, depending on the flux ratio between the two stars.
+to prepare the matisse program on supergiant b[e] stars, we simulated what are the imaging performances of matisse in the case of a disk-like structure and a possible influence of fast-rotation of the hot star. to prepare and interpret the matisse observations we used a nlte monte carlo radiation transfer code to compute a grid of supergiant b[e] models dedicated to mid- and near-ir interferometry . the case of binarity is expected to be much easier, as it was already demonstrated that imaging with few baselines can be done in such a case. we simulated matisse with homemade scripts and produced oifits files. we input these files into the  image reconstruction software developed by e. thiébaut. the results of our study is shown in fig. . one can see that we are able to reconstruct most of the features seen in the model images: the central point source, the extent of the disk, and the inner hole seen in the 60 degrees inclination images. this study confirms that matisse will be a perfect imaging machine for these types of stars.
+[b images] 
+  
+            on the left, one can see modelled (left) vs. reconstructed images (right) of typical b[e] star disks for a 90 degrees inclination (edge-on disk). the right panel shows a 60 degrees inclination disk. the image reconstruction software used here is mira.
+§.§ the case of  carinae
+the luminous blue variable (lbv) phase is a short-lived phase in the life of  massive stars.  the strong mass loss in this phase is not well understood. the lbv  car provides a unique laboratory for studying the  evolution of massive stars and the massive stellar wind during the lbv phase.  car is also an eccentric binary with a period of 5.54 yr.  x-ray studies demonstrate that there is a wind-wind collision zone, which is depends on the orbital phase.
+infrared interferometry with the vlti allows us to study the stellar wind of the primary star and the wind-wind collision zone of the primary and secondary star with unprecedented  angular resolution of about 5 mas and simultaneously with high spectral resolution. using the vlti, the diameter  of  car's wind region  was measured to be about 4.2 mas in the -band continuum  (50% encircled intensity diameter). in the he i 2.059 m and the br 2.166 m emission lines, diameters of  6.5 and 9.6 mas were measured, respectively. 
+for comparison, the radius of the primary star of  car is on the order of 100 solar radii  0.47 au  0.20 mas. this means that the measured 4.8 mas br wind radius is about 25  times larger than the stellar radius. the measured line visibilities agree with predictions of the radiative transfer model of hillier et al.. 
+vlti-amber observations  (performed at the beginning of 2014, about 5 to 7 months before the august 2014 periastron passage) allowed the reconstruction of velocity-resolved aperture-synthesis images  in more than 100 different spectral channels distributed across the br2.166 m  emission  line. the intensity distribution of the obtained images strongly depends on wavelength.  interestingly, in the blue wing of the br2.166 m  emission  line, the wind region is much more extended than in the red wing.  at radial velocities of approximately 140 to 376 km/s measured relative to line center (i.e., in the blue line wing), the intensity distribution is fan-shaped with a position angle of the  symmetry axis of  126 degree. the fan-shaped structure extends approximately  8 mas (19 au) to the south-east   and  6 mas (14 au) to the north-west (measured at the 16% intensity contour). 
+three-dimensional smoothed particle hydrodynamic simulations of  car's colliding winds  predict a very large wind density distribution that is more extended than the undisturbed primary star wind density distribution. at the time of our observations, the secondary star of  car was in front of the primary star, and therefore  the extended wind collision cavity was opened up into our line of sight. the comparison of the model images with the shape and wavelength dependence of the  intensity distributions  of the reconstructed vlti images suggests that the obtained vlti images are the first direct images of the innermost wind-wind collision zone.  
+in the red line wing (positive radial velocities), the extension of the resolved wind structure is much smaller than in the blue wing, because the red-wing light is emitted from the wind region behind the primary star, where the primary wind is not disturbed by the wind collision (i.e., at positive radial velocities, we are looking through the optically thin wind collision zone in front of the primary). the  car channel maps provide  velocity-dependent image structures that can be used to test three-dimensional hydrodynamical  models of the massive interacting winds.
+§.§ dust plumes around wolf-rayet stars
+we also investigated the potential of matisse to detect asymmetries in the dusty environment of massive blue stars, with an application to the detection of several spiral dust plumes around dusty wolf-rayet stars. these dust plumes likely trace the dust forming in the wind collision zone of a binary system composed of a wr and an o star. many dust shells have been detected around wolf-rayet stars, but few of them were resolved into spiral plumes. matisse has the potential to image most of these dust shells at a few milliseconds of arc resolution, enabling the detection of many more spiral plumes, leading to a confirmation that wc8 and wc9 spectral types are linked to the inner system binarity.
+to illustrate the matisse potential, we simulated observations of a phenomenological "pinwheel" model with matisse using the readily available aspro software that has been updated to take into account the matisse-specific noises. the obtained oifits files were fed into the matisse official image reconstruction tool , which notably won the interferometry beauty contest of this year. the result is shown in fig. , evidencing that matisse is indeed able to resolve a "pinwheel" nebula in 3 nights of observation.
+[pinwheel image] 
+  
+            modelled (left) vs. reconstructed images (right) of a typical "pinwheel nebula" around a dusty wolf-rayet star. we used  for this test case.
+ 
+§.§ young massive clusters
+young massive clusters, are gravitationally bound groups of newly formed stars. these objects provide a rare opportunity to study the formation of massive stars and their evolution in the early stages. among the well-known young clusters, r136 is located in the heart of 30doradus (in lmc) and hosts so far the most massive stars known in the local universe. these stars are born in the large hii regions, embedded in gas and dust. matisse can be used to resolve the crowded core of r136-like clusters with higher angular resolution than conventional telescopes equipped with adaptive optics (e.g. sphere), and at longer wavelengths (l- and n-bands), in order to overcome the problem of interstellar extinction. 
+we simulated r136 using the publicly available n-body gravitational simulation  code[available at ]. the left part of figure  shows the inner  pc of the simulated cluster, which correspond to the fov of matisse using the uts (0.3"). this snapshot of the core from the numerical  simulation is done at the age of 2 myr in the n-band and at the distance of the lmc (50 kpc).
+we used the  tool from jmmc[available here: ] to simulate the matisse observables (visibilities, closure phases and differential phases), and the  software to reconstruct the synthetic image. the result can be seen in the right panel of figure . the core massive stars have separations down to 24 mas. however, we also put a secondary companion in a binary system with separation of 3.5 mas (seen close to the lower-left star in the left part of figure ), and this companion star cannot be resolved by matisse in the n band. however, we did not perform image reconstruction tests in the l band, and it could be that this companion star is resolved at this wavelength, where matisse has a factor 3 higher angular resolution. further tests need to be done to fully characterize the matisse performances in the context of star cluster observations.
+[cluster image] 
+  
+            simulated image of the core of a r136-like cluster at the age of 2 myr in n-band (left) vs. reconstructed images (right). the left panel shows  (fov of matisse using uts) covering  of the core of the cluster at the distance of lmc (50 kpc). the image reconstruction software used here is .
+ 
+§.§ red supergiant stars
+red supergiants (rsgs) are strong contributors to the chemical and dust enrichment of the galaxy through their mass-loss (myr – m/yr, de beck et al. 2010) and the coming blast as supernova. mass-loss process still remains poorly understood. rsgs do not experience regular flares or pulsations and the triggering of their mass loss remains a mystery. it may be linked to the magnetic activity, the stellar convection, and the radiation pressure on molecules and/or grains, or all these together. the stellar surface and circumstellar dynamics and constitution of these stars have to be studied in detail to unveil the mass-loss mechanism.
+matisse will open new insight at wavelengths still poorly observed for rsgs. the observations will range from the inner stellar photosphere (l and m band probing molecular transitions and pseudo- continuum) to the outer enveloppe (n band). the temporal variation is crucial  to make a step forward into the understanding of the stellar dynamics and the link with the mass-loss mechanism.
+§ lower mass stars: agb & pulsating stars
+§.§ agb stars
+most of the low and intermediate mass stars end their lives on the asymptotic giant branch (agb) phase. during this phase, pulsation and radiation pressure on dust leads to a phase of strong mass loss, during which gas and dust enriched by the products of the star's nucleosynthesis will be ejected. this mass loss is crucial for the chemical enrichment of the ism and therefore for the chemical evolution of galaxies. a pivotal aspect of the mass-loss process is its geometry, i.e. the density distribution of the circumstellar envelope of the agb stars at different scales and different evolutionary phases.
+to understand the mass-loss process, it is essential to study the mass-loss from very deep inside the star up to the interface with the ism. due to its broad wavelength coverage matisse is the unique instrument to study the different dust and molecular species present in the atmospheres and envelopes of agb stars. the aim is to achieve a complete view from the upper photosphere to the outer envelope layers and to complement herschel and midi surveys (see paladini et al., this conference).
+§.§ envelopes around cepheid stars
+a powerful way of constraining the period-luminosity (pl) relation is to use the baade-wesselink (bw)
+method of distance determination. the basic principle of the bw method is to compare the
+linear and angular size variation of a pulsating star in order to derive its distance through
+a simple division. the angular diameter is either derived by interferometry (hereafter ibw
+for interferometric baade-wesselink method), or by
+using the infrared surface brightness (irsb) relation. however,
+when determining the linear radius variation of the cepheid by spectroscopy, one has to use
+a conversion projection factor from radial to pulsation velocity . in this method, angular and linear diameters have to correspond to the same physical layer in the star to provide a correct estimate of the distance. consequently, the circumstellar environment (cse) around cepheids should be considered in both versions of the bw method, particularly when deriving the angular diameter curve. the impact of cse on the period-luminosity relation of cepheids need also to be established. 
+envelopes around cepheids have been discovered by long-baseline interferometry in the k band with vlti and chara (see fig.). since then, four cepheids have been observed in the n band with visir and midi and one with naco. some evidences have also been found using high-resolution spectroscopy. the size of the envelope seems to be at least 3 stellar radii and the flux contribution in k band is from 2% to 10% of the continuum, for medium- and long-period cepheids respectively, while it is around 10% or more in the n band (estimated also from sed derived with visir). 
+[lcar] 
+  
+          left: the geometry of the surrounding envelop of l car (in k band) as constrained by vinci observations (kervella et al. 2006). the envelope is supposed centro-symmetric and the full-width at half-maximum of the modelled gaussian is around 3 stellar radii and a flux contribution of 4%. right: the geometry of the envelope expected in the n band is almost the same but with a larger flux contribution (figure taken from antoine merand phd).
+ 
+recently, nardetto et al. (2016, in press) found a resolved structure around the prototype classical cepheid delta cep in the visible spectral range using visible vega/chara interferometric data observations. these data are indeed consistent in first approximation with a quasi-hydrostatic model of pulsation surrounded by a static cse with a size of  8.9  3.0 mas and a relative flux contribution of 0.07  0.01. a model of visible nebula (a background source filling the field of view of the interferometer) with the same relative flux contribution is also consistent with the data at small spatial frequencies. however, in both cases, they find discrepancies in the squared visibilities at high spatial frequencies (maximum 2) with two different regimes over the pulsation cycle of the star,  and . one possibility could be that the star is lighting up its environment differently at minimum () and maximum () radius. this reverberation effect would then be more important in the visible than in the infrared since the contribution in flux of the cse (or the background) in the visible band is about 7% compared to 1.5% in the infrared (merand et al. 2015).
+the processes at work in infrared and in the visible regarding the cse are different. we expect thermal emission in the infrared and scattering in the visible. matisse offers an unique opportunity to study the envelopes of cepheids. determining the size of these envelope (as a function of the spectral band) and their geometry (as a function of the pulsation phase), will bring insights in the links between pulsation, mass loss and envelopes. 
+ 
+this research has made use of the simbad database,
+operated at cds, strasbourg, france. we used data from the infrared space observatory (iso) from esa, and from the infrared astronomical satellite (iras).
+we are grateful to eso, cnrs/insu, and the max-planck society for continuous support in the matisse project. 
+nn acknowledges the support of the french agence nationale de la recherche (anr), under grant anr-15-ce31-0012-01 (project unlockcepheids). nn acknowledges financial support from “programme national de physique stellaire” (pnps) of cnrs/insu, france.
+spiebib   
+/edocument/

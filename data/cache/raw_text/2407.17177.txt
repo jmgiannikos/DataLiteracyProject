@@ -1,0 +1,97 @@
+.  
+a]romain laugier
+a]denis defrère
+b]michael ireland
+a]germain garreau
+c]olivier absil
+d]alexis matter
+d]romain petrov
+d]philippe berio
+e]peter tuthill
+a]marc-antoine martinod
+f]lucas labadie
+[a]institute of astronomy, ku leuven, celestijnenlaan 200d, 3001 leuven, belgium
+[b]the australian national university, australia
+[c]liège univ., belgium
+[d]université côte d'azur, observatoire de la côte d'azur, cnrs, laboratoire lagrange, france
+[e]the university of sydney, australia
+[f]univ. zu köln, germany
+further author information: (send correspondence to r.l.)
+r.l.: e-mail: romain.laugier@kuleuven.be
+empty 
+ 
+ 
+/bdocument/ 
+asgard/nott: water vapor and co atmospheric dispersion compensation system
+    [
+    january 16, 2026
+==========================================================================
+the direct detection of exoplanets and circumstellar disks is currently limited by a combination of high contrast and small angular separation. at the scale of single telescopes, these limitations are fought with coronagraphs, which remove the diffracted light from the central source. to obtain similar benefits with interferometry, one must employ specialized beam-combiners called interferometric nullers.
+nullers discard the on-axis light and part of the astrophysical information to optimize the recording of light present in the dark fringe of the central source, which may contain light from circumstellar sources of interest. asgard/nott will deploy an advanced beam-combination scheme offering favorable instrumental noise characteristics when the inputs are phased appropriately, although this tuning will require a specific strategy to overcome the resulting degeneracy.
+furthermore, this must bring the phase of the incoming light to a good accuracy across the usable spectrum. since the fringe-tracker operates at different wavelengths, it can only sense part of the offending errors, and we discuss the measurement of these errors with the science detector.
+nott operates in the l band and suffers from various effects such as water vapor, which has already been experienced with n-band nullers (keck interferometer nuller, large binocular telescope interferometer). this effect can be corrected with prisms forming a variable thickness of glass and an adjustment of air optical path.
+moreover, observations in the l band suffer from an additional and important chromatic effect due to longitudinal atmospheric dispersion coming from a resonance of carbon dioxide at 4.3µm that is impractical to correct with glass plates because of its non-linear wavelength dependency. to compensate for this effect efficiently, a novel type of compensation device will be deployed leveraging a gas cell of variable length at ambient pressure.
+after reviewing the impact of water vapor and co, we present the design of this atmospheric dispersion compensation device for asgard/nott and describe a strategy to maintain this tuning on-sky.
+§ introduction
+the direct detection of exoplanets and exozodiacal disks in the infrared requires high angular resolution and precise wavefront. when the wavefront and is not sensed at the scientific wavelengths, chromatic errors occur in the presence of atmospheric dispersive elements such as water vapor and . this limitation is well know in phase-referenced interferometers such as the keck interferometer nuller (), large binocular telescope interferometer (), and more recently gra4mat (woillez et al. in press). this is also a well know problem for elt instruments such as metis (, ).
+    
+    in the cas of nullers, the combination of input beams at an accurate phase setting to mitigate the on-axis starlight and obtain intended instrument behavior. in this work, we focus on the case of asgard/nott, the l-band nuller for asgard, an instrument suite proposed for the visitor focus of the vlti. the error budget of nott  allows for up to  raw contrast from the static instrument errors, which requires to correct phase better than  rad across the l band. while the effect of water vapor was expected in the initial design of nott based on the experience from n-band nulling interferometers, the negative impact of co (see fig. ) was not anticipated and requires a dedicated correction system. we present such a system in this paper.
+refractive index of air computed based on models outlined in , with and without the contribution of co. the vertical blakc lines indicate the wavelength range of nott.
+        
+    
+§ optimal corrections
+the usual approach for longitudinal dispersion compensation is the one proposed by tango , which uses a minimization of the spectral slope of the phase. for nulling interferometers, this is critical since nulling the on-axis light requires precise phase control. we use the approach of koresko  to project the chromatic perturbation of the atmosphere onto the parameter space of the correcting materials. using this approach, glasses like znse and caf can offer near-fixed slope of phase which can be adjusted with moving prisms producing a variable thickness, such as was used for the keck nuller.
+    
+    we used scifysim  to simulate the performance of the system in the worst operating conditions, which are obtained observing a target at  elevation with 30% relative humidity, leading  for some baselines and pointings to a compensation by the delay line of . figure  shows the resulting phase offset given by closing the loop with the asgard fringe tracker (i.e. heimdallr) fringe tracker in the k band before compensating with the air delay lines of nott, and after compensation by air and glass (here znse). the effect of most components of the atmosphere can be corrected with such variable thickness glass plate. however, co has an asymmetric stretch vibration absorption line at 4.3 µm that creates a strong curvature to the optical index of the ambient air. for our worst case scenario, a 100 m relative air imbalance leads to 0.5 rad phase error, even after correction by glass. combinations of multiple glasses were inefficient at correcting such curved error.
+phase residual after the fringe tracking by heimdallr in the k band before (left) and after (right) correction by the nott delay lines and an adjusted thickness of glass.
+        
+    
+    
+§ gas system design
+    
+a cad design of one ldc of nott (air delay line not represented). from left to right, the beam in question (yellow) passes through a simple wedged glass window entering into the variable length co chamber enclosed by bellows. the other end of the chamber is closed by the fixed prism of dispersing glass. a longer prism of the same material forms an equivalent variable thickness by translating along their angled face by 25mm. a flat linb glass plate on a rotating stage creates an adjustable birefringence term. the adjacent beams are shown in orange and gray, and their ldc will be offset longitudinally to manage space.
+        
+    
+one possible solution to correct for non-linear chromatic phase errors is an adaptive nuller such as investigated in the context of the tpf-i mission . this solution is however complex and expensive, exceeding the current budget of the nott project. an alternative solution identified is to include a variable length of co to balance the atmospheric contribution. a co concentration of 450 ppm in up to 100 m imbalanced path can be compensated with 45 mm of pure, ambient pressure co. as shown in fig. , the gas is kept between a flat, wedged window and the orthogonal surface of the static prism of the corrector. a silicone bellow system allows the frictionless travel of the wedged window over 50 mm on a translation stage.
+the pneumatic schematic of the gas system. the four chambers (a) are connected by tubes with each-other and with a 3l bladder (b) that ensures a constant, near-ambient pressure for all of them. while the goal is to coordinate the motion of the three chambers to maintain constant volume, but the bladder and a relief valve (h) are designed to prevent raise in pressure regardless. filling the system is done with a portable pressure regulator (d) and small 16g cartridges (e), to avoid any risk during this maintenance operation. temperature (f) and pressure (g) sensors allow for compensation of small variations in pressure by an adjustment in lengthe setpoint.
+        
+    
+as shown in fig. , the four co chambers are connected by a network of tubes, allowing a coordinated motion maintaining a constant total volume. the system is designed to account for the volume changes brought by changes in ambient temperatures and motion problems (such as servo initialization), with minimal changes in pressure. this is done by connecting the system to a bladder protected in a box left at ambient pressure. a thermal sensor measures the temperature of the chambers and differential pressure sensor measures the pressure in the system. the residual pressure exerted by the bladder can be accounted for in the control algorithm.
+filling the system with co is done using food-grade 16 g co cartridge mounted on an adjustable pressure regulator. the regulator is adjusted to a small pressure and the fill valve is partially open to limit the flow and fill speed. during this operation the influx of gas flushes the system towards the low-pressure relief valve that limits the pressure of the system, keeping the pressure sensor and any other sensitive components safe from pressure buildup throughout the whole lifecycle of the system.
+§ glass selection
+the nott ldc work primarily in the l band, but it must transmit at least a fraction of visible light that will be used for alignment with screens and the alignment monitoring cameras of nott. to be efficient, the glass must provide a large dispersion term  with a low mean refractive index in the infrared, so as to require minimal compensation in air path to obtain a given dispersion. it will also limit the pupil shift by the device in the infrared.
+    
+    an additional concern is the difference in beam shift obtained in the infrared compared to the visible at which the rough alignment of the beam on the cold stop will be done. to reduce this offset, the difference between visible and infrared indices must remain small.
+]@llllll@
+            glass     n 0.7 µm     n 3.5 µm     n 4.0 µm     pupil shift [%]      []znse     2.558     2.429     2.4167     8.     1e-5 caf     1.43     1.4139     1.4095     0.5      1e-3alo     1.76314     1.694974     1.675619     0.5     1e-3 ge      -      3.9901     3.9817     -     - zns     2.33052     2.2554     2.25268     -     - 
+            
+summary of some of the key properties of glasses considered for the dispersion correction. the pupil shift assumes a distance betweent the two prisms of 30 mm.
+        
+    
+figure  shows the beam-to-beam residual after compensating with both a glass a and co. caf, alo and znse all fill the requirement of a raw contrast of . while znse offers a better performance in phase adjustments, several practical considerations make it less ideal, its high refractive index (2.4 in l and 2.55 in r) in particular leads to the need for anti-reflection coating, and a larger beam shift in the visible, where the alignment will take place.
+residual phase (left) and squared phase (right) under different correction hypotheses and for the worst baseline. in glass-only situations, the co contribution leads to phase residuals of more than  mrad. after correction with co the residual falls to  mrad for caf and  mrad for znse.
+        
+    
+    
+§ tuning strategy
+the beam conditioning system of nott includes:
+    eginenumerate
+        
+  * air delay lines,
+        
+  * air-displacing glass,
+        
+  * air-displacing co,
+        
+  * linb birefringence compensating plates.
+    
+    these create four degrees of freedom per beam. after excluding the common mode that is irrelevant in homodyne interferometry, this creates twelve independent degrees of freedom to adjust in order to create an optimal null. the result is measured on the four interferometric outputs measured independently in each polarization and for each spectral channels. this creates  measurements to inform on the result. however in the double-bracewell configuration , the information on the input phase is degenerate by design.
+    
+    the strategy is to create a known piston offset probe in each of the beams to create a diversity in the outputs sensed. measurements with just a few probes should enable the retrieval of the chromatic phase function, and compute the optimal position for each of the compensation actuators. this approach will be investigated and described in detail in coming publications.
+    
+§ conclusions and future work
+the solution outlined here will allow nott to operate in the l band despite the pronounced phase feature of the asymmetric stretch of co centered at 4.26 µm, by adding a variable length of pure co at ambient conditions. our design ensures safety of operation and maintenance. different solutions in dispersing glass offer performance between  and  in raw contrast. performance validation in the instrument will take place later in 2024 as part of preliminary integration in leuven and nice.
+    
+this work has received funding from the research foundation -  flanders (fwo) under the grant number 1234224n. scify has received funding from the european research council (erc) under the european union's horizon 2020 research and innovation program (grant agreement cog - 866070).
+spiebib 
+/edocument/ 

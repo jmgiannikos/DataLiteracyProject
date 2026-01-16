@@ -1,0 +1,331 @@
+.  
+c[1]>p#1 
+l[1]>m#1 
+m[1]>m#1 
+b[1]>b#1 
+./figures/
+@hseplen@vseplen
+@cmdkeysubfigpos[sfp@]pos[ul]
+@cmdkeysubfigpos[sfp@]font[]
+@cmdkeysubfigpos[sfp@]vsep[0.75]
+@cmdkeysubfigpos[sfp@]hsep[3.5pt]
+[1]()#1
+=
+[1]{}#1
+=
+[1][]#1
+[1]#1
+[1]||#1     
+[1]‖‖#1    
+[1]⟨⟩#1   
+[1]⌈⌉#1     
+[1]⌊⌋#1  
+a]anthony berdeu
+b]henri bonnet
+c]jean-baptiste le bouquin
+b]johann kolb
+d]guillaume bourdarot
+e]philippe berio
+a]thibaut paumard
+d]frank eisenhauer
+f]christian straubmeier
+g,h]paulo garcia
+i]sebastian hönig
+d]florentin millour
+j]laura kreidberg
+k]denis defrère
+l]ferréol soulez
+d]denis mourard
+m]gail schaefer
+m]narsireddy anugu
+[a]lesia, observatoire de paris, université psl, sorbonne université, université paris cité, cnrs, 5 place jules janssen, 92195 meudon, france
+[b]european southern observatory, karl-schwarzschild-straße 2, 85748 garching, germany
+[c]univ. grenoble alpes, cnrs, ipag, 38000 grenoble, france
+[d]max planck institute for extraterrestrial physics, 85748 garching, germany
+[e]université côte d’azur, observatoire de la côte d’azur, cnrs, laboratoire lagrange, france
+[f]1st institute of physics, university of cologne, zülpicher straße 77, 50937 cologne, germany
+[g]centro de astrofísica e gravitação, ist, universidade de lisboa, 1049-001 lisboa, portugal
+[h]faculdade de engenharia, universidade do porto, 4200-465 porto, portugal
+[i]school of physics & astronomy, university of southampton, southampton, so17 1bj, uk
+[j]max planck institute for astronomy, königstuhl 17, 69117 heidelberg, germany
+[k]institute of astronomy, ku leuven, celestijnenlaan 200d, b-3001, leuven, belgium
+[l]univ lyon, univ lyon1, ens de lyon, centre de recherche astrophysique de lyon, umr 5574, f-69230, saint-genis-laval, france
+[m]the chara array of georgia state university, mount wilson observatory, mount wilson, altadena, ca 91203, united states of america
+on the behalf of the gravity+ collaboration. send correspondence to anthony berdeu: 
+empty 
+ 
+ 
+/bdocument/ 
+open loop calibration and closed loop non perturbative estimation of the lateral errors of an adaptive optics system: examples with gravity+ and chara experimental data
+    [
+    january 16, 2026
+========================================================================================================================================================================
+performances of an adaptive optics (ao) system are directly linked with the quality of its alignment. during the instrument calibration, having open loop fast tools with a large capture range are necessary to quickly assess the system misalignment and to drive it towards a state allowing to close the ao loop. during operation, complex systems are prone to misalignments (mechanical flexions, rotation of optical elements, ...) that potentially degrade the ao performances, creating a need for a monitoring tool to tackle their driftage. in this work, we first present an improved perturbative method to quickly assess large lateral errors in open loop. it uses the spatial correlation of the measured interaction matrix of a limited number of 2d spatial modes with a synthetic model. then, we introduce a novel solution to finely measure and correct these lateral errors via the closed loop telemetry. non-perturbative, this method consequently does not impact the science output of the instrument. it is based on the temporal correlation of 2d spatial frequencies in the deformable mirror commands. it is model-free (no need of an interaction matrix model) and sparse in the fourier space, making it fast and easily scalable to complex systems such as future extremely large telescopes. finally, we present some results obtained on the development bench of the gravity+ extreme ao system (cartesian grid, 1432 actuators). in addition, we show with on-sky results gathered with chara and gravity/ciao that the method is adaptable to non-conventional ao geometries (hexagonal grids, 60 actuators).
+§ introduction
+the role of an adaptive optics (ao) system is to compensate for the wavefront corrugations induced by atmospheric turbulence. to do so, such a system is composed by a wavefront sensor (wfs) whose measurements are analyzed by a real time computer (rtc) and converted into a set of commands sent to a deformable mirror (dm) that corrects the optical aberrations. to be effective, this feedback loop must run faster than the turbulence temporal evolution, with typical frequencies ranging from several hundred hertz to a kilo-hertz.
+any alignment error in the ao system degrades its performances, or even worse, destabilizes the ao loop. fine registration of the couple dm/wfs is thus critical. among others, see  (sec. 2.1), the classical (and most impacting) mis-registrations are the  and -shifts (lateral translation of the dm with respect to the wfs), the clocking (rotation of the dm with respect to the wfs), and the magnification and anamorphosis (stretches of the dm with respect to the wfs).
+if different techniques exist to assess the mis-registration state of an ao system, most of the tools to track mis-registrations use the interaction matrix (im) of the ao system that links the commands sent to the dm to the measures provided by the wfs. these techniques rely on the fact that an alignment error in the ao system leaves a measurable signal in its im.
+in early ao systems, ims were experimentally calibrated on instrument internal sources with high signal-to-noise ratios (s/ns). but the arrival of telescopes with adaptive secondary mirrors, such as the multiple mirror telescope, the large binocular telescope, or the aof, changed the deal. without any reference source, the im must be measured directly on-sky at night. this raised new challenges: freezing the turbulence, fighting low s/n, minimizing the loss of precious night time for the scientific observations, ...
+thus, new methods emerged, based on the physical modeling of the interaction matrix, so-called synthetic im. the mis-registration parameters are fitted through dedicated calibrations, on internal sources or on-sky to obtain noiseless pseudo-synthetic interaction matrices (psims).
+nonetheless, mis-registrations are susceptible to evolve during observation (mechanical flexion, thermal evolution, ...). and future extremely large telescopes(elts) will bring this challenge to other levels: always more complex (and time consuming) psim models, increasing number of actuators, non-linear wfss, unprecedented distances between dms and wfss (with moving/rotating parts in-between prone to misalignment), ... it then becomes impossible to perform regular calibrations and it is thus necessary to track the evolution of the mis-registrations directly during the scientific acquisitions with online tools for ao system auto-calibration. 
+in this context we developed two news methods to assess lateral mis-registration in an ao system that relax the need of complex psim model fitting. the first one, see sec:method_2d_corr, is based on a perturbative approach whereby two-dimensional (2d) modes are applied on the system. it has a large capture range and can be used in open loop in order to calibrate and preset the ao system. the second one, see sec:method_cl_estim, is a non-perturbative approach analyzing correlation signals in the ao loop telemetry. working in closed loop, it can be used in real time to monitor the system mis-registration without impacting the science acquisition.
+these methods have been introduced in a previous paper, see  and implemented in the standard platform for adaptive optics real time applications (sparta), the rtc of gravity+. in this work, we present new data, obtained on the gravity+ ao development bench(gpao), as well as the first on-sky results obtained from the center for high angular resolution astronomy (chara) and the coudé infrared adaptive optics (ciao) of gravity. for each technique, (i) a brief reminder of the method is introduced, see sec:meth_2d_corrsec:meth_cl_estim; (ii) then experimental results are given, see sec:exp_2d_corrsec:exp_cl_estim.
+§ perturbative 2d modal estimator
+§.§ overview of the method
+§.§.§ general concept
+the idea of the method is summed up in fig:2d_corr_sim_misreg. when a spatial pattern is applied on the dm, see fig:2d_corr_sim_misrega, a specific spatial pattern is seen in the sh-wfs data, see fig:2d_corr_sim_misregb. in the following, we used a modal approach based on karhunen–loève (kl) functions applied on the dm commands (modal im). if the considered modes are properly sampled, a lateral mis-registration geometrically shifts the measurements, see fig:2d_corr_sim_misregc. thus, the 2d spatial correlation of a measured modal im with a reference modal im should be usable as a lateral error estimator.
+1
+    
+2
+    
+3
+    
+4
+    
+5
+    
+dm  kl mode
+                   
+                reference slopes
+                   
+                measured slopes
+                   
+                modal correlation
+                   
+                inverse problem
+                
+                
+                
+                [width=,pos=ul,font=white](a)0.0    
+                [width=,pos=ul,font=white](b)0.0    
+                [width=,pos=ul,font=white](c)0.0    
+                [width=,pos=ul,font=](d)0.0   
+                [width=,pos=ul,font=](e)0.0
+                
+simulated example of the spatial 2d correlation method. a: kl mode applied on the dm. b: corresponding reference slopes on the wfs. c: slopes of the measured partial im. d: standard correlation of the measured kl mode with the reference. e: global inverse problem approach on all the measured modes.
+        
+noting  (resp. ) the reference modal im of the system without any mis-registration (resp. the measured modal im) of the kl mode , the cross-correlation of the 2d ims for a shift  is given by:
+in presence of a lateral mis-registration, eq:cross_corr would give maps similar to fig:2d_corr_sim_misregd. performed on a single mode, such correlation maps can lead to ambiguities in the determination of the maximum location and to poor sensitivity. in our method, we rather define the merit criterion in terms of how similar the two ims are in terms of mean squares, jointly accounting for all the modes,
+where  is the map of the valid subapertures in the psim model[such invalid subapertures are in gray in fig:2d_corr_sim_misregc.] and  is the map of the valid subapertures in the measurements, discarding poorly illuminated subapertures[such invalid subapertures are in black in fig:2d_corr_sim_misregc.]. eq:2d_mod_min has an analytical solution given by:
+eq:2d_corr_map is the ratio of the modal sum of 2d cross-correlations and the position of the global maximum of the obtained map, see fig:2d_corr_sim_misrege, gives the estimated lateral mis-registration  in a single pass:
+as discussed in , this map can be up-sampled to perform super-resolution.
+§.§ experimental results
+fig:2d_corr_bench gathers some screenshots of the sparta panels that show the use of the proposed method during the present of the visible mode of gpao, based on a 40 shack-hartmann wfs (sh-wfs) and a dm with 1432 active actuators. the turbulence was emulated with a plate, producing a wind of  with a fried parameter of .
+1
+    
+2
+    
+[width=,pos=ul,font=](a)1.0    
+                [width=,pos=ul,font=](b)1.0
+                
+screenshots of the spatial 2d correlation method in the gpao bench.  the orange and blue curves are the  and  outputs of the estimator according to time. the sh-wfs spots are displayed in the bottom left and the corresponding  and  slopes are given side by side in the windows with the orange look up table. a: initial state of the ao system with a lateral error of several subapertures. b: system after convergence of the lateral error corrective loop.
+        
+in the initial state, see fig:2d_corr_bencha, the loop is open and the system is misaligned by several subapertures. this is visible by the important shift between the photometric pupil (sh-wfs spots) relative to the sh-wfs geometry (green boxes). fig:2d_corr_benchb shows the system after the convergence of the corrective loop that monitors the lateral error based on the 2d modal estimator. the system has converged in a few iterations and the alignment is good enough to close the high order ao loop, with 800 controlled modes.
+as emphasized by the red arrow, an alignment of the dm with respect to the wfs does not correspond to the alignment of the photometric pupil. this is explained by the fact that in gpao, the dm clear aperture is larger than the telescope pupil image and thus photometry centering cannot be used to register the couple dm/wfs.
+the algorithm has been tested in the bench with the different gpao modes (9, 30, 40 sh-wfss) and with different phase plates and source powers, spanning a large variety of conditions. in all cases, it successfully brings the system to a state where the high order ao loop closes stably. the mis-registration monitoring can thus then switch to the closed loop estimator, as discussed below.
+§ non-perturbative closed loop estimator
+§.§ overview of the method
+as summed by the blue (or green) block diagram of fig:cl_corr_curvesa, an ao loop works as follows:
+eginitemize
+	
+  (1) the wfs  converts the 2d wavefront  into measurements  corrupted by noise, : ,
+	
+  (2) these measurements are converted via , the command matrix (computed by inverting the psim of the system filtered on a given  number of kl modes), to a command correction ,
+	
+  (3) the controller , for example a leaky integrator of leak gain  and integral gain , computes a new command ,
+	
+  (4) this command is applied on the dm actuators  until the next command arrives.
+all the above steps are linear. thus, the ao loop can be described in the fourier space of the commands , that is to say in terms of spatial frequencies  () propagating through the system. the transfer functions in the temporal frequency space  () of each block of fig:cl_corr_curvesa are given by
+eginitemize
+	
+  * , where  is the wfs exposure time,
+	
+  * , where  is the latency of the system (communication and computation times) and  is the period of the rtc cycle,
+	
+  * , where  is the holding time of the dm.
+in general, all the characteristic times are equal: .
+1
+    
+2
+    
+3
+    
+[width=,pos=ul,font=](a)0.5    
+                [width=,pos=ul,font=](b)0.5
+temporal coupling of the spatial frequency  in the ao loop telemetry. a: block diagram of the temporal coupling (in red) of the symmetric (cosine, in blue) and anti-symmetric (sine, in green) parts. b: imaginary part of the correlation curve  in a noise limited regime with standard ao parameters , ,  and for various values of coupling coefficient  from 0 (blue) to 45 (red), every 5.
+         
+in the presence of a lateral mis-registration , the spatially symmetric part of the commands  is partially projected on the spatially anti-symmetric part of the wfs measurements and propagates to the anti-symmetric part of the command  (and oppositely). this cross-coupling is emphasized by the red connectors in fig:cl_corr_curvesa, with a coupling coefficient of:
+thus, the commands  and  are thus no longer independent. in the (spatial and temporal) fourier space, the correlation a given spatial frequency  at a temporal frequency  is defined by:
+under the assumption that the different noise terms  and  are independent, we showed in  that:
+the correlation of a given spatial frequency  is thus a pure imaginary number. fig:cl_corr_curvesb shows the imaginary parts of the correlation  for different values of the coupling coefficient .
+on the opposite side, in a pure frozen flow hypothesis (no noise propagation), of velocity , it comes with :
+this means that a frozen flow turbulence has a minimal impact on the correlation and only frequencies close to  should be impacted.
+in practice, as detailed in , the symmetric () and anti-symmetric () parts of the commands  are extracted from the closed loop telemetry. then, the imaginary part of the empirical correlation of the closed loop telemetry is estimated by:
+and finally, the lateral error is then obtained from eq:thetaeq:corr_0 by solving:
+where  is the control space of the ao loop. 
+§.§ experimental results
+§.§.§ on the gpao bench
+the estimator was tested in the gpao bench inserting two phase screens in the bench to emulate a multi-layered atmosphere with an estimated global seeing of . in the initial state, a lateral mis-registration of 60 of a subaperture  was injected in the system by translating the sh-wfs stage.
+fig:cl_corr_gpaoa shows the convergence curve of the corrective loop in charge to re-align the system while in closed loop. the top panel shows the output of the closed loop estimator while the bottom panel shows the actual position of the wfs translation stage.
+1
+    
+2
+    
+3
+    
+lateral error update
+                   
+                2d spatial frequency space
+                   
+                temporal frequency space
+                
+  
+                [width=,pos=ul,font=](a)0.0    
+                [width=,pos=ul,font=](b)0.75    
+                [width=,pos=ul,font=](c)0.75              
+              
+               
+         monitoring and correcting the lateral error in the gpao bench. a: convergence of the corrective loop. top: lateral error estimated by the proposed method. bottom: absolute positioning of the wfs stage. b,c: cdms screenshots of the estimator sanity check outputs. b: map of the 2d coefficients . c: curve of the temporal correlation  (red). the black curve is the theoretical correlation curve  for .
+        
+first, it can be seen that the estimator found some lateral errors along the two axes, despite the wfs has been translated along a single axis. this is because there was an angle between the dm and the wfs, not lying in a fried geometry. this angle is accounted for by the corrective loop.
+second, the amplitude estimated by the closed loop estimator was , well below the  theoretically injected. as discussed in depth in , this is a known drawback of the closed loop estimator. its sensitivity depends on the noise sources in the system, impacting the normalization in eq:corr_empirical. it is nonetheless always smaller than one, ensuring the stability of the lateral error corrective loop.
+as shown by the bottom panel of fig:cl_corr_gpaoa, this corrective loop successfully converged. bur there was a slight bias compared to the reference position. this reference was obtained with the phase plates stopped but inserted in the beam. they are known to introduce wobble in the system, adding an additional lateral error evolving with their rotation angle. the mentioned bias is considered to be within the margins of this wobble. it was thus considered that the estimator successfully converged without any strong bias induced by the frozen flow components of the turbulence.
+in addition, the estimator has been integrated in sparta so that some sanity check outputs are published in its configuration data management system (cdms). namely, the 2d map of the best fit of the coupling coefficients :
+shown in fig:cl_corr_gpaob, and the best fit of the correlation curves:
+shown in fig:cl_corr_gpaoc.
+looking at fig:cl_corr_gpaob, it appears that the map follows the expected `tip-tilt' pattern from eq:theta according to the 2d spatial frequency. in addition, the correlation is limited to the space controlled by the ao system, delimited by the green circle (dictated by the number of controlled modes, namely 800 here, see  for more details).
+finally, the best fit of the temporal correlation curves of the command telemetry, shown in fig:cl_corr_gpaoc, nicely matches the theoretical curve, in black. at low temporal frequencies, their is a corruption of the correlation signal by the wind. as expected, this effect remains sparse, limited to a narrow frequency range. it did not impact the quality of the convergence of the lateral error corrective loop.
+§.§.§ first on-sky results
+in the previous section, the closed loop estimator was tested against phase plates emulating frozen flow turbulence, the worst case offender for the method. in reality, atmospheric turbulence is more complex, potentially presenting several layers and characteristic wind speeds or coherence times that may impact the estimator performances. before the upcoming commissioning of gravity+, it was thus interesting to test the method on data acquired on-sky with other instruments.
+the chara collaboration kindly shared data acquired during technical time (2023-10-16) from the e2 unit. an additional `garching remote access facility' (g-raf) session (2024-05-28) on the gravity/ciao system, based on the soon to be decommissioned multiple application curvature adaptive optics (macao), was also granted by the european southern observatory on the third telescope unit (ut3) of the very large telescope (vlt).
+the dms of both systems own 60 actuators. nonetheless, they do not lie on a cartesian grid, as shown on fig:cl_coor_dm_modela,b. as a consequence, the commands from the ao telemetry cannot be directly linked with a 2d representation. to overcome this issue, a low resolution projector, with  pixel per actuator, was used to reshape the dm commands in 2d patterns, as presented in fig:cl_coor_dm_modelc,d.
+2cchara dm
+                   
+                2cmacao dm
+                
+single actuator
+                   
+                maximal projection
+                   
+                single actuator
+                   
+                maximal correlation
+                
+[origin=l]90influence function    
+                [width=,pos=ul,font=](a1)0.0_chara/dm_act_35    
+                [width=,pos=ul,font=](b1)0.0_chara/dm_proj    
+                [width=,pos=ul,font=](a2)0.0_ciao/dm_act_35    
+                [width=,pos=ul,font=](b2)0.0_ciao/dm_proj
+                
+[origin=l]90command projector    
+                [width=,pos=ul,font=](c1)0.0_chara/mod_act_35    
+                [width=,pos=ul,font=](d1)0.0_chara/mod_proj    
+                [width=,pos=ul,font=](c2)0.0_ciao/mod_act_35    
+                [width=,pos=ul,font=](d2)0.0_ciao/mod_proj
+                
+               
+         non-cartesian grids of the chara (1) and gravity/ciao dm (2). a,b: high resolution influence function and their maximal projection. c,d: low resolution model for the command 2d projection. green circle: pupil edge. colored dots: actuator position.
+        
+the main parameters impacting the correlation curves of the closed loop estimator are listed in tab:ao_parameters. for each instrument, a batch of 2500 telemetry frames was used, corresponding to only 5.
+parameters of the chara and ciao ao loops.
+    
+        chara     ciao
+    
+loop frequency  (hz)     441     500
+    
+loop gain      0.19     0.4
+    
+number of controlled mode     41     45
+    
+the sanity check outputs of the closed loop estimator are given in fig:cl_corr_sky. as for the results in the gpao bench, the `tip-tilt' pattern is nicely visible in the maps of the coupling coefficients  and is well encompassed in the predicted controlled area, see fig:cl_corr_skya1,a2.  looking at the temporal correlation curves, see fig:cl_corr_skyb1,b2, it first appears that the theoretical curves, in black, are different. this comes from the different gains of the ao loop used in each system. despite the small number of actuators and controlled modes[60 actuators and  45 controlled modes. to be compared with the 1432 active actuators of gpao, controlling 500 to 800 modes...] and the shortness of the gathered telemetry, the correlation signal is clear in the gray curves. once filtered with a sliding windows, in red, the curve perfectly matches the prediction in the chara dataset. in the ciao telemetry, the low frequencies are polluted by some wind signal.
+1
+    
+2
+    
+3
+    
+4
+    
+2cchara telemetry
+                   
+                2cciao telemetry
+                
+[width=,pos=ul,font=](a1)0.0    
+                [width=,pos=ul,font=](b1)0.0    
+                [width=,pos=ul,font=](a2)0.0    
+                [width=,pos=ul,font=](b2)0.0
+                
+spatial frequency 
+                   
+                frequency  (hz)
+                   
+                spatial frequency 
+                   
+                frequency  (hz)
+                
+sanity check outputs of the lateral error estimator with on-sky closed loop telemetry from chara (1) and gravity/ciao (2). a: map of the 2d coefficients . the black circles encompass the spatial frequencies of the controlled space. b: curve of the temporal correlation  (gray). the black curve is the theoretical correlation curve  for . the red curve is a mean filter of  with a sliding window of  data points. 
+        
+to further investigate the impact of real turbulence wind on the closed loop estimator, known lateral shifts were introduced in the ciao system, as shown in fig:cl_corr_ciao_bias. the ciao wfs was translated by steps of 25, up to ±150, corresponding to an misalignment of .
+-90 offset
+                   
+                reference ciao position
+                   
+                +90 offset
+                
+  
+                [width=,pos=ul,font=white](a)0.0-150    
+                [width=,pos=ul,font=white](b)0.0+000    
+                [width=,pos=ul,font=white](c)0.0+150              
+              
+               
+               
+        
+application of different lateral offsets along the -axis on the ciao wfs stage. loop closed on the vlt ut3 internal beacon inserting a neutral density filter in the beam.
+the estimator was first tested on the beacon of the vlt ut3. to maximize the mis-registration signal, induced by the noise propagation through the ao loop, a neutral density filter was inserted in the beam. for each shift, 20 of telemetry was recorded (10000 points). to get some statistics and assess the estimator covariance, 31 batches of 2500 consecutive frames every 250 telemetry frames were analyzed.
+the results are shown in fig:cl_corr_ciao_bias_beacona. the bars indicate the  error axes derived from the 2d covariances. it first appears that the estimated mis-registrations are rotated compared to the theoretical lateral shifts applied along the wfs  and -axes. this clocking is induced by the k-mirror position in-between the macao dm and the ciao wfs. as mentioned above, the sensitivity of the closed loop estimator is not equal to unity and the comparison of its outputs with the injected shifts is not straightforward. to do so, the best linear transform linking the estimated mis-registrations   with their corresponding theoretical lateral shifts  was computed as follows:
+where  is the rotation matrix of angle . in fig:cl_corr_ciao_bias_beacona, the estimated lateral errors were thus scaled by , to be put in regards to the injected shifts rotated in the dm space by  (black dots).
+1
+    
+2
+    
+[width=,pos=ul,font=white]0.0gain_2d    
+                [width=,pos=ul,font=white]0.0gain              
+           
+               
+         comparison on the vlt/ut3 beacon of the closed loop estimator (blue and red alternates every 15) with known lateral mis-registrations applied on the gravity/ciao wfs (back curves and dots). a: 2d estimated lateral errors scaled to match the applied shifts in order to compensate for the estimator sensitivity. b: norm of the estimated lateral error in function of the applied shift (corrected for the bias of a). 
+        
+it then appears that there is a bias of . the origin of this bias is not clear. indeed, in absence of strong frozen flow, the estimator should not be biased, an estimated shift of  then corresponding to a system without any lateral mis-registration. this bias was attributed to a mis-alignment of the ciao wfs reference, potentially produced by the strong vignetting of the pupil, see fig:cl_corr_ciao_biasb.
+fig:cl_corr_ciao_bias_beaconb shows the norm of the estimated shift in function of the injected shift, after correcting for the bias . the estimator appears linear up to the tested range of , except for a point at  (visible in fig:cl_corr_ciao_bias_beacona, at ). this point is actually at the limit of the loop stability of the system, degrading the empirical variance estimate and thus the fit of the closed loop estimator. divergence occurring for larger mis-registrations in this direction whereas the loop stays stable in other directions can be linked with the pupil vignetting but also can support the fact that there is indeed a bias in the lateral reference of the ciao wfs.
+the same tests were reproduced on-sky, targeting a star of magnitude 7, with an approximated seeing of 0.6”. for each injected lateral shift, 10 of telemetry was recorded (5000 points). these telemetries were analyzed through 11 batches of 2500 consecutive frames every 250 telemetry frames. the results are shown in fig:cl_corr_ciao_bias_beacon. contrary to the results on the vlt/ut3 beacon, the cross pattern is slightly distorted for high mis-registration value. as expected, the error bars indicate that the error is mainly along the direction of the induced shift. nonetheless, the pattern of the estimated shifts clearly presents an origin where a corrective loop based on the closed estimator would converge. with an offset of , its amplitude is consistent with the results obtained on the beacon. this result once again suggests that no evident bias is induced by the turbulence.
+1
+    
+2
+    
+[width=,pos=ul,font=white]0.0gain_2d    
+                [width=,pos=ul,font=white]0.0gain              
+           
+               
+         same as fig.  but on a 7 magnitude star with good seeing condition (0.6”).
+        
+finally, let's note once again that fig:cl_corr_ciao_bias_beaconfig:cl_corr_ciao_bias_on_sky do not emphasize the variability of the closed loop estimator sensitivity. as already discussed above, it is impacted by the normalization by the variances in eq:corr_empirical that may decrease the estimated empirical covariance. for these two examples, the sensitivity  is 10 smaller in presence of turbulence with a bright star than with the beacon after the neutral density filter.
+§ conclusions and perspectives
+in this work, we introduced two novel methods to estimate the lateral misalignment of an ao system that relax the need of complex psim model fitting. after a brief reminder of their underlying theory, they were experimentally validated in the gpao development bench and with on-sky data obtained from current ao facilities. these methods will be at the core of the gpao system auto-alignment strategy while in operation to keep the ao performances at their optimal level throughout the observations.
+§.§ perturbative 2d modal estimator
+contrary to other solutions based on modal perturbations, this method does not imply the fine tuning of the psim model parameters but uses the 2d representation of the ims to directly estimate the lateral errors. this method has a large capture range, is unbiased (absolute) and robust to large misalignment errors and low s/ns. in addition, the method is fast: (i) the acquisition of the partial modal im is quick to obtain, and (ii) the convolutions in eq:2d_corr_map can be computed using fast 2d discrete fourier transforms and the fit of the lateral error is obtained in a single pass via eq:2d_corr_estim, not relying on an iterative fit.
+furthermore, the need of a psim model is reduced to the minimal need: a single computation to get the reference im from which the command matrix of the ao loop is derived. for complex systems where a psim model is not available, this need could be removed by using a measured im obtained during calibration on an aligned system.
+this method is thus particularly suitable for open-loop calibration where the turbulence strongly corrupts the slopes of the measured modal im, as far as the measurement strategy freezes, in average, the turbulence. in addition,  has shown that these kinds of approaches are not biaised by the turbulence wind.
+§.§ non-perturbative closed loop estimator
+one of the main advantages of the closed loop estimator is that it is purely based on the geometry of the chosen observable (the wfs measurements  or the dm commands ). this relaxes the need of psim models, potentially complex and hard to fit, from which mis-registration parameters must be retrieved.
+secondly, the estimator depends on a limited number of parameters driving the ao loop. they are generally well constrained by design or proper calibration.
+furthermore, the estimator, expressed in the fourier domain, is sparse. this makes it extremely fast to compute, a critical aspect when considering the ever increasing number of actuators and system complexity of the future elts.
+even if it based on noise propagation, assumptions on the noise model remain minimal. it only supposes that the noise is spatially uncorrelated.
+in addition, a common issue with mis-registration estimators is their sensitivity to frozen flow turbulence. as discussed in , such a situation breaks the assumption that  and  are independent, used to get eq:corr_0. nonetheless, other sources of noise are always injected in the loop, producing a correlation signal in the commands. as discussed in , the frozen flow signal then becomes sparse in the temporal frequency space. thus, compared to other methods based on ao loop telemetry, the wind has a limited impact on the proposed estimator of eq:cl_estim, as shown by the results obtained on-bench and on-sky.
+finally, one should keep in mind that this estimator is only relative: it is sensitive to a mis-registration between the real ao system and its numerical model used to close it. it makes only sense in the context of lateral error monitoring and correction and cannot be used to assess absolute lateral mis-registrations.
+§.§ what's next?
+in the short term, the upcoming commissioning of gravity+ and its brand new ao system will be the occasion to further test and characterize these new lateral estimators in real conditions, with a large variety of seeings and turbulence strengths. this may raise the need to further work on the debiasing of the closed loop estimator, as we saw that the wind produces a well identified signal in the telemetry correlation. this commissioning will also the the occasion to confirm these algorithms as current baseline for the upcoming european elt.
+work is currently on-going to extend these methods to higher order mis-registrations, namely the clocking, the magnification and anamorphoses. this nonetheless implies more complex block diagrams in the spatial frequency coupling than the one introduced in fig:cl_corr_curvesa.
+in a longer term, these algorithms need to be confronted to other kinds of wfss, such as the pyramid. in this context, their adaptation is relatively straightforward, as a pyramid wfs directly produces images of spatial features in the instrument pupil. the close loop estimator performs well in simulation but is yet to be confirmed in the lab or on-sky with such wfss.
+this project has received funding from the european un­ion's horizon 2020 research and innovation programme under grant agreement no 101004719.
+this work made use of data acquired during chara and vlti technical time.
+spiebib 
+/edocument/ 

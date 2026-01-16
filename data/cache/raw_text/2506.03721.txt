@@ -1,0 +1,216 @@
+.  
+a]florentin millour
+b]guillaume bourdarot
+c]jean-baptiste lebouquin
+d]anthony berdeu
+a]mathis houllé
+a]philippe berio
+d]thibaut paumard
+e]denis defrère
+f]paulo garcia
+g]ferreol soulez
+h]sebastian hoenig
+i]fatmé allouche
+b]martin bachbucher
+a]christophe bailet
+d]cyrille blanchard
+a]olivier boebion
+i]henri bonnet
+b]amit brara
+a]marcel carbillet
+b]stephan czempiel
+c]alain delboulbé
+d]roderick dembet
+d]clémence edouard
+b]frank eisenhauer
+b]helmut feuchtgruber
+b]christoph furchstsam
+b]stefan gillessen
+b]armin goldbrunner
+f]tiago gomes
+a]carole gouvret
+c]sylvain guieu
+b]mike hartl
+b]johannes hartwig
+b]frank haussmann
+b]david huber
+d]ihsan ibn taïeb
+i]johann kolb
+a]stéphane lagarde
+a]olivier lai
+a]james leftley
+b]dieter lutz
+c]yves magnard
+a]aurélie marcotto
+c]hugo nowacki
+i]sylvain oberti
+b]thomas ott
+b]christian rau
+a]sylvie robbe-dubois
+a]jules scigliuto
+b]franz soller
+i]pavel shchekaturov
+b]daniel schuppe
+c]eric stadler
+b]sinem uysal
+b]felix widmann
+b]ekherhard wieprecht
+i]julien woillez
+b]şenol yazici
+[a]univ. côte d'azur, observatoire de la côte d'azur, cnrs, laboratoire lagrange, (france)
+[b]max planck institute for extraterrestrial physics, giessenbach-straße 1, 85748 garching (germany)
+[c]univ. grenoble alpes, cnrs, ipag, 38000 grenoble (france)
+[d]lesia, observatoire de paris, univ. psl, cnrs, sorbonne univ., univ. paris cité, 5 place jules janssen, 92195 meudon (france)
+[e]institute of astronomy, ku leuven, celestijnenlaan 200d, 3001, leuven (belgium)
+[f]faculdade de engenharia, univ. do porto, rua dr. roberto frias, 4200-465 porto (portugal)
+[g]univ. lyon, univ. lyon1, ens de lyon, cnrs, centre de recherche astrophysique de lyon umr5574, f-69230, saint-genis-laval, (france)
+[h]department of physics & astronomy, univ. of southampton, southampton, so17 1bj (uk)
+[i]european southern observatory, karl-schwarzschild-straße 2, 85748 garching (germany)
+further author information: (send correspondence to f. millour)
+f. millour: e-mail: fmillour@oca.eu, telephone: +33 489 15 03 59
+empty 
+ 
+ 
+/bdocument/ 
+gravity+ adaptive optics (gpao) tests in europe
+    [
+    january 16, 2026
+===============================================
+we present in this proceeding the results of the test phase of the gravity+ adaptive optics. this extreme ao will enable both high-dynamic range observations of faint companions (including exoplanets) thanks to a 40x40 sub-apertures wavefront control, and sensitive observations (including agns) thanks to the addition of a laser guide star to each ut of the vlt. this leap forward is made thanks to a mostly automated setup of the ao, including calibration of the ncpas, that we tested in europe on the ut+atmosphere simulator we built in nice. we managed to reproduce in laboratory the expected performances of all the modes of the ao, including under non-optimal atmospheric or telescope alignment conditions, giving us the green light to proceed with the assembly, integration and verification phase in paranal.
+§ introduction
+we present in this paper some of the results of the gravity+ adaptive optics (gpao) test plan performed in europe from 2021 to 2024, showing that the adaptive optics performs as expected. these results triggered the green light to send gpao to the paranal observatory in mid-2024.
+short presentation of gpao
+[example] 
+     
+global timeline of the gravity+ project. we show below the timeline cad illustrations of the different subsystems, as well as pictures taken during the assembly, integration and tests of gpao in nice.
+the gravity+ adaptive optics (gpao) is an extreme ao that will enable both high-dynamic range observations of faint companions (including exoplanets) thanks to a 40x40 sub-apertures wavefront control, and sensitive observations (including agns) thanks to the addition of a laser guide star to each ut of the vlt. gpao comprises 3 subsystems: a wavefront sensor (wfs), a corrective optics (co - including a deformable mirror dm), and a real time computer (rtc). each subsystem is assembled and tested by one consortium institute (wfs: mpe ; co: ipag ; and rtc: lesia). gpao also include the infrared 9x9 wfs from the former ciao ao and adds to it the laser guide star, summing gpao modes to 4: ngs-vis (40x40), lgs-vis (4x4 + 30x30), ngs-ir (9x9) and lgs-ir (9x9 + 30x30). 
+to ensure these gpao subsystems work together smoothly, and to measure the effective performances of the adaptive optics, we built a test bench in nice (lagrange laboratory) that reproduced an ut coudé focus as well as a turbulent atmosphere with typical paranal conditions. gpao is part of the whole gravity+ project, which includes as well dual field interferometry, upgrades of gravity and the vlti, and laser guide stars installed on the telescopes.
+§ timeline of the gpao test plan
+a global timeline of the gravity+ project is presented in figure . gpao corresponds to the phase 2 of the project, phase 1 being upgrades of the instruments, and phase 3 being the introduction of a laser guide star to every ut.
+the gpao test plan timeline followed closely the assembly and integration ones, with activities of integration and tests conducted in parallel. this way of working was very efficient thanks to the test bench in nice, that saw two complete gpao systems integrated in sequence: gpao#1 and gpao#2.
+the early developments were performed on the gpao#1 (section ), replaced by gpao#2 in a second phase (section ), which included the finalized version of all gpao subsystems and was used for the qualification to chile.
+§.§ gpao#1 / 2021 – 2023
+gpao#1 was used very early in the project (as early as 2021) to help progress in parallel the development of gpao and the test plan. it was used to perform some low-level aspects of the test plan. gpao#1 was extremely helpful to provide already a workable system although with features slightly different from the final design. 
+gpao#1 wfs first included only the lgs module (30x30, see figure , left), to give way to a fast track integration of this most complicated part of the ao. the ngs module was added at a later step (40x40 and 4x4, see figure , middle and right). 
+gpao#1 wfs was sent back to mpe for retro-fitting after gpao#2 wfs was installed in nice.
+[example] 
+     
+pictures showing two wfs setups of gpao: on the left is the lgs mode with the laser guide star on the 30x30 shwfs (left), while the natural guide star is acquired with a low order shwfs (4x4, right). on the right the ngs setup is shown, with a 40x40 shwfs on a visible natural guide star.
+the gpao co is composed of a gimbal and the alpao deformable mirror itself. several tests made on gpao#1 have been made with a pre-series dm#0 (bax437) with slightly different characteristics than the final dm: limited stroke, 41x41 actuators, outer circle of actuators within the useful pupil.
+the final dm#1 (bax651) has been added to gpao#1 at a later stage to test the full ao, together with an upgraded co (to accommodate the increased size of the dm).
+the rtc is composed of a cluster of 4 machines (the soft [s]rtc) for telemetry recording and matrices update, and a fast and optimized machine for matrix multiplication (the hard [h]rtc). additional computers are installed in the rack : the workstation computer, and a logger used to measure the loop latency.
+it is housed in an electronic cabinet. we first used a standard computer cabinet to host the rtc computers.
+gpao#1 had several limitations which we list here:
+eginitemize
+    
+  * no dichroic plate at the wfs entrance (replaced by a 50/50 beamsplitter),
+    
+  * pico-motors (newport) were initially used for the pupil steering mirror, in replacement of piezo-actuators (due to a hardware shortage), which were implemented on gpao#2,
+    
+  * gain and electronic instabilities on the ocam2k cameras, which were fixed at a later stage,
+    
+  * various time-constrained activities that prevented from fulfilling the full set of tests on gpao#1, especially for the ciao modes.
+gpao#1, as well as gpao#3 and 4 have been sent as separated subsystems from each institute in charge (mpe, ipag, mpe) to eso for a shipment to paranal at the end of june 2024.
+§.§ gpao#2 / 2023 – 2024
+gpao#2 was the final version of gpao, including the final versions of the wfs (wfs#2), dm (both dm#1 - bax651 - and dm#2 - bax652 - have been tested on gpao#2). the rtc was upgraded with its final informatics cabinet during the integration of gpao#2. all the different gpao modes (40x40, 30x30 + 4x4, 9x9 and 30x30 + 9x9) were tested until june 2024,
+and sent to eso directly from nice.
+most of the tests presented in this paper were conducted on gpao#2.
+[example] 
+     
+some of the tested aspects of gpao that are used as calibrations in the system operation. left: pixel scale for each sub-aperture in the lgs wfs. middle: derotator wobble in wfs pixels, showing a very good optical alignment. right: reference slopes vector measured using the gui panels of gpao.
+§ basic tests
+to have the gpao system up and running, we developed several templates (template = daytime script executed on the telescope console, compatible with the vlti software, see table ) to calibrate many of the low level (camera checks, motors calibrations, lookup tables, pixel scales) and high level elements of gpao (matrices of gpao, reference slopes, ncpa, performances). this allowed us to use these templates for the tests, that were easy to repeat along the system development (that was done in parallel to the test plan). we show in the next sections some of the key calibrations that are used in gpao.
+§.§ cameras check
+the high framerate and low noise ocam2k cameras of gpao are delicate and fragile, therefore their detector health must be monitored regularly. we developed a complete health check monitoring template  to survey the emccd gain, detector noise, octants health in a convenient pdf report that is generated automatically.
+§.§ pixel scale
+the pixel scale measurement (see figure ) is included in the gpao template . it simply scans the xy table positions in both x- and y-axes and measures the slopes (positions of spots barycentre) through the wfs. we find a pixel scale of about 0.73"/pixel, which is close but not identical to the design pixel scale of 0.8’’/px. this has an impact on the later steps (especially matrix generation) and must be taken into account.
+gpao template name      description                         output 
+verify ocam2k characteristics         ocam2k health check report
+measure wfs pixel scales            pixel scale
+matrix psm-wfs                      calibration matrix
+matrix xyt-wfs                      calibration matrix
+matrix qsm-wfs                      calibration matrix
+lookup table for adc                lookup table
+lookup table for derotator          lookup table
+produces all useful ao matrices     set of sparta matrices
+measures the reference slopes       reference slopes
+measure and apply ncpas             modal vector of ncpa
+set of templates (daytime telescope scripts) used to calibrate gpao and set it ready to close the loops and get a high strehl ratio.
+    
+§.§ motors interaction matrices
+several motors matrices have to be calibrated within gpao: qsm-wfs (co tip/tilt vs wfs), xyt-wfs (xy vs wfs, the xy table allows field selection in the ao), and dm-wfs (dm tip/tilt vs wfs).
+these matrices are measured with dedicated templates: , , and . feeding these matrices to the gpao os allows us to input directly sky coordinates as offsets in the system.
+[example] 
+     
+left: a real-life interaction matrix (im) measured on the gpao system using hadamard method. middle: pseudo-synthetic interaction matrix (psim) computer-generated using set parameters according to the measured characteristics of the gpao system. note the absence of noise. right: the mis-registrations that are calculated with the new algorithm of gpao.
+§.§ motors lookup tables
+in addition, we need to produce lookup tables (see figure ) for the derotator and the adc (to compensate pupil and image tilt when operating them). as for motors matrices, we developed dedicated calibration templates  and  to feed the adaptive optics os.
+all the implemented calibration templates are included in a global gpao health check template.
+§.§ matrices generation
+we implemented a complete matrices generation set using one template , in order to populate properly the sparta database that is used to control gpao. this template uses all the previously-calibrated knowledge of the system to generate synthetic maps for the system, notably interaction matrices (im) that are used in the ao main control loop. 
+we tested the generated matrices are indeed nearly identical to measured ones directly on the system using the graphical interface (see figure ), and allows us to close the gpao loop in a blink after setup while correcting a high number of modes (up to 800, the baseline being 500).
+§.§ reference slopes
+the reference slopes (before ncpa correction) of both wfs have been defined as the "central" positions of each sub-aperture, i.e. position of spots with a flat dm. it is a purely geometrical definition. 
+the reference slopes are measured using the  template. an example reference slopes vector is shown in figure .
+[example] 
+     
+a set of measured rejection functions for gpao and selected modes: tip (mode 1) and a higher order mode (mode 203). the blue line are measurements while the red line is a rejection function model fitted to the data. this allowed us to compute effective gain (ki) and pure delay of the loop.
+§ checking gpao
+§.§ functional system test of gpao
+now that one can calibrate the full gpao system, we could focus on the tests, robustness and operations as well as the performances of the ao. 
+to do so, we measured rejection functions on the nice test bench for a set of corrected modes (see a few examples in figure ), and we also tested the many secondary loops that allows gpao to keep the loop closed with changing conditions and telescope behavior (flexures, rotations, moving aberrations). to do so, we implemented and tested a new fast mis-registration algorithm  that tracks the wfs/dm mis-registrations in real time (figure ).
+these tests enabled us to validate the baseline behavior of gpao, with a ngs loop working nominally at 1 khz and controlling up to 800 modes, an lgs+lo loop working at 1 khz+500 hz, separating low order modes (tip/tilt + focus) on the natural guide star and high order modes on the lgs, a system delay below 1 ms, and the possibility to get rid of the derotator with command matrix updates on the fly.
+we tested as well the robustness of the gpao loop to off-centered pupil (that could arise if there is vignetting), defective dm actuators, target wandering, and many other hiccups that can happen during observations and affect strehl ratio if not handled properly.
+in addition, the use of the rotating phase plate in the nice test bench allowed us to test the robustness of the loop against turbulence (the phase plate produced a 0.7" seeing), and to characterize the performances of the system in a realistic environment for operations. additional rotating phase plates that were placed in the light path of the bench allowed us to stress-test the system up to an estimated 1.4" seeing (including strong scintillation).
+§.§ optimizing the gpao performances
+we used the known characteristics of the ngs gpao wfs to compute apparent fluxes from the bench source, in order to calibrate it in apparent magnitude for the ngs-vis mode (figure ). the low order 4x4 ngs wfs used in the lgs mode has 100x less apertures as the 40x40 ngs wfs, therefore, we simply shift this curve by 5 magnitudes to get the apparent flux in lgs mode.
+the lgs source is set to a constant brightness as we expect the gpao laser to have a roughly constant apparent magnitude.
+[example] 
+    
+left: bench source magnitude calibration for the 40x40 wfs. right: illustration of the marechal approximation bias at low strehl ratio, showing the issue we have to extrapolate strehl ratio from 1.3 microns (measurement wavelength, blue) to 2.2 microns (gravity wavelength, green).
+optimizing the gpao loop was done for all the 4 available modes, i.e.  ngs-vis, lgs-vis, ngs-ir and lgs-ir. with the phase plate rotating in the bench, we varied the following parameters, for a set of input magnitudes (from 2 to 15 for ngs, and from 10 to 18 for lgs):
+loop gain    
+     loop leaks
+number of modes corrected   
+     frame rate,
+pixel flux threshold   
+     subaperture flux threshold
+use of weighting maps (or not)   
+     weighting map half width half max
+this optimization provided us with typical values for the gpao loop depending on the input magnitude.
+   
+§ more advanced tests
+§.§ ncpa
+once we set the gpao ideal loop parameters, we started to use the bench infrared camera to measure turbulent psfs and compute strehl ratios. a very simple way of computing the strehl s from one image can be done by measuring the brightest pixel flux in the strehl camera images:
+one can see that this strehl measurement is multiplied by an unknown initial strehl , but it is not an issue for the ncpa computation as we only work in relative strehl/flux: comparing the strehl s from one image to another can be simply done by measuring variation of such a flux, and a maximum flux is reached when the strehl ratio is maximum. this method is fast (not computing intensive) and can be adapted to flux-measurement devices (such as after a spatial filtering like a fiber or a pinhole), therefore it was preferred over more complete methods based on actual strehl measurements (see next section).
+the method to calibrate the ncpas on the nice test bench is therefore the following: we modulate one by one system modes (zernikes or kl modes) and find the maximum flux measured with the strehl camera. once found the maximum, we apply the modal offset and continue to the next mode. this very simple algorithm converges in about 10 mn and produces 1.31m strehl ratios in excess of 75 %, as illustrated in figure  
+[example] 
+     
+ncpa measurements principle on the nice bench. left: flux measurement on the 1.3 microns bench strehl camera. the bell-shaped curves correspond each to one modulated mode (focus, curvature, trefoil, etc.). middle: test bench psf measured on the strehl camera. one can see copious amount of astigmatism and spherical aberration (related to the strehl camera position in the bench – after two transmission plates), that translate into the low measured sr. additional sources are parasitic reflections in the optical train in front of the sr camera. right: psf measured on bench after applying ncpas.
+§.§ performances measurements
+another aspect we tested on gpao is its overall performances (i.e. strehl ratio as a function of apparent magnitude). we needed an effective and sufficiently accurate way of measuring the strehl s from the strehl camera images. we did it following this equation:
+with  the input psf image from the camera, cleaned up from cosmetics (in our case, a bias subtraction and line defects subtraction – computing the median of the image line by line – was enough),  a computer-generated psf using pupil shape inputs (without the spider, but including the central obstruction), and  the flux fraction of ghosts in the image (that can be seen in figure  and that account in our case to 16% of the total flux). this strehl is measured in our case at the wavelength of the ir source, i.e. m. we used the marechal approximation to convert this strehl value to the gravity wavelength where the specifications have been set up (m):
+we note here that 1% of strehl at 1.3 micron (the floor precision of our strehl estimate method) translates into % of strehl at 2.2 microns. the marechal approximation does not function at these levels of strehl, as illustrated in figure , right panel, therefore all values close to 20%
+strehl in k band are subject to doubt and could be lower in practice.
+the gpao top level requirements are as follows: for median seeing conditions (0.83’’ seeing and 9.5 m/s wind), we expect a strehl ratio of 75% at magnitude 9 in ngs, and 50% at
+magnitude 17 in lgs. an additional limit was added at a later stage in the project: 50% sr in k at magr = 12.5.
+to measure the gpao performances, we used the flux-calibrated bench lamp at several magnitudes and measured the strehl using the above method (strehl measurement + marechal conversion from 1.3 to 2.2 m), optimized gpao loop parameters, as well as the rotating phase plate to simulate turbulence.
+the resulting curves of strehl as a function of apparent magnitudes is shown in the left panel of figure . 
+the expected values are shown in the same figure, right panel. 
+the blue curve shows the gpao performances for the ngs-vis mode, that were just meeting the expectations with no margin. we found out that an ir led from a motor encoder was shining photons at the ocam2k from the ngs wfs. a dedicated baffling was designed and installed in the ngs module, which blocks this parastic light. once the baffle in place, the measurement were repeated (green curve), showing excellent performances and meeting the expectations with some margins. the lgs performances are excellent (yellow curve), though not all effects we will see on sky could be reproduced on the bench (especially the cone effect), and a proper characterisation on sky will need to be done during the aiv and commissioning of gpao.
+[example] 
+     
+left: strehl ratios measured on the nice bench with the rotating phase plate active. the green and blue curves are ngs measurements (green: after baffling and eso optimization), and the yellow curve is for lgs. right: expected strehl ratios on sky of gpao. these curves are derived from the eris design documentation. top level requirements are: sr=0.75 at magr=9 for ngs, and sr=0.5 at magr=17 for lgs. 
+§ conclusion and perspectives
+the assembly, integration and tests of gpao in nice faced several major challenges, that the whole team tackled very efficiently. among difficulties were travel restrictions, especially at the beginning of the test plan, hardware shortages, that prevented some devices to be delivered on time, and other issues with hardware. nevertheless, the gpao ait team worked with a very good spirit. this allowed us to manage the challenge and deliver a system that was at acceptance in europe level in june 2024.
+today, gpao is flying on its way to paranal, the assembly, integration and verification phase being started from the beginning of july 2024. the future looks bright with expected transforming  changes in the vlti performances (sensitivity and dynamic range) thanks in part to the gpao up-to-date performances. this momentum on vlti with new aos, and improved facility performances, calls for a step forward in the future, opening again perspectives on an array extension. ideas start flourishing with bright goals of additional telescopes and longer, up to kilometer(s) baselines.
+the paranal site is actually suited for such an horizon, as it has already the infrastructures, but also several small summits where additional telescopes could be placed, and several possible places where large delay lines buildings could be installed (figure ).
+[example] 
+     
+preparing for the future. left: a montage showing how the vlti may look like in 20 years from now: new uts,  baselines longer than 1 km and sensitivity, as well as imaging capabilities (relatively short baselines, optimised (u,v) coverage). right: vlt map showing a possible expansion to kilometric baselines. orange stars mark possible new telescopes positions on local summits (to avoid shadowing). the solid line shows a possible place for a 1 km-long delay line building (following topographic level lines, alternate places in dashed lines). the thin dashed lines show direct view from the possible telescopes sites to the dl building (including the 4 to 6 already-cophased beams of the current vlti).
+gravity+ is  a consortium composed of german (mpe, mpia, university of cologne), french (cnrs-insu: lesia, paris ; ipag, grenoble ; lagrange, nice ; cral, lyon), british (university of southampton), belgian (ku leuven), and portugese (caup) institutes. the instrument was built in close collaboration with eso.
+we thank observatoire de la côte d'azur and université côte d'azur that provided resources to manufacture and operate the gpao testbench. this work was supported by agence nationale de la recherche (anr) through the exovlti (anr-21-ce31-0017),  massif (anr-21-ce31-0018) and agn melba (anr-21-ce31-0011) projects. french partners thank the specific action ashra and the national programs pnp, pnps and pncg. the project was as well funded by observatoire de paris and université grenoble alpes.
+dd has received funding from the european research council (erc) under the european union's horizon 2020 research and innovation program (grant agreement cog - 866070). this project has received funding from the european union's horizon 2020 research and innovation programme under grant agreement no 101004719.
+ 
+spiebib 
+/edocument/ 

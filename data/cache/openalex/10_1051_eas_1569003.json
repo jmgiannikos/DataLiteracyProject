@@ -412,16 +412,16 @@
   },
   "sustainable_development_goals": [
     {
-      "score": 0.8500000238418579,
+      "display_name": "Quality Education",
       "id": "https://metadata.un.org/sdg/4",
-      "display_name": "Quality Education"
+      "score": 0.8500000238418579
     }
   ],
   "awards": [],
   "funders": [],
   "has_content": {
-    "grobid_xml": false,
-    "pdf": false
+    "pdf": false,
+    "grobid_xml": false
   },
   "referenced_works_count": 74,
   "referenced_works": [

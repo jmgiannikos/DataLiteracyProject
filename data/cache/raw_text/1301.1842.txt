@@ -1,0 +1,141 @@
+.
+/bdocument/
+ii the circumstellar disk evolution after the periastronbased on observations made with eso telecopes at la silla paranal observatory under gto programme ids 089.d-0105(a) and 089.d-0105(b) fig.   is only available in electronic form via
+www.edpsciences.org
+a. meilland et al.
+sco at high spectral and spatial resolution : the circumstellar disk evolution after the periastron
+   
+ame@oca.eu
+laboratoire lagrange, umr 7293 université de nice-sophia antipolis (uns), observatoire de la côte d'azur (oca), boulevard de l'observatoire, b.p. 4229 f, 06304 nice cedex 4, france.
+physics and astronomy department, the university of western ontario, london, n6a 3k7, ontario, canada.
+ujf-grenoble 1 / cnrs-insu, ipag umr 5274, grenoble, f-38041, france
+inaf � osservatorio astrofisico di arcetri, istituto nazionale di astrofisica, largo e. fermi 5, 50125 firenze, italy
+max-planck-institut für radioastronomie, auf dem hügel 69, d-53121 bonn, germany
+  
+classical be stars are hot non-supergiant stars surrounded by a gaseous circumstellar disk that is responsible for the observed
+infrared (ir) excess and emission lines. the influence of binarity on these phenomena remains controversial.
+we followed the evolution of the environment surrounding the binary be star  scorpii one year before and one year after the 2011 periastron to check for any evidence of a strong interaction between its companion and the primary circumstellar disk.
+we used the vlti/amber spectro-interferometric instrument operating in the k band in high (12000) spectral resolution to obtain information on both the disk geometry and kinematics. observations were carried out in two emission lines: br (2.172 m) and   (2.056 m).
+we detected some important changes in  scorpii's circumstellar disk geometry between the first observation made in april 2010 and the new observation made in june 2012. during the last two years the disk has grown at a mean velocity of 0.2 km s. this is compatible with the expansion velocity previously found during the 2001-2007 period. the disk was also found to be asymmetric at both epochs, but with a different morphology in 2010 and 2012.
+considering the available spectroscopic data showing that the main changes in the emission-line profiles occurred quickly during the periastron, it is probable that the differences between the 2010 and 2012 disk geometry seen in our interferometric data stem from a disk perturbation caused by the companion tidal effects. however, taking into account that no significant changes have occurred in the disk since the end of the 2011 observing season, it is difficult to understand how this induced inhomogeneity has been “frozen” in the disk for such a long period.
+the binary be star  scorpii at high spectral and spatial resolution
+    a. meilland 1,2, ph. stee 1, a. spang1, f. malbet3, f. massi4, and  d. schertl5
+    received; accepted 
+===================================================================================
+§ introduction
+ 
+we initiated an interferometric follow-up of the binary be star  scorpii which has been regularly observed with the vlti/amber (petrov et al. 2007) and chara/vega (mourard et al. 2009) instruments since 2007. in meilland et al. (2011), hereafter paper i, we managed to refine  scorpii's binary orbit and the orbital period was the only orbital element which was significantly different from the one determined by tango et al. (2009). consequently, we determined that the next periastron should take place around 2011 july 5 ( 4 days). this result was also confirmed by tycner et al. (2011). thanks to the combination of high spectral and spatial resolution we constrained the geometry and the kinematics of  scorpii's circumstellar environment. we confirmed that the line emission originates from a dense equatorial disk fully dominated by rotation. we found that the rotation appears to be keplerian, with an inner boundary (photosphere/disk interface) rotating close to the critical velocity (v). the expansion was found to be approximately 0.2 km s.
+with the measured  vsini of 175 km s (berbacca & perinotto 1970), and the determined inclination angle of 28  8  we inferred that the star rotates between 60 and 105 of its critical velocity. moreover, taking into account a possible underestimation of the vsini because of gravity darkening (townsend et al. 2004), the lower limit on the stellar rotation would rise to about 70  v. finally, we measured the extension in the h line, i.e., 4.8  1.5 mas, which is about the same as the binary separation at the periastron, i.e., 5.9 mas. thus, we suggested that a strong interaction between the already ejected matter and the companion should occur during the periastron passage.
+this letter is organized as follows: in sect. 2 we briefly summarize other recent observations of   scorpii; in sect. 3 we present our vlti/amber observations and the data reduction. in sect. 4, the data are analyzed and compared to those acquired in april 2010, one year before the periastron, and finally, a short conclusion is drawn in sect. 5.
+§ recent observations of  scorpii
+the star  scorpii (7 scorpii, hr 5953, hd 143275) was observed by millan-gabet et al. (2010) using the chara/mirc instrument in the h band. they resolved an elongated disk with a gaussian fwhm of 1.18 x 0.91 mas. in the k band the disk was only marginally spatially resolved and they estimated an uncertain continuum disk fwhm of 0.7  0.3 mas. when taking into account the continuum/line flux ratio they obtained much larger sizes for the line emission regions, i.e., 2.2  0.4 mas for   and 1.9  0.3 mas for br.  in paper i,  we resolved the circumstellar disk in the h (fwhm= 4.8  1.5 mas), br (fwhm=2.90.5 mas), and the 2.06m he (fwhm= 2.4  0.3 mas) lines, as well as in the k-band continuum (fwhm  2.4 mas).
+in a recent paper che et al. (2012) imaged the disk distortion near the periastron. they revised the binary orbit and studied the primary disk properties during the periastron with npoi and chara/mirc interferometers. they were able to fit a global model where the secondary follows a keplerian orbit, as already mentioned in paper i, and the disk properties were found to be stable through all their observations. the estimated the new periastron passage to be ut 2011 july 3 07:00  4:30 which is within the error bar of the prediction made in paper i. they also estimated the mass of the secondary, based on the revised binary orbit and radial velocity (rv) measurements from miroshnichenko et al. (2001), to be  6 m with the primary mass 13.9 m estimated from v sin i, apparent teff, and v-band photometry measurements. the mutual angles between the disk mid-plane and orbital plane were estimated to be either  119 or  171. from the fitted global model, they also found that  3% of the h-band flux comes from a fully resolved envelope. the primary disk was found to be mainly symmetric and stable, contributing to 71.4  2.7% of the total h-band flux. this implies a quiescent inner disk and no ongoing material outflow after the periastron which is very different from what we obtained in the k band.
+on the other hand, rivinius et al. (2012) conducted a spectroscopic study of  scorpii emission lines during the periastron. they found that h and h profiles were strongly modified at the periastron. the major modification was that the violet/red (v/r) ratio went from v/r1 to v/r1 in only a few days. they argued that this was due to the direct tidal effect of the companion on the primary disk. 
+we note that we looked at many h and h observations made by amateurs available in the bess database [ http://basebe.obspm.fr] and that the line profiles did not change significantly from the state detected by rivinius et al. (2012) after the periastron.
+scorpii (u,v) 49lan coverage obtained  in 2012  with vlti/amber observations centered on br (left) and 2.06 m  (right) emission lines.
+§ observations and data reduction
+the star  scorpii was observed in june 2012 during two half-nights with the vlti 1.6m auxiliary telescopes (at) using the amber beam recombiner (petrov et al. 2007). the observations were carried out using high spectral resolution mode (r=12000) centered on either br or  (2.06 m) for each of the two half-nights. in order to enhance the signal-over-noise ratio (s/n) by enabling longer exposure time, the fringe tracker finito was also used. the star hd 139663 (d = 2.133  0.147 mas, lafrasse et al. 2010) was used as an interferometric calibrator.
+the data were reduced using the standard amber data reduction software  (see tatulli et al. 2007 and chelli et al. 2009 for detailed information on the amber data reduction). the average-raw complex visibility and closure phase was determined using the standard method, i.e., keeping the 20 % of the frames with the higher s/n ratio. the interferometric calibration was then done using custom-made scripts[available at ] described in millour et  al. (2008). the (u,v) plan coverage for all the observations is plotted in fig. .
+vlti/amber log for the 2012  scorpii observations.
+observation    triplet     2cprojected baselines
+date       time         l. (m)     p.a.()  
+4cobservations centered at 2.17 m (br)
+2012-06-22 23:46   d0-h0-g1    53/ 71/ 63     48/ 170/ 124
+2012-06-23 00:32   d0-h0-g1    57/ 71/ 67     57/ 175/ 126
+2012-06-23 01:21   d0-i1-h0    79/ 40/ 62     94/ -36/  63
+2012-06-23 02:05   d0-i1-g1    82/ 46/ 71     98/-143/ 132
+4cobservations centered at 2.06 m (he)
+2012-06-23 23:16   d0-h0-g1    50/ 71/ 60     43/ 167/ 123
+2012-06-24 00:07   d0-i1-h0    70/ 39/ 56     87/ -40/  53
+2012-06-24 00:52   h0-i1-g1    40/ 45/ 71    142/-152/ 177
+2012-06-24 01:35   d0-i1-g1    80/ 46/ 71     95/-146/ 130
+2012-06-24 02:18   d0-i1-g1    82/ 47/ 71     99/-141/ 134
+§ the disk geometry and kinematics
+§.§ qualitative comparison of the 2010 and 2012 data
+2010 (in red) and 2012 (in blue)  br  vlti/amber data for a similar projected triplet of baselines.
+the br and  absolute visibility  show a strong variability with an amplitude of about 0.2. assuming that the binary separation at the epoch of the observations should be 90.8 mas with a position angle (pa) of 156.08, according to paper i orbital parameters, these variations are compatible both in terms of amplitude and frequency with the binary modulation. however, the accuracy of the absolute visibility of vlti/amber data taken in hr mode is not sufficient to significantly refine the orbital parameters.
+the differential visibilities and phases, closure phase, and line profile from the 2010 br observation are plotted  in fig. . in the same figure, one single br 2012 observation with similar projected baselines is overplotted. the full 2012 dataset for br and  emission lines is presented in fig.  (online).
+the visibility and phase variations shown in fig.  are typical for a rotating disk. as discussed in detail in meilland et al. (2012), the morphology of visibility variations for a purely rotating disk depends on the baseline orientation. considering a non-fully resolving baseline, the variation is v-shaped for a baseline aligned with the disk's minor axis (baseline 1 of fig ) and w-shaped for a baseline aligned with the major axis (baseline 2 of fig ). baselines with intermediate orientation exhibit intermediate morphologies (see, for example, the weak w-shaped variation for the third baseline shown in fig. ).
+the s-shaped phase variations also strongly depend on the baseline orientation. in the case of a purely rotating disk, the amplitude is maximum for a baseline aligned with the major axis and zero for a perpendicular baseline. thus, from the simple analysis of data shown in fig.  it seems that the disk orientation did not significantly change between 2010 and 2012 with the major axis being oriented roughly in the direction north-south.
+however, fig.  also clearly shows important changes in the visibilities, phases, and line profile between 2010 and 2012. some of them favor the hypothesis of a significant growth of the equatorial disk between the two epochs:
+eginitemize
+* the visibility drop is clearly deeper in 2012.
+* the 2012 s-shaped phase variations are larger.
+* the 2012 line profile equivalent width (ew) is larger. 
+* the double-peak separation is narrower in 2012.
+nevertheless, other major changes seen in fig.  are not related to a growth of the disk:
+eginitemize
+* the v/r ratio went from 1.2 in 2010 to 0.9 in 2012.
+* the w-shaped-visibilities peak ratio is reversed.
+* the 2012 s-shaped phase variations are asymmetric.
+such changes of asymmetries in the spectrum, visibilities, and phases across the br line, are clear evidence of changes in the circumstellar matter distribution around the star. in the case of a rotating disk, these asymmetries usually stems from the inhomogeneity of the disk. the origin and nature of the disk's inhomogeneities and their evolution around the periastron are discussed in sect. 4.3.
+we note that all this evidence of the evolution of the disk around  scorpii between 2010 and 2012 are seen not only in the data plotted in fig. , but also on all the br and   dataset (see fig.  online).
+§.§ modeling of the 2012 data using the kinematic model
+to model the wavelength dependence of the visibility, differential phase, and closure phase in the observed emission lines we used the simple kinematic model developed for fast fitting of an expanding and/or rotating thin equatorial disk already described in paper i. the model is presented in more detail in delaa et al. (2011) and meilland et al. (2012).
+we used the best-fit model parameters of the 2010 data from paper i as a starting model. as expected, we obtained a very unsatisfactory fit with a  of 24.7. we then assumed that the stellar and kinematics parameters should not change between 2010 and 2012, and that only the br and  disk extension and line equivalent width (ew) should have evolved. in this case we found a best-fit model for fwhm = 8.0  0.5 r (4.2  0.3 mas), ew = 7.2  0.3 ,   fwhm = 5.2  0.3 r (2.8  0.2 mas), and ew = 9.1  0.3 . however, for this set of values the  is still high, i.e., 17.4.  
+we then performed a fit after releasing constraints on the stellar inclination angle (i), disk major axis orientation (pa), and disk kinematics, i.e., rotational velocity at the photosphere (v) and exponent of the rotational law in the disk (). thus, the only fixed parameters for this set of models are the distance taken from van leeuwen (2007) and the stellar radius taken from paper i. the best-fit model parameters are presented in table  and the model visibility, phases, and line profiles are overplotted on fig.  (online only).
+the  for this best-fit model, however, is still high, i.e., 14.6. by separating the fit on each line we found that the  data  have a significantly better fit (i.e.,  = 8.6) than the br data ( = 22.7). for both lines, the largest deviations between the observations and the data comes from the asymmetrical shape of the line profile as well as some visibility and phase variations. this effect will be discussed in the next section. 
+the 2010 and 2012 best-fit kinematic models.
+parameter	            (unit)    				            2010        				           2012        	
+4cglobal geometric parameters
+(fixed)			   	(r)				   	8.5											    8.5
+d			(fixed)			   (pc)								   	150											    150 
+i	   								 	   (deg)							    30  8 							    26  5 
+pa 										   (deg)							    -12  7							    -14  4
+4cglobal kinematic parameters
+v 	   (km.s	)			   	500  50							    500  50
+0.5  0.1							    0.5  0.05
+4cbr disk geometry
+fwhm    (r)				   	5.5  1								   7.8  0.3
+ew   ()		  			   	6.5  0.5							   6.2  0.2
+4che disk geometry
+fwhm			   (r)				   	4.5  0.5							   4.9  0.2
+ew			   ()		  			   	8.5  0.5							   8.8  0.3
+6.2																		   14.6
+we also note a second source of deviation. our best-fit model clearly underestimates the visibility for baselines close to the disk's minor axis. however, using a larger disk extension, we would overestimate the visibility for the other baselines and the over-resolution of the disk would  strongly modify the shape of the phase variations. such underestimation of the minor-axis visibility was already detected for  col, one of the be stars observed with vlti/amber (meilland et al. 2012). however, its origins remain unknown.
+§.§ the disk asymmetry
+okazaki (1997) proposed that the cyclic variation of the v/r peak ratio with a period of several years originates in the precession of one-armed density waves in the disk.  this assumption was compatible with spectro-interferometric observations of  cas (berio et al. 1999),  cma (meilland et al. 2007), and  tau (caricofi et al. 2009). this could also explain the change of the peaks ratio of the w-shaped visibility seen in fig. . however, according to observations made by rivinus et al. (2012), the v/r changes for  scorpii occurred during a very short timescale of a few weeks around the periastron. thus, it seems that the hypothesis of the one-arm oscillation cannot explain the current disk properties.
+we also note that, using our simple axisymmetric model, we obtained a better fit on the  data than on the br data. considering that the br emission line is formed further from the primary, it is supposed to be more perturbed by the companion tidal forces than the  line. consequently, the worse fit of the br data might be a clue of a more important tidal perturbation. one can also argue that the broad-band measurements taken by che et al. (2012) could not detect any tidal effect as the h-band continuum stems from an even smaller part of the disk than the  line. nevertheless, in the frame of an asymmetry induced by tidal effects in june-july 2011, it is also difficult to understand why the v/r remained almost constant between july 2011 and our observations in june 2012. one should expect the induced inhomogeneity to be either in co-rotation or precession, causing cyclical v/r variations with timescales ranging from weeks to years that are not seen in the available spectroscopic data.
+§.§ evolution of the disk extension
+our vlti/amber data clearly gives evidence that the br emission fwhm increased by about 40 (i.e., 2.3  1.3 r) between 2010 and 2012. assuming that this was directly cause by a physical growth of the circumstellar disk we derived a mean expansion velocity of 0.200.11 km s. this value is similar to  the one previously determined for  scorpii by miroshnichenko et al. (2003) for the 2001-2003 period, i.e., 0.4 km s, and the one derived in paper i for the 2000-2005 and 2005-2007 periods, 0.24 km s and 0.19 km s, respectively. it is also compatible with the one determined by kanaan et al. (2008) for the transient disk surrounding the binary be star achernar, i.e., 0.27  0.08 km s.
+the  line, however, did not exhibit the same variation as the br line. its growth, of about 8, remains within the uncertainties of the derived extension. one possible explanation for this difference is that  has a higher excitation energy. consequently, it is produced by denser and hotter material than br. thus, even if the disk is increasing in size as a function of time the  emitting region should remain compact, whereas the br may be produced in the newly formed outer part of the disk.
+in a recent paper, stee et al. (2012) measured the disk extension in these two lines for the relatively steady disk of the be star hd110432. the values derived for their measurement using the same methods showed that the  emission is about 25 smaller than the br emission. this value is between the one we found for  scorpii for our 2010 (18) and 2012 (37) models.
+§ conclusion
+using the unique high spectral and spatial resolutions of the vlti/amber instrument, we studied the evolution of  scorpii's circumstellar environment one year before and one year after the 2011 periastron passage. at both epochs, the data clearly shows that the ejected matter is located in a thin equatorial disk in keplerian rotation as it is for other observed be stars. since 2000, the disk seems to have grown with a quasi-constant velocity of about 0.2 km s and was still growing during the 2010-2012 period. such speed is compatible with the viscous excretion disk model proposed by lee et al. (1991). 
+we found evidence that the disk was asymmetric at both epochs of our observations, but with a different morphology in 2010 and 2012. according to spectroscopic observations made by rivinius et al. (2012), the major modifications occurred near the periastron. thus, the observed asymmetry cannot originate from a one-arm oscillation as proposed by okazaki (1997), but must stem from tidal effects induced by  scorpii's companion. however, according to available spectroscopic data and our 2012 observations, the disk asymmetry seems to be “frozen” since the periastron. finally, long-term spectroscopic and interferometric follow-up are needed to understand both the nature of the inhomogeneity after the periastron and its link with the tidal effects of the companion.
+br differential visibilities differential phases, and closure phases   
+       
+ 
+       
+    
+he differential visibilities differential phases, and closure phases
+			
+the full dataset for  sorpii 2012 vlti/amber observations. the red lines represents the vlti/amber data, and the green ones, the best-fit symetric kinematic model.
+the programme national de physique stellaire (pnps) and the institut national en sciences de l'univers (insu) are acknowledged for their financial supports.   a. meilland acknowledge financial support from the university of western ontario. the authors would like to thank eso staff for their help to make the observations a success and more particularly j-b lebouquin and f. rantakyro. 
+berio, p., stee, ph., vakili, f et al. 1999, a&a,345, 203
+ berbacca & perinotto, 1970, contr. oss. astrof. padova in asiago, 239, 1
+ carciofi, a.c., okazaki, a.t., le bouquin, j.-b. et al. 2009, a&a, 504, 915
+ che, x., monnier, j. d., tycner, c et al.  2012, apj, 757, 29
+ chelli, a., utrera, o. h. & duvert, g. 2009, a&a, 502, 705
+ delaa o., stee ph., meilland a., 2011, a&a, 529, a87
+ kanaan, s., meilland, a., stee, ph. et al. 2008, a&a, 486, 785
+ lafrasse, s., mella,  et al. 2010, jmmc stellar diameters catalogue
+ lee, u., saio, h. & osaki, y. 1991, mnras, 250, 432
+ meilland, a., millour, f., stee, p. et al. 2007, a&a, 464, 73
+ meilland, a., delaa, o., stee, ph. et al. 2011, a&a, 532, a80
+ meilland, a., millour, f., kanaan et al. 2012, a&a, 538, 110
+ millan-gabet, r., monnier, j.d., touhami, y. et al. 2010, apj, 723, 544
+ millour f., valat b., petrov r.g. & vannier m. 2008, spie, 7013, 132
+ miroshnichenko a.s., bjorkman k.s. et al. 2003, a&a, 408, 305
+ miroshnichenko a.s., fabregat j.,  et al., 2001, a&a, 377, 485
+ mourard d., clausse j.m., marcotto a., et al. 2009, a&a, 508, 1073
+ okazaki, a. t 1997, a&a, 318, 548  
+ petrov, r. g., malbet, f., weigelt, g et al. 2007, a&a, 464, 1
+ rivinius, th., stefl s., baade d. et al., 2012, asp conf. series 464, in press
+ stee ph., meilland a., bendjoya ph. et al. 2012, a&a, accepted
+ tango w.j., davis j., jacob a.p. et al. 2009, mnras, 396, 842 
+ tatulli e., millour f., chelli a et al. 2007, 464, 29
+ tycner c., ames a., zavala r.t. et al., 2011, apj, 729, 5
+ townsend, r. h., owocki, s. p., & howarth, i. d. 2004, mnras, 350, 189
+ van leeuwen f. 2007, a&a, 474, 653
+/edocument/

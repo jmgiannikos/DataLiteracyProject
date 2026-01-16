@@ -1,0 +1,154 @@
+.
+/bdocument/
+a. meilland et al.
+ cen: a new binary be star detected by vlti/amber
+meilland@mpifr-bonn.mpg.de
+max planck intitut fur radioastronomie, auf dem hugel 69, 53121 bonn, germany 
+laboratoire a.h. fizeau, umr 6525, uns/oca/cnrs, campus valrose, 06108 nice cedex 2, france
+laboratoire d�astrophysique de grenoble, umr 5571 université joseph fourier/cnrs, bp 53, 38041 grenoble cedex 9, france
+inaf-osservatorio astrofisico di arcetri, istituto nazionale di astrofisica, largo e. fermi 5, 50125 firenze, italy
+we study the be star  cen circumstellar
+     disk using long-baseline interferometry which is the only
+     observing technique capable of resolving spatially and spectroscopically  objects smaller than 5 mas in the h and k band.
+we used the vlti/amber instrument on january 6, 8, and 9, 2008, in the h and k bands to complete low (35) and medium (1500) spectral resolution observations. 
+we detected an oscillation in the visibility curve plotted as a function of the spatial frequency which is a clear signature of a companion around  cen. our best-fit soltution infers a binary separation of 68.7 mas, a companion flux contribution in the k band of about 7% of the total flux, a pa of 117.5 , and an envelope flux around the be primary that contributes up to about 50 % of the total flux, in agreement with our spectral energy distribution (sed) fit. the envelope size is estimated to be 1.6 mas in k but no departure from spherical symmetry is detected. 
+cen: a new binary be star detected by vlti/amber spectro-interferometry based on observations made with eso telecopes at la silla paranal observatory under gto programme ids 080.d-0131(a) and 080.c-0099(b)
+    a. meilland 1,  f. millour  1, ph. stee 2, a. spang 2, r. petrov2, d. bonneau 2, k. perraut 3, and  f. massi4
+    received; accepted
+==============================================================================================================================================================================================================
+§ introduction
+ 
+we have initiated an observational campaign to determine the global parameters of be stars and the origin of the so-called “be-phenomenon" using the vlti interferometer, which combines, for the first time, milli-arcsecond spatial resolution with good spectral resolution of up to 12000 in the near-ir k band. we are therefore able to study the geometry and kinematics within the circumstellar environment. three be stars have been observed with the vlti instruments and the global physical properties of these stars have been found to vary strongly from one star to another.
+achernar was the first be star observed with the vlti using the vinci beam recombiner. these observations exhibited a strongly flattened star due to an almost critical rotation (domiciano de souza & kervella 2003) and an extended polar wind that contributed to almost 4% of the total flux in the h band (kervella & domiciano de souza 2007) with no detectable equatorial disk. nevertheless, its circumstellar environment was known to be highly variable with a quasi-cyclic formation and a dissipation timescale of about 13 years proposed by vinicius et al (2007). kanaan et al. (2008) modeled these variations successfully as a possible outburst of circumstellar matter that has been ejected and was propagating within the stellar environment with an expansion velocity of 0.2km s.
+arae was the second star observed with the vlti, using both midi and amber instruments, and the observational results were published by chesneau et al. (2005) and meilland et al. (2007a). the data interpretation was completed with the simeca code developed by stee et al. (1994), which is able to simulate the gaseous circumstellar environment of active hot stars. two distinct regions in the circumstellar environment of   arae are clearly present : a thin keplerian rotating equatorial disk and a rapidly expanding enhanced polar wind. as for achernar, the stellar rotational velocity, which was readily measurable due to the flatness of the projected envelope onto the sky plane, was found to be almost critical. by combining midi and amber data, they found that the disk size did not vary as a function of the observing wavelength, which was a strong indication of possible disk truncation, as confirmed by more “classical" spectroscopic measurements.
+finally, the third be star studied using the vlti instruments, was  cma, observed with amber in mr mode and presented in meilland et al. (2007b). for this star, a non-keplerian rotating disk was detected. the star was found to rotate far below its critical velocity, which appears to indicate that critical rotation may not be a requirement of the “be phenomenon". since it has an early spectral type of b2v, the radiation pressure might however be sufficient to initiate a mass loss and possible disk formation. this hypothesis agrees with the cranmer (2005) statistical study. finally, the spectro-differential interferometric measurements were able to detect the presence of an inhomogeneity in the circumstellar envelope of this star, which could be interpreted in terms of the "one-armed" viscous disk framework of okazaki( ).
+to increase the number of be stars observed by the vlti and initiale a statistical study of the geometry and kinematics of their surroundings, and study the possible dependence of the “be phenomenon" on the spectral type of the central star, we requested new amber observations of 6 close and bright enough be stars of spectral types ranging from b1 to b8 of which  cen was one star.
+this letter is organized as follows: in sect. 2 we briefly introduce the be star  cen and its fundamental parameters, in sect. 3 we present our vlti/amber observations and the data reduction, and in the last section our results are summarized and conclusions are presented.
+name     l (m)    p.a. ()
+b    85     -158 
+b    85.9     -75  
+b    127.9     -116
+b    31.9     -111  
+b    16     -111 
+b    47.8     -111 
+left : names, lengths, and p.a. for each baseline of the two triplets of observation. note that the two measurements from january 8 with a0-k0-g1 are merged into  b, b, and b baselines, since the projected baseline length and p.a. does not vary significantly between them. b, b, and b baselines correspond to the e0-g0-h0 triplets. right: (u,v) plane coverage obtained during the  cen observing run. fortunately, the largest projected baseline is aligned with the shorter ones.
+§  cen
+cen (hr 4621, hd 105435, hip 59196) is usually classified as a b2ivne star. levenhagen & leister (2006) considered a spectroscopic analysis that did not take account of the effects of gravity darkening and proposed a b2vne classification. it is a variable star with a brightness variation between magnitude 2.65 and 2.51.  cen has the same proper motion as the nearby stars hd 105382 (which is also a be star) and hd 105383 and may therefore be member of a triple visual star system. a precise radial velocity (rv) measurement campaign of b stars in the scorpius-centaurus association conducted by jilinski et al. (2006) measured a rv for  cen of 3.8 2.8  km s. the rv determined by various authors from the simbad database also exhibits a large dispersion, which might indicate possible binarity, as we see in the following. on the other side, mason et al. (1996) and mason (2008), using u.s. naval observatory (usno) and center for high resolution astronomy (chara) speckles cameras did not detect any binarity for this star.
+based on an autocorrelation analysis of hipparcos photometry, percy et al. (2002) presented a self-correlation diagram with strong minima at 0.55 and 1.1 days, in contrast, balona (1990) reported a tentative period of 1.923 days, implying that  cen is a short-period variable be star. studying line profile variations in 1999 heros spectroscopic data, rivinius et al. (2003), confirmed both values at 0.532d and 1.139d but with a formally somewhat higher significance of the longer period which was adopted in their paper. they concluded that  cen line profile variability was modeled successfully  as  a non-radial pulsator with  =  = +2, as for the be star  cma, but with a strongly asymmetric power distribution of the line profile variability with a unidentified cause. the star's distance was estimated by hipparcos to be 12111pc, and its k and v magnitude to be 2.7 and 2.56, respectively . lenorzer et al. (2002) identified  cen as a b star with emission lines observed in the iso short wavelength spectrometer  post-helium program of the infrared space observatory (iso). the fundamental parameters determined for rapidly rotating b-type stars by frémat et al. (2005), taking into account gravitational darkening were t=22384  446 k, log =3.942 0.053, and vsin=26314 km s. its linear critical equatorial rotation velocity was v=52729 km s and its inclination angle estimated to be =41.62.3. levenhagen & leister (2004) estimate its age to be log age = 7.20 0.15 yr, its luminosity log =3.70 0.10, and its mass 8.6 0.3 m.
+§ observations and data reduction
+obs. time    target     triplet     mode     seeing
+06/01/08 08:59      cen     a0-k0-g1     mr     1.02"
+06/01/08 09:11     hd109538     a0-k0-g1     mr      1.13"
+06/01/08 09:26      cen     a0-k0-g1     mr     1.19"
+08/01/08 08:48     hd90798     e0-g0-h0     lr     0.50"
+08/01/08 09:11      cen      e0-g0-h0     lr     0.94"
+09/01/08 08:07     hd47536     e0-g0-h0     mr     0.68"
+09/01/08 08:31      cen     e0-g0-h0     mr      0.74" 
+09/01/08 08:50     hd109538     e0-g0-h0     mr     0.87"
+09/01/08 09:08      cen     e0-g0-h0     mr      1.22"
+09/01/08 09:28     hd109538     e0-g0-h0     mr      0.71"
+observations log of  cen and its calibrators during the january 2008 be amber gto run.
+cen  was observed with amber in low and medium
+spectral resolution modes (spectral resolving powers of r=35 and r=1500, respectively) during the
+observing runs 080.c-0099 and 080.d-0131, completed in january, 6, 8, and 9, 2008. five
+measurments were obtained with the auxilliary telescopes (1.8m
+diameter) on the a0-k0-g1 and e0-g0-h0 baseline triplets. hd 109593
+(apparent diameter of 1.6380.021 mas in the charm2 catalog
+from richichi et al. ), hd 47536 (apparent diameter of
+1.690.03 mas, also in charm2), and hd 90798 (apparent diameter
+1.700.51 mas using the getcal[available at
+  ] tool) were
+also observed to calibrate  cen visibilities. the log of
+these observations are presented table 1.
+the data were reduced using the amber data reduction software
+developped by the jmmc: , version 2.1. it computes a fringe
+fitting of the amber data, after correcting for detector
+bias and flat-field (millour et al.,  and
+tatulli et al., ). following that step, we 
+adopted two different approaches to calibrate the data: 
+eginitemize
+* the “standard” approach, which retains 20% of the total number
+  of frames according to the fringe snr. this allows us to limit the
+  fringe smearing effect (also called “jitter” effect) and the
+  coherence length visibility loss due to the atmospheric opd
+  (described in millour et al. ). the
+  following steps (transfer function estimation, calibration) were
+  completed using a new set of custom-made scripts described by millour et
+  al. ([the scripts are available to
+    the community at the following webpage:
+    ]).
+* an approach using bootstrapping, roughly explained in tatulli
+  et al., () and described in more detail in
+  cruzalèbes et al. (). a frame-selection scheme
+  that rejects frames with a negative flux, a high opd variation from
+  frame to frame, and a snr of less than 1, is also applied. the calibration procedure is then
+  completed the same way as for the previous method.
+the two methods provide the same results within the error bars and
+we therefore choose to use the calibrated data from the first method later in the paper. since the aim of the paper is to determine the binary parameters, we exclude the january 9 mr data for which
+projected baselines are similar to the january 8 lr ones and the
+data quality is significantly lower. finally, we merged the two
+january 5 mr measurements obtained with almost the same projected
+baseline, and determined the wavelength-dependent visibilities
+for the six baselines presented fig. 1. the corresponding (u,v)
+plane coverage of the science target is also plotted in fig 1. 
+§ results
+cen spectral energy distribution (sed) reconstructed from various sources in the literature : morel (1978), 2mass, iras magnitude and flux measurements (diamonds), iue spectra (solid line in the uv), and iso spectra (solid line in the ir). the dashed line is a kurucz model for t = 21000k, r = 5.9r, log g = 4, and d = 121pc.
+left: lr k (dark) and h (gray) bands visibilities for the january, 8 2008 baselines (b, b, and b) as a function of the spatial frequency. second picture from the left to the right: mr visibilities for the january, 5 2008 baselines (b, b, and b) as a function of the spatial frequency. for all figures, measurements are given by the error bars, whereas the solid line corresponds to our best-fit binary + uniform disk circumstellar envelope modeled using parameters from table 2.
+for a single be star, assuming that the visibility we measure, , is only due to the central star and its circumstellar disk we can write: 
+where v and f are respectively the envelope visibility and flux in the continuum , v and f the star visibility and flux in the continuum and f = f+f. to measure accurately the extension of a circumstellar envelope from an interferometric measurement, we therefore need to determine both f and f at the observing wavelength. this can be achieved directly by analyzing data acquired by interferometry if, at least, two baselines resolve the envelope completely but not the star (i.e, v=0 and v1). in the case of our  cen amber data, even the longest baseline (i.e, b=127.9m) is too short to fully resolve the circumstellar envelope. 
+to determine f and f in h and k bands to the highest possible accuracy, we started our modeling by constructing the  cen spectal energy distribution (sed) using various sources in the literature (see fig. 2). a kurucz model, fitted from uv and visible measurements, for which the circumstellar contribution was negligible, was used to determine the stellar contribution to the flux for wavelengths ranging from uv to far-ir. the values of the best-fit kurucz model parameters, which were consistent with those found in the literature and were introduced in sect. 1, are presented table 3. this method allows us to characterize precisely the circumstellar ir-excess. taking into account the uncertainty in the spectral class of  cen and its small variability in the near ir, we obtain f= 0.520.06 f in the k band and 0.380.08 f in the h band. 
+k and h band calibrated visibilities obtained with the small aligned triplet in lr mode (i.e. b, b, and b) are plotted as a function of the spatial frequency in fig. 3. these data exhibit clearly a sinusoidal modulation with a period of t=22 cycles/arcsec and an amplitude of a=0.150.02. this variation cannot be reproduced by a simple star +  circumstellar envelope model regardless of the geometry of this second component (e.g. uniform or gaussian disk, or ring), and is usually produced by a companion. the separation between the two components in the direction of the projected baselines (i.e., -111) is given by s=1/t=44.80.5 mas, and its flux  by f=a/2 = 0.0750.01f. we note that this value may be biased towards a dimmer flux ratio since the separation is 25 of the telescopes psf ( 240mas with the ats at 2.1m) and the amber instrument uses monomode fibers (tatulli et al. 2004). however, it is beyond the scope of this paper to correct for this effect.
+to reproduce the small slope in the visibilty as a function of spatial frequency, we need to introduce a small circumstellar envelope (i.e., d=20.5mas) around one of the two components. we note that the data also indicate some small differences in modulation amplitude between the h and k band data. the characterization of these differences, probably due to the variation in the binary flux ratio between these spectral bands, is again beyond the scope of this letter and is not described here.
+the b, b, and b data are also plotted in fig 3. these measurements place additional constraints on the binary and the circumstellar envelope. the b and b data show a sinusoidal modulation with periods corresponding to a separation between the binary components in the projected baseline directions of s=625 mas and s=526 mas, respectively. the amplitude of the modulation is a=a=0.150.05 which is in agreement with the measurement for the january 8 lr data (i.e., a=0.150.02). the separation measured by b is consistent with that measured for data acquired with the lr triplet; this is a good indication that our measurements are not biased by some instrumental effects since b is almost aligned with the lr triplet (i.e. p.a.=-116 for b, and p.a.=-111 for b, b, and b). the difference between the two measurements can be due either to a inaccurate spectral calibration of amber lr data (up to 0.1m) or to a small change in the projected separation due to the 5 of variation in p.a. between the two data sets. finally, there is no evidence of a sinusoidal modulation in the b data. since the modulation may not be detected if its period is at least 3 times the observation range in spatial frequency (i.e., t50 cycles/arcsec), the binary separation along this projected angle, s, is lower than 20 mas. the average visibility of each baseline (i.e. =0.82, =0.86, and =0.81) indicates clearly the presence of an extended component, probably a circumstellar envelope with an extension of about 20.5mas.
+by measuring the projected separation in at least two different directions in the sky, we can determine the modulus and the orientation of the binary separation on the sky plane. our most appropriate binary star + circumstellar envelope model is obtained for a set of values given in table 2. the modeled visibility obtained in k band for each of the six baselines is plotted with the observed measurements in fig. 3. we note that to verify that the binary signal did not originate in the calibrators we checked that the modulation was evident in the science object raw visibilities and not on the calibrator ones.
+since amber operates simultaneously with three telescopes, we are able to measure the closure phase for each triplet. such measurements place additional constraints on our models. figure 4 shows a reasonable agreement between observed and modeled closure phase using parameters from table 2.
+finally, using r=5.9r and d=121pc, the 68.7mas separation between  cen and its companion corresponds to 30050r. assuming a circular orbit, this provides a lower limit to the semi-major axis. the companion spectral class can be inferred using both  cen spectral class and k band flux ratio determined from the amplitude of the modulation in the interferometric data. the companion spectral class should range between b4v and a0iii, and its mass between 4 and 7 m. using kepler's third law of planetary motion, , where  is the period in years,  is the semi-major axis in au, and m is the binary system total mass in , we can determine a lower limit to its period, i.e. 4.6 years with =15.2m and =250r=6.9au.
+additional interferometric observations, including long-term monitoring, would be required to determine why these results disagree with those of the speckles observations of mason (1997, 2008) and to fully determine the projected orbit of the companion of  cen. spectroscopic follow-up should also be completed even though the doppler shifts due to binarity are difficult to measure if the star is a rapid rotator (i.e, v sin i= 263km s), and the profiles are affected by non-radial pulsations. the circumstellar environment geometry and kinematics will be studied in a forthcoming paper, which will include all january 2008 vlti/amber medium resolution differential visibilties as well as vlti/midi data. 
+distance     121  11 pc
+21000  1000 k
+stellar radius     5.9 0.5 r
+log      3.75  0.25
+companion flux (k band)     0.070.0.1 f
+separation     68.70.5 mas
+position angle (pa)     117.50.5
+envelope flux (k band)     0.520.06  f
+envelope diameter (k band)     1.60.4 mas
+parameters and results for the binary system + uniform disk circumstellar envelope obtained for  cen. note that there is a 180 ambiguity in the position angle since the amber closure phase data reduction process is not fully validated.
+observed and modeled closure phase for the bbb (left) and bbb (right) triplets plotted as a function of the average spatial frequency. for all figures, the measurements are represented by the error bars whereas the solid line corresponds to our best binary + uniform disk circumstellar envelope modeled using parameters from table 2.
+the programme national de physique stellaire (pnps), the institut national en sciences de l'univers (insu)  and the max planck institut fur radioastronomy (mpifr) are acknowledged for their financial support. 
+the authors would like to thank eso staff for their help to make the observations a success and more particularly j-b lebouquin and f. rantakyro. this research has made use of simbad database, operated at cds, strasbourg, france.
+balona, l. a., 1990, mnras, 245, 92
+ chesneau, o., meilland, a., rivinius, t et al. 2005, a&a, 435, 275
+ cranmer, steven r., 2005, apj, 634, 585
+[2007]2007cruzalebesesocalws cruzalèbes, p.; spang, a.; et al.,
+  “calibration of amber visibilities”, in “eso calibration workshop
+  2007”, springer, in press.
+ domiciano de souza, a., kervella, p., jankov, s., et al. 2003, a&a, 407, l47
+ fr�mat, y., zorec, j., hubert, a.-m., & floquet, m., 2005, a&a, 440, 305
+ jilinski, e., daflon, s., cunha, k., & de la reza, r., 2006, a&a, 448, 1001
+ kanaan s., meilland a., stee ph., et al. 2008 a&a, 486, 785 
+ kervella p. & domiciano de souza, a. 2007, a&a, 474, l49
+ lenorzer, a., vandenbussche, b. morris, p. et al. 2002, a&a, 384, 473
+ levenhagen, r.s. & leister, n.v. 2004, aj, 127, 1176
+ levenhagen, r.s. & leister, n.v. 2006, mnras, 371, 252
+ mason, b.d., ten brummelaar, th., gies, d.r., et al., 1997, aj, 114, 2112
+ mason b.d., 2008, private communication 
+ meilland, a., stee, ph., vannier, m. et al.  2007a, a&a,
+  464, 59
+ meilland, a., millour f., stee, ph. et al.  2007b, a&a,
+  464, 73
+[2008]millourspiedrs2008 millour, f., et al., to be
+  published in spie astronomical telescopes and instrumentation, 2008.
+[2007]2007millouresocalws millour, f., et al., in “eso
+  calibration workshop 2007”, springer, in press.
+[2004]2004spie.5491.1222m millour, f.; tatulli, e. et al., spie, 2004, 5491, 1222
+ morel, m. & magnenat, p., 1978,a&as, 34, 477
+[1997]okazaki okazaki, a., 1997, a&a 318, 548
+ percy, j.r., hosick, j, kincaide, h. et al. 2002, pasp, 114, 551
+[2005]2005a   a...431..773r richichi, a.; percheron, i. & khristoforova, m.; a&a, 2005, 431, 773
+ rivinius, th., baade, d., & stefl, s., 2003, a&a, 411, 229
+[1994]stee0 stee, ph., & araújo, f.x. 1994 , a&a, 292, 221
+[2007]2007a   a...464...29t tatulli, e., millour, f. et al. 2007, a&a, 464, 29
+tatulli, e., mège, p., & chelli, 2004, a., a&a, 418, 1179
+vinicius, m. m. f., zorec, et al. , 2006, a&a, 446, 643
+/edocument/

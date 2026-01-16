@@ -746,8 +746,8 @@
   "awards": [],
   "funders": [],
   "has_content": {
-    "pdf": false,
-    "grobid_xml": false
+    "grobid_xml": false,
+    "pdf": false
   },
   "referenced_works_count": 22,
   "referenced_works": [

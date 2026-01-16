@@ -1,0 +1,409 @@
+.  
+aa 
+();a, 
+[3][][]
+ 
+/bdocument/ 
+leiden observatory, leiden university, einsteinweg 55, 2333 cc leiden, the netherlands
+konkoly observatory, research centre for astronomy and earth sciences, hun-ren, konkoly-thege miklós út 15-17, 1121 budapest, hungary
+csfk, mta centre of excellence, konkoly-thege miklós út 15-17, h-1121 budapest, hungary
+anton pannekoek institute for astronomy, university of amsterdam, the netherlands
+max planck institute for astronomy, königstuhl 17, d-69117 heidelberg, germany
+université côte d’azur, observatoire de la côte d’azur, cnrs, laboratoire lagrange, france
+univ. grenoble alpes, cnrs, ipag, 38000 grenoble, france
+nasa goddard space flight center, astrophysics division, greenbelt, md 20771, usa
+star institute, university of liège, liège, belgium
+max-planck-institut für radioastronomie, auf dem hügel 69, 53121, bonn, germany
+institute of theoretical physics and astrophysics, university of kiel, leibnizstr. 15, 24118 kiel, germany
+aim, cea, cnrs, université paris-saclay, université paris diderot, sorbonne paris cité, f-91191 gif-sur-yvette, france
+institute for mathematics, astrophysics and particle physics, radboud university, p.o. box 9010, mc 62 nl-6500 gl nijmegen, the netherlands
+sron netherlands institute for space research, niels bohrweg 4, 2333 ca leiden, the netherlands
+steward observatory, university of arizona, 933 n. cherry avenue, tucson, az 85721, usa
+the inner regions of planet-forming disks hold invaluable insights for our understanding of planet formation. of particular interest are inner disk regions that may be influenced by already formed planets. the disk around the herbig star hd 100453 presents one such environment, with an inner disk that is significantly misaligned with respect to the outer disk. 
+   
+   this paper expands the existing h-band (pionier) and k-band (gravity) interferometric studies of the hd 100453 inner disk to the l-band with the matisse vlti instrument. with snapshot data spanning approximately four years we aim for a more comprehensive understanding of the inner disk structures and their potential time evolution.
+  
+   based on the matisse data obtained, we use a combination of analytical models and image reconstruction to constrain the disk structure. additionally, we fit a temperature gradient model to the selected wavelength range of pionier, gravity and matisse to derive physical properties of the inner regions.
+   
+   our parametric model finds an inclination of  and a position angle of , which corroborates the case of strong inner-outer disk misalignment. from the symmetric temperature gradient we derive an inner disk radius around  au, with dust surface densities of  g/cm and vertical optical depth .    
+   same-night matisse and gravity observations show directional discrepancies not consistent with a first-order azimuthally modulation ring, indicating the necessity for higher-order asymmetries to explain the interferometric signals. this interpretation is further supported by a matisse snapshot image reconstruction, which reveals a two-component asymmetric structure. 
+ 
+ the chromatic interferometric data reveal the likely need for higher-order asymmetries to explain the inner disk of hd 100453, suggesting a possible origin in dynamic interactions or disk instabilities. coordinated multi-wavelength infrared interferometric observations with gravity and matisse will be crucial to confirm these findings and uncover its underlying nature.
+ 
+   
+the complex inner disk of the  star hd 100453 with vlti/matisse
+    l.n.a. van haastere1
+j. varga2,3,1
+m.r. hogerheijde1,4
+c. dominik4
+m. scheuck5
+a. matter6
+r. van boekel5
+b. lopez6
+m. abello6
+j.-c. augereau7
+p. boley5
+w.-c. danchi8
+v. gámez rosas9
+th. henning5
+k.-h. hofmann10
+m. houllé6
+w. jaffe1
+j. kobus11
+e. kokoulina9
+l.h. leftley6
+m. letessier7
+j. ma7
+f. millour6
+e. pantin12
+p. priolet7
+d. schertl10
+j. scigliuto6
+g. weigelt10
+s. wolf11
+p. berio6
+f. bettonvil14
+p. cruzalèbes6
+m. heininger10
+j.w. isbell15
+s. lagarde6
+a. meilland6
+r. petrov6
+s. robbe-dubois6
+matisse collaboration
+january 16, 2026
+==============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+§ introduction
+since the first exoplanet discoveries in the early 1990s, it has been shown that many stars host planets in their inner few astronomical units (au) (e.g. 1995natur.378..355m; 2024psj.....5..152l). these close-in planets motivate the investigation of the central regions of protoplanetary disks, to expand and refine planet formation theories 2023aspc..534..717d.
+this last decade, research with facilities such as alma, gpi and sphere has shown that, unlike the classical smooth disk paradigm, the outer regions of planet-forming disks in the millimeter- and optical wavelength regimes are highly structured and frequently show features such as gaps, rings, shadows, crescents and spirals, in both dust and gas (e.g., 2023aspc..534..605b; 2023aspc..534..423b). 
+in parallel, high-resolution interferometric observations with the very large telescope interferometer (vlti) have proven to be powerful tools in the infrared, capable of probing the inner regions of planet-forming disks at spatial resolutions of a few milliarcseconds (mas), allowing for complementary and unique investigations of structures in the inner few au regions of the planet-forming disks (e.g. 2017a   a...599a..85l;2019a   a...632a..53g;2021a   a...655a..73g). 
+some circumstellar disks show narrow or broad darker regions in scattered light which are interpreted as shadow lanes and are hypothesised to be caused by a misalignment between the inner and outer disk due to a warp or tilt (e.g.  2017aj....154...33a, 2017a   a...597a..42b, 2023aspc..534..605b). the main theories for inducing such a warped or misaligned disk are a stellar/planetary mass companion on an inclined orbit or a misaligned stellar magnetic moment 2018mnras.473.4459f.  
+the occurrence rate of inner-outer disk misalignments is uncertain, but some statistical studies have been done: 2022a   a...658a.183b investigated 20 transition disks with known shadow lanes with near-infrared interferometry, and showed that at least six of them show a measurable misalignment. 
+a study by 2024apj...961...95v exploring lateral asymmetries in edge-on disks suggests that such phenomena could also arise from a misaligned inner disk region. notably, among 20 investigated edge-on disks, 15 exhibit this lateral asymmetry. overall, this suggests that misalignments between inner and outer disk regions are relatively common.
+in this study we focus on one of these objects with a significant misalignment between the inner and outer disk; the herbig ae system hd 100453. the star is surrounded by a gapped transition disk with a large scale spiral feature in its outer disk which is visible in both mm- and scattered light, and a clear shadow lane indicating disk misalignment (2017a   a...597a..42b; 2020mnras.491.1335r). 
+the large gap between the inner and outer disk is suspected to be caused by an undetected exoplanet () located between 15 and 20 au 2020mnras.499.3857n. meanwhile, the spiral feature and the misalignment of the outer disk are attributed to the stellar companion, which orbits at a projected distance of  au. this companion orbits on a significant misaligned orbit, influencing the outer disk through the kozai-lidov mechanism (2009apj...697..557c; 2020mnras.499.3837g, 2023a   a...675l...1x).
+recent vlt/sphere observations ruled out inner companions with  in the 10 to 190 mas separation range (1.0 to 19.7 au) from the central star 2024a   a...682a.101s. the misaligned inner disk has also been observed with the vlti/pionier and vlti/gravity instruments, which found approximate half-light radii of  mas (0.27 au) at 1.65 m, and  mas (0.31 au) at m, respectively (2017a   a...599a..85l; 2022a   a...658a.183b). the recovered inclination and position angle aligned well with the shadow lane in scattered light sphere data. the gravity closure phase data showed a preference for inclusion of a first-order asymmetry, with a flux skewness of a along the major-axis () in the south-west direction.
+in table , we summarise a few of these relevant system properties in the context of our research.  
+in this paper, we present the first interferometric l-band observations of the inner disk region of hd 100453, aiming to describe the continuum dust structures and asymmetry. in sect.  we describe the observations, selection, data reduction, calibration, and discuss the reduced observations. in sect.  we present the results of the parametric modelling, time variability analysis, and image reconstruction.
+in sect.  we look at a combined model using published pionier and gravity data. finally, in sect. we discuss some interpretations and implications of our findings.
+stellar and disk properties of the hd 100453 system.
+parameter         value     reference 
+                                                   
+3lhd 100453 (a) 
+spectral type       a9 – f0                             (1)        
+mass                 m            (1)        
+radius                 r            (1)        
+k                     (1)       
+age                 6.5 – 19.2 myr                      (1), (2)     
+distance             pc                 (1)       
+luminosity           l            (1)        
+3lcompanion (b)  
+spectral type      m4.0v – m4.5v                        (3)       
+mass                 m            (3)        
+age                 8 – 12 myr                      (3)       
+projected separationa       1.05",  109 au           (3)      
+3ldisk(s)        
+inclination (outer)       38         (4)          
+ 
+position angle (outer)b     142         (4)          
+ 
+inclination (inner)       48.7 – 46.1         (5), (6)          
+ 
+position angle (inner)b     80.8 – 81.6         (5), (6)        
+ 
+asym. angle (inner, k-band)b              (6)        
+ 
+                          
+3lhypothesised planet            
+ mass (theory)                          (7)        
+mass (non-detection)           (8) 
+estimated distance                 15 – 20 au                      (7)       
+estimated period       45 – 72 yr                 
+aoutside l-band at field of view, pinhole  0.60".
+ball angles are defined as north to east.
+(1) 2021a   a...650a.182g;
+(2) 2018a   a...620a.128v; (3) 2009apj...697..557c; (4) 2017a   a...597a..42b;
+(5) 2017a   a...599a..85l; 
+(6) 2022a   a...658a.183b;
+(7) 2020mnras.499.3857n;
+(8) 2024a   a...682a.101s
+§ observations and data reduction
+§.§ vlti/matisse
+the observations of hd 100453 were made with the multi aperture mid-infrared spectroscopic experiment (matisse)(2014msngr.157....5l; 2022a   a...659a.192l). matisse can interferometrically combine the light of a target in the l-, m- and n-bands (3.04.0 m, 4.65.0 m, 813 m) either with the four 8.2 m diameter unit telescopes (uts) or the 1.8 m diameter auxiliary telescopes (ats), with baselines spanning from 15 to 200 m. 
+data on hd 100453 were obtained with the uts and a variety of at arrays between 2019 may and 2023 march as part of the matisse guaranteed time observing campaign. table  shows the relevant night and observation information, and fig. shows the  space sampling from the selected datasets. 
+with the baselines used in this study, we probe disk structures at a beam resolution on the order of . 
+the typical observation sequence consists of a science target and a calibrator star, which are both observed with two independent observation modes; chopped and non-chopped. for chopped observations the telescope field-of-view alternates back-and-forth between taking data from the science target, to taking the empty sky background, which is used to measure more accurate total fluxes. non-chopped observations remain on target during the full duration which enhances the stability of the interferometric fringe tracking of the observation, which often results in better signal-to-noise ratios (snr) but can be biased at longer wavelengths due to changing atmospheric conditions compared to when the the background calibration is taken. when both are available in an observation sequence, we use the visibilities of our chopped observations and the closure phases of the non-chopped. for more details see 2022a   a...659a.192l.
+the reduction and calibration of all datasets were done using the esorex drs-pipeline 2.0.2 2016spie.9907e..23m, and the matisse pipeline tools[matisse pipeline tools are available separately as an addition to the standard drs software; ]. 
+the drs pipeline reduction followed standard settings for incoherent reduction, with two key modifications. the smoothing parameter  was set to 10 pixels to improve photometric estimation (useful for faint stars  in l-band at). additionally, the sliding average  parameter was set to 5 or 75 pixels per channel for low () or medium () resolution, respectively, increasing snr and bringing both observation types effectively at the same resolution.
+there are clear differences in the data quality of each dataset after reduction, originating from different night conditions. 
+after careful assessment, we found that a number of our observations had to be excluded. in particular, the 2019-05-15 ut, 2022-03-14 chopped at, and 2022-12-18 at sets were of poor quality. these observations were all taken during turbulent atmospheric conditions making the interferometric fringe-tracking and measurements unreliable. 
+the faintness of hd 100453 ( in correlated fluxes) in the n-band is below the recommended at sensitivity limit and hence data are very noisy at longer at baselines. weather conditions during the 2019-05-15 ut observations also resulted in poor n-band data, although this might be salvageable in the future by a planned improvement in the frame flagging algorithm in the data reduction pipeline. we therefore limit our study to the l-band continuum. 
+unfortunately, we were not able to always utilise the entire spectral coverage offered by the matisse l-band because of frequent artefacts arising from atmospheric ho absorption. consequently, the starting segment of the l-band (m) had to be excluded from all datasets. additionally, visibilities at longer wavelengths in especially non-chopped observations, frequently experienced bias due to the background subtraction, necessitating their removal as well.  the upper limits were chosen manually per dataset in the range of m, depending on where the distances between reduced visibilities stayed roughly constant.
+as a result, the analysis in this study primarily focuses on the continuum emission from 3.4 to m, see appendix . 
+after reduction and calibration each measurement provides us with the total flux and the following interferometric quantities; 
+six squared visibilities , 
+and four closure phases (), where  is the
+fourier transform of the interferogram,  is the photometric flux, and  is the normalised squared visibility amplitude between a telescope pair  and . indices , , and  correspond to individual telescopes.  
+figure  shows an overview of the visibilities  and closure phases  of the matisse l-band data, combining all observing dates and including only the selected wavelengths; see appendix  for the results for each individual observing date. the visibilities of fig. [fig:overview_data_all]2a decrease from 0.9 on short baselines (3 m) to  on baselines 30 m. 
+the fact that the visibilities do not go to 1.0 on short baselines indicates that 10% of the flux is distributed on scales 35 mas (3 m).  
+observations on baselines with similar lengths but different position angles show a different slope of the visibility amplitude versus baseline curve, indicating that the emission follows an elongated shape.
+figure [fig:overview_data_all]2b shows that closure phases are of a few degrees out to 20 m which start to deviate by 10s to 150 on longer baselines. the latter suggests an asymmetry on 3 mas scales. 
+overview of  space and timeline covered by the selected matisse observations. each night is indicated with a unique marker. the colour represents the at station configurations. 
+           
+         
+calibrated squared visibilities and closure phases from all the selected matisse observations.
+           
+         
+§.§ vlti/pionier and vlti/gravity archival data
+to complement our modelling we also included the existing published calibrated interferometric data in h-band (m) and k-band (m) from the pionier and gravity vlti instruments, respectively. data under programme ids  190.c-0963 & 106.21jr.001 were retrieved from the jmmc optical interferometry database[], or directly provided by the pis. the eleven pionier observations cover earlier times between december 2012 and february 2013, while the seven gravity datasets fall within our matisse timeline with data between december 2020 and march 2021. for reduction and observation details for the pionier and gravity data, see the respective 2017a   a...599a..85l and 2022a   a...658a.183b papers.
+§ analysis of matisse observations
+ 
+in this section, we present the analysis of the matisse data in three parts. in sect.  we show our parametric time-invariant chromatic modelling, while in sect.  we examine the time variability of the observed asymmetric dust feature, followed by an exploration of image reconstruction in sect. .
+§.§ parametric modelling
+for the parametric modelling of the squared visibilities  and closure phases ,
+we employ the open-source software package [.] 2024spie13095e..2wm. following the methodology of 2017a   a...599a..85l, we assume a disk model constructed with an asymmetric infinitesimally thin ring, described with parameters {}, plus a first order azimuthal modulation, described with parameters {}. the complex visibilities  are given by
+here,  and  are bessel functions. this infinitesimally thin modulated ring is convolved with a pseudo-lorentzian/gaussian kernel with parameters {}, to describe the radial extent of the ring, resulting in the following description for the complex visibility,
+furthermore the stellar contribution is assumed to be unresolved . 
+the flux contributions are chromatic and each follow a spectral power law, i.e. for the circumstellar material; , similar to eq. (4) in 2017a   a...599a..85l (m). the stellar spectral index is determined by its blackbody temperature, while the extended emission is assumed to follow the same power law as the circumstellar material. 
+we also tested allowing the spectral index of the extended halo to vary freely, but this had little impact on the fit quality. the parameters defining this model are further elaborated in table .
+description of model parameters.
+parameters     description  
+     10-log of the approximate half-light radius:              
+ 
+              10-log of the kernel half-light ratio:                                 
+fraction of the pseudo-lorentzian versus gaussian profile in the kernel. 
+position angle of the ellipse semi-major axis.     
+ring elongation = .                         
+amplitude of the azimuthal modulation.                  
+position angle of the asymmetry. 
+ 
+          fraction of the total flux originating from the unresolved central star. 
+fraction of the total flux originating from the circumstellar material. 
+fraction of the total flux completely resolved at the shortest baselines of our data, representing a spatially extended emission component (also known as `halo'), fixed as  .
+  
+     spectral index of the circumstellar material: .
+ 
+adefined as anticlockwise, i.e., ne .
+table  shows the best-fit parametric values found by a -minimisation with the markov chain monte carlo (mcmc) algorithm using the  python package 2013pasp..125..306f. for the parametric models we used 32 walkers, 4000 steps, 1500 steps of burn-in time and flat priors. we explore three model variants: model (1) is a symmetric inclined dust ring, with a stellar flux contribution and larger scale flux captured as `halo'; model (2) is the same but with an added  first-order azimuthal modulation to the ring; model (3) is the same as model (2), except the disk orientation, size and flux ratio are fixed to the best-fit values found for model (1). 
+the models yield an inclination of  degrees and a position angle of  degrees, demonstrating agreement within a few degrees with previous interferometric work in the h- and k-bands, as shown in table .
+ the half-light radius size, , is slightly larger namely  mas, compared to gravity  mas and pionier  mas (2017a   a...599a..85l; 2022a   a...658a.183b), which shows a modest but clear increase with wavelength, which is expected as at longer wavelength we become sensitive to cooler material located further from the star.
+ 
+however, the data also shows the need to include an asymmetry in the disk because of significant closure phases on the largest baselines. 
+figure  shows the best-fit model corresponding to an stationary asymmetric ring model. 
+as shown in table , model (2) and (3) show that there is a slight difference between the strength and position of the asymmetry, depending on the order in which we fit the disk parameters.
+nevertheless, overall they still agree to the presence of an asymmetry with enhanced emission on the north-east side of the disk.
+fit results of the parametric models to the l-band data. 
+2lparameters      (1) sym.     (2) asym.     (3) asym.  
+     (mas)                        
+()a     ()    ()     ()       
+()                  
+-                                   
+()     -                                   
+ 
+                                                     
+2.8       2.8      2.8 
+13.4     7.4     7.4 
+7.0     4.7     4.7 
+ 
+values represent median values with 16%–84% quantile values. models 1, 2 & 3 represent a symmetric ring, an asymmetric ring, and an asymmetric ring with all parameters except those controlling the asym. fixed to the best-fit values of the symmetric model, respectively. see appendix  for a discussion on uncertainties.
+aelongation is converted to inclination for convenience.
+1same value as model 1.
+fit of the matisse data following a similar time-invariant parametric model and methodology as 2017a   a...599a..85l and 2022a   a...658a.183b (model-2, see table ).  panels a and b show the observations and the best-fit model simulated squared visibilities and closure phases. panel c shows the model brightness distribution , with panel d highlighting the skewed asymmetry following equation .
+           
+         
+§.§ constraints on time variability through matisse epochs
+our parametric fit puts the asymmetry at an approximate projected distance of 0.4 au with respect to the central star.
+assuming keplerian orbital motion, the period of an object at this distance is of the order  days (using the mass and distance from table ). this raises the question if the disk parameters obtained from the asymmetric-ring fit of sect.  are influenced by smearing in the time domain. to investigate the variability of the asymmetry, we split the dataset as six separate time epochs (see table ), each containing at least a medium or large at array. for each epoch, we fit the asymmetry amplitude  and angle , keeping the other disk parameters fixed to asymmetric model (2) best-fit values. 
+from the fitting results in fig.  it is clear that there are clear improvements to the reduced  by making the asymmetric angle and strength epoch dependent. 
+the best-fit asymmetry angle constraints differ across epochs, likely due to variations in the number of datasets, data quality, and at configurations.
+ the non-overlapping confidence intervals between some of the epochs potential indication for time variability. however, the relatively large  values suggest that the model may still not capture the full underlying complexity.
+violin-plot showcasing the time-variable mcmc fitting results of the asymmetry angle () for six epochs of matisse data, where the other disk parameters are fixed to the best-fit model-two asymmetric disk parameters from table . the horizontal dashed line shows the best fitted value for the asymmetry angle for the time-invariant dataset. above each violin the change in the respective  is shown compared to the time-invariant value. the error bars indicate the best fit value with 16/84% percentile intervals.  
+           
+         
+§.§ image reconstruction
+since the disk structures are potentially time-variable, we have to be careful to not smear out our signal by combining different epochs. of all our epochs the four 2021 observations are closest in time ( days) and together provide a well-sampled  plane.
+this allows for a simplistic image reconstruction, if we assume that the probed disk structures are roughly stationary over this time.
+for our image reconstruction we use the sparco/mira v2.3.2 software through the jmmc oi-imaging tool[] (2008spie.7013e..1it; 2014a   a...564a..80k). sparco is a parametric approach for chromatic image reconstruction, where the image is modelled as a sum of (chromatic) geometrical models and the reconstructed image. we model the star geometrically as a central blackbody point source with a temperature of  k. for the reconstructed image chromaticity, we assume the disk is well described by a single-temperature blackbody at  k, where the latter provides a good fit to the sed across our wavelength range (see app. ). we reiterate that this temperature holds no more physical meaning than, e.g., a power law, and that this is purely a method used as an approximation of the wavelength dependence of the flux ratio of the inner disk relative to the star. 
+we use a `compactness' regularisation function which favour image structures in the central region of fwhm 40 mas. as an initial image prior, we have two circular gaussians with fwhm  and 40 mas, with a total field-of-view of 7070 mas and 0.5 mas pixel size.
+we run the algorithm twice consecutively with 200 iterations taking the first intermediate result as the next image prior, reaching a reduced .
+figure  shows the reconstructed matisse image together with the beam. note that the image only shows the reconstructed circumstellar emission and omits the central stellar point source. the  sampling results in an elliptical dirty beam with half-widths at half-maximum of  mas and weak sidelobes. 
+on large scale we do not note any significant l-band structure, except for an imprint of the sidelobes. this is expected as we do not have the fidelity to pick up the  of flux that is distributed over this larger area. 
+on smaller scales the general emission agrees with the position angle and shape found in the parametric modelling. we also find that to explain the closure phases, the algorithm prefers to place some emission in two separate components towards the east and west of the star. we experimented with priors and the number of iterations for the algorithm and found that it did not have a significant impact on the resulting position of the main bright structures, but rather would alter the details of the shapes or gradually start to overfit.
+panel a shows the l-band image reconstruction for the 2021 matisse at observations, which contain the large-medium-small arrays observed within 11 days, at m using the sparco/mira software. the central star with  k, modelled as a point source centred on (0,0), is not depicted. over-plotted are ellipses where the semi-major axis are the half-light radius , taken from the best parametric fits of table .  panel b shows the approximate dirty beam of the combined observations at m, together with a small inset of the  points.
+       
+§ multi-instrument analysis
+to assess whether a morphology with a more physically temperature structure can reproduce the observed data, we integrate our matisse observations with prior pionier and gravity results. this combined dataset spans a broad wavelength range of 1.5 - 3.8 m. using this coverage, we construct a symmetric two-dimensional (2d) power-law temperature gradient model, which also allows us to estimate key parameters such as the dust optical depth and surface density. we compute dust opacities () at the boundaries and central wavelengths of each spectral band using  2021ascl.soft04010d assuming standard diana conditions; pyroxene (70% mg) and carbon, a dust population  with particle radius  and porosity of 25%2016a   a...586a.103w. 
+for our simplified model, we assume an inclined continuous disk with temperature and surface density power-law profiles:  and  , which drop to zero outside the inner and outer radii,  and , respectively. the surface brightness is calculated with the equation of radiative transfer , with , where  is the blackbody radiation 1979rpa..book.....r.
+for the central point-source star, we adopt the same literature values as in previous sections (see table ). the extended emission is modelled with as a series of power-laws , where each instrument has its instrument-specific parameters as to be agnostic about the overall spectral shape.
+we assume an inner dust sublimation temperature  k.
+the position angle and inclination are fixed on the pionier/gravity/matisse averaged values of the best visibility fitted parametric ring models , , which also corresponds well with the observed shadow lane in scattered light data 2022a   a...658a.183b. the outer radius in particular is hard to constrain with our data, as our infrared wavelengths mostly contain information on the warmer inner regions of the disk. we used 25 walkers, 3000 steps, 1000 steps of burn-in time and flat priors.
+table  presents the fitted parameters obtained from the mcmc analysis. to show the influence on our results we pick two values for the outer radius; approximately 2 au and 10 au, the latter of which is roughly halfway to the gap edge of the outer disk as seen by alma. 
+the two  choices overall yield only marginally different values. the inner radius falls around  au or 2.62 mas, additionally, the fitted inner disk surface density is approximately  g/cm, corresponding to optically thin vertical optical depths  for the h-, k- and l-band wavelengths. we note that the wavelength dependence of the background `halo', thought to be caused by quantum heated particles 2017a   a...599a..80k, follow a spectral shape similar to the single-temperature blackbody estimate for the sed (fig. ). overall, the model underestimates the total near-infrared flux compared to the literature sed by 10 to 45 in the respective bands.
+temperature gradient model fitted parameters. 
+fixed parameters         value     
+     (k)                2c1500 
+pa                              ()         2c82.0  
+incl.                          ()          2c47.4 
+(au)               2     10 
+ parameters          value     
+     (au)                     
+(mas)                        
+q                                                            
+(g / cm)                    
+(p                                          
+a ()        (jy)                     
+p                                                       
+a ()        (jy)                     
+p                                                       
+a ()        (jy)                     
+p                                                    
+7.7      7.5  
+16.8       17.2   
+ 
+         9.2     9.0 
+2.6       2.5  
+fitted values represent mcmc chain median with 16% - 84% quantile values. the reduced  is calculated for the visibility data. the two columns highlight the (lack of) influence on the results by the choice for outer radius. 
+see appendix  for a discussion on uncertainties.
+best-fit symmetric temperature gradient model. top panels show the measured and modelled visibilities, bottom panels show the surface brightness distribution. the size of the central point source is not to scale, the colour scaling is homogeneous across all wavelengths.
+              
+         
+§ discussion 
+§.§ l-band emission region and the dust sublimation radius
+determining the temperature and structure of the inner disk rim is a complex problem that strongly depends on the dust properties.
+our best-fit inner radius from the temperature gradient model (table ) agrees well with the evaporation radius estimated by 2017a   a...599a..80k ( au).
+however, the temperature gradient model, based on standard diana conditions and used in both studies, includes small silicate grains, which is likely inconsistent with the n-band spectra.
+previous sed analyses of hd 100453 attributed the absence of  its m silicate emission feature to a depletion of small (m) silicate grains 2003a   a...402..767m. 
+as this issue is less relevant for the h-, k-, and l-bands due to more linear opacity behaviour, we proceeded without accounting for it here. 
+nonetheless, future high-quality n-band observations with the ut telescopes would be invaluable for constraining the dust masses, composition, grain sizes, and crystallinity in this system, similar to the approach taken in 2024a   a...681a..47v.
+§.§ time variability
+a known source of asymmetry at short nir wavelengths in inclined disks is obscuration by the dust torus (1998a   a...337..832k;2010ara   a..48..205d), which causes an emission peak along the minor axis of the projected inner disk. some possible sources of asymmetries around the major axis could be a rotating vortex, spiral or dust clump, similar to those observed in recent inner disk studies (2021a   a...654a..97g;2021a   a...647a..56v;2023apj...947...68i; 2024a   a...684a.200g), or an eccentric disk 2013a   a...553l...3a.
+as mentioned in the introduction, 2022a   a...658a.183b found that the hd 100453 inner disk k-band emission, for a time-independent fit, was well described by a disk with a slight asymmetry along the major axis in the west, at .
+in sec.  we determined the best-fit values for the asymmetry angle for our separate matisse epochs. 
+we find that most l-band epochs also favour an asymmetry oriented along the major axis, typically toward the east. epoch 2021a is an exception which instead prefers an orientation along the northern minor axis (see fig. ).
+overall, on the first-order the inclined obscuration effect is unlikely to be the source of the observed asymmetry, as the major axis positions are more consistent with a dynamical origin.
+with the l-band being quite sparse in time we cannot use the l-band to constrain potential motion. however, such an analysis can be performed for the separate gravity nights, which sample much closer in time (seven nights in  days).
+for this, following our previous method, we first fit a general asymmetric ring model, and then only let the asymmetry parameters  and  be time variable, see fig. . curiously, we find that the k-band epochs show the preferred asymmetry angle estimates to remain quite stable in the south-west over the probed timescale,  which seems in contradiction with the estimated keplerian motion in this region, whose period spans around  days to  days. 
+we note that the only two close in time matisse 2021a and 2021b epochs do show a change in their best-fit asymmetry angle of about  degrees within only  days. this timescale appears more consistent with, albeit somewhat faster than, keplerian motion. however, with the sparse temporal coverage it is impossible to determine whether this shift reflects genuine orbital evolution or observational limitations.
+unlike the gravity epochs, the two matisse epochs do not probe identical spatial scales. the 2021a large baselines are more sensitive to smaller scale variations, compared to the medium and short baselines in 2021b. if the source morphology is intrinsically more complex than a simple first-order asymmetry, these differences in spatial sensitivity could bias the retrieved asymmetry angle. 
+similar to fig. , we show the mcmc results for the asymmetry angle of the first-order skewed ring model using matisse data from the 2021ab epoch (orange), alongside re-reduced gravity data (blue) obtained close in time. the horizontal dashed lines indicate the averaged h-, k- and l-band estimate for the direction of semi-major axis of the inner dust ring. in the top-left we indicate the approximate keplerian period, based on the stellar parameters, the best-fit temperature gradient inner radius  and  parametric half-light radius . 
+           
+        
+§.§ higher order asymmetries and chromaticity as seen by matisse and gravity
+ 
+in sec.  we reconstructed an image based on the combined 2021 matisse snapshots, which when combined have a decent  sampling. we found that the observations could be explained by disk-like emission with two higher intensity components in both major axis directions (east and west). this second order-like modulation is more in line with potential asymmetries caused by disk instabilities such as e.g. a spiral, then inclined obscuration effects. 
+however, due to limited data and the four snapshots spanning  days the features should be interpreted with some caution. some time-smearing effects are unavoidable with vlti imaging as we require physical moving of the telescopes for filling the uv-space. our reconstruction will mostly be influenced by the -day difference between the large and medium arrays which probe the smaller scale variations. assuming keplerian rotation, this gap could correspond to a potential shift of 41 degrees at the half-light radius, or up to 75 degrees at the inner rim. however, if the dust rotation is slower than keplerian as seen in other protoplanetary disks, the potential time-smearing could also be a factor  smaller (2023apj...947...68i,2024a   a...684a.200g,  2025aj....169..318s). 
+serendipitously, two of our matisse/gravity observation nights overlap, allowing us to directly compare the disk asymmetry without having to account for time variability. we find that the best-fit position angles for the first-order asymmetry between the instruments differ by 90-100, indicating a chromatic or (probed) spatial scale effect between the k-band and l-band. the corresponding observations are presented in closer detail side-by-side with simulated closure phases from the skewed ring models in appendix . 
+we verified that this mismatch between the gravity and matisse preferred direction for the asymmetry corresponds to a real difference in the emission at these wavelengths, and is not introduced by the data processing. the closure phase measurements were verified using multiple versions of the reduction pipelines: the matisse drs pipeline 1.7.5 and 2.0.2, as well as a re-reduction for published gravity data with the newer gravity pipeline 1.7.0. 
+our calibrator star observations also showed no anomalies, with both the differential and closure phases remaining close to zero.
+we also verified the same calibrator star observations, by reducing and modelling a science target on the same night with known asymmetry using the same model as described in section , and found an asymmetry direction consistent with the predicted asymmetry derived from models based on previous gravity data (van haastere et al., in prep). 
+taken together, this strengthens our belief that the apparent chromatic `mismatch' in closure phases for matisse versus gravity in hd 100453 is a real effect indicating a more complex asymmetry, and is not caused by an error in reduction or calibration. 
+it is possible that untangling the complexity of hd 100453's inner disk requires an approach similar to 2025aj....169..318s. here the authors observed the inner disk of hd 163296 at high time fidelity with the vlti/pionier and chara/mirc-x instruments, and parametrically modelled the asymmetry going up to eight-order. we experimented with using higher-order asymmetries in our modelling to explain the k-band and l-band data, and while the matisse data shows an improvement in  by including higher forms of modulation, as also apparent from the image reconstruction, for the gravity data improvement is less clear. while the k-band does not exclude higher forms of modulation, the data does not explicitly calls for it. this smaller decrease in  has to do with a smaller overall amplitude of the modulation that is seen in the k-band.
+the connection between the brightness of an asymmetry and closure phase (cp) is not quite intuitive 2007newar..51..604m. one might think that a strong asymmetry causes a large phase signal, but relatively weak asymmetry can also cause a large cp signal. looking at the l-band squared visibility versus baseline plot, fig. , we see that the visibility function reaches a zero around  m, meaning that at that baseline the real part of the visibility  becomes negative. in case of a centrally symmetric brightness distribution, when , the visibility phase is 0, while for , the phase is 180. for a visibility function without zero crossings (e.g., a gaussian, lorentzian, or point source),  is always positive, and the closure phase is always 0. for any non-centrally symmetric brightness distribution, the phase can take any value between -180 and 180. therefore, in the case of a ring-like image with an asymmetry, rather than an instantaneous transition between 0 and 180 (as seen in symmetric cases), the phase exhibits a gradual change between these extremes. 
+consequently, for certain asymmetries, significant deviations from zero phase may already be observed at baselines prior to the visibility zero. 
+connecting this to the measured cp signals, there is another thing we notice. although the pionier and gravity datasets span larger , thus resolving smaller spatial scales compared to matisse, their measured closure phases are much smaller ( deg). this can be explained by the significantly larger stellar flux ratio in the near-ir, causing the  to remain positive across all baselines. despite the lower angular resolution of matisse, the mid-infrared instrument may offer an advantage over near-infrared instruments in this regard. at matisse wavelengths, the smaller stellar flux-to-disk ratio increases the likelihood of encountering a visibility null, leading to a significant phase jump and making asymmetries more detectable. 
+possible explanations for a complex asymmetry in hd 100453 are plentiful, from an accretion spiral (tidal wake) bridging the gap between the inner and outer disk (2017apj...848l..11k, 2018apj...859..118b), asymmetries driven by one or more undetected planetary companions inside the cavity between the inner and outer disk, to disruptions in the inner disk from magnetospheric accretion 2024mnras.528.2883z. more `stationary'-like dust features along the major axis could be caused by eccentric disk `traffic jam' effects  2013a   a...553l...3a, however this fails to explain the chromatic or spatial scale shift. 
+future studies aiming to solve this mystery would greatly benefit from a simultaneous, focused imaging campaign with both gravity and matisse on similar baselines to reduce dependence on model assumptions. 
+§ summary
+we present an investigation of the misaligned inner disk around the herbig ae star hd 100453, utilising new l-band vlti/matisse interferometric observations. we use a combination of analytical models and image reconstruction to probe the disk structure and its physical properties. our main focus points are to examine a previously reported asymmetry near the major axis, and to perform a multi-wavelength comparison using archival vlti pionier/gravity data.
+our main findings can be summarized as:
+eginenumerate
+    
+  * following previous work in k-band, we parametrically model the disk as a first-order azimuthally modulated ring. our l-band modelling finds an inner disk with an inclination of  and a position angle of , which is in agreement with previous estimates at near-infrared wavelengths and further corroborates the evidence of a strongly misaligned inner-outer disk. 
+* we find clear improvements in  by letting the asymmetry angle and modulation strength be epoch variable. the non-overlapping confidence intervals could hint towards potential time variability, although we currently lack sufficient time sampled data to properly constrain material movement and/or induced brightness change due to changes of illumination conditions through the inner disk.
+* by modelling l-band together with archival h- and k-band data using a temperature gradient model, we show a possible physical interpretation of the emission. we find that a temperature gradient disk with an inner radius of  au, with a vertical optical depth of , inner disk densities around  g/cm, can explain the visibilities well. getting a high quality n-band ut observation would be invaluable to help better constrain the dust mass, composition, grain sizes, and crystallinity in this system.
+* comparing same-night l-band and k-band observations, we find that the best-fit first-order asymmetry angles differ by –. this chromatic/spatial-scale difference indicates that higher-order asymmetric structures (e.g., a spiral or other substructures) are likely needed to explain the closure phase signals. this interpretation is further supported by the matisse snapshot image reconstruction, which prefers a two-component asymmetric morphology rather than a simple first-order asymmetry. further observations are needed to confirm these findings.
+    
+given the complexity and potential rapid variations in the inner disk, combined with the fact that snapshot observations only sparsely sample the available  space in time, we recommend that future observing strategies focus on targeted imaging campaigns, preferably close in time on both matisse and gravity to reduce reliance on parametric models.
+we thank the anonymous referee for their constructive and detailed comments, which helped improve the clarity and quality of this manuscript. we thank pis jean-philippe berger and myriam benisty for providing to their published vlti/pionier and vlti/gravity calibrated data from 2017a   a...599a..85l and 2022a   a...658a.183b data, respectively. based on observations collected at the european organisation
+for astronomical research in the southern hemisphere under eso
+programmes 190.c-0963, 0103.d-0153(f), 106.21jr.001, 106.21q8.001, 106.21q8.002, 106.21q8.004, 108.225v.003, 108.225v.009, 110.2474.008.
+the open-source  package used in this research is developed with support from the vlti/matisse consortium and the anr project massif, and we would like to thank the whole development team with an explicit mention to anthony meilland, marten scheuck and alexis matter for their work.
+this research has made use of the jean-marie mariotti center oidb and  service part of the european commission's fp7 capacities programme (grant agreement number 312430), available at .
+matisse is consortium composed of institutes in france (j-l lagrange laboratory, insu-cnrs, côte d’azur observatory, the university of nice sophia-antipolis), germany (mpia, mpifr, and the university of kiel), the netherlands (nova and the university of leiden), and austria (the university of vienna). the konkoly observatory and the university of cologne have also provided support in manufacturing the instrument.
+j. varga is funded from the hungarian nkfih otka projects no. k-132406, and k-147380. j. varga acknowledges support from the fizeau exchange visitors programme. the research leading to these results has received funding from the european union’s horizon 2020 research and innovation programme under grant agreement 101004719 (orp). am, bl, jca, ml and pp acknowledge financial support from the programme national de physique stellaire (pnps) of cnrs-insu in france.
+this work made use of , a community-developed core python package and an ecosystem of tools and resources for astronomy 2022apj...935..167a. during the writing process a large language model was used to enhance readability. 
+§ overview observations
+table  shows the night conditions and observation information.
+an overview of the reduced visibilities and closure phases split by measurement is shown in fig. . 
+overview of all selected hd 100453 matisse observations, with the selected wavelength ranges highlighted. from left to right the following is shown:  space, closure phase, squared visibility vs wavelength, squared visibility vs baseline length. the `ch' and `nch' in the corner indicates whether the observable is taken from the chopped or non-chopped sequence. see table  for detailed night conditions. 
+           
+         
+figure-1
+      continued.
+         
+overview of all hd 100453 matisse observations. 
+11c|hd 100453 0pt3ex                                      3ccalibrator           
+                                                                                                                                                         
+time      seeing            wind     pwv          stations     array     res.     ch.    g4m      epoch     time     star      ldd   
+ 
+             (utc)           (")        (ms)           (m/s)     (mm)                                                                               (hh:mm)                (mas)
+2019-05-15t02:01:55a      1.45     2.8     13.8     2.3     u1-u2-u3-u4     uts     med                   0:34     hd102461     2.97 
+ 
+		2019-05-15t02:14:53a      1.58     2.7     14.1     2.2     u1-u2-u3-u4     uts     med                  0:34     hd102461     2.97 
+ 
+		2019-06-10t01:28:03     0.49     4.6     3.1     1.8     k0-g2-d0-j3     medium     low                2019a     0:19     hd102839     2.02 
+ 
+        2019-12-22t09:11:35     0.67     11.1    1.2     2.63    k0-g2-d0-j3     medium     low                2019b     0:54     *dcen     2.2 
+2021-01-16t08:09:24     1.18     6.2     4.6     2.5     a0-g1-j2-j3     large     low              2021a     1:00     hd102461     2.97 
+ 
+		2021-01-16t08:20:06     0.96     5.2     5.1     2.5     a0-g1-j2-j3     large     low               2021a     1:00     hd102461      2.97 
+ 
+		2021-01-24t05:10:34     0.66     5.7     2.1     6.9     k0-g2-d0-j3     medium     low                2021b     0:26     hd92436      3.07 
+ 
+		2021-01-24t05:17:49     0.55     7.5     2.0     6.9     k0-g2-d0-j3     medium     low               2021b     0:26     hd92436      3.07 
+ 
+		2021-01-25t04:06:05     0.66     5.8     7.6     4.3     k0-g2-d0-j3     medium     med              2021b     0:22     hd92436     3.07 
+ 
+		2021-01-27t06:51:35     0.77     4.5     9.7     5.1     a0-b2-d0-c1     small     med              2021b     0:41     *ecen     2.97 
+ 
+		2021-01-27t07:02:05     0.81     4.9     8.7     5.1     a0-b2-d0-c1     small     low              2021b     0:41     *ecen     2.97 
+ 
+		2021-01-27t07:09:12     0.74     6.0     8.6     5.1     a0-b2-d0-c1     small     low               2021b     0:41     *ecen     2.97 
+ 
+        2022-03-09t06:07:38     0.53     12.9     2.8     7.34      k0-g2-d0-j3     medium     med             2022     0:26     hd102461     2.97 
+ 
+        2022-03-09t06:15:45b     0.44     16.2     2.6     7.2     k0-g2-d0-j3     medium     med                  0:26     hd102461     2.97 
+ 
+		2022-03-14t03:26:38     1.08     3.4      7.4     6.3     a0-b2-d0-c1     small     med              2022     0:27     hd91942     3.49 
+ 
+		2022-03-14t03:38:44c      0.95     4.0     7.6     6.7     a0-b2-d0-c1     small     med                 0:27     hd91942     3.49 
+ 
+		2022-12-18t07:56:01a      1.6     1.9     10.5     1.2     a0-g1-j2-k0     large     low                   0:23     hd102461     2.97 
+ 
+		2022-12-18t08:05:33a      1.57     2.3     11.0     1.2     a0-g1-j2-k0     large     low                  0:23     hd102461     2.97 
+ 
+		2023-03-15t05:54:24     0.66     5.3     4.9     11.8     a0-g1-j2-k0     large     med              2023     0:27     hd102964     2.45 
+ 
+		2023-03-15t06:05:01     0.44     9.4     4.7     11.9     a0-g1-j2-k0     large     med              2023     0:27     hd102964     2.45
+the night information describes the weather conditions at the start of observations, where  is the coherence time, 'res.' the spectral resolution, 'ch.' the chopping indicator and 'g4m' the gravity fringe tracker indicator. the spectral resolution varied between observations from low to medium resolution. six datasets were not included in the analysis after careful examination. 
+aobservations with seeing  are generally considered unreliable and hence were excluded from the analysis.
+brare instance where non-chopped closure phases were noisier than chopped.
+cexcluded since conditions were not sufficient to keep fringe tracking stable during the chopping sequences.
+in earlier periods this array was called astrometric.
+        
+§ highlight modelled asymmetry
+the asymmetry in a skewed ring model can be difficult to clearly discern in the image plane when visualized with a monotonically increasing colour map. to enhance its apparentness, we use the following method to isolate the asymmetric component:
+where  denotes the image plane of a fitted model, and  is the normalized intensity at the point on the ring located  opposite the peak intensity. this position defines the new zero point in the resulting asymmetry image. 
+§ spectral energy distribution
+to compare our results with photometric measurements we collected the v, g, g, g, j, h, k, wise (w1-w4) and akari (a1-a6) band photometric data from various surveys; hipparcos 1997esasp1200.....e, gaiadr3 2023a   a...674a...1g, 2mass 2006aj....131.1163s, wise (2012ycat.2311....0c, 2021apjs..253....8m), akari (2010a   a...514a...1i, 2010ycat.2298....0y). since the extinction  is approximately zero the data did not need to be dereddened 2018a   a...620a.128v. figure  displays the spectral energy distribution of hd 100453 together with a star + single-temperature  blackbody disk fit to the j, h, k, w1, and w2 photometric bands. 
+assuming the literature values for hd 100453 (see table ) and fitting the sed () with
+yields a simple disk temperature approximation of  k with a scale factor of  sr. for these values at  the star/disk flux ratio equals roughly . 
+panel a shows the spectral energy distribution of hd 100453 compiled from various facilities, along with the two fitted blackbody curves corresponding to the central star (b) and inner disk (c) respectively, using the stellar parameters from 2021a   a...650a.182g. the flux from the best-fit temperature gradient model is also included (see table ), with the contribution from the extended `halo' component further highlighted in panel d. the blue highlighted area corresponds to the wavelength range probed in this research.
+         
+§ reliability of uncertainties in infrared interferometry
+figure  shows the corner-plot of one of the mcmc fits which was used for table . typically ir interferometry reports the error estimate on fitted parameters as the  intervals from settled mcmc chains. an important underlying assumption is that this assumes the measurement errors are independent and gaussian distributed. however, this method is flawed as interferometric observables, especially when working with multiple spectral channels, are often highly correlated and subject to systematic errors. 
+for example the visibilities for different spectral channels on a baseline are affected by similar atmospheric and instrumental effects in their signal,
+which can shift visibilities sets of affected baselines as a whole up and down. similarly the visibilities and closure phases sharing a telescope or baseline are also affected by correlations due to having a common signal 2020a   a...644a.110k.
+the calibrator stars used in this research have a mean limb-darkened diameter (ldd) uncertainty of 0.6% 2019mnras.490.3158c, hence our disk fit size uncertainties on  and  respectively are rather optimistic. when interpreting fit results it is important to be cautious about the likely underestimated errors, and pay attention to trends in the visibility derivative or , as those are less affected by this shift.
+future fitting procedures could be improved by taking this correlation into account (priolet et al., submitted), or utilizing other methods such as bootstrapping to better estimate the uncertainties in model parameters 2019mnras.484.2656l.
+ 
+temperature gradient model best-fit mcmc chains, for  au, after removing burn-in to the combined pionier, gravity & matisse datasets. n, n after burn-in, see table .
+           
+         
+§ matisse/gravity comparison of closure phases on the same nights
+figure  shows a comparison of how the simulated closure phases for the skewed ring look in practice. from both visual inspection and the -maps it is clear that the  represents the matisse data much better than the best fit value  from the gravity fit, and vice versa for the gravity data.
+a direct comparison of the gravity and matisse closure phase observations taken on two overlapping nights: 2021-01-24 and 2021-01-25 ( mjd). sub-figures (a–d) show the values for the four sets of baseline triangles, with an inset plot in the corner showing the corresponding () coordinates in meters. the solid line shows our binned data, while the dashed and dotted line show the simulated data of the best-fitted skewed ring for these dates with corresponding  for matisse () and gravity () respectively, see fig. . at the bottom (e,f) show the -maps for the fitted asymmetry parameters, together with a representation of the best-fit direction for the respective bands. 
+           
+         
+        
+/edocument/

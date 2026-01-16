@@ -1,0 +1,1369 @@
+.
+a&a
+a&as
+apj
+apjl
+apss
+nature
+mnras
+v_∞ 
+km s
+l/l
+r
+m yr
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+/bdocument/
+velorum observed with amber/vlti
+laboratoire universitaire d'astrophysique de nice, umr 6525
+  université de nice/cnrs, parc valrose, f-06108 nice cedex 2,
+  france
+  
+  laboratoire d'astrophysique de grenoble, u.m.r. 5571 université
+  joseph fourier/c.n.r.s., bp 53, f-38041 grenoble cedex 9, france
+  
+  laboratoire gemini, u.m.r. 6203 observatoire de la côte
+  d'azur/c.n.r.s., avenue copernic, 06130 grasse, france
+  
+  inaf-osservatorio astrofisico di arcetri, istituto nazionale di
+  astrofisica, largo e. fermi 5, i-50125 firenze, italy
+  
+  max-planck-institut für radioastronomie, auf dem hügel 69, d-53121
+  bonn, germany
+  
+  steward observatory, university of arizona, 933 north cherry avenue,
+  tucson, az 85721, usa 
+  
+  centre de recherche astronomique de lyon, u.m.r. 5574 université
+  claude bernard/c.n.r.s., 9 avenue charles andré, f-69561 saint genis
+  laval cedex, france
+  
+  european southern observatory, casilla 19001, santiago 19, chile
+  
+  european southern observatory, karl schwarzschild strasse 2, d-85748
+  garching, germany
+  
+  ircom, u.m.r. 6615 universite de limoges/c.n.r.s., 123 avenue albert
+  thomas, f-87060 limoges cedex, france
+  
+  division technique insu/c.n.r.s. ups 855, 1 place aristide briand,
+  f-92195 meudon cedex, france
+  
+  onera/dota, 29 av de la division leclerc, bp 72, f-92322 châtillon
+  cedex, france
+  
+  instituut voor sterrenkunde, kuleuven, celestijnenlaan 200b, b-3001
+  leuven, belgium
+  
+  present affiliation: laboratoire astrophysique de
+  toulouse, umr 5572 université paul sabatier/cnrs, bp 826, f-65008
+  tarbes cedex, france 
+  
+  present affiliation: observatoire de la c�e d'azur -
+  calern, 2130 route de l'observatoire , f-06460 caussols, france
+f. millour
+florentin.millour@unice.fr
+interferometry can provide spatially resolved observations of
+    massive star binary systems and their colliding winds, which thus far
+    have been studied mostly by means of spatially unresolved
+    observations.
+  
+  
+  
+  
+  
+  
+in this work, we present the first amber/vlti observations, taken at
+  orbital phase 0.32, of the wolf-rayet and o (wr+o) star binary
+  system  velorum and use 
+  the interferometric observables to constrain its properties.
+  
+  
+  
+  
+the amber/vlti instrument was used with the telescopes ut2,
+    ut3, and ut4 on baselines ranging from 46 m to 85 m. it
+    delivered spectrally dispersed visibilities, as well as
+    differential and closure phases, with a resolution  in the
+    spectral band 1.95-2.17 m. we interpret these data in the
+    context of a binary system with unresolved components, neglecting
+    in a first approximation the wind-wind collision zone flux
+    contribution.
+using wr- and o-star synthetic spectra, we show that the amber/vlti
+  observables result primarily from the contribution of the individual
+  components of the wr+o binary system. we discuss several
+  interpretations of the residuals, and speculate on the detection of
+  an additional 
+  continuum component, originating
+  from the free-free emission associated with the wind-wind collision
+  zone (wwcz), and contributing at most to the observed -band flux at the
+  5% level. based on the accurate spectroscopic orbit and the
+  hipparcos distance, the expected absolute separation and position
+  angle at the time of observations were 5.10.9mas and
+  6615, respectively
+. however, using theoretical estimates
+  for the spatial extent of both continuum and  line emission from
+  each component, we infer a separation of 3.62 mas
+  and a position angle of 73, compatible with
+    the expected one.  our analysis thus
+  implies that the binary system lies at a distance of
+  368 pc, in agreement with recent
+  spectrophotometric estimates, but significantly larger than the
+  hipparcos value of 258 pc.
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+direct constraint on the distance of  velorum from
+  amber/vlti observations.
+  based on observations made with the very large telescope
+    interferometer at paranal observatory
+f. millour;
+  r. g. petrov
+  o. chesneau
+  d. bonneau
+  l. dessart
+  c. bechet
+  i. tallon-bosc
+  m. tallon
+  e. thiébaut
+  f. vakili
+  f. malbet
+  d. mourard
+  
+  
+g. zins
+  a. roussel
+  s. robbe-dubois
+  p. puget
+  k. perraut
+  f. lisi
+  e. le coarer
+  s. lagarde
+  p. kern
+  l. glück
+  g. duvert
+  a. chelli
+  y. bresson
+  u. beckmann
+  p. antonelli
+  
+  
+g. weigelt
+  n. ventura
+  m. vannier;
+  j.-c. valtier
+  l. testi
+  e. tatulli;
+  d. tasso
+  p. stefanini
+  p. stee
+  w. solscheid
+  d. schertl
+  p. salinari
+  m. sacchettini
+  a. richichi
+  f. reynaud
+  s. rebattu
+  y. rabbia
+  t. preibisch
+  c. perrier
+  f. pacini
+  k. ohnaka
+  e. nussbaum
+  
+  d. mouillet,
+  j.-l. monin
+  p. mège
+  p. mathias
+  g. martinot-lagarde,
+  g. mars
+  a. marconi
+  y. magnard
+  b. lopez
+  d. le contel
+  j.-m. le contel
+  s. kraus
+  d. kamm
+  
+  k.-h. hofmann
+  o. hernandez utrera
+  m. heininger
+  m. heiden
+  c. gil
+  e. giani
+  a. glentzlin
+  s. gennari
+  a. gallardo
+  d. fraix-burnet
+  r. foy
+  e. fossat
+  t. forveille
+  d. ferruzzi
+  p. feautrier
+  m. dugué
+  t. driebe
+  a. domiciano de souza
+  a. delboulbé
+  
+  c. connot
+  j. colin
+  j.-m. clausse
+  f. cassaing
+  s. busoni
+  s. bonhomme
+  t. blöcker
+  
+  j. behrend
+  c. baffa
+  e. aristidi
+  b. arezki
+  k. agabi
+  b. acke;
+  m. accardo
+  m. kiekebusch
+  f. rantakyrö
+  m. schöller
+received; accepted
+============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+§ introduction
+velorum constitutes an excellent laboratory for the study of 
+massive stars and their radiatively-driven winds.
+indeed,  velorum (wr 11, hd 68273) is the closest known wolf-rayet
+(wr) star, at a hipparcos-determined distance of 258 pc
+, whereas other wr objects 
+lie at 1 kpc or beyond. 
+moreover,  velorum is an sb2 spectroscopic binary wr+o system 
+<cit.> offering access to fundamental parameters
+of the wr star, usually obtained indirectly through
+the study of its dense and fast wind. using spectroscopic modeling of
+the integrated, but spectrally-dispersed, light from the system,
+ and  provided
+the most up-to-date fundamental parameters of the individual
+components of the binary system.  
+since  velorum
+is relatively bright and well observable at any wavelength, it has
+been extensively studied by various techniques. 
+in that context,  velorum represents
+an unique opportunity to spatially resolve a wr wind by means of
+optical interferometry. this object was observed by the
+narrabri intensity interferometer operating around 0.45 m as early
+as 1968 . by observing such a star with a
+long baseline interferometer, one may constrain various parameters, such as
+the binary orbit, the brightness ratio of the two components, the angular size 
+associated with both the continuum and the lines emitted by the wr star.
+the collision between the fast and dense wind from the wr and the less
+dense but faster wind from the o star generates a wealth of phenomena.
+international ultraviolet explorer (iue) and copernicus
+ultraviolet spectra <cit.>
+revealed a variability in uv p-cygni line profiles, associated
+with selective line eclipses of the o star light by the wr star wind
+as well as the carving of the wr wind by the o-star wind (compared to
+its spherical distribution in the absence of a companion). air-borne
+x-ray observation campaigns have revealed additional and invaluable
+information on  the wind-wind collision zone (hereafter wwcz)
+<cit.>.
+the wr component of the  velorum system is of a wc8
+type. while 50% of such wr stars (and 90% of the wc9 type) show
+heated () circumstellar amorphous carbon dust, iso
+observations of  velorum revealed no such dust signatures
+. keck observations resolved, although only
+barely, the system in the  band and confirmed the absence of any
+dust emission from this system , suggesting
+that if dust is created near the wwcz, it is in small amounts
+.
+the present paper aims at constraining further our knowledge of the
+ velorum system, using long-baseline interferometric
+observations conducted in near-ir by the vlti with the
+newly commissioned instrument amber.
+the results discussed in this paper are limited to
+observations recorded with a single triplet of baselines in  band
+with the amber. we concentrate our
+efforts in presenting the potential of amber observations and their
+complementarity with techniques lacking spatial resolution for the
+study of massive close binaries. in this context, we perform an
+in-depth checking of the consistency of the amber/vlti data recorded,
+with the up-to-date knowledge we have on this well studied binary system.
+the paper is organized as follows. in sect. ,
+we describe the amber/vlti observations and the data. 
+in sect. , we present the amber data and 
+constrain the system characteristics. the system's parameters are used to
+predict a basic signal inferred from the knowledge of the
+spectroscopic orbit, some estimate of the angular diameter of each
+component, and results from the spectroscopic modeling of the individual stars.
+we also discuss the potential effects stemming from the wwcz
+and their influence on the observed interferometric signal. 
+in sect. , we fit the amber observations
+by concentrating on a few parameters that can be directly constrained, i.e.,
+the angular separation of the components, the orientation of the system
+projected onto the sky, and the brightness ratio between the two components. 
+we then discuss in sect.  the adequacy of our modeling
+in reproducing the observations, and present our conclusions in 
+sect. .
+§ amber observations and data
+log of the observations and atmospheric conditions for
+       velorum (top-three rows) and the spectrophotometric
+      calibrator star hd 75063 (bottom-three rows), observed on 25/12/2004.
+    
+  
+  
+time     star      mag.         
+    seeing     coherence time     air mass
+4h18      velorum     2.1     1.95 - 2.03 m    
+    0.72      4.5 ms     1.213 
+4h35      velorum     2.1     2.02 - 2.10 m    
+    0.60      5.3 ms     1.180 
+4h49      velorum     2.1     2.09 - 2.17 m    
+    0.73       4.4 ms     1.158 
+5h57     hd 75063     3.6     1.95 - 2.03 m    
+    0.90      3.6 ms     1.107 
+6h09     hd 75063     3.6     2.02 - 2.10 m    
+    0.72      4.0 ms     1.097 
+6h18     hd 75063     3.6     2.09 - 2.17 m    
+    0.58      5.5 ms     1.090 
+left:
+      projected baselines showing the range of position angles and
+      base lengths on the sky during the observations.
+      right:
+      absolute calibrated visibility of  velorum in function
+      of base length. the strong variations correspond mainly to the
+      partial resolution of the binary star.
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+  
+  
+§.§ observations
+amber (astronomical multi beam recombiner) is the vlti (very large
+telescope interferometer) beam combiner operating in the near-infrared
+. the instrument uses spatial
+filtering with fibers . the interferometric
+beam passes through an anamorphic optics compressing the beam
+perpendicularly to the fringe coding in order to be injected into the
+slit of a spectrograph. the instrument can operate at spectral
+resolutions up to 10,000, and efficiently deliver spectrally dispersed
+visibilities.
+velorum was observed on 25 dec 2004 during the first night
+of the first guaranteed time observations (gto) run of the amber
+instrument on the three projected baselines ut2-ut3 (46m, 20),
+ut3-ut4 (53m, 84) and ut2-ut4 (85m, 55) of the vlti (see
+fig. , left). the julian day of observation was
+jd=2,453,365.16.
+the amber observations have been conducted with a frame exposure time
+of 60 ms in three spectral windows in the mr-k spectral mode (spectral
+resolution of 1500,  band), i.e., 1.98-2.02 m, 2.03-2.11 m, and
+2.10-2.17 m at hour angle -134 min, -114 min, and -102 min,
+respectively (left panel of fig. ).
+hd75063 (spectral type a1iii) was observed with the same
+exposure time and the same spectral windows in order to calibrate the
+visibilities. its diameter is estimated to be 0.50 mas with an error
+of 0.08 mas, using several color indices. this corresponds to a
+visibility of 0.9880.004 for the longest base (85m), so that the
+error on the calibrator diameter translates into a global error on the
+absolute visibility of less than 1%.
+§.§ observing context
+the observations of  velorum were carried out under non
+optimal conditions as the vlti + amber system was still not in a
+fully operational state at the moment of the observations. as
+explained in , a detailed analysis of the
+commissioning data has shown that the optical trains of the ut
+telescopes are affected by non-stationary high-amplitude
+vibrations. these vibrations affect the continuum visibilities,
+requiring a careful data processing and calibration procedure. 
+we stress that these vibrations bias the instantaneous
+estimated visibility but do not affect the closure phase and, since the
+observed spectral windows are small, the differential estimators.
+during these observations, problems were encountered with the ut2
+adaptive optics associated with difficulties to close the loop and
+with injections in the fibers. we thus expect calibration problems on
+the data related to the baselines containing the ut2 telescope. again,
+these problems are limited to the absolute visibilities.
+the time lag between the observations of the calibrator and the
+science object is of the order of one hour. we checked that the
+atmospheric conditions changed only slightly between the two
+measurements.
+top:
+      result of the complete spectral calibration, showing the
+      principal lines present in the observed spectrum. the dotted
+      boxes show the selected continuum zones used to redress the
+      observed spectrum.
+      the other plots from top to bottom:
+      observed data with amber. you can find respectively the
+      differential visibilities, the differential phases and the
+      closure phase versus wavelength. the differential visibility and
+      differential phase curves from each baselines are arbitrarily
+      shifted for clarity.
+    
+  
+  
+§.§.§ data set
+the amber/vlti instrument data processing principles are well
+described in the articles of . in the current situation, the amber/vlti
+instrument has a series of issues about data that obliged us to
+develop a specific data reduction strategy which is fully described in
+appendices.
+the set of data provided by the amber instrument (limited to the
+spectral window 1.95 to 2.17 m) is the following:
+eginenumerate
+* one normalized spectrum (mean spectrum from the three observing
+  telescopes).
+* three absolute visibilities per observation, providing some
+  information on the projected equivalent size of the object for each
+  baseline.
+* three differential visibilities curves, providing some
+  information on variation of the projected equivalent size of the
+  object versus wavelength for each baseline.
+* three differential phase curves, providing some information on
+  the object photocenter relatively to a large continuum reference for
+  each baseline.
+* one closure phase providing some information on the degree of
+  asymmetry of the system's flux distribution computed for a baseline
+  triplet.
+the calibrated data are shown in fig.  and
+fig. .  the differential visibilities,
+differential phase and closure phase show strong variations with
+wavelength, well beyond the error bars, demonstrating that the
+ velorum system has been resolved by the amber/vlti
+instrument.
+the global slope on the closure phase is mainly due to the
+wavelength dependence of spatial frequencies (pure geometrical
+effect) whereas the rapid variations in differential visibilities,
+differential phases and closure phase are due to variations of the
+flux ratio between the two stars (pure spectroscopic effect). on the
+contrary, the slope on the differential phases does not have any
+physical significance since it depends only on the definition of the
+reference channel.
+note that observations in each spectral window were scanned
+sequentially, at a quarter-of-an-hour interval. this time lag must
+be taken into account since we expect the binary signal to be
+rapidly evolving as the triplet of projected baselines slowly
+changes due to the earth rotation.
+§ stars models based on spectroscopic data
+below, we present the current knowledge of the system, and use its
+geometrical parameters to estimate the basic signal from this binary
+system. as a first approach, we neglect any additional emission from
+dust; we also neglect the free-free emission expected to arise from
+the wwcz region. this late assumption is probably less valid
+physically since the existence of this wwcz is proved
+observationnaly
+[the wwcz is characterized by a very hot and dense layer of
+  material at the interface between the two winds (well above the
+  local wr- or o-star wind density) that should contribute
+  significantly to the free-free continuum. ].
+projection of the true orbit as defined by the spectroscopic
+    parameters  onto the plane of the
+    sky. note that there is an ambiguity of 180on the true
+    direction of the wr versus the o star which can be checked over
+    by our interferometric observations.
+  
+  
+§.§ geometrical parameters of the system
+the spectroscopic orbit is well determined by
+. the interferometer is sensitive to
+other geometrical parameters much less constrained, namely the
+angular separation and angle of position in the sky.
+the observations of  provided an angular
+semi-major axis of the orbit of 4.30.5 mas, and an angular size
+for the largest component of 0.440.05 mas (174 r at
+a distance estimated to be 35050 pc). 
+the orbital parameters are shown in table . they
+are extracted from the spectroscopic and spectrophotometric
+observations in ,
+.the inclination derived by
+ of 633 degree based on the refinement
+of their model (o and wr v magnitude) is not taken into account in
+this study because the error bar is probably underestimated and relies
+on the hipparcos distance that may not be
+correct.  performed a new fit of the
+polarisation data of  but the uncertainty
+for their  parameter is not given in the paper. we adopt the
+standard deviation (11) of the position angle of the linear
+polarization vector provided in . 
+note that this large error may be partially explained by intrinsic
+variations of the polarization due to the wind-wind collision
+<cit.>. we also stress
+that the angle  in the polarimetric model of
+, used in  and
+ denotes the angle between the north and
+the projection of the rotation axis (orbit normal) on the plane of the
+sky. this definition do not coincide with the usual definition of the
+ parameter used to denote the line of node of binary orbits,
+but is flipped by 90.
+the combination of the projected orbital radius  with the
+inclination and the distance yields the angular semi-major axis of
+the relative orbit 0.7 .
+we used the  ephemeris for
+ velorum to calculate the orbital phase at which the
+observations were performed (see table ). from
+the time of periastron passage t=2,450,119.1 (hjd), and orbital
+period p=78.53 days, the periastron occurs at zero phase, the o-type
+component is in front shortly afterwards at phase  and
+the wr is in front at phase . for the date of the vlti
+observation (t=2,453,365.16 (hjd)), using this ephemeris and the
+adopted orbital elements, we find an orbital phase , i.e., close to quadrature, and we determine the relative
+position of the components on the sky. the angular separation of the
+stars should be 5.10.9 mas with a position angle of
+6615.
+this separation is close to the fringe spacing provided by the
+baselines. hence we do not expect to see a fast modulation of the
+visibility through the wavelength range considered. nevertheless, the
+visibility signal changes rapidly between the three different projected
+baselines of the triplet and as the projected baselines move with the
+earth rotation.
+parameters of the system from the studies of
+      .
+    
+  
+parameter     value     error
+distance     258 pc     +41/-31
+period     78.53 day     0.01
+periastron     2450120.5 day     2
+eccentricity     0.326     0.01
+periastron longitude      68    4
+a1 sini     39. km     2.
+a2 sini     125. km     2.
+inclination i     65    8
+pa of node      232    11
+r     12.4 r     1.7
+r of wr star     3.0 r     0.5
+0.48 mas     0.09
+of wr star     0.11 mas     0.06
+of wr star     0.28 mas     0.1
+4.8 mas     0.7
+§.§ a model for the individual spectra
+short of performing the full radiation-hydrodynamics problem for the
+ velorum system, including the radiation field and force
+stemming from each stellar component, the optical-depth effects caused
+by their winds, and the emission from the hot collision zone
+separating them, we limit ourselves, in this section, to the detailed
+modeling of the wr and o star fluxes, with the aim of simulating the
+interferometric signals from these two sources alone.
+the model atmosphere computations are carried out with the code cmfgen
+, originally designed to model the
+expanding outflows of wr stars. cmfgen solves the radiative transfer
+equation in the comoving frame, under the constraint of radiative and
+statistical equilibrium, assuming spherical symmetry and a steady
+state, and is capable of handling line and continuum formation, both
+in regions of small and high velocities (compared to the thermal
+velocity of ions and electrons). hence, it can solve the radiative
+transfer problem both for o stars, in which the formation regions for
+lines and continuum extend from the hydrostatic layers out to the
+supersonic regions of the wind, and for wr stars where line and
+continuum both emerge from regions of the wind that may have reached
+half its asymptotic velocity.
+the  velorum system has been studied in detail by
+ and . for the
+wr component, we start from a model for wr 135
+ and adjust the parameters to those of de
+. our wr model parameters are: , = 10, a volume filling factor of
+10% that introduces a clumping of the wind at velocities above
+100 , c/he = 0.15, and o/he = 0.03 (abundances are given by
+number). the velocity law adopted allows a two-stage acceleration,
+first a fast acceleration up to a velocity  (characterized by a velocity exponent ) and a more extended
+slow acceleration at larger radii (velocities) up to the asymptotic
+velocity of  (; see
+ for details and their eq. (8) for the
+velocity law). we associate the stellar surface with the layer where
+the rosseland optical depth is 20. while
+ obtained  kk (and
+ ), we find that the near-ir range can be better
+fitted by adopting a slightly hotter stellar temperature, i.e.,
+ kk (and  ). the higher-temperature
+model leads to a better match of the near-ir civ/ciii
+features, while leaving the optical range still well fitted - only the
+heii 4686å, the ciii 5696å, and the civ 5808å are noticeably affected but still satisfactorily
+fitted. the general appearance of civ and ciii in the
+amber spectra is somewhat smoother than in the model, but the
+absorption at 2.05 m is perfectly fitted. we note that a line is
+observed at 2.138 m not taken into account in our wr model. this
+line is not an artifact since it is also detected in
+the visibilities and phases. we employ both models for the
+interferometric study described below.
+for the o-star model (computed with cmfgen, see
+), we select an o8.5 iii spectral
+type  and adopt the spectral distribution
+from [a database of o-star spectra
+  is available at ]. the
+corresponding o-star parameters are , = 4 ,  ,
+, and  kk. other models of o stars were
+also tested providing some input on the sensitivity of the amber data
+to the o star spectral type.
+in our analysis below, we scale both spectra using the
+ velorum hipparcos distance of 258pc, and convolve them with
+the amber instrumental function to provide a spectral resolution of
+1500. moreover, the very low reddening to the  velorum
+system  leads to no noticeable extinction
+in the near-ir and is thus neglected. following
+, we expect a flux ratio between the wr and
+the o star of 0.8–1 in the near-ir spectral region covered by
+amber. this "free" parameter can also be inferred from our amber
+observations.
+line and continuum formation regions corresponding to the wr 11
+      model, limited to the near-ir range. for each line, we give the
+      radius of the peak emission (in r) and
+      that of the maximum flux in the line, normalized to the
+      continuum (in brackets). the apparent diameters are scaled to a
+      distance of 258 pc.
+    
+  
+  
+    
+parameter     radius in     
+    ud (mas)
+2.7     0.30
+3.3     0.37
+civ (2.07 m)      3-7 (2.5)     0.46
+ciii/hei (2.11 m)      5-10 (1.4)     0.57
+heii/hei (2.17 m)      4 (1.2)     0.34
+heii (2.19 m)      4 (1.3)    
+    0.35
+wr outflows are optically thick up to a few stellar radii above the
+hydrostatic surface. the denser the wind, the larger the radius of the
+effective photosphere where photons escape, and the more so at longer
+wavelengths due to the increase in free-free opacity. table  
+lists the radius where the inward integrated continuum optical depth
+reaches unity for a range of near-ir wavelength (comparable for both
+wr models): for a core radius of 3 , this extends from
+1.8 to 3.3 , from 1 to 2.5 m, equivalent to
+0.27 mas. we adopted the hipparcos distance bearing in mind
+that the uncertainty on the star radii can be important as a
+consequence of the distance one (see discussion).
+near-ir synthetic spectra computed by accounting for
+      bound-bound transition of selected ions (hei: dashed
+      line; heii: dotted line; ciii: solid lines; civ: dash-dotted line), illustrating the different line
+      contributions and overlap in the amber spectral windows.
+    
+  
+  
+photons falling in spectral regions where they experience line as
+well as continuum opacity will escape at still larger radii than
+photons experiencing exclusively continuum opacity.
+more generally, in the 2-2.2 m region, the c iii/c iv/he ii lines form over a region exterior to
+the (local) continuum photosphere that extends out only to about a
+factor of two in radius, corresponding to an angular size of
+0.7 mas (see table ). in the  band, stars with
+angular diameter below 1 mas are only marginally resolved with a
+baseline of 100 m. thus, the variations in wr diameter quoted here
+are a second-order signal (%) difficult to extract
+with the current performances of amber instrument. observations with
+longer baselines are therefore needed to investigate this particular
+point
+[note that the model also account for the large angular
+  diameter found by hanbury brown et al. (1970) in the line ciii 0.46 m. its formation region is one of the most
+  extended of all optical and near-ir lines.].
+assuming a flux ratio of about unity in the continuum and that the two
+components are essentially unresolved by amber, we expect a contrast of
+unity for the binary modulation (we also assume in this case the
+absence of other contributions in  band from dust and/or the
+wwcz). thus, given the slowly changing continuum flux ratio between
+the wr- and o-star components, the presence of lines is expected to lead
+to a sudden change of the amber interferometric signal.
+§ analysis of the interferometric data
+§.§ analytical fit using visibilities and closure phase
+selected continuum zones as in fig.  and the
+      adjustment of the binary star model. it shows globally a
+      constant separation and position angle of 3.65 mas and
+      72.7. we have redundant measures separated by 15mn in time
+      at 2.025 m and 2.098 m since the spectral windows
+      overlapped at this continuum zone. the rms column corresponds to
+      the standard deviation between all the measurements whereas the
+       one represents the average error on the parameters from
+      the fitting process.
+    
+  
+  
+  
+    wavelength (m)     1.985     2.025     2.025    
+    2.045     2.098     2.098     2.1275    
+    2.150     avg.     rms     
+12cobservation
+visibility ut2-ut3     0.50     0.52     0.47    
+    0.54     0.54     0.58     0.59    
+    0.59         
+visibility ut3-ut4     0.26     0.26     0.28    
+    0.28     0.23     0.20     0.24    
+    0.26         
+visibility ut2-ut4     0.44     0.43     0.42    
+    0.42     0.41     0.53     0.52    
+    0.48         
+closure phase     1.09     1.22     1.11    
+    1.37     1.49     1.61     1.78    
+    1.60         
+12cfit binary
+separation (mas)     3.69     3.68     3.57    
+    3.53     3.60     3.72     3.69    
+    3.68     3.65     0.06     0.1 
+position angle ()     64.0     64.8     93.4    
+    68.8     76.4     72.3     71.1    
+    70.8     72.7     8.7     10
+flux ratio 2nd star     0.57     0.57     0.57    
+    0.59     0.64     0.68     0.66    
+    0.64     0.62     0.04      0.1
+the aim of this section is to infer the geometrical parameters of
+the binary using absolute interferometric observables
+exclusively. specifically, we seek the separation , the
+position angle  of the system, and the flux ratio 
+between the two components. we perform the fit in the continuum
+regions defined in fig. .
+§.§.§ method and results
+the geometrical model used to fit the data is a standard binary
+model characterized by the astrometric parameters (position angle,
+separation, used in the vector ) and the flux
+ratio between the two stars, i.e., , at a given
+spatial frequency  (see
+eq. ),
+we use this complex visibility to compute the differential
+visibility and phase. note that at this stage, the algorithm does
+not allow to disentangle the irrespective o- and wr-star fluxes. the
+absolute visibility is , and
+the closure phase is .
+we used the following set of observables to perform the fit:
+eginitemize
+* the absolute visibility for each selected wavelength.
+* the closure phase for each selected wavelength.
+the binary parameters obtained with this method are shown in the
+table. . the resulting separation is
+3.650.12 mas. the error bar is computed as follows: we have a
+standard deviation between all the measurements of 0.06 mas, and we
+have an average estimate by the  of the fit to
+0.1 mas. hence the error is on the order of 0.12mas. the
+position angle is 7313, and the flux ratio between the
+two stars is 0.620.11.
+§.§.§ interpretation
+the main point is that the obtained separation is not in a
+good agreement with the expected one 5.10.9 mas. on the
+  other hand, the expected position angle of 6615is
+  compatible within the error bars with the measured one. this result
+  is tested in the following sections and discussed in
+  sect. . 
+we can notice a correlation between the flux ratio and the
+wavelength. such a correlation could be explained if the o
+star is the primary and the wr star is the secondary. however, the
+estimated flux ratio variation with wavelength is too strong to be
+explained by this way. considering the error bars we have, we can
+only say that this trend is fortuitous and that the flux ratio may
+be constant over the spectral bandwidth.
+we point out to the reader the fact that the flux ratio given by
+this method is within the wr star continuum zones shown in
+fig. , which means that the average flux ratio on
+all the bandwidth is slightly different. it corresponds in fact to
+0.790.12 in average on the 1.95-2.17 m range.
+the quality of the fit is not good, the fitted visibilities and
+closure phase are on average at 2 over the observed ones. this
+overestimate of visibilities means that the “real” observed object
+is more resolved than a binary star alone.
+the easiest way to improve the fit is to consider a third component
+for the flux that would be fully spatially resolved and would dilute
+the correlated flux observed by amber. according to the visibilities,
+this contribution could contribute up to 20% of the overall flux
+of the system. however, this significant flux would have been detected
+by other techniques and is not reported in the literature. this may
+also mean that the observed absolute visibilities on both the
+ut2-ut3 and ut2-ut4 bases are significantly biased. this may be
+related to the observation problems we noticed on ut2.
+observed data with amber and the best fit, using a geometrical
+      model of a double star and a o- and wr-star synthetic spectra
+      of sect. .
+      top-left:
+      points with error bars: observed absolute visibilities versus
+      base length. crosses: our model. see text for comments.
+      top-right:
+      gray line with error bars: observed differential visibilities
+      versus wavelength. dashed line: our model. the different
+      baselines are offseted for clarity.
+      bottom-left:
+      gray line with error bars: observed closure phase versus
+      wavelength. dashed line: the model. see text for comments.
+      bottom-right:
+      gray line with error bars: observed differential phases versus
+      wavelength. dashed line: our model. the different baselines
+      are offseted for clarity.
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+  
+  
+§.§ fit using wr and o stars modeled spectra
+in this section we use the synthetic spectra presented in 
+sect.  in order to find the  
+parameters that best match our data. we still assume the
+individual components of the binary system are unresolved. 
+§.§.§ method and results
+in sect. , we restricted the fitting
+process to a selection of a few narrow continuum windows. we now
+wish to perform a fit using the information from the full spectral
+window (about half the  band). in order to perform such a fit, we
+use the geometrical model described in eq. , together
+with the synthetic spectra described in
+sect.  . we
+are particularly interested in seeing a change in the
+interferometric signal associated with the predicted change of the o
+to wr flux ratio as we progress from continuum to line regions.
+the set of observables considered to perform the fit has been
+extended to the full dataset, namely the spectrum, the averaged
+absolute visibilities and closure phase per spectral window, the
+differential visibilities and the differential phases.
+we use non-linear fit methods in order to minimise the 
+between the observables and the model. then we compute the best fit of
+about a thousand randomly chosen initial parameters in order to get
+the best minimum of . the final model has then been compared
+to the observed star spectrum and interferometric observables as
+shown in the fig. .
+the best fit yields a binary star separation of
+3.64 mas, a position angle of
+72, a flux ratio of 0.75 (in
+the whole 1.95-2.17 m range), attributed here to the wr to o
+flux ratio. this detection is made possible because of the non-zero
+closure phase signal and is clearly made because of the presence of
+different lines in the wr- and o-star spectra.
+the amber instrument would normally allow to disentangle definetly
+which component is the north-east and which is the
+south-west. however, the calibration data obtained for this has been
+taken and is still in the process of being interpreted. this is why we
+guess, according to a preliminary study of this calibration data, that
+the north-east component is the wr star and the south-west is the o
+star, but we are quite prudent about this particular point.
+§.§.§ interpretation
+we tested the fits with the full library of spectrum provided by
+martins et al. (2005). the quality of the fits is only slightly
+affected by the choice of the o star spectrum. in the near-ir, the
+spectrum is weakly sensitive to the star temperature and equally
+good fits can be obtained with models with t between
+27kk and 35kk (or yet higher). yet, the four spectra providing the
+best fits are those with log between 3.2 and 3.35, considering
+the o star as a supergiant. this information has to be taken with
+caution since the residuals depend critically on the choice of the
+wr star spectrum, but this result still holds when we consider our
+different wr models.
+the spectrum, the differential visibilities, differential phases and
+closure phases are reasonably well fitted. the absolute visibilities
+are overestimated in our model compared to that of amber. again, these
+discrepancies may be due to biases in the absolute visibilities of
+amber, but we note also significant departures in
+the differential visibilities, differential phases and closure phase
+at 2.08 m (civ line), 2.115 m (ciii line)
+and 2.14 m (see fig. ).
+as mentioned in the previous section, the simplest way to solve the
+absolute visibilities discrepancies is to add a fully resolved
+“continuum” contribution. however, the constraints provided by the
+differential observable and the closure phase are also tight, due to
+the large flux ratio variations in the wr lines. this leave only small
+room to even a small diluting factor. we tried to inject a fully
+resolved component with varying flux contribution and the maximum
+possible continuum contribution has been estimated to 5% of the
+overall flux. within this range, the fits of the differential
+observables and the closure phase are slightly improved, but the
+discrepancies of the absolute visibilities remain.
+the most convincing signature of the wwcz may be found in lines, but
+in the stage of development of the wr spectrum model, it is not
+absolutely sure that the residuals of the fits in the lines come from
+an inadequacy of the models or an intrinsic signal from an additional
+component.
+§.§ wr spectrum reconstruction
+observed data with amber and the best fit, using a geometrical
+      model of a double star, a o-star synthetic spectrum and a
+      reconstructed wr-star spectrum of
+      sect. .
+      top-left:
+      points with error bars: observed absolute visibilities versus
+      base length. crosses: our model. see text for comments.
+      top-right:
+      gray line with error bars: observed differential visibilities
+      versus wavelength. dashed line: our model. the different
+      baselines are offseted for clarity.
+      bottom-left:
+      gray line with error bars: observed closure phase versus
+      wavelength. dashed line: the model. see text for comments.
+      bottom-right:
+      gray line with error bars: observed differential phases versus
+      wavelength. dashed line: our model. the different baselines
+      are offseted for clarity.
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+  
+  
+§.§.§ method and results
+in this section, we consider that the o star spectrum is better
+constrained than the wr star spectrum. it is just an almost
+featureless continuum with a relatively well-defined slope. hence, we
+try another approach based on our simple geometrical model of a binary
+with unresolved components of eq. . previously, the
+wavelength-dependent flux ratio between the o star and the wr star was
+defined by the ratio of the synthetic spectra.
+now, we determine for each spectral channel the wr star flux using
+only the observed flux and the o star model. the idea is to use all
+the information contained in the data in order to minimize the a
+  priori information used in the model. we point out to the reader that the observed spectrum is normalized as described in 
+appendix , the absolute flux information being
+lost.
+let  be the observed spectrum,  the flux ratio
+between the o star and the wr star, and  
+the normalized o spectrum. we can define a normalized wr star spectrum by:
+since the observed spectrum is normalized as described in
+appendix , we need to normalize in the
+same way the o star synthetic spectrum before subtracting it from
+the observed spectrum in order to get this normalized wr star
+spectrum. then we multiply the resulting spectrum with the slope of
+a blackbody at 56000 k, the expected temperature of the wr star. we
+tested several black body temperatures such as 70000 k for example
+and found that it does not change dramatically the slope of the wr
+spectrum nor the result of the fit. this suggests that using a black
+body for this fit is approximate but adequate since the slope of the
+energy distribution of a wr star is not too sensitive to the
+temperature of the model in the 1.95-2.17 m range.
+at this point we get a completely constrained spectrum of the wr star,
+only dependent from the o star model and the amber spectrum. we inject
+then the spectrum of the modeled o star and the constrained wr star
+in the interferometric data in order to compute a  and perform
+the fit.
+this technique has been used to fit the data shown in
+fig. . compared to the previous method
+involving the synthetic wr spectrum, the residuals (i.e. the
+) are smaller. for instance, the contribution from the
+missing line at 2.138 m, not predicted by our wr model, is well
+reproduced and the residuals are small. the poor photometric quality
+of the spectral window between 1.95 and 2.2 m (and in
+particular the 2.01 m atmospheric feature) is reported in the
+differential visibilities (mostly the ut3-ut4 ones) and the closure
+phase.
+this method provides the best fit to the data of the present paper and
+all the following is based on the results of this fit. it yields the
+following parameters: a binary separation of 3.62 mas,
+a position angle of 73, a wr flux contribution in
+the 1.95-2.17 m spectral window of 0.79.
+the parameters are basically unchanged compared to those of the
+previous section, suggesting that the quality of the wr synthetic
+spectrum does not introduce a sizable bias on our determination.
+§ discussion
+§.§ spectra separation and stars parameters
+one very interesting point of the methods described above is the fact
+that we are able to extract a wr spectrum independent from previous
+spectrophotometric measurements. this allows us to compare our best
+spectrum model from the fit of the sect.  and
+this independently extracted spectrum. one can find the resulting
+  spectra on the fig. .
+the two final wr spectra showed on the same plot. dashed line:
+      wr model of sect. . dash-dotted line:
+      wr spectrum of sect. . they show
+      similarities in the lines at 2.059m and 2.165m but our
+      modeled spectrum is less accurate in the carbon lines at
+      2.071m, 2.079m, 2.108m and 2.114m.
+    
+  
+  
+§.§ binary separation and distance
+errors derived from the different techniques used to retrieve
+      the geometrical parameters of the binary star at the time of the
+      amber observations. the big
+      gray box represents the estimation and error bars from the
+      radial velocity method and the small gray box is the resulting
+      parameters from our interferometric fit. this figure show that
+      the direct measured separation by interferometric means is
+      smaller than the expected one, leading to a possible
+      reevaluation of the distance of the system.
+    
+  
+  
+the geometrical parameters provided by the different approaches used
+to invert the data have been markedly consistent and robust.  the
+best fit (i.e. minimum ) and narrower error bars are found
+for the method in sect.  which the wr
+spectrum is considered as undefined. this could appear artificial
+but the ressemblance of the spectrum and fits estimated with the
+ones found using a radiative model lead us to be confident on the
+results presented. the parameters are shown in table
+ and the results from
+sect.  are reported in
+fig. . with this direct observation of the
+ velorum with the interferometer and our model fitting, we
+should be able to disentangle the  uncertainty between the
+wr and o position, the first being the north-east and the second being
+the south-west at the time of the observations (see the
+sect.  for more details). however, this
+  preliminary result has to be confirmed with the complete analysis of
+  our amber calibration data
+summary of all the methods and results used in this paper,
+      showing the good agreement we have with several different
+      interpretation methods of the interferometric data, but the bad
+      agreement on the separation between the interferometric methods
+      and the spectrophotometric method.
+    
+  
+  
+  
+    method     separation     pos. angle     averaged fx. rat.
+(mas)          ()        (1.95-2.17 m)
+sect.      5.30.9    
+    6615     - 
+sect.      3.650.12    
+    7313     0.790.12 
+sect.      3.64    
+    72     0.75 
+sect.      3.62    
+    73     0.79 
+the binary parameters remain unchanged within the error bars shown in
+the figure and do not change the present reasoning. the estimated
+errors on the position angle are relatively large, but comparable to
+the uncertainties of the spectroscopic orbit. the values agree well,
+which means that the projected position of the two stars is well
+predicted if the spectroscopic information is complemented by the
+polarization data from . by contrast, our
+estimated projected separation is well-constrained and differs
+significantly from the predicted one. the amber separation is at a
+2 level from the predicted one.
+furthermore, from the amber point-of-view, the spectroscopic-based
+separation at 1 in fig.  is still
+separated to more than 3 of the amber error bar. the
+spectroscopic-based error bar on the separation  is mostly
+defined by the hipparcos uncertainties. a computation of the distance
+including the amber separation and angle measurements in the frame of
+the spectroscopic orbit parameters leads to a distance of
+368 pc.
+before the hipparcos era, the common estimated distances to
+ velorum were typically of 450 pc
+.  the present
+estimate, with a variance at the 2 level from the hipparcos
+measurement, would place  velorum within the vela ob2
+association, affecting all distance dependent parameters such as the
+luminosity, radii, and of course spectral types.  as an example, the
+table  reporting the parameters of
+ are scaled to the hipparcos distance. in
+pre-hipparcos area, the spectral type of the o star has been for a
+long time o9i , which means that the
+typical radius is about 20, rather than 13.
+the reliability of the hipparcos distance has recently been questioned
+by the discovery of an association of low-mass, pre-main sequence
+stars in the direction of  velorum which would have affected
+the measured parallax, and the distance to  velorum may be
+between 360 and 490 pc . a low-mass
+companion 4.8  away has been observed in the x-ray band with
+chandra . a similar problem concerning the
+star wr 47 (wn6+o5v) has been reported and extensively studied by
+pietti et al. which leaded to a distance multiplied by 4 compared to
+the hipparcos one (1.100.05 kpc versus 216 pc
+[this distance would have made wr 47 the closest wr, before
+   velorum.]).
+§.§.§ residuals of the fits
+in sect. , we have documented the
+properties of the  velorum system used to estimate the
+observed signal with the amber instrument. our interpretation
+suggests a binary system whose separation is resolved by the
+interferometer, but not their individual components diameter. note
+that we have neglected the presence of dust or any other  source of
+emission.
+different modeling methods were used, with different assumptions on
+the two sources, but lead to results in agreement for the binary
+separation, the position angle, and flux ratio between the two
+stars. however, in both methods, the quality of the fits could be
+improved. errors and biases of the different amber observables may
+corrupt the fitting process, but the disagreements may also stem from
+additional components not yet accounted for.
+let us assess the source of the residuals and try to provide some
+information on the way the present model of the  velorum system
+could be improved. the residuals of the fits are analyzed per observable:
+eginitemize
+* differential visibilities: the fits based on the extracted wr
+  spectrum are of good quality and the residuals can not be
+  attributed definitely to an additional astronomical signal. the
+  levels of the dips and peaks of the signal are tightly correlated
+  to the changing of the primary versus the secondary source of
+  flux. a small change of the flux ratio between the two stars, and
+  the inclusion of a small source of continuum can affect
+  drastically this observable. more complex models, e.g., including
+  a continuum contribution of up to 5% of the total flux, improve
+  slightly the match with the observations.
+* differential phases: the quality of the fits is reasonably
+  good considering that this observable is subject to continuum
+  fluctuations that can be seen, for instance, in the edge of the
+  spectral window at 2.17 m. we note a discrepancy of the
+  model and the signal at 2.07 m for the baselines ut2-ut3 and
+  ut3-ut4. this discrepancy is only slightly attenuated when using
+  the wr synthetic spectrum that shows a stronger contribution at
+  this wavelength than observed. this may indicate an additional
+  source of emission for this particular line at a position not
+  coincident with that of the wr star. the balance of the different
+  contributions of these blended lines is temperature dependent and
+  the wwcz can add both a spatial and a spectral signature.
+* closure phase: there is a noticeable departure of the model in
+  the 1.95-2.03 m spectral window. the lines are not fitted
+  perfectly but the residuals are at the 10% level. this may suggest
+  a third source in the system, but as before there is an ambiguity in
+  the interpretation of this observable and a slight change in the
+  shape of the wr lines and/or in the star-flux ratio could also
+  change this inferred closure phase.
+* absolute visibilities: whatever the strategy used to fit the
+  amber data, the model fails to provide the low level of absolute
+  visibilities observed. the obvious solution is the introduction of a
+  third source of continuum flux. however the contribution from an
+  additional source is strongly limited by the other observables,
+  requiring that the modulation of the signal by the wr is sufficient to
+  explain the level of spectral variations observed. we tested some
+  models with a small amount of (flat) continuum that improved
+  slightly the model level but insufficiently. for this observable
+  though, we think that some instrumental effect on ut2 biased the
+  visibilities.
+ 
+at this stage of the analysis and given the limited amount of data
+available, it is not possible to attribute with confidence the
+residuals to an astrophysical origin.  however, we have several
+observables that have significant discrepancies in some lines, giving
+tenuous clues that something more has to be included in our model to
+improve the fits. more data is needed, covering a broad range of
+binary phases, in order to get more constraints on a complete
+  model.
+§ conclusion
+using a relatively restrained data set from the amber/vlti instrument,
+we have set tight constraints on the geometrical parameters of the
+ velorum orbit. this separation leads to a reevaluation of
+the distance of the  velorum system that has to be confirmed
+and more accurately estimated by a regular monitoring of the system.
+moreover, we were able to perform a spectrum separation between
+  the two stars, using known assumptions on the spectral type of the o
+  star. this allowed us to compare our modeled wr spectrum to this
+  independent one and found that their match is reasonable.
+we note however that the observed data set is not fully consistent
+with a simple geometrical binary model taking into account refinements
+of the modeled spectra for each component. this discrepancy may be
+interpreted as not well understood instrumental biases as well as the
+detection of a spatially distinct source of continuum, that would
+  contribute to up to 5% of the total flux of the system.
+we warmly thank john davis and julian north for fruitful discussions on the definition of polarimetric
+versus spectroscopic parameters of binary orbits that allowed us to detect an inconsistancy on the direction of the orbit in the paper.
+we thank fabrice martins for providing the o star synthetic
+  spectrum. this paper makes use of  jean-marie
+    mariotti center (jmmc) tools for model fitting and
+  data adjustment.
+we would like to thank
+  the staff of the european southern observatory for
+  their help in the design and the commissioning of the amber
+  instrument.
+this project has benefited from funding from the french centre
+  national de la recherche scientifique (cnrs) through the institut
+  national des sciences de l'univers (insu) and its programmes
+  nationaux (ashra, pnps). the authors from the french laboratories
+  would like to thank the successive directors of the insu/cnrs
+  directors.  the authors from the the arcetri observatory acknowledge
+  partial support from miur grants and from inaf grants.
+  
+  
+  
+  
+  
+  
+  
+  c. gil work was supported in part by the fundação para a
+  ciência e a tecnologia through project pocti/cte-ast/55691/2004
+  from pocti, with funds from the european program feder.
+  
+  
+  
+  
+  
+  this research has also made use of the aspro observation preparation
+  tool from the jmmc in france, the simbad database at cds, strasbourg
+  (france) and the smithsonian/nasa astrophysics data system
+  (ads). this publication makes use of data products from the two
+  micron all sky survey.
+the amber data reduction software  has been linked
+  with the open source software
+  yorick[] to provide
+  the user friendly interface . they are freely
+  available on the amber website
+  .
+aa
+§ data processing status
+left:
+      calibration of the spectral drift, using the reference star
+      spectrum (flat a1iii star spectrum). from top to bottom
+      are the uncalibrated observed  velorum spectrum, the
+      calibrator star spectrum after removal of a voigt profile in the
+      br line, and the reference gemini spectrum. all of them
+      show a clear co rovibrationnal feature at 2.01,m and 
+      2.06 m, and some other water vapor absorption lines, used for the
+      absolute wavelength calibration. the graphs have been offset
+      for clarity.
+      right:
+      estimate of the absolute visibilities by applying different
+      frame selection thresholds keeping percentage of the observed
+      frames (solid line with error bars, left axis). the internal
+      dispersion of the visibilities increases as the amount of data
+      rejected decreases but there is no obvious bias coming from data
+      selection as the absolute visibilities stays constant within the
+      error bars. the optimal selection threshold is chosen at the
+      position of minimum of the statistical dispersion of the squared
+      visibilities (dashed line, right axis): in this data set, this
+      level keeps 20% of the observed frames (i.e. 80% rejected).
+    
+  
+  
+amber follows the standard data flow system implemented at eso/vlt
+during data acquisition, the software records the images of the
+spectrally dispersed fringes as well as those of the telescope
+beams.
+the standard data reduction method developed and optimized for amber
+is called p2vm for pixel-to- visibilities matrix . the p2vm is a linear matrix method which
+computed raw visibilities from amber data for each spectral
+channel. the p2vm is computed after an internal calibration procedure
+which is performed every time the instrument configuration
+changes. the complex coherent fluxes are given by the product of the
+fluxes measured on each pixel of the detector by this p2vm
+matrix. we then compute all the useful observables, namely the
+visibility, the closure phase, the differential visibility, and the
+differential phase. for more details, please refer to
+.
+§ spectral calibration
+the atmosphere imprints its signature on the observed spectrum of
+ velorum, namely through the characteristic co
+rovibrationnal lines at 2.01 m and 2.06 m. using a
+reference spectrum of the atmospheric transmission and correlation
+techniques, we get an absolute and accurate (half a pixel, to be
+compared to the 2 pixels sampling of the spectrum) spectral
+calibration of the observed spectrum (see fig. )
+we corrected the spectra for telluric lines by observing the
+calibration star approximately at the same airmass and dividing the
+two spectra (the same technique as ).
+as we observed at medium spectral resolution (), the
+numerous narrow spectral features in the a star spectrum are smeared
+out, with the exception of . the calibrator spectrum is therefore
+featureless and allows a good correction of the telluric lines. the
+ line at 2.165 m is removed from the calibrator spectrum
+by fitting a voigt profile (see the left panel of fig. ).
+no accurate correction from the telluric spectrum is performed in the area
+of the  line due to the narrowness of the spectral window
+that lack strong telluric lines. the airmass
+was 1.2 for  velorum and 1.1 for the calibrator star which
+leads to an error on the calibrated spectrum of about 7% in the parts
+where there is strong atmosphere absorption lines (e.g. around
+2.00 m). this systematic error is taken into account in the
+calibrated spectrum error bars.
+amber collects the stellar fluxes through optical fibers. taking into
+account the rapidly varying tip/tilt effect on the fiber entrance, the
+changes in airmass, seeing conditions, and vibrations conditions
+between the star and calibrator, it is not possible to extract a
+reliable absolute flux from the observed star. the observed spectrum
+is continuum corrected by  means of a spline curve that passes through
+designated continuum regions. this yields a totally flat observed
+spectrum as in the top panel of fig. .
+the error bars of the resulting spectrum takes into account the
+detector noise and the photon noise, as well as the air mass mismatch
+between the calibrator and the science stars.
+§ data selection and biases
+the specific conditions of observations described above make the
+selection of the data sample difficult. the data reduction technique
+provides accurate results when the sub-set of good frames selected for
+the  science and calibration object are unbiased. in our case, the
+science and  calibration stars have only one magnitude difference and
+the average seeing was 0.65 for  velorum and
+0.7  for the calibration star.
+to select the data, we compute all the observables and then estimate
+the biases introduced on the absolute visibilities by comparing
+different frame selection thresholds (see
+fig. ). the selection criterion is set by a
+threshold value of the coherent flux signal-to-noise ratio (snr) for
+individual frames. we obtain a constant value of visibility whatever
+the threshold, which suggests that the frame selection  criterion does
+not bias the estimated  velorum absolute visibilities in the
+range of the estimated error bars.
+we based our optimum snr threshold selection on the minimum of the 
+statistical errors computed on the absolute visibilities. this 
+optimum threshold keeps 20% of the total number of frames 
+(fig. , left panel).
+§ observables calibration
+we calibrate the absolute visibilities using the technique described
+in : we interpolate the calibrator
+visibilities at the time of the science star observations in order to
+correct it from the instrumental and atmospheric transfer
+functions. the calibrator visibilities are corrected from the resolved
+flux level based on its estimated angular diameter.
+where  is the base length,  the estimated diameter of the
+calibration star,  being the raw visibilities
+of  velorum, and  the visibility of the
+calibration star interpolated to the observation time.
+for the closure phase, we only correct the object closure phase from any 
+instrumental-based signal by subtracting the calibrator closure phase
+and the object closure phase,
+the differential visibilities and differential phase are computed as
+explained in , and should need no
+calibration, at least in theory. however, we noticed that they are
+affected by instrumental effects such as polarization mismatch between
+the fibers outputs, leading to differential phase effects up to
+0.05 rad peak to peak.
+for the differential visibility, the calibration is performed by
+dividing the star by the calibrator differential visibilities:
+for the differential phase, the calibration is performed by
+substracting the calibrator to the star differential phase:
+§ error estimates
+   
+the statistical errors are estimated using the dispersion of the
+  individual-frame observables, assuming a gaussian distribution of
+  differential visibilities, differential phases and closure phase.
+the limitations of the vlti + amber instrument described in
+  appendix.  (vibrations, large amount of
+  time between the star and calibrator) and the level of dispersion of
+  the absolute visibilities observed with other calibrators (in
+  different spectral band) led us to increase the estimated error bars
+  beyond the natural dispersion of the absolute visibilities. we found
+  that the errors between calibrators are typically 5% above the
+  internal dispersion, and, thus, this error has been added to the
+  error budget. hence, the absolute visibility error bars contain two
+  contributions: the statistical dispersion of the measured spectrally
+  dispersed absolute visibilities and the bias error of the mean
+  visibilities in a spectral window, estimated to be 5%.
+  
+  
+  
+/edocument/

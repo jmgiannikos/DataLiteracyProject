@@ -1707,8 +1707,8 @@
   "awards": [],
   "funders": [],
   "has_content": {
-    "grobid_xml": false,
-    "pdf": false
+    "pdf": false,
+    "grobid_xml": false
   },
   "referenced_works_count": 86,
   "referenced_works": [

@@ -15,8 +15,8 @@ ARXIV_DELAY_LIMIT = 3
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-CACHE_DIR = Path("src/data/cache/raw_text")
-METADATA_FILE = Path("src/data/metadata.csv")
+CACHE_DIR = Path("data/cache/raw_text")
+METADATA_FILE = Path("data/metadata.csv")
 
 def ensure_cache_dir():
     if not CACHE_DIR.exists():
@@ -121,12 +121,9 @@ def main():
     logger.info(f"Found {len(arxiv_ids)} papers to process.")
 
     for i, arxiv_id in enumerate(arxiv_ids):
-        # Clean ID just in case (e.g. version numbers)
-        # Usually we want the base ID for current version, or specific version. 
-        # Metadata csv usually has version ed IDs like 1234.5678v1
-        # Arxiv e-print works with versions too.
-        
-        target_file = CACHE_DIR / f"{arxiv_id}.txt"
+        # Sanitize arxiv_id for filename (replace slashes with underscores for old-style IDs like "astro-ph/9906233")
+        safe_arxiv_id = arxiv_id.replace("/", "_")
+        target_file = CACHE_DIR / f"{safe_arxiv_id}.txt"
         
         if target_file.exists():
             logger.info(f"[{i+1}/{len(arxiv_ids)}] Skipping {arxiv_id}, already exists.")

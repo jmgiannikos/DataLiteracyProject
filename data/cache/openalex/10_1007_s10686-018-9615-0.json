@@ -1248,8 +1248,8 @@
     }
   ],
   "has_content": {
-    "grobid_xml": false,
-    "pdf": false
+    "pdf": false,
+    "grobid_xml": false
   },
   "referenced_works_count": 49,
   "referenced_works": [

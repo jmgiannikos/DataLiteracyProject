@@ -1,0 +1,556 @@
+.
+  
+cesam2k20
+eos
+^-1 ^-2
+pageof, page  of *lastpage
+/bdocument/
+exomoon search with gravity
+lira, observatoire de paris, université psl, sorbonne université, université paris cité, cy cergy paris université, cnrs, 92190 meudon, france
+    center for interdisciplinary exploration and research in astrophysics (ciera) and department of physics and astronomy, northwestern university, evanston, il 60208, usa
+     european southern observatory, karl-schwarzschild-straße 2, 85748 garching, germany
+     department of physics & astronomy, johns hopkins university, 3400 n. charles street, baltimore, md 21218, usa
+      space telescope science institute, 3700 san martin drive, baltimore, md 21218, usa
+    leiden observatory, leiden university, einsteinweg 55, 2333 cc leiden, the netherlands
+          fakultät für physik, universität duisburg-essen, lotharstraße 1, 47057 duisburg, germany      center for space and habitability, universität bern, gesellschaftsstrasse 6, 3012 bern, switzerland
+      max planck institute for astronomy, königstuhl 17, 69117 heidelberg, germany
+         universidade de lisboa - faculdade de ciências, campo grande, 1749-016 lisboa, portugal
+      centra - centro de astrofísica e gravitação, ist, universidade de lisboa, 1049-001 lisboa, portugal
+      univ. grenoble alpes, cnrs, ipag, 38000 grenoble, france
+            max planck institute for extraterrestrial physics, giessenbachstraße 1, 85748 garching, germany
+      université côte d’azur, observatoire de la côte d’azur, cnrs, laboratoire lagrange, bd de l'observatoire, cs 34229, 06304 nice cedex 4, france
+      aix marseille univ, cnrs, cnes, lam, marseille, france
+      star institute, université de liège, allée du six août 19c, 4000 liège, belgium
+      department of astrophysical & planetary sciences, jila, duane physics bldg., 2000 colorado ave, university of colorado, boulder, co 80309, usa
+      1st institute of physics, university of cologne, zülpicher straße 77, 50937 cologne, germany
+      max planck institute for radio astronomy, auf dem hügel 69, 53121 bonn, germany
+      universidade do porto, faculdade de engenharia, rua dr. roberto frias, 4200-465 porto, portugal
+      school of physics, university college dublin, belfield, dublin 4, ireland
+      astrophysics group, department of physics & astronomy, university of exeter, stocker road, exeter, ex4 4ql, united kingdom
+      departments of physics and astronomy, le conte hall, university of california, berkeley, ca 94720, usa
+      european southern observatory, casilla 19001, santiago 19, chile
+      advanced concepts team, european space agency, tec-sf, estec, keplerlaan 1, nl-2201, az noordwijk, the netherlands
+      
+   university of exeter, physics building, stocker road, exeter ex4 4ql, united kingdom
+astronomy department, university of michigan, ann arbor, mi 48109 usa
+      institute of astronomy, university of cambridge, madingley road, cambridge cb3 0ha, united kingdom
+      academia sinica, institute of astronomy and astrophysics, 11f astronomy-mathematics building, ntu/as campus, no. 1, section 4, roosevelt rd., taipei 10617, taiwan
+      european space agency (esa), esa office, space telescope science institute, 3700 san martin drive, baltimore, md 21218, usa
+      department of earth & planetary sciences, johns hopkins university, baltimore, md, usa
+      max planck institute for astrophysics, karl-schwarzschild-str. 1, 85741 garching, germany
+  excellence cluster origins, boltzmannstraße 2, d-85748 garching bei münchen, germany
+ institute of astronomy, ku leuven, celestijnenlaan 200d, 3001, leuven, belgium
+ school of physics & astronomy, university of southampton, southampton, so17 1bj, united kingdom
+ instituto de astronomía, national autonomous university of mexico, mexico city, mexico
+ univ. lyon, univ. lyon 1, ens de lyon, cnrs, centre de recherche astrophysique de lyon umr5574, f-69230, saint genis-laval, france
+       
+direct astrometric detection of exomoons remains unexplored. this study presents the first application of high-precision astrometry to search for exomoons around substellar companions.
+   we investigate whether the orbital motion of the companion hd 206893 b exhibits astrometric residuals consistent with the gravitational influence of an exomoon or binary planet.
+   using the vlti/gravity instrument, we monitored the astrometric positions of hd 206893 b and c across both short (days to months) and long (yearly) timescales. this enabled us to isolate potential residual wobbles in the motion of component b attributable to an orbiting moon.
+   our analysis reveals tentative astrometric residuals in the hd 206893 b orbit. if interpreted as an exomoon signature, these residuals correspond to a candidate (hd 206893 b i) with an orbital period of approximately 0.76 years and a mass of 0.4 jupiter masses. however, the origin of these residuals remains ambiguous and could be due to systematics. complementing the astrometry, our analysis of gravity  spectroscopy for hd 206893 b confirms a clear detection of water, but no co is found using cross-correlation. we also find that af lep b, and  pic b are the best short-term candidates to look for moons with gravity+.
+   our observations demonstrate the transformative
+potential of high-precision astrometry in the search for exomoons, and proves the feasibility of the technique to detect moons with masses lower than jupiter and potentially down to less than neptune in optimistic cases. crucially, further high-precision astrometric observations with vlti/gravity are essential to verify the reality and nature of this signal and attempt this technique on a variety of planetary systems.
+exomoon search with vlti/gravity around the substellar companion hd 206893 b
+    q. krale-mail: quentin.kral@obspm.fr j. wang j. kammerer s. lacour, m. malin, t. winterhalder b. charnay c. perrot p. huet 
+ r. abuter
+ a. amorim,
+ w. o. balmer,
+ m. benisty
+ j.-p. berger
+ h. beust
+ s. blunt
+ a. boccaletti
+ m. bonnefoy
+ h. bonnet
+ m. s. bordoni
+ g. bourdarot
+ w. brandner
+ f. cantalloube
+ p. caselli 
+ g. chauvin
+ a. chavez
+ a. chomez,
+ e. choquet
+ v. christiaens
+ y. clénet
+ v. coudé du foresto
+ a. cridland
+ r. davies
+ r. dembet
+ j. dexter
+ a. drescher
+ g. duvert
+ a. eckart,
+ f. eisenhauer
+ n. m. förster schreiber
+ p. garcia,
+ r. garcia lopez,
+ t. gardner
+ e. gendron
+ r. genzel,
+ s. gillessen
+ j. h. girard
+ s. grant
+ x. haubois
+ th. henning
+ s. hinkley
+ s. hippler
+ m. houllé
+ z. hubert
+ l. jocou
+ m. keppler
+ p. kervella
+ l. kreidberg
+ n. t. kurtovic
+ a.-m. lagrange,
+ v. lapeyrère
+ j.-b. le bouquin
+ d. lutz
+ a.-l. maire
+ f. mang
+ g.-d. marleau,,
+ a. mérand
+ p. mollière
+ j. d. monnier
+ c. mordasini
+ d. mouillet
+ e. nasedkin
+ m. nowak
+ t. ott
+ g. p. p. l. otten
+ c. paladini
+ t. paumard
+ k. perraut
+ g. perrin
+ o. pfuhl
+ n. pourré
+ l. pueyo
+ d. c. ribeiro
+ e. rickman
+ z. rustamkulov
+ j. shangguan
+ t. shimizu 
+ d. sing,
+ j. stadler,
+ t. stolker
+ o. straub
+ c. straubmeier
+ e. sturm
+ l. j. tacconi
+ a. vigan
+ f. vincent
+ s. d. von fellenberg
+ f. widmann
+ j. woillez
+ s. yazici
+ the gravity collaboration
+ k. abd el dayem
+	n. aimar,
+	a. berdeu,
+	c. correia,
+	d. defrère
+	m. fabricius
+	h. feuchtgruber    
+	a. foschi          
+	s.f. hönig    
+	s. joharle
+	r. laugier
+	o. lai
+	j. leftley
+	b. lopez
+	f. millour
+	m. montargès       
+	n. morujão,
+	h. nowacki
+	j. osorno
+	r. petrov
+	p.o. petrucci         
+	s. rabien
+	s. robbe-dubois
+	m. sadun bordoni
+	j. sánchez bermúdez
+	d. santos
+	j. sauter
+	j. scigliuto 
+	f. soulez
+	m. subroweit 
+	c. sykes
+	the gravity collaboration
+    received september 15, 1932; accepted march 16, 1937
+===================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+§ introduction
+the detection of satellites around extrasolar planets or substellar companions, termed exomoons, remains an elusive frontier in modern astronomy. moreover, there is no definition of what an exomoon is, and some ambiguity remains as to whether it may include, for instance, binary planets. some have suggested that objects orbiting planets could be distinguished based on the center of mass of the system (planet+object). if the center of mass is outside the planet then it would be classified as a binary planet rather than an exomoon . exomoons transiting isolated planetary-mass objects have also been discussed in . despite extensive observational efforts, no exomoon has been definitively confirmed to date. numerous detection techniques have been actively pursued, though the intrinsic challenges of identifying such small, faint companions persist. the transit method represents the most prominent approach, leveraging distinctive light-curve signatures induced by planet-moon systems . complementary constraints may be derived from transit timing variations (ttvs) and transit duration variations (tdvs) . large-scale transit surveys have already imposed stringent limits on exomoon occurrence rates, constraining galilean-analogue systems to fewer than 0.38 moons per planet for planets orbiting between 0.1 and 1.0 au .
+alternative detection methodologies face distinct limitations. microlensing surveys have not demonstrated significant promise for exomoon detection due to inherent smearing out of the exomoon signal . radial velocity (rv) monitoring of planets themselves — rather than their host stars — has shown potential, yielding upper mass limits (e.g.,  m for  day period moons around hr 8799 planets; ). recent advances combining high-contrast imaging with high-resolution spectroscopy now permit sensitivity to 1–4% mass-ratio companions at separations comparable to the galilean moons . nevertheless, detecting satellites with masses akin to those of solar system moons (with a maximum satellite-to-planet mass ratio of around ) remains beyond current capabilities.
+to date, only a limited number of tentative exomoon candidates have emerged. the jupiter-sized transiting planet kepler-1625 b has drawn particular attention due to light-curve anomalies suggestive of a neptune-mass satellite . however, the interpretation remains contested, with studies attributing the signal to an artifact of the data reduction, stellar activity, or unknown systematics . similarly debated is the proposed neptune-sized companion to the super-jupiter kepler-1708 b . other candidates include a wider-separation jupiter-mass companion to the brown dwarf dh tau b (projected separation: 10 au; mass ratio 0.1; ) and a 1.7 r object orbiting a free-floating planet .
+the scarcity of detections contrasts sharply with the ubiquity of moons in our solar system ( confirmed), underscoring the observational challenges posed by sub-earth-sized exomoons. intriguingly, proposed candidates exhibit masses vastly exceeding those of solar system satellites – that have typical mass ratios  for galilean moons –, suggesting initial discoveries may occupy the extreme end of the exomoon mass spectrum. this parallels early exoplanet surveys, which revealed unexpected populations such as hot jupiters. theoretical work now supports the plausibility of massive exomoons, whether via gravitational capture  or formation within massive circumplanetary disks . notably, moon masses may scale with host planet mass as m , favoring searches around super-jovian planets or brown dwarfs, as in this study.
+stability considerations further refine detection strategies. exomoons must reside between their host’s roche limit and 0.49  (prograde orbits) or 0.93  (retrograde orbits) . close-in planets ( au) are poor candidates due to tidal destabilization , necessitating focus on wider-orbit systems. this motivates the application of high-precision astrometry, capable of probing distant planets.
+in this work, we demonstrate the potential of the vlti/gravity instrument to detect exomoons via astrometric monitoring. gravity’s tens of microarcsecond-level precision enables direct tracking of planetary orbital wobbles induced by massive satellites, probing periods spanning days to years – a regime where stable, detectable exomoons are most likely to reside. 
+we present observations of the brown dwarf hd 206893 b <cit.>, a benchmark target for probing substellar companions. first identified with sphere  around the f5v star hd 206893 <cit.>, its properties remain debated: comparing the atmosphere properties from atmospheric models with evolutonary tracks suggest a possible younger age down to 3 myr, and a planetary-mass regime as low as 5 m . notably, hd 206893 b exhibits spectral characteristics of an l/t transition object, with extreme near-infrared colors indicative of high-altitude dust clouds .
+the hd 206893 system hosts a complex architecture (see fig. ). a 
+10 m planetary-mass companion, hd 206893 c, orbits interior to the brown dwarf at  3.6 au . alma observations further reveal a structured debris disk extending from 30 to 180 au, bisected by a 27 au gap . this gap may harbor an additional jupiter-mass companion at  75 au, which, if confirmed, would constitute a third companion in the system.
+schematic of the hd 206893 system.
+our analysis focuses on two key aspects: (1) quantifying gravity’s sensitivity to exomoon-induced astrometric perturbations through precision monitoring of hd 206893 b’s orbital motion, and (2) conducting the first medium-resolution () k-band spectral analysis of hd 206893 b’s atmosphere using gravity data. by modeling the brown dwarf’s astrometric residuals, we establish detection limits for potential satellites and assess the instrument’s capability to resolve exomoon dynamical signatures. moreover, we will refine the orbits of hd 206893 b and c using our new data. simultaneously, the spectroscopic data may provide new insights into the atmospheric composition and cloud properties of this enigmatic l/t transition object.
+§ observations and data reduction
+gravity astrometry for hd206893, b and c components.
+mjd     ra     dec     a
+b     58681.392               -0.57 
+b     58708.160               -0.93 
+b     59453.093               -0.68 
+b     60127.218               -0.37 
+b     60428.381               -0.07 
+b     60461.388               -0.32 
+b     60462.327               -0.73 
+b     60485.334               -0.66 
+b     60491.191               -0.65 
+b     60509.364               -0.57 
+b     60515.246               -0.40 
+b     60516.263               -0.13 
+b     60834.317               -0.48 
+c     59454.125               -0.64 
+c     59485.110               -0.85 
+c     59504.061               -0.53 
+c     59721.403               -0.87 
+a
+ stands for the pearson correlation coefficient. the high correlation values are a direct consequence of the elongated geometry of the vlti. 
+hd 206893 b was observed with the gravity instrument  at the vlti during eight epochs between april and july 2024 (prog. id 113.26d9.001). 
+these observations complement those obtained as part of the exo-gravity large program . a final observation was conducted in june 2025 as part of the commissioning of the new adaptive optics system of gravity+.
+an observing log for all epochs is provided in table  in appendix . during the 2024 observing campaign, a short observational cadence was adopted to maximize sensitivity to moon-like companions around hd 206893 b. this strategy enhances the sensitivity to moons orbiting the brown dwarf companion on timescales of days to months.
+all data were obtained with the four 8.2 m unit telescopes (uts) in dual-field on-axis mode. in this configuration, a 50/50 beamsplitter directed half of the starlight to the gravity fringe tracker, while the other half (either from the star or the companion) was sent to the gravity science spectrometer, which was operated at a spectral resolving power of  in the k-band (–m). this setup allowed for the calibration of the companion exposures using the host star exposures, eliminating the need for dedicated calibrator observations.
+the data were reduced using the eso gravity pipeline version 1.6.4b and further processed with the gravity consortium python tools[available for download at ] to extract relative astrometry and k-band contrast spectra (relative to the host star) of hd 206893 b . the data reduction followed the procedure described in appendix a of . a recent improvement was achieved by down-weighting baselines that have a high degree of self-subtraction caused by post-processing. this allowed for a more aggressive suppression of the stellar flux by increasing the order of the polynomial fit, without excessively amplifying systematic noise. reductions were therefore performed using different polynomial orders for the post-processing <cit.>, specifically orders 3, 4, and 6. the resulting astrometry is listed in table . all the datasets were uniformly reduced to give the astrometry adopted in this paper, summarized in table .
+to convert the contrast spectra into flux-calibrated spectra, we multiplied them by a model spectrum of the host star hd 206893 a. for this purpose, we fitted a bt-nextgen stellar atmosphere model  to archival photometry from gaia, 2mass, tycho, and wise, as well as the gaia xp-spectrum  of hd 206893 a. interstellar extinction was not included in the fit, as the gaia dr3 catalog reports a g-band extinction of 0 mag . the surface gravity was fixed to the gaia dr3 value of . the fit yields an effective temperature of  k, consistent within 1 with the value reported by . figure  displays the resulting model spectrum for hd 206893 a along with the archival photometry used in the fit, providing a good fit in band k.
+model spectrum of hd 206893 a obtained by fitting a bt-nextgen stellar model atmosphere (black line) to archival photometry (orange points) and the gaia xp spectrum (green points). the top panel shows the filter transmission curves and the bottom panel shows the residuals between data and model.
+combined r  4000 spectrum obtained with gravity for hd 206893 b by averaging the data obtained at different epochs (see fig. ).
+the companion flux spectra are then obtained by multiplying the gravity contrast spectrum with the stellar model spectrum. we propagate the uncertainties of the stellar model and the correlations of the gravity spectra throughout the entire process. this yields a companion flux spectrum for each epoch. to obtain the highest possible signal-to-noise ratio (snr), the individual epochs are then averaged together to a final companion flux spectrum by computing a covariance-weighted mean spectrum. before, though, we applied scaling factors to each individual epoch to bring them into better agreement with each other. the best fitting scaling factors are shown in figure . the scaling factors were introduced to mitigate the 10% systematic flux variability between epochs caused by varying psf shape due to atmospheric turbulence and instrumental effects. the final companion flux average spectrum is shown in figure .
+§ exomoon search and new predictions for the orbits of hd 206893 b and c
+§.§ back of the envelope predictions for the moon's astrometric effect
+let us consider a moon of mass  orbiting a planet of mass . they will both orbit around their barycenter, with the semi-major axis of the planet’s orbit due to the exomoon given by
+ 
+where  is the distance between the planet and the moon, and  is the moon-to-planet mass ratio .
+if we define the maximum astrometric angular displacement  for a full orbit of the planet around its barycenter due to the moon's gravity, we get 
+where  is the system's distance to the sun (see fig. ). then, we can readily derive
+diagram of the orbit of hd 206893 b with a potential moon around it, causing it to shift slightly due to the moon's gravitational potential. it illustrates the notation used in section .
+note that this derivation assumes that we measure the wobble of the giant planet or companion, while we actually measure the wobble of the center of light of the pair with gravity . the moon may have a non-negligible flux contribution depending on its albedo in the infrared compared to the host. however, it is neglected in this study, given uncertainties, and that we consider moons with much lower masses than the moon host. 
+if the orbit has an eccentricity , then the minimum astrometric displacement seen on the sky would be twice the semi-minor axis  so that . in this case, we obtain 
+for simplicity, assuming that the eccentricity is zero and that , then we obtain
+or converting to the period  of the orbit using kepler's third law, we finally obtain
+where m is neptune's mass equal to 17.15 m, and m the jupiter's mass equal to 317.8 m. in the formula above, we use units of day, parsec, and microarcsec for the period, distance, and astrometric signature, respectively. this equation shows that exomoons with masses around that of neptune may be targeted with an astrometry at 10 as level for the closest systems. it may even go down to an earth mass for moons located at larger periods and down to the mass of the jupiter moon ganymede of mass m m around less massive planets than assumed here (10 m) located at larger distances from the central star with their hill spheres being much larger, allowing for stable moons at several year periods. to better visualize this equation, we plot it in fig. .
+as stated earlier, the moon should remain within the planet's hill sphere , where  is the planet's semi-major axis,  the planet's eccentricity, and  the stellar mass. the moon should also be located beyond the roche limit  defined as , where  is the planet's radius,  the planet's density,  the moon's density, and  is a dimensionless geometrical parameter with  for a sphere, but is smaller for an object that takes a non-spherical shape .  find that  may be more realistic for moonlets. in the case of an incompressible fluid, taking full account of the feedback between the moon's deformed shape and its gravity field smoothes the cusps and elongates the moon further , leading to an even smaller value, . this sets some limits on the moon's period such that (within the hill sphere)
+and (beyond the roche limit)
+leading to typical moon periods between a day and several decades, but note the strong dependence on the planet semi-major axis , which can push the hill radius to 210 day period for  au instead of 18 yr for 10 au, or 580 yr for 100 au. 
+analytical predictions of  (the mass of the moon in masses of neptune) as a function of  (the period of the moon in days). the solid black lines show the model's prediction for astrometric accuracies of 10 and 100 as, as indicated on the graph. the values used are those of eq. , i.e.  pc and . the dotted line shows the case of 10 as considering . if the system is instead at 100 pc, the lines are pushed up by a factor of 10. the areas beyond the roche limit and the hill sphere are shown in grey. the hill sphere is shown for two values of the semi-major axis of the planet  equal to 1 (closest) and 10 au (farthest). the horizontal lines indicate moon masses of 1 m, 1 m, 1 m, and 1 m from top to bottom.
+now we focus on the hd 206893 system and produce a prediction for the presence of an exomoon around hd 206893 b using its specific set of parameters. using that  pc,  m (see next section), we plot the moon mass model prediction as a function of moon period in fig. . we also adapt the hill radius by using  m,  au, and  (see our fit in the next section). in addition, we show a green point obtained by fitting the gravity data that represents upper limits in moon mass and period derived in section  (i.e. an upper limit of 0.8 m in mass and using the tentative detection semi-major axis of 0.22 au or 278 days). the orange area represents the allowed parameter space of a plausible moon that would hide around hd 206893 b but would still be detectable with gravity given an astrometric accuracy of 10 as. we note that the orange zone extends slightly beyond the analytical predictions because our upper limit accounts for different orientations of the system (e.g., obliquity, inclination), whereas the analytical model does not.
+analytical predictions for the astrometric effect of a moon with varying mass and distance to hd 206893 b. gravity could in principle detect moons lower than a neptune mass at larger periods. the fit of the gravity data is shown as a green point assuming the mass and period as upper limits in our tentative detection. the orange area shows the plausible parameter space where a moon could be located, and still be potentially detectable with gravity assuming an astrometric accuracy of 10 as (see section ).
+§.§ refining the orbit of hd 206893 b and c
+we repeat the orbit modeling following the procedure described in  to obtain updated orbital posteriors for hd 206893 b and c. we fit the relative astrometry, hipparcos-gaia absolute astrometry from the edr3 edition of the hgca , and stellar radial velocity data  using  . we did not include the companion radial velocity of b measured in , as it did not provide any additional constraints to the orbit fit. 
+we used the parallel-tempered affine-invariant sampler   with 20 temperatures and 1000 walkers per temperature to sample the posterior. we discarded the first 35,000 steps as “burn-in" after visual inspection of the walkers, using only the last 5000 steps from the lowest temperature walkers to construct the posterior. we present the updated orbital parameters in table . 
+in broad strokes, the orbital configuration of the two planets remains the same as from . the substantial increase in gravity astrometry of b has resulted in a much more precise orbit solution for both planets, since the visual orbit of b also contains information on the orbit of c (similar to gravity observations of  pic b and c; ). the orbit of hd 206893 b is nearly circular, and with a 1 au larger semimajor axis than what was found in . this results in a dynamical mass for b that is 8 m lower than what was found in . the orbit of hd 206893 c is also more circular ( compared to ) and is now nearly coplanar with hd 206893 b. this is a much more dynamically stable configuration than the nearly unstable orbital solution found in . the epicyclic motion in the visual orbit of b due to the orbit of c is now detected in the gravity data, which helps constrain the orbit of c, which previously relied heavily on the stellar rv and astrometry. 
+orbital fit of the b and c components in the hd 206893 system.
+    
+    quantity      prior     posterior 
+(au)                   loguniform(1, 100)       
+uniform(0, 1)       
+()                       
+()           uniform(0, 2)      
+()           uniform(0, 2)      
+uniform(0, 1)      
+(au)                   loguniform(1, 100)      
+uniform(0, 1)      
+()                      
+()           uniform(0, 2)      
+()           uniform(0, 2)      
+uniform(0, 1)      
+parallax (mas)             (24.5275, 0.0354)      
+(m/s)             uniform(, 5000)      
+(m/s)             loguniform(0.1, 100)      
+(m)      uniform(1, 50)      
+(m)      uniform(1, 50)      
+(m)      (1.29, 0.10)      
+3cderived parameters 
+(yr)             –      
+ 
+  (yr)             –      
+ 
+ mutual inc. ()        –      
+ 
+ 
+orbital parameters in jacobi coordinates. , , , , , and  are the semi-major axis, eccentricity, inclination, argument of periapsis, longitude of ascending node, and the relative epoch of periastron, respectively. they are shown for the b and c components with associated subscripts. then we list the parallax, the stellar rv offset (), the stellar rv jitter (), the mass of the b and c components, and that of the star. we finish with the orbital periods of the b and c components and their mutual inclinations.
+ 
+§.§ fit of astrometric residuals to look for an exomoon
+to search for a possible companion orbiting hd 206893 b, we performed a 3-body hierarchical fit with . in this hierarchical model, we assume a companion is orbiting b, and that the barycenter of these two bodies orbits around the star. this is implemented in practice in  by setting b to be body 0, the potential companion to b to be body 1, and the host star hd 206893 to be body 2, and by setting a non-zero mass for b (19.5 m; table ). in addition to the gravitational influence of the host star and any potential moon, the orbit of b is also influenced by c. this is not captured by the hierarchical model implemented in . thus, we subtract out the perturbations in the visual orbit of b due to the gravitational influence of c (i.e., c causing the star to move about the system barycenter, which is encoded in the relative astrometry between b and the host star; see ) using the maximum posterior probability orbit from the previous section. 
+for simplicity, we assumed the potential orbital companion to hd 206893 b is on a circular orbit. we also set priors on the mass of the potential companion to be between  and 10  and the semimajor axis to be between 0.001 and 1 au. we did not place any constraints on the orbital orientation of the moon relative to the orbit of b. 
+we used  to sample the orbital posterior using 20 temperatures and 1000 walkers per temperature. we discarded the first 10,000 steps of each walker as burn-in after visual inspection, and used the remaining 10,000 steps of each lowest-temperature walker to construct the posterior. 
+the posterior for the potential exomoon's semimajor axis (sma), inclination (inc), position angle of ascending nodes (pan), and mass are shown in fig. . assuming no moon detection, we have a 95% upper limit on the mass of the moon at 0.8 m. however, we do find a peak in the moon sma 1-d marginalized posteriors at about 0.22 au (period of 0.76 yr). the inclination (inc) and position angle of the ascending node (pan) are moderately constrained, with best fitted with values around 90 deg, which would be 60 degrees misaligned from the orbit of b.
+to analyze the most promising peak in the posterior, we consider only the posterior samples between 0.21 and 0.26 au. the posterior is plotted in fig. . in this case, the moon mass seems to converge to a value around 0.5 m. we phase-fold the data based on this orbital period (0.76 yr) and compare it to the orbital model. the phase-folded residual plot shows the potential ra and dec offsets on hd 206893 b after accounting for the planet c influence and removing the hd 206893 b orbit motion (fig. ). the offsets from 0 in the residuals are due to uncertainty in the orbit of hd 206893 b itself, while the sinusoidal wiggles are mainly caused by the moon in our orbital model. 
+we also visualize the residuals on a ra vs dec plot in fig.  (we also removed the average motion due to hd 206893 b orbiting the star and accounting for the motion induced by the planet c), where we see that the data seems to form an ellipse around the origin. the data seem to be well traced by exomoon trajectories from our model that are 0.15 mas in radius. we note that for a moon of mass 0.5 m orbiting at 0.22 au from b of mass 19.5 m, then it causes the b component to orbit around a center of gravity that is located at about  au or 0.14 mas, which is indeed similar to what we observe on the ra vs dec plot. however, we note that systematic errors in the astrometry can also cause the data to form an ellipse around the origin. 
+systematic errors can have multiple origins. table 1 in  provides a review of their possible sources, including improper baseline calibration, terrestrial reference frame uncertainties, atmospheric dispersion, optical aberrations, and others. all of these effects were carefully evaluated and constrained to remain below 10 as. laser trackers were used for baseline calibration; updates of the eop (earth orientation parameters) and the difference between ut1 (astronomical time) and utc (coordinated universal time) are regularly obtained from the international earth rotation and reference systems service (iers); and optical aberrations within our system were measured and their impact assessed . overall, we are confident that these known systematics do not dominate the error budget.
+to test the hypothesis that the tentative detection might be real, we ran a simulation with no moons and compared it with the results of our previous fit, including a moon, by using the bayesian information criterion (bic). the median bic favours the exomoon fit over the no moon fit by 7.4, which could point to some real signal but is less than the threshold of 10 to decisively favor the exomoon model . in particular, the exomoon model could be used to fit for unaccounted systematics in our data. therefore, our data do not allow us to confirm the presence of an exomoon for now, and further observations are needed. furthermore, the bic test does not factor into systematic errors in the astrometry, which the exomoon model could be fitting for. 
+we conclude that we find an upper limit of a potential moon around hd 206893 b of 0.8 m using the 95 percentile limit or 0.5 m (or 9.3 m), if we assume a tentative detection. we also see that the sma is peaking at a value around 0.22 au, but we note that there are other smaller peaks around, and we cannot be certain that the period around 0.76 yr is real. more data from gravity on a monthly timescale would allow us to conclude.
+ 
+ 
+   
+    
+fit of the astrometric data of hd 206893 b looking for an exomoon. the mcmc analysis finds a 95% upper limit of 0.8 m for the potential exomoon mass and a peak in semi-major axis at 0.22 au, while the inclination and position angle of ascending node are around 90 deg. another mcmc plot assuming a fixed semi-major axis around its peak is shown in fig. .
+residuals of hd 206893 b orbit after removing the average motion due to hd 206893 b orbiting the star and accounting for the motion induced by the planet c. in the top two plots, the data are phase-folded by a period of 275 days, using mjd 58500 as the starting point. 50 random draws with sma between 0.21 and 0.26 au are plotted in cyan for the ra and orange for the dec vs time plots, respectively. these model draws have the average motion of hd 206893 b removed, so they show both perturbation from the exomoon model and the residuals in the orbit of b from the average orbit of b.  in the bottom plots, the data are plotted as a function of mjd and not phase-folded. the orbits are colored by orbital phase, where blue is an orbital phase of 0 and green is an orbital phase of 1. note that the orbital periods vary between each model drawn and are slightly different from an exact 275-day orbital period.
+similar residuals as figure , but projected onto the 2-d sky plane and the 50 random draws from the posterior only consider the motion of a potential exomoon (and not residual uncertainties in the orbit of b, which are shown in figure ). the colors of both the data and the models correspond to the 275-day phase, as specified by the colorbar and defined in figure . 
+§ spectral analysis
+together with the astrometric observation of hd 206893 b, we obtained an  spectrum of the object. a previous spectrum at  has already been published in , and in  at higher resolution (). moreover, sphere observations led to the detection of water at 1.4 microns .
+§.§ atmospheric forward modeling
+we performed forward model fitting of the gravity spectrum using the bayesian framework species , and several pre-computed atmospheric grids designed for young giant planets at medium spectral resolution:  ,  <cit.> and, for comparison, the commonly used  grid .
+these models are designed for late-m to early-t type objects and differ mainly in their treatment of clouds and thermal structure.
+ includes microphysical processes and settling to account for clouds; while   adds simple cloud microphysics and disequilibrium chemistry relevant for late l and early t dwarfs;  is cloud-free model but incorporates diabatic processes that modify the temperature gradient via an effective adiabatic index .
+for computational efficiency, we limited the fit to an effective temperature range of 1000–1900 k.
+results are in figs. , ,  for each model. fig.  displays the best fit spectra together with the gravity data).
+the  models yield higher effective temperatures and smaller radii, with  k and , likely due to cloud modeling prescription..
+in contrast,  and  provide broadly consistent effective temperatures,  k and  k, respectively, and larger radii,  for  and  for .
+models yield to the following c/o values,  for , and  for , consistent with sub-solar c/o ratios up to solar abundances for  given the uncertainties. 
+§.§ cross-correlation
+cross-correlation between model spectra and observed data is a commonly used technique to detect molecular species in the atmospheres of directly imaged exoplanets and brown dwarfs <cit.>.
+we cross-correlated the gravity spectrum obtained in fig.  with synthetic spectra generated using the exorem atmospheric model , assuming a range of effective temperature, , solar metallicity, and a c/o ratio of 0.5. 
+we found that an effective temperature of 1400 k provided the highest s/n, although the measured s/n remain similar across effective temperatures from 1100 to 1400 k. we focused on the main species expected to contribute in the k band spectral range, namely ho, co, as predicted by the exorem model (see figure ). while nh and hs also exhibit spectral features, they are too faint to be detected in our data.
+the observed spectrum was first smoothed using a gaussian filter with  pixels. this smoothed spectrum is then subtracted to focus solely on the high-frequency components of the observed spectrum. 
+the wavelength grid is sampled logarithmically, corresponding to a radial-velocity spacing of , and both the model and observed spectra are interpolated onto this new grid.
+the ccf was then computed using the scipy.signal.correlate routine and normalized by the square root of the sum of the model and the data spectrum squared. we note that we haven’t included any broadening of the model given the low spectral resolution of the data.
+to account for the intrinsic autocorrelation of the model spectrum (which can be particularly strong for molecules with strong harmonic features such as co), we also computed the autocorrelation function (acf) of each model. this correction was performed by subtracting a rescaled acf from the ccf wings ( 200 km/s). figure  displays each ccf along with the s/n of its peak.
+the s/n is computed as the peak divided by the standard deviation of the ccf wings 
+(between 500 km/s and 3000 km/s); 
+we display the s/n with and without the autocorrelation corrected in the figure's legend. restricting the analysis to the 2.2 – 2.4 m range, where water, co features dominate, further improved the s/n of the detections. the full-model ccf yields a peak s/n of 5.3, with the ho-only template yielding an s/n of 4.16.
+while no significant signal was detected for co, the absorption band at 2.3 m appears to be visible in the spectrum (fig. ). the ccf peaks of ho and of the full model appeared around -35 km/s, though this offset remains below the instrumental resolution of gravity of about 75 km/s. we note that the star radial velocity is -12.45 km/s , which is in the right range. 
+comparison between the gravity combined spectrum (gray) and the exorem synthetic spectrum for  k (light blue). each species spectrum is shown with an offset with different colours – dark blue for water, pink for sodium, and red for co.
+cross-correlation s/n peaks between the data and the exorem synthetic spectrum for  k. the global cross-correlation s/n are computed as the peak divided by the standard deviation of the ccf wings (500 to 3000 km/s), and their final values are displayed in the legend for each species (in colour) and for the global atmospheric model (in black).
+§ discussion
+§.§ target selection for gravity+
+based on their respective distances, host star separations, and magnitudes, we filtered the encyclopaedia of exoplanetary systems <cit.> for planets viable for a follow-up with gravity+ aimed at detecting exomoons.
+first, we selected confirmed planets and brown dwarfs exhibiting masses between 1 and 30 m. lower-mass objects would not be bright enough to be detectable with gravity+. we also decided to remove free-floating planets because they are not yet accessible to gravity+ without laser guide stars, as a bright reference source nearby is needed. next, we retained only such planets with semi-major axes greater than 1 au and smaller than 100 au because they need to be well separated from the star to be detectable with gravity+. eccentricities were selected to be lower than 0.3 to avoid too complex dynamics in the potential moon systems. we also removed all planets detected around pulsars or other exotic objects. finally, we selected only systems closer than 1000 pc from earth, as astrometric signals from exomoons would become too small for too distant systems.
+we show the resulting objects after this initial selection in fig. , representing the planetary mass  as a function of the target system distance . the respective semi-major axis  is shown in colour. at this stage, the sample consists of 124 planets. we circled in red the 14 objects that have already been observed with gravity. now, we selected the best 25 targets, i.e., with the smallest  values, that have an angular distance greater than 0.08 arcsec (to be detectable with gravity).
+using the  , ames-dusty  and ames-cond  evolutionary models, we computed the k-band magnitude expected for these most favourable targets. to this end, we used the available planet masses and system ages listed in exoplanet.eu, discarding targets for which these estimates were missing.
+the resulting magnitudes are listed in table .
+since the different evolutionary models are designed to handle a diverse set of objects, the resulting magnitude estimates are model-dependent. for instance, while the  model lacks a cloud prescription, ames-dusty is capable of describing cloudy atmospheres.
+no estimates were possible for objects with mass or age estimates outside the ranges in which the models are defined.
+some models could not be run when the evolutionary models are not defined in mass or age, leading to some empty values in tab. .
+in general, a gravity+ follow-up requires a companion brighter than  mag. this narrows down the follow-up sample to 5 viable targets, namely, 2mass j1315-2649 b <cit.>,  pic b , af lep b , hd 155555 (ab) b , and hd 60584 b, where the latter needs to be confirmed . two of these,  pic b  and af lep b , were already observed with gravity.
+finally, we retrieved the k-band fluxes of the individual hosts from the 2mass all-sky catalogue  and ensured that the host-to-companion contrast is within  to be able to detect them with gravity. all targets pass the contrast test, and this does not affect our previous list.
+according to eq. , the moon mass detectable with gravity scales as  (moon's period),  (distance to earth) and  (planet's mass). using that knowledge, we find that af lep b, hd 155555 (ab) b, and  pic b are the most favourable targets. the upper limits in mass for moons around hd 60584 b and 2mass j1315-2649 b are higher by a factor of 3 to 4 since the companion hosting the moon is more massive. however, we note that other criteria may impact the presence of a massive moon. a recent study found that more massive moons are more likely to form around a super-massive jupiter orbiting at 2 au around a solar-mass star , but more modelling is required to pinpoint the golden zone that would allow for the formation of the most massive moons around a variety of system architectures. 
+for now, the five best targets – af lep b, hd 155555 (ab) b,  pic b, hd 60584 b (if confirmed), and 2mass j1315-2649 b – should be considered as equally valid, as we cannot discard any of them as hosting a massive moon (i.e., a neptune-mass moon or greater) that could be detectable with gravity+. however, we note that for both hd 155555 (ab) b and the candidate hd 60584 b we would need more constraints from direct imaging to be able to track their orbits with gravity. as for 2mass j1315-2649 b, the host is a very low-mass star and it is too faint to use conventional adaptive optics. however, using the new laser guide stars may make it possible under the best atmospheric conditions, though it is at the limit . for all those reasons, af lep b and  pic b appear to be the best short term exomoon targets. the main uncertainty is the moon's period, which could vary widely from system to system, thus only allowing for better upper limits for targets with moons at greater distances.
+indeed, if a system hosts a moon relatively far from its host planet, it will be easier to detect because it creates a stronger astrometric signal, and we will therefore be able to probe lower mass moons that may be more common.
+k-band magnitude estimates for some potential gravity follow-up targets derived using different evolutionary models ( , ames-dusty  and ames-cond )
+target name          dusty     cond 
+cephei a b         23.93     –        26.80 
+hd 128311 c             23.81     21.92     26.14 
+gj 504 b                20.35     22.11     21.16 
+hd 89839 b              26.39     21.92     29.85 
+hd 154345 b             –        –        –    
+2mass j1315-2649 b      15.43     15.71     15.42 
+pic b              12.57     11.68     12.05 
+hd 114783 c             –        –        53.62 
+af lep b                15.87     16.82     15.51 
+hd 155555 (ab) b         15.49     16.23     15.06 
+hd 60584 b              15.63     16.04     15.66 
+these filter magnitudes were calculated based on the  () and  (ames-dusty and ames-cond) filter transmission profiles.
+selection of best targets filtered according to some specific criteria (see section ) obtained from the exoplanet.eu database. the plot shows the planet mass  vs the distance  for this selection of 124 objects, as well as the planet's semi-major axis  in colour. the objects circled in red are those already observed with gravity: af lep b,  pic b, c, hd 1160 b, hd 206893 b, hd 95086 b, hip 65426 b, hip 81208 cb, hip 99770 b, hr 2562 b, and hr 8799 b, c, d, e.
+§.§ the atmospheric makeup
+using cross-correlation, we searched for the presence of different molecules and atoms expected to be present in the atmospheres of brown dwarfs and young giant exoplanets: ho, co, ch, na, k, hcn, co, feh, hs, hcn, nh, ph, tio, and vo. for an effective temperature 1400k, atmospheric models predict spectra dominated by ho and co in the k band. we obtain a relatively clear detection of ho by cross-correlation (snr4.1). surprisingly, the signal is weak for co (snr1.3). 
+in addition to cross-correlation, we performed forward model fitting of the gravity spectrum as described in section . 
+the best fit (see fig. ) corresponds to c/o=0.38(+0.2/-0.2), slightly sub-solar (but note that the posterior is bimodal). 
+this is consistent with the non-detection of co by cross-correlation. 
+§.§ comparison with other methods to detect exomoons
+the search for exomoons presents significant challenges, and no confirmed detection exists to date. while the transit method <cit.> and radial velocity techniques <cit.> have driven most exomoon searches, they face inherent limitations. transit techniques are sensitive primarily to moons on close-in orbits around transiting planets, require near-perfect orbital alignment, and disentangling moon signals from stellar activity or other planets can be complex. rv techniques require bright stars and struggle to target long-period moons .
+high-precision astrometry, as demonstrated in this work with vlti/gravity, offers a fundamentally complementary pathway. it directly measures the spatial wobble of the host planet or brown dwarf on the sky plane caused by an orbiting moon's gravitational pull. this technique possesses unique advantages as: 1) it can target planets with different inclinations, where the transit technique cannot, and the rv technique finds results that depend on the (most frequently) unknown  value.  2) it is ideally suited for searching for moons around directly imaged substellar companions, which typically reside on wide orbits that are more likely to host moons. transiting planets have short orbital periods and thus small hill spheres, which could be less favourable to moon retention , even if the planet formed further out and migrated inwards . 3) it is sensitive to wide-orbit moons with periods of months to years, which are inaccessible to transit techniques or current rv sensitivities . our tentative candidate around hd 206893 b exemplifies this, with a period of  0.76 years. the astrometry technique is even more powerful for moons at large distances from their planets, whereas the rv semi-amplitude decreases with larger separations, which could be complementary in some cases.
+we note that the detection of circumplanetary discs could also help to better understand the formation sites of exomoons in the near future, which could prove very useful for testing models <cit.>. if cavities are discovered (e.g., with the jwst) in these discs surrounding planets, this could indicate that moons are already forming at an early stage, and we could begin to study exomoon formation sites in detail, as well as the materials that accumulate as they form to forge these moons <cit.>.
+§.§  pictoris b: obliquity constraints and exomoon predictions
+the young  pictoris system hosts two directly imaged super-jupiters ( pic b and c), offering a prime laboratory for studying planetary dynamics. upcoming jwst observations (programme go 4758) will provide the first direct measurement of the spin-orbit obliquity of the outermost planet,  pic b — a milestone in exoplanet characterization.
+prior to jwst's definitive constraints,  combined dynamical and observational arguments to assess the likely obliquity of  pic b. their analysis strongly favors a misaligned spin axis for the planet. crucially, the authors propose that this misalignment could be maintained by a secular spin-orbit resonance driven by an unseen exomoon with a minimum mass exceeding neptune's (), and orbital period of 3–7 weeks.
+notably, such a companion may be accessible to astrometric detection: depending on the moon mass, e.g., if it is rather massive and close to ten neptune masses, the induced astrometric wobble of  pic b could fall within the capabilities of gravity+. given the system's brightness and proximity, we strongly advocate for rapid high-precision astrometric follow-up to test this prediction. a detection would not only validate the resonance mechanism but also provide the first direct evidence of an exomoon sculpting planetary obliquity.
+§.§ misinterpreting a planet for a moon
+a fundamental challenge in astrometric exomoon detection is degeneracy: the reflex motion induced in a host planet (or brown dwarf) caused by an unseen planetary-mass companion orbiting the same central star can mimic the astrometric perturbation created by a moon. the astrometric displacement of a moon (see eq. ) is roughly equal to . the signal from a planet would be roughly equal to . 
+earlier, we found that the astrometric displacement is about 0.0056 au for our set of best-fit parameters for the moon. if it were created by a planet instead, it would mean that  au. one can imagine a massive close-in planet would reproduce this signal, but then it may be detectable using rv. for instance, a planet with a period of 0.76 yr would correspond to a planet with a semi-major axis of about 0.9 au, which would imply a planet mass of  7 m to reproduce the astrometric displacement observed. such planets can be detected in rv. a planet further out with a lower mass may also reproduce the signal in some systems with moons at different periods, but then its period will likely be too high compared to typical moons' periods, such as the one found here of 0.76 yr. these types of arguments should be checked on a case-by-case basis.
+the fundamental difference between the effect of a moon and that of a planet is that the latter will cause a reflex motion on the star, while a moon would not. hence, a follow-up of the star's rv would be important to confirm the detection if any doubts remain, e.g., the planet that may mimic the moon's signal is at the detection limit, or it is in a system that does not yet have rv limits or strong direct imaging constraints.
+§ conclusions
+in this study, we presented the first dedicated high-precision astrometric search for an exomoon around a substellar companion, hd 206893 b, using vlti/gravity. our analysis of the companion’s orbital motion revealed an upper limit of 0.8 m and a possible tentative astrometric residuals consistent with a perturbation potentially induced by an exomoon. if confirmed, this signal would correspond to a massive satellite (0.5 m) orbiting hd 206893 b with a period of approximately 0.76 years. we emphasize the tentative nature of this candidate, which needs further confirmation using gravity data.
+beyond the exomoon signature, our work significantly refines the architecture of the hd 206893 system. re-fitting the orbits of companions b and c suggests hd 206893 b resides on a wider orbit (10.750.08 au) than previously estimated, implying a lower mass for this object (19.5 m). this revision may impact our understanding of the system’s formation and dynamical history. 
+complementing the astrometry, we analyzed the  spectrum of hd 206893 b obtained with gravity, confirming a clear detection of water, and no co detection. these spectral features provide crucial insights into the atmospheric composition and physical properties of this substellar companion.
+looking beyond hd 206893, we identify the most promising targets for future astrometric exomoon searches with gravity. based on proximity, companion brightness (k-band magnitude), orbital characteristics, and predicted astrometric signal strength, the five optimal candidates are: af lep b, hd 155555 (ab) b,  pic b, hd 60584 b, and 2mass j1315-2649 b, with a priority to af lep b and  pic b that can be observed without further characterization of the orbits, which are sufficiently well known to follow them precisely with gravity+.
+these systems present the strongest prospects for detecting the tens of as astrometric wobbles induced by exomoons within the current capabilities of vlti/gravity.
+our results demonstrate the potential of high-precision astrometry in the search for exomoons. while the detection around hd 206893 b requires further validation, this study establishes the methodology and proves the feasibility of the technique. gravity, designed with the hope to reach micro-arcsecond precision , is currently the only instrument capable of pursuing this astrometric pathway to neptune-like exomoons around directly imaged exoplanets and substellar companions. we therefore conclude that vlti/gravity has a pivotal role to play in the emerging field of exomoon and binary planet discovery. future observations focusing on the hd 206893 system and the prioritized target list are essential to confirm the first exomoon and to usher in a new era of comparative exolunar science. new instruments at the vlti with greater astrometric precision <cit.> or a future kilometre baseline interferometric facility would allow reaching 1 as , which would push the detection limits more than an order of magnitude down.
+this paper is dedicated to rémi. we thank the referee for their thorough report that improved the paper substantially.
+based on observations collected at the european southern observatory under eso programmes 105.20t0.001, 109.22za.002, 1103.b-0626, 1104.c-0651, 113.26d9.001 and 114.27uv.001.
+this research has made use of the jean-marie mariotti center 
+service [available at http://www.jmmc.fr/aspro].
+s.l. acknowledges the support of the french agence nationale de la recherche (anr-21-ce31-0017, exovlti) and of the european union (erc advanced grant 101142746, planetes). p.k. acknowledges funding from the european research council (erc) under the european union's horizon 2020 research and innovation program (project universcale, grant agreement 951549).
+[allard, homeier, & freytag2012]2012rspta.370.2765a allard f., homeier d., freytag b., 2012, rspta, 370, 2765. doi:10.1098/rsta.2011.0269
+[allard et al.2001]2001apj...556..357a allard f., hauschildt p. h., alexander d. r., tamanai a., schweitzer a., 2001, apj, 556, 357. doi:10.1086/321547
+[allard & homeier2012]allard_atmospheres_2012
+allard f., homeier d., 2012, in reylé c., charbonnel c., schultheis m., eds, eas publications series, vol. 57, low-mass stars and the transition stars/brown dwarfs: atmospheres from very low-mass stars to extrasolar planets. edp sciences, les ulis, p. 3. doi:10.1051/eas/1257001
+[asensio-torres et al.2018]2018a   a...619a..43a asensio-torres r., janson m., bonavita m., desidera s., thalmann c., kuzuhara m., henning t., et al., 2018, a&a, 619, a43. doi:10.1051/0004-6361/201833349
+[balmer et al.2025]2025aj....169...30b balmer w. o., franson k., chomez a., pueyo l., stolker t., lacour s., nowak m., et al., 2025, aj, 169, 30. doi:10.3847/1538-3881/ad9265
+[baraffe et al.2003]2003a   a...402..701b baraffe i., chabrier g., barman t. s., allard f., hauschildt p. h., 2003, a&a, 402, 701. doi:10.1051/0004-6361:20030252
+[batygin & morbidelli2020]2020apj...894..143b batygin k., morbidelli a., 2020, apj, 894, 143. doi:10.3847/1538-4357/ab8937
+[blain, charnay, & bézard2021]2021a   a...646a..15b blain d., charnay b., bézard b., 2021, a&a, 646, a15. doi:10.1051/0004-6361/202039072
+[blunt et al.(2020)]blunt2020 blunt, s., wang, j. j., angelo, i., et al. 2020, , 159, 3, 89. doi:10.3847/1538-3881/ab6663
+[blunt et al.(2024)]blunt2024 blunt, s., wang, j., hirsch, l., et al. 2024, the journal of open source software, 9, 101, 6756. doi:10.21105/joss.06756
+[bonavita et al.2022]2022mnras.513.5588b bonavita m., fontanive c., gratton r., mužić k., desidera s., mesa d., biller b., et al., 2022, mnras, 513, 5588. doi:10.1093/mnras/stac1250
+[bourdarot et al.2024]2024arxiv240908438b bourdarot g., eisenhauer f., yazıcı s., feuchtgruber h., le bouquin j.-b., hartl m., rau c., et al., 2024, arxiv, arxiv:2409.08438. doi:10.48550/arxiv.2409.08438
+[bourdarot & eisenhauer2024]2024arxiv241022063b bourdarot g., eisenhauer f., 2024, arxiv, arxiv:2410.22063. doi:10.48550/arxiv.2410.22063
+[brandt(2021)]brandt2021 brandt, t. d. 2021, , 254, 2, 42. doi:10.3847/1538-4365/abf93c
+[burgasser et al.2011]2011apj...739...49b burgasser a. j., sitarski b. n., gelino c. r., logsdon s. e., perrin m. d., 2011, apj, 739, 49. doi:10.1088/0004-637x/739/1/49
+[carrasco et al.2021]2021a   a...652a..86c carrasco j. m., weiler m., jordi c., fabricius c., de angeli f., evans d. w., van leeuwen f., et al., 2021, a&a, 652, a86. doi:10.1051/0004-6361/202141249
+[chabrier et al.2000]2000apj...542..464c chabrier g., baraffe i., allard f., hauschildt p., 2000, apj, 542, 464. doi:10.1086/309513
+[chandrasekhar1969]1969efe..book.....c chandrasekhar s., 1969, efe..book
+[charnay et al.2018]2018apj...854..172c charnay b., bézard b., baudino j.-l., bonnefoy m., boccaletti a., galicher r., 2018, apj, 854, 172. doi:10.3847/1538-4357/aaac7d
+[cugno et al.2024]2024apj...966l..21c cugno g., patapis p., banzatti a., meyer m., dannert f. a., stolker t., macdonald r. j., et al., 2024, apjl, 966, l21. doi:10.3847/2041-8213/ad3cbc
+[cutri et al.2003]2003ycat.2246....0c cutri r. m., skrutskie m. f., van dyk s., beichman c. a., carpenter j. m., chester t., cambresy l., et al., 2003, ycat, 2246. ii/246
+[de angeli et al.2023]2023a   a...674a...2d de angeli f., weiler m., montegriffo p., evans d. w., riello m., andrae r., carrasco j. m., et al., 2023, a&a, 674, a2. doi:10.1051/0004-6361/202243680
+[de regt et al.2024]2024a   a...688a.116d
+de regt s., gandhi s., snellen i. a. g., zhang y., ginski c., gonzález picos d., kesseli a. y., landman r., mollière p., nasedkin e., sánchez-lópez a., stolker t., 2024, a&a, 688, a116. doi:10.1051/0004-6361/202348508
+[delorme et al.2017]2017a   a...608a..79d delorme p., schmidt t., bonnefoy m., desidera s., ginski c., charnay b., lazzoni c., et al., 2017, a&a, 608, a79. doi:10.1051/0004-6361/201731145
+[dencs, dobos, & regály2025]2025a   a...699a.166d dencs z., dobos v., regály z., 2025, a&a, 699, a166. doi:10.1051/0004-6361/202554168
+[dobos et al.2021]2021pasp..133i4401d dobos v., charnoz s., pál a., roque-bernard a., szabó g. m., 2021, pasp, 133, 094401. doi:10.1088/1538-3873/abfe04
+[domingos, winter, & yokoyama2006]2006mnras.373.1227d domingos r. c., winter o. c., yokoyama t., 2006, mnras, 373, 1227. doi:10.1111/j.1365-2966.2006.11104.x
+[foreman-mackey et al.(2013)]foreman-mackey2013 foreman-mackey, d., hogg, d. w., lang, d., et al. 2013, , 125, 925, 306. doi:10.1086/670067
+[franson et al.2023]2023apj...950l..19f franson k., bowler b. p., zhou y., pearce t. d., bardalez gagliuffi d. c., biddle l. i., brandt t. d., et al., 2023, apjl, 950, l19. doi:10.3847/2041-8213/acd6f6
+[gaia collaboration2018]2018ycat.1345....0g gaia collaboration, 2018, ycat, 1345. doi:10.26093/cds/vizier.1345
+[gaia collaboration2020]2020ycat.1350....0g gaia collaboration, 2020, ycat, 1350. doi:10.26093/cds/vizier.1350
+[gaia collaboration et al.2023]2023a   a...674a...1g gaia collaboration, vallenari a., brown a. g. a., prusti t., de bruijne j. h. j., arenou f., babusiaux c., et al., 2023, a&a, 674, a1. doi:10.1051/0004-6361/202243940
+[grandjean et al.(2019)]grandjean2019 grandjean, a., lagrange, a.-m., beust, h., et al. 2019, , 627, l9. doi:10.1051/0004-6361/201935044
+[gratton et al.2023]2023natco..14.6232g gratton r., mesa d., bonavita m., zurlo a., marino s., kervella p., desidera s., et al., 2023, natco, 14, 6232. doi:10.1038/s41467-023-41665-0
+[gravity collaboration et al.2017]2017a   a...602a..94g gravity collaboration, abuter r., accardo m., amorim a., anugu n., ávila g., azouaoui n., et al., 2017, a&a, 602, a94. doi:10.1051/0004-6361/201730838
+[gravity collaboration et al.2020]2020a   a...633a.110g gravity collaboration, nowak m., lacour s., mollière p., wang j., charnay b., van dishoeck e. f., et al., 2020, a&a, 633, a110. doi:10.1051/0004-6361/201936898
+[gravity collaboration et al.2021]2021a   a...647a..59g gravity collaboration, abuter r., amorim a., bauböck m., berger j. p., bonnet h., brandner w., et al., 2021, a&a, 647, a59. doi:10.1051/0004-6361/202040208
+[han & han2002]2002apj...580..490h han c., han w., 2002, apj, 580, 490. doi:10.1086/343082
+[hansen2019]2019scia....5.8665h hansen b. m. s., 2019, scia, 5, eaaw8665. doi:10.1126/sciadv.aaw8665
+[heller, rodenbeck, & bruno2019]2019a   a...624a..95h heller r., rodenbeck k., bruno g., 2019, a&a, 624, a95. doi:10.1051/0004-6361/201834913
+[heller & hippke2024]2024natas...8..193h heller r., hippke m., 2024, natas, 8, 193. doi:10.1038/s41550-023-02148-w
+[hinkley et al.(2023)]hinkley2023 hinkley, s., lacour, s., marleau, g.-d., et al. 2023, , direct discovery of the inner exoplanet in the hd 206893 system. evidence for deuterium burning in a planetary-mass companion, 671, l5. doi:10.1051/0004-6361/202244727
+[horstman et al.2024]2024aj....168..175h horstman k., ruffio j.-b., batygin k., mawet d., baker a., hsu c.-c., wang j. j., et al., 2024, aj, 168, 175. doi:10.3847/1538-3881/ad73d8
+[kammerer et al.2021]2021a   a...652a..57k kammerer j., lacour s., stolker t., mollière p., sing d. k., nasedkin e., kervella p., et al., 2021, a&a, 652, a57. doi:10.1051/0004-6361/202140749
+[kipping2009a]2009mnras.392..181k kipping d. m., 2009, mnras, 392, 181. doi:10.1111/j.1365-2966.2008.13999.x
+[kipping2009b]2009mnras.396.1797k kipping d. m., 2009, mnras, 396, 1797. doi:10.1111/j.1365-2966.2009.14869.x
+[kipping et al.2015]2015apj...813...14k kipping d. m., schmitt a. r., huang x., torres g., nesvorný d., buchhave l. a., hartman j., et al., 2015, apj, 813, 14. doi:10.1088/0004-637x/813/1/14
+[konopacky et al.2013]2013sci...339.1398k
+konopacky q. m., barman t. s., macintosh b. a., marois c., 2013, science, 339, 1398. doi:10.1126/science.1232003
+[kipping et al.2022]2022natas...6..367k kipping d., bryson s., burke c., christiansen j., hardegree-ullman k., quarles b., hansen b., et al., 2022, natas, 6, 367. doi:10.1038/s41550-021-01539-1
+[kral et al.2016]2016a   a...592a..39k kral q., schneider j., kennedy g., souami d., 2016, a&a, 592, a39. doi:10.1051/0004-6361/201628298
+[kreidberg, luger, & bedell2019]2019apj...877l..15k kreidberg l., luger r., bedell m., 2019, apjl, 877, l15. doi:10.3847/2041-8213/ab20c8
+[lacour et al.2014]2014a   a...567a..75l lacour s., eisenhauer f., gillessen s., pfuhl o., woillez j., bonnet h., perrin g., et al., 2014, a&a, 567, a75. doi:10.1051/0004-6361/201423940
+[lacour et al.2020]2020spie11446e..0ol lacour s., wang j. j., nowak m., pueyo l., eisenhauer f., lagrange a.-m., mollière p., et al., 2020, spie, 11446, 114460o. doi:10.1117/12.2561667
+[lacour et al.(2021)]lacour2021 lacour, s., wang, j. j., rodet, l., et al. 2021, , 654, l2. doi:10.1051/0004-6361/202141889
+[lacour, carrión-gonzález, & nowak2025]2025a   a...694a.277l lacour s., carrión-gonzález ó., nowak m., 2025, a&a, 694, a277. doi:10.1051/0004-6361/202451060
+[lagrange et al.2010]2010sci...329...57l lagrange a.-m., bonnefoy m., chauvin g., apai d., ehrenreich d., boccaletti a., gratadour d., et al., 2010, sci, 329, 57. doi:10.1126/science.1187187
+[lapeyrere et al.2014]2014spie.9146e..2dl lapeyrere v., kervella p., lacour s., azouaoui n., garcia-dabo c. e., perrin g., eisenhauer f., et al., 2014, spie, 9146, 91462d. doi:10.1117/12.2056850
+[lazzoni et al.2020]2020a   a...641a.131l lazzoni c., zurlo a., desidera s., mesa d., fontanive c., bonavita m., ertel s., et al., 2020, a&a, 641, a131. doi:10.1051/0004-6361/201937290
+[liddle(2007)]liddle2007 liddle, a. r. 2007, , 377, 1, l74. doi:10.1111/j.1745-3933.2007.00306.x
+[limbach et al.2021]2021apj...918l..25l limbach m. a., vos j. m., winn j. n., heller r., mason j. c., schneider a. c., dai f., 2021, apjl, 918, l25. doi:10.3847/2041-8213/ac1e2d
+[marino et al.2020]2020mnras.498.1319m marino s., zurlo a., faramaz v., milli j., henning t., kennedy g. m., matrà l., et al., 2020, mnras, 498, 1319. doi:10.1093/mnras/staa2386
+[milli et al.2017]2017a   a...597l...2m milli j., hibon p., christiaens v., choquet é., bonnefoy m., kennedy g. m., wyatt m. c., et al., 2017, a&a, 597, l2. doi:10.1051/0004-6361/201629908
+[moraes & vieira neto2020]2020mnras.495.3763m moraes r. a., vieira neto e., 2020, mnras, 495, 3763. doi:10.1093/mnras/staa1441
+[murray & dermott1999]1999ssd..book.....m murray c. d., dermott s. f., 1999, ssd..book. doi:10.1017/cbo9781139174817
+[petrus et al.2025]2025a   a...701a.208p
+petrus s., chauvin g., bonnefoy m., tremblin p., morley c., charnay b., suarez g., gagné j., palma-bifani p., denis a., ravet m., bayo a., bézard b., biller b., delorme p., faherty j., goyal j.-m., hoch k., hoy k., jenkins j.-s., lagrange a.-m., lavie b., liu m. c., manjavacas e., marleau g.-d., mcelwain m., mollière p., mordasini c., phillips m., rojo p., zhang z., zurlo a., 2025, a&a, 701, a208. doi:10.1051/0004-6361/202554986
+[poon, rein, & pham2024]2024ojap....7e.109p poon m., rein h., pham d., 2024, ojap, 7, 109. doi:10.33232/001c.127130
+[porco et al.2007]2007sci...318.1602p porco c. c., thomas p. c., weiss j. w., richardson d. c., 2007, sci, 318, 1602. doi:10.1126/science.1143977
+[phillips et al.2020]2020a   a...637a..38p phillips m. w., tremblin p., baraffe i., chabrier g., allard n. f., spiegelman f., goyal j. m., et al., 2020, a&a, 637, a38. doi:10.1051/0004-6361/201937381
+[roche1849]roche1849 roche, é., 1849, in académie des sciences montpellier:
+mémoires la section des sciences, vol. 1, 243–262
+[ruffio et al.2023]2023aj....165..113r ruffio j.-b., horstman k., mawet d., rosenthal l. j., batygin k., wang j. j., millar-blanchaer m., et al., 2023, aj, 165, 113. doi:10.3847/1538-3881/acb34a
+[sappey et al.2025]2025aj....169..175s sappey b., konopacky q., ó c. r. d., barman t., ruffio j.-b., wang j., theissen c. a., et al., 2025, aj, 169, 175. doi:10.3847/1538-3881/adad70
+[sartoretti & schneider1999]1999a   as..134..553s sartoretti p., schneider j., 1999, a&as, 134, 553. doi:10.1051/aas:1999148
+[schneider et al.2011]2011a   a...532a..79s schneider j., dedieu c., le sidaner p., savalle r., zolotukhin i., 2011, a&a, 532, a79. doi:10.1051/0004-6361/201116713
+[simon, szatmáry, & szabó2007]2007a   a...470..727s simon a., szatmáry k., szabó g. m., 2007, a&a, 470, 727. doi:10.1051/0004-6361:20066560
+[spalding, batygin, & adams2016]2016apj...817...18s spalding c., batygin k., adams f. c., 2016, apj, 817, 18. doi:10.3847/0004-637x/817/1/18
+[stern & levison2002]2002hia....12..205s stern s. a., levison h. f., 2002, hia, 12, 205
+[stolker2023]2023ascl.soft07057s stolker t., 2023, ascl.soft. ascl:2307.057
+[teachey, kipping, & schmitt2018]2018aj....155...36t teachey a., kipping d. m., schmitt a. r., 2018, aj, 155, 36. doi:10.3847/1538-3881/aa93f2
+[teachey & kipping2018]2018scia....4.1784t teachey a., kipping d. m., 2018, scia, 4, eaav1784. doi:10.1126/sciadv.aav1784
+[vanderburg, rappaport, & mayo2018]2018aj....156..184v vanderburg a., rappaport s. a., mayo a. w., 2018, aj, 156, 184. doi:10.3847/1538-3881/aae0fc
+[vanderburg & rodriguez2021]2021apj...922l...2v vanderburg a., rodriguez j. e., 2021, apjl, 922, l2. doi:10.3847/2041-8213/ac33b4
+[vousden et al.(2016)]vousden2016 vousden, w. d., farr, w. m., & mandel, i. 2016, , 455, 2, 1919. doi:10.1093/mnras/stv2422
+[ward-duong et al.2021]2021aj....161....5w ward-duong k., patience j., follette k., de rosa r. j., rameau j., marley m., saumon d., et al., 2021, aj, 161, 5. doi:10.3847/1538-3881/abc263
+§ spectral data at different epochs
+individual (color) spectra obtained with gravity for hd 206893 b at the dates indicated in the figure's legend. the legend further reveals the best fitting scale factor for each epoch (see section  for details) and that all epochs were observed in dual-field on-axis mode.
+§ orbital fit while fixing the semi-major axis of the moon
+fit of the astrometric data of hd 206893 b, looking for an exomoon when we limited the prior to be between 0.21 and 0.26 au. the mcmc analysis finds a tentative exomoon candidate of mass around 0.5 jupiter masses.
+   
+§ bayesian analysis of the atmospheric spectrum of hd 206893 b
+posterior distributions obtained from bayesian forward modeling of hd 206893 b’s atmospheric spectrum with exorem, displayed in a corner plot.
+   
+posterior distributions obtained from bayesian forward modeling of hd 206893 b’s atmospheric spectrum with atmo, displayed in a corner plot.
+   
+posterior distributions obtained from bayesian forward modeling of hd 206893 b’s atmospheric spectrum with bt-settl, displayed in a corner plot.
+   
+best fit models overlaid on gravity data for the forward modelling of the atmospheric spectrum of hd 206893 b using a bayesian framework (upper panel). residuals with exorem model are presented as an example (bottom panel).
+   
+§ log of all gravity observations
+observation log for hd206893
+object     date     mjd     start    end     dit/ndit/nexp     airmass          seeing      ra     dec 
+(ut)     (ut)               (ms)     (”)     (mas)     (mas) 
+hd206893 b     2019-07-17     58681.392      08:52:56     09:56:06     60.0 s / 12 / 5     1.2/1.5      1.5/2.2     1.11/1.84      132     199 
+hd206893 b     2019-08-13     58708.160      03:21:16     04:21:09     60.0 s / 12 / 5     1.0/1.1      3.1/5.3     0.73/1.18      132     199 
+hd206893 b     2021-08-27     59453.093      01:18:42     03:08:23     30.0 s / 16 / 4     1.0/1.3      3.6/6.3     0.49/0.83      17     201 
+hd206893 c     2021-08-28     59454.125      02:12:21     03:49:18     10.0 s / 32 / 5     1.0/1.1      1.7/7.0     0.55/0.90      -55     -50 
+hd206893 c     2021-09-28     59485.110      01:16:56     03:47:12     10.0 s / 32 / 11     1.0/1.1      2.2/4.0     0.69/1.21      -76     -83 
+hd206893 c     2021-10-16     59504.061      23:45:31     03:07:57     10.0 s / 32 / 27     1.0/1.3      1.6/3.7     0.45/0.65      -69     -87 
+hd206893 c     2022-05-22     59721.403      09:30:02     09:56:19     10.0 s / 32 / 4     1.0/1.1      1.7/2.4     1.02/1.29      -32     -95 
+hd206893 b     2023-07-02     60127.218      05:04:49     05:24:04     30.0 s / 8 / 4     1.2/1.3      4.1/6.4     0.35/0.46      -80     174 
+hd206893 b     2024-04-28     60428.381      08:39:33     09:36:07     100.0 s / 4 / 7     1.2/1.5      2.3/3.3     0.81/1.10      -120     148 
+hd206893 b     2024-05-31     60461.388      09:07:57     09:32:33     100.0 s / 4 / 3     1.0/1.0      2.6/6.0     0.52/0.71      -125     150 
+hd206893 b     2024-06-01     60462.327      07:20:16     08:24:22     100.0 s / 4 / 7     1.1/1.2      2.8/3.9     0.59/0.80      -125     150 
+hd206893 b     2024-06-24     60485.334      07:30:10     08:33:51     100.0 s / 4 / 7     1.0/1.0      2.3/2.3     1.37/1.93      -128     148 
+hd206893 b     2024-06-30     60491.191      04:04:46     05:08:34     100.0 s / 4 / 7     1.3/1.7      2.3/4.0     0.63/0.96      -128     148 
+hd206893 b     2024-07-18     60509.364      08:07:14     09:23:36     100.0 s / 4 / 8     1.1/1.3      2.8/5.9     0.70/1.44      -128     148 
+hd206893 b     2024-07-24     60515.246      05:22:22     06:27:48     100.0 s / 4 / 7     1.0/1.1      3.6/3.6     0.55/0.67      -128     148 
+hd206893 b     2024-07-25     60516.263      05:47:28     06:51:15     100.0 s / 4 / 7     1.0/1.0      2.8/4.1     0.55/0.72      -128     148 
+hd206893 b     2025-06-08     60834.317      06:13:57     08:58:38     3.0 s / 64 / 8     1.0/1.4      3.0/4.8     0.83/1.53      -170     112 
+astrometry as a function of time and polynomial order
+date     mjd     n     ra     dec     
+2019-07-17     58681.392     6               -0.47 
+4               -0.58 
+3               -0.69 
+2019-08-13     58708.160     6               -0.90 
+4               -0.92 
+3               -0.95 
+2021-08-27     59453.093     6               -0.58 
+4               -0.64 
+3               -0.78 
+2021-08-28a     59454.125     6               -0.72 
+4               -0.66 
+3               -0.96 
+2021-09-28     59485.110     6               -0.85 
+4               -0.86 
+3               -0.82 
+2021-10-16     59504.061     6               -0.50 
+4               -0.64 
+3               -0.57 
+2022-05-22     59721.403     6               -0.97 
+4               -0.91 
+3               -0.06 
+2023-07-02     60127.218     6               -0.34 
+4               -0.38 
+3               -0.37 
+2024-04-28     60428.381     6               0.03 
+4               0.16 
+3               -0.09 
+2024-05-31     60461.388     6               -0.18 
+4               -0.68 
+3               -0.73 
+2024-06-01     60462.327     6               -0.70 
+4               -0.82 
+3               -0.82 
+2024-06-24     60485.334     6               -0.73 
+4               -0.54 
+3               -0.71 
+2024-06-30     60491.191     6               -0.50 
+4               -0.78 
+3               -0.81 
+2024-07-18     60509.364     6               -0.64 
+4               -0.60 
+3               -0.58 
+2024-07-24     60515.246     6               -0.07 
+4               -0.48 
+3               -0.63 
+2024-07-25     60516.263     6               0.16 
+4               -0.47 
+3               -0.57 
+2025-06-08     60834.317     6               -0.53 
+4               -0.47 
+3               -0.45 
+afirst detection of hd206893 c. the 3rd order polynomial fitting could not be used because of the faintness of the signal.
+/edocument/

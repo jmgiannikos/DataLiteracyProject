@@ -1,0 +1,507 @@
+.
+m
+"
+a&a
+a&as
+apj
+apjl
+apss
+nature
+science
+mnras
+v_∞ 
+l/l
+r 
+m 
+ yr 
+/bdocument/
+chesneau, lagadec et al.
+a bipolar dusty nebula around the nova v1280 sco
+o. chesneau
+laboratoire lagrange, umr7293, univ. nice sophia-antipolis, cnrs, observatoire de la côte d'azur, 06300 nice, france
+olivier.chesneau@oca.eu
+                european southern observatory, karl-schwarzschild-strasse 2 d-85748 garching bei münchen, germany
+   n. copernicus astronomical center, polish academy of sciences, bartycka 18, 00-716 warsaw, poland
+   physical research laboratory, navrangpura, ahmedabad, gujarat, india
+minnesota institute for astrophysics, university of minnesota, minneapolis, mn 55455, usa
+lesia, observatoire de paris, cnrs umr 8109, upmc, université paris diderot, 5 place j. janssen, f-92195 meudon, france
+department of physics and astronomy, university college london, gower street, london wc1e 6bt
+astrophysics research institute, liverpool john moores university, birkenhead, ch41 1ld, uk
+astrophysics group, keele university, keele, staffordshire st5 5bg
+space science applications laboratory, the aerospace corporation, m2/266, p.o. box 92957, los angeles, ca 90009
+jodrell bank cent. for astrophysics, school of physics and astronomy, univ. of manchester, oxford road, manchester m13 9pl
+the fast temporal evolution of the ejecta morphology of novae can be considered 
+   as an important test bench for studying the shaping of many kinds of nebulae. v1280 sco is one of the 
+   slowest dust-forming nova ever historically observed that has experienced a particularly 
+   long common-envelope phase.
+  
+   we performed multi-epoch high-spatial resolution observations of the circumstellar 
+   dusty environment of v1280 sco to investigate the level of asymmetry of the ejecta.
+  
+   we observed v1280 sco in 2009, 2010 and 2011 (from t=877 days after discovery until t=1664 d) 
+   using unprecedented high angular resolution techniques. we used the naco/vlt 
+   adaptive optics system in the j, h and k bands, together with contemporaneous visir/vlt
+   mid-ir imaging that resolved the dust envelope of v1280 sco, and sinfoni/vlt observations secured in 2011. 
+  
+   we report the discovery of a dusty hourglass-shaped bipolar nebula. the apparent 
+   size of the nebula increased from 0.30x 0.17 in july 2009 to 0.64x 0.42 in
+   july 2011. the aspect ratio suggests that the source is seen at high inclination. the central
+   source shines efficiently in the k band and represents more than 565% of the total flux in 2009, 
+   and 876% in 2011. a mean expansion rate of 0.390.03 milliarcsec per day is inferred from 
+   the visir observations in the direction of the major axis, which represents a projected upper limit.
+   assuming that the dust shell expands in that direction as fast as the low-excitation slow ejecta detected
+   in spectroscopy, this yields a lower limit distance to v1280 sco of  kpc; however, the systematic errors remain large due to the complex shape and velocity field of the dusty ejecta.  the dust seems to reside essentially in the polar caps and no infrared flux is detected in the equatorial regions in the latest dataset. this may imply that the mass-loss was dominantly polar.
+v1280 sco is an excellent test case for studying the temporal evolution of dusty bipolar ejecta. as the nebula expands, observations will be easier and we advocate a yearly
+   monitoring of the source using high angular resolution techniques.
+the expanding dusty bipolar nebula around the nova v1280 scobased on observations made with eso telescopes
+at the silla paranal observatory under programme ids 283.d-5020, 385.d-0076, 087.d-0074
+    o. chesneau
+          1
+       e. lagadec 2
+              m. otulakowska-hypka 3
+              d.p.k. banerjee4
+              c.e. woodward5
+              e. harvey1
+               a. spang1
+               p. kervella6
+               f. millour1
+               n. nardetto1
+               n.m. ashok4
+               m.j. barlow7
+               m. bode8
+               a. evans9
+               d.k. lynch10
+               t.j. o'brien11
+               r.j. rudy10
+               r.w. russel10
+    				
+    received ;accepted 
+========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+§ introduction
+white dwarfs (wds) are the end products of the evolution of low- and intermediate-mass stars,
+with initial masses between 0.8 and 8 m. if a white dwarf is in a  close binary system,
+it can accrete hydrogen from its close companion's atmosphere, which then triggers the ignition of 
+runaway nuclear reaction. this leads to a bright outburst, called a classical nova.
+the classical nova v1280 sco was discovered in outburst by  on 2007 
+february 04.86 (jd = 2 454 136.85), about 12 
+days before reaching its maximum in visual light (m4) and formed dust only two weeks after
+reaching maximum in visible . this nova experienced one of the slowest
+evolutions historically reported and the nebular phase was entered about 50 months (t1600d) after outburst . this is a
+clear indication that the mass of the erupting wd is low (i.e. 0.6 or even smaller).
+extensive monitoring of the event was performed using the very large telescope
+interferometer (vlti) during the first four months (until t=145d) of the event  .
+owing to the sparse  coverage, an interpretation involving a spherical dusty shell was
+developed, providing estimates of the dust formation rate. based on an estimate of the total dust mass
+formed during  the 250 days after outburst,  suggested that a mass as large
+as 10 was ejected.  provided an independent
+estimate from neutral oxygen lines that confirmed the high mass ejected, an additional 
+argument for a low-mass wd progenitor, known to statistically eject more mass that fast, massive ones.
+the interferometric
+observations also provided a consistent picture of the expansion rate in the plane of the
+sky estimated at 0.35 mas/d. radial velocities were published by
+ in the near-ir domain, and by  
+in the visible.  reported multiple high-velocity narrow components
+in the nai d line from 650 to 900 km.s. they interpreted this as being
+due to the formation of  clumps, 
+as a consequence of a strong shock between the slow, dust-forming ejecta, and a  
+fast wind ( 2000 km.s) generated during the second brightening of the
+source <cit.>. p-cygni lines were systematically observed even
+four years after the outburst, which is indicative of a sustained and significant mass loss . the typical p-cygni type velocities reached
+500 km.s, from which 
+inferred a distance of 1.60.4kpc. however,  recently derived a distance of  pc from space-based visual light curves that span the first 20 days after discovery. this much smaller distance estimate demands
+that the vlti-derived distance be scrutinized. using the spatial expansion rate from
+the vlti but a revised velocity range of the dust-forming ejecta of 350160 based on the mean
+velocity measured from blue-shifted absorption lines of oi and
+siii,  derived a revised distance of 1.10.5kpc.
+the dust event and the large amount of circumstellar material prevented any x-ray
+detection of v1280 sco until may 2009, t=834d . after this date the 
+source was detected several times from t=834d to t=939d after outburst ,
+although the dense ejecta considerably absorbed the potentially important x-ray flux.
+we report on observations of the very large telescope performed between 2009 (t=857d)
+and 2011 (t=1664d) that reveal a striking
+bipolar nebula in expansion. the very slow ejecta of v1280 sco likely expanded while being 
+significantly influenced by the companion, although an intrinsically polar-oriented ejection
+scenario must also be investigated. this is a unique opportunity to observe a newly formed bipolar nebula. our study has a broader
+relevance in the
+context of the shaping of asymmetrical bipolar nebulae and the formation of disks, such as 
+that seen in some planetary or pre-planetary nebulae , born-again sources 
+ or in massive stars
+ 
+and for a better understanding of the still poorly known common-envelope phenomenon
+. 
+the observations are presented in sect. 2. in sect. 3 we derive some physical
+parameters of the nebula, and we discuss our results in sect. 4.
+[]visual light curve of v1280 sco from afoev and asas-3
+ data with the dates of the vlti and vlt observations.  
+§ observations
+naco/vlt, visir/vlt and sinfoni/vlt observing logs. 
+     
+     
+  
+  
+    date      day     sci/cal     inst.     filters 
+2009.07.02      877    v1280 sco     naco     j, h, k
+2009.07.02      877    psf 1    naco     j, h, k
+2009.07.03      878    v1280 sco     visir     n band filters
+2009.07.03      878    psf 2     visir     n band filters
+2010.06.17      1228    v1280 sco     naco     j, h, k 
+2010.06.17     1228    psf 1     naco     j, h, k 
+2010.07.28      1254    v1280 sco     visir     n band filters
+2010.07.28      1254    psf 2    visir     n band filters
+2011.05.21      1566    v1280 sco     sinfoni      h, k 
+2011.06.13      1589    v1280 sco     visir     n band filters  
+2011.06.13      1589    psf 2    visir     n band filters
+2011.06.26      1602    v1280 sco     sinfoni      k 
+2011.06.27      1603    v1280 sco     sinfoni      k 
+2011.07.03      1609    v1280 sco     sinfoni      h, k 
+2011.07.03      1609    v1280 sco     sinfoni      h, k 
+2011.08.26      1663    v1280 sco     sinfoni      h, k 
+2011.08.28      1664    v1280 sco     sinfoni      h, k 
+day after outburst
+	
+   gsc 07364-01316, j=8.290.03, h=7.680.07, 7.480.02 
+	
+   hd152934, m5v, v=11, k=2.46, iras f12= 8.19 jy
+ 	
+   burst mode
+	
+   pah1, =8.59m, =0.42m; ariii, =8.99m, =0.14m; 
+pah2, =11.25m, =0.59m; pah2_2, =11.88m, =0.37m;
+neii, =12.81m, =0.21m; neii_1, =12.27m, =0.18m
+	
+ 
+the source was observed with the naco, visir and sinfoni instruments of the very large
+telescope (vlt). the log of the observation is shown in table  and the visible light curve is reproduced in fig..
+[]left: normalized 2009 k band naco image of v1280 sco in logarithmic scale. right: same for the calibrator.
+§.§ naco observations
+we observed v1280 sco in j, h, ks with the s13 camera, which provides a
+ field of view (fov) of 14x14 and
+a pixel scale of 13.260.03 mas. the
+autojitter mode was used in which the telescope
+moves according to a random pattern in a 5 box at each exposure.
+the nearby star gsc 07364-01316  was selected as the reference star for
+the visible wavefront sensor of the adaptive optics (ao) for determining the point spread function (psf) of the instrument and to serve as a rough flux calibrator. the psf obtained in 2009 with naco in standard 
+mode was not good enough to allow a meaningful deconvolution of the compact source. in 2010, the naco observations benefited from the newly implemented
+'cube mode', which provides a large set of short exposures (30ms) over part of the detector.
+8000 frames were recorded per filter, representing an exposure time of 480s each.
+this new capability is essential to reach truly 
+diffraction-limited imaging at the shortest wavelengths . 
+the cube mode provides a large cube of short exposures from which a sub-set with the highest strehl ratio is selected (principle of 'lucky imaging').
+[]upper left: normalized 2010 j band naco image of v1280 sco in
+ logarithmic scale. upper right: 2010 j band naco image of the calibrator. 
+ middle: same in the h band. bottom: same in the k band. a significant brightening of the central source (unresolved) is observed compared to 2009 (fig.).
+§.§ visir observations
+ the naco observations were complemented by mid-infrared 
+images obtained with the visir instrument . the visir observations were
+performed in july 2009 (mjd 55014.2 and 55015.1, t=877-878d), 
+june and july 2010 (t=1228d and t=1254d) and june 2011 (t=1589d). the atmospheric conditions 
+were stable for all nights. 
+the imager was used in burst mode (dit ranging from 10 to 25 ms),
+providing a pixel scale of 0.075 and a field of view of 19.2 x 19.2. the chopping
+throw was 8 arcsec and the chopping frequency 0.25 hz. a set of narrow-band filters covering the full n band were used, with integrated total exposure times per filter ranging from 280s to 360s. several
+filters were centered on potential spectral features: pah1, pah2 and neii. the exposures taken
+with the pah2 (=11.25m, =0.59m) and neii filters (=12.81m, =0.21m) 
+were immediately followed by exposures taken with a nearby continuum filter called
+pah2_2 (=11.88m, =0.37m) and neii_1 (=12.27m, =0.18m). 
+the standard chopping/nodding technique
+was applied to remove the sky contribution. the burst mode provides a large cube of short-exposure
+frames in which all single chopping and nodding images recorded. 
+the reduction of the visir data additionally includes the correction of various defects 
+exhibited by the visir detector. 
+the visir burst mode and naco cube modes are very similar. the principle is to acquire very short exposures
+(50 ms) to keep the complete integration within a fraction
+of the coherence time (300 ms at paranal in the mid-ir). the burst modes of naco and 
+visir provided large cubes of short exposures that enable the reconstruction of 
+quality-enhanced images using shift-and-add techniques, and selecting the best percentile (lucky imaging) following an 
+algorithm described by  and . 
+the visir burst mode images of v1280 sco were deconvolved using a
+richardson-lucy algorithm. thirty iterations were sufficient to obtain good quality converged images.  the visir images are shown in fig. (2009), fig. (2010) and fig. (2011).
+flux calibration was performed using standard
+aperture photometry methods applied to the science and reference
+stars. the observations were performed in fairly similar atmospheric conditions and the
+raw fluxes observed per filter using the same calibrator are similar at better than 5%. unfortunately, the visir psf calibrator, hd 152934, was chosen for its brightness but was a poorly suited photometric calibrator. hd 152934 is an anonymous s-type agb star whose spectral type is not well constrained. we used synthetic templates of s-type stars produced by the marcs codes  to fit the sed of hd 152934. we then estimated the flux in the visir filters using the best synthetic spectrum ( k and ) and calibrated the science object photometrically. this procedure is indirect and leads to a potential calibration bias larger than 10% in some filters for such a complex source. 
+§.§ sinfoni observations
+vlt/sinfoni is a near-infrared (1.1 - 2.45 m) integral field spectrograph (ifs)
+fed by an ao module . 
+integral field spectroscopy allows one to gather spectra of the sky over a two-dimensional 
+field of view. final products are data cubes with two dimensions of x, y and 
+a third dimension formed by the wavelengths. during our observations the spectrograph operated in the k and h bands, 
+providing a spectral resolution of 4000 and 3000, respectively. the fov was cut 
+into 32 slices, and each slice was projected onto 64 detector pixels. the field of view 
+of the data set is 0.80.8 and is composed of spaxels of 12.525 mas in the k and h bands.
+we obtained several vlt/sinfoni integral field spectroscopic data sets for v1280 sco 
+from may to august 2011. the fov was oriented such that the major axis of the nebula
+roughly coincided with the vertical direction. during that period, the central stellar-like source increased
+considerably in flux, while the bipolar nebula in which this source is embedded had
+a spatial extent of 0.7  which made these observations challenging. the observations were performed in service mode
+and were repeated several times, but the atmospheric conditions never met the criteria for
+providing good quality data. we nevertheless worked on the best data of the
+sample and present the most robust results. the data set of 26 june 2011 exhibited the better signal-to-noise ratio (s/n) 
+although the bipolar nebula was slightly cut in the north. because of the limited s/n 
+of the observations and the difficult removal of the telluric lines, a differential
+approach, using a comparison between a given emission line flux and its corresponding adjacent continuum was employed in the reduction and analysis.
+§ observational results
+§.§ the dusty nebula
+a bipolar nebula with a high aspect ratio is clearly seen in the naco, sinfoni and visir
+images we obtained,  suggesting that the source is seen at high inclination. for our naco and sinfoni data, the nebula 
+extension was estimated by determining the regions of images with the highest 
+gradient before reaching the noise level (or written differently, by the 
+regions of densest contour levels before reaching the noise level). the 
+estimation was performed on the images with and without psf subtraction. the extensions measured
+are reported in table .
+the near-ir images were dominated by the central source, which brightened considerably 
+over the three years of observations.  the apparent size 
+in the k band was 304 x 191 mas in 2009 (t = 877d).  corrected for the psf extension, this
+leads to an angular size of 29038 x 16731 mas. after a psf subtraction, the position angle (pa) of the major
+axis is as  with an axial ratio as . however
+a good estimate of the minor axis extension was difficult to obtain due to the bright central source,
+and the artifacts remaining after the psf subtraction.
+the naco observations performed in cube mode in 2010 (t = 1228d) were of excellent quality, and
+the j, h and k bands can be fully exploited. an elongation was
+clearly detected in each image at pa=1053, 1023and 1073. for instance,
+the fwhm of the j band image of v1280 sco is 613mas 
+along the major axis, and 543 along the minor axis. the apparent size in the k band was
+404 x 260 mas, which, corrected for the fwhm of the psf, corresponds 
+to 40030 x 25524 mas.
+the 2011 sinfoni images (t = 1602d) suggest that the source is composed of a bright
+unresolved source and two apparently well-detached polar caps. there seems to be 
+no indication for extended equatorial material. the extension of the nebula in the
+direction of the major axis is estimated to be 63713mas, and the larger extent
+of the caps perpendicular to the major axis to be 41213mas (fig. and table ).
+[]2010 naco k band image after a psf subtraction. the color table is inverted.
+the visir images also provided robust estimates of the pa at 108.52 in
+2009, 109.11.6 in 2010 and  108.92.5 in 2011.
+the bipolar morphology of our visir images was more clearly seen in the most recent
+images due in part to the expansion of the nebula. fig. (left) shows a cut
+of the visir images obtained at 8.59 m in 2009, 2010 and 2011,
+together with a psf for comparison. this filter provides the shortest wavelength,
+hence the best spatial resolution of visir and was therefore used for providing the extension estimates (table ). the bipolar lobes of v1280 sco are  
+clearly expanding with time, and in 2011, one could see 
+a double peaked cut generated by the two emission peaks of the bipolar nebula.
+one-dimensional gaussian fitting was performed to measure the fwhm of the
+cuts, and the results are shown in table . after deconvolution, the visir images provide a size and an axial ratio equivalent
+to that seen in the near-ir. the size and appearance of the nebula extension was nearly unchanged from
+8 to 13 micron. the deconvolved images confirm that the object is bipolar and
+expanding. our most resolved images (from our 2011 dataset) show that the intensities of the two bipolar lobes are different, the southern lobe is brighter. this is probably due to an absorption effect as a consequence of this lobe being closer to us than the northern one. no mid-ir emission is seen between the caps. fig. shows a radial cut along the poles at 8.59. 8.99, 11.25, and 12.81 m.
+the separation between the two lobes does not depend on the wavelength. the ratio of the intensity
+between the two peaks increases with wavelength due to absorption and optical depth effects.
+[]burst-mode visir observations performed in 2009 (t=878d) with four different filters (see description in table ). up: deconvolved images of v1280 sco. middle: mean images generated from the best short exposures of v1280 sco. bottom: mean images of the psf with the same treatment.
+[]same for the visir observations performed in 2010 (t = 1254d) 
+[] same for the visir observations performed in 2011 (t = 1589d)
+extensions of the bipolar nebulae. 
+     
+     
+  
+  
+    filter     major axis    minor axis      psf fwhm
+4c2009
+k     0.290.04    0.170.03   0.0920.005
+pah2     0.310.04       0.230.03
+4c2010
+k    0.400.03    0.260.02   0.0570.003
+pah2     0.490.05    0.330.05   0.230.03
+4c2011
+k     0.620.05    0.390.01   0.130.02
+pah2     0.640.06   0.370.05   0.230.03
+corrected for the fwhm of the psf 
+	
+§.§ spectroscopy and flux measurements
+the v flux has reached a roughly stable plateau 
+at a magnitude of about 10.5 over a long period  and the central source radiates  efficiently in the k band. as shown by , the nova is still powering a strong wind, and extensive nuclear burning is thus thought to have continued. 
+an unresolved point source dominates the near-ir observations, 
+whereas no point source contribution is observable in the mid-ir for the contemporaneous visir measurements. in 2009, the
+stellar source (i.e. the unresolved flux) accounts for 546%, increasing in 2010 
+to reach 766% (naco data) and in 2011 875% (sinfoni) of the total flux. these numbers are potentially 
+biased by the different strehl ratio reached by the aos during the observations. 
+these estimates were also possible in the h and j bands for the 2010 naco observations, with 963% and
+1003%, respectively. this increase of the central source contribution indicates a
+decrease of the circumstellar absorption, related probably to the expansion and dissipation 
+of the nearby dust.
+[] left: cut of the visir raw images at 8.59 m along the major axis of the dust shell
+ for the three epochs.
+ an expansion of the dusty material is clearly seen. right: cut of the visir 2011 deconvolved images 
+ along the main axis of the dust shell for all filters. 
+the photometry of the central source and its nearby environment was performed from the naco, 
+sinfoni and visir images and is provided in table . these instruments or the mode used are not 
+necessarily optimized to provide accurate photometry but despite the level of errors such 
+information remains of high interest for these variable sources.
+many lines are detected by sinfoni (t=1609d). of importance is the simultaneous detection of relatively 
+high-excitation lines (mostly from the balmer series), and the detection of low ionization 
+species such as nai and mgi, as already reported by  
+and  for this source. the mean fwhm of the balmer lines is 16214, and we note that br exhibits a broad pedestal (700). 
+some lines of low excitations are observed, the nai 2.149 line (fwhm=11018), 
+mgi 1.711 (fwhm=1448), some are unidentified such at 2.137m (fwhm=1058) 
+and some with weak signatures such as mgi 1.576, ci 1.690, as reported by . these lines are narrow and almost unresolved given the spectral resolution of these observations (r3500 corresponding to a fwhm of 85). the presence of the nai 2.149 line implies that 
+the nai must be protected from the central source, and is therefore 
+very likely located within the dust. the presence of these low-excitation lines so late (t=1609d) after the outburst highlights how slowly v1280 sco has evolved, because these lines are not expected at this stage.
+for the strongest lines, a sinfoni image was created by integrating the flux within a 
+narrow spectral range, and by subtracting a red- and blue-sided continuum. for the
+br line, the main source of the emission is observed in the central object, 
+which contributes 987% of the total flux. a slightly different behavior may be observed for 
+the he i 2.06 m (see fig.) line for which the core contributes 937%,
+and for which the lobes seem better contrasted. in the case of v1280 sco,
+one may hypothesize that the he i 2.06 m emission in the caps could arise either from a 
+shock between the fast nova wind and the slowly expanding, dust rich polar caps, 
+or by a radiative interaction between this material and the growing uv flux from the white dwarf.   
+the pah_2 filter is designed to detect carbonaceous molecules. this filter is not best suited because the 11.25m feature in novae is seen at 
+11.4m , although most of the flux should be isolated by the filter given the bandwidth (0.59m). yet, it is challenging to detect any morphological difference between images in the two filters because of the limited spatial resolution and the weakness of the flux 
+contrast. it is not evident that the regions of pah emission is distinct from that of the continuum. spitzer irs (6 may 2008) and irtf/spex 
+(20 may 2009) observations show that dust emission features appeared at 3.28, 3.4, 
+8.3, 8.7, and 11.4 microns, the so-called uirs (unidentified infrared bands). likely, carbonaceous molecules also formed in situ from condensed dust <cit.>.
+photometry of the total source. 
+     
+     
+  
+  
+    filter          t = 878d      t = 1254d     t = 1589  
+[micron]     [jy]     [jy]     [jy]
+j     1.05     -     0.380.07    - 
+h     1.65     -     0.440.04     -
+k     2.1     0.670.04     0.440.02     -
+pah 1     8.59     476    34  4     28 4
+ariii     8.99     435    32  4     26  3
+pah 2     11.25     333    253     203 
+pah 2_2     11.88     314    233     193 
+neii     12.81     263    203     162
+filter dedicated to continuum measurements close to the pah2 filter.
+	
+§.§ the expansion rate
+in the near-ir, the datasets are not homogeneous with images taken with naco in 
+2009 without cube mode, then in 2010 in cube mode and in 2011 using the sinfoni
+instrument. we did not attempt to derive an expansion rate for the lobes in the k band due to the variances in the observational techniques. despite their lower spatial resolution, the images from the 
+visir instrument were obtained solely in burst mode. moreover, in the mid-ir, the central source is too faint to be detected, and the 
+images probe the contribution from the dust alone. the naco and sinfoni images exhibit a bright
+stellar contribution that has to be carefully taken into account and removed before any geometrical information can be inferred.
+the expansion was measured from the raw and deconvolved visir images. 
+fig. shows the cuts of the images along the direction 
+of the major axis and the results are shown in table . correcting the fwhms from the
+fwhm of the psf at 8.59m, this leads to an estimate of the expansion rate of 0.360.06 (2009),
+0.390.05 (2010) and 0.400.04 (2011) mas per day, from which we infer a global estimate
+of 0.390.03 mas per day. as an independent test, one can compute the separation 
+of the polar caps as measured by sinfoni to be 0.620.05at day 1602, providing an expansion rate  very close to the visir measurements.
+this value, measured in the direction of the major axis of the nebula is close
+to the expansion rate estimate of 0.350.03 mas per day from the vlti in a
+similar wavelength range. the vlti baselines used to infer
+the expansion of the early dusty envelope were in a direction close to the major
+axis of the nebula (within typically 30), and therefore approximately probed 
+the velocities projected on the sky in that direction. the bias expected from the use of baselines
+not aligned to the major axis is an underestimate of the expansion rate.
+left: continuum flux from a narrow spectral channel (2.7nm) close to the br line. middle: same from a channel centered on the br line emission from which the nearby continuum shown  on the left was removed. right: same from a channel centered on the hei2.05 line emission isolated from a nearby continuum. the br line forming region is centered on the outbursting source, whereas some intrinsic hei2.05 emission seems to originate from the lobes.  
+§ discussion
+§.§ the distance and expansion velocities
+using the angular expansions measured from the infrared images, one can try to improve upon the distance estimate for v1280 sco.
+the angular expansion inferred from the vlti observations was 0.350.03 mas/d,
+while the high-quality visir images obtained in the study suggest a slightly
+higher expansion rate in the direction of the major axis of the nebula of 0.390.03 mas/d.
+combined with a measure of the ejecta expansion velocity, the angular expansion rate (mas/d) can be used to derive a distance to v1280 sco, under the hypothesis of a spherical ejection following
+where  is
+the velocity of the ejecta in   and  is the rate of expansion in
+mas per day.
+assuming a velocity  for the ejecta of 500100km.s,  estimated the distance to be 1.60.4 kpc. 
+the difficulty of this exercise is to ensure that the doppler velocities inferred
+from the emission lines can be linked to the dust expansion measured in the vlti data or visir images. these quantities must be measured at
+the same wavelengths, if possible centered on an emission line that provides the kinematics. moreover,
+the doppler velocities are translated into ejection velocities assuming a projection factor 
+(the �p� factor) whose value depends on the kinematics but also on the flux distribution
+of the source. 
+the discovery of the strong bipolarity of the source implies a complex velocity field
+that cannot be directly related to a limited number of velocity measurements. the 
+expansion velocities were measured in the direction of the major axis of the bipolar
+nebula and we adopted a doppler velocity of 500km.s, based 
+on several radial velocity measurements from various emission lines. co-mixing of the dust and gas emitting regions cannot be unequivocally demonstrated, and it is unknown whether the line-forming region coincides with the dust-continuum-forming region. therefore, it is 
+very difficult to measure the ejection velocity of the dusty nebula.
+derived a much closer distance estimate, 630100 pc
+based on various estimates of intrinsic luminosity of the source. however, despite the quality of their photometry, many parameters are used to
+infer the distance, some of them raised to high power indices, implying potentially 
+large errors.  found mv = -6.1, yielding a distance of kpc; however, they pointed out that mv can be equal to -8 based on t estimated as 34 d, where t is the number of days in which a nova wanes
+by 3 magnitudes after maximum. this value yields a distance of 1.4 kpc, which is within the uncertainty of the first estimate from .
+if one assumes the distance quoted by , the mean dust-forming 
+region velocity is only 220. this velocity is the velocity measured in the plane
+of the sky, in the direction of the major axis. owing to the high aspect ratio, a high 
+inclination is expected, and this measurement should be considered as close to the 
+upper limit of the velocity field, and one may consider whether such a slowly 
+expanding material may imprint its signature in spectroscopic observations. 
+reported on spectroscopic information of great interest 
+to this problem. they observed absorption in the nai lines detected between -649to -885with the strongest components at  -750 and -800. one may assume that
+these absorption features provide a good approximation of the dust velocity field because they
+probe low-excitation cool regions.  detected many lines
+from these low-ionization species (nai and mgi) at the earliest stages of the event
+(i.e. at the onset of the dust-formation phase).
+the impressive narrowness of the features (15) can be interpreted as originating from a cool medium. the measured fwhm
+can be considered as an upper limit, accounting for the instrumental fwhm of
+5. hence, accounting for some turbulence and velocity dispersion of
+the expanding material in the fwhm broadening, the thermal broadening may 
+originate from material cooler than 1500 k. 
+the  observations and the 2009 naco/visir 
+images were obtained almost at the same epoch in mid 2009. the slower absorbing material in the line of sight was moving 
+in 2009 at a velocity of about 650.  reported on much lower velocities, 350160, measured from blue-shifted absorption lines of oi and
+siii. these low velocities were measured around light-curve maximum and increased up to 500 just before the dust-formation phase. using the expansion of visir of 0.390.03 mas/d in the major
+axis direction and the slowest velocities of the cool material of 350, one still derives a distance estimate close
+to 1.0kpc. this value is a lower estimate, 
+since the velocities in the direction of the major axis of the bipolar 
+nebula are expected to be higher, while the spectroscopically detected absorption components 
+are seen in the line-of-sight direction. 
+lacking an accurate estimate of the inclination, we are left with this
+estimate which is potentially affected by larger errors.
+to conclude, despite the significant limitations and errors that may 
+affect the distance estimate of 1.6kpc0.4 provided by ,
+we are reasonably confident that the distance of v1280 sco is much 
+larger than the distance of 0.6kpc proposed by .
+§.§ origin of the bipolarity
+a growing body of observational evidence clearly suggests that many nova ejectae are highly bipolar in 
+the first days and months after the outburst. the correlation between speed class and ejection 
+velocity, meaning that the faster the expansion speed, the less shaped the remnant 
+, is an argument for supporting  
+the significant effect of the common envelope phase on the shaping.
+the ejecta from a slow nova would feel the influence of the secondary much longer, leading
+to a strong common envelope interaction. these effects, involving frictional deposition of
+energy and angular momentum from the secondary are described by 
+. 
+the very slow nova hr del <cit.> 
+or v723 cas <cit.> are striking examples of this phenomenon.
+v1280 sco appears to be at odds with the t / axial ratio relationship shown for instance
+in fig.6 of . the axial ratio of v1280 sco is high, surely higher than 1.5. such
+high axial ratios are exhibited by the slowest novae in the diagram, with t100d.
+ estimated t = 34 days, yet cautioned that the fidelity of this determination is weak owing to the complexity of the light curve, which is affected by the 
+dust and the secondary maximum. we cannot exclude that t might have been shorter, although
+given the distance estimate of 1.6kpc that is favored in our study, t = 34 d fits the 
+maximum magnitude-rate of decline relation (mmrd) relatively well .
+the late sinfoni images suggest that the dust resides only in the polar caps, and that the equatorial
+regions seem devoid of any dust in contrast to the bipolar helium nova v445 pup for
+instance, which exhibits a large and dense dusty waist . the visir
+last images confirm this since the two lobes appear to be clearly detached from each other in the 
+deconvolved images without any sign of emission close to the equatorial plane (fig.).  reported some evidence for a
+significant departure from spherical symmetries in the latest vlti data (t=145d) from a baseline at more 
+than 60 degree from the major axis. a re-inspection of the data shows that contrary to what was suggested
+by the authors, the measurements are not affected by any instrumental problem. an aspect ratio as high as 1.3
+was probably observed implying that the shaping of the bipolar nebula was already well advanced at this time. 
+two questions can be related to these observations. 
+how can this polar ejection be the consequence of a common-envelope phase and what was the 
+time scale of the event? with a different time and spatial scale context, the extreme bipolar
+planetary nebulae mz3 and m2-9 can provide enlightening comparisons . most of the dust 
+in mz3 and m2-9 was found in the bipolar lobes 
+and recent observations suggest that the time scale of the formation of these nebulae must have been very short,
+i.e. a few years at most, in a context of a much slower expected evolution of at least several centuries. 
+regarding m2-9, it is known that the core harbors a long-period binary <cit.>.
+for these events, the small disks at the core of the systems and the dense lobes favor an intrinsically polar
+ejection. this hypothesis cannot be ruled out with the formation of the caps of v1280 sco. 
+another scenario implies an intrinsically a-spherical ejection that focuses the mass ejection toward the poles, in which a large-scale structured magnetic field may be the shaping key agent. the recent outburst of the recurrent nova t pyx appeared to be highly bipolar . t pyx  shows a very stable photometric wave that may betray the existence of a magnetic field . the presence of a strong magnetic field of about a few mg might have had a non-negligible effect on the eruption, which is also highly suspected for v1500 cyg stars .
+§ conclusion
+we monitored the evolution of the circumstellar material around the classical nova v1280 sco
+using high angular resolution infrared observations with the vlt. 
+we resolved it for the first time with a single telescope with the naco/vlt instrument in the near-infrared and visir/vlt in the mid-infrared in 2009, two years after the outburst.
+these observations revealed a bipolar-shaped nebula around the nova, with dust
+present mostly in the lobes of the nebula. the high aspect ratio of the nebula suggests that it is seen at high inclination.
+more similar visir observations were taken in 2010 and 2011, together with ifu observations with sinfoni/vlt in 2011. this allowed us to observe the expansion of the dusty nebula around v1280 sco with
+a rate of 0.390,03 milliarcsec per day along the major axis of the nebula. assuming that
+the dust we observed with these infrared observations expands at the same speed as the low-excitation
+ejecta detected via spectroscopy, this suggests that the distance to v1280 sco
+is at least 1kpc.
+finally, these observations enabled us to study the temporal evolution of a dusty bipolar source.
+further yearly monitoring of v1280 sco will be easier because the nebula is expanding, and will provide an 
+excellent test-case for the study of the envelope dust and gas content.
+we thank lowell tacconi-garman, mario van den
+ancker and elena valenti, among others, for their invaluable assistance with the preparation of these observations. part of this work was carried out within the framework of the european associated laboratory "astrophysics poland-france". we thank pierre cruzalèbes for his advice on the marcs synthetic models.
+aa
+ 
+/edocument/

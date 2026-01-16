@@ -1,0 +1,295 @@
+.  
+c[1]>p#1 
+l[1]>m#1 
+m[1]>m#1 
+b[1]>b#1 
+./figures/
+@hseplen@vseplen
+@cmdkeysubfigpos[sfp@]pos[ul]
+@cmdkeysubfigpos[sfp@]font[]
+@cmdkeysubfigpos[sfp@]vsep[0.75]
+@cmdkeysubfigpos[sfp@]hsep[3.5pt]
+[1]()#1
+=
+[1]{}#1
+=
+[1][]#1
+[1]#1
+[1]||#1     
+[1]‖‖#1    
+[1]⟨⟩#1   
+[1]⌈⌉#1     
+[1]⌊⌋#1  
+a]anthony berdeu
+b]jean-baptiste le bouquin
+b,c]guillaume mella
+b,c]laurent bourgès
+b]jean-philippe berger
+d]guillaume bourdarot
+a]thibaut paumard
+d]frank eisenhauer
+e]christian straubmeier
+f,g]paulo garcia
+h]sebastian hönig
+i]florentin millour
+j]laura kreidberg
+k]denis defrère
+l]ferréol soulez
+d]taro shimizu
+[a]lesia, observatoire de paris, université psl, sorbonne université, université paris cité, cnrs, 5 place jules janssen, 92195 meudon, france
+[b]univ. grenoble alpes, cnrs, ipag, 38000 grenoble, france
+[c]univ. grenoble alpes, cnrs, ird, inrae, météo france, osug, 38000 grenoble, france
+[d]max planck institute for extraterrestrial physics, giessenbachstraße 1, 85748 garching, germany
+[e]1st institute of physics, university of cologne, zülpicher straße 77, 50937 cologne, germany
+[f]centra - centro de astrofísica e gravitação, ist, universidade de lisboa, 1049-001 lisboa, portugal
+[g]faculdade de engenharia, universidade do porto, rua dr. roberto frias, 4200-465 porto, portugal
+[h]school of physics & astronomy, university of southampton, southampton, so17 1bj, uk
+[i]université côte d’azur, observatoire de la côte d'azur, cnrs, laboratoire lagrange, france
+[j]max planck institute for astronomy, königstuhl 17, 69117 heidelberg, germany
+[k]institute of astronomy, ku leuven, celestijnenlaan 200d, b-3001, leuven, belgium
+[l]univ lyon, univ lyon1, ens de lyon, centre de recherche astrophysique de lyon, umr 5574, f-69230, saint-genis-laval, france
+on the behalf of the gravity+ collaboration. send correspondence to anthony berdeu: 
+empty 
+ 
+ 
+/bdocument/ 
+simplified model(s) of the gravity+ adaptive optics system(s) for performance prediction
+    [
+    january 16, 2026
+========================================================================================
+in the context of the gravity+ upgrade, the adaptive optics (ao) systems of the gravity interferometer are undergoing a major lifting. the current cilas deformable mirrors (dm, 90 actuators) will be replaced by alpao kilo-dms (43, 1432 actuators). on top of the already existing 9 shack-hartmann wavefront sensors (sh-wfs) for infrared (ir) natural guide star (ngs), new 40 sh-wfss for visible (vis) ngs will be deployed. lasers will also be installed on the four units of the very large telescope to provide a laser guide star (lgs) option with 30 sh-wfss and with the choice to either use the 9 ir-wfss or 2 vis-wfss for low order sensing. thus, four modes will be available for the gravity+ ao system (gpao): ir-ngs, ir-lgs, vis-ngs and vis-lgs. to prepare the instrument commissioning and help the observers to plan their observations, a tool is needed to predict the performances of the different modes and for different observing conditions (ngs magnitude, science object magnitude, turbulence conditions, ...). we developed models based on a maréchal approximation to predict the strehl ratio of the four gpao modes in order to feed the already existing tool that simulates the gravity performances. waiting for commissioning data, our model was validated and calibrated using the tiptop toolbox, a point spread function simulator based on the computation of power spectrum densities. in this work, we present our models of the ngs modes of gpao and their calibration with tiptop.
+§ introduction
+gravity+ is a combined upgrade of the gravity instrument and of the very large telescope interferometer (vlti) of the european southern observatory (eso). this work focuses on the major update of the adaptive optics (ao) systems of the four unit telescopes (uts) of the vlti. the role of an ao system is to compensate for the atmospheric turbulence. to do so, it is composed by a wavefront sensor (wfs) whose measurements are analyzed by a real time computer (rtc) and converted into a set of commands sent to a deformable mirror (dm) that corrects the optical aberrations. this feedback loop must run faster than the turbulence temporal evolution (typically with a frequency ranging from several hundred hertz to a kilo-hertz).
+the gravity+ adaptive optics (gpao) features a 43 dm with about 1200 actuators within the 100 pupil and different shack-hartmann wavefront sensors  (sh-wfss) depending of the considered mode as shown in fig:gpao_modes: (i) the current low order (lo) 9 infrared (ir) natural guide star (ngs) wfs of the gravity coudé infrared adaptive optics  ; (ii) this ir wfs will be coupled with a high order (ho) 30 laser guide star (lgs) wfs after the installation of the lasers on the different uts in 2026 ; (iii) a ho 40 visible (vis) ngs wfs mode ; and (iv) a lo 2 vis ngs wfs combined with the ho 30 lgs wfs. the choice of the mode depends on a combination of the performances achieved by the fringe tracker (ft) of gravity+ and those on the scientific target.
+upcoming new adaptive optics modes of gravity+. prior the arrival of the laser guide stars planned in 2026, the 9 ir mode will be used as a pure ngs mode, and with a 30 lgs afterwards. two visible modes will be proposed: a pure 40 ngs modes for bright targets and a 2 tt-ngs supported by the 30 lgs for faint targets.
+        
+to plan the observations and choose the best observing strategy, the users can rely on the 
+astronomical software to prepare observations () tool provided by the jean-marie mariotti center (jmmc). as schematized in fig:aspro_2, the strehl ratios on the different sources must be provided to simulate the instrumental performances and predict the science target observability with sufficient signal over noise ratio (s/r). this tool must be updated with the arrival of the different modes of gpao. among its objectives, this updated software must allow to choose the best star to feed the ft and the ngs wfs. in addition, it will be used to choose where to place the lgs among the ft, the ngs and the scientific target to maximize the s/r of the object observability curves: (i) on top of the ft to optimize the ft signal? ; (ii) on top of the target to maximize its injection in the gravity+ fibers ; or (iii) on top of the ngs to maximize the ao loop performances? and among the requirements, these new functionalities must be (i) fast to be able to rank a huge number of stars and vlti configurations for the user to choose among different solutions and (ii) portable to different platforms and easily integrable to the existing softwares.
+basic functioning of the software.
+        
+to answer these needs, we aimed to develop maréchal approximations that parametrize the different modes of gpao. such an approximation gives the strehl ratios as follows:
+where  is the total source of wavefront errors in the telescope pupil. as detailed in , this strehl ratio only focuses on its coherent part, which holds the coherent energy, the meaningful observable in the context of interferometry.
+in the following, we first introduce in sec:param the different parameters playing a role in the gpao modes. then, in sec:ngs, we present the maréchal approximation for the ngs modes of gpao, both vis and ir, and their calibration using tiptop, see , a toolkit to predict long term exposure point spread function (psf) via an analytical model based on a spatial power spectrum density (psd) approach of the turbulence residuals in the pupil after ao correction. the maréchal approximation for the lgs modes is finally described in sec:lgs. a recent update of tiptop, see , included the cone effect produced by laser guide stars, making the tool also suitable for the calibration of these more complex modes.
+§ actors of the play
+the performances of an ao system depend on many key parameters. some are linked with the design of the ao system itself, which are fixed once for all once the system is built. others depend on the observation conditions, such as the turbulence statistics or the observed targets. the parameters used in the different gpao models are listed in tab:parameter_atmtab:parameter_ao.
+notation and description of the atmosphere and source parameters.
+    
+    
+source: science, natural guide star, laser guide star
+    
+reference wavelength for the atmosphere
+    
+s     wavelength of the source 
+    
+s     fried parameter at s of the turbulence layer
+    
+altitude of the turbulence layer
+    
+altitude of the laser guide star
+    
+velocity of the turbulence layer
+    
+ss^'    angular separation between the sources  and 
+    
+secant of the zenith angle 
+    
+s     flux (ph/m/s) of the source  
+ (accounting for the instrument transmission)
+    
+notation and description of the parameters of the ao system.
+    
+    
+ao loop gain
+    
+frequency of the loop gain
+    
+telescope diameter
+    
+number of modes controlled by the ao system
+    
+equivalent inter-actuator distance
+    
+number of lenslets across the sh-wfs diameter
+    
+diameter of a sh-wfs subaperture
+    
+pixel readout noise
+    
+pixel scale of the sh-wfs
+    
+number of pixels across a sh-wfs box
+    
+s     full width at half maximum (fwhm) of the source 
+    
+ss     number of photons in a sh-wfs box 
+ for the source  during one short exposure
+    
+we notice that the science  can either be the scientific target or the ft star depending on the situation. we also emphasize that the ngs can be used to close the ho loop or close the lo loop, mainly for tip-tilt control, when using a lgs. as a reminder, we recall here the scaling equation for the fried parameter,
+§ natural guide star modes
+§.§ maréchal approximation
+they are four main errors driving an ao system: (i) the fitting error, limited by the shapes that the dm can take to compensate the turbulence ; (ii) the aliasing error, limited by the bandwidth of the wfs that wraps high spatial frequencies of the turbulence to low order errors ; (iii) the noise error, with the camera readout noise and photon noise propagating through the loop ; (iv) the servo-lag error, that comes from the fact that an ao loop is always `late', with a dm correction applied with some delay
+because of the wfs exposure time and rtc computation loads. the fitting and aliasing errors have similar properties and dependencies. in the following, they will be grouped in a single term: the geometrical error.
+on top of the core errors listed above, additional terms must be added when shifting from single conjugated ao to more complex configurations. in particular, for the ngs modes, the isoplanetism error plays a critical role when the scientific target is not the source on which the ho ao loop is closed, due to the turbulence decorrelation in function of their angular separation.
+adding all the mentioned errors, the total variance in eq:strehl for the ngs modes writes as follows:
+where  represents the absolute limit achievable when all the other terms are canceled. this offset may include other errors not accounted for by our model, such as static residuals errors, vibrations, sh-wfs aliasing limit and so on. the dependency of the other different terms of eq:ngs with respect to the parameters introduced in sec:param is as follows:
+the  dependency in eq:ngs_geomeq:ngs_lageq:ngs_iso is here to scale the fried parameter with the airmass. the  coefficients in eq:ngs_lageq:ngs_iso are here to permit a deviation from the classical  of a kolmogorov statistic in the presence of an external scale for the structure function of the turbulence. the gain dependency in eq:ngs_pheq:ngs_noise is discussed in . in eq:ngs_ph, (i) the first term is the ratio of the spot positioning uncertainty scaled to the science wavelength, (ii) the second term is the shot noise variance with a factor 2 accounting for the excess of electron-multiplied sensors, and (iii) the third term is the signal variance, increasing with the squared number of photons. in eq:ngs_noise, (i) the first term is the readout noise variance, which also depends on the centroiding method (hidden in the  coefficient), and (ii) the second term is the signal variance, increasing with the squared number of photons. 
+§.§ confrontation with tiptop
+the different scaling factors  and  in eqs. (-) were calibrated using the tiptop toolbox. a default configuration for the vis and ir-modes was used, as listed in tab:default_ngs, using an external scale of the turbulence structure function of 22. the default ngs magnitude is 8 with a conversion factor for a 0-magnitude star of ph for the vis modes and ph for the ir modes.
+default configuration of the vis and ir-ngs modes.
+    
+    parameter     vis/ir-ngs
+    
+8
+    
+0 (pointing at zenith, )
+    
+seeing     1”
+    
+10
+    
+25
+    
+0 (on-axis)
+    
+500
+    
+2.2
+    
+750 / 2.2
+    
+800  / 44 
+    
+40 / 9
+    
+0.42” / 0.51”
+    
+6 / 8
+    
+0.5
+    
+1000 / 500
+    
+200 / 250 (8-magnitude ngs)
+    
+each error is fitted one by one, by varying one of its characteristic coefficients: (i) the actuator pitch  for the geometric error (equivalent to the number of modes), see fig:tiptop_fita, (ii) the wind speed  for the servo-lag error, see fig:tiptop_fitb, (iii) the number of photons  for the photon noise error, see fig:tiptop_fitc, (iv) the readout noise  for the readout noise error, see fig:tiptop_fitd, and (v) the angular separation between the ngs and the science target  for the anisoplanetism error, see fig:tiptop_fite. to assess the absolute strehl limit  achievable with all error tending towards zero, the geometric error was fitted as described in the figure caption by canceling all other error terms. in fig:tiptop_fitc, the photon noise was also decoupled from the readout noise.
+1
+    
+2
+    
+3
+    
+geometric error
+                   
+                servo-lag error
+                   
+                photon noise error
+                
+  
+                [width=,pos=ul,font=](a)0.0    
+                [width=,pos=ul,font=](b)0.0    
+                [width=,pos=ul,font=](c)0.0              
+        
+        
+1
+    
+2
+    
+readout noise
+                   
+                anisoplanetism error
+                
+  
+                [width=,pos=ul,font=](d)0.0    
+                [width=,pos=ul,font=](e)0.0             
+           
+               
+         fitting the coefficients of tab:fitted_coef_ngs with tiptop by varying parameters associated with each sources of error and using the default configuration of tab:default_ngs. a: default configuration changed as follows: ,  and . c: default configuration changed as follows: . e: the wind is orthogonal to the separation angle.
+the different fitted coefficients are given in tab:fitted_coef_ngs. the lower value of  for the 30 ir-ngs can be imputable to the strong aliasing induced by the strong under-sampling of the sh-wfs relative to the high resolution dm. the  are in the classical range of . all the  terms are consistent, a bit higher than the classical  kolmogorov approximation.
+ 
+1
+    
+2
+    
+eq:ngs vs 
+                   
+                eq:ngs vs 
+                
+  
+                [width=,pos=ul,font=](a)0.0    
+                [width=,pos=ul,font=](b)0.0              
+        
+        
+        
+        
+        
+        
+        1
+    
+2
+    
+eq:ngs vs  (servo-lag)
+                   
+                eq:ngs vs  (photon noise)
+                
+  
+                [width=,pos=ul,font=](c)0.0    
+                [width=,pos=ul,font=](d)0.0              
+        
+        
+1
+    
+2
+    
+3
+    
+eq:ngs vs  (servo-lag)
+                   
+                eq:ngs vs  (isoplanetism)
+                   
+                eq:ngs vs multi-layers
+                
+  
+                [width=,pos=ul,font=](e)0.0    
+                [width=,pos=ul,font=](f)0.0    
+                [width=,pos=ul,font=](g)0.0             
+           
+               
+         validating eq:ngs and the fitted coefficients of tab:fitted_coef_ngs on parameters cross-coupling the sources of errors using the default configuration of tab:default_ngs. for information, the long exposure psf predicted by tiptop are given in some panels (log scale). c: default configuration changed as follows:  and . d: default configuration changed as follows:  and .e: default configuration changed as follows: , , . f: default configuration changed as follows: , , , . f,g: wind direction orthogonal to the source separation.
+to further validate the maréchal approximation, eq:ngs and the fitted coefficients of tab:fitted_coef_ngs are tested by varying other parameters, as shown in fig:tiptop_cross. these parameters induce cross-coupling of different error terms and permit to check that no physical dependency was forgotten in the model. fig:tiptop_crossa,b show a very good agreement with the wavelength  of the target and the ao loop frequency . two regimes are tested for the ao loop gain , see fig:tiptop_crossc,d: a situation where the servo-lag is the limiting factor and another one where the photon and readout noises are the limiting factors. the global trends are correct, except for unrealistic gains below 0.2 or above 0.7. two different regimes were also tested concerning the impact of the airmass, see fig:tiptop_crosse,f: a limitation by the servo-lag error and by the anisoplanetism error. the agreement between tiptop and our simplified model is very good on the full strehl dynamics. for information, some long exposure psfs predicted by tiptop are shown in insets.
+coefficients of the maréchal approximation of eq:ngs fitted with tiptop.
+    
+    parameter     40 vis-ngs     30 ir-ngs
+    
+99     86 
+    
+0.27     0.24
+    
+8.48 / 2.16     2.08 / 2.10
+    
+12.0     15.2  
+    
+0.52     1.65 
+    
+4.34 / 1.86     1.75 / 1.97
+    
+finally, the maréchal approximation was tested against a multi-layered atmosphere. two layers are included in the model: a first layer at  with a wind speed of  and a second layer at  with a wind speed of , with a mixing coefficient . as seen above, the maréchal approximation only accepts one coefficient corresponding to the mean parameter of the turbulence. it is computed using the classical formula for the parameter :
+tiptop  can take multi-layered atmospheres as an input. fig:tiptop_crossg shows the strehl ratio predicted by tiptop according to . the matching with the maréchal approximation is globally very good, both in terms of trend and values. this comforts the fact that characteristics parameters of the turbulence, measured by the atmosphere monitors on site, can be used to feed the maréchal approximation.
+§ towards the laser guide star modes
+deriving the maréchal approximation for lgs modes is more complex. indeed, the wavefront control is split in two sub-loops: (i) the low order loop closed on a faint ngs mainly for tt correction, and (ii) the high order loop on the lgs. these two loops suffer from the same errors mentioned in sec:ngs, plus the additional error of the partial correction of the ho by the lgs due to the cone effect. this leads to the following error budget:
+the dependency of the different terms of eq:lgs with respect to the parameters introduced in sec:param for the lo and ho components is as follows:
+most of the terms are similar to the ngs terms, but duplicated on the two loops. eq:lgs_iso_lo represents the isokinetism error, mainly applying to the tt variance in the wavefront residuals.
+in a first approximation, the fwhms of eq:lgs_ph are given as follows:
+where  is the strehl ratio on the lo wfs. eq:fwhm_ngs emphasizes the trade-off between a seeing limited and a diffraction limited spot in the lo wfs, depending on the performances of the ho loop. thus,  is given by:
+with:
+all the lo terms disappear in this budget. indeed, the formula of eq:lgs_lo must gives the statistic of the instantaneous strehl ratio in the lo wfs. we consequently work under the assumptions that the lo loop freezes the low orders and that the high orders are averaged to get a statistical meaning of the strehl in the lo loop. the coefficients in eqs. (-) should share the same values as the one fitted for eqs. (-). but these coefficients should be different than the ones fitted in sec:ngs due to the different geometry of the lgs loop and the associated cone effect.
+there are consequently lots of cross-couplings among the different terms. a fitting strategy is yet to be defined with tiptop for these more complex lgs modes. as well as future refinements of the equations in case of strong discrepancies. this study was not achieved by the time of the conference and will be the subject of a future communication.
+§ conclusions and perspectives
+in this work, we introduced a simplified model of the different gpao modes based on maréchal approximations. we first focused on the ngs modes (vis and ir). they have been parametrized by trying to grasp the main physical processes impacting the strehl ratio, driven by key parameters describing the sources and the atmosphere on one side, and the ao system on the other side.
+the lgs modes are more complicated due to the presence of a dual channel for ho and lo correction, multiplying the sources of error that impact the strehl ratio, as well as cross-terms. a formulation has been proposed but needs to be further validated to check the dependencies and its completeness. the commissioning the lasers and the associated modes is not planned before 2026. this lets some time to refine the equations and prepare the observations.
+at first, these models aimed to be validated and calibrated with tiptop simulations. this has already been achieved with the ngs modes which have then already been integrated in the  ranking tool of the jmmc. in a first approximation, they can be used to prepare the instrument commissioning by selecting pertinent sources and associated guide stars to calibrate the gpao modes and check their performances. this can also been used to prepare a first version of a catalog of scientific sources to be observed with gravity+ associated with their ft star and ngs.
+but in the long run, the parameters of the maréchal approximation, currently fitted with tiptop, aim to be refined with more realistic situations. running complex end-to-end simulations was not considered efficient regarding the amount of work and computation time this would imply. after the gpao commissioning, the different data acquired in various conditions and instrument settings will rather be used to update the parameters with real data and align the model to the true performances of the instrument.
+the authors warmly thank guido agapito and benoit neichel for their availability and reactivity and their great help in using tiptop.
+this project has received funding from the european union's horizon 2020 research and innovation programme under grant agreements no 101004719.
+this research has made use of the jean-marie mariotti center service, available at .
+spiebib 
+/edocument/ 

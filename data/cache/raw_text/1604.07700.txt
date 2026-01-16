@@ -1,0 +1,664 @@
+.
+/bdocument/
+laboratoire lagrange, université côte d'azur, observatoire de la côte
+d'azur, cnrs, blvd de l'observatoire, f-06304 nice, france.
+  correspondence: alain.chelli@oca.eu
+univ. grenoble alpes, ipag, f-38000 grenoble, france
+cnrs, ipag, f-38000 grenoble, france 
+the diameter of a star is a major observable that serves to test the
+ validity of stellar structure theories. it is also a difficult
+ observable that is mostly obtained with indirect methods since the stars are
+ so remote. today only  apparent star diameters have
+ been measured by direct methods: optical interferometry and lunar
+ occultations. accurate star diameters are now required in the new
+ field of exoplanet studies, since they condition the planets' sizes in
+  transit observations, and recent publications illustrate a
+ visible renewal of interest in this topic. 
+our analysis is based on the modeling of the
+ relationship between measured angular diameters and photometries. it
+ makes use of two new reddening-free concepts: a distance indicator
+ called pseudomagnitude, and a quasi-experimental observable that is independent of distance and
+ specific to each star, called the differential surface brightness
+ (dsb). the use of all the published measurements of
+ apparent diameters that have been collected so far, and a careful modeling of the
+ dsb allow us to estimate star diameters with a median statistical
+ error of , knowing their spectral type and, in the present
+ case, the vjhks photometries. 
+we introduce two catalogs, the jmmc measured diameters catalog (jmdc), containing measured star
+ diameters, and the second version of the jmmc stellar diameter
+ catalog (jsdc), augmented to about  star diameters. finally,
+ we provide simple formulas and a table of coefficients to quickly
+ estimate stellar angular diameters and associated errors from (v, ks)
+ magnitudes and spectral types.  
+on the apparent diameter of stars
+chelli et al.
+pseudomagnitudes and differential surface brightness: application
+  to the apparent diameter of stars
+    chelli, alain1, duvert, gilles2,3, bourgès,
+  laurent2,3, mella, guillaume2,3, lafrasse,
+  sylvain2,3, bonneau, daniel1, chesneau, olivier1
+    received; accepted
+===============================================================================================================================================
+§ introduction
+most of our knowledge of the universe still comes from, either directly or
+indirectly,  an analysis of starlight. stellar physics is used,
+implicitly or explicitly, in every astrophysical research field, and
+must be continually tested against observations. one of the most
+fundamental and dimensioning parameters of the physics of a star is its
+size, measured through its distance and its apparent angular size.
+the original interest in measuring stellar angular sizes was to get
+precise estimates of the stellar effective temperature, ,
+which is pivotal to, for example, determining ages and
+metallicities. but there is renewed interest, such as the precise
+stellar radii now needed to measure transiting exoplanets' sizes and
+densities, which can eventually fall into the host star's so-called
+habitable zone .
+primary distance measurements are the realm of the space missions
+hipparcos  and gaia . the most
+straightforward method to measure the angular sizes of stars is
+interferometry , and in
+a less measure, more historically, lunar occultations
+. modern interferometric techniques – combining
+adaptive optics, mononode fibers, cophasing, fast and low noise nir
+cameras – are today able to measure stellar diameters with a
+precision better than 1% . however the ultimate
+precision is often dominated by the calibration process. to reach 
+very high precision, it is mandatory to know and to observe with the
+state of the art procedures, together with the object of interest, a star called
+calibrator. in other words, a single star, as close as possible to the
+object, with similar magnitude, with a known angular diameter and
+associated error, that is used to measure the transmission of the
+observing system. this underlines the importance of angular diameter
+predictions for calibration purposes. the angular diameter predictions are
+based on two kind of methods:
+the first  are based on a
+polynomial fit of measured angular diameters as a function of 
+colors, from   
+to ; the second,
+like the infrared flux method ,  are
+based on a subtle mix of experimental data and modeling.
+other methods, like asteroseismology
+, provide linear
+diameters that 
+must be converted to angular diameters using a distance estimate.
+our initial motivation for this work was to optimize the
+calibrator-finding utility searchcal[
+  ] , an
+angular diameter estimator of the first kind described above, with a
+rigorous treatment of error propagation. the aim was to produce a more
+robust version of the catalog of 
+star diameters, the jmmc stellar diameter
+ catalog (jsdc) . this
+led us to reconsider the general problem of deriving the polynomial
+coefficients that are used in such estimators, which usually come from star magnitudes that
+need to be de-reddened before use. we solved the visual extinction
+problem by introducing two new concepts: a distance indicator called
+pseudomagnitude, and the differential surface brightness
+(hereafter dsb), both reddening-free.  the dsb is an observable specific
+to each star, independent of distance, which 
+depends only on measured quantities: the stellar diameter and the
+observed magnitudes.
+our approach to predict stellar diameters, definitely experimental,
+consists of a polynomial fit of the dsb as a function of the spectral
+type number for a database of stars with known diameters. it
+allows us to by-pass the knowledge of visual extinction and that of  intrinsic colors. the
+polynomial coefficients are then applicable to any star with a known
+spectral type and magnitudes to provide an apparent diameter value.
+as an illustration of our method, we compiled a catalog of 
+measured star diameters and photometries that we used to compute the
+dsb polynomial fit. using these polynomials and all the stars in the
+ascc catalog  that have an associated spectral type, we are able to give the
+apparent diameter of 
+stars with a median diameter precision of ,
+as well as possible astrophysical biases up to  (due to luminosity
+classes, dsb fine structures, metallicity, and so on), that is in agreement
+with the limiting precisions discussed in  .
+section  introduces the new formalism,  
+especially the concepts of pseudomagnitudes and differential surface
+brightness. section  describes the least squares fit
+approach. section  describes how we built the database of measured
+diameters from the literature, discusses their validity, and how we tried to avoid any systematics.
+the results are presented and discussed in section .   
+§ pseudomagnitude and differential surface brightness
+in this section, we introduce the concept of pseudomagnitude and a new
+experimental observable: the differential surface brightness (dsb).  
+our starting point is the expression of the surface brightness
+ of a star , see equation 9 of
+: 
+where  is the angular diameter of the star and  the
+unreddened magnitude in the photometric band .  can be written as:
+where  is the observed magnitude,  is the ratio between the
+extinction coefficients  and  in the  and visible bands,
+respectively. given two photometric bands  and , the
+interstellar extinction can be writtten as
+combining the three previous equations, the surface brightness may be
+expressed as a function of the angular diameter, the measured
+magnitudes, and the intrinsic color of the star, . that is to say
+at this point, it is useful to introduce a new stellar observable that
+we call pseudomagnitude, defined by
+the pseudomagnitudes have remarkable properties and
+applications that will be discussed in a forthcoming paper. basically,
+they are reddening free distance indicators: 
+where  is the absolute pseudomagnitude, i.e., the
+pseudomagnitude at  pc distance,  is the distance modulus and 
+the distance in parsecs. we note that if one of the coefficients 
+or  tends to zero, then the pseudomagnitude tends to the magnitude 
+or . hence, the absolute pseudomagnitude is, in some way, related to
+the stellar luminosity.
+the surface brightness may simply be rewritten as follows:
+where  is the dsb between the
+photometric bands  and , defined as
+is a self-calibrated observable specific to each star. it is 
+reddening-free, independent of the distance, and can be measured via photometry and
+interferometry. the only a priori is the diameter limb-darkening
+correction, which induces a diameter error that is generally less than 1%,
+smaller than the errors managed in this work.
+the knowledge of the dsb, as a function of the
+spectral type, the luminosity class, 
+the metallicity, and so on, is sufficient to predict the angular
+diameter of a star, given its observed magnitudes. unfortunately, we
+do not possess this level of   detailed information because of the poor spectral type-sampling owing to the small number of useable measured
+diameters () available today. to compensate our lack of knowledge, we fit
+the dsb as a function of the spectral type number
+ (varying from  to  for spectral types between
+o to m) with simple polynomial laws. within the present
+framework, if the determination of spectral type
+is robust to reddening (e.g., is not derived from colors), then the
+intrinsic color, replaced by the spectral type number, is no longer
+a variable of the diameter prediction problem and our approach is fully
+reddening-free.
+§ algorithmic approach
+this is a two-step process: 1) polynomial
+estimate based on the dsbs derived from database values, 2) diameter calculations from polynoms
+and pseudomagnitudes.
+§.§ polynomial
+a data point consists in a limb-darkened diameter  and 
+photometric bands, which provides  linearly independent (but
+statistically dependent) equations. we can build many
+sets of  linearly independent equations, but each set
+ provides the same polynomial solution. we then have  to
+characterize,  polynomials of degree , each associated with a 
+pair of photometric bands. this corresponds to  unknowns, that we evaluate simultaneously via a simple linear
+least squares fit (see appendix ). 
+wherever possible, we used the mean interstellar
+extinction coefficients of  that give:
+. strictly speaking,
+the coefficients  depend on the spectral type . in
+principle, one can consider variable coefficients, but for the present
+analysis we restrict ourselves to constant values, since the influence
+of these variations, with respect to diameter calculation, is smaller
+than the errors and the biases reported here. 
+also, it may be necessary to reject anomalous data
+points.  for example, in the production of the star diameter catalog
+described in sect. , we use the database described in
+sect. . from the found polynomial solution, for each entry of our database we can
+estimate  
+single diameters and a mean diameter. it sometimes occurs that one or various
+single diameters deviate from the mean diameter by more than 
+times the error on the difference. this may be due to observational
+biases in the diameter measurements, or that the star is not
+single, etc. in this case, we excluded the entry from the 
+database that was used. table  lists all the stars and references
+retained for fitting the polynomials, as discussed in
+sect. . 
+§.§ diameters
+a polynomial, together with two magnitudes (pseudomagnitude), provides an
+estimate of the diameter. several pairs of magnitudes gives several
+estimates of the same diameter. these are not statistically
+independent and we show in appendix  how to
+rigorously combine them in a single diameter value and its associated
+error. beyond the error improvement, which is generally modest, the
+main interest of using more than two photometric bands is to produce
+various diameter estimates that can be recombined and, above all, compared through a
+quality factor, see section .
+§ the database of measured angular diameters
+§.§ building the database.
+the empirical approach used in this paper relies on the knowledge of a
+statistically significant number of accurately measured angular
+diameters, ideally obtained with different techniques, such as avoiding
+as much as possible any technique-related bias. the angular diameters must be
+prime results, i.e., not the result of a modeling of the
+observations. ideally, they should  be equally distributed, both in
+space and in spectral type. 
+several star diameter compilations exist that contain a fair
+amount of published angular diameters values. the cadars
+ has entries for  stars and is complete up
+to . charm2  lists  measurements of 
+stars, up to . however these catalogs mix results from very
+direct methods, 
+such as intensity interferometry with indirect methods, or
+spectrophotometric estimates of various kind (always including some
+model of the star), or linear diameters from eclipsing binaries
+( entries in cadars), which need some modelling of the two
+stars, as well as a good estimate of the distance to be converted into
+an angular diameter. 
+another difficulty is that, the published angular diameters have been
+obtained at various wavelengths and may include, or not, a compensation
+for the limb-darkening effect. as a result, we initiated a new
+compilation of measured stellar diameters that would suit our needs.
+this database, called jmdc[, available at ],
+only uses  direct methods, merges multiwavelength measurements into one
+value of limb-darkened diameter (ldd), and aims to be complete up to
+the most recent publications by being updated on a regular basis
+through a peer-reviewed submission process.
+the jmdc used in this paper gathers  apparent diameter values 
+that have been published since the first experiments by michelson. prior
+to , our bibliography relies only on the reference list of 
+. after this date we used nasa's ads hosted at cds.
+we retained only the measurements obtained from visible/ir
+interferometry, intensity interferometry and lunar occultation
+ in the database. we always retrieved the values in the original
+text[with the exception of a few very old references in
+  cadars that were not easily available at our location.] and used
+simbad to properly and uniquely identify the stars.
+the three techniques retained share the same method of converting the
+measurements (squared visibilities for optical interferometry,
+correlation of photon-counts for intensity interferometry, fast
+photometry for lunar occultations) into an angular diameter: fitting a
+geometrical function into the values, in many cases a uniform disk,
+which provides a uniform disk diameter (udd) value. this udd is
+wavelength-dependent owing to the limb-darkening effect of the upper
+layers of a star's photosphere, and jmdc retains the wavelength or
+photometric band at which the observation was made.
+to measure a star's apparent diameter consistently, i.e., with the same
+meaning as our sun's well-resolved apparent diameter, it was necessary
+for the authors of these measurements to take into account the star's
+limb-darkening, for which only theoretical estimates exist as yet. they
+chose one of the various limb-darkening parameters available in the
+literature (see  for a discussion on the classical
+limb-darkening functions used), either by multiplying the udd by a
+coefficient function of the wavelength and the star's adopted
+effective temperature, or directly fitting a limb-darkened disk model
+in the data. of course this adds some amount of theoretical bias in
+the published measurements, which however diminishes as the wavelength
+increases. an additional difficulty for the lunar occultations is that
+the result depends on the exact geometry of the occulting portion of
+the lunar limb, which can,  more or less, be correctly estimated.
+to deal with the limb-darkening problem as efficiently as possible, in the
+publications where reported diameters are measured in several
+optical/ir bands, we retained the measurement with the best accuracy
+and favored the measurement at the longest wavelength to minimize the
+effect of limb-darkening correction. furthermore, we further used the published udd
+measurement, or retrieved the original, unpublished udd measurement
+from the ldd value and the limb-darkening coefficient used by the
+authors, and uniformly converted  these udd values into limb-darkened
+angular diameters using the most recent correction factors
+published , when
+possible. this, in our opinion, works towards minimizing the biases of
+the database, which will be confirmed afterwards by the statistical
+analysis of our results.
+we did not keep any other information from the original references. instead,
+we  retrieved all the ancillary
+information such as photometries, parallaxes, spectral types etc, at
+once by using our  service, a specially crafted
+version of our 
+server[] that fetches all
+relevant information from a dozen  cds-based catalogs (vizier,
+simbad for object and spectral types). this ensures that there is no
+difference in the origin, thus no added bias, between the database we
+use to derive our polynomials (see below) and those that will be used
+in the reverse process, for any object known by simbad at cds.
+§.§ database properties
+as of today, the database retains  different measurements
+on  stars from  publications. of them,  stars have multiple
+entries, from  ( stars) 
+to  ( tau). in addition,  measurements have an udd value,
+ reported an ldd value. after an eventual ldd to
+udd conversion  
+and use of the above-mentioned conversion factors (for compatible
+spectral types), we are left with  entries with useable ldd
+measurements. 
+with regard to the techniques, data is issued from long-baseline
+optical/ir interferometry (), then lunar occultations (),
+and finally intensity interferometry (). of the
+measurements retained,   are in the k band (around  nm), the rest
+being equally distributed between the b,v, r, i, and h bands. 
+§.§ database final filtering
+for the purposes  of this work (single stars of classical spectral types),
+we remove the known multiples or strongly variable stars (cepheids,
+miras, close doubles[of separation less than one arc
+  second.], spectroscopic binaries, elliptical variables etc) to
+obtain a set of (apparently) standard stars. in addition, we  consider only
+stars with the following complete information: vjhks magnitudes and
+errors[our getstar service is used to retrieve johnson v
+  magnitudes from the ascc  and hipparcos 
+  catalogs, and jhks from 2mass . getstar makes a careful
+  cross-match on the stellar properties reported in these catalogs,
+  comparing them with simbad values, and takes into account proper
+  motions in its cross-matching. ]; simbad spectral types within half
+a subclass precision; ldd 
+diameters and their errors. finally, keeping only measurements with an
+s/n above five for ldds, we are left with 573 measurements of 404
+distinct stars.
+the spectral types of the  573 selected measurements range from o5 to m7 in
+five luminosity classes:  dwarves (v),  subgiants (iv), 
+giants (iii),  subsupergiants (ii),  supergiants (i), and
+ without luminosity class (in the simbad database). the diameter
+measurements range over more than two decades, from  to  mas.
+§ results and discussion
+to derive the polynomial coefficients and their errors, we used 
+the 573 selected measurements of our database (see section ), and
+simultaneously fitted  the dsb of the photometric
+pairs (v,j), (v,h), and (v,ks).
+the quality of the polynomial
+fit is evaluated by the associated chi-square,  (see
+appendix ), and that of
+the reconstructed diameters by the mean diameter chi-square
+, (see appendix ). 
+§.§ influence of luminosity class
+to test the influence of the luminosity class (lc), we first computed  three sets of
+polynomials of degree 6 separately, from: 1) lc i, ii and iii (); 2) lc iv and v 
+(); and 3) all, including unknown
+lc (). then in
+each case, we computed the angular 
+diameters of all stars of the
+hipparcos  catalog  with known spectral types and 
+magnitudes ( stars). within an rms bias of , we found no  
+difference between cases 1) and 3), and cases 2)  
+and 3). as a consequence, we decided to use all the selected
+measurements of our database, irrespective of their
+luminosity class (or absence thereof), to derive a single set of polynomials that is
+applicable to all stars. 
+histogram of retained stellar diameter measurements for
+        the dsb polynomial fit. top: note the overabundance of
+        luminosity classes i, ii, and iii (363 entries), around k and m spectral
+        types and the poor sampling for earlier ones; bottom: spectral
+        distribution for luminosity classes iv and v (150 entries).   
+              
+         
+   
+dsb values in
+the three selected photometric pairs, together with polynomial fits of
+degree 6 (dotted lines), as a function
+of the spectral type. the
+entries were binned separately, with an interval of one subspectral type, 
+for lc i, ii, and iii (filled circles) and lc iv and v (open circles),
+to understand their similarity. 
+              
+         
+   
+§.§ selected database measurements and their dsb
+from the initial  entries,  () filled the fitting condition
+(see end of section ) and were retained for  
+polynomial calculations ( entries with lc i, ii, and iii,  with lc
+iv and v, and  with unknown lc). the spectral type distribution for
+luminosities classes i, ii, and iii is shown in
+figure (top). there is an overabundance of
+measurements around k and 
+m spectral types and a poor sampling for earlier ones. instead, for
+luminosity classes iv and v (figure , bottom) the
+spectral types are quite well distributed between b and m types. also
+note that 100% (31 entries) of interferometry intensity data, 92%
+(407 entries) of classical interferometry data and 87% (88 entries) of
+lunar occultation data, have been retained. 
+figure  shows the dsb in
+the three selected photometric pairs as a function of the spectral
+type, together with the polynomial fit. the entries were binned, with
+an interval of one subspectral type, separately for lc i, ii and iii (filled circles) and lc
+iv and v (open circles), to understand their
+similarity. figure  shows the same dsb with
+all entries binned with an interval of 2.5 subspectral type. 
+it is clear that the spectral metric is not smooth, especially for the
+(v,j) pair. it 
+presents a period of about one spectral type plus some possible
+fine structures. in fact no polynomial of reasonable degree is able to
+reproduce the exact structure of the dsb and we must always
+keep in mind the  rms bias on the diameter.
+§.§ comparison of diameter predictions with recent measurements
+to test the diameter predictions of our model,
+we computed the diameter of eight stars, which had  recently been measured by
+interferometry and not used for the polynomial
+fit. figure  shows the computed diameters as a function of the
+measured ones. the agreement is excellent, with a mean-squared
+difference between measured and computed diameters that is expressed in
+noise units of about 0.5. 
+§.§ the jmmc stellar diameter catalogue
+we used the present formalism to compute the angular diameters of
+stars in the tycho2 catalog[see the jsdc catalog at
+  . the tycho2 catalog is used here as a
+  list of star positions and photometries are retrieved through
+  getstar, as described in
+  sect. . ]  with known
+spectral type. the 
+resulting median diameter error is .
+about  stars have an associated internal diameter
+ less than 5, and  less than 2.
+§.§ simplified formula
+for a star which could be absent in the jmmc catalog and for which two
+tycho-like magnitudes and a spectral type are known, it is easy to
+derive a diameter estimate using the formula below.
+knowing the dsb polynomial values  and their errors , the
+stellar diameter (mas) and its relative error may quickly be computed using the
+following formulas:  
+and
+with x=j, h or ks. table 1 provides the pair (, ) for
+the (v,ks) photometries and stars of spectral type o5 to m6.
+it is also possible to estimate angular diameters without a 
+precise knowledge of the spectral type, but with a
+degraded precision. for a star whose spectral type is known within
+some range, it suffices to replace in eq.  and
+eq. , the pair (, ) by the pair
+(), where  is the mean value of , and  its dispersion over
+the spectral range. if the spectral
+type is in the range o5–m6, then for any x, ()=(0.56, 0.12),
+for the range a0–m6, ()=(0.62, 0.05), which respectively provides  and
+ diameter error. 
+differential surface brightness for (from top to bottom) the (v, j),
+        (v, h) and (v, ks),
+        photometric pairs versus spectral type. the (v, j) and (v, ks)
+        curves have been shifted by  for clarity. the
+entries were binned, with an interval of 2.5 subspectral type. the
+dotted lines represent the best fit with polynomials of degree 6. note
+that the spectral metric is not smooth (see text).
+              
+         
+   
+computed diameters as a function of
+measured diameters, for eight stars recently observed with
+interferometry and not used for the polynomial fit. stars with increasing diameter, hd
+numbers: 209458 (g0v), 189733 
+(k1.5v), 69830 (g8), 185351 (g9iii), 190658 (m2.5iii),
+183589 (k5i), 95687 (m3i),  97671 (m3i), 
+. the  
+agreement is excellent, with a mean-squared 
+difference between measured and computed diameters expressed in
+noise units of 0.5. the straight dotted line corresponds to x=y.
+              
+         
+   
+§ conclusion
+our approach to predict stellar angular diameters is based on the modeling of
+the relationship between angular diameters and photometries.
+we developed a new methodology that is based on two reddening-free
+observables: 1) a distance indicator called pseudomagnitude and 2) the 
+differential surface brightness, a handy quasi-experimental
+observable, that is independent of distance and specific to each star. 
+this, together with our new database of measured angular diameters,
+allows us to provide estimates of star diameters with 
+statistical errors of , plus possible biases
+of .  it permits us to upgrade the jsdc catalog of
+stellar diameters to about  stars, a tenfold improvement in
+number of stars and diameter precision. 
+the polynomial method developed in this work may be used with any photometric
+system, selecting optical bands that best represent  the stellar
+continuum. however, the exercise has severe limits because the dsb is
+not smooth. the only way to reduce the biases and to go beyond  error is to
+measure its structure for all spectral types and luminosity
+classes. this emphasises this importance to get precise photometry with
+biases smaller than  and above all the importance of optical
+interferometry to get precise and numerous angular diameters.
+sp type             sp type       
+o5    0.2432        0.0443    f6   0.5810       0.0025 
+o6    0.2534        0.0337    f7   0.5822       0.0024 
+ 
+o7    0.2670        0.0255    f8   0.5835       0.0023 
+o8    0.2830        0.0192    f9   0.5850       0.0022 
+o9    0.3009        0.0147    g0   0.5867       0.0021 
+b0    0.3201        0.0116    g1   0.5888       0.0020 
+b1    0.3401       0.0096    g2   0.5912       0.0020 
+b2    0.3603       0.0085    g3   0.5939       0.0019 
+b3    0.3805       0.0077    g4   0.5971       0.0019 
+b4    0.4003       0.0071    g5   0.6006       0.0019 
+b5    0.4195       0.0067    g6   0.6045       0.0019 
+b6    0.4378       0.0062    g7   0.6088       0.0019 
+b7    0.4551       0.0059    g8   0.6134       0.0020 
+b8    0.4712       0.0055    g9   0.6183       0.0020 
+b9    0.4862       0.0053    k0   0.6235       0.0021 
+a0    0.4998       0.0051    k1   0.6289       0.0021 
+a1    0.5121       0.0050    k2   0.6345       0.0022 
+a2    0.5231       0.0049    k3   0.6402       0.0023 
+a3    0.5329       0.0048    k4   0.6460       0.0025 
+a4    0.5414       0.0047    k5   0.6518       0.0026 
+a5    0.5488       0.0046    k6   0.6575       0.0028 
+a6    0.5551       0.0045    k7   0.6632       0.0029 
+a7    0.5604       0.0043    k8   0.6686       0.0030 
+a8    0.5648       0.0041    k9   0.6739       0.0031 
+a9    0.5684       0.0039    m0   0.6790       0.0029 
+f0    0.5714       0.0037    m1   0.6838       0.0026 
+f1    0.5738       0.0034    m2   0.6884       0.0023 
+f2    0.5757       0.0032    m3   0.6928       0.0025 
+f3    0.5773       0.0030    m4   0.6971       0.0039 
+f4    0.5786       0.0028    m5   0.7012       0.0065 
+f5    0.5798       0.0026    m6   0.7054       0.0104  
+ 
+differential surface brightness polynomial values  and
+  associated errors  for stars measured in the (v, ks) photometric pair. the
+  angular diameter (mas) and its statistical relative error may be
+  obtained from eq.  and eq. ,
+  replacing x by ks. 
+name ref(s)    
+  name ref(s)    
+  name ref(s)    
+  name ref(s)    
+  name ref(s)    
+  name ref(s) 
+gj411 59   gj412a 75   gj649 82   gj687 75   hd100029 57, 63, 83   hd100920 19
+hd1013 83   hd10144 9   hd101501 74   hd102212 43, 57, 63, 83   hd102328 72   hd102647 9, 66
+hd102870 74   hd103605 72   hd10380 36, 56   hd10476 77   hd104985 69   hd106574 72
+hd106625 9   hd10697 69, 77   hd107383 82   hd10780 70, 74   hd108907 83   hd109358 74, 83
+hd112300 63   hd113049 72   hd113226 56, 63, 83   hd113996 83   hd114710 74   hd114961 36, 43
+hd115617 82   hd115659 80   hd117176 69   hd117675 83   hd118904 72   hd119149 23
+hd11964 69, 77   hd11977 73   hd119850 75   hd120136 69   hd120477 56, 83   hd121130 83
+hd121370 57, 63, 67   hd123139 61   hd123934 14, 16, 22   hd12479 14, 37, 50, 54   hd12533 32, 63   hd126660 74
+hd127665 83   hd128167 74   hd12929 40, 46, 48, 56, 63   hd129712 83   hd130948 77   hd131156 74
+hd131873 40, 63   hd13189 69   hd131977 65   hd132112 36, 43   hd1326 58, 59, 75   hd132813 63
+hd133124 83   hd133208 57, 63, 83   hd133774 23   hd135722 56, 63   hd136202 77   hd136726 72, 83
+hd137443 72   hd137759 83   hd138265 72   hd139357 72   hd139663 12   hd140538 77
+hd140573 57, 63, 83   hd141795 74   hd142804 36   hd142860 74   hd143107 83   hd143761 69, 82
+hd144690 50   hd145675 69   hd146051 63, 78   hd146233 74   hd148387 57, 63, 83   hd148478 47, 63
+hd149661 75   hd150383 49   hd150680 57, 63   hd150798 78   hd150997 56, 63, 83   hd1522 83
+hd152786 78   hd154345 71   hd156283 46, 56, 63   hd157214 77   hd157681 72   hd158633 77
+hd159181 63   hd159561 9   hd160290 72   hd161096 83   hd16141 71   hd16160 58, 59, 75
+hd161797 63   hd162003 74   hd163770 63   hd163917 83   hd164058 40, 41, 44, 46, 63   hd164259 74
+hd167042 72   hd16765 77   hd168151 77   hd16895 74   hd168988 36   hd169022 9
+hd170693 72, 83   hd172167 1,  9, 63   hd172816 17, 23, 29, 34, 36, 37, 55   hd17361 56   hd173667 74   hd17506 63
+hd175588 51, 63   hd175726 76   hd175775 18   hd175823 72   hd175865 51, 63   hd176124 36
+hd176408 72   hd176411 56   hd176437 79, 81   hd176524 83   hd176678 83   hd17709 63
+hd177153 76   hd177724 74   hd177756 81   hd177830 69   hd180540 34, 55   hd180610 83
+hd180711 40, 57, 63   hd180809 46, 56   hd181276 56, 83   hd181420 76   hd18191 16, 35   hd182572 74
+hd183439 46, 63, 83   hd184171 81   hd185144 70, 74   hd185395 74   hd186408 77   hd186427 69, 77
+hd186791 56, 63   hd186815 72   hd186882 81   hd187082 23   hd187637 76   hd188512 56
+hd190228 69   hd190360 69   hd190406 76   hd19058 44, 51, 63   hd192781 72   hd19373 74
+hd193924 1,  9   hd194093 56, 63   hd195564 77   hd195820 72   hd196777 4, 30, 36   hd197345 32, 63
+hd19787 56   hd197989 48, 63   hd198149 56   hd199305 75   hd199665 71   hd19994 69
+hd200205 72   hd200905 56, 63   hd201092 68   hd202109 63   hd202850 79   hd203504 83
+hd204724 63   hd205435 56   hd20630 74   hd206778 57, 63   hd206860 77   hd206952 83
+hd207005 12   hd20902 32, 56, 63   hd209100 65   hd209750 56, 63   hd209950 29   hd209952 1,  9
+hd210027 76   hd21019 77   hd210418 74   hd210702 71, 82   hd210745 63   hd212496 56, 83
+hd213306 53, 56   hd213558 74   hd214868 56, 72   hd214923 81   hd215648 74   hd215665 56, 63
+hd216032 43   hd216131 56, 63   hd216386 2, 63   hd216956 1,  9, 66   hd217014 69, 77   hd217906 44, 46, 48, 51, 52, 63, 80
+hd218329 83   hd218356 63   hd218396 76   hd219080 79   hd219134 75   hd219576 36
+hd219615 83   hd219623 77   hd221115 56   hd221345 71   hd222368 74   hd222603 77
+hd224062 19, 37   hd22484 74   hd224935 64   hd23249 67   hd23319 73   hd23596 69
+hd24398 81   hd24512 78   hd25025 63   hd25604 56   hd25705 78   hd27256 73
+hd285968 82   hd29139 8, 24, 25, 26, 27, 28, 33, 38, 41, 42, 44, 48, 51, 63   hd30959 78   hd31398 63   hd31767 63   hd31964 63
+hd32518 72   hd32630 79   hd33564 82   hd3360 79   hd33793 59   hd34085 1,  9
+hd34411 74   hd3546 56   hd35468 1,  9, 81   hd3627 48, 57, 63   hd36389 31, 36, 37, 39, 78   hd36395 59, 75
+hd3651 69   hd36673 56   hd36848 73   hd3712 32, 46, 48, 56, 63   hd37128 1,  9   hd38529 69
+hd38858 77   hd38944 83   hd39983 43, 54   hd40239 51, 63   hd4128 78   hd42995 60
+hd432 56   hd44478 6,  7, 10, 11, 21, 35, 41, 44, 51, 63   hd45348 1,  9, 78   hd45410 71   hd4628 75   hd4656 50
+hd48329 13, 43, 45, 50, 56, 63   hd48915 1,  9, 62, 63   hd49933 76   hd49968 30   hd5015 74   hd52089 1,  9
+hd5395 56   hd5448 79   hd54605 9   hd54719 83   hd56537 74   hd57423 35
+hd5820 23   hd58350 9   hd58946 74   hd59686 69   hd60294 72   hd6210 77
+hd62345 83   hd66141 83   hd66811 3,  9   hd6860 32, 41, 44, 46, 48, 51, 63   hd69267 56, 63   hd69897 77
+hd70272 46   hd7087 56   hd73108 72   hd74442 36   hd76294 57, 83   hd76827 63
+hd79211 75   hd7924 82   hd80007 9   hd8019 23   hd80493 46, 57, 63   hd81797 63, 78
+hd81937 74   hd82308 83   hd82885 74   hd83618 83   hd84194 83   hd84441 57, 63
+hd8512 83   hd85503 83   hd86663 18, 23, 56   hd86728 74   hd87837 13, 15, 21, 29, 56   hd87901 1,  9
+hd88230 58, 59, 75   hd89449 76, 79   hd89758 57, 63   hd90839 74   hd91232 43   hd9138 45
+hd9408 56   hd95418 74   hd95608 79   hd95735 58, 58, 75, 75   hd96833 57, 63, 83   hd97603 74
+hd97633 79   hd9826 69   hd98262 63   hd9927 46, 56   hd99998 5, 20, 56   hr4518 56
+hr9045 56
+list of stars and associated references of
+  angular diameter measurements that have been retained to calibrate
+  the dsb in this work. 
+(1) ; (2) ; (3) ; (4) ; (5) ; (6) ; (7) ; (8) ; (9) ; (10) ; (11) ; (12) ; (13) ; (14) ; (15) ; (16) ; (17) ; (18) ; (19) ; (20) ; (21) ; (22) ; (23) ; (24) ; (25) ; (26) ; (27) ; (28) ; (29) ; (30) ; (31) ; (32) ; (33) ; (34) ; (35) ; (36) ; (37) ; (38) ; (39) ; (40) ; (41) ; (42) ; (43) ; (44) ; (45) ; (46) ; (47) ; (48) ; (49) ; (50) ; (51) ; (52) ; (53) ; (54) ; (55) ; (56) ; (57) ; (58) ; (59) ; (60) ; (61) ; (62) ; (63) ; (64) ; (65) ; (66) ; (67) ; (68) ; (69) ; (70) ; (71) ; (72) ; (73) ; (74) ; (75) ; (76) ; (77) ; (78) ; (79) ; (80) ; (81) ; (82) ; (83) 
+this research has made use of nasa's astrophysics data system.  this
+  research has made use of the simbad database
+  , and of the vizier catalog access
+  tool , cds, strasbourg, france. the
+  topcat tool[available at
+    ]
+  was pivotal in the analysis and filtering of our databases. this publication makes use of data products from the two micron all sky survey, which is a joint project of the university of massachusetts and the infrared processing and analysis center/california institute of technology, funded by the national aeronautics and space administration and the national science foundation.
+*
+aa 
+ 
+§ linear least squares fit
+the data consist of a set of  stars that are characterized
+by their measured diameter  (corrected for limb-darkening) and
+ observed magnitudes. each star provides  
+linearly independent pseudomagnitude, which combined with the diameter
+, give  correlated measurements (differential surface
+brightness) per star. each measurement is fitted as a function of 
+the stellar spectral type number (from 0 to 69 for o to m) with
+a polynomial of degree . the problem is then to 
+evaluate  polynomial coefficients, which we do
+via a simple linear least squares fit, described below.
+§.§ polynomials calculation
+we align the  measurements in a vector , and we define the transition matrix  of dimensions
+ as the derivative of  with respect to the unknowns. for
+simplicity, we assume that the  stars are distinct, implying no correlations
+between the measurements of different stars. this allows us  to define
+ independent covariance matrices ,of dimension . given the
+photometric pairs that were selected in 
+this work (v, j),(v, h),(v, ks), the generic expression of the
+covariance matrix is  
+𝐂 = σ_θ^2/θ^2 ln(10)^2 +
+    0.04 × ,
+       [
+    [    c_j^2σ_v^2+c_v^2σ_j^2/(c_v-c_j)^2      c_jc_hσ_v^2/(c_v-c_j)×(c_v-c_h)    c_jc_ksσ_v^2/(c_v-c_j)×(c_v-c_ks);     c_j c_hσ_v^2/(c_v-c_j)×(c_v-c_h)    c_h^2σ_v^2+c_v^2σ_h^2/(c_v-c_h)^2    c_hc_ksσ_v^2/(c_v-c_h)×(c_v-c_ks);    c_jc_ksσ_v^2/(c_v-c_j)×(c_v-c_ks)    c_hc_ksσ_v^2/(c_v-c_h)×(c_v-c_ks) c_ks^2σ_v^2+c_v^2σ_ks^2/(c_v-c_ks)^2;                                      ]]
+ 
+where  is the measured diameter and  its error,
+,  
+and   are the magnitude errors and the
+interstellar extinction coefficients in the corresponding bands.
+next we place the inverse of the covariance matrices 
+along the diagonal of a matrix  of dimensions . the solution for the polynomial coefficients is
+contained in a vector  of dimensions , given by
+the covariance matrix  of the solution  is
+the reconstructed measurement vector writes: , and the reduced  of the
+  fitting 
+process is
+§.§ diameter calculation
+for a given star with a spectral type number  and an associated
+pseudomagnitude vector  
+of dimension , the reconstructed iest 
+diameter  is given by
+the covariance matrix  between log diameter estimates writes
+𝐂_d[log(θ_i),log(θ_j)] = 0.04  cov [𝐏(i),𝐏(j)  ] +
+    .
+    ∑_k=0^k=m∑_l=0^l=m𝐂_a[k+i× (m+1),l+j×
+    (m+1) ]× n_s^k+l
+let us range the  log diameter estimates within a vector
+. the mean log diameter  and the
+associated error are
+where  stands for the sum of all the matrix elements. the mean 
+diameter  and its error are computed as follows:
+at last, we define the chi-square  associated with the reconstructed log
+diameter (from the database) by
+where  is the vector of the difference between the log
+of the diameter estimates () and that of the measured
+diameter, and  is the error of the measured log diameter. in the case of a catalog of stars with no measured diameter, we can
+define an internal , replacing the measured diameter and
+its error with the mean computed diameter and its error.  
+/edocument/
