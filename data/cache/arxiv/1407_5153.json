@@ -1,0 +1,24 @@
+{
+  "arxiv_id": "1407.5153",
+  "found": true,
+  "title": "Optical interferometry and adaptive optics of bright transients",
+  "authors": [
+    "Florentin Millour",
+    "Olivier Chesneau",
+    "Anthony Meilland",
+    "Nicolas Nardetto"
+  ],
+  "first_author": "Florentin Millour",
+  "summary": "Bright optical transients (i.e. transients typically visible with the naked eye) are populated mainly by novae eruptions plus a few supernovae (among which the SN1987a event). One bright nova happen every two years, either in the North ot in the South hemisphere. It occurs that current interferometers have matching sensitivities, with typically visible or infrared limiting magnitude in the range 5--7. The temporal development of the fireball, followed by a dust formation phase or the appearance of many coronal lines can be sudied with the Very Large Telescope Interferometer. The detailed geometry of the first phases of novae in outburst remains virtually unexplored. This paper summarizes the work which has been done to date using the VLTI.",
+  "primary_category": "astro-ph.SR",
+  "categories": [
+    "astro-ph.SR"
+  ],
+  "published": "2014-07-19T06:48:15+00:00",
+  "updated": "2014-07-19T06:48:15+00:00",
+  "doi": null,
+  "journal_ref": null,
+  "comment": "Hot-wiring the transien Universe 3, Santa Fe : United States (2013)",
+  "pdf_url": "https://arxiv.org/pdf/1407.5153v1",
+  "entry_id": "http://arxiv.org/abs/1407.5153v1"
+}

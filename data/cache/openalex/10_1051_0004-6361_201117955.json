@@ -1,0 +1,1706 @@
+{
+  "id": "https://openalex.org/W4293717784",
+  "doi": "https://doi.org/10.1051/0004-6361/201117955",
+  "title": "First spectro-interferometric survey of Be stars",
+  "display_name": "First spectro-interferometric survey of Be stars",
+  "publication_year": 2011,
+  "publication_date": "2011-11-22",
+  "ids": {
+    "openalex": "https://openalex.org/W4293717784",
+    "doi": "https://doi.org/10.1051/0004-6361/201117955"
+  },
+  "language": "en",
+  "primary_location": {
+    "id": "doi:10.1051/0004-6361/201117955",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.1051/0004-6361/201117955",
+    "pdf_url": "https://www.aanda.org/articles/aa/pdf/2012/02/aa17955-11.pdf",
+    "source": {
+      "id": "https://openalex.org/S205231332",
+      "display_name": "Astronomy and Astrophysics",
+      "issn_l": "0004-6361",
+      "issn": [
+        "0004-6361",
+        "1432-0746"
+      ],
+      "is_oa": false,
+      "is_in_doaj": true,
+      "is_core": true,
+      "host_organization": "https://openalex.org/P4310319748",
+      "host_organization_name": "EDP Sciences",
+      "host_organization_lineage": [
+        "https://openalex.org/P4310319748"
+      ],
+      "host_organization_lineage_names": [
+        "EDP Sciences"
+      ],
+      "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Astronomy &amp; Astrophysics",
+    "raw_type": "journal-article"
+  },
+  "type": "article",
+  "indexed_in": [
+    "crossref",
+    "doaj"
+  ],
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_url": "https://www.aanda.org/articles/aa/pdf/2012/02/aa17955-11.pdf",
+    "any_repository_has_fulltext": false
+  },
+  "authorships": [
+    {
+      "author_position": "first",
+      "author": {
+        "id": "https://openalex.org/A5054973532",
+        "display_name": "A. Meilland",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210117840",
+          "display_name": "Institut de Biologie Valrose",
+          "ror": "https://ror.org/03bnma344",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I1294671590",
+            "https://openalex.org/I1294671590",
+            "https://openalex.org/I154526488",
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210096427",
+            "https://openalex.org/I4210117840"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "A. Meilland",
+      "raw_affiliation_strings": [
+        "UMR 6525 CNRS H. FIZEAU UNS, OCA, Campus Valrose, 06108 Nice Cedex 2, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "UMR 6525 CNRS H. FIZEAU UNS, OCA, Campus Valrose, 06108 Nice Cedex 2, France",
+          "institution_ids": [
+            "https://openalex.org/I4210117840",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5069324182",
+        "display_name": "F. Millour",
+        "orcid": "https://orcid.org/0000-0002-9765-7783"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210117840",
+          "display_name": "Institut de Biologie Valrose",
+          "ror": "https://ror.org/03bnma344",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I1294671590",
+            "https://openalex.org/I1294671590",
+            "https://openalex.org/I154526488",
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210096427",
+            "https://openalex.org/I4210117840"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "F. Millour",
+      "raw_affiliation_strings": [
+        "UMR 6525 CNRS H. FIZEAU UNS, OCA, Campus Valrose, 06108 Nice Cedex 2, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "UMR 6525 CNRS H. FIZEAU UNS, OCA, Campus Valrose, 06108 Nice Cedex 2, France",
+          "institution_ids": [
+            "https://openalex.org/I4210117840",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5038678435",
+        "display_name": "S. Kanaan",
+        "orcid": "https://orcid.org/0000-0003-1190-4825"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I79274474",
+          "display_name": "University of Valpara\u00edso",
+          "ror": "https://ror.org/00h9jrb69",
+          "country_code": "CL",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I79274474"
+          ]
+        }
+      ],
+      "countries": [
+        "CL"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Kanaan",
+      "raw_affiliation_strings": [
+        "Departamento de F\u00edsica y Astronom\u00eda, Universidad de Valpara\u00edso, Chile"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Departamento de F\u00edsica y Astronom\u00eda, Universidad de Valpara\u00edso, Chile",
+          "institution_ids": [
+            "https://openalex.org/I79274474"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5077549364",
+        "display_name": "P. Stee",
+        "orcid": "https://orcid.org/0000-0001-8220-0636"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210117840",
+          "display_name": "Institut de Biologie Valrose",
+          "ror": "https://ror.org/03bnma344",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I1294671590",
+            "https://openalex.org/I1294671590",
+            "https://openalex.org/I154526488",
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210096427",
+            "https://openalex.org/I4210117840"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ph. Stee",
+      "raw_affiliation_strings": [
+        "UMR 6525 CNRS H. FIZEAU UNS, OCA, Campus Valrose, 06108 Nice Cedex 2, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "UMR 6525 CNRS H. FIZEAU UNS, OCA, Campus Valrose, 06108 Nice Cedex 2, France",
+          "institution_ids": [
+            "https://openalex.org/I4210117840",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5055323394",
+        "display_name": "R. Petrov",
+        "orcid": "https://orcid.org/0000-0003-4759-6051"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210117840",
+          "display_name": "Institut de Biologie Valrose",
+          "ror": "https://ror.org/03bnma344",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I1294671590",
+            "https://openalex.org/I1294671590",
+            "https://openalex.org/I154526488",
+            "https://openalex.org/I201841394",
+            "https://openalex.org/I4210096427",
+            "https://openalex.org/I4210117840"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. Petrov",
+      "raw_affiliation_strings": [
+        "UMR 6525 CNRS H. FIZEAU UNS, OCA, Campus Valrose, 06108 Nice Cedex 2, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "UMR 6525 CNRS H. FIZEAU UNS, OCA, Campus Valrose, 06108 Nice Cedex 2, France",
+          "institution_ids": [
+            "https://openalex.org/I4210117840",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5113851043",
+        "display_name": "K.-H. Hofmann",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I4210158571",
+          "display_name": "Max Planck Institute for Radio Astronomy",
+          "ror": "https://ror.org/04jvemc39",
+          "country_code": "DE",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I149899117",
+            "https://openalex.org/I4210158571"
+          ]
+        }
+      ],
+      "countries": [
+        "DE"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "K.-H. Hofmann",
+      "raw_affiliation_strings": [
+        "Max-Planck-Institut f\u00fcr Radioastronomie, Auf dem H\u00fcgel 69, 53121 Bonn, Germany"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "Max-Planck-Institut f\u00fcr Radioastronomie, Auf dem H\u00fcgel 69, 53121 Bonn, Germany",
+          "institution_ids": [
+            "https://openalex.org/I4210158571"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "middle",
+      "author": {
+        "id": "https://openalex.org/A5026667655",
+        "display_name": "A. Natta",
+        "orcid": "https://orcid.org/0000-0002-4608-7995"
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I2799986158",
+          "display_name": "Arcetri Astrophysical Observatory",
+          "ror": "https://ror.org/00fbze943",
+          "country_code": "IT",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I2799986158",
+            "https://openalex.org/I875825670"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I875825670",
+          "display_name": "National Institute for Astrophysics",
+          "ror": "https://ror.org/02gh4kt33",
+          "country_code": "IT",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I875825670"
+          ]
+        }
+      ],
+      "countries": [
+        "IT"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Natta",
+      "raw_affiliation_strings": [
+        "INAF Osservatorio Astrofisico di Arcetri, Istituto Nazionale di Astrofisica, Largo E. Fermi 5, 50125 Firenze, Italy"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "INAF Osservatorio Astrofisico di Arcetri, Istituto Nazionale di Astrofisica, Largo E. Fermi 5, 50125 Firenze, Italy",
+          "institution_ids": [
+            "https://openalex.org/I2799986158",
+            "https://openalex.org/I875825670"
+          ]
+        }
+      ]
+    },
+    {
+      "author_position": "last",
+      "author": {
+        "id": "https://openalex.org/A5107839962",
+        "display_name": "K. Perraut",
+        "orcid": null
+      },
+      "institutions": [
+        {
+          "id": "https://openalex.org/I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "ror": "https://ror.org/02feahw73",
+          "country_code": "FR",
+          "type": "funder",
+          "lineage": [
+            "https://openalex.org/I1294671590"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I4210109224",
+          "display_name": "Institut de Plan\u00e9tologie et d'Astrophysique de Grenoble",
+          "ror": "https://ror.org/01kcrnc96",
+          "country_code": "FR",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I1294671590",
+            "https://openalex.org/I1294671590",
+            "https://openalex.org/I1294671590",
+            "https://openalex.org/I2802818602",
+            "https://openalex.org/I4210088668",
+            "https://openalex.org/I4210090127",
+            "https://openalex.org/I4210108561",
+            "https://openalex.org/I4210109224",
+            "https://openalex.org/I4210131494",
+            "https://openalex.org/I4210148025",
+            "https://openalex.org/I4210166444",
+            "https://openalex.org/I4387154391",
+            "https://openalex.org/I899635006",
+            "https://openalex.org/I899635006"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I177483745",
+          "display_name": "Universit\u00e9 Joseph Fourier",
+          "ror": "https://ror.org/02aj0kh94",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I177483745"
+          ]
+        },
+        {
+          "id": "https://openalex.org/I899635006",
+          "display_name": "Universit\u00e9 Grenoble Alpes",
+          "ror": "https://ror.org/02rx3b187",
+          "country_code": "FR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I899635006"
+          ]
+        }
+      ],
+      "countries": [
+        "FR"
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "K. Perraut",
+      "raw_affiliation_strings": [
+        "UJF-Grenoble 1 / CNRS-INSU, IPAG UMR 5274, 38041 Grenoble, France"
+      ],
+      "affiliations": [
+        {
+          "raw_affiliation_string": "UJF-Grenoble 1 / CNRS-INSU, IPAG UMR 5274, 38041 Grenoble, France",
+          "institution_ids": [
+            "https://openalex.org/I4210109224",
+            "https://openalex.org/I177483745",
+            "https://openalex.org/I899635006",
+            "https://openalex.org/I1294671590"
+          ]
+        }
+      ]
+    }
+  ],
+  "institutions": [],
+  "countries_distinct_count": 4,
+  "institutions_distinct_count": 8,
+  "corresponding_author_ids": [
+    "https://openalex.org/A5054973532"
+  ],
+  "corresponding_institution_ids": [
+    "https://openalex.org/I1294671590",
+    "https://openalex.org/I4210117840"
+  ],
+  "apc_list": null,
+  "apc_paid": null,
+  "fwci": 3.09755908,
+  "has_fulltext": true,
+  "cited_by_count": 65,
+  "citation_normalized_percentile": {
+    "value": 0.92345406,
+    "is_in_top_1_percent": false,
+    "is_in_top_10_percent": true
+  },
+  "cited_by_percentile_year": {
+    "min": 89,
+    "max": 99
+  },
+  "biblio": {
+    "volume": "538",
+    "issue": null,
+    "first_page": "A110",
+    "last_page": "A110"
+  },
+  "is_retracted": false,
+  "is_paratext": false,
+  "is_xpac": false,
+  "primary_topic": {
+    "id": "https://openalex.org/T10477",
+    "display_name": "Astrophysics and Star Formation Studies",
+    "score": 0.9998999834060669,
+    "subfield": {
+      "id": "https://openalex.org/subfields/3103",
+      "display_name": "Astronomy and Astrophysics"
+    },
+    "field": {
+      "id": "https://openalex.org/fields/31",
+      "display_name": "Physics and Astronomy"
+    },
+    "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+    }
+  },
+  "topics": [
+    {
+      "id": "https://openalex.org/T10477",
+      "display_name": "Astrophysics and Star Formation Studies",
+      "score": 0.9998999834060669,
+      "subfield": {
+        "id": "https://openalex.org/subfields/3103",
+        "display_name": "Astronomy and Astrophysics"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/31",
+        "display_name": "Physics and Astronomy"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    },
+    {
+      "id": "https://openalex.org/T10039",
+      "display_name": "Stellar, planetary, and galactic studies",
+      "score": 0.9983999729156494,
+      "subfield": {
+        "id": "https://openalex.org/subfields/3103",
+        "display_name": "Astronomy and Astrophysics"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/31",
+        "display_name": "Physics and Astronomy"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    },
+    {
+      "id": "https://openalex.org/T10325",
+      "display_name": "Astro and Planetary Science",
+      "score": 0.995199978351593,
+      "subfield": {
+        "id": "https://openalex.org/subfields/3103",
+        "display_name": "Astronomy and Astrophysics"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/31",
+        "display_name": "Physics and Astronomy"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "https://openalex.org/keywords/stars",
+      "display_name": "Stars",
+      "score": 0.8885574340820312
+    },
+    {
+      "id": "https://openalex.org/keywords/supergiant",
+      "display_name": "Supergiant",
+      "score": 0.8604455590248108
+    },
+    {
+      "id": "https://openalex.org/keywords/astrophysics",
+      "display_name": "Astrophysics",
+      "score": 0.6555362939834595
+    },
+    {
+      "id": "https://openalex.org/keywords/physics",
+      "display_name": "Physics",
+      "score": 0.6437796950340271
+    },
+    {
+      "id": "https://openalex.org/keywords/context",
+      "display_name": "Context (archaeology)",
+      "score": 0.6075944900512695
+    },
+    {
+      "id": "https://openalex.org/keywords/red-supergiant",
+      "display_name": "Red supergiant",
+      "score": 0.5532415509223938
+    },
+    {
+      "id": "https://openalex.org/keywords/astronomy",
+      "display_name": "Astronomy",
+      "score": 0.5232782959938049
+    },
+    {
+      "id": "https://openalex.org/keywords/infrared",
+      "display_name": "Infrared",
+      "score": 0.5017440319061279
+    },
+    {
+      "id": "https://openalex.org/keywords/interferometry",
+      "display_name": "Interferometry",
+      "score": 0.48284679651260376
+    },
+    {
+      "id": "https://openalex.org/keywords/circumstellar-disk",
+      "display_name": "Circumstellar disk",
+      "score": 0.4548199772834778
+    },
+    {
+      "id": "https://openalex.org/keywords/circumstellar-dust",
+      "display_name": "Circumstellar dust",
+      "score": 0.4230136275291443
+    },
+    {
+      "id": "https://openalex.org/keywords/infrared-excess",
+      "display_name": "Infrared excess",
+      "score": 0.4169846773147583
+    },
+    {
+      "id": "https://openalex.org/keywords/geology",
+      "display_name": "Geology",
+      "score": 0.13592469692230225
+    }
+  ],
+  "concepts": [
+    {
+      "id": "https://openalex.org/C150846664",
+      "wikidata": "https://www.wikidata.org/wiki/Q7602306",
+      "display_name": "Stars",
+      "level": 2,
+      "score": 0.8885574340820312
+    },
+    {
+      "id": "https://openalex.org/C198785896",
+      "wikidata": "https://www.wikidata.org/wiki/Q193599",
+      "display_name": "Supergiant",
+      "level": 3,
+      "score": 0.8604455590248108
+    },
+    {
+      "id": "https://openalex.org/C44870925",
+      "wikidata": "https://www.wikidata.org/wiki/Q37547",
+      "display_name": "Astrophysics",
+      "level": 1,
+      "score": 0.6555362939834595
+    },
+    {
+      "id": "https://openalex.org/C121332964",
+      "wikidata": "https://www.wikidata.org/wiki/Q413",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.6437796950340271
+    },
+    {
+      "id": "https://openalex.org/C2779343474",
+      "wikidata": "https://www.wikidata.org/wiki/Q3109175",
+      "display_name": "Context (archaeology)",
+      "level": 2,
+      "score": 0.6075944900512695
+    },
+    {
+      "id": "https://openalex.org/C179801107",
+      "wikidata": "https://www.wikidata.org/wiki/Q5898",
+      "display_name": "Red supergiant",
+      "level": 4,
+      "score": 0.5532415509223938
+    },
+    {
+      "id": "https://openalex.org/C1276947",
+      "wikidata": "https://www.wikidata.org/wiki/Q333",
+      "display_name": "Astronomy",
+      "level": 1,
+      "score": 0.5232782959938049
+    },
+    {
+      "id": "https://openalex.org/C158355884",
+      "wikidata": "https://www.wikidata.org/wiki/Q11388",
+      "display_name": "Infrared",
+      "level": 2,
+      "score": 0.5017440319061279
+    },
+    {
+      "id": "https://openalex.org/C166689943",
+      "wikidata": "https://www.wikidata.org/wiki/Q850283",
+      "display_name": "Interferometry",
+      "level": 2,
+      "score": 0.48284679651260376
+    },
+    {
+      "id": "https://openalex.org/C94130837",
+      "wikidata": "https://www.wikidata.org/wiki/Q3235978",
+      "display_name": "Circumstellar disk",
+      "level": 3,
+      "score": 0.4548199772834778
+    },
+    {
+      "id": "https://openalex.org/C8865038",
+      "wikidata": "https://www.wikidata.org/wiki/Q1012875",
+      "display_name": "Circumstellar dust",
+      "level": 3,
+      "score": 0.4230136275291443
+    },
+    {
+      "id": "https://openalex.org/C2779760567",
+      "wikidata": "https://www.wikidata.org/wiki/Q1396651",
+      "display_name": "Infrared excess",
+      "level": 3,
+      "score": 0.4169846773147583
+    },
+    {
+      "id": "https://openalex.org/C127313418",
+      "wikidata": "https://www.wikidata.org/wiki/Q1069",
+      "display_name": "Geology",
+      "level": 0,
+      "score": 0.13592469692230225
+    },
+    {
+      "id": "https://openalex.org/C151730666",
+      "wikidata": "https://www.wikidata.org/wiki/Q7205",
+      "display_name": "Paleontology",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "mesh": [],
+  "locations_count": 2,
+  "locations": [
+    {
+      "id": "doi:10.1051/0004-6361/201117955",
+      "is_oa": true,
+      "landing_page_url": "https://doi.org/10.1051/0004-6361/201117955",
+      "pdf_url": "https://www.aanda.org/articles/aa/pdf/2012/02/aa17955-11.pdf",
+      "source": {
+        "id": "https://openalex.org/S205231332",
+        "display_name": "Astronomy and Astrophysics",
+        "issn_l": "0004-6361",
+        "issn": [
+          "0004-6361",
+          "1432-0746"
+        ],
+        "is_oa": false,
+        "is_in_doaj": true,
+        "is_core": true,
+        "host_organization": "https://openalex.org/P4310319748",
+        "host_organization_name": "EDP Sciences",
+        "host_organization_lineage": [
+          "https://openalex.org/P4310319748"
+        ],
+        "host_organization_lineage_names": [
+          "EDP Sciences"
+        ],
+        "type": "journal"
+      },
+      "license": null,
+      "license_id": null,
+      "version": "publishedVersion",
+      "is_accepted": true,
+      "is_published": true,
+      "raw_source_name": "Astronomy &amp; Astrophysics",
+      "raw_type": "journal-article"
+    },
+    {
+      "id": "pmh:oai:edpsciences.org:dkey/10.1051/0004-6361/201117955",
+      "is_oa": false,
+      "landing_page_url": null,
+      "pdf_url": null,
+      "source": {
+        "id": "https://openalex.org/S4306400744",
+        "display_name": "Springer Link (Chiba Institute of Technology)",
+        "issn_l": null,
+        "issn": null,
+        "is_oa": false,
+        "is_in_doaj": false,
+        "is_core": false,
+        "host_organization": "https://openalex.org/I8488066",
+        "host_organization_name": "Chiba Institute of Technology",
+        "host_organization_lineage": [
+          "https://openalex.org/I8488066"
+        ],
+        "host_organization_lineage_names": [],
+        "type": "repository"
+      },
+      "license": null,
+      "license_id": null,
+      "version": "submittedVersion",
+      "is_accepted": false,
+      "is_published": false,
+      "raw_source_name": "https://doi.org/10.1051/0004-6361/201117955",
+      "raw_type": "Text"
+    }
+  ],
+  "best_oa_location": {
+    "id": "doi:10.1051/0004-6361/201117955",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.1051/0004-6361/201117955",
+    "pdf_url": "https://www.aanda.org/articles/aa/pdf/2012/02/aa17955-11.pdf",
+    "source": {
+      "id": "https://openalex.org/S205231332",
+      "display_name": "Astronomy and Astrophysics",
+      "issn_l": "0004-6361",
+      "issn": [
+        "0004-6361",
+        "1432-0746"
+      ],
+      "is_oa": false,
+      "is_in_doaj": true,
+      "is_core": true,
+      "host_organization": "https://openalex.org/P4310319748",
+      "host_organization_name": "EDP Sciences",
+      "host_organization_lineage": [
+        "https://openalex.org/P4310319748"
+      ],
+      "host_organization_lineage_names": [
+        "EDP Sciences"
+      ],
+      "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Astronomy &amp; Astrophysics",
+    "raw_type": "journal-article"
+  },
+  "sustainable_development_goals": [],
+  "awards": [],
+  "funders": [],
+  "has_content": {
+    "pdf": true,
+    "grobid_xml": true
+  },
+  "referenced_works_count": 37,
+  "referenced_works": [
+    "https://openalex.org/W2143240686",
+    "https://openalex.org/W2079383090",
+    "https://openalex.org/W2044212311",
+    "https://openalex.org/W2162899251",
+    "https://openalex.org/W2116631039",
+    "https://openalex.org/W1980299731",
+    "https://openalex.org/W2159034572",
+    "https://openalex.org/W2097424381",
+    "https://openalex.org/W2019850909",
+    "https://openalex.org/W1964550663",
+    "https://openalex.org/W2949835570",
+    "https://openalex.org/W2951177426",
+    "https://openalex.org/W1525556902",
+    "https://openalex.org/W2111846822",
+    "https://openalex.org/W2615146454",
+    "https://openalex.org/W4289253637",
+    "https://openalex.org/W2137354915",
+    "https://openalex.org/W2097877114",
+    "https://openalex.org/W2139319139",
+    "https://openalex.org/W2028195670",
+    "https://openalex.org/W1975459411",
+    "https://openalex.org/W1999629297",
+    "https://openalex.org/W2058795441",
+    "https://openalex.org/W2013798962",
+    "https://openalex.org/W1641465169",
+    "https://openalex.org/W2157805572",
+    "https://openalex.org/W2106595059",
+    "https://openalex.org/W1972537629",
+    "https://openalex.org/W2052363385",
+    "https://openalex.org/W2055208795",
+    "https://openalex.org/W1670318221",
+    "https://openalex.org/W2000212419",
+    "https://openalex.org/W2023436025",
+    "https://openalex.org/W2019553394",
+    "https://openalex.org/W2953042122",
+    "https://openalex.org/W3099722587",
+    "https://openalex.org/W3101042924"
+  ],
+  "related_works": [
+    "https://openalex.org/W2089308137",
+    "https://openalex.org/W2778457290",
+    "https://openalex.org/W1727598866",
+    "https://openalex.org/W2119334824",
+    "https://openalex.org/W3104440295",
+    "https://openalex.org/W1509611696",
+    "https://openalex.org/W1546971936",
+    "https://openalex.org/W3102630041",
+    "https://openalex.org/W1531594801",
+    "https://openalex.org/W2051012265"
+  ],
+  "abstract_inverted_index": {
+    "Context.": [
+      0
+    ],
+    "Classical": [
+      1
+    ],
+    "Be": [
+      2,
+      74,
+      143,
+      296
+    ],
+    "stars": [
+      3,
+      7,
+      208,
+      297
+    ],
+    "are": [
+      4,
+      209
+    ],
+    "hot": [
+      5
+    ],
+    "non-supergiant": [
+      6
+    ],
+    "surrounded": [
+      8
+    ],
+    "by": [
+      9,
+      191
+    ],
+    "a": [
+      10,
+      65,
+      194,
+      212,
+      224,
+      255,
+      259
+    ],
+    "gaseous": [
+      11
+    ],
+    "circumstellar": [
+      12,
+      69,
+      133,
+      249
+    ],
+    "disk": [
+      13,
+      29,
+      168,
+      184,
+      263
+    ],
+    "that": [
+      14,
+      56,
+      87,
+      187,
+      206,
+      254,
+      300
+    ],
+    "is": [
+      15,
+      137,
+      189,
+      302,
+      329
+    ],
+    "responsible": [
+      16,
+      47
+    ],
+    "for": [
+      17,
+      48,
+      177,
+      283
+    ],
+    "the": [
+      18,
+      28,
+      39,
+      42,
+      49,
+      54,
+      60,
+      68,
+      72,
+      84,
+      108,
+      112,
+      120,
+      129,
+      132,
+      167,
+      171,
+      174,
+      183,
+      199,
+      241,
+      245,
+      248,
+      303,
+      308,
+      326
+    ],
+    "observed": [
+      19
+    ],
+    "infrared-excess": [
+      20
+    ],
+    "and": [
+      21,
+      52,
+      95,
+      159,
+      173,
+      244,
+      291
+    ],
+    "emission": [
+      22,
+      122
+    ],
+    "lines.": [
+      23
+    ],
+    "The": [
+      24
+    ],
+    "phenomena": [
+      25
+    ],
+    "involved": [
+      26
+    ],
+    "in": [
+      27,
+      38,
+      170
+    ],
+    "formation": [
+      30
+    ],
+    "still": [
+      31
+    ],
+    "remain": [
+      32
+    ],
+    "highly": [
+      33
+    ],
+    "debated.": [
+      34
+    ],
+    "Aims.": [
+      35
+    ],
+    "To": [
+      36,
+      77
+    ],
+    "progress": [
+      37
+    ],
+    "understanding": [
+      40
+    ],
+    "of": [
+      41,
+      71,
+      139,
+      215,
+      227,
+      247,
+      258,
+      267
+    ],
+    "physical": [
+      43,
+      305
+    ],
+    "process": [
+      44,
+      306
+    ],
+    "or": [
+      45
+    ],
+    "processes": [
+      46
+    ],
+    "mass": [
+      50
+    ],
+    "ejections": [
+      51
+    ],
+    "test": [
+      53
+    ],
+    "hypothesis": [
+      55
+    ],
+    "they": [
+      57
+    ],
+    "depend": [
+      58
+    ],
+    "on": [
+      59,
+      67,
+      119
+    ],
+    "stellar": [
+      61,
+      242
+    ],
+    "parameters,": [
+      62
+    ],
+    "we": [
+      63,
+      81
+    ],
+    "initiated": [
+      64
+    ],
+    "survey": [
+      66,
+      203
+    ],
+    "environment": [
+      70
+    ],
+    "brightest": [
+      73
+    ],
+    "stars.": [
+      75
+    ],
+    "Methods.": [
+      76
+    ],
+    "achieve": [
+      78
+    ],
+    "this": [
+      79,
+      278
+    ],
+    "goal,": [
+      80
+    ],
+    "used": [
+      82
+    ],
+    "spectro-interferometry,": [
+      83
+    ],
+    "only": [
+      85
+    ],
+    "technique": [
+      86
+    ],
+    "combines": [
+      88
+    ],
+    "high": [
+      89,
+      96
+    ],
+    "spectral": [
+      90
+    ],
+    "(R": [
+      91
+    ],
+    "=": [
+      92,
+      99,
+      217,
+      229
+    ],
+    "12": [
+      93
+    ],
+    "000)": [
+      94
+    ],
+    "spatial": [
+      97
+    ],
+    "(\u03b8min": [
+      98
+    ],
+    "4": [
+      100
+    ],
+    "mas)": [
+      101
+    ],
+    "resolutions.": [
+      102
+    ],
+    "Observations": [
+      103
+    ],
+    "were": [
+      104
+    ],
+    "carried": [
+      105
+    ],
+    "out": [
+      106
+    ],
+    "at": [
+      107,
+      211,
+      284
+    ],
+    "Paranal": [
+      109
+    ],
+    "observatory": [
+      110
+    ],
+    "with": [
+      111,
+      193
+    ],
+    "VLTI/AMBER": [
+      113
+    ],
+    "instrument.": [
+      114
+    ],
+    "We": [
+      115,
+      163,
+      180,
+      234
+    ],
+    "concentrated": [
+      116
+    ],
+    "our": [
+      117,
+      268,
+      295
+    ],
+    "observations": [
+      118
+    ],
+    "Br\u03b3": [
+      121
+    ],
+    "line": [
+      123,
+      172
+    ],
+    "to": [
+      124,
+      127,
+      165,
+      198,
+      223,
+      317,
+      322
+    ],
+    "be": [
+      125,
+      318
+    ],
+    "able": [
+      126
+    ],
+    "study": [
+      128
+    ],
+    "kinematics": [
+      130
+    ],
+    "within": [
+      131
+    ],
+    "disk.": [
+      134
+    ],
+    "Our": [
+      135,
+      202
+    ],
+    "sample": [
+      136,
+      298
+    ],
+    "composed": [
+      138
+    ],
+    "eight": [
+      140
+    ],
+    "bright": [
+      141
+    ],
+    "classical": [
+      142
+    ],
+    "stars:": [
+      144
+    ],
+    "\u03b1": [
+      145,
+      157,
+      292
+    ],
+    "Col,": [
+      146
+    ],
+    "\u03ba": [
+      147,
+      289
+    ],
+    "CMa,": [
+      148
+    ],
+    "\u03c9": [
+      149
+    ],
+    "Car,": [
+      150,
+      152
+    ],
+    "p": [
+      151
+    ],
+    "\u03b4": [
+      153
+    ],
+    "Cen,": [
+      154,
+      156
+    ],
+    "\u03bc": [
+      155
+    ],
+    "Ara,": [
+      158
+    ],
+    "o": [
+      160
+    ],
+    "Aqr.": [
+      161
+    ],
+    "Results.": [
+      162
+    ],
+    "managed": [
+      164
+    ],
+    "determine": [
+      166
+    ],
+    "extension": [
+      169
+    ],
+    "nearby": [
+      175
+    ],
+    "continuum": [
+      176
+    ],
+    "most": [
+      178,
+      266
+    ],
+    "targets.": [
+      179
+    ],
+    "also": [
+      181,
+      204
+    ],
+    "constrained": [
+      182
+    ],
+    "kinematics,": [
+      185
+    ],
+    "showing": [
+      186
+    ],
+    "it": [
+      188,
+      252
+    ],
+    "dominated": [
+      190
+    ],
+    "rotation": [
+      192,
+      195,
+      301
+    ],
+    "law": [
+      196
+    ],
+    "close": [
+      197
+    ],
+    "Keplerian": [
+      200,
+      262
+    ],
+    "one.": [
+      201
+    ],
+    "suggests": [
+      205,
+      299
+    ],
+    "these": [
+      207
+    ],
+    "rotating": [
+      210
+    ],
+    "mean": [
+      213
+    ],
+    "velocity": [
+      214
+    ],
+    "V/Vc": [
+      216
+    ],
+    "0.82": [
+      218
+    ],
+    "\u00b1": [
+      219,
+      231
+    ],
+    "0.08.": [
+      220
+    ],
+    "This": [
+      221
+    ],
+    "corresponds": [
+      222
+    ],
+    "rotational": [
+      225
+    ],
+    "rate": [
+      226
+    ],
+    "\u03a9/\u03a9c": [
+      228
+    ],
+    "0.95": [
+      230
+    ],
+    "0.02.": [
+      232
+    ],
+    "Conclusions.": [
+      233
+    ],
+    "did": [
+      235
+    ],
+    "not": [
+      236
+    ],
+    "detect": [
+      237
+    ],
+    "any": [
+      238
+    ],
+    "correlation": [
+      239
+    ],
+    "between": [
+      240
+    ],
+    "parameters": [
+      243
+    ],
+    "structure": [
+      246
+    ],
+    "environment.": [
+      250
+    ],
+    "Moreover,": [
+      251
+    ],
+    "seems": [
+      253
+    ],
+    "simple": [
+      256
+    ],
+    "model": [
+      257,
+      279
+    ],
+    "geometrically": [
+      260
+    ],
+    "thin": [
+      261
+    ],
+    "can": [
+      264
+    ],
+    "explain": [
+      265,
+      324
+    ],
+    "spectrally": [
+      269
+    ],
+    "resolved": [
+      270
+    ],
+    "K-band": [
+      271
+    ],
+    "data.": [
+      272
+    ],
+    "Nevertheless,": [
+      273,
+      310
+    ],
+    "some": [
+      274
+    ],
+    "small": [
+      275
+    ],
+    "departures": [
+      276
+    ],
+    "from": [
+      277,
+      313
+    ],
+    "have": [
+      280,
+      316
+    ],
+    "been": [
+      281
+    ],
+    "detected": [
+      282
+    ],
+    "least": [
+      285
+    ],
+    "two": [
+      286
+    ],
+    "objects": [
+      287
+    ],
+    "(i.e.,": [
+      288
+    ],
+    "CMa": [
+      290
+    ],
+    "Col).": [
+      293
+    ],
+    "Finally,": [
+      294
+    ],
+    "main": [
+      304
+    ],
+    "driving": [
+      307
+    ],
+    "mass-ejection.": [
+      309
+    ],
+    "smaller": [
+      311
+    ],
+    "effects": [
+      312
+    ],
+    "other": [
+      314
+    ],
+    "mechanisms": [
+      315
+    ],
+    "taken": [
+      319
+    ],
+    "into": [
+      320
+    ],
+    "account": [
+      321
+    ],
+    "fully": [
+      323
+    ],
+    "how": [
+      325
+    ],
+    "residual": [
+      327
+    ],
+    "gravity": [
+      328
+    ],
+    "compensated.": [
+      330
+    ]
+  },
+  "counts_by_year": [
+    {
+      "year": 2025,
+      "cited_by_count": 9
+    },
+    {
+      "year": 2024,
+      "cited_by_count": 2
+    },
+    {
+      "year": 2023,
+      "cited_by_count": 1
+    },
+    {
+      "year": 2022,
+      "cited_by_count": 6
+    },
+    {
+      "year": 2021,
+      "cited_by_count": 1
+    },
+    {
+      "year": 2020,
+      "cited_by_count": 2
+    },
+    {
+      "year": 2019,
+      "cited_by_count": 2
+    },
+    {
+      "year": 2018,
+      "cited_by_count": 5
+    },
+    {
+      "year": 2017,
+      "cited_by_count": 4
+    },
+    {
+      "year": 2016,
+      "cited_by_count": 10
+    },
+    {
+      "year": 2015,
+      "cited_by_count": 7
+    },
+    {
+      "year": 2014,
+      "cited_by_count": 5
+    },
+    {
+      "year": 2013,
+      "cited_by_count": 5
+    },
+    {
+      "year": 2012,
+      "cited_by_count": 6
+    }
+  ],
+  "updated_date": "2025-12-29T23:06:16.900395",
+  "created_date": "2022-08-31T00:00:00"
+}

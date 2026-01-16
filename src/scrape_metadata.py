@@ -10,7 +10,7 @@ from datetime import datetime
 from typing import Optional, Dict, Any, List, Set
 from urllib.parse import quote
 
-from select_papers import get_papers
+from select_papers import get_papers, extract_arxiv_id
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -19,11 +19,38 @@ logger = logging.getLogger(__name__)
 # API endpoints
 OPENALEX_API = "https://api.openalex.org/works/doi:{doi}"
 CROSSREF_API = "https://api.crossref.org/works/{doi}"
-ARXIV_API_DELAY = 3.0  # arXiv recommends 3 seconds between requests
+ARXIV_API_DELAY = 3.0  # seconds
 
 # Rate limiting (polite pool recommendations)
-OPENALEX_DELAY = 0.1  # 10 requests/second
-CROSSREF_DELAY = 1.0  # 1 request/second
+OPENALEX_DELAY = 0.1  # 10 req/s
+CROSSREF_DELAY = 1.0  # 1 req/s
+
+# Empty metadata template for error cases
+EMPTY_METADATA_TEMPLATE = {
+    'arxiv_id': None,
+    'title': None,
+    'authors': None,
+    'first_author': None,
+    'summary': None,
+    'primary_category': None,
+    'categories': None,
+    'published': None,
+    'doi': None,
+    'journal_ref': None,
+    'first_author_institution': None,
+    'first_author_country': None,
+    'coauthor_countries': None,
+    'venue': None,
+    'venue_issn': None,
+    'publication_year': None,
+    'cited_by_count': None,
+    'biblio_volume': None,
+    'biblio_issue': None,
+    'biblio_pages': None,
+    'metadata_source': 'Error',
+    'metadata_completeness': 0.0,
+    'scrape_timestamp': None
+}
 
 
 def ensure_cache_dirs(base_dir: str = "data/cache"):
@@ -36,39 +63,6 @@ def ensure_cache_dirs(base_dir: str = "data/cache"):
 def sanitize_filename(identifier: str) -> str:
     """Convert DOI or arXiv ID to safe filename."""
     return identifier.replace("/", "_").replace(":", "_").replace(".", "_")
-
-
-def extract_arxiv_id(arxiv_input: str) -> str:
-    """
-    Extract clean arXiv ID from various input formats.
-
-    Handles:
-    - Clean IDs: "2103.00020", "1706.03762"
-    - With version: "2103.00020v1", "1706.03762v2"
-    - URLs: "http://arxiv.org/abs/2103.00020v1"
-    - Entry IDs: "http://arxiv.org/abs/2103.00020v1"
-
-    Returns:
-    - Clean ID without version: "2103.00020", "1706.03762"
-    """
-    import re
-
-    # Extract from URL if present
-    if 'arxiv.org' in arxiv_input:
-        # Match pattern: /abs/XXXX.XXXXX or /abs/XXXX.XXXXXvN
-        match = re.search(r'/abs/(\d{4}\.\d{4,5})(v\d+)?', arxiv_input)
-        if match:
-            return match.group(1)  # Return without version
-
-    # Handle direct ID with or without version
-    # Pattern: XXXX.XXXXX or XXXX.XXXXXvN
-    match = re.match(r'^(\d{4}\.\d{4,5})(v\d+)?$', arxiv_input)
-    if match:
-        return match.group(1)  # Return without version
-
-    # If no pattern matches, return as-is (will likely fail, but logged)
-    logger.warning(f"Could not parse arXiv ID from: {arxiv_input}")
-    return arxiv_input
 
 
 def load_cached_response(doi: str, source: str, cache_dir: str = "data/cache") -> Optional[Dict]:
@@ -159,13 +153,13 @@ def fetch_arxiv_metadata(arxiv_id: str, cache_dir: str = "data/cache") -> Option
     Returns:
         Dictionary with arXiv metadata, or None if paper not found
     """
-    # Check cache first
+    # Check cache from other searches
     cached = load_cached_response(arxiv_id, 'arxiv', cache_dir)
     if cached:
         logger.debug(f"Using cached arXiv metadata for {arxiv_id}")
         return cached
 
-    # Query arXiv API
+    # arXiv API
     try:
         time.sleep(ARXIV_API_DELAY)
         client = arxiv.Client()
@@ -555,8 +549,6 @@ def scrape_paper_metadata(arxiv_id: str,
 def run(arxiv_ids: Set[str], contact_email: Optional[str] = None,
         cache_dir: str = "data/cache", output_path: str = "data/metadata.csv") -> pd.DataFrame:
     """
-    Main entry point for metadata scraping.
-
     Takes a list of arXiv IDs, fetches DOIs from arXiv API, then enriches with
     metadata from OpenAlex/Crossref.
 
@@ -598,31 +590,10 @@ def run(arxiv_ids: Set[str], contact_email: Optional[str] = None,
         except Exception as e:
             logger.error(f"Failed to scrape metadata for {arxiv_id}: {e}")
             # Add a minimal error record so pipeline can continue
-            metadata_records.append({
-                'arxiv_id': arxiv_id,
-                'title': None,
-                'authors': None,
-                'first_author': None,
-                'summary': None,
-                'primary_category': None,
-                'categories': None,
-                'published': None,
-                'doi': None,
-                'journal_ref': None,
-                'first_author_institution': None,
-                'first_author_country': None,
-                'coauthor_countries': None,
-                'venue': None,
-                'venue_issn': None,
-                'publication_year': None,
-                'cited_by_count': None,
-                'biblio_volume': None,
-                'biblio_issue': None,
-                'biblio_pages': None,
-                'metadata_source': 'Error',
-                'metadata_completeness': 0.0,
-                'scrape_timestamp': datetime.utcnow().isoformat()
-            })
+            error_record = EMPTY_METADATA_TEMPLATE.copy()
+            error_record['arxiv_id'] = arxiv_id
+            error_record['scrape_timestamp'] = datetime.utcnow().isoformat()
+            metadata_records.append(error_record)
 
     # Create metadata dataframe
     metadata_df = pd.DataFrame(metadata_records)

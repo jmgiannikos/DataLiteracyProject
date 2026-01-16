@@ -1,0 +1,28 @@
+{
+  "arxiv_id": "1111.2487",
+  "found": true,
+  "title": "First spectro-interferometric survey of Be stars I. Observations and constraints on the disks geometry and kinematics",
+  "authors": [
+    "Anthony Meilland",
+    "Florentin Millour",
+    "Samer Kanaan",
+    "Philippe Stee",
+    "Romain G. Petrov",
+    "Karl-Heinz Hofmann",
+    "Antonella Natta",
+    "Karine Perraut"
+  ],
+  "first_author": "Anthony Meilland",
+  "summary": "Context. Classical Be stars are hot non-supergiant stars surrounded by a gaseous circumstellar disk that is responsible for the observed infrared-excess and emission lines. The phenomena involved in the disk formation still remain highly debated. Aims. To progress in the understanding of the physical process or processes responsible for the mass ejections and test the hypothesis that they depend on the stellar parameters, we initiated a survey on the circumstellar environment of the brightest Be stars. Methods. To achieve this goal, we used spectro-interferometry, the only technique that combines high spectral (R=12000) and high spatial ($\u03b8_{\\rm min}$=4\\,mas) resolutions. Observations were carried out at the Paranal observatory with the VLTI/AMBER instrument. We concentrated our observations on the Br$\u03b3$ emission line to be able to study the kinematics within the circumstellar disk. Our sample is composed of eight bright classical Be stars : $\u03b1$ Col, $\u03ba$ CMa, $\u03c9$ Car, p Car, $\u03b4$ Cen, $\u03bc$ Cen, $\u03b1$ Ara, and \\textit{o} Aqr. Results. We managed to determine the disk extension in the line and the nearby continuum for most targets. We also constrained the disk kinematics, showing that it is dominated by rotation with a rotation law close to the Keplerian one. Our survey also suggests that these stars are rotating at a mean velocity of V/V$_{\\rm c}$\\,=\\,0.82\\,$\\pm$\\,0.08. This corresponds to a rotational rate of $\u03a9/\u03a9_{\\rm c}$\\,=\\,0.95\\,$\\pm$\\,0.02 Conclusions. We did not detect any correlation between the stellar parameters and the structure of the circumstellar environment. Moreover, it seems that a simple model of a geometrically thin Keplerian disk can explain most of our spectrally resolved K-band data. Nevertheless, some small departures from this model have been detected for at least two objects (i.e, $\u03ba$ CMa and $\u03b1$ Col). Finally, our Be stars sample suggests that rotation is the main physical process driving the mass-ejection. Nevertheless, smaller effects from other mechanisms have to be taken into account to fully explain how the residual gravity is compensated.",
+  "primary_category": "astro-ph.SR",
+  "categories": [
+    "astro-ph.SR"
+  ],
+  "published": "2011-11-10T14:42:43+00:00",
+  "updated": "2011-12-08T20:21:52+00:00",
+  "doi": "10.1051/0004-6361/201117955",
+  "journal_ref": null,
+  "comment": "Astronomy and Astrophysics (2011) Accepted",
+  "pdf_url": "https://arxiv.org/pdf/1111.2487v3",
+  "entry_id": "http://arxiv.org/abs/1111.2487v3"
+}

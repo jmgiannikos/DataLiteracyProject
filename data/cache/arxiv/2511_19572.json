@@ -1,0 +1,33 @@
+{
+  "arxiv_id": "2511.19572",
+  "found": true,
+  "title": "Constraining properties of dust formed in Wolf-Rayet binary WR 112 using mid-infrared and millimeter observations",
+  "authors": [
+    "Donglin Wu",
+    "Yinuo Han",
+    "Peredur M. Williams",
+    "Takashi Onaka",
+    "Joseph R. Callingham",
+    "Matthew J. Hankins",
+    "Peter Tuthill",
+    "Ryan M. Lau",
+    "Gerd Weigelt",
+    "Benjamin J. S. Pope",
+    "Noel D. Richardson"
+  ],
+  "first_author": "Donglin Wu",
+  "summary": "Binaries that host a carbon-rich Wolf-Rayet (WC) star and an OB-type companion can be copious dust producers. Yet the properties of dust, particularly the grain size distribution, in these systems remain uncertain. We present Band 6 observations of WR 112 by the Atacama Large Millimeter/submillimeter Array telescope (ALMA), which are the first millimeter observations of a WC binary system capable of resolving its dust emission. By combining ALMA observations with James Webb Space Telescope (JWST) images, we were able to analyze the spatially resolved spectral energy distribution (SED) of WR 112. We found that the SEDs are consistent with emissions from hydrogen-poor amorphous carbon grains. Notably, our results also suggest that the majority of grains in the system have radii below one micrometer, and the extended dust structures are dominated by nanometer-sized grains. Among four parameterizations of the grain radius distribution that we tested, a bimodal distribution, with abundant nanometer-sized grains and a secondary population of 0.1-micron grains, best reproduces the observed SED. This bimodal distribution helps to reconcile the previously conflicting grain size estimates reported for WR 112 and for other WC systems. We hypothesize that dust destruction mechanisms such as radiative torque disruption and radiative-driven sublimation are responsible for driving the system to the bimodal grain size distribution.",
+  "primary_category": "astro-ph.SR",
+  "categories": [
+    "astro-ph.SR",
+    "astro-ph.EP",
+    "astro-ph.GA"
+  ],
+  "published": "2025-11-24T17:48:54+00:00",
+  "updated": "2025-11-24T17:48:54+00:00",
+  "doi": null,
+  "journal_ref": null,
+  "comment": "48 pages, 25 figures, submitted to ApJ",
+  "pdf_url": "https://arxiv.org/pdf/2511.19572v1",
+  "entry_id": "http://arxiv.org/abs/2511.19572v1"
+}

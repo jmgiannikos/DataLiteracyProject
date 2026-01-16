@@ -214,5 +214,5 @@ __marimo__/
 # old files
 /old
 
-# todos
-old/todo.md
+# data and cache
+/src/data/*

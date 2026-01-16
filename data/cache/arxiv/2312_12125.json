@@ -1,0 +1,42 @@
+{
+  "arxiv_id": "2312.12125",
+  "found": true,
+  "title": "Chromatically modelling the parsec scale dusty structure in the centre of NGC1068",
+  "authors": [
+    "James Leftley",
+    "Romain Petrov",
+    "Niklas Moszczynski",
+    "Pierre Vermot",
+    "Sebastian Hoenig",
+    "Violeta Gamez Rosas",
+    "Jacob Isbell",
+    "Walter Jaffe",
+    "Yann Clenet",
+    "Jean-Charles Augereau",
+    "Philippe Berio",
+    "Richard Davies",
+    "Thomas Henning",
+    "Stephane Lagarde",
+    "Bruno Lopez",
+    "Alexis Matter",
+    "Anthony Meilland",
+    "Florentin Millour",
+    "Nicole Nesvadba",
+    "Taro Shimizu",
+    "Eckhard Sturm",
+    "Gerd Weigelt"
+  ],
+  "first_author": "James Leftley",
+  "summary": "The Very Large Telescope Interferometer (VLTI) has been providing breakthrough images of the dust in the central parsecs of Active Galactic Nuclei (AGN), a key component of the AGN unification scheme and AGN host galaxy interaction. In single IR bands, the images can have multiple interpretations some of which could challenge the unification scheme. This is the case for the archetypal type 2 AGN of NGC1068. The ambiguity is reduced by multi-band temperature maps which are hindered by uncertainty in intra-band alignment. We create a chromatic model capable of simultaneously explaining the VLTI GRAVITY+MATISSE 2$\u03bc$m-13$\u03bc$m observations of the AGN in NGC1068. We use a simple disk and wind geometry populated with spherical black body emitters and dust obscuration to create a versatile multi-wavelength model for IR interferometric data of dusty objects. This simple geometry is capable of reproducing the K-N-band VLTI data, explains the complex single band images, and solves the alignment between bands. We find that the resulting geometry is consistent with previous studies. Compared to molecular gas emission, our model wind position angle (PA) of $22^3_2\u00b0$ is close to the mas scale outflowing CO(6-5) PA of ~33\u00b0 seen with the ALMA. The equivalent 90\u00b0 offset model disk PA is also consistent with the CO(6-5) disk axis of 112\u00b0 as well as the mas scale disk axis from CO(2-1), CO(3-2), and HCO$^+$(4-3) of 115$\\pm$5\u00b0. Furthermore, the resulting model visually resembles the equivalent achromatic image reconstructions. We conclude that the IR emitting structure surrounding the AGN can indeed be explained by the clumpy disk+wind iteration of the AGN unification scheme. Within the scheme, we find it is best explained as a type 2 and the obscuring dust chemistry is consistent with a mix of olivine silicates and 16$\\pm$1% amorphous carbon.",
+  "primary_category": "astro-ph.GA",
+  "categories": [
+    "astro-ph.GA"
+  ],
+  "published": "2023-12-19T13:01:12+00:00",
+  "updated": "2024-02-29T21:54:09+00:00",
+  "doi": "10.1051/0004-6361/202348977",
+  "journal_ref": "A&A 686, A204 (2024)",
+  "comment": "15 pages, 19 appendix pages, 23 figures, and 2 tables. Accepted for publication in A&A",
+  "pdf_url": "https://arxiv.org/pdf/2312.12125v2",
+  "entry_id": "http://arxiv.org/abs/2312.12125v2"
+}

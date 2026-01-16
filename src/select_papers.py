@@ -1,18 +1,56 @@
 import arxiv
 import logging
 from collections import Counter
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Set
+import re
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
+
 # Default max results to fetch from arxiv
 MAX_RESULTS = 200
+
+def normalize_name(name: str) -> str:
+    """
+    Standardize author names for comparison.
+    Removes periods, spaces, and commas, and converts to lowercase.
+    """
+    return name.lower().replace(".", "").replace(" ", "").replace(",", "")
+
+def extract_arxiv_id(arxiv_input: str) -> str:
+    """
+    Extract clean arXiv ID from various input formats.
+
+    Handles:
+    - Clean IDs: "2103.00020", "1706.03762"
+    - With version: "2103.00020v1", "1706.03762v2"
+    - URLs: "http://arxiv.org/abs/2103.00020v1", "http://arxiv.org/abs/astro-ph/9906233v1"
+    - Old style IDs: "astro-ph/9906233"
+
+    Returns:
+    - Clean ID without version: "2103.00020", "astro-ph/9906233"
+    """
+    # Regex to find arXiv IDs (new style or old style)
+    # New style: 4 digits, dot, 4-5 digits
+    # Old style: Category (letters, dot, hyphen), slash, 7 digits
+    pattern = r'((?:\d{4}\.\d{4,5})|(?:[a-zA-Z\-\.]+\/\d{7}))(?:v\d+)?'
+    
+    match = re.search(pattern, arxiv_input)
+    if match:
+        return match.group(1)
+
+    # If no pattern matches, return as-is
+    logger.warning(f"Could not parse arXiv ID from: {arxiv_input}")
+    return arxiv_input
+
 
 def get_papers_by_author(author_name: str, max_results: int = MAX_RESULTS) -> List[arxiv.Result]:
     """
     Fetches papers for a given author using the arXiv API.
+    Arg:
+
     """
     search = arxiv.Search(
         query=f'au:"{author_name}"',
@@ -27,7 +65,6 @@ def get_papers_by_author(author_name: str, max_results: int = MAX_RESULTS) -> Li
         logger.error(f"Error fetching papers for {author_name}: {e}")
     return results
 
-
 def is_first_author(paper: arxiv.Result, author_name: str) -> bool:
     """
     Checks if the given author is the first author of the paper.
@@ -36,64 +73,67 @@ def is_first_author(paper: arxiv.Result, author_name: str) -> bool:
     """
     if not paper.authors:
         return False
-    first_author = paper.authors[0].name
 
-    def normalize(name):
-        return name.lower().replace(".", "").replace(" ", "").replace(",", "")
-
-    normalized_query = normalize(author_name)
-    normalized_first = normalize(first_author)
+    normalized_query = normalize_name(author_name)
+    normalized_first = normalize_name(paper.authors[0].name)
 
     # Bidirectional substring match to handle different name orderings
     # e.g., "Adya, V B" vs "V. B. Adya"
     return normalized_query in normalized_first or normalized_first in normalized_query
 
-
-def get_co_authors(entry: str, n: int) -> List[str]:
+def get_co_authors(entry: str, n: int, strict: bool = False) -> List[str]:
     """
     Get the top n co-authors for the entry author.
     Args:
         entry: Entry point author name
         n: Number of co-authors to select
+        strict: If True, return exactly n co-authors (raise error if not enough).
+                If False (default), return up to n co-authors.
 
     Returns:
-        List of n co-author names
+        List of co-author names (exactly n if strict=True, up to n if strict=False)
     """
-    logger.info(f"Finding top {n} co-authors for {entry}")
+    logger.info(f"Finding top {n} co-authors for {entry} (strict={strict})")
 
     papers = get_papers_by_author(entry)
     logger.info(f"Fetched {len(papers)} papers for {entry}")
 
     # Count co-authors
     co_author_counts = Counter()
+    normalized_entry = normalize_name(entry)
+
     for paper in papers:
         for author in paper.authors:
             name = author.name
-            # Skip entry author
-            if name == entry or entry.lower() in name.lower():
+            # Skip entry author using normalized comparison
+            if normalize_name(name) == normalized_entry:
                 continue
             co_author_counts[name] += 1
 
     # Return top n
     top_co_authors = [name for name, _ in co_author_counts.most_common(n)]
+
+    if strict and len(top_co_authors) != n:
+        raise ValueError(f"Expected exactly {n} co-authors but found {len(top_co_authors)}")
+
     logger.info(f"Selected {len(top_co_authors)} co-authors: {top_co_authors}")
 
     return top_co_authors
 
-
-def get_author_papers(author: str, j: int, k: int) -> List[arxiv.Result]:
+def get_author_papers(author: str, j: int, k: int, strict: bool = False) -> List[arxiv.Result]:
     """
     Get j first-author papers and k non-first-author papers for an author.
-
     Args:
         author: Author name
         j: Number of first-author papers to select
         k: Number of non-first-author papers to select
+        strict: If True, return exactly j first-author and k non-first-author papers (raise error if not enough).
+                If False (default), return up to j+k papers.
 
     Returns:
-        List of arxiv.Result objects (up to j+k papers)
+        List of arxiv.Result objects (exactly j+k if strict=True, up to j+k if strict=False)
     """
-    logger.info(f"Selecting papers for {author}: {j} first-author, {k} non-first-author")
+    logger.info(f"Selecting papers for {author}: {j} first-author, {k} non-first-author (strict={strict})")
 
     papers = get_papers_by_author(author)
 
@@ -111,29 +151,31 @@ def get_author_papers(author: str, j: int, k: int) -> List[arxiv.Result]:
     selected_first = first_author_papers[:j]
     selected_non_first = non_first_author_papers[:k]
 
+    if strict and (len(selected_first) != j or len(selected_non_first) != k):
+        raise ValueError(f"Expected exactly {j} first-author and {k} non-first-author papers for {author}, "
+                        f"but found {len(selected_first)} and {len(selected_non_first)}")
+
     logger.info(f"Selected {len(selected_first)} first-author and {len(selected_non_first)} non-first-author papers for {author}")
 
     return selected_first + selected_non_first
 
-
-def get_papers(entry: str, n: int, j: int, k: int) -> set[Any]:
+def get_papers(entry: str, n: int, j: int, k: int, strict: bool = False) -> Set[str]:
     """
     Args:
         entry: Entry point author name
         n: Number of co-authors to include
         j: Number of first-author papers per author
         k: Number of non-first-author papers per author
+        strict: If True, require exactly n co-authors, j first-author papers, and k non-first-author papers.
+                If False (default), allow up to n, j, and k respectively.
 
     Returns:
-        Dictionary containing:
-        - authors: List of all authors (entry + co-authors)
-        - papers: List of deduplicated papers with metadata
-        - stats: Authorship statistics per author
+        Set of clean arXiv IDs (without versions) for all deduplicated papers
     """
-    logger.info(f"Generating research summary for {entry} with n={n}, j={j}, k={k}")
+    logger.info(f"Generating research summary for {entry} with n={n}, j={j}, k={k}, strict={strict}")
 
     # Step 1: Get co-authors
-    co_authors = get_co_authors(entry, n)
+    co_authors = get_co_authors(entry, n, strict=strict)
     all_authors = [entry] + co_authors
 
     # Step 2: Process each author
@@ -141,16 +183,15 @@ def get_papers(entry: str, n: int, j: int, k: int) -> set[Any]:
     summary_data = []
 
     for author in all_authors:
-        papers = get_author_papers(author, j, k)
+        papers = get_author_papers(author, j, k, strict=strict)
 
-        # Deduplicate
-        new_papers = [p for p in papers if p.entry_id not in all_arxiv_ids]
-
-        for p in new_papers:
-            all_arxiv_ids.add(p.entry_id)
+        # Deduplicate using clean IDs (without versions)
+        for p in papers:
+            clean_id = extract_arxiv_id(p.entry_id)
+            if clean_id not in all_arxiv_ids:
+                all_arxiv_ids.add(clean_id)
 
     return all_arxiv_ids
-
 
 def select_papers_by_author(authors: List[str], n: int = 5) -> Dict[str, List[str]]:
     """
@@ -196,10 +237,10 @@ def select_papers_at_least_k_authors(authors: List[str], n: int = 10, k: int = 2
     At least one of the `k` authors designated as 'first author'.
     """
     logger.info(f"Selecting top {n} papers where at least {k} authors from list appear...")
-    
+
     client = arxiv.Client()
-    paper_map = {} 
-    input_authors_norm = {a.lower().replace(" ", "") for a in authors}
+    paper_map = {}
+    input_authors_norm = {normalize_name(a) for a in authors}
     
     for author in authors:
         try:
@@ -222,23 +263,23 @@ def select_papers_at_least_k_authors(authors: List[str], n: int = 10, k: int = 2
 
     # Iterate and find those with overlaps >= k
     candidates = []
-    
+
     for pid, data in paper_map.items():
         p = data['paper']
-        p_authors_norm = {a.name.lower().replace(" ", "") for a in p.authors}
-        
+        p_authors_norm = {normalize_name(a.name) for a in p.authors}
+
         # Intersect
         overlap = len(input_authors_norm.intersection(p_authors_norm))
-        
+
         # Check if first author is in our input list
-        first_author_norm = p.authors[0].name.lower().replace(" ", "") if p.authors else ""
+        first_author_norm = normalize_name(p.authors[0].name) if p.authors else ""
         first_author_in_list = first_author_norm in input_authors_norm
-        
+
         if overlap >= k and first_author_in_list:
             candidates.append(p)
-    
+
     # Sort candidates
-    candidates.sort(key=lambda x: (len(input_authors_norm.intersection({a.name.lower().replace(" ", "") for a in x.authors})), x.published), reverse=True)
+    candidates.sort(key=lambda x: (len(input_authors_norm.intersection({normalize_name(a.name) for a in x.authors})), x.published), reverse=True)
     top_n = candidates[:n]
     
     # Extract entry IDs
@@ -250,14 +291,14 @@ def select_papers_at_least_k_authors(authors: List[str], n: int = 10, k: int = 2
     logger.info(f"Found {len(result_ids)} papers meeting commonality criteria.")
     return result_ids
 
-
 if __name__ == "__main__":
-    # Test the new integrated functionality
+
     all_papers = get_papers(
         entry="Riccardo Salami",
         n=5,  # Get co-authors
         j=5,  # first-author papers per author
-        k=5   # non-first-author papers per author
+        k=5,  # non-first-author papers per author
+        strict=False
     )
 
     print(f"Testing with {len(all_papers)} arXiv papers:")

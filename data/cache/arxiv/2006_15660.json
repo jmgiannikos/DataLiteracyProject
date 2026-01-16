@@ -1,0 +1,36 @@
+{
+  "arxiv_id": "2006.15660",
+  "found": true,
+  "title": "Imaging the expanding knotty structure in the close environment of the LBV star $\u03b7$ Carinae",
+  "authors": [
+    "F. Millour",
+    "E. Lagadec",
+    "M. Montarg\u00e8s",
+    "P. Kervella",
+    "A. Soulain",
+    "F. Vakili",
+    "R. Petrov",
+    "G. Weigelt",
+    "J. Groh",
+    "N. Smith",
+    "A. Mehner",
+    "H. M. Schmid",
+    "J. Ramos",
+    "O. Moeller-Nillson",
+    "R. Roelfsema",
+    "F. Rigal"
+  ],
+  "first_author": "F. Millour",
+  "summary": "$\u03b7$~Car is one of the most massive stars in the Galaxy. It underwent a massive eruption in the 19th century, which produced the impressive bipolar Homunculus nebula now surrounding it. The central star is an eccentric binary with a period of 5.54\\,years. Although the companion has not been detected directly, it causes time-variable ionization and colliding-wind X-ray emission. By characterizing the complex structure and kinematics of the ejecta close to the star, we aim to constrain past and present mass loss of $\u03b7$~Car. $\u03b7$~Car is observed with the extreme adaptive optics instrument SPHERE at the Very Large Telescope, using its polarimetric mode in the optical with the ZIMPOL camera. A spatial resolution of 20\\,mas was achieved, i.e. very close to the presumed 13 mas apastron separation of the companion star. We detect new structures within the inner arcsecond to the star (2\\,300\\,au at a 2.3\\,kpc distance). We can relate these structures to the eruption near 1890 by tracking their proper motions derived from our new images and historical images over a 30\\,years time span. Besides, we find a fan-shaped structure in the inner 200~au to the star in the H$\u03b1$ line, that could potentially be associated with the wind collision zone of the two stars.",
+  "primary_category": "astro-ph.SR",
+  "categories": [
+    "astro-ph.SR"
+  ],
+  "published": "2020-06-28T17:27:27+00:00",
+  "updated": "2020-06-28T17:27:27+00:00",
+  "doi": null,
+  "journal_ref": null,
+  "comment": "10 pages, submitted to A&A",
+  "pdf_url": "https://arxiv.org/pdf/2006.15660v1",
+  "entry_id": "http://arxiv.org/abs/2006.15660v1"
+}

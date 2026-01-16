@@ -1,0 +1,31 @@
+{
+  "arxiv_id": "2407.17177",
+  "found": true,
+  "title": "Asgard/NOTT: water vapor and CO$_2$ atmospheric dispersion compensation system",
+  "authors": [
+    "Romain Laugier",
+    "Denis Defr\u00e8re",
+    "Michael Ireland",
+    "Germain Garreau",
+    "Olivier Absil",
+    "Alexis Matter",
+    "Romain Petrov",
+    "Philippe Berio",
+    "Peter Tuthill",
+    "Marc-Antoine Martinod",
+    "Lucas Labadie"
+  ],
+  "first_author": "Romain Laugier",
+  "summary": "To leverage the angular resolution of interferometry at high contrast, one must employ specialized beam-combiners called interferometric nullers. Nullers discard part of the astrophysical information to optimize the recording of light present in the dark fringe of the central source. Asgard/NOTT will deploy a beam-combination scheme offering good instrumental noise rejection when phased appropriately, but for which information is degenerate on the outputs, prompting a dedicated tuning strategy using the science detector. The dispersive effect of water vapor can be corrected with prisms forming a variable thickness of glass. But observations in the L band suffer from an additional and important chromatic effect due to longitudinal atmospheric dispersion coming from a resonance of CO2 at 4.3 micron. To compensate for this effect efficiently, a novel type of compensation device will be deployed leveraging a gas cell of variable length at ambient pressure. After reviewing the impact of water vapor and CO2, we present the design of this atmospheric dispersion compensation device and describe a strategy to maintain this tuning on-sky.",
+  "primary_category": "astro-ph.IM",
+  "categories": [
+    "astro-ph.IM"
+  ],
+  "published": "2024-07-24T11:25:50+00:00",
+  "updated": "2024-07-24T11:25:50+00:00",
+  "doi": "10.1117/12.3018150",
+  "journal_ref": null,
+  "comment": "7 pages, 5 figures, Proc of SPIE Astronomical Telescopes + Instrumentation 2024 Yokohama, Japan, Optical and Infrared Interferometry and Imaging VI",
+  "pdf_url": "https://arxiv.org/pdf/2407.17177v1",
+  "entry_id": "http://arxiv.org/abs/2407.17177v1"
+}
