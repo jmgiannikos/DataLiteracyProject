@@ -7,7 +7,7 @@ from datetime import datetime
 # Add src to path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 
-from select_papers import (
+from scrape_paper_ids import (
     select_papers_by_author,
     select_papers_at_least_k_authors,
     get_co_authors,

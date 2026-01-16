@@ -10,7 +10,7 @@ from datetime import datetime
 from typing import Optional, Dict, Any, List, Set
 from urllib.parse import quote
 
-from select_papers import get_papers, extract_arxiv_id
+from scrape_paper_ids import get_papers, extract_arxiv_id
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
