@@ -212,7 +212,7 @@ __marimo__/
 /processed_tex_sources/*
 
 # data and cache
-/src/data/*
+data/*
 
 .idea/
 .vscode/
