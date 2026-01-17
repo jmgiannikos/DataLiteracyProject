@@ -15,4 +15,5 @@ dependencies = [
     "pandas-stubs~=2.3.3",
     "pylatexenc>=2.10",
     "scikit-learn>=1.8.0",
+    "textstat"
 ]

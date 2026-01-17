@@ -12,6 +12,7 @@ from sklearn.manifold import TSNE
 from sklearn.decomposition import PCA
 from typing import List, Tuple, Optional, Dict, Set
 import logging
+import textstat
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -96,6 +97,107 @@ def normalize_word_rows(data_array: np.ndarray) -> np.ndarray:
     row_sums = np.where(row_sums == 0, 1, row_sums)
     return data_array / row_sums
 
+# =============================================================================
+# SUPPLEMENTARY FEATURE EXTRACTION
+# =============================================================================
+
+# NOTE: THE DF GIVEN TO THIS SHOULD BE NON-NORMALIZED!
+def get_syllable_counts(words_df):
+    """
+    Takes a non-normalized word histogram dataframe and computes the syllable count distribution
+
+    Args:
+        words_df: a dataframe containing word counts. Row index must be document identifiers, col
+                  must be words.
+
+    Returns:
+        a dataframe with syllable counts as col index and document identifiers as row idndex
+    """
+    row_index_list = []
+    words = words_df.columns
+    row_dicts = []
+    max_syllable_count = 0
+    for identifier, row in words_df.iterrows():
+        row_index_list.append(identifier)
+        row_dict = {}
+        for synonym_count, word_count in enumerate(row):
+            word = words[synonym_count]
+            syllable_count = textstat.syllable_count(word)
+            if syllable_count > max_syllable_count:
+                max_syllable_count = syllable_count
+            if syllable_count in row_dict.keys():
+                row_dict[syllable_count] += word_count
+            else:
+                row_dict[syllable_count] = word_count
+        row_dicts.append(row_dict)
+
+    for row_idx, _ in enumerate(row_dicts):
+        row = np.zeros((1,max_syllable_count))
+        for synonym_count in row_dicts[row_idx].keys():
+            # reduce synonym_count by one so it can serve as index for the row
+            row[synonym_count-1] = row_dicts[row_idx][synonym_count]
+        if row_idx == 0:
+            data_array = row
+        else:
+            data_array = np.vstack((data_array, row))
+    
+    syllable_count_df = pd.DataFrame(data=data_array, index=row_index_list, columns=range(1, max_syllable_count+1))
+    return syllable_count_df
+
+# NOTE: the textstats function is_difficult_word checks if the word is in the Dale-Chall list of easy words or not. However,
+#       the authors of said library note that the function does NOT check for regular inflections of easy words. We could 
+#       potentially improve the accuracy of this metric by stemming the words in the histogram first. (Stemming may be a good idea
+#       in general)           
+def get_easy_words_count(words_df):
+    """
+    Takes a non-normalized word histogram dataframe and counts the number of words on the Dale-Chall list of easy words
+
+    Args:
+        words_df: a dataframe containing word counts. Row index must be document identifiers, col
+                  must be words.
+
+    Returns:
+        a dataframe containing easy word count and ratio as two columns
+    """
+    is_easy_mask = [0]*len(words_df.columns)
+    for col_idx, word in enumerate(words_df.columns): 
+        if textstat.is_easy_word(word):
+            is_easy_mask[col_idx] = 1
+    is_easy_mask = np.array(is_easy_mask)
+    
+    rows = []
+    row_index = []
+    for row_id, row in words_df.iterrows():
+        easy_word_count = np.inner(row.to_numpy(), is_easy_mask)
+        easy_word_ratio = easy_word_count/np.sum(row.to_numpy())
+        rows.append([easy_word_count, easy_word_ratio])
+        row_index.append(row_id)
+    rows_np = np.array(rows)
+    
+    easy_word_count_df = pd.DataFrame(data=rows_np, index=row_index, columns=["easy_word_count", "easy_word_ratio"])
+    return easy_word_count_df
+
+def get_monosyllabic_words(word_df, is_syllabic=False):
+    """
+    Takes a non-normalized word histogram dataframe or a syllable count df and computes total and relative monosyllabic
+    word count.
+
+    Args:
+        words_df: a dataframe containing word counts. Row index must be document identifiers, col
+                  must be words. alternatively the result df of calling get_syllable_counts
+        is_syllabic: set to True if passing a syllable count dataframe, otherwise set to false
+
+    Returns:
+        a dataframe containing monosyllabic count and ratio
+    """
+    if not is_syllabic:
+        word_df = get_syllable_counts(word_df)
+    monosyllabic_count_array = word_df[1].to_numpy()
+    monosyllabic_ratio = monosyllabic_count_array / np.sum(word_df.to_numpy(), axis=1, keepdims=False)
+    cols_np = np.hstack((np.expand_dims(monosyllabic_count_array,1), np.expand_dims(monosyllabic_ratio,1)))
+    monosyllabic_count_df = pd.DataFrame(data=cols_np, index=word_df.index, columns=["monosyl_count", "monosyl_ratio"])
+    return monosyllabic_count_df
+   
 
 # =============================================================================
 # DIMENSIONALITY REDUCTION FUNCTIONS
