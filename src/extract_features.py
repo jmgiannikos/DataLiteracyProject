@@ -542,11 +542,11 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         text_dir = sys.argv[1]
     else:
-        text_dir = "src/data/cache/raw_text"
+        text_dir = "data/cache/raw_text"
 
     if len(sys.argv) > 2:
         output_dir = sys.argv[2]
     else:
-        output_dir = "src/data/features"
+        output_dir = "data/features"
 
     batch_extract_features(text_dir, output_dir)
