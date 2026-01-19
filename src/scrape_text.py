@@ -23,8 +23,11 @@ def ensure_cache_dir():
         CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
 def download_source(arxiv_id, output_path):
-    """Downloads the source of an arXiv paper."""
-    url = f"https://arxiv.org/e-print/{arxiv_id}"
+    """
+    Downloads the source of an arXiv paper.
+    Using export.arxiv.org for automated harvesting (guidelines)
+    """
+    url = f"https://export.arxiv.org/e-print/{arxiv_id}"
     try:
         response = requests.get(url, stream=True)
         response.raise_for_status()
