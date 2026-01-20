@@ -13,6 +13,7 @@ from sklearn.decomposition import PCA
 from typing import List, Tuple, Optional, Dict, Set
 import logging
 import textstat
+from scipy.spatial import distance
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -500,10 +501,127 @@ def plot_sentence_length_distribution(
 
     plt.close()
 
+# =============================================================================
+# UTIL FUNCTIONS
+# =============================================================================
+
+def unify_data_sets(data_sets, data_set_identifiers):
+    """
+    Combine multiple data frames, containing different features of the same samples (!)  
+
+    Args:
+        data_sets: set of pandas data frames over the same samples. Each has to have the 
+                   same axis 0 (including ordering). 
+        data_set_identifiers: set of string identifiers for each df in data sets
+
+    Returns:
+        Unified data frame containing all features
+    """
+    data_list = []
+    global_cols = []
+    index = data_sets[0].index
+    for i, data_set in enumerate(data_sets):
+        local_data = data_set.to_numpy()
+        local_cols = data_set.columns.to_list()
+        data_list.append(local_data)
+        globalized_cols = map(lambda x: data_set_identifiers[i] + "_" + str(x), local_cols)
+        global_cols = global_cols + globalized_cols
+    global_data = np.hstack(data_list)
+    unified_data_set = pd.DataFrame(data=global_data, index=index, columns=global_cols)
+    return unified_data_set
+
+def select_grouping(data_set, groupings, min_group_size):
+    """
+    select groups of dataset samples by pre-defined groupings passed as a dict of lists.
+    lists must contain names that match data set row entries. 
+
+    Args:
+        data_set: Data frame which contains the sampley to be grouped. 
+        groupings: dictionary defining groups. Keys must be group name, values must be 
+                   list of associated sample names (each present in the row idx of the data)
+        min_group_size: integer. Filters out all groups with fewer samples.
+
+    Returns:
+        list of groupings (data frames containing the samples in the group) and list of masks that
+        were used to select said samples.
+    """
+    group_selections = []
+    group_masks = []
+    for group in groupings.keys():
+        group_sample_idxs = groupings[group]
+        group_mask = list(map(lambda x: x in group_sample_idxs), data_set.index)
+        if np.sum(group_mask) >= min_group_size: 
+            group_selections.append(data_set[group_mask])
+            group_masks.append(group_mask)
+    return group_selections, group_masks
+
+def bootstrap_histogram(data, bins, sampling_num = 100):
+    bootstrapped_samples = np.random.choice(data, sampling_num)
+    binned_index = np.zeros(shape=(len(bins)+1,))
+    for sample in bootstrapped_samples:
+        if sample > max(bins):
+            binned_index[-1] += 1/sampling_num            
+        else:
+            for i in range(len(bins)):
+                if sample <= bins[i]:
+                    binned_index[i] += 1/sampling_num
+                    break
+    return binned_index
+        
+def get_feature_wise_distribution(groups, group_names, event_sets, sampling_num=100):
+    feature_dict = {}
+    features = groups[0].columns.to_list()
+    for i, group in enumerate(groups):
+        group_name = group_names[i]
+        local_feature_dict = {}
+        for j, feature in enumerate(features):
+            event_set = event_sets[j]
+            data_array = group.to_numpy()[:,j]
+            distribution = bootstrap_histogram(data_array, event_set, sampling_num)
+            local_feature_dict[feature] = distribution
+        feature_dict[group_name] = local_feature_dict
+    return feature_dict
+
+def get_pairwise_feature_divergence(feature_wise_distributions, js_base=2.0):
+    data_rows = []
+    groups = feature_wise_distributions.keys()
+    features = feature_wise_distributions[groups[0]].keys()
+    multi_index = []
+    for group_one in groups:
+        for group_two in groups:
+            row = np.zeros((len(features),))
+            for i, feature in enumerate(features):
+                dist_one = feature_wise_distributions[group_one][feature]
+                dist_two = feature_wise_distributions[group_two][feature]
+                row[i] += distance.jensenshannon(dist_one, dist_two, base=js_base)
+            data_rows.append(row)
+            multi_index.append((group_one, group_two))
+    data = np.vstack(data_rows)
+    index = pd.MultiIndex(multi_index, names=["Group A", "Group B"])
+    result_df = pd.DataFrame(data=data, index=index, columns=features)
+    return result_df
+    
 
 # =============================================================================
 # HIGH-LEVEL ANALYSIS FUNCTIONS
 # =============================================================================
+
+def grouped_distribution_divergence(data_sets, data_set_handles, groupings, event_sets, min_group_size=5, sampling_num=100, js_base=2.0):
+    """
+    Combine multiple data frames, containing different features of the same samples (!)  
+
+    Args:
+        data_sets: set of pandas data frames over the same samples. Each has to have the 
+                   same axis 0 (including ordering). 
+        data_set_handles: set of string identifiers for each df in data sets.
+        groupings: dictionary defining groups. Keys must be group name, values must be 
+                   list of associated sample names (each present in the row idx of the data)
+    """
+    dataset = unify_data_sets(data_sets, data_set_handles)
+    group_selections, group_masks = select_grouping(dataset, groupings, min_group_size)
+    feature_wise_distributions = get_feature_wise_distribution(group_selections, groupings.keys(), event_sets, sampling_num)
+    divergence_df = get_pairwise_feature_divergence(feature_wise_distributions, js_base=js_base)
+    return divergence_df
 
 def analyze_word_histograms(
     csv_path: str,
