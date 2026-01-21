@@ -17,12 +17,20 @@ def visualize_word_histogram(word_histogram):
     plt.ylabel('Frequency')
     plt.show(block=True)
 
+def visualize_sentence_len_histogram(sentence_lens):
+    plt.hist(sentence_lens, bins=100)
+    plt.xlabel('Sentence Length')
+    plt.ylabel('Frequency')
+    plt.show()
+
 def visualize_dict_results(result_dict):
     word_histogram = result_dict["word_hist"]
-    #visualize_word_histogram(word_histogram)
+    visualize_word_histogram(word_histogram)
     sentence_lengths = result_dict["sentence_lengths"]
-    mean_sentence_lenght = sum(sentence_lengths)/len(sentence_lengths)
-    std_sentence_lenght = statistics.stdev(sentence_lengths)
+    clean_sentence_lens = [length for length in sentence_lengths if length < 100]
+    visualize_sentence_len_histogram(clean_sentence_lens)
+    mean_sentence_lenght = sum(clean_sentence_lens)/len(clean_sentence_lens)
+    std_sentence_lenght = statistics.stdev(clean_sentence_lens)
     return mean_sentence_lenght, std_sentence_lenght
 
 def visualize_results(result_dict_dir):
