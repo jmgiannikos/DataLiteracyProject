@@ -7,9 +7,9 @@ from src.scrape_metadata import scrape_metadata_arxivIDs
 
 arxiv_ids = get_papers(
     entry="Florentin Millour",
-    n=5,  # Get co-authors
-    j=5,  # first-author papers per author
-    k=5  # non-first-author papers per author
+    n=10,  # Get co-authors
+    j=20,  # first-author papers per author
+    k=20  # non-first-author papers per author
 )
 
 print(f"Testing with {len(arxiv_ids)} arXiv papers:")
