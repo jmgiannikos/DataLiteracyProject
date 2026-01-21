@@ -20,7 +20,7 @@ import nltk
 from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize, sent_tokenize
 import numpy as np
-from sklearn.linear_model import TheilSenRegressor
+from sklearn.linear_model import TheilSenRegressor, RANSACRegressor
 
 # Optional dependency - graceful fallback if not installed
 try:
@@ -53,7 +53,7 @@ def get_sentence_len(sentence: str) -> int:
     words = word_tokenize(sentence, language='english')
     return len(words)
 
-
+# NOTE: Works well enough
 def remove_outlier_sentences(
     sentences: List[str],
     sentence_lengths: List[int],
@@ -81,7 +81,7 @@ def remove_outlier_sentences(
     mean_len = statistics.mean(sentence_lengths)
     stdev_len = statistics.stdev(sentence_lengths)
 
-    lower_bound = mean_len - stdev_len * n
+    lower_bound = max([mean_len - stdev_len * n, 0])
     upper_bound = mean_len + stdev_len * n
 
     for sentence, length in zip(sentences, sentence_lengths):
@@ -157,13 +157,13 @@ def get_word_histogram(
 
 def check_zipfs_law(
     word_histogram: Dict[str, int],
-    n: int = 4,
+    n: int = 10,
     verbose: bool = False
 ) -> Dict[str, int]:
     """
     Remove words that deviate significantly from Zipf's law distribution.
 
-    Uses Theil-Sen regression (outlier-resistant) to fit expected frequencies,
+    Uses RANSAC regression (outlier-resistant) to fit expected frequencies,
     then removes words whose frequency deviates by more than n standard deviations.
 
     Args:
@@ -187,8 +187,9 @@ def check_zipfs_law(
     inverted_counts = [x[0] ** -1 for x in sortable_hist]
 
     # Fit outlier-resistant linear model
-    estimator = TheilSenRegressor()
+    estimator = RANSACRegressor(random_state=42)
     index_array = np.expand_dims(np.arange(len(inverted_counts), step=1), axis=1)
+    print(inverted_counts)
     estimator.fit(index_array, inverted_counts)
     predicted_counts = estimator.predict(index_array)
 
@@ -197,7 +198,10 @@ def check_zipfs_law(
     for pred in predicted_counts:
         if pred > 0:
             expected_counts.append(max(int(round(pred ** -1)), 0))
+        elif pred == 0:
+            expected_counts.append(0)
         else:
+            print(pred)
             expected_counts.append(0)
 
     # Compute normalized errors
@@ -225,6 +229,7 @@ def check_zipfs_law(
             remaining_words[word] = count
         else:
             removed_count += 1
+            print(f"Removed word: {word} (count={count}, error={error:.2f})")
             if verbose:
                 logger.info(f"Removed word: {word} (count={count}, error={error:.2f})")
 
@@ -359,7 +364,8 @@ def generate_wordhist_csv(
         pruned_sentences, _ = remove_outlier_sentences(sentences, sentence_lengths)
         pruned_text = append_sentences(pruned_sentences)
         pruned_words = word_tokenize(pruned_text, language='english')
-        pruned_word_hist = check_zipfs_law(get_word_histogram(pruned_words, stem=True))
+        # NOTE: Zipfs law check ineffective. Removed.
+        pruned_word_hist = get_word_histogram(pruned_words, stem=True)
         pruned_word_hists.append(pruned_word_hist)
 
         # Raw version (no outlier removal, no stemming)
@@ -386,7 +392,8 @@ def extract_features_from_text(
     document_id: str,
     stem: bool = True,
     check_spelling: bool = True,
-    apply_zipf_filter: bool = True,
+    # NOTE: zipfs filter is not working currently. DO NOT ENABLE
+    apply_zipf_filter: bool = False,
     remove_outliers: bool = True
 ) -> Dict:
     """
@@ -537,16 +544,16 @@ def batch_extract_features(
 
 
 if __name__ == "__main__":
-    import sys
+    import sys 
 
     if len(sys.argv) > 1:
         text_dir = sys.argv[1]
     else:
-        text_dir = "data/cache/raw_text"
+        text_dir = "../data/cache/raw_text"
 
     if len(sys.argv) > 2:
         output_dir = sys.argv[2]
     else:
-        output_dir = "data/features"
+        output_dir = "../data/features"
 
     batch_extract_features(text_dir, output_dir)
