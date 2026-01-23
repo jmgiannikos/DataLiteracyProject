@@ -700,6 +700,7 @@ def select_grouping(data_set, groupings, min_group_size, crossval_split=0):
     if crossval_split <= 1:
         return group_selections, retained_group_names
     else:
+        # TODO: crossval splitting isnt super clean. Not every sample may be included in a split due to rounding (currently strictly rounding down)
         split_sizes = [max([int(group_selection.shape[0]/crossval_split), 1]) for group_selection in group_selections]
         splits = {}
         for split_id in range(crossval_split):
@@ -707,7 +708,8 @@ def select_grouping(data_set, groupings, min_group_size, crossval_split=0):
             test_sets = []
             train_sets = []
             for group_idx, holdout_idx in enumerate(holdout_idxs):
-                selection_mask = group_selections[group_idx].index.isin(holdout_idx)
+                holdout_idx_list = [group_selections[group_idx].index[i] for i in holdout_idx]
+                selection_mask = group_selections[group_idx].index.isin(holdout_idx_list)
                 test_sets.append(group_selections[group_idx][selection_mask])
                 train_sets.append(group_selections[group_idx][~selection_mask])
             splits[split_id] = {"train": train_sets, "test": test_sets}
@@ -839,7 +841,7 @@ def feature_selection_optimizer(pairwise_divergences, lower_divergence_bound=0, 
     feature_selection_vector = solution.x.astype(np.bool_)
     return feature_selection_vector
 
-def grouped_distribution_divergence(dataset, groupings, event_sets, min_group_size=5, sampling_num=100, js_base=2.0, crossval_split=0):
+def grouped_distribution_divergence(dataset, groupings, event_sets, min_group_size=5, sampling_num=100, js_base=2.0, crossval_split=0, lower_divergence_bound=0.9):
     """
     Combine multiple data frames, containing different features of the same samples (!)  
 
@@ -857,7 +859,8 @@ def grouped_distribution_divergence(dataset, groupings, event_sets, min_group_si
     if crossval_split <= 1:
         feature_wise_distributions = get_feature_wise_distribution(group_selections, list(groupings.keys()), event_sets, sampling_num)
         divergence_df = get_pairwise_feature_divergence(feature_wise_distributions, js_base=js_base)
-        return divergence_df
+        selected_feature_df, _ = select_features(divergence_df, lower_divergence_bound)
+        return selected_feature_df
     else:
         results = {}
         for split_id in group_selections.keys():
@@ -875,7 +878,8 @@ def feature_analysis_pipe(raw_word_src="./data/features/word_histogram_union_raw
                           # TODO: find a good set of groups. maybe like 3 ish or so. author, country of origin and institution maybe?
                           groupby=["first_author","first_author_institution","first_author_country"],
                           normalize=True,
-                          crossval_split=0):
+                          crossval_split=0,
+                          lower_divergence_bound=0.9):
     union_raw_word_df = load_csv(raw_word_src)
     union_pruned_word_df = load_csv(pruned_word_src)
     # NOTE: max_len 50 is chosen here, because it is twice the commonly recommended max sentence lenght of 25
@@ -916,7 +920,8 @@ def feature_analysis_pipe(raw_word_src="./data/features/word_histogram_union_raw
                                                                     event_sets=event_sets,
                                                                     sampling_num=1000,
                                                                     min_group_size=20,
-                                                                    crossval_split=crossval_split)
+                                                                    crossval_split=crossval_split,
+                                                                    lower_divergence_bound=lower_divergence_bound)
         result_dfs[group_name] = distribution_divergence_df
 
     return result_dfs
@@ -1061,7 +1066,7 @@ class Group_Predictor:
             sample_ids = sample_ids + [key]*sample_array_dict[key].shape[0]
         joined_group_probabilities = []
         for group_idx, group_name in enumerate(self.group_names):
-            p_feat_group_joined = np.exp(self.p_feats_given_group[group_idx].score_samples(samples)) * self.p_groups(group_idx)
+            p_feat_group_joined = np.exp(self.p_feats_given_group[group_idx].score_samples(samples)) * self.p_groups[group_idx]
             joined_group_probabilities.append(np.expand_dims(p_feat_group_joined, axis=0))
 
         joined_group_probabilities_array = np.vstack(joined_group_probabilities)
@@ -1073,7 +1078,7 @@ class Group_Predictor:
 def main():
     feature_analysis_results = feature_analysis_pipe(groupby=["first_author", "first_author_country"])
     prediction_results = prediction_pipe(groupby=["first_author", "first_author_country"])
-    for key in feature_analysis_results.keys():
+    for key in prediction_results.keys():
         feature_analysis_result = feature_analysis_results[key]
         prediction_result = prediction_results[key]
         visualize_df_heatmap(feature_analysis_result, key + "_feature_analysis", None, (30,10), False)
