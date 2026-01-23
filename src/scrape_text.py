@@ -124,6 +124,9 @@ def main():
     logger.info(f"Found {len(arxiv_ids)} papers to process.")
 
     for i, arxiv_id in enumerate(arxiv_ids):
+        # Sanitize arxiv_id for filename (replace slashes with underscores for old-style IDs like "astro-ph/9906233")
+        safe_arxiv_id = arxiv_id.replace("/", "_")
+        target_file = CACHE_DIR / f"{safe_arxiv_id}.txt"
         # Clean ID just in case (e.g. version numbers)
         # Usually we want the base ID for current version, or specific version. 
         # Metadata csv usually has version ed IDs like 1234.5678v1
