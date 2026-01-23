@@ -66,18 +66,18 @@ currently the two major functions in this file are 'feature_analysis_pipe' and '
 4) compute pairwise jensen-shannon divergence for each group (typically for each author, but other groupings are possible) with each other group. Jensen shannon divergence is computed between the respective distributions calculated in the previous step.
 5) use mixed integer programming to find a minimal selection of features for which the average divergence between each pair of groups is above a set value (if this is infeasible there is an option to iteratively reduce the target until it becomes feasible)
 6) returns dict of data frames showing the divergences for each pair for the selected features for each column name provided in group_by (standard). There is also a crossvalidation mode, which returns nested dictionaries with the following hierarchy:
--- outermost: keys are the groupings like in standard operation
--- middle: keys are the crossval split
--- innermost: keys are "divergence_df" (result of the divergence calc), "test" (test df), "train" (train df) and "group names" (names of the retained groups after dropping groups with too few members)
+   - outermost: keys are the groupings like in standard operation
+   - middle: keys are the crossval split
+   - innermost: keys are "divergence_df" (result of the divergence calc), "test" (test df), "train" (train df) and "group names" (names of the retained groups after dropping groups with too few members)
 
 ### 'prediction_pipe'
 1) run crossval version of feature analysis pipe to select features
 2) setup predictor with fit():
--- use Kernel Density Estimation to estimate p(features|group) for each group
--- estimate p(group) to be num_samples(group)/num_samples(all)
--- use both to get joint probability distribution 
+   - use Kernel Density Estimation to estimate p(features|group) for each group
+   - estimate p(group) to be num_samples(group)/num_samples(all)
+   - use both to get joint probability distribution 
 3) iterate over holdout sets and predict group with predict():
--- use previously established distributions and bayes rule to compute p(group|feat) for each group
+   - use previously established distributions and bayes rule to compute p(group|feat) for each group
 4) collect all predictions (across all splits) in one df
 5) average prediction for each group (i.e. compute average p(author|sample) across all samples that belong to the same author) and collect results in df
-6) return df calculated in 5) as a measure of performance
+6) return df calculated in 5) as a measure 
