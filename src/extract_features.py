@@ -542,8 +542,7 @@ def batch_extract_features(
     logger.info(f"Extracted features from {len(all_features)} documents")
     return all_features
 
-
-if __name__ == "__main__":
+def main():
     import sys 
 
     if len(sys.argv) > 1:
@@ -557,3 +556,6 @@ if __name__ == "__main__":
         output_dir = "../data/features"
 
     batch_extract_features(text_dir, output_dir)
+
+if __name__ == "__main__":
+    main()

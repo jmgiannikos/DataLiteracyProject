@@ -130,7 +130,7 @@ def main():
         # Arxiv e-print works with versions too.
         
         # NOTE: replace call is a quick fix. Need to investigate if this causes identification issues down the line
-        target_file = CACHE_DIR / f"{arxiv_id.replace("/", "_")}.txt"
+        target_file = CACHE_DIR / f"{arxiv_id.replace('/', '_')}.txt"
         
         if target_file.exists():
             logger.info(f"[{i+1}/{len(arxiv_ids)}] Skipping {arxiv_id}, already exists.")
