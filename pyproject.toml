@@ -7,12 +7,12 @@ requires-python = ">=3.14"
 dependencies = [
     "arxiv>=2.3.0",
     "bs4>=0.0.2",
-    "enchant>=0.0.1",
     "matplotlib>=3.10.8",
     "networkx>=3.6.1",
     "nltk>=3.9.2",
     "pandas>=2.3.3",
     "pandas-stubs~=2.3.3",
+    "pyenchant>=3.3.0",
     "pylatexenc>=2.10",
     "scikit-learn>=1.8.0",
     "textstat",

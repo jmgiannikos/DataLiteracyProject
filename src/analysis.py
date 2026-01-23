@@ -1086,15 +1086,4 @@ def main():
         
 
 if __name__ == "__main__":
-    #import sys
-
-    #if len(sys.argv) > 1:
-    #    csv_path = sys.argv[1]
-    #else:
-    #    csv_path = "src/data/features/word_histogram_union_pruned.csv"
-
-    #output_dir = sys.argv[2] if len(sys.argv) > 2 else None
-
-    #results = analyze_word_histograms(csv_path, output_dir)
-    #print(f"Analysis complete: {results}")
     main()

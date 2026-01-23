@@ -1,14 +1,3 @@
-"""
-Feature extraction module for processed academic text.
-Integrates functionality from origin/jan-analysis branch.
-
-Provides:
-- Word frequency histograms with optional spell-checking and stemming
-- Sentence length analysis with outlier detection
-- Zipf's law-based anomaly detection
-- CSV/JSON export for downstream analysis
-"""
-
 import statistics
 import json
 import csv
@@ -125,8 +114,8 @@ def get_word_histogram(
     if check_spelling and HAS_ENCHANT:
         try:
             spell_dict = enchant.Dict("en_US")
-        except enchant.errors.DictNotFoundError:
-            logger.warning("English dictionary not found for spell-checking. Continuing without.")
+        except Exception as e:
+            logger.warning(f"Could not initialize spell-checker: {e}. Continuing without.")
             spell_dict = None
     elif check_spelling and not HAS_ENCHANT:
         logger.debug("PyEnchant not installed. Spell-checking disabled.")
@@ -548,12 +537,12 @@ def main():
     if len(sys.argv) > 1:
         text_dir = sys.argv[1]
     else:
-        text_dir = "../data/cache/raw_text"
+        text_dir = "src/data/cache/raw_text"
 
     if len(sys.argv) > 2:
         output_dir = sys.argv[2]
     else:
-        output_dir = "../data/features"
+        output_dir = "src/data/features"
 
     batch_extract_features(text_dir, output_dir)
 
