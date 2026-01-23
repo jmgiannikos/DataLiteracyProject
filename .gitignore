@@ -213,6 +213,7 @@ __marimo__/
 
 # data and cache
 /src/data/*
+/data/*
 
 .idea
 .vscode
