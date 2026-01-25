@@ -160,7 +160,7 @@ def select_grouping(data_set, groupings, min_group_size, crossval_split=0):
         else:
             x+=1
     if x == len(list(groupings.keys())):
-        print(f'Minimum Group Size too large ({min_group_size}), could not select any group')
+        logger.warning(f'Minimum Group Size too large ({min_group_size}), could not collect any group')
 
     if crossval_split <= 1:
         return group_selections, retained_group_names
@@ -423,7 +423,7 @@ def feature_analysis_pipe(raw_word_src="./data/features/word_histogram_union_raw
                                                                     groupings=groupings[group_name],
                                                                     event_sets=event_sets,
                                                                     sampling_num=1000,
-                                                                    min_group_size=1,
+                                                                    min_group_size=20,
                                                                     crossval_split=crossval_split,
                                                                     lower_divergence_bound=lower_divergence_bound)
         result_dfs[group_name] = distribution_divergence_df
@@ -446,24 +446,20 @@ def select_and_predict(split_result):
     group_prediction = group_predictor.predict(test_dict)
     return group_prediction
 
-def prediction_pipe(analysis_results=None,
-                    raw_word_src="./data/features/word_histogram_union_raw.csv",
+def prediction_pipe( raw_word_src="./data/features/word_histogram_union_raw.csv",
                     pruned_word_src="./data/features/word_histogram_union_pruned.csv",
                     sent_src="./data/features/sentence_lengths_raw.json",
                     metadata_src="./data/metadata.csv",
                     groupby=["first_author","first_author_institution","first_author_country"],
                     normalize=True,
                     crossval_split=10):
-    if analysis_results is None:
-        result_dict = feature_analysis_pipe(raw_word_src=raw_word_src,
+    result_dict = feature_analysis_pipe(raw_word_src=raw_word_src,
                                         pruned_word_src=pruned_word_src,
                                         sent_src=sent_src,
                                         metadata_src=metadata_src,
                                         groupby=groupby,
                                         normalize=normalize,
                                         crossval_split=crossval_split)
-    else:
-        result_dict = analysis_results
     performances_dict = {}
     for group_name in result_dict.keys():
         split_result_dicts = result_dict[group_name]
@@ -585,7 +581,7 @@ class Group_Predictor:
 
 def main():
     feature_analysis_results = feature_analysis_pipe(groupby=["first_author", "first_author_country"])
-    prediction_results = prediction_pipe(analysis_results=feature_analysis_results, groupby=["first_author", "first_author_country"])
+    prediction_results = prediction_pipe(groupby=["first_author", "first_author_country"])
     for key in prediction_results.keys():
         feature_analysis_result = feature_analysis_results[key]
         prediction_result = prediction_results[key]
