@@ -25,23 +25,23 @@ logger = logging.getLogger(__name__)
 # Physics Author
 arxiv_ids_florentin = get_papers(
     entry="Florentin Millour",
-    n=100,  # Get co-authors
-    j=10000,  # first-author papers per author
-    k=100   # non-first-author papers per author
+    n=5,  # Get co-authors
+    j=100,  # first-author papers per author
+    k=5   # non-first-author papers per author
 )
 
 # Biology Author
 arxiv_ids_manel = get_papers(entry="Manel Gil-Sorribes",
-    n=100,  # Get co-authors
-    j=10000,  # first-author papers per author
-    k=100   # non-first-author papers per author
+    n=5,  # Get co-authors
+    j=100,  # first-author papers per author
+    k=5   # non-first-author papers per author
 )
 
 # Econ Author
 arxiv_ids_wen = get_papers(entry="Wen Lou",
-    n=100,  # Get co-authors
-    j=10000,  # first-author papers per author
-    k=100   # non-first-author papers per author
+    n=5,  # Get co-authors
+    j=100,  # first-author papers per author
+    k=5   # non-first-author papers per author
 )
 
 arxiv_ids = arxiv_ids_florentin.union(arxiv_ids_manel).union(arxiv_ids_wen)
@@ -82,7 +82,7 @@ for i, arxiv_id in enumerate(arxiv_ids):
 
     logger.info(f"[{i+1}/{len(arxiv_ids)}] Processing {arxiv_id}...")
 
-    with tempfile.NamedTemporaryFile(suffix=".tar.gz", delete=True) as temp_source:
+    with tempfile.NamedTemporaryFile(suffix=".tar.gz", delete=False) as temp_source:
         if download_source(arxiv_id, temp_source.name):
             # Check if it's a PDF
             with open(temp_source.name, 'rb') as f:
