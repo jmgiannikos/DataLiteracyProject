@@ -10,7 +10,6 @@ import re
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-
 # Default max results to fetch from arxiv
 MAX_RESULTS = 200
 

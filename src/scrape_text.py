@@ -15,8 +15,8 @@ ARXIV_DELAY_LIMIT = 3
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-CACHE_DIR = Path("../data/cache/raw_text")
-METADATA_FILE = Path("../data/metadata.csv")
+CACHE_DIR = Path("data/cache/raw_text")
+METADATA_FILE = Path("data/metadata.csv")
 
 def ensure_cache_dir():
     if not CACHE_DIR.exists():

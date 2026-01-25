@@ -34,7 +34,7 @@ def load_metadata(csv_path: str) -> pd.DataFrame:
     new_index = []
     # reindex to be in line with word_hist csvs and sentence lenght jsons
     for file_id in index:
-        new_index.append(file_id.replace("/", "_"))
+        new_index.append(str(file_id).replace("/", "_"))
     data_df = pd.DataFrame(data=numpy_data, index=new_index, columns=col_names)
     return data_df
 
@@ -108,12 +108,13 @@ def load_csv(csv_path: str) -> pd.DataFrame:
     return data_df
 
 
-def get_np_dataset(data_df: pd.DataFrame) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+def get_np_dataset(data_df: pd.DataFrame, metadata_df: Optional[pd.DataFrame] = None) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
     """
     Extract numpy arrays from dataframe.
 
     Args:
         data_df: DataFrame with documents as rows and words as columns
+        metadata_df: DataFrame with metadata (must be indexed by arxiv_id or sanitized id)
 
     Returns:
         Tuple of (author_handles, feature_labels, data_matrix)
@@ -121,8 +122,29 @@ def get_np_dataset(data_df: pd.DataFrame) -> Tuple[np.ndarray, np.ndarray, np.nd
     Source: jan-analysis/analysis.py
     """
     data_handles = data_df.index.to_numpy()
-    # Extract author from handle (assumes format "author/paper_id")
-    author_handles = np.vectorize(lambda x: x.split("/")[0] if "/" in x else x)(data_handles)
+    
+    if metadata_df is not None:
+        # Try to map handles to authors using metadata
+        author_handles_list = []
+        # Create lookup dictionary for efficiency (handle both raw and sanitized IDs if possible)
+        # Assuming metadata_df is indexed by something that matches data_handles (sanitized IDs)
+        
+        for handle in data_handles:
+            # Handle might be sanitized (underscores) or raw (slashes)
+            # metadata_df from load_metadata is indexed by sanitized ID (underscores)
+            str_handle = str(handle)
+            author = str_handle # Fallback
+            
+            if str_handle in metadata_df.index:
+                author = metadata_df.loc[str_handle]['first_author']
+            
+            author_handles_list.append(str(author))
+            
+        author_handles = np.array(author_handles_list)
+    else:
+        # Extract author from handle (assumes format "author/paper_id")
+        author_handles = np.vectorize(lambda x: str(x).split("/")[0] if "/" in str(x) else str(x))(data_handles)
+        
     feature_labels = data_df.columns.to_numpy()
     data = data_df.to_numpy()
 
@@ -974,7 +996,8 @@ def analyze_word_histograms(
     csv_path: str,
     output_dir: Optional[str] = None,
     n_components: int = 2,
-    perplexity: int = 30
+    perplexity: int = 30,
+    metadata_path: str = "data/metadata.csv"
 ) -> Dict:
     """
     Perform complete analysis on word histogram CSV.
@@ -984,15 +1007,26 @@ def analyze_word_histograms(
         output_dir: Directory to save plots (if None, displays interactively)
         n_components: Number of PCA/t-SNE components
         perplexity: t-SNE perplexity parameter
+        metadata_path: Path to metadata CSV for author lookup
 
     Returns:
         Dictionary with analysis results
     """
+    from pathlib import Path
     logger.info(f"Analyzing {csv_path}...")
+
+    # Load metadata if available
+    metadata_df = None
+    if Path(metadata_path).exists():
+        try:
+            metadata_df = load_metadata(metadata_path)
+            logger.info(f"Loaded metadata from {metadata_path} for author lookup")
+        except Exception as e:
+            logger.warning(f"Failed to load metadata from {metadata_path}: {e}")
 
     # Load and process data
     data_df = load_csv(csv_path)
-    author_handles, feature_labels, data = get_np_dataset(data_df)
+    author_handles, feature_labels, data = get_np_dataset(data_df, metadata_df)
     data_normalized = normalize_word_rows(data)
 
     results = {
