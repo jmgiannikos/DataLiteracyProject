@@ -10,8 +10,8 @@ from datetime import datetime
 from typing import Optional, Dict, Any, List, Set
 from urllib.parse import quote
 
-from src.scrape_paper_ids import get_papers, extract_arxiv_id
-from src.utils import sanitize_article_id as sanitize_filename
+from scrape_paper_ids import get_papers, extract_arxiv_id
+from utils import sanitize_article_id as sanitize_filename
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -56,6 +56,7 @@ EMPTY_METADATA_TEMPLATE = {
 
 def ensure_cache_dirs(base_dir: str = "data/cache"):
     """Create cache directories if they don't exist."""
+    #https://api.openalex.org/works?filter=display_name:"Attention Is All You Need"
     Path(f"{base_dir}/arxiv").mkdir(parents=True, exist_ok=True)
     Path(f"{base_dir}/openalex").mkdir(parents=True, exist_ok=True)
     Path(f"{base_dir}/crossref").mkdir(parents=True, exist_ok=True)
@@ -79,8 +80,12 @@ def save_cached_response(doi: str, source: str, data: Dict, cache_dir: str = "da
     """Save API response to cache."""
     filename = sanitize_filename(doi)
     cache_path = Path(cache_dir) / source / f"{filename}.json"
+    print(f"Cache path **********: {cache_path} **********")
 
     try:
+        #added dir creation
+        if(not cache_path.parent.exists()):
+            cache_path.parent.mkdir(parents=True, exist_ok=True)
         with open(cache_path, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=2)
     except Exception as e:
@@ -110,6 +115,100 @@ def query_openalex(doi: str, contact_email: Optional[str] = None) -> Optional[Di
     except Exception as e:
         logger.warning(f"OpenAlex query failed for {doi}: {e}")
         return None
+
+def get_first_work_openalex(work: dict) -> dict:
+    """
+    In case of multiple works returned, get the first one.
+    """
+    new_work = {}
+    new_work = work.get('results', [work])[0]
+    return new_work
+
+def query_openalex_by_abstract(arxiv_id: str, contact_email: Optional[str] = None) -> Optional[Dict]:
+    """Query OpenAlex API for paper metadata using the abstract/summary."""
+    headers = {}
+    if contact_email:
+        headers['User-Agent'] = f'mailto:{contact_email}'
+
+    result = fetch_arxiv_metadata(arxiv_id)
+    summary = result.get('summary')
+
+    ''' "," removal for better search on OpenAlex api'''
+
+    adapted_summary = str.maketrans(',',' ')
+    url = f'https://api.openalex.org/works?filter=abstract.search:"{summary.translate(adapted_summary)}"'
+
+    try:
+        time.sleep(OPENALEX_DELAY)
+        response = requests.get(url, headers=headers, timeout=30)
+        truncated_response = get_first_work_openalex(response.json())
+
+        if response.status_code == 200:
+            logger.debug(f"OpenAlex: paper found: arXiv ID = {arxiv_id}")
+            return truncated_response
+        elif response.status_code == 404:
+            logger.debug(f"OpenAlex: paper not found: arXiv ID = {arxiv_id}")
+            return None
+        else:
+            logger.warning(f"OpenAlex API error for arXiv ID {arxiv_id}: {response.status_code}")
+            return None
+    except Exception as e:
+        logger.warning(f"OpenAlex query failed for arXiv ID {arxiv_id}: {e}")
+        return None
+    
+def query_crossref_by_title(arxiv_id: str, contact_email: Optional[str] = None) -> Optional[Dict]:
+    """Query Crossref API for paper metadata using the Title + First Author."""
+    headers = {}
+    if contact_email:
+        headers['User-Agent'] = f'mailto:{contact_email}'
+
+    result = fetch_arxiv_metadata(arxiv_id)
+    if(not result):
+        return None
+    title = result.get('title')
+    first_author = result.get('first_author')
+
+    url = f'https://api.crossref.org/works?query.bibliographic="{title}{first_author}"&rows=1&sort=score'
+
+    try:
+        time.sleep(CROSSREF_DELAY)
+        response = requests.get(url, headers=headers, timeout=30)
+
+        if response.status_code == 200:
+            data = response.json()
+            items = data.get('message', {}).get('items', [])
+
+            if items:
+                logger.debug(f"Crossref: paper found: arXiv ID = {arxiv_id}")
+                if check_crossref_is_same_paper(items[0], title):
+                    return items[0]
+                else:
+                    logger.debug(f"Crossref: paper not same: arXiv ID = {arxiv_id}")
+                    return None
+            else:
+                logger.debug(f"Crossref: paper not found: arXiv ID = {arxiv_id}")
+                return None
+        elif response.status_code == 404:
+            logger.debug(f"Crossref: paper not found: arXiv ID = {arxiv_id}")
+            return None
+        else:
+            logger.warning(f"Crossref API error for arXiv ID {arxiv_id}: {response.status_code}")
+            return None
+    except Exception as e:
+        logger.warning(f"Crossref query failed for arXiv ID {arxiv_id}: {e}")
+        return None
+
+def check_crossref_is_same_paper(crossref_data: Dict, arxiv_title: str) -> bool:
+    """Check if the Crossref result matches the arXiv paper by comparing titles."""
+    crossref_title = crossref_data.get('title', [])
+    print(f"CROSSREF TITLE **********: {crossref_title[0]} **********")
+    print(f"ARXIV TITLE **********: {arxiv_title} **********")
+    if crossref_title:
+        crossref_title_str = crossref_title[0].lower().strip()
+        arxiv_title_str = arxiv_title.lower().strip()
+        print(f"COMPARING **********: {crossref_title_str} VS {arxiv_title_str} **********")
+        return crossref_title_str == arxiv_title_str
+    return False
 
 
 def query_crossref(doi: str, contact_email: Optional[str] = None) -> Optional[Dict]:
@@ -279,6 +378,8 @@ def extract_openalex_metadata(data: Dict) -> Dict[str, Any]:
     result['metadata_completeness'] = completeness
 
     return result
+
+
 
 
 def extract_crossref_metadata(data: Dict) -> Dict[str, Any]:
@@ -494,7 +595,18 @@ def scrape_paper_metadata(arxiv_id: str,
                 enrichment_metadata = extract_crossref_metadata(crossref_data)
                 logger.info(f"{arxiv_id}: Crossref metadata retrieved")
 
-    # Step 3: If no DOI but journal_ref exists, try searching Crossref
+    # Step 3: If no DOI, try searching OpenAlex by abstract
+    elif result['summary']:
+        logger.info(f"{arxiv_id}: No DOI, attempting OpenAlex search by abstract")
+        openalex_data = query_openalex_by_abstract(arxiv_id, contact_email)
+
+        if openalex_data:
+            enrichment_metadata = extract_openalex_metadata(openalex_data)
+            result['metadata_source'] = 'OpenAlex-via-abstract'
+            logger.info(f"{arxiv_id}: Found via abstract search")
+        else:
+            logger.info(f"{arxiv_id}: No match via abstract search")
+    # Step 4: If no DOI but journal_ref exists, try searching Crossref
     elif journal_ref:
         logger.info(f"{arxiv_id}: No DOI, attempting journal_ref search")
         crossref_data = search_crossref_by_journal_ref(journal_ref, result['title'], contact_email)
@@ -505,8 +617,20 @@ def scrape_paper_metadata(arxiv_id: str,
             logger.info(f"{arxiv_id}: Found via journal_ref search")
         else:
             logger.info(f"{arxiv_id}: No match via journal_ref search")
+    # Step 5: If no DOi or journal_ref, query Crossref by title + first author
+    else:
+        logger.info(f"{arxiv_id}: No DOI or journal_ref, attempting Crossref search by title and first author")
+        logger.info("Returning best result. Paper could be not the same.")
+        crossref_data = query_crossref_by_title(arxiv_id, contact_email)
 
-    # Step 4: Apply enrichment metadata if found
+        if crossref_data:
+            enrichment_metadata = extract_crossref_metadata(crossref_data)
+            result['metadata_source'] = 'Crossref-via-title'
+            logger.info(f"{arxiv_id}: Found via title search")
+        else:
+            logger.info(f"{arxiv_id}: No match via title search")
+
+    # Step 6: Apply enrichment metadata if found
     if enrichment_metadata:
         result['first_author_institution'] = enrichment_metadata.get('first_author_institution')
         result['first_author_country'] = enrichment_metadata.get('first_author_country')
@@ -613,7 +737,14 @@ def scrape_metadata_arxivIDs(arxiv_ids: Set[str], contact_email: Optional[str] =
 
 
 if __name__ == "__main__":
-
+    testID = "2601.16206"
+    result = query_crossref_by_title(testID)
+    #print(f"Result for {testID}: {result}")
+    if(result):
+        print(extract_crossref_metadata(result))
+    else:
+        print("No result found")
+    '''
     test_arxiv_ids = get_papers(
         entry="Florentin Millour",
         n=5,  # Get co-authors
@@ -636,3 +767,4 @@ if __name__ == "__main__":
     print(f"\nAverage completeness: {result_df['metadata_completeness'].mean():.2%}")
     print(f"\nOutput saved to: data/metadata.csv")
     print(f"{'='*60}")
+'''
