@@ -13,12 +13,11 @@ from sklearn.manifold import TSNE
 from sklearn.decomposition import PCA
 from typing import List, Tuple, Optional, Dict, Set
 import logging
-import textstat
 from scipy.spatial import distance
-import json
-import seaborn as sns
+from src.plotting import plot_loadings, plot_dim_reduced_data, visualize_df_heatmap
 from scipy.optimize import LinearConstraint, Bounds, milp
-
+from src.data_utils import load_csv, load_metadata, load_sentence_json, get_np_dataset, normalize_word_rows, \
+    get_mean_and_stdev_sent, get_easy_words_count, get_syllable_counts, get_common_word_df
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
@@ -34,7 +33,7 @@ def load_metadata(csv_path: str) -> pd.DataFrame:
     new_index = []
     # reindex to be in line with word_hist csvs and sentence lenght jsons
     for file_id in index:
-        new_index.append(file_id.replace("/", "_"))
+        new_index.append(str(file_id).replace("/", "_"))
     data_df = pd.DataFrame(data=numpy_data, index=new_index, columns=col_names)
     return data_df
 
@@ -108,12 +107,13 @@ def load_csv(csv_path: str) -> pd.DataFrame:
     return data_df
 
 
-def get_np_dataset(data_df: pd.DataFrame) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+def get_np_dataset(data_df: pd.DataFrame, metadata_df: Optional[pd.DataFrame] = None) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
     """
     Extract numpy arrays from dataframe.
 
     Args:
         data_df: DataFrame with documents as rows and words as columns
+        metadata_df: DataFrame with metadata (must be indexed by arxiv_id or sanitized id)
 
     Returns:
         Tuple of (author_handles, feature_labels, data_matrix)
@@ -121,8 +121,29 @@ def get_np_dataset(data_df: pd.DataFrame) -> Tuple[np.ndarray, np.ndarray, np.nd
     Source: jan-analysis/analysis.py
     """
     data_handles = data_df.index.to_numpy()
-    # Extract author from handle (assumes format "author/paper_id")
-    author_handles = np.vectorize(lambda x: x.split("/")[0] if "/" in x else x)(data_handles)
+    
+    if metadata_df is not None:
+        # Try to map handles to authors using metadata
+        author_handles_list = []
+        # Create lookup dictionary for efficiency (handle both raw and sanitized IDs if possible)
+        # Assuming metadata_df is indexed by something that matches data_handles (sanitized IDs)
+        
+        for handle in data_handles:
+            # Handle might be sanitized (underscores) or raw (slashes)
+            # metadata_df from load_metadata is indexed by sanitized ID (underscores)
+            str_handle = str(handle)
+            author = str_handle # Fallback
+            
+            if str_handle in metadata_df.index:
+                author = metadata_df.loc[str_handle]['first_author']
+            
+            author_handles_list.append(str(author))
+            
+        author_handles = np.array(author_handles_list)
+    else:
+        # Extract author from handle (assumes format "author/paper_id")
+        author_handles = np.vectorize(lambda x: str(x).split("/")[0] if "/" in str(x) else str(x))(data_handles)
+        
     feature_labels = data_df.columns.to_numpy()
     data = data_df.to_numpy()
 
@@ -359,263 +380,6 @@ def pca_dim_reduction(
     reduced_data = pca.fit_transform(data)
     return reduced_data, pca.components_, pca.explained_variance_
 
-
-# =============================================================================
-# VISUALIZATION FUNCTIONS
-# =============================================================================
-
-def get_author_entries(
-    author_handles: np.ndarray,
-    author_label: str,
-    data: np.ndarray
-) -> Tuple[np.ndarray, np.ndarray]:
-    """
-    Extract data entries for a specific author.
-
-    Args:
-        author_handles: Array of author labels
-        author_label: Author to filter for
-        data: Data matrix
-
-    Returns:
-        Tuple of (author_data, boolean_mask)
-    """
-    author_mask = author_handles == author_label
-    author_entries = data[author_mask]
-    return author_entries, author_mask
-
-
-def plot_dim_reduced_data(
-    reduced_data: np.ndarray,
-    author_handles: np.ndarray,
-    title: str = "Dimensionality Reduced Data",
-    save_path: Optional[str] = None,
-    figsize: Tuple[int, int] = (10, 8)
-) -> None:
-    """
-    Plot 2D dimensionality-reduced data colored by author.
-
-    Args:
-        reduced_data: 2D data matrix (samples x 2)
-        author_handles: Array of author labels for each sample
-        title: Plot title
-        save_path: If provided, save figure to this path
-        figsize: Figure size tuple
-
-    Source: jan-analysis/analysis.py
-    """
-    plt.figure(figsize=figsize)
-
-    unique_authors = list(set(author_handles))
-    colors = plt.cm.tab10(np.linspace(0, 1, min(len(unique_authors), 10)))
-
-    for i, author in enumerate(unique_authors):
-        author_data, _ = get_author_entries(author_handles, author, reduced_data)
-        plt.scatter(
-            author_data[:, 0],
-            author_data[:, 1],
-            c=[colors[i % 10]],
-            label=author,
-            alpha=0.7
-        )
-
-    plt.xlabel("Component 1")
-    plt.ylabel("Component 2")
-    plt.title(title)
-    plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
-    plt.tight_layout()
-
-    if save_path:
-        plt.savefig(save_path, dpi=150, bbox_inches='tight')
-        logger.info(f"Saved plot to {save_path}")
-    else:
-        plt.show()
-
-    plt.close()
-
-def get_topn_words(
-    values: np.ndarray,
-    words: np.ndarray,
-    n: int = 20
-) -> Tuple[List[float], List[str]]:
-    """
-    Get top N words by absolute value.
-
-    Args:
-        values: Array of values (e.g., PCA loadings)
-        words: Array of word labels
-        n: Number of top words to return
-
-    Returns:
-        Tuple of (sorted_values, sorted_words)
-    """
-    sorted_pairs = sorted(zip(values, words), key=lambda x: abs(x[0]), reverse=True)
-    values_sorted = [p[0] for p in sorted_pairs[:n]]
-    words_sorted = [p[1] for p in sorted_pairs[:n]]
-    return values_sorted, words_sorted
-
-
-def plot_loadings(
-    loadings: np.ndarray,
-    word_list: np.ndarray,
-    max_show: int = 20,
-    save_path: Optional[str] = None
-) -> None:
-    """
-    Plot PCA loadings (most important words per component).
-
-    Args:
-        loadings: PCA components matrix (n_components x n_features)
-        word_list: Array of word labels
-        max_show: Maximum number of words to show per component
-        save_path: Base path for saving figures (component number appended)
-
-    Source: jan-analysis/analysis.py
-    """
-    for comp_idx, loading in enumerate(loadings):
-        loading_sorted, words_sorted = get_topn_words(loading, word_list, max_show)
-
-        plt.figure(figsize=(12, 6))
-        colors = ['green' if v > 0 else 'red' for v in loading_sorted]
-        plt.bar(range(len(words_sorted)), loading_sorted, color=colors)
-        plt.xticks(range(len(words_sorted)), words_sorted, rotation=45, ha='right')
-        plt.title(f"PCA Component {comp_idx + 1} Loadings")
-        plt.xlabel("Word")
-        plt.ylabel("Loading")
-        plt.tight_layout()
-
-        if save_path:
-            plt.savefig(f"{save_path}_comp{comp_idx + 1}.png", dpi=150, bbox_inches='tight')
-            logger.info(f"Saved loading plot to {save_path}_comp{comp_idx + 1}.png")
-        else:
-            plt.show()
-
-        plt.close()
-
-
-def plot_binned_barchart(
-    data: np.ndarray,
-    n_bins: int,
-    author_handles: np.ndarray,
-    ylabel: str = "Frequency",
-    title: str = "Distribution by Author",
-    save_path: Optional[str] = None
-) -> None:
-    """
-    Plot binned bar chart showing distribution across authors.
-
-    Args:
-        data: 1D data array
-        n_bins: Number of histogram bins
-        author_handles: Author labels corresponding to data
-        ylabel: Y-axis label
-        title: Plot title
-        save_path: If provided, save figure to this path
-
-    Source: jan-analysis/analysis.py
-    """
-    min_val = np.min(data)
-    max_val = np.max(data)
-    value_range = max_val - min_val
-
-    if value_range == 0:
-        logger.warning("Data has zero range, cannot create binned chart")
-        return
-
-    bin_size = value_range / n_bins
-    bins = np.arange(start=min_val, stop=max_val, step=bin_size)
-
-    unique_authors = list(set(author_handles))
-    data_series_list = []
-
-    for author_label in unique_authors:
-        masked_data, mask = get_author_entries(author_handles, author_label, data.reshape(-1, 1))
-        local_series = [0] * len(bins)
-
-        for value in masked_data.flatten():
-            for bin_idx, bin_val in enumerate(bins):
-                if bin_val <= value < bin_val + bin_size:
-                    local_series[bin_idx] += 1
-                    break
-
-        # Normalize by number of samples for this author
-        n_samples = np.sum(mask)
-        if n_samples > 0:
-            local_series = [v / n_samples for v in local_series]
-
-        data_series_list.append(local_series)
-
-    data_series_array = np.array(data_series_list)
-
-    fig, ax = plt.subplots(figsize=(12, 6))
-    x = np.arange(len(bins))
-    width = 0.8 / len(unique_authors)
-
-    for i, (author, series) in enumerate(zip(unique_authors, data_series_array)):
-        offset = width * i
-        ax.bar(x + offset, series, width, label=author, alpha=0.8)
-
-    ax.set_ylabel(ylabel)
-    ax.set_xlabel("Value bins")
-    ax.set_title(title)
-    ax.set_xticks(x + width * len(unique_authors) / 2)
-    ax.set_xticklabels([f"{b:.2e}" for b in bins], rotation=45, ha='right')
-    ax.legend()
-    plt.tight_layout()
-
-    if save_path:
-        plt.savefig(save_path, dpi=150, bbox_inches='tight')
-        logger.info(f"Saved bar chart to {save_path}")
-    else:
-        plt.show()
-
-    plt.close()
-
-
-def plot_sentence_length_distribution(
-    sentence_lengths: Dict[str, List[int]],
-    title: str = "Sentence Length Distribution",
-    save_path: Optional[str] = None
-) -> None:
-    """
-    Plot sentence length distribution for multiple documents/authors.
-
-    Args:
-        sentence_lengths: Dictionary mapping document/author ID to list of sentence lengths
-        title: Plot title
-        save_path: If provided, save figure to this path
-    """
-    plt.figure(figsize=(12, 6))
-
-    for doc_id, lengths in sentence_lengths.items():
-        if lengths:
-            plt.hist(lengths, bins=30, alpha=0.5, label=doc_id)
-
-    plt.xlabel("Sentence Length (words)")
-    plt.ylabel("Frequency")
-    plt.title(title)
-    plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
-    plt.tight_layout()
-
-    if save_path:
-        plt.savefig(save_path, dpi=150, bbox_inches='tight')
-        logger.info(f"Saved distribution plot to {save_path}")
-    else:
-        plt.show()
-
-    plt.close()
-
-def visualize_df_heatmap(data_df, title, save_path, figsize=(1,1), annot=False):
-    fig, ax = plt.subplots(figsize=figsize)  # Set the figure size
-    ax = sns.heatmap(data_df, ax=ax, annot=annot)
-    ax.set_title(title)
-    if save_path:
-        plt.savefig(save_path, dpi=150, bbox_inches='tight')
-        logger.info(f"Saved distribution plot to {save_path}")
-    else:
-        plt.show()
-
-
 # =============================================================================
 # UTIL FUNCTIONS
 # =============================================================================
@@ -640,7 +404,7 @@ def get_minimal_index(datasets):
     index = list(datasets[0].index)
     for loc_data in datasets[1:]:
         loc_idx = loc_data.index
-        missing_idxs = missing_idxs = [idx for idx in index if idx not in loc_idx]
+        missing_idxs = [idx for idx in index if idx not in loc_idx]
         for missing_idx in missing_idxs:
             index.remove(missing_idx)
     return index
@@ -689,6 +453,7 @@ def select_grouping(data_set, groupings, min_group_size, crossval_split=0):
     group_selections = []
     group_masks = []
     retained_group_names = []
+    x = 0
     for group in groupings.keys():
         group_sample_idxs = groupings[group]
         group_mask = list(map(lambda x: x in group_sample_idxs, data_set.index))
@@ -696,7 +461,11 @@ def select_grouping(data_set, groupings, min_group_size, crossval_split=0):
             group_selections.append(data_set[group_mask])
             group_masks.append(group_mask)
             retained_group_names.append(group)
-    
+        else:
+            x+=1
+    if x == len(list(groupings.keys())):
+        logger.warning(f'Minimum Group Size too large ({min_group_size}), could not collect any group')
+
     if crossval_split <= 1:
         return group_selections, retained_group_names
     else:
@@ -718,7 +487,7 @@ def select_grouping(data_set, groupings, min_group_size, crossval_split=0):
 
 
 # NOTE: This process doesnt really make sense. Replace.
-def bootstrap_histogram(data, bins, sampling_num = 100):
+def bootstrap_histogram(data, bins, i, j, sampling_num = 100):
     bootstrapped_samples = np.random.choice(data, sampling_num)
     binned_index = np.zeros(shape=(len(bins)+1,))
     for sample in bootstrapped_samples:
@@ -729,7 +498,44 @@ def bootstrap_histogram(data, bins, sampling_num = 100):
                 if sample <= bins[i]:
                     binned_index[i] += 1/sampling_num
                     break
+    if j == 1:
+        plt.stairs(binned_index)
+        plt.stairs(data)
+        plt.savefig(f"./data/analysis/bootstrap_{i}_{j}.png", dpi=150, bbox_inches='tight')
     return binned_index
+
+def plot_data_vs_samples(data, samples, bins, i, j):
+    plt.clf()
+    plt.hist(data, bins, label='Data', density=True, fill=False, edgecolor='red', linewidth=3)
+    plt.hist(samples, bins, label='Sampling', density=True, fill=False, edgecolor='blue')
+    plt.legend()
+    plt.savefig(f"./data/analysis/kde_discrete_dist_{i}_{j}.png", dpi=150, bbox_inches='tight')
+
+def convert_bins(bins, data):
+    # converting bins into being matplotlib.hist() compatible
+    # not optimal implementation but does the job
+    end_bin = float(max(np.max(data), np.max(bins) * 1.5))
+    if np.sum(data) == 0:
+        start_bin = np.min(0.5 * bins[bins != 0])
+    else:
+        start_bin = float(min(np.min(data[data!=0]), np.min(0.5 * bins[bins!=0])))
+    converted_bins = np.concatenate([[bins[0]], [start_bin], bins[1:], [end_bin]])
+    return converted_bins
+
+def kde_discrete(data, bins, i, j, bandwidth_scale=0.5, sampling_num=100):
+    bandwidth = bandwidth_scale * 0.5 * (bins[1] - bins[0])
+    reshaped_data = data.reshape(-1, 1)
+    kde = KernelDensity(kernel='gaussian', bandwidth=bandwidth).fit(reshaped_data)
+    sampled_data = np.array(kde.sample(sampling_num))
+    converted_bins = convert_bins(bins, data)
+    # Removing values < 0
+    corrected_samples = sampled_data[sampled_data >= 0]
+    # This can be uncommented if one wants to visually compare data and sample results
+    #if j in range(0,20,2):
+    #    plot_data_vs_samples(data, corrected_samples, converted_bins, i, j)
+    kde_discrete_dist, bin_edges, patches = plt.hist(corrected_samples, converted_bins, density=True)
+    return kde_discrete_dist
+
         
 def get_feature_wise_distribution(groups, group_names, event_sets, sampling_num=100):
     feature_dict = {}
@@ -740,8 +546,9 @@ def get_feature_wise_distribution(groups, group_names, event_sets, sampling_num=
         for j, feature in enumerate(features):
             event_set = event_sets[j]
             data_array = group.to_numpy()[:,j]
-            distribution = bootstrap_histogram(data_array, event_set, sampling_num)
-            local_feature_dict[feature] = distribution
+            #distribution_bootstrap = bootstrap_histogram(data_array, event_set, i, j, sampling_num=sampling_num)
+            distribution_kde = kde_discrete(data_array, event_set, i, j, sampling_num=sampling_num)
+            local_feature_dict[feature] = distribution_kde
         feature_dict[group_name] = local_feature_dict
     return feature_dict
 
@@ -803,6 +610,7 @@ def average_over_row_group(dataframes):
     result_array = np.vstack(result_rows)
     result_df = pd.DataFrame(data=result_array, index=row_groups, columns=unified_df.columns)
     return result_df
+
 
 # =============================================================================
 # HIGH-LEVEL ANALYSIS FUNCTIONS
@@ -905,7 +713,6 @@ def feature_analysis_pipe(raw_word_src="./data/features/word_histogram_union_raw
         data_set_handles = ["word_count", "syllable_count", "easy_freq", "sentence"]
         data_sets = [common_word_counts, syllable_counts, easy_word_ratios, sentence_stats]
 
-
     # compute groupings
     groupings = get_groupings(metadata_df, groupby) # NOTE: This returns multiple groups collected in a dict of dicts. DO NOT PASS DIRECTLY TO grouped_distribution_divergence
 
@@ -914,6 +721,7 @@ def feature_analysis_pipe(raw_word_src="./data/features/word_histogram_union_raw
     event_sets = calculate_bins(dataset, num_bins=8)
 
     result_dfs = {}
+
     for group_name in groupings.keys():
         distribution_divergence_df = grouped_distribution_divergence(dataset, 
                                                                     groupings=groupings[group_name],
@@ -942,7 +750,7 @@ def select_and_predict(split_result):
     group_prediction = group_predictor.predict(test_dict)
     return group_prediction
 
-def prediction_pipe(raw_word_src="./data/features/word_histogram_union_raw.csv",
+def prediction_pipe( raw_word_src="./data/features/word_histogram_union_raw.csv",
                     pruned_word_src="./data/features/word_histogram_union_pruned.csv",
                     sent_src="./data/features/sentence_lengths_raw.json",
                     metadata_src="./data/metadata.csv",
@@ -956,11 +764,11 @@ def prediction_pipe(raw_word_src="./data/features/word_histogram_union_raw.csv",
                                         groupby=groupby,
                                         normalize=normalize,
                                         crossval_split=crossval_split)
-    
     performances_dict = {}
     for group_name in result_dict.keys():
         split_result_dicts = result_dict[group_name]
         split_predictions = []
+
         for split in split_result_dicts.keys():
             split_result_dict = split_result_dicts[split]
             split_prediction = select_and_predict(split_result_dict)
@@ -974,7 +782,8 @@ def analyze_word_histograms(
     csv_path: str,
     output_dir: Optional[str] = None,
     n_components: int = 2,
-    perplexity: int = 30
+    perplexity: int = 30,
+    metadata_path: str = "data/metadata.csv"
 ) -> Dict:
     """
     Perform complete analysis on word histogram CSV.
@@ -984,15 +793,26 @@ def analyze_word_histograms(
         output_dir: Directory to save plots (if None, displays interactively)
         n_components: Number of PCA/t-SNE components
         perplexity: t-SNE perplexity parameter
+        metadata_path: Path to metadata CSV for author lookup
 
     Returns:
         Dictionary with analysis results
     """
+    from pathlib import Path
     logger.info(f"Analyzing {csv_path}...")
+
+    # Load metadata if available
+    metadata_df = None
+    if Path(metadata_path).exists():
+        try:
+            metadata_df = load_metadata(metadata_path)
+            logger.info(f"Loaded metadata from {metadata_path} for author lookup")
+        except Exception as e:
+            logger.warning(f"Failed to load metadata from {metadata_path}: {e}")
 
     # Load and process data
     data_df = load_csv(csv_path)
-    author_handles, feature_labels, data = get_np_dataset(data_df)
+    author_handles, feature_labels, data = get_np_dataset(data_df, metadata_df)
     data_normalized = normalize_word_rows(data)
 
     results = {
