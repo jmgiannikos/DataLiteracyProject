@@ -210,3 +210,12 @@ __marimo__/
 /tex_sources/*
 /staging
 /processed_tex_sources/*
+
+# data and cache
+/src/data/*
+data/
+
+.idea
+.vscode/
+.venv/
+.claude/
