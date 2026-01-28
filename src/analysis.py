@@ -518,12 +518,14 @@ def convert_bins(bins, data):
     if np.sum(data) == 0:
         start_bin = np.min(0.5 * bins[bins != 0])
     else:
-        start_bin = float(min(np.min(data[data!=0]), np.min(0.5 * bins[bins!=0])))
+        start_bin = float(min(np.min(data[data!=0]), 0.5 * (bins[0] + bins[1])))
     converted_bins = np.concatenate([[bins[0]], [start_bin], bins[1:], [end_bin]])
     return converted_bins
 
 def kde_discrete(data, bins, i, j, bandwidth_scale=0.5, sampling_num=100):
     bandwidth = bandwidth_scale * 0.5 * (bins[1] - bins[0])
+    if bandwidth == 0:
+        bandwidth = 0.001
     reshaped_data = data.reshape(-1, 1)
     kde = KernelDensity(kernel='gaussian', bandwidth=bandwidth).fit(reshaped_data)
     sampled_data = np.array(kde.sample(sampling_num))
@@ -533,7 +535,8 @@ def kde_discrete(data, bins, i, j, bandwidth_scale=0.5, sampling_num=100):
     # This can be uncommented if one wants to visually compare data and sample results
     #if j in range(0,20,2):
     #    plot_data_vs_samples(data, corrected_samples, converted_bins, i, j)
-    kde_discrete_dist, bin_edges, patches = plt.hist(corrected_samples, converted_bins, density=True)
+    density = sum(corrected_samples) != 0
+    kde_discrete_dist, bin_edges, patches = plt.hist(corrected_samples, converted_bins, density=density)
     return kde_discrete_dist
 
         
