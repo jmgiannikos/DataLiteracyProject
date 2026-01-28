@@ -14,9 +14,9 @@ from sklearn.decomposition import PCA
 from typing import List, Tuple, Optional, Dict, Set
 import logging
 from scipy.spatial import distance
-from src.plotting import plot_loadings, plot_dim_reduced_data, visualize_df_heatmap
+from plotting import plot_loadings, plot_dim_reduced_data, visualize_df_heatmap
 from scipy.optimize import LinearConstraint, Bounds, milp
-from src.data_utils import load_csv, load_metadata, load_sentence_json, get_np_dataset, normalize_word_rows, \
+from data_utils import load_csv, load_metadata, load_sentence_json, get_np_dataset, normalize_word_rows, \
     get_mean_and_stdev_sent, get_easy_words_count, get_syllable_counts, get_common_word_df
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
