@@ -3,7 +3,7 @@ import logging
 import pandas as pd
 import os
 from collections import Counter
-from typing import List, Dict, Any, Set, Optional
+from typing import List, Dict, Any, Set, Optional, Union
 import re
 
 # Configure logging
@@ -103,49 +103,57 @@ def is_in_date_range(paper: arxiv.Result, start_year: Optional[int], end_year: O
     return True
 
 def search_papers(
-    field: str, 
-    first_authorships: int, 
-    max_papers: int, 
-    start_year: Optional[int] = None, 
+    field: Union[str, List[str]],
+    first_authorships: int,
+    max_papers: int,
+    start_year: Optional[int] = None,
     end_year: Optional[int] = None,
-    existing_csv_path: Optional[str] = None
+    existing_csv_path: Optional[str] = None,
+    incremental_save_path: Optional[str] = None
 ) -> pd.DataFrame:
     """
     Args:
-        field: arXiv category/field (e.g. 'cs.AI')
+        field: arXiv category/field (e.g. 'cs.AI') or list of categories for OR query
         first_authorships: Min number of first-author papers to qualify an author
         max_papers: Max total papers to collect
         start_year: Optional start year filter
         end_year: Optional end year filter
         existing_csv_path: Path to CSV containing already scraped papers to skip
-        
+        incremental_save_path: Path to CSV to save progress incrementally
+
     Returns:
         DataFrame with metadata for selected papers
     """
-    logger.info(f"Searching for papers in field '{field}' (years: {start_year}-{end_year})")
+    # Handle field display for logging
+    if isinstance(field, list):
+        field_display = f"{len(field)} categories ({field[0]}...)"
+    else:
+        field_display = field
+    logger.info(f"Searching for papers in field '{field_display}' (years: {start_year}-{end_year})")
     
+    existing_df = pd.DataFrame()
     existing_ids = set()
     if existing_csv_path and os.path.exists(existing_csv_path):
         try:
-            temp_df = pd.read_csv(existing_csv_path)
-            if 'arxiv_id' in temp_df.columns:
-                existing_ids = set(temp_df['arxiv_id'].astype(str))
+            existing_df = pd.read_csv(existing_csv_path)
+            if 'arxiv_id' in existing_df.columns:
+                existing_ids = set(existing_df['arxiv_id'].astype(str))
                 logger.info(f"Loaded {len(existing_ids)} existing arXiv IDs from {existing_csv_path}")
         except Exception as e:
             logger.warning(f"Could not load existing CSV: {e}")
 
-    # Adjust goal based on existing papers? 
-    # The user manual doesn't specify if max_papers is "new papers" or "total papers including existing".
-    # Assuming "max_papers" means papers to be RETURNED in this run (new papers).
     logger.info(f"Goal: {max_papers} NEW papers from authors with >{first_authorships} first-author papers")
     
     client = arxiv.Client()
 
     # Construct query with date filtering if needed
-    query_parts = [f'cat:{field}']
+    if isinstance(field, list):
+        cat_query = " OR ".join([f'cat:{f}' for f in field])
+        query_parts = [f'({cat_query})']
+    else:
+        query_parts = [f'cat:{field}']
     
     if start_year is not None or end_year is not None:
-        # ArXiv date format: YYYYMMDDHHMM
         start_str = f"{start_year}01010000" if start_year else "000001010000"
         end_str = f"{end_year}12312359" if end_year else "209912312359"
         query_parts.append(f"submittedDate:[{start_str} TO {end_str}]")
@@ -155,7 +163,7 @@ def search_papers(
 
     search = arxiv.Search(
         query=final_query,
-        max_results=max_papers * 50, # might need adjustment
+        max_results=max_papers * 50,
         sort_by=arxiv.SortCriterion.SubmittedDate
     )
     
@@ -165,6 +173,18 @@ def search_papers(
     
     results_generator = client.results(search)
     
+    def save_incremental():
+        if not incremental_save_path:
+            return
+        logger.info(f"Incrementally saving {len(collected_papers_data)} papers to {incremental_save_path}")
+        new_df = pd.DataFrame(collected_papers_data)
+        if not existing_df.empty:
+            combined = pd.concat([existing_df, new_df], ignore_index=True)
+            combined.drop_duplicates(subset=['arxiv_id'], inplace=True)
+        else:
+            combined = new_df
+        combined.to_csv(incremental_save_path, index=False)
+
     try:
         for paper in results_generator:
             if len(collected_papers_data) >= max_papers:
@@ -198,6 +218,7 @@ def search_papers(
                         logger.info(f"Author {author.name} qualifies ({len(valid_author_papers)} papers)")
                         
                         # Add to results
+                        newly_added_this_author = 0
                         for p in valid_author_papers:
                             if len(collected_papers_data) >= max_papers:
                                 break
@@ -226,7 +247,12 @@ def search_papers(
                                 'updated': p.updated
                             }
                             collected_papers_data.append(paper_data)
-                                
+                            newly_added_this_author += 1
+                            
+                            # Incremental save every 100 papers
+                            if len(collected_papers_data) % 100 == 0:
+                                save_incremental()
+
                 except Exception as e:
                     logger.error(f"Error processing author {author.name}: {e}")
                     continue
@@ -234,6 +260,8 @@ def search_papers(
     except Exception as e:
         logger.error(f"Error during search iteration: {e}")
 
+    # Final save
+    save_incremental()
     logger.info(f"Returning metadata for {len(collected_papers_data)} unique papers")
     return pd.DataFrame(collected_papers_data)
 
