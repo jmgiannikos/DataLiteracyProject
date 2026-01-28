@@ -16,5 +16,6 @@ dependencies = [
     "pylatexenc>=2.10",
     "scikit-learn>=1.8.0",
     "textstat",
-    "seaborn"
+    "seaborn",
+    "scipy-stubs~=1.17.0",
 ]

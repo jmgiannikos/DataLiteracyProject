@@ -1,20 +1,20 @@
 import arxiv
 import logging
+import pandas as pd
+import os
 from collections import Counter
-from typing import List, Dict, Any, Set
+from typing import List, Dict, Any, Set, Optional
 import re
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-
 # Default max results to fetch from arxiv
 MAX_RESULTS = 200
 
 def normalize_name(name: str) -> str:
     """
-    Standardize author names for comparison.
     Removes periods, spaces, and commas, and converts to lowercase.
     """
     return name.lower().replace(".", "").replace(" ", "").replace(",", "")
@@ -22,8 +22,6 @@ def normalize_name(name: str) -> str:
 def extract_arxiv_id(arxiv_input: str) -> str:
     """
     Extract clean arXiv ID from various input formats.
-
-    Handles:
     - Clean IDs: "2103.00020", "1706.03762"
     - With version: "2103.00020v1", "1706.03762v2"
     - URLs: "http://arxiv.org/abs/2103.00020v1", "http://arxiv.org/abs/astro-ph/9906233v1"
@@ -44,7 +42,6 @@ def extract_arxiv_id(arxiv_input: str) -> str:
     # If no pattern matches, return as-is
     logger.warning(f"Could not parse arXiv ID from: {arxiv_input}")
     return arxiv_input
-
 
 def get_papers_by_author(author_name: str, max_results: int = MAX_RESULTS) -> List[arxiv.Result]:
     """
@@ -81,50 +78,6 @@ def is_first_author(paper: arxiv.Result, author_name: str) -> bool:
     # e.g., "Adya, V B" vs "V. B. Adya"
     return normalized_query in normalized_first or normalized_first in normalized_query
 
-def get_co_authors(entry: str, n: int, strict: bool = False) -> List[str]:
-    """
-    Get the top n co-authors for the entry author.
-    Args:
-        entry: Entry point author name
-        n: Number of co-authors to select
-        strict: If True, return exactly n co-authors (raise error if not enough).
-                If False (default), return up to n co-authors.
-
-    Returns:
-        List of co-author names (exactly n if strict=True, up to n if strict=False)
-    """
-    logger.info(f"Finding top {n} co-authors for {entry} (strict={strict})")
-
-    papers = get_papers_by_author(entry)
-    logger.info(f"Fetched {len(papers)} papers for {entry}")
-
-    # Count co-authors
-    co_author_counts = Counter()
-    normalized_entry = normalize_name(entry)
-
-    for paper in papers:
-        for author in paper.authors:
-            name = author.name
-            # Skip entry author using normalized comparison
-            if normalize_name(name) == normalized_entry:
-                continue
-            co_author_counts[name] += 1
-
-    # Return top n
-    top_co_authors = [name for name, _ in co_author_counts.most_common(n)]
-
-    if strict and len(top_co_authors) != n:
-        raise ValueError(f"Expected exactly {n} co-authors but found {len(top_co_authors)}")
-
-    logger.info(f"Selected {len(top_co_authors)} co-authors: {top_co_authors}")
-
-    return top_co_authors
-
-
-# =============================================================================
-# RECURSIVE CO-AUTHOR DISCOVERY (from origin/retrieve-data)
-# =============================================================================
-
 def get_papers_by_first_author(author_name: str, max_results: int = MAX_RESULTS) -> List[arxiv.Result]:
     """
     Get all first-author papers for a given author.
@@ -141,281 +94,163 @@ def get_papers_by_first_author(author_name: str, max_results: int = MAX_RESULTS)
     papers = get_papers_by_author(author_name, max_results)
     return [p for p in papers if is_first_author(p, author_name)]
 
+def is_in_date_range(paper: arxiv.Result, start_year: Optional[int], end_year: Optional[int]) -> bool:
+    """Check if paper publication year is within range (inclusive)."""
+    if start_year is not None and paper.published.year < start_year:
+        return False
+    if end_year is not None and paper.published.year > end_year:
+        return False
+    return True
 
-def get_all_coauthors_recursive(
-    current_author: str,
-    all_authors: Set[str],
-    excluded_authors: Set[str],
-    min_req_papers: int = 4
-) -> tuple:
-    """
-    Recursively discover co-authors who have at least min_req_papers first-author papers.
-
-    Args:
-        current_author: Author to analyze for co-authors
-        all_authors: Set of already discovered valid authors
-        excluded_authors: Set of authors excluded due to insufficient papers
-        min_req_papers: Minimum first-author papers required for inclusion
-
-    Returns:
-        Tuple of (all_authors, excluded_authors) sets
-
-    Source: retrieve-data/get_author_and_paper_data.py
-    """
-    papers = get_papers_by_first_author(current_author)
-
-    for paper in papers:
-        if paper.authors:
-            for coauthor in paper.authors:
-                name = coauthor.name
-                if name not in all_authors and name not in excluded_authors:
-                    # Check if coauthor has enough first-author papers
-                    coauthor_papers = get_papers_by_first_author(name)
-                    if len(coauthor_papers) >= min_req_papers:
-                        logger.info(f"Adding co-author: {name}")
-                        all_authors.add(name)
-                    else:
-                        logger.debug(f"Excluding {name} (only {len(coauthor_papers)} first-author papers)")
-                        excluded_authors.add(name)
-
-    return all_authors, excluded_authors
-
-
-def collect_author_dict(
-    starting_author: str,
-    max_authors: int = 20,
-    min_req_papers: int = 4
-) -> Dict[str, List[arxiv.Result]]:
-    """
-    Build a dictionary of authors and their first-author papers via recursive co-author discovery.
-
-    Starting from a seed author, recursively discovers co-authors who have at least
-    min_req_papers first-author publications, up to max_authors total.
-
-    Args:
-        starting_author: Seed author to start discovery from
-        max_authors: Maximum number of authors to discover
-        min_req_papers: Minimum first-author papers for author inclusion
-
-    Returns:
-        Dictionary mapping author name to list of their first-author arxiv.Result objects
-
-    Source: retrieve-data/get_author_and_paper_data.py
-    """
-    def iterate_authors(all_authors: Set[str], auth_checked: Set[str], excluded_auth: Set[str]) -> List[str]:
-        authors_to_check = list(all_authors.difference(auth_checked))
-        logger.info(f"Authors to check: {authors_to_check}")
-
-        if len(authors_to_check) == 0 or len(all_authors) > max_authors:
-            logger.info("Finished searching for authors")
-            return list(all_authors)
-
-        current_author = authors_to_check[0]
-        coauthors, excluded_auth = get_all_coauthors_recursive(
-            current_author, all_authors, excluded_auth, min_req_papers
-        )
-        all_authors.update(coauthors)
-        auth_checked.add(current_author)
-
-        logger.info(f"Found {len(all_authors)} authors so far: {list(all_authors)}")
-        return iterate_authors(all_authors, auth_checked, excluded_auth)
-
-    authors = iterate_authors({starting_author}, set(), set())
-
-    if not authors:
-        logger.error("No authors found")
-        return {}
-
-    logger.info(f"Found {len(authors)} authors total. Retrieving papers...")
-
-    author_dict = {}
-    for author in authors:
-        papers = get_papers_by_first_author(author)
-        author_dict[author] = papers
-
-    return author_dict
-
-
-def get_author_papers(author: str, j: int, k: int, strict: bool = False) -> List[arxiv.Result]:
-    """
-    Get j first-author papers and k non-first-author papers for an author.
-    Args:
-        author: Author name
-        j: Number of first-author papers to select
-        k: Number of non-first-author papers to select
-        strict: If True, return exactly j first-author and k non-first-author papers (raise error if not enough).
-                If False (default), return up to j+k papers.
-
-    Returns:
-        List of arxiv.Result objects (exactly j+k if strict=True, up to j+k if strict=False)
-    """
-    logger.info(f"Selecting papers for {author}: {j} first-author, {k} non-first-author (strict={strict})")
-
-    papers = get_papers_by_author(author)
-
-    # Separate first-author and non-first-author papers
-    first_author_papers = []
-    non_first_author_papers = []
-
-    for paper in papers:
-        if is_first_author(paper, author):
-            first_author_papers.append(paper)
-        else:
-            non_first_author_papers.append(paper)
-
-    # Select j and k papers respectively
-    selected_first = first_author_papers[:j]
-    selected_non_first = non_first_author_papers[:k]
-
-    if strict and (len(selected_first) != j or len(selected_non_first) != k):
-        raise ValueError(f"Expected exactly {j} first-author and {k} non-first-author papers for {author}, "
-                        f"but found {len(selected_first)} and {len(selected_non_first)}")
-
-    logger.info(f"Selected {len(selected_first)} first-author and {len(selected_non_first)} non-first-author papers for {author}")
-
-    return selected_first + selected_non_first
-
-def get_papers(entry: str, n: int, j: int, k: int, strict: bool = False) -> Set[str]:
+def search_papers(
+    field: str, 
+    first_authorships: int, 
+    max_papers: int, 
+    start_year: Optional[int] = None, 
+    end_year: Optional[int] = None,
+    existing_csv_path: Optional[str] = None
+) -> pd.DataFrame:
     """
     Args:
-        entry: Entry point author name
-        n: Number of co-authors to include
-        j: Number of first-author papers per author
-        k: Number of non-first-author papers per author
-        strict: If True, require exactly n co-authors, j first-author papers, and k non-first-author papers.
-                If False (default), allow up to n, j, and k respectively.
-
+        field: arXiv category/field (e.g. 'cs.AI')
+        first_authorships: Min number of first-author papers to qualify an author
+        max_papers: Max total papers to collect
+        start_year: Optional start year filter
+        end_year: Optional end year filter
+        existing_csv_path: Path to CSV containing already scraped papers to skip
+        
     Returns:
-        Set of clean arXiv IDs (without versions) for all deduplicated papers
+        DataFrame with metadata for selected papers
     """
-    logger.info(f"Generating research summary for {entry} with n={n}, j={j}, k={k}, strict={strict}")
+    logger.info(f"Searching for papers in field '{field}' (years: {start_year}-{end_year})")
+    
+    existing_ids = set()
+    if existing_csv_path and os.path.exists(existing_csv_path):
+        try:
+            temp_df = pd.read_csv(existing_csv_path)
+            if 'arxiv_id' in temp_df.columns:
+                existing_ids = set(temp_df['arxiv_id'].astype(str))
+                logger.info(f"Loaded {len(existing_ids)} existing arXiv IDs from {existing_csv_path}")
+        except Exception as e:
+            logger.warning(f"Could not load existing CSV: {e}")
 
-    # Step 1: Get co-authors
-    co_authors = get_co_authors(entry, n, strict=strict)
-    all_authors = [entry] + co_authors
-
-    # Step 2: Process each author
-    all_arxiv_ids = set()
-    summary_data = []
-
-    for author in all_authors:
-        papers = get_author_papers(author, j, k, strict=strict)
-
-        # Deduplicate using clean IDs (without versions)
-        for p in papers:
-            clean_id = extract_arxiv_id(p.entry_id)
-            if clean_id not in all_arxiv_ids:
-                all_arxiv_ids.add(clean_id)
-
-    return all_arxiv_ids
-
-def select_papers_by_author(authors: List[str], n: int = 5) -> Dict[str, List[str]]:
-    """
-    Given a list of authors, select the `n` most 'relevant' (arxiv metric) papers for each of those.
-    Only includes papers where the author is the FIRST author.
-    Returns a dictionary mapping author name to a list of paper arXiv IDs.
-    """
-    logger.info(f"Selecting top {n} first-author papers for {len(authors)} authors...")
-    results = {}
+    # Adjust goal based on existing papers? 
+    # The user manual doesn't specify if max_papers is "new papers" or "total papers including existing".
+    # Assuming "max_papers" means papers to be RETURNED in this run (new papers).
+    logger.info(f"Goal: {max_papers} NEW papers from authors with >{first_authorships} first-author papers")
     
     client = arxiv.Client()
+
+    # Construct query with date filtering if needed
+    query_parts = [f'cat:{field}']
     
-    for author in authors:
-        try:
-            search = arxiv.Search(
-                query=f'au:"{author}"',
-                max_results=MAX_RESULTS,
-                sort_by=arxiv.SortCriterion.Relevance
-            )
-            
-            papers = list(client.results(search))
-            paper_ids = []
-            
-            for p in papers:
-                if len(paper_ids) >= n:
+    if start_year is not None or end_year is not None:
+        # ArXiv date format: YYYYMMDDHHMM
+        start_str = f"{start_year}01010000" if start_year else "000001010000"
+        end_str = f"{end_year}12312359" if end_year else "209912312359"
+        query_parts.append(f"submittedDate:[{start_str} TO {end_str}]")
+        
+    final_query = " AND ".join(query_parts)
+    logger.info(f"ArXiv Query: {final_query}")
+
+    search = arxiv.Search(
+        query=final_query,
+        max_results=max_papers * 50, # might need adjustment
+        sort_by=arxiv.SortCriterion.SubmittedDate
+    )
+    
+    checked_authors = set()
+    collected_papers_data = []
+    collected_ids = set()
+    
+    results_generator = client.results(search)
+    
+    try:
+        for paper in results_generator:
+            if len(collected_papers_data) >= max_papers:
+                break
+                
+            if not paper.authors:
+                continue
+                
+            for author in paper.authors:
+                if len(collected_papers_data) >= max_papers:
                     break
                     
-                if is_first_author(p, author) and p.entry_id:
-                    paper_ids.append(p.entry_id)
+                norm_name = normalize_name(author.name)
+                if norm_name in checked_authors:
+                    continue
+                
+                checked_authors.add(norm_name)
+                
+                try:
+                    # Get potential papers for this author
+                    author_papers = get_papers_by_first_author(author.name)
                     
-            results[author] = paper_ids
-            logger.info(f"Found {len(paper_ids)} first-author papers for {author}")
-            
-        except Exception as e:
-            logger.error(f"Error fetching papers for {author}: {e}")
-            results[author] = []
-            
-    return results
+                    # Filter these papers by date
+                    valid_author_papers = [
+                        p for p in author_papers 
+                        if is_in_date_range(p, start_year, end_year)
+                    ]
+                    
+                    # Check condition on filtered papers
+                    if len(valid_author_papers) > first_authorships:
+                        logger.info(f"Author {author.name} qualifies ({len(valid_author_papers)} papers)")
+                        
+                        # Add to results
+                        for p in valid_author_papers:
+                            if len(collected_papers_data) >= max_papers:
+                                break
+                            
+                            p_id = extract_arxiv_id(p.entry_id)
+                            
+                            # Filter duplicates
+                            if p_id in collected_ids or p_id in existing_ids:
+                                continue
+                                
+                            collected_ids.add(p_id)
+                            
+                            # Collect metadata
+                            paper_data = {
+                                'arxiv_id': p_id,
+                                'title': p.title,
+                                'authors': [a.name for a in p.authors],
+                                'first_author': p.authors[0].name if p.authors else None,
+                                'summary': p.summary,
+                                'published': p.published,
+                                'doi': p.doi,
+                                'primary_category': p.primary_category,
+                                'categories': p.categories,
+                                'pdf_url': p.pdf_url,
+                                'journal_ref': p.journal_ref,
+                                'updated': p.updated
+                            }
+                            collected_papers_data.append(paper_data)
+                                
+                except Exception as e:
+                    logger.error(f"Error processing author {author.name}: {e}")
+                    continue
+                    
+    except Exception as e:
+        logger.error(f"Error during search iteration: {e}")
 
-def select_papers_at_least_k_authors(authors: List[str], n: int = 10, k: int = 2) -> List[str]:
-    """
-    Select the `n` most 'relevant' papers where at least `k` of the authors appear.
-    At least one of the `k` authors designated as 'first author'.
-    """
-    logger.info(f"Selecting top {n} papers where at least {k} authors from list appear...")
-
-    client = arxiv.Client()
-    paper_map = {}
-    input_authors_norm = {normalize_name(a) for a in authors}
-    
-    for author in authors:
-        try:
-            search = arxiv.Search(
-                    query=f'au:"{author}"',
-                    max_results=MAX_RESULTS, 
-                    sort_by=arxiv.SortCriterion.Relevance
-            )
-            
-            for p in client.results(search):
-                pid = p.entry_id
-                
-                if pid not in paper_map:
-                    paper_map[pid] = {'paper': p, 'overlaps': 0}
-                
-                paper_map[pid]['overlaps'] += 1
-                
-        except Exception as e:
-             logger.error(f"Error fetching papers for common check {author}: {e}")
-
-    # Iterate and find those with overlaps >= k
-    candidates = []
-
-    for pid, data in paper_map.items():
-        p = data['paper']
-        p_authors_norm = {normalize_name(a.name) for a in p.authors}
-
-        # Intersect
-        overlap = len(input_authors_norm.intersection(p_authors_norm))
-
-        # Check if first author is in our input list
-        first_author_norm = normalize_name(p.authors[0].name) if p.authors else ""
-        first_author_in_list = first_author_norm in input_authors_norm
-
-        if overlap >= k and first_author_in_list:
-            candidates.append(p)
-
-    # Sort candidates
-    candidates.sort(key=lambda x: (len(input_authors_norm.intersection({normalize_name(a.name) for a in x.authors})), x.published), reverse=True)
-    top_n = candidates[:n]
-    
-    # Extract entry IDs
-    result_ids = []
-    for p in top_n:
-        if p.entry_id:
-            result_ids.append(p.entry_id)
-            
-    logger.info(f"Found {len(result_ids)} papers meeting commonality criteria.")
-    return result_ids
+    logger.info(f"Returning metadata for {len(collected_papers_data)} unique papers")
+    return pd.DataFrame(collected_papers_data)
 
 if __name__ == "__main__":
 
-    all_papers = get_papers(
-        entry="Riccardo Salami",
-        n=5,  # Get co-authors
-        j=5,  # first-author papers per author
-        k=5,  # non-first-author papers per author
-        strict=False
+    papers_df = search_papers(
+        field="cs.LG",
+        first_authorships=20,
+        max_papers=1000,
+        start_year=2010,
+        end_year=2020
     )
+    
+    print(f"Testing with {len(papers_df)} arXiv papers:")
+    print(papers_df.head())
 
-    print(f"Testing with {len(all_papers)} arXiv papers:")
-    print(all_papers)
+    print("\nUnique first authors:")
+    print(papers_df['first_author'].unique())
+    
+    papers_df.to_csv("../data/test_papers.csv", index=False)

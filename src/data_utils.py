@@ -218,7 +218,6 @@ def get_mean_and_stdev_sent(sentence_df, max_len=-1):
 
 
 # NOTE: THE DF GIVEN TO THIS SHOULD BE NON-NORMALIZED!
-# TODO: implement first double loop more efficiently. Slow af
 def get_syllable_counts(words_df):
     """
     Takes a non-normalized word histogram dataframe and computes the syllable count distribution

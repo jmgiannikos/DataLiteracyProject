@@ -444,7 +444,7 @@ def batch_extract_features(
     Extract features from all text files in a directory.
 
     Args:
-        text_dir: Directory containing .txt files (from scrape_text.py)
+        text_dir: Directory containing .txt files
         output_dir: Directory to save feature JSON/CSV files
         generate_csv: Whether to generate combined CSV files
 
