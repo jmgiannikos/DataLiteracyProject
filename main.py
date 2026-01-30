@@ -14,8 +14,10 @@ from src.extract_features import batch_extract_features
 from src.analysis import analyze_word_histograms
 
 import tempfile
+import os
 import time
 import logging
+import argparse
 from pathlib import Path
 import pandas as pd
 
@@ -261,14 +263,14 @@ def step4_clean_data():
 # =============================================================================
 # STEP 5: Extract Features
 # =============================================================================
-def step5_extract_features(cleaned_df):
+def step5_extract_features(cleaned_df, start_index=0):
     """
     Extract text and compute features from papers.
     5a: Scrape text from arXiv sources
     5b: Extract word histograms and other features
     5c: Create processed dataset
     """
-    logger.info("STEP 5: Extracting features")
+    logger.info(f"STEP 5: Extracting features (starting from index {start_index})")
 
     if PROCESSED_DATASET_PATH.exists():
         logger.info(f"[SKIP] {PROCESSED_DATASET_PATH} already exists")
@@ -283,18 +285,27 @@ def step5_extract_features(cleaned_df):
     ensure_cache_dir()
 
     arxiv_ids = cleaned_df['arxiv_id'].tolist()
+    
+    # Manual override: slice the list if start_index > 0
+    total_total = len(arxiv_ids)
+    if start_index > 0:
+        logger.info(f"Manual override: Skipping first {start_index} papers. Processing from index {start_index}...")
+        arxiv_ids = arxiv_ids[start_index:]
+        
     successful_extractions = 0
 
     for i, arxiv_id in enumerate(arxiv_ids):
+        current_idx = i + start_index
         safe_arxiv_id = str(arxiv_id).replace("/", "_")
         target_file = CACHE_DIR / f"{safe_arxiv_id}.txt"
 
         if target_file.exists():
-            logger.info(f"[{i+1}/{len(arxiv_ids)}] Skipping {arxiv_id}, already cached")
+            # Check content for logs/debugging if needed, but skip regardless
+            logger.info(f"[{current_idx+1}/{total_total}] Skipping {arxiv_id}, already attempted (cached)")
             successful_extractions += 1
             continue
 
-        logger.info(f"[{i+1}/{len(arxiv_ids)}] Processing {arxiv_id}...")
+        logger.info(f"[{current_idx+1}/{total_total}] Processing {arxiv_id}...")
 
         with tempfile.NamedTemporaryFile(suffix=".tar.gz", delete=True) as temp_source:
             if download_source(arxiv_id, temp_source.name):
@@ -313,7 +324,13 @@ def step5_extract_features(cleaned_df):
                         logger.info(f"Successfully extracted text for {arxiv_id}")
                         successful_extractions += 1
                     else:
-                        logger.warning(f"No text extracted for {arxiv_id}")
+                        logger.warning(f"No text extracted for {arxiv_id}. Marking as empty.")
+                        with open(target_file, 'w', encoding='utf-8') as f:
+                            f.write("EMPTY_TEXT")
+            else:
+                logger.error(f"Download failed for {arxiv_id}. Marking as failed.")
+                with open(target_file, 'w', encoding='utf-8') as f:
+                    f.write("FAILED_DOWNLOAD")
 
         time.sleep(ARXIV_DELAY_LIMIT)
 
@@ -391,11 +408,17 @@ def main():
     Run the complete arXiv data pipeline.
     Each step checks if output exists and skips if so.
     """
+    parser = argparse.ArgumentParser(description="arXiv Data Pipeline")
+    parser.add_argument("-s", "--start-index", type=int, default=0, help="Index of paper to start from in Step 5 (default: 0)")
+    args = parser.parse_args()
+
     print("=" * 60)
     print("ARXIV DATA PIPELINE - Starting")
     print("=" * 60)
     print(f"Categories: {list(CATEGORY_GROUPS.keys())}")
     print(f"Years: {YEARS[0]} to {YEARS[-1]}")
+    if args.start_index > 0:
+        print(f"Manual Start Index: {args.start_index}")
 
     # Step 1: Collect papers
     print("\n" + "=" * 60)
@@ -425,7 +448,7 @@ def main():
     print("\n" + "=" * 60)
     print("STEP 5: Extracting features")
     print("=" * 60)
-    processed_df = step5_extract_features(cleaned_df)
+    processed_df = step5_extract_features(cleaned_df, start_index=args.start_index)
 
     # Step 6: Run analysis
     print("\n" + "=" * 60)

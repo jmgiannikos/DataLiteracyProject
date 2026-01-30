@@ -136,7 +136,7 @@ def main():
         target_file = CACHE_DIR / f"{arxiv_id.replace('/', '_')}.txt"
         
         if target_file.exists():
-            logger.info(f"[{i+1}/{len(arxiv_ids)}] Skipping {arxiv_id}, already exists.")
+            logger.info(f"[{i+1}/{len(arxiv_ids)}] Skipping {arxiv_id}, already attempted (exists).")
             continue
 
         logger.info(f"[{i+1}/{len(arxiv_ids)}] Processing {arxiv_id}...")
@@ -160,7 +160,13 @@ def main():
                             f.write(text)
                         logger.info(f"Successfully saved text for {arxiv_id}")
                     else:
-                        logger.warning(f"No text extracted for {arxiv_id}")
+                        logger.warning(f"No text extracted for {arxiv_id}. Marking as empty.")
+                        with open(target_file, 'w', encoding='utf-8') as f:
+                            f.write("EMPTY_TEXT")
+            else:
+                logger.error(f"Download failed for {arxiv_id}. Marking as failed.")
+                with open(target_file, 'w', encoding='utf-8') as f:
+                    f.write("FAILED_DOWNLOAD")
             
         # Rate limiting
         time.sleep(ARXIV_DELAY_LIMIT)

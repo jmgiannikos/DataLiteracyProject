@@ -219,3 +219,5 @@ data/
 .vscode/
 .venv/
 .claude/
+
+testing_hypothesis.ipynb
