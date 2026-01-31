@@ -13,6 +13,7 @@ from src.scrape_metadata import enrich_metadata_dataframe
 from src.scrape_text import download_source, extract_text_from_source, CACHE_DIR, ensure_cache_dir, ARXIV_DELAY_LIMIT
 from src.extract_features import batch_extract_features
 from src.analysis import analyze_word_histograms
+from src.utils import remove_duplicate_papers, merge_duplicate_authors, select_top_n_authors
 
 import tempfile
 import time
@@ -26,12 +27,21 @@ logger = logging.getLogger(__name__)
 # =============================================================================
 # STEP 1 & 2: Search Papers & Enrich Metadata
 # =============================================================================
-METADATA_FILE = Path("data/metadata.csv")
+METADATA_FILE = Path("data/top8-authors-category.csv")
+SELECT_TOPN = True
 metadata_dataframe = None
 
 if METADATA_FILE.exists():
     print(f"\n[SKIP] Found existing metadata at {METADATA_FILE}. Skipping search and enrichment.")
     metadata_dataframe = pd.read_csv(METADATA_FILE)
+
+    metadata_dataframe = merge_duplicate_authors(metadata_dataframe)
+    # metadata_dataframe = remove_duplicate_papers(metadata_dataframe)
+    if SELECT_TOPN:
+        metadata_dataframe = select_top_n_authors(metadata_dataframe)
+
+    metadata_dataframe.to_csv(METADATA_FILE, index=False)
+    
     print(f"Loaded {len(metadata_dataframe)} papers from metadata.")
 else:
     papers_df = search_papers(
@@ -122,7 +132,7 @@ else:
 
     text_dir = str(CACHE_DIR)
     
-    features = batch_extract_features(text_dir, output_dir, generate_csv=True)
+    features = batch_extract_features(text_dir, output_dir, generate_csv=True, metadata_df=metadata_dataframe)
 
     print(f"\nFeature extraction complete: {len(features)} documents processed")
     print(f"Output saved to: {output_dir}/")
@@ -131,25 +141,25 @@ else:
 # STEP 5: Run analysis
 # =============================================================================
 # NOTE: currently outdated. Does not run a significat section of analysis
-print("\n" + "="*60)
-print("STEP 5: Running analysis")
-print("="*60)
+#print("\n" + "="*60)
+#print("STEP 5: Running analysis")
+#print("="*60)
 
-csv_path = f"{output_dir}/word_histogram_union_pruned.csv"
-analysis_output_dir = "data/analysis"
+#csv_path = f"{output_dir}/word_histogram_union_pruned.csv"
+#analysis_output_dir = "data/analysis"
 
 # Check if CSV exists before running analysis
-if Path(csv_path).exists():
-    results = analyze_word_histograms(csv_path, analysis_output_dir)
-    print(f"\nAnalysis complete:")
-    print(f"  - Documents analyzed: {results['n_documents']}")
-    print(f"  - Features (words): {results['n_features']}")
-    print(f"  - Unique authors: {len(results['unique_authors'])}")
-    print(f"  - PCA explained variance: {results['pca_explained_variance']}")
-    print(f"\nPlots saved to: {analysis_output_dir}/")
-else:
-    print(f"Warning: {csv_path} not found. Skipping analysis.")
-    print("This may occur if no valid text was extracted from any papers.")
+#if Path(csv_path).exists():
+#    results = analyze_word_histograms(csv_path, analysis_output_dir)
+#    print(f"\nAnalysis complete:")
+#    print(f"  - Documents analyzed: {results['n_documents']}")
+#    print(f"  - Features (words): {results['n_features']}")
+#    print(f"  - Unique authors: {len(results['unique_authors'])}")
+#    print(f"  - PCA explained variance: {results['pca_explained_variance']}")
+#    print(f"\nPlots saved to: {analysis_output_dir}/")
+#else:
+#    print(f"Warning: {csv_path} not found. Skipping analysis.")
+#    print("This may occur if no valid text was extracted from any papers.")
 
 print("\n" + "="*60)
 print("PIPELINE COMPLETE")

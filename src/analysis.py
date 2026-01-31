@@ -130,7 +130,7 @@ def unify_data_sets(data_sets, data_set_identifiers):
     unified_data_set = pd.DataFrame(data=global_data, index=index, columns=global_cols)
     return unified_data_set
 
-def select_grouping(data_set, groupings, min_group_size, crossval_split=0):
+def select_grouping(data_set, groupings, crossval_split=0):
     """
     select groups of dataset samples by pre-defined groupings passed as a dict of lists.
     lists must contain names that match data set row entries. 
@@ -146,41 +146,34 @@ def select_grouping(data_set, groupings, min_group_size, crossval_split=0):
         otherwise returns dict of crossval splits dictionary containing dictionaries with test and train
         grouping dfs.
     """
-    group_selections = []
-    group_masks = []
-    retained_group_names = []
-    x = 0
+    group_selections = {}
     for group in groupings.keys():
         group_sample_idxs = groupings[group]
         group_mask = list(map(lambda x: x in group_sample_idxs, data_set.index))
-        if np.sum(group_mask) >= min_group_size: 
-            group_selections.append(data_set[group_mask])
-            group_masks.append(group_mask)
-            retained_group_names.append(group)
-        else:
-            x+=1
-    if x == len(list(groupings.keys())):
-        logger.warning(f'Minimum Group Size too large ({min_group_size}), could not collect any group')
+        group_selections[group] = data_set[group_mask]
 
-    if crossval_split <= 1:
-        return group_selections, retained_group_names
-    else:
-        # TODO: crossval splitting isnt super clean. Not every sample may be included in a split due to rounding (currently strictly rounding down)
-        split_sizes = [max([int(group_selection.shape[0]/crossval_split), 1]) for group_selection in group_selections]
-        splits = {}
-        for split_id in range(crossval_split):
+    if crossval_split < 1:
+        crossval_split = 1
+
+    split_sizes = [max([int(group_selections[group_name].shape[0]/crossval_split), 1]) for group_name in group_selections.keys()]
+    lastsplit_size = [group_selections[group_name].shape[0] - split_sizes[idx] * (crossval_split-1) for idx, group_name in enumerate(group_selections.keys())]
+    splits = {}
+    for split_id in range(crossval_split):
+        if split_id != crossval_split-1:
             holdout_idxs = [range(split_id*split_sizes[i], (split_id+1)*split_sizes[i]) for i in range(len(split_sizes))]
-            test_sets = []
-            train_sets = []
-            for group_idx, holdout_idx in enumerate(holdout_idxs):
-                holdout_idx_list = [group_selections[group_idx].index[i] for i in holdout_idx]
-                selection_mask = group_selections[group_idx].index.isin(holdout_idx_list)
-                test_sets.append(group_selections[group_idx][selection_mask])
-                train_sets.append(group_selections[group_idx][~selection_mask])
-            splits[split_id] = {"train": train_sets, "test": test_sets}
-        return splits, retained_group_names
+        else:
+            holdout_idx = [range(split_id*split_sizes[i], split_id*split_sizes[i]+lastsplit_size[i]) for i in range(len(split_sizes))]
+        test_sets = {}
+        train_sets = {}
+        for group_idx, holdout_idx in enumerate(holdout_idxs):
+            group_name = list(groupings.keys())[group_idx]
+            holdout_idx_list = [group_selections[group_name].index[i] for i in holdout_idx]
+            selection_mask = group_selections[group_name].index.isin(holdout_idx_list)
+            test_sets[group_name] = group_selections[group_name][selection_mask]
+            train_sets[group_name] = group_selections[group_name][~selection_mask]
+        splits[split_id] = {"train": train_sets, "test": test_sets}
+    return splits
 
-# NOTE: This process doesnt really make sense. Replace.
 def sort_to_bins(data, bins):
     binned_index = np.zeros(shape=(len(bins)+1,))
     for sample in data:
@@ -193,84 +186,77 @@ def sort_to_bins(data, bins):
                     break
     return binned_index
 
-def plot_data_vs_samples(data, samples, bins, i, j):
-    plt.clf()
-    plt.hist(data, bins, label='Data', density=True, fill=False, edgecolor='red', linewidth=3)
-    plt.hist(samples, bins, label='Sampling', density=True, fill=False, edgecolor='blue')
-    plt.legend()
-    plt.savefig(f"./data/analysis/kde_discrete_dist_{i}_{j}.png", dpi=150, bbox_inches='tight')
-
-def convert_bins(bins, data):
-    # converting bins into being matplotlib.hist() compatible
-    # not optimal implementation but does the job
-    end_bin = float(max(np.max(data), np.max(bins) * 1.5))
-    if np.sum(data) == 0:
-        start_bin = np.min(0.5 * bins[bins != 0])
+def kde_discrete(estimator, bins):
+    if estimator is None:
+        p_bins = np.zeros((len(bins)+1,))
+        p_bins[0] = 1
+        return p_bins
     else:
-        start_bin = float(min(np.min(data[data!=0]), 0.5 * (bins[0] + bins[1])))
-    converted_bins = np.concatenate([[bins[0]], [start_bin], bins[1:], [end_bin]])
-    return converted_bins
-
-def kde_discrete(data, bins, variant="statsmodels", samplint_num=10000):
-    if variant == "statsmodels":
-        if np.max(data) <= 0:
-            p_bins = np.zeros((len(bins)+1,))
-            p_bins[0] = 1
-            return p_bins
-        else:
-            reshaped_data = data.reshape(-1, 1)
-            kde = KDEMultivariate(reshaped_data,var_type="c", bw="cv_ml") # technically here its univariate, but thats a subcase
-            cdf_bins = kde.cdf(bins) # assume number in bins represent respective upper bounds
-            p_bins = [cdf_bins[i]-cdf_bins[i-1] for i in range(1,len(cdf_bins))]
-            p_bins = [cdf_bins[0]] + p_bins + [1-cdf_bins[-1]]
-            return p_bins
-    else:
-        reshaped_data = data.reshape(-1, 1)
-        kde = KernelDensity(kernel='gaussian', bandwidth="silverman").fit(reshaped_data)
-        sampled_data = np.array(kde.sample(samplint_num))
-        converted_bins = convert_bins(bins, data)
-        # Removing values < 0
-        corrected_samples = sampled_data[sampled_data >= 0]
-        # This can be uncommented if one wants to visually compare data and sample results
-        #if j in range(0,20,2):
-        #    plot_data_vs_samples(data, corrected_samples, converted_bins, i, j)
-        p_bins = sort_to_bins(corrected_samples, converted_bins)
+        cdf_bins = estimator.cdf(bins) # assume number in bins represent respective upper bounds
+        p_bins = [cdf_bins[i]-cdf_bins[i-1] for i in range(1,len(cdf_bins))]
+        p_bins = [cdf_bins[0]] + p_bins + [1-cdf_bins[-1]]
         return p_bins
 
+def get_kde_estimators(data):
+    if np.max(data) <= 0:
+        return None
+    else:
+        reshaped_data = data.reshape(-1, 1)
+        kde = KDEMultivariate(reshaped_data,var_type="c", bw="cv_ml")
+        return kde
+    
+def get_global_range(groups, feature):
+    data_arrays = []
+    for group_name in groups.keys():
+        group = groups[group_name]
+        data_arrays.append(group[feature].to_numpy())
+    global_data_array = np.hstack(data_arrays)
+    min_val = np.min(global_data_array)
+    max_val = np.max(global_data_array)
+    val_range = max_val - min_val
+    return min_val, max_val, val_range
 
-def get_feature_wise_distribution(groups, group_names, event_sets):
-    feature_dict = {}
-    features = groups[0].columns.to_list()
-    for i, group in enumerate(groups):
-        group_name = group_names[i]
-        local_feature_dict = {}
-        for j, feature in enumerate(features):
-            event_set = event_sets[j]
-            data_array = group.to_numpy()[:,j]
-            #distribution_bootstrap = bootstrap_histogram(data_array, event_set, i, j, sampling_num=sampling_num)
-            distribution_kde = kde_discrete(data_array, event_set)
-            local_feature_dict[feature] = distribution_kde
-        feature_dict[group_name] = local_feature_dict
-    return feature_dict
+def get_pairwise_divergence_df(groups, num_bins):
+    first_group = list(groups.keys())[0]
+    features = groups[first_group].columns.to_list()
+    feature_divergence_vecs = {}
+    for feature in features:
+        distribution_estimators = {}
+        for group_name in groups.keys():
+            group = groups[group_name]
+            data_array = group[feature].to_numpy()
+            distribution_estimators[group_name] = get_kde_estimators(data_array)
 
-def get_pairwise_feature_divergence(feature_wise_distributions, js_base=2.0):
-    data_rows = []
-    groups = list(feature_wise_distributions.keys())
-    features = feature_wise_distributions[groups[0]].keys()
-    multi_index = []
-    for group_one in groups:
-        for group_two in groups:
-            row = np.zeros((len(features),))
-            for i, feature in enumerate(features):
-                dist_one = feature_wise_distributions[group_one][feature]
-                dist_two = feature_wise_distributions[group_two][feature]
-                row[i] += distance.jensenshannon(dist_one, dist_two, base=js_base)
-            data_rows.append(row)
-            multi_index.append((group_one, group_two))
-    data = np.vstack(data_rows)
-    index = pd.MultiIndex.from_tuples(multi_index, names=("Group A", "Group B"))
-    result_df = pd.DataFrame(data=data, index=index, columns=features)
+        min_value, max_value, value_range = get_global_range(groups, feature)
+        bins = np.arange(min_value, max_value, step=value_range/num_bins)
+        pairwise_dist_vec = get_pairwise_feature_divergence(groups, distribution_estimators, bins)
+        feature_divergence_vecs[feature] = pairwise_dist_vec
+
+    row_idxs = feature_divergence_vecs[features[0]].keys()
+    rows = []
+    index = pd.MultiIndex.from_tuples(row_idxs, names=("Author A", "Author B"))
+    for row_idxa, row_idxb in row_idxs:
+        row = np.array([feature_divergence_vecs[feature][(row_idxa, row_idxb)] for feature in features])
+        rows.append(row)
+    data_array = np.vstack(rows)
+    result_df = pd.DataFrame(data=data_array, index=index, columns=features)
     return result_df
+
+def get_pairwise_feature_divergence(groups, distribution_estimators, bins):
+    group_names = groups.keys()
+    evaluated_groups = []
+    distances = {}
+    for group_name_a in group_names:
+        evaluated_groups.append(group_name_a)
+        for group_name_b in group_names:
+            if group_name_b not in evaluated_groups:
+                distribution_estimator_a = distribution_estimators[group_name_a]
+                distribution_estimator_b = distribution_estimators[group_name_b]
+                distribution_a = kde_discrete(distribution_estimator_a, bins)
+                distribution_b = kde_discrete(distribution_estimator_b, bins)
+                dist = distance.jensenshannon(distribution_a, distribution_b, base=2)
+                distances[(group_name_a, group_name_b)] = dist
+    return distances
 
 # generates bins as list of upper bounds
 def calculate_bins(data_df, num_bins=10):
@@ -298,8 +284,9 @@ def remove_redundant_rows(pairwise_divergence_df):
 
 # averages prediction stack over groups. The prediction lies on axis y while the ground truth class lies on axis x of the returned df
 def average_over_row_group(dataframes):
-    if isinstance(dataframes, list):
-        unified_df = pd.concat(dataframes, axis=0)
+    if isinstance(dataframes, dict):
+        df_list = [dataframes[key] for key in dataframes.keys()]
+        unified_df = pd.concat(df_list, axis=0)
     else:
         unified_df = dataframes
     row_groups = list(unified_df.columns) # NOTE: this code was changed from the original list(set(unified_df.index)) to current state so that the columns align with the rows (ordering)
@@ -314,8 +301,9 @@ def average_over_row_group(dataframes):
     return result_df
 
 def get_confusion_mats(dataframes):
-    if isinstance(dataframes, list):
-        unified_df = pd.concat(dataframes, axis=0)
+    if isinstance(dataframes, dict):
+        df_list = [dataframes[key] for key in dataframes.keys()]
+        unified_df = pd.concat(df_list, axis=0)
     else:
         unified_df = dataframes
     pred_labels = unified_df.columns
@@ -326,7 +314,7 @@ def get_confusion_mats(dataframes):
         group_selection = unified_df.to_numpy()[group_mask]
         row_maxes = group_selection.max(axis=1).reshape(-1, 1)
         group_row = np.where(group_selection == row_maxes, 1, 0)
-        group_row = np.mean(group_row, axis=0)
+        group_row = np.sum(group_row, axis=0)
         result_rows.append(group_row)
     result_array = np.vstack(result_rows)
     result_df = pd.DataFrame(data=result_array, index=row_groups, columns=pred_labels)
@@ -336,12 +324,8 @@ def get_confusion_mats(dataframes):
 # HIGH-LEVEL ANALYSIS FUNCTIONS
 # =============================================================================
 
-def select_features(pairwise_divergence_df, lower_divergence_bound=0, degrade_step=0.01, select_num=2, greedy=False):
-    pruned_df = remove_redundant_rows(pairwise_divergence_df)
-    if not greedy:
-        feature_selection_vector = feature_selection_optimizer(pruned_df.to_numpy(), lower_divergence_bound, degrade_step)
-    else:
-        feature_selection_vector = greedy_feature_select(pruned_df.to_numpy(), select_num=select_num)
+def select_features(pairwise_divergence_df, select_num=2):
+    feature_selection_vector = greedy_feature_select(pairwise_divergence_df.to_numpy(), select_num=select_num)
     selected_features = np.array(pairwise_divergence_df.columns)[feature_selection_vector] # binary masking operation
     selected_df = pairwise_divergence_df[selected_features]
     return selected_df, selected_features
@@ -353,41 +337,16 @@ def greedy_feature_select(divergence_mat, select_num):
     selection_order = []
     weight_vec = np.ones((divergence_mat.shape[0],))
     for _ in range(select_num):
-        weighted_result_vec = (divergence_mat*(1-selection_vector)).T @ weight_vec
+        # greedily choose feature with highest weighted divergence
+        weighted_result_vec = np.max((divergence_mat*(1-selection_vector)).T * weight_vec, axis=1)
         max_idx = np.argmax(weighted_result_vec)
         assert selection_vector[max_idx] == 0
         selection_vector[max_idx] = 1
         selection_order.append(max_idx)
-        weight_vec = 1 - (divergence_mat @ selection_vector)/np.sum(selection_vector)
+        weight_vec = 1 - np.max(divergence_mat * selection_vector, axis=1)
     return selection_order # selection_vector == 1
 
-def feature_selection_optimizer(pairwise_divergences, lower_divergence_bound=0, degrade_step=-1):
-    num_features = np.shape(pairwise_divergences)[1]
-    num_constraints = np.shape(pairwise_divergences)[0]
-
-    # constrain solution to be binary vector
-    bool_bound = Bounds(lb=np.zeros((num_features,)), ub=np.ones((num_features,)))
-    integrality = np.ones((num_features,))
-
-    # setup constraints
-    if not isinstance(lower_divergence_bound, list):
-        lower_divergence_bound = [lower_divergence_bound]*num_constraints
-    constraint = LinearConstraint(A=pairwise_divergences, lb=lower_divergence_bound)
-    
-    # setup sum contraint
-    c = np.ones((num_features,))
-    retry=degrade_step>0
-    while retry:
-        solution = milp(c, integrality=integrality, bounds=bool_bound, constraints=constraint)
-        retry = solution.status == 2
-        if retry:
-            # reduce the lower bound by degrade step to attain feasability
-            lower_divergence_bound = list(map(lambda x: x-degrade_step, lower_divergence_bound))
-            constraint = LinearConstraint(A=pairwise_divergences, lb=lower_divergence_bound)
-    feature_selection_vector = solution.x.astype(np.bool_)
-    return feature_selection_vector
-
-def grouped_distribution_divergence(dataset, groupings, event_sets, min_group_size=5, sampling_num=100, js_base=2.0, crossval_split=0, lower_divergence_bound=0.9, bandwidth_scale=0.2, visualize_selected_dists=False, select_num=2, greedy=False):
+def grouped_distribution_divergence(group_selections, num_bins=100):
     """
     Combine multiple data frames, containing different features of the same samples (!)  
 
@@ -401,150 +360,150 @@ def grouped_distribution_divergence(dataset, groupings, event_sets, min_group_si
         if crossval_split <= 1 returns feature wise divergence df. otherwise returns crossval split dict of dicts,
         where each split has a divergence df, a test set and a train set.
     """
-    group_selections, retained_groups = select_grouping(dataset, groupings, min_group_size, crossval_split=crossval_split)
-    if crossval_split <= 1:
-        feature_wise_distributions = get_feature_wise_distribution(group_selections, list(groupings.keys()), event_sets)
-        divergence_df = get_pairwise_feature_divergence(feature_wise_distributions, js_base=js_base)
-        selected_feature_df, selected_features = select_features(divergence_df, lower_divergence_bound, select_num=select_num, greedy=greedy)
-        if visualize_selected_dists:
-            plot_selected_feature_dists(feature_wise_distributions, selected_features)
-        return selected_feature_df
-    else:
-        results = {}
-        for split_id in group_selections.keys():
-            train_selection = group_selections[split_id]["train"]
-            test_selection = group_selections[split_id]["test"]
-            feature_wise_distributions = get_feature_wise_distribution(train_selection, list(groupings.keys()), event_sets)
-            divergence_df = get_pairwise_feature_divergence(feature_wise_distributions, js_base=js_base)
-            results[split_id] = {"div_df": divergence_df, "test": test_selection, "train": train_selection, "group_names": retained_groups}
-        return results
+    group_names = group_selections[0]["train"].keys()
+    results = {}
+    for split_id in group_selections.keys():
+        train_selection = group_selections[split_id]["train"]
+        test_selection = group_selections[split_id]["test"]
+
+        # some sanity checks
+        assert all([group_name in group_names for group_name in train_selection.keys()])
+        assert len(group_names) == len(train_selection.keys())
+
+        pairwise_divergence_df = get_pairwise_divergence_df(train_selection, num_bins=num_bins)
+        results[split_id] = {"div_df": pairwise_divergence_df, "test": test_selection, "train": train_selection, "group_names": group_names}
+    return results
     
-def feature_analysis_pipe(raw_word_src="./data/features/word_histogram_union_raw.csv",
-                          pruned_word_src="./data/features/word_histogram_union_pruned.csv",
-                          sent_src="./data/features/sentence_lengths_raw.json",
-                          metadata_src="./data/metadata.csv",
-                          # TODO: find a good set of groups. maybe like 3 ish or so. author, country of origin and institution maybe?
-                          groupby=["first_author","first_author_institution","first_author_country"],
-                          normalize=True,
-                          crossval_split=0,
-                          lower_divergence_bound=3,
-                          bandwidth_scale=0.2,
-                          num_bins=100,
-                          sampling_num=10000, 
-                          select_num=2,
-                          greedy_select=False,
-                          dataset=None,
-                          commonality_threshhold=0.8):
-    
+def assemble_dataset(raw_word_src="./data/features/word_histogram_union_raw.csv",
+                     pruned_word_src="./data/features/word_histogram_union_pruned.csv",
+                     sent_src="./data/features/sentence_lengths_raw.json",
+                     metadata_src="./data/metadata.csv",
+                     commonality_threshhold=0.8,
+                     groupby=["first_author","first_author_institution","first_author_country"],
+                     crossval_splits=1):
     metadata_df = load_metadata(metadata_src)
-    if dataset is None:
-        union_raw_word_df = load_csv(raw_word_src)
-        union_pruned_word_df = load_csv(pruned_word_src)
-        # NOTE: max_len 50 is chosen here, because it is twice the commonly recommended max sentence lenght of 25
-        raw_sentence_df, raw_sentence_dict = load_sentence_json(sent_src, max_len=45)
+    union_raw_word_df = load_csv(raw_word_src)
+    union_pruned_word_df = load_csv(pruned_word_src)
+    # NOTE: max_len 50 is chosen here, because it is twice the commonly recommended max sentence lenght of 25
+    raw_sentence_df, raw_sentence_dict = load_sentence_json(sent_src, max_len=45)
 
-        # get supplementary features
-        sentence_stats = get_mean_and_stdev_sent(raw_sentence_df)
-        easy_word_ratios = get_easy_words_count(union_raw_word_df)[["easy_word_ratio"]]
-        syllable_counts = get_syllable_counts(union_raw_word_df)
-        # NOTE: choice of commonality theshhold was relatively arbitrary
-        common_word_counts = get_common_word_df(union_pruned_word_df, commonality_thershhold=commonality_threshhold, cutoff=-1)
+    # get supplementary features
+    sentence_stats = get_mean_and_stdev_sent(raw_sentence_df)
+    easy_word_ratios = get_easy_words_count(union_raw_word_df)[["easy_word_ratio"]]
+    syllable_counts = get_syllable_counts(union_raw_word_df)
+    # NOTE: choice of commonality theshhold was relatively arbitrary
+    common_word_counts = get_common_word_df(union_pruned_word_df, commonality_thershhold=commonality_threshhold, cutoff=-1)
 
-        # normalize supplementary feature dfs where appropriate
-        if normalize:
-            syllable_ratios_array = normalize_word_rows(syllable_counts.to_numpy())
-            syllable_ratios = pd.DataFrame(data=syllable_ratios_array, index=syllable_counts.index, columns=syllable_counts.columns)
-            common_word_ratios_array = normalize_word_rows(common_word_counts.to_numpy())
-            common_word_ratios = pd.DataFrame(data=common_word_ratios_array, index=common_word_counts.index, columns=common_word_counts.columns)
-            data_set_handles = ["'{}' freq.", "{}-syllable freq.", "easy word ratio", "sentence {}"]
-            data_sets = [common_word_ratios, syllable_ratios, easy_word_ratios, sentence_stats]
-        else:
-            data_set_handles = ["'{}' count", "{}-syllable count", "easy word ratio", "sentence {}"]
-            data_sets = [common_word_counts, syllable_counts, easy_word_ratios, sentence_stats]
-        dataset = unify_data_sets(data_sets, data_set_handles)
+    syllable_ratios_array = normalize_word_rows(syllable_counts.to_numpy())
+    syllable_ratios = pd.DataFrame(data=syllable_ratios_array, index=syllable_counts.index, columns=syllable_counts.columns)
+    common_word_ratios_array = normalize_word_rows(common_word_counts.to_numpy())
+    common_word_ratios = pd.DataFrame(data=common_word_ratios_array, index=common_word_counts.index, columns=common_word_counts.columns)
+    data_set_handles = ["'{}' freq.", "{}-syllable freq.", "easy word ratio", "sentence {}"]
+    data_sets = [common_word_ratios, syllable_ratios, easy_word_ratios, sentence_stats]
+    dataset = unify_data_sets(data_sets, data_set_handles)
+    
+    group_axes = get_groupings(metadata_df, groupby)
+    group_selections = {}
+    for group_axis in group_axes.keys():
+        axis_wise_groupings = group_axes[group_axis]
+        group_selections[group_axis] = select_grouping(dataset, axis_wise_groupings, crossval_split=crossval_splits)
 
-    # compute groupings
-    groupings = get_groupings(metadata_df, groupby) # NOTE: This returns multiple groups collected in a dict of dicts. DO NOT PASS DIRECTLY TO grouped_distribution_divergence
+    return group_selections
 
-    event_sets = calculate_bins(dataset, num_bins=num_bins)
-
-    result_dfs = {}
-
-    for group_name in groupings.keys():
-        distribution_divergence_df = grouped_distribution_divergence(dataset, 
-                                                                    groupings=groupings[group_name],
-                                                                    event_sets=event_sets,
-                                                                    sampling_num=sampling_num,
-                                                                    min_group_size=20,
-                                                                    crossval_split=crossval_split,
-                                                                    lower_divergence_bound=lower_divergence_bound,
-                                                                    bandwidth_scale=bandwidth_scale,
-                                                                    select_num=select_num,
-                                                                    greedy=greedy_select)
-        result_dfs[group_name] = distribution_divergence_df
-
-    return result_dfs, dataset
-
-def select_and_predict(split_result, bandwidth_scale=0.2, lower_divergence_bound=0.9, select_num=2, greedy=False):
-    split_divergence_df = split_result["div_df"]
-    split_holdout = split_result["test"]
-    split_train = split_result["train"]
-    split_group_names = split_result["group_names"]
-    _, selected_features = select_features(split_divergence_df, lower_divergence_bound=lower_divergence_bound, select_num=select_num, greedy=greedy)
+def predict(selected_features, train_samples, test_samples):
     train_dict = {}
     test_dict = {}
-    for i, group_name_inner in enumerate(split_group_names):
-        train_dict[group_name_inner] = split_train[i][selected_features]
-        test_dict[group_name_inner] = split_holdout[i][selected_features].to_numpy()
+    for group_name in train_samples.keys():
+        train_dict[group_name] = train_samples[group_name][selected_features]
+        test_dict[group_name] = test_samples[group_name][selected_features].to_numpy()
     group_predictor = Group_Predictor_statsmodels()
     group_predictor.fit(train_dict)
     group_prediction = group_predictor.predict(test_dict)
     return group_prediction
 
-def prediction_pipe( raw_word_src="./data/features/word_histogram_union_raw.csv",
-                    pruned_word_src="./data/features/word_histogram_union_pruned.csv",
-                    sent_src="./data/features/sentence_lengths_raw.json",
-                    metadata_src="./data/metadata.csv",
-                    groupby=["first_author","first_author_institution","first_author_country"],
-                    normalize=True,
-                    crossval_split=5,
-                    bandwidth_scale=0.2,
-                    dataset=None,
+def merge_div_dfs(div_dfs, select_num):
+    if len(div_dfs.keys()) == 1:
+        return div_dfs[0], pd.DataFrame(data=np.zeros_like(div_dfs[0]), columns=div_dfs[0].columns, index=div_dfs[0].index)
+    else:
+        value_arrays = [np.expand_dims(div_dfs[0].to_numpy(), 0)]
+        columns = div_dfs[0].columns
+        index = div_dfs[0].index
+        for split_id in div_dfs.keys()[1:]:
+            div_df = div_dfs[split_id]
+            assert all(columns == div_df.colums)
+            assert all(index == div_df.index)
+            value_arrays.append(np.expand_dims(div_df.to_numpy(),0))
+        stacked_values = np.append(value_arrays[0], value_arrays[1:], axis=0)
+        mean_values = np.mean(stacked_values, axis=0, keepdims=False)
+        stdev_values = np.sqrt(np.var(stacked_values, axis=0, keepdims=False))
+        mean_df = pd.DataFrame(data=mean_values, index=index, columns=columns)
+        stdev_values = pd.DataFrame(data=stdev_values, index=index, columns=columns)
+        selected_features_df, selected_features = select_features(mean_df, select_num=select_num)
+        return selected_features_df, stdev_values[selected_features]        
+
+def get_selected_features_ratios(selected_features_dict):
+    splits = len(selected_features_dict.keys())
+    selected_feature_ratios = {}
+    for split_id in selected_features_dict.keys():
+        selected_features = selected_features_dict[split_id]
+        for selected_feature in selected_features:
+            if selected_feature in selected_feature_ratios.keys():
+                selected_feature_ratios[selected_feature] += 1/splits
+            else:
+                selected_feature_ratios[selected_feature] = 1/splits
+    return selected_feature_ratios
+
+def prediction_pipe(raw_word_src="./data/features/word_histogram_union_raw_category.csv",
+                    pruned_word_src="./data/features/word_histogram_union_pruned_category.csv",
+                    sent_src="./data/features/sentence_lengths_raw_category.json",
+                    metadata_src="./data/top8-authors-category.csv",
+                    groupby=["first_author"],
+                    crossval_splits=5,
                     select_num=2,
-                    greedy_select=False,
-                    lower_divergence_bound=0.9,
-                    commonality_threshhold=0.9):
-    result_dict, _ = feature_analysis_pipe(raw_word_src=raw_word_src,
+                    commonality_threshhold=0.95,
+                    num_feat_select_bins=100):
+    
+    axis_group_selections = assemble_dataset(raw_word_src=raw_word_src, 
                                         pruned_word_src=pruned_word_src,
                                         sent_src=sent_src,
                                         metadata_src=metadata_src,
+                                        commonality_threshhold=commonality_threshhold,
                                         groupby=groupby,
-                                        normalize=normalize,
-                                        crossval_split=crossval_split,
-                                        bandwidth_scale=bandwidth_scale,
-                                        num_bins=20,
-                                        dataset=dataset,
-                                        select_num=select_num,
-                                        greedy_select=greedy_select,
-                                        lower_divergence_bound=lower_divergence_bound,
-                                        commonality_threshhold=commonality_threshhold)
+                                        crossval_splits=crossval_splits)
+    predictions_dict = {}
     performances_dict = {}
-    absolute_prerformances = {}
-    for group_name in result_dict.keys():
-        split_result_dicts = result_dict[group_name]
-        split_predictions = []
+    selected_feature_ratios_dict = {}
+    mean_selected_feature_df_dict = {}
+    stdev_selected_feature_df_dict = {}
+    for group_axis in axis_group_selections.keys():
+        group_selections = axis_group_selections[group_axis]
+        result_dict = grouped_distribution_divergence(group_selections=group_selections, num_bins=num_feat_select_bins)
 
-        for split in split_result_dicts.keys():
-            split_result_dict = split_result_dicts[split]
-            split_prediction = select_and_predict(split_result_dict, bandwidth_scale=bandwidth_scale, lower_divergence_bound=lower_divergence_bound, select_num=select_num, greedy=greedy_select)
-            split_predictions.append(split_prediction)
+        selected_features_dict = {}
+        div_dfs = {}
+        split_predictions = {}
+        for split_id in result_dict.keys():
+            div_df = result_dict[split_id]["div_df"]
+            test_set = result_dict[split_id]["test"]
+            train_set = result_dict[split_id]["train"]
+            selected_feature_df, selected_features = select_features(div_df, select_num=select_num)
+            div_dfs[split_id] = div_df
+            selected_features_dict[split_id] = selected_features
+            prediction_result = predict(selected_features=selected_features, test_samples=test_set, train_samples=train_set)
+            split_predictions[split_id] = prediction_result
+
         avg_performance = average_over_row_group(split_predictions)
         conf_mats = get_confusion_mats(split_predictions)
+        selected_feature_ratios = get_selected_features_ratios(selected_features_dict)
+        mean_selected_feature_df, stdev_selected_feature_df = merge_div_dfs(div_dfs, select_num=select_num)
 
-        performances_dict[group_name] = avg_performance
-        absolute_prerformances[group_name] = conf_mats
+        predictions_dict[group_axis] = avg_performance
+        performances_dict[group_axis] = conf_mats
+        selected_feature_ratios_dict[group_axis] = selected_feature_ratios
+        mean_selected_feature_df_dict[group_axis] = mean_selected_feature_df
+        stdev_selected_feature_df_dict[group_axis] = stdev_selected_feature_df
 
-    return performances_dict, absolute_prerformances
+    return predictions_dict, performances_dict, selected_feature_ratios_dict, mean_selected_feature_df_dict, stdev_selected_feature_df_dict
 
 def analyze_word_histograms(
     csv_path: str,
@@ -633,59 +592,12 @@ def analyze_word_histograms(
 
     return results
 
-class Group_Predictor_sklearn:
-    def __init__(self, bandwidth="silverman", kernel="gaussian", assume_equal_p_groups=True):
-        self.bandwidth_estimator = bandwidth
-        self.kernel = kernel
-        self.assume_equal_p_groups = assume_equal_p_groups
-    
-    def fit(self, sample_df_dict):
-        self.group_names = list(sample_df_dict.keys())
-        self.feature_names = list(sample_df_dict[self.group_names[0]].columns) # assume all dfs have the same cols
-
-        self.p_feats_given_group = {}
-        self.p_groups = []
-        total_samples = 0
-        for key in self.group_names:
-            sample_set = sample_df_dict[key]
-            feature_wise_kdes = []
-            for feature in self.feature_names:
-                samples = sample_set[feature].to_numpy()
-                feature_wise_kdes.append(KernelDensity(bandwidth=self.bandwidth_estimator, kernel=self.kernel).fit(samples))
-            self.p_feats_given_group[key] = feature_wise_kdes
-
-            if self.assume_equal_p_groups:
-                self.p_groups.append(1/len(self.group_names))
-            else:
-                self.p_groups.append(sample_set.to_numpy().shape[0])
-                total_samples += sample_set.to_numpy().shape[0]
-        
-        if not self.assume_equal_p_groups:
-            self.p_groups = list(map(lambda x: x/total_samples, self.p_groups))
-
-    def predict(self, sample_array_dict):
-        samples = np.vstack([sample_array_dict[key] for key in sample_array_dict.keys()])
-        sample_ids = []
-        for key in sample_array_dict.keys():
-            sample_ids = sample_ids + [key]*sample_array_dict[key].shape[0]
-        joined_group_probabilities = []
-        for group_idx, group_name in enumerate(self.group_names):
-            sample_scores = [self.p_feats_given_group[idx].score_samples(samples[:,idx]) for idx in range(len(self.feature_names))] # assumes identical feature ordering in fit and predict
-            feat_likelihoods = np.array(map(np.exp, sample_scores))
-            p_joined = np.prod(feat_likelihoods)*self.p_groups[group_idx]
-            joined_group_probabilities.append(np.expand_dims(p_joined, axis=0))
-
-        joined_group_probabilities_array = np.vstack(joined_group_probabilities)
-        evidence = np.sum(joined_group_probabilities_array, axis=0)
-        author_probs = joined_group_probabilities_array / evidence
-        author_prob_df = pd.DataFrame(data=author_probs.T, index=sample_ids, columns=self.group_names)
-        return author_prob_df
-
 class Group_Predictor_statsmodels:
-    def __init__(self, bandwidth="cv_ml", kernel="gaussian", assume_equal_p_groups=True):
+    def __init__(self, bandwidth="cv_ml", kernel="gaussian", assume_equal_p_groups=True, eps=np.finfo(np.float64).eps):
         self.bandwidth = bandwidth
         self.kernel = kernel
         self.assume_equal_p_groups = assume_equal_p_groups
+        self.eps = eps
 
     def fit(self, sample_df_dict):
         self.group_names = list(sample_df_dict.keys())
@@ -727,6 +639,7 @@ class Group_Predictor_statsmodels:
             likelihood_group_given_sample = self.p_joint.pdf(full_samples)
             ps_group_given_sample.append(likelihood_group_given_sample.T)
         p_feats = np.sum(np.vstack(ps_group_given_sample), axis=0) # marginalize authors out
+        p_feats[p_feats == 0] = self.eps # set zero values to eps for numerical stability
         result_probs = []
         for ps in ps_group_given_sample:
             result_probs.append(ps/p_feats)
@@ -735,32 +648,31 @@ class Group_Predictor_statsmodels:
         return author_prob_df
 
 def main():
-    select_nums = [1,2,4,8,16,32,64,128,256]
-    dataset = None
-    overall_performances = defaultdict(list)
+    raw_word_src="./data/features/word_histogram_union_raw_category.csv"
+    pruned_word_src="./data/features/word_histogram_union_pruned_category.csv"
+    sent_src="./data/features/sentence_lengths_raw_category.json"
+    metadata_src="./data/top8-authors-category.csv"
+    select_nums = [4]
     for select_num in select_nums:
-        if dataset is None:
-            feature_analysis_results, dataset = feature_analysis_pipe(groupby=["first_author"], num_bins=200, greedy_select=True, select_num=select_num, commonality_threshhold=0.8)
-        else:
-            feature_analysis_results, _ = feature_analysis_pipe(groupby=["first_author"], num_bins=200, dataset=dataset, greedy_select=True, select_num=select_num, commonality_threshhold=0.8)
-        
-        prediction_results, confusion_mats = prediction_pipe(groupby=["first_author"], dataset=dataset, greedy_select=True, select_num=select_num, commonality_threshhold=0.8)
-        for key in prediction_results.keys():
-            feature_analysis_result = feature_analysis_results[key]
-            prediction_result = prediction_results[key]
-            confusion_mat = confusion_mats[key]
-            visualize_multiindex_df(feature_analysis_result, key + "_feature_analysis", f"./feat_analysis_features_{str(select_num).replace(".",",")}.png", (30,10), False)
-            visualize_df_heatmap(prediction_result, key + "_prediction_performance", f"./pred_performance_features_{str(select_num).replace(".",",")}.png", (30,10), True, True)
-            visualize_df_heatmap(confusion_mat, key + "_prediction_conf_mat", f"./pred_conf_mat_features_{str(select_num).replace(".",",")}.png", (30,10), True, True)
-            overall_performances[key].append(confusion_mat * np.identity(confusion_mat.shape[0]))
-
-    for key in overall_performances.keys():
-        performances = [np.sum(overall_performance.to_numpy()) for overall_performance in overall_performances[key]]
-        best_performance = max(performances)
-        best_performance_idx = performances.index(best_performance)
-        best_num_features = select_nums[best_performance_idx]
-
-        print(f"For the Grouping {key}: \n \t best avg success rate: {best_performance} \n \t best number of features: {best_num_features}")
+        predictions, performances, feature_selection_ratios, feature_selection_dfs, feature_selection_stdev_dfs = prediction_pipe(raw_word_src=raw_word_src, 
+                        pruned_word_src=pruned_word_src, 
+                        sent_src=sent_src, 
+                        metadata_src=metadata_src, 
+                        select_num=select_num,
+                        commonality_threshhold=0.9,
+                        num_feat_select_bins=100,
+                        groupby=["first_author"])
+        for key in predictions.keys():
+            prediction = predictions[key]
+            performance = performances[key]
+            feature_selection_ratio = feature_selection_ratios[key]
+            feature_selection_df = feature_selection_dfs[key]
+            feature_selection_stdev_df = feature_selection_stdev_dfs[key]
+            print(feature_selection_ratio)
+            visualize_multiindex_df(feature_selection_df, key + "_feature_analysis", f"./feat_analysis_features_{str(select_num).replace(".",",")}.png", False)
+            visualize_multiindex_df(feature_selection_stdev_df, key + "_feature_analysis_stdev", f"./feat_analysis_stdev_features_{str(select_num).replace(".",",")}.png", False)
+            visualize_df_heatmap(prediction, key + "_prediction_performance", f"./pred_performance_features_{str(select_num).replace(".",",")}.png", True, True)
+            visualize_df_heatmap(performance, key + "_prediction_conf_mat", f"./pred_conf_mat_features_{str(select_num).replace(".",",")}.png", True, True)
 
 if __name__ == "__main__":
     main()

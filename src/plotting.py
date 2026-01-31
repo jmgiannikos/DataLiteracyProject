@@ -259,14 +259,16 @@ def plot_sentence_length_distribution(
 
     plt.close()
 
-def visualize_df_heatmap(data_df, title, save_path, figsize=(1,1), annot=False, confmat=False):
+def visualize_df_heatmap(data_df, title, save_path, annot=False, confmat=False):
     sns.color_palette("flare_r", as_cmap=True)
-    fig, ax = plt.subplots(figsize=figsize)  # Set the figure size
-    ax = sns.heatmap(data_df, ax=ax, annot=annot, vmin=0, vmax=1)
-    ax.set_title(title)
+    fig, ax = plt.subplots()  # Set the figure size
     if confmat:
+        ax = sns.heatmap(data_df, ax=ax, annot=True)
         ax.set_xlabel("True Class")
         ax.set_ylabel("Predicted Class")
+    else:
+        ax = sns.heatmap(data_df, ax=ax, annot=annot, vmin=0, vmax=1)
+    ax.set_title(title)
     if save_path:
         plt.savefig(save_path, dpi=150, bbox_inches='tight')
         logger.info(f"Saved distribution plot to {save_path}")
@@ -280,11 +282,12 @@ def shorten_name(name):
     for name_part in name_parts[:-1]:
         abbreviated_name = abbreviated_name + name_part[:1].upper()+". "
     abbreviated_name = abbreviated_name + name_parts[-1]
+    return abbreviated_name
 
-def visualize_multiindex_df(data_df, title, save_path, figsize=(1,1), annot=False):
+def visualize_multiindex_df(data_df, title, save_path, annot=False):
     # source: https://stackoverflow.com/questions/64234474/how-to-customize-y-labels-in-seaborn-heatmap-when-i-use-a-multi-index-dataframe/64234715#64234715
     sns.color_palette("flare_r", as_cmap=True)
-    fig, ax = plt.subplots(figsize=figsize) 
+    fig, ax = plt.subplots() 
     ax = sns.heatmap(data_df, ax=ax, annot=annot, vmin=0, vmax=1)
     ax.set_title(title)
 
@@ -309,7 +312,7 @@ def visualize_multiindex_df(data_df, title, save_path, figsize=(1,1), annot=Fals
 
     ax.hlines(hline, xmin=-1, xmax=len(data_df.columns), color="white", linewidth=5)
     ax.set_yticklabels(new_ylabels)
-
+    ax.set_ylabel("")
     if save_path:
         plt.savefig(save_path, dpi=150, bbox_inches='tight')
         logger.info(f"Saved distribution plot to {save_path}")

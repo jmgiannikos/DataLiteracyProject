@@ -9,6 +9,7 @@ from datetime import datetime
 from typing import Optional, Dict, Any, List, Set, Union
 from urllib.parse import quote
 from src.utils import sanitize_article_id as sanitize_filename
+from src.utils import remove_duplicate_papers, merge_duplicate_authors, select_top_n_authors
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -554,7 +555,7 @@ def enrich_paper_metadata(paper_data: Dict[str, Any],
 
 
 def enrich_metadata_dataframe(input_df: pd.DataFrame, contact_email: Optional[str] = None,
-                             cache_dir: str = "data/cache", output_path: str = "data/metadata.csv") -> pd.DataFrame:
+                             cache_dir: str = "data/cache", output_path: str = "data/metadata.csv", select_topn=True) -> pd.DataFrame:
     """
     Args:
         input_df: DataFrame containing arXiv papers (must have 'arxiv_id', 'doi', 'journal_ref', 'title')
@@ -604,6 +605,11 @@ def enrich_metadata_dataframe(input_df: pd.DataFrame, contact_email: Optional[st
 
     # Create metadata dataframe
     metadata_df = pd.DataFrame(enriched_records)
+
+    metadata_df = merge_duplicate_authors(metadata_df)
+    # metadata_df = remove_duplicate_papers(metadata_df)
+    if select_topn:
+        metadata_df = select_top_n_authors(metadata_df)
 
     # Save to CSV
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
