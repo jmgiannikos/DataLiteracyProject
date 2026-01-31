@@ -5,6 +5,7 @@ from typing import List, Tuple, Optional, Dict, Set
 import logging
 import json
 import textstat
+from collections import defaultdict
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -20,7 +21,7 @@ def load_metadata(csv_path: str) -> pd.DataFrame:
     new_index = []
     # reindex to be in line with word_hist csvs and sentence lenght jsons
     for file_id in index:
-        new_index.append(file_id.replace("/", "_"))
+        new_index.append(str(file_id).replace("/", "_"))
     data_df = pd.DataFrame(data=numpy_data, index=new_index, columns=col_names)
     return data_df
 
@@ -78,7 +79,9 @@ def load_csv(csv_path: str) -> pd.DataFrame:
 
     Source: jan-analysis/analysis.py
     """
-    data_df = pd.read_csv(csv_path, header=0, index_col=0)
+    types = defaultdict(lambda: np.int32)
+    types["Data Name"] = str
+    data_df = pd.read_csv(csv_path, header=0, index_col=0, dtype=types)
     data_df.drop_duplicates(inplace=True)
 
     # Remove rows with zero total word count

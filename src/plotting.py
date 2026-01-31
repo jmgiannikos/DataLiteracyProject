@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from typing import List, Tuple, Optional, Dict, Set
 import logging
 import seaborn as sns
+from collections import OrderedDict
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
@@ -10,6 +11,14 @@ logger = logging.getLogger(__name__)
 # =============================================================================
 # VISUALIZATION FUNCTIONS
 # =============================================================================
+
+def plot_selected_feature_dists(feature_distributions, selected_features):
+    feature_dict = {}
+    for feature in selected_features:
+        fig, axs = plt.subplots(len(feature_distributions.keys()))
+        for axidx, group_key in enumerate(feature_distributions.keys()):
+            axs[axidx].bar(range(len(feature_distributions[group_key][feature])), feature_distributions[group_key][feature])
+        plt.show()
 
 def get_author_entries(
     author_handles: np.ndarray,
@@ -250,10 +259,57 @@ def plot_sentence_length_distribution(
 
     plt.close()
 
-def visualize_df_heatmap(data_df, title, save_path, figsize=(1,1), annot=False):
+def visualize_df_heatmap(data_df, title, save_path, figsize=(1,1), annot=False, confmat=False):
+    sns.color_palette("flare_r", as_cmap=True)
     fig, ax = plt.subplots(figsize=figsize)  # Set the figure size
-    ax = sns.heatmap(data_df, ax=ax, annot=annot)
+    ax = sns.heatmap(data_df, ax=ax, annot=annot, vmin=0, vmax=1)
     ax.set_title(title)
+    if confmat:
+        ax.set_xlabel("True Class")
+        ax.set_ylabel("Predicted Class")
+    if save_path:
+        plt.savefig(save_path, dpi=150, bbox_inches='tight')
+        logger.info(f"Saved distribution plot to {save_path}")
+    else:
+        plt.show()
+
+# TODO: move to utils.py or something
+def shorten_name(name):
+    name_parts = name.split(" ")
+    abbreviated_name = ""
+    for name_part in name_parts[:-1]:
+        abbreviated_name = abbreviated_name + name_part[:1].upper()+". "
+    abbreviated_name = abbreviated_name + name_parts[-1]
+
+def visualize_multiindex_df(data_df, title, save_path, figsize=(1,1), annot=False):
+    # source: https://stackoverflow.com/questions/64234474/how-to-customize-y-labels-in-seaborn-heatmap-when-i-use-a-multi-index-dataframe/64234715#64234715
+    sns.color_palette("flare_r", as_cmap=True)
+    fig, ax = plt.subplots(figsize=figsize) 
+    ax = sns.heatmap(data_df, ax=ax, annot=annot, vmin=0, vmax=1)
+    ax.set_title(title)
+
+    ylabel_mapping = OrderedDict()
+    for group_a, group_b in data_df.index:
+        group_a = shorten_name(group_a)
+        group_b = shorten_name(group_b)
+        ylabel_mapping.setdefault(group_a, [])
+        ylabel_mapping[group_a].append(group_b)
+        
+    hline = []
+    new_ylabels = []
+    for group_a, group_b_list in ylabel_mapping.items():
+        group_b_list[0] = "{} - {}".format(group_a, group_b_list[0])
+        new_ylabels.extend(group_b_list)
+        
+        if hline:
+            hline.append(len(group_b_list) + hline[-1])
+        else:
+            hline.append(len(group_b_list))
+
+
+    ax.hlines(hline, xmin=-1, xmax=len(data_df.columns), color="white", linewidth=5)
+    ax.set_yticklabels(new_ylabels)
+
     if save_path:
         plt.savefig(save_path, dpi=150, bbox_inches='tight')
         logger.info(f"Saved distribution plot to {save_path}")
