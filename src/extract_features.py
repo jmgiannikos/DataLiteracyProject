@@ -115,7 +115,8 @@ def get_word_histogram(
         try:
             spell_dict = enchant.Dict("en_US")
         except Exception as e:
-            logger.warning(f"Could not initialize spell-checker: {e}. Continuing without.")
+            # This is expected if enchant C library isn't configured - spell checking is optional
+            logger.debug(f"Could not initialize spell-checker: {e}. Continuing without.")
             spell_dict = None
     elif check_spelling and not HAS_ENCHANT:
         logger.debug("PyEnchant not installed. Spell-checking disabled.")
@@ -480,15 +481,17 @@ def batch_extract_features(
             sentence_lists.append(sentences)
             data_handles.append(doc_id)
 
-            # Save individual feature file
+            # Save individual feature file only if it doesn't exist
             feature_file = output_path / f"{doc_id}_features.json"
-            # Convert to JSON-serializable format (exclude large histogram)
-            feature_summary = {k: v for k, v in features.items() if k != 'word_histogram'}
-            feature_summary['vocabulary_size'] = len(features['word_histogram'])
-            with open(feature_file, 'w', encoding='utf-8') as f:
-                json.dump(feature_summary, f, indent=2)
-
-            logger.info(f"Extracted features for {doc_id}")
+            if not feature_file.exists():
+                # Convert to JSON-serializable format (exclude large histogram)
+                feature_summary = {k: v for k, v in features.items() if k != 'word_histogram'}
+                feature_summary['vocabulary_size'] = len(features['word_histogram'])
+                with open(feature_file, 'w', encoding='utf-8') as f:
+                    json.dump(feature_summary, f, indent=2)
+                logger.info(f"Extracted features for {doc_id}")
+            else:
+                logger.debug(f"Skipping individual feature file for {doc_id} (already exists)")
 
         except Exception as e:
             logger.error(f"Failed to extract features from {txt_file}: {e}")

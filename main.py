@@ -401,6 +401,26 @@ def step6_run_analysis():
 
 
 # =============================================================================
+# STEP 7: Standalone Feature Extraction
+# =============================================================================
+def step7_standalone_feature_extraction():
+    """
+    Apply batch_extract_features to all currently available text in the cache.
+    """
+    logger.info("STEP 7: Standalone feature extraction from text cache")
+    ensure_cache_dir()
+    
+    if not CACHE_DIR.exists() or not list(CACHE_DIR.glob("*.txt")):
+        logger.warning(f"No text files found in {CACHE_DIR}. Skipping.")
+        return None
+
+    FEATURES_DIR.mkdir(parents=True, exist_ok=True)
+    features = batch_extract_features(str(CACHE_DIR), str(FEATURES_DIR), generate_csv=True)
+    logger.info(f"Standalone feature extraction complete: {len(features)} documents processed")
+    return features
+
+
+# =============================================================================
 # MAIN PIPELINE
 # =============================================================================
 def main():
@@ -410,7 +430,15 @@ def main():
     """
     parser = argparse.ArgumentParser(description="arXiv Data Pipeline")
     parser.add_argument("-s", "--start-index", type=int, default=0, help="Index of paper to start from in Step 5 (default: 0)")
+    parser.add_argument("--skip-to", type=int, choices=range(1, 8), help="Skip directly to a specific step (1-7)")
+    parser.add_argument("--features-only", action="store_true", help="Shortcut to run only Step 7 (standalone feature extraction)")
     args = parser.parse_args()
+
+    # Handle shortcut
+    if args.features_only:
+        args.skip_to = 7
+
+    skip_to = args.skip_to if args.skip_to else 1
 
     print("=" * 60)
     print("ARXIV DATA PIPELINE - Starting")
@@ -419,42 +447,68 @@ def main():
     print(f"Years: {YEARS[0]} to {YEARS[-1]}")
     if args.start_index > 0:
         print(f"Manual Start Index: {args.start_index}")
+    if skip_to > 1:
+        print(f"Skipping to Step {skip_to}")
 
     # Step 1: Collect papers
-    print("\n" + "=" * 60)
-    print("STEP 1: Collecting papers from arXiv")
-    print("=" * 60)
-    step1_collect_papers()
+    if skip_to <= 1:
+        print("\n" + "=" * 60)
+        print("STEP 1: Collecting papers from arXiv")
+        print("=" * 60)
+        step1_collect_papers()
 
     # Step 2: Merge to raw dataset
-    print("\n" + "=" * 60)
-    print("STEP 2: Merging to raw dataset")
-    print("=" * 60)
-    raw_df = step2_merge_to_raw_dataset()
+    raw_df = None
+    if skip_to <= 2:
+        print("\n" + "=" * 60)
+        print("STEP 2: Merging to raw dataset")
+        print("=" * 60)
+        raw_df = step2_merge_to_raw_dataset()
 
     # Step 3: Enrich metadata
-    print("\n" + "=" * 60)
-    print("STEP 3: Enriching metadata")
-    print("=" * 60)
-    enriched_df = step3_enrich_metadata()
+    enriched_df = None
+    if skip_to <= 3:
+        print("\n" + "=" * 60)
+        print("STEP 3: Enriching metadata")
+        print("=" * 60)
+        enriched_df = step3_enrich_metadata()
 
     # Step 4: Clean data
-    print("\n" + "=" * 60)
-    print("STEP 4: Cleaning data")
-    print("=" * 60)
-    cleaned_df = step4_clean_data()
+    cleaned_df = None
+    if skip_to <= 4:
+        print("\n" + "=" * 60)
+        print("STEP 4: Cleaning data")
+        print("=" * 60)
+        cleaned_df = step4_clean_data()
+    elif skip_to <= 5:
+        # Need cleaned_df for step 5
+        if CLEANED_DATASET_PATH.exists():
+            cleaned_df = pd.read_csv(CLEANED_DATASET_PATH)
+        else:
+            logger.error(f"Cannot skip to step 5: {CLEANED_DATASET_PATH} not found.")
+            return
 
     # Step 5: Extract features
-    print("\n" + "=" * 60)
-    print("STEP 5: Extracting features")
-    print("=" * 60)
-    processed_df = step5_extract_features(cleaned_df, start_index=args.start_index)
+    processed_df = None
+    if skip_to <= 5:
+        print("\n" + "=" * 60)
+        print("STEP 5: Extracting features")
+        print("=" * 60)
+        processed_df = step5_extract_features(cleaned_df, start_index=args.start_index)
 
     # Step 6: Run analysis
-    print("\n" + "=" * 60)
-    print("STEP 6: Running analysis")
-    print("=" * 60)
-    step6_run_analysis()
+    if skip_to <= 6:
+        print("\n" + "=" * 60)
+        print("STEP 6: Running analysis")
+        print("=" * 60)
+        step6_run_analysis()
+
+    # Step 7: Standalone Feature Extraction
+    if skip_to <= 7:
+        print("\n" + "=" * 60)
+        print("STEP 7: Standalone Feature Extraction (Batch)")
+        print("=" * 60)
+        step7_standalone_feature_extraction()
 
     # Summary
     print("\n" + "=" * 60)
