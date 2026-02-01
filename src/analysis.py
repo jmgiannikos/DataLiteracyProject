@@ -14,13 +14,13 @@ from sklearn.decomposition import PCA
 from typing import List, Tuple, Optional, Dict, Set
 import logging
 from scipy.spatial import distance
-from plotting import plot_loadings, plot_dim_reduced_data, visualize_df_heatmap, plot_selected_feature_dists, visualize_multiindex_df
+from src.plotting import plot_loadings, plot_dim_reduced_data, visualize_df_heatmap, plot_selected_feature_dists, visualize_multiindex_df
 from scipy.optimize import LinearConstraint, Bounds, milp
-from data_utils import load_csv, load_metadata, load_sentence_json, get_np_dataset, normalize_word_rows, \
+from src.data_utils import load_csv, load_metadata, load_sentence_json, get_np_dataset, normalize_word_rows, \
     get_mean_and_stdev_sent, get_easy_words_count, get_syllable_counts, get_common_word_df
 from collections import defaultdict
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
+#logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+#logger = logging.getLogger(__name__)
 
 # =============================================================================
 # DIMENSIONALITY REDUCTION FUNCTIONS
@@ -130,7 +130,7 @@ def unify_data_sets(data_sets, data_set_identifiers):
     unified_data_set = pd.DataFrame(data=global_data, index=index, columns=global_cols)
     return unified_data_set
 
-def select_grouping(data_set, groupings, crossval_split=0):
+def select_grouping(data_set, groupings, crossval_split=0, min_group_size=5):
     """
     select groups of dataset samples by pre-defined groupings passed as a dict of lists.
     lists must contain names that match data set row entries. 
@@ -150,7 +150,8 @@ def select_grouping(data_set, groupings, crossval_split=0):
     for group in groupings.keys():
         group_sample_idxs = groupings[group]
         group_mask = list(map(lambda x: x in group_sample_idxs, data_set.index))
-        group_selections[group] = data_set[group_mask]
+        if np.sum(group_mask) >= min_group_size:
+            group_selections[group] = data_set[group_mask]
 
     if crossval_split < 1:
         crossval_split = 1
@@ -166,7 +167,7 @@ def select_grouping(data_set, groupings, crossval_split=0):
         test_sets = {}
         train_sets = {}
         for group_idx, holdout_idx in enumerate(holdout_idxs):
-            group_name = list(groupings.keys())[group_idx]
+            group_name = list(group_selections.keys())[group_idx]
             holdout_idx_list = [group_selections[group_name].index[i] for i in holdout_idx]
             selection_mask = group_selections[group_name].index.isin(holdout_idx_list)
             test_sets[group_name] = group_selections[group_name][selection_mask]
@@ -326,13 +327,13 @@ def get_confusion_mats(dataframes):
 
 def select_features(pairwise_divergence_df, select_num=2):
     feature_selection_vector = greedy_feature_select(pairwise_divergence_df.to_numpy(), select_num=select_num)
-    selected_features = np.array(pairwise_divergence_df.columns)[feature_selection_vector] # binary masking operation
+    selected_features = np.array(pairwise_divergence_df.columns)[feature_selection_vector]
     selected_df = pairwise_divergence_df[selected_features]
     return selected_df, selected_features
 
 def greedy_feature_select(divergence_mat, select_num):
-    if select_num >= divergence_mat.shape[1]:
-        return np.ones((divergence_mat.shape[1],)) == 1
+    if select_num > divergence_mat.shape[1]:
+        select_num = divergence_mat.shape[1]
     selection_vector = np.zeros((divergence_mat.shape[1],))
     selection_order = []
     weight_vec = np.ones((divergence_mat.shape[0],))
@@ -428,12 +429,12 @@ def merge_div_dfs(div_dfs, select_num):
         value_arrays = [np.expand_dims(div_dfs[0].to_numpy(), 0)]
         columns = div_dfs[0].columns
         index = div_dfs[0].index
-        for split_id in div_dfs.keys()[1:]:
+        for split_id in list(div_dfs.keys())[1:]:
             div_df = div_dfs[split_id]
-            assert all(columns == div_df.colums)
+            assert all(columns == div_df.columns)
             assert all(index == div_df.index)
             value_arrays.append(np.expand_dims(div_df.to_numpy(),0))
-        stacked_values = np.append(value_arrays[0], value_arrays[1:], axis=0)
+        stacked_values = np.vstack(value_arrays)
         mean_values = np.mean(stacked_values, axis=0, keepdims=False)
         stdev_values = np.sqrt(np.var(stacked_values, axis=0, keepdims=False))
         mean_df = pd.DataFrame(data=mean_values, index=index, columns=columns)
@@ -452,6 +453,13 @@ def get_selected_features_ratios(selected_features_dict):
             else:
                 selected_feature_ratios[selected_feature] = 1/splits
     return selected_feature_ratios
+
+def get_balanced_acc(conf_mats):
+    diag = np.identity(conf_mats.shape[0])
+    row_correct_predictions = np.sum(conf_mats.to_numpy() * diag, axis=1)
+    row_samples = np.sum(conf_mats.to_numpy(), axis=1)
+    balanced_acc = np.sum(row_correct_predictions/row_samples)/conf_mats.shape[0]
+    return balanced_acc
 
 def prediction_pipe(raw_word_src="./data/features/word_histogram_union_raw_category.csv",
                     pruned_word_src="./data/features/word_histogram_union_pruned_category.csv",
@@ -475,6 +483,7 @@ def prediction_pipe(raw_word_src="./data/features/word_histogram_union_raw_categ
     selected_feature_ratios_dict = {}
     mean_selected_feature_df_dict = {}
     stdev_selected_feature_df_dict = {}
+    balanced_acc_dict = {}
     for group_axis in axis_group_selections.keys():
         group_selections = axis_group_selections[group_axis]
         result_dict = grouped_distribution_divergence(group_selections=group_selections, num_bins=num_feat_select_bins)
@@ -496,101 +505,16 @@ def prediction_pipe(raw_word_src="./data/features/word_histogram_union_raw_categ
         conf_mats = get_confusion_mats(split_predictions)
         selected_feature_ratios = get_selected_features_ratios(selected_features_dict)
         mean_selected_feature_df, stdev_selected_feature_df = merge_div_dfs(div_dfs, select_num=select_num)
+        balanced_acc = get_balanced_acc(conf_mats)
 
+        balanced_acc_dict[group_axis] = balanced_acc
         predictions_dict[group_axis] = avg_performance
         performances_dict[group_axis] = conf_mats
         selected_feature_ratios_dict[group_axis] = selected_feature_ratios
         mean_selected_feature_df_dict[group_axis] = mean_selected_feature_df
         stdev_selected_feature_df_dict[group_axis] = stdev_selected_feature_df
 
-    return predictions_dict, performances_dict, selected_feature_ratios_dict, mean_selected_feature_df_dict, stdev_selected_feature_df_dict
-
-def analyze_word_histograms(
-    csv_path: str,
-    output_dir: Optional[str] = None,
-    n_components: int = 2,
-    perplexity: int = 30,
-    metadata_path: str = "data/metadata.csv"
-) -> Dict:
-    """
-    Perform complete analysis on word histogram CSV.
-
-    Args:
-        csv_path: Path to word histogram CSV
-        output_dir: Directory to save plots (if None, displays interactively)
-        n_components: Number of PCA/t-SNE components
-        perplexity: t-SNE perplexity parameter
-        metadata_path: Path to metadata CSV for author lookup
-
-    Returns:
-        Dictionary with analysis results
-    """
-    from pathlib import Path
-    logger.info(f"Analyzing {csv_path}...")
-
-    # Load metadata if available
-    metadata_df = None
-    if Path(metadata_path).exists():
-        try:
-            metadata_df = load_metadata(metadata_path)
-            logger.info(f"Loaded metadata from {metadata_path} for author lookup")
-        except Exception as e:
-            logger.warning(f"Failed to load metadata from {metadata_path}: {e}")
-
-    # Load and process data
-    data_df = load_csv(csv_path)
-    author_handles, feature_labels, data = get_np_dataset(data_df, metadata_df)
-    data_normalized = normalize_word_rows(data)
-
-    results = {
-        'n_documents': len(author_handles),
-        'n_features': len(feature_labels),
-        'unique_authors': list(set(author_handles))
-    }
-
-    # PCA analysis
-    logger.info("Running PCA...")
-    pca_data, loadings, variance = pca_dim_reduction(data_normalized, n_components)
-    results['pca_explained_variance'] = variance.tolist()
-
-    if output_dir:
-        from pathlib import Path
-        Path(output_dir).mkdir(parents=True, exist_ok=True)
-        base_name = Path(csv_path).stem
-
-        plot_dim_reduced_data(
-            pca_data, author_handles,
-            title=f"PCA - {base_name}",
-            save_path=f"{output_dir}/{base_name}_pca.png"
-        )
-        plot_loadings(
-            loadings, feature_labels,
-            save_path=f"{output_dir}/{base_name}_loadings"
-        )
-    else:
-        plot_dim_reduced_data(pca_data, author_handles, title="PCA Analysis")
-        plot_loadings(loadings, feature_labels)
-
-    # t-SNE analysis (only if enough samples)
-    if len(author_handles) > perplexity:
-        logger.info("Running t-SNE...")
-        tsne_data = tsne_dim_reduction(data_normalized, perplexity=perplexity)
-
-        if output_dir:
-            plot_dim_reduced_data(
-                tsne_data, author_handles,
-                title=f"t-SNE (perplexity={perplexity}) - {base_name}",
-                save_path=f"{output_dir}/{base_name}_tsne.png"
-            )
-        else:
-            plot_dim_reduced_data(
-                tsne_data, author_handles,
-                title=f"t-SNE (perplexity={perplexity})"
-            )
-    else:
-        logger.warning(f"Skipping t-SNE: need more than {perplexity} samples")
-
-    return results
+    return predictions_dict, performances_dict, selected_feature_ratios_dict, mean_selected_feature_df_dict, stdev_selected_feature_df_dict, balanced_acc_dict
 
 class Group_Predictor_statsmodels:
     def __init__(self, bandwidth="cv_ml", kernel="gaussian", assume_equal_p_groups=True, eps=np.finfo(np.float64).eps):
@@ -619,7 +543,11 @@ class Group_Predictor_statsmodels:
             self.p_groups = [sample_set.shape[0]/total_samples for sample_set in sample_sets]
         else:
             self.p_groups = [1/len(self.group_names)]*len(self.group_names)
-        
+
+        # hacky solution: If there are too few samples to perform bw opt with (more features than samples), simply duplicate each sample
+        # should result in an equivalent distribution overall.
+        if author_labelled_samples.shape[0] <= author_labelled_samples.shape[1]:
+            author_labelled_samples = np.vstack([author_labelled_samples, author_labelled_samples])
         self.p_joint = KDEMultivariate(author_labelled_samples, var_type="u"+"c"*total_features, bw="cv_ml")
         # NOTE: if the estimator sets this bw to 1 (which it sometimes does), the aitchison-aitken kernels return zero for all samples that have the same category as the sample around which the kernel is centered. This causes the model to effectively ignore entire groupings of kernels and results in inverted performance
         # to sidestep this issue, we set bw to 0.5, which should be equivalent to weighting by the incoming samples
@@ -647,32 +575,74 @@ class Group_Predictor_statsmodels:
         author_prob_df = pd.DataFrame(data=author_probs, index=sample_ids, columns=self.group_names)
         return author_prob_df
 
-def main():
-    raw_word_src="./data/features/word_histogram_union_raw_category.csv"
-    pruned_word_src="./data/features/word_histogram_union_pruned_category.csv"
-    sent_src="./data/features/sentence_lengths_raw_category.json"
-    metadata_src="./data/top8-authors-category.csv"
-    select_nums = [4]
+def pipeline_wrapper(root_folder, 
+                     metadata_src="metadata.csv", 
+                     sent_src="sentence_lengths_raw.json", 
+                     pruned_word_src="word_histogram_union_pruned.csv",
+                     raw_word_src="word_histogram_union_raw.csv",
+                     feature_select_nums = [32, 64, 128],
+                     show_graphics=False):
+    raw_word_src= root_folder + raw_word_src
+    pruned_word_src= root_folder + pruned_word_src
+    sent_src= root_folder + sent_src
+    metadata_src= root_folder + metadata_src
+    select_nums = feature_select_nums
+    metadata = load_metadata(metadata_src)
+    total_samples = metadata.shape[0]
+    sel_num_predictions = {}
+    sel_num_performances = {}
+    sel_num_feat_sel_ratios = {}
+    sel_num_feat_sel_dfs = {}
+    sel_num_feat_sel_stdev_dfs = {}
+    sel_num_balanced_accuracies = {}
+
     for select_num in select_nums:
-        predictions, performances, feature_selection_ratios, feature_selection_dfs, feature_selection_stdev_dfs = prediction_pipe(raw_word_src=raw_word_src, 
+        # bw optimization does not allow for more features than samples
+        # assumes crossval split of 5 -> 4/5ths of data used for training
+        if select_num > (total_samples*4)/5:
+            select_num = int((total_samples*4)/5)
+
+        # run prediction pipeline
+        (predictions, performances, 
+         feature_selection_ratios, 
+         feature_selection_dfs, 
+         feature_selection_stdev_dfs,
+         balanced_accuracies) = prediction_pipe(raw_word_src=raw_word_src, 
                         pruned_word_src=pruned_word_src, 
                         sent_src=sent_src, 
                         metadata_src=metadata_src, 
                         select_num=select_num,
-                        commonality_threshhold=0.9,
-                        num_feat_select_bins=100,
+                        commonality_threshhold=0.8,
+                        num_feat_select_bins=250,
                         groupby=["first_author"])
+        
+        # store values in return dicts
+        sel_num_predictions[select_num] = predictions
+        sel_num_performances[select_num] = performances
+        sel_num_feat_sel_ratios[select_num] = feature_selection_ratios
+        sel_num_feat_sel_dfs[select_num] = feature_selection_dfs
+        sel_num_feat_sel_stdev_dfs[select_num] = feature_selection_stdev_dfs
+        sel_num_balanced_accuracies[select_num] = balanced_accuracies
+        
+        # visualize
         for key in predictions.keys():
             prediction = predictions[key]
             performance = performances[key]
-            feature_selection_ratio = feature_selection_ratios[key]
-            feature_selection_df = feature_selection_dfs[key]
-            feature_selection_stdev_df = feature_selection_stdev_dfs[key]
-            print(feature_selection_ratio)
-            visualize_multiindex_df(feature_selection_df, key + "_feature_analysis", f"./feat_analysis_features_{str(select_num).replace(".",",")}.png", False)
-            visualize_multiindex_df(feature_selection_stdev_df, key + "_feature_analysis_stdev", f"./feat_analysis_stdev_features_{str(select_num).replace(".",",")}.png", False)
-            visualize_df_heatmap(prediction, key + "_prediction_performance", f"./pred_performance_features_{str(select_num).replace(".",",")}.png", True, True)
-            visualize_df_heatmap(performance, key + "_prediction_conf_mat", f"./pred_conf_mat_features_{str(select_num).replace(".",",")}.png", True, True)
+            visualize_df_heatmap(prediction, "Average Prediction",root_folder + f"pred_performance_features_{select_num}.png", annot=True, confmat=False, show_graphics=show_graphics)
+            visualize_df_heatmap(performance, "Confusion Matrix", root_folder + f"pred_conf_mat_features_{select_num}.png", annot=True, confmat=True, show_graphics=show_graphics)
+    
+            # dont even calculate feature selection graphic, if we dont show them
+            # these become unreadable quickly anyways. DF visualization is often superior
+            if show_graphics:
+                feature_selection_df = feature_selection_dfs[key]
+                feature_selection_stdev_df = feature_selection_stdev_dfs[key]
+                visualize_multiindex_df(feature_selection_df, key + " Feature Selection", root_folder + f"feat_analysis_features_{select_num}.png", False, show_graphics=show_graphics)
+                visualize_multiindex_df(feature_selection_stdev_df, key + " Feature Selection Stdev.", root_folder + f"feat_analysis_stdev_features_{select_num}.png", False, show_graphics=show_graphics)
+
+    return sel_num_predictions, sel_num_performances, sel_num_feat_sel_ratios, sel_num_feat_sel_dfs, sel_num_feat_sel_stdev_dfs, balanced_accuracies
+
+def main():
+    pipeline_wrapper("./data/mini-datasets/top8_authors/")
 
 if __name__ == "__main__":
     main()

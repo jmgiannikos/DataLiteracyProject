@@ -10,6 +10,8 @@ from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize, sent_tokenize
 import numpy as np
 from sklearn.linear_model import TheilSenRegressor, RANSACRegressor
+import pandas as pd
+from os.path import isfile
 
 # Optional dependency - graceful fallback if not installed
 try:
@@ -218,7 +220,7 @@ def check_zipfs_law(
             remaining_words[word] = count
         else:
             removed_count += 1
-            print(f"Removed word: {word} (count={count}, error={error:.2f})")
+            #print(f"Removed word: {word} (count={count}, error={error:.2f})")
             if verbose:
                 logger.info(f"Removed word: {word} (count={count}, error={error:.2f})")
 
@@ -438,7 +440,8 @@ def extract_features_from_text(
 def batch_extract_features(
     text_dir: str,
     output_dir: str = "data/features",
-    generate_csv: bool = True
+    generate_csv: bool = True,
+    metadata_df: pd.Dataframe = None
 ) -> List[Dict]:
     """
     Extract features from all text files in a directory.
@@ -455,7 +458,12 @@ def batch_extract_features(
     output_path = Path(output_dir)
     output_path.mkdir(parents=True, exist_ok=True)
 
-    txt_files = list(text_path.glob("*.txt"))
+    if metadata_df is None:
+        txt_files = list(text_path.glob("*.txt"))
+    else:
+        file_ids = metadata_df["arxiv_id"]
+        txt_files = [Path(str(text_path) + "/" + str(file_id) + ".txt") for file_id in file_ids if isfile(str(text_path) + "/" + str(file_id) + ".txt")]
+        assert len(txt_files) != 0
     logger.info(f"Processing {len(txt_files)} text files...")
 
     all_features = []

@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from typing import List, Tuple, Optional, Dict, Set
 import logging
 import seaborn as sns
+import pandas as pd
 from collections import OrderedDict
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -253,25 +254,35 @@ def plot_sentence_length_distribution(
 
     if save_path:
         plt.savefig(save_path, dpi=150, bbox_inches='tight')
-        logger.info(f"Saved distribution plot to {save_path}")
+        #logger.info(f"Saved distribution plot to {save_path}")
     else:
         plt.show()
 
     plt.close()
 
-def visualize_df_heatmap(data_df, title, save_path, annot=False, confmat=False):
+def visualize_df_heatmap(data_df, title, save_path, annot=False, confmat=False, show_graphics=False):
+    # shorten author names to align with feature selection visualization
+    new_index = [shorten_name(name) for name in data_df.index]
+    new_cols = [shorten_name(name) for name in data_df.columns]
+
+    data_df = pd.DataFrame(data=data_df.to_numpy(), index=new_index, columns=new_cols)
+
     sns.color_palette("flare_r", as_cmap=True)
     fig, ax = plt.subplots()  # Set the figure size
     if confmat:
         ax = sns.heatmap(data_df, ax=ax, annot=True)
-        ax.set_xlabel("True Class")
-        ax.set_ylabel("Predicted Class")
+        ax.set_xlabel("Predicted Author")
+        ax.set_ylabel("True Author")
     else:
         ax = sns.heatmap(data_df, ax=ax, annot=annot, vmin=0, vmax=1)
+        ax.set_xlabel("Prediction")
+        ax.set_ylabel("True Author")
     ax.set_title(title)
     if save_path:
         plt.savefig(save_path, dpi=150, bbox_inches='tight')
-        logger.info(f"Saved distribution plot to {save_path}")
+        #logger.info(f"Saved distribution plot to {save_path}")
+        if show_graphics:
+            plt.show()
     else:
         plt.show()
 
@@ -284,10 +295,30 @@ def shorten_name(name):
     abbreviated_name = abbreviated_name + name_parts[-1]
     return abbreviated_name
 
-def visualize_multiindex_df(data_df, title, save_path, annot=False):
+def compare_dataset_performances(performance_df, save_path):
+    ax = sns.barplot(performance_df, x="dataset",y="balanced_precision")
+    ax.set_xlabel("Dataset Name")
+    ax.set_ylabel("Balanced Precision")
+    plt.savefig(save_path, dpi=150, bbox_inches='tight')
+    plt.show()
+
+def plot_precision_progression(precision_values, num_features, save_path):
+    data = np.vstack([np.array(precision_values), np.array(num_features)]).T
+    data_df = pd.DataFrame(data=data, index=range(data.shape[0]), columns=["prec_vals", "num_feats"])
+    ax = sns.lineplot(data=data_df, x="num_feats", y="prec_vals")
+    ax.set_xlabel("Number of selected Features")
+    ax.set_ylabel("Balanced Precision")
+    plt.savefig(save_path, dpi=150, bbox_inches='tight')
+    plt.show()
+
+def visualize_multiindex_df(data_df, title, save_path, annot=False, x_ax_factor=0.5, y_ax_factor=0.5, label_offset=5, show_graphics=False):
     # source: https://stackoverflow.com/questions/64234474/how-to-customize-y-labels-in-seaborn-heatmap-when-i-use-a-multi-index-dataframe/64234715#64234715
+    df_size = list(data_df.shape)
+    figsize_width = df_size[1] * x_ax_factor + label_offset
+    figsize_height = df_size[0] * y_ax_factor
+    figsize = (figsize_width, figsize_height)
     sns.color_palette("flare_r", as_cmap=True)
-    fig, ax = plt.subplots() 
+    fig, ax = plt.subplots(figsize=figsize) 
     ax = sns.heatmap(data_df, ax=ax, annot=annot, vmin=0, vmax=1)
     ax.set_title(title)
 
@@ -300,7 +331,7 @@ def visualize_multiindex_df(data_df, title, save_path, annot=False):
         
     hline = []
     new_ylabels = []
-    for group_a, group_b_list in ylabel_mapping.items():
+    for group_a, group_b_list in ylabel_mapping.items():    
         group_b_list[0] = "{} - {}".format(group_a, group_b_list[0])
         new_ylabels.extend(group_b_list)
         
@@ -311,10 +342,12 @@ def visualize_multiindex_df(data_df, title, save_path, annot=False):
 
 
     ax.hlines(hline, xmin=-1, xmax=len(data_df.columns), color="white", linewidth=5)
-    ax.set_yticklabels(new_ylabels)
     ax.set_ylabel("")
+    ax.set_yticklabels(new_ylabels)
     if save_path:
         plt.savefig(save_path, dpi=150, bbox_inches='tight')
-        logger.info(f"Saved distribution plot to {save_path}")
+        #logger.info(f"Saved distribution plot to {save_path}")
+        if show_graphics:
+            plt.show()
     else:
         plt.show()

@@ -193,7 +193,7 @@ def remove_duplicate_papers(metadata_df, paper_name_col="title"):
     metadata_df = metadata_df[retained_papers_map]
     return metadata_df
 
-def select_top_n_authors(metadata_df, author_name_col="first_author", n=6):
+def select_top_n_authors(metadata_df, author_name_col="first_author", n=8):
     authors = list(set(metadata_df[author_name_col].to_list()))
     author_maps = np.zeros((metadata_df.shape[0], len(authors)))
     map_idx = 0
