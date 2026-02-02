@@ -377,4 +377,7 @@ def remove_papers_if_empty(metadata_df, union_raw, union_pruned, inter_raw, inte
     print(f'removed {n} empty papers')
     return new_m, new_u_r, new_u_p, new_i_r, new_i_p
 
-
+def remove_papers_with_sen_length(df, minlen, maxlen):
+    new_df = df[df.mean_sentence_length < maxlen]
+    new_df = new_df[new_df.mean_sentence_length > minlen]
+    return new_df
