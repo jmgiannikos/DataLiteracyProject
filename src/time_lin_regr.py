@@ -13,11 +13,15 @@ import json
 PATH_DATA = 'data/'
 PATH_METADATA = 'data/data/cleaned-with-features.csv'
 PATH_PUBLISHED_DATE = 'data/data/enriched-arxiv-dataset.csv'
-PATH_WORD_HIST_UNION = 'data/data/features/word_histogram_union_raw.csv'
-AUTHORS = ['Hongjie Dong', 'A. Mironov', 'Holger Dette', 'Duván Cardona', 'Liping Li', 'T. Tony Cai', 'Gen Li', 'László Csató']
+PATH_WORD_HIST_UNION = 'data/data/features/word_histogram_union_raw_batch1.csv'
+RESULTS = 'data/analysis/author_results_dict.json'
+#AUTHORS = ['Hongjie Dong', 'A. Mironov', 'Holger Dette', 'Duván Cardona', 'Liping Li', 'T. Tony Cai', 'Gen Li', 'László Csató']
+#AUTHORS = ['Simon S. Du', 'Nathan Kallus', 'László Csató', 'Victor Chernozhukov', 'L. Elisa Celis'] # for batch 2
+AUTHORS = ['Marcel Ausloos', 'T. Tony Cai', 'Constantinos Daskalakis', 'Palle Jorgensen', 'Omer Angel'] #for batch 1
 
 
-def prepare_data(save_csv=True, path=PATH_DATA):
+
+def prepare_data(save_csv=False, path=PATH_DATA):
     print('Loading Metadata')
     metadata_df = pd.read_csv(PATH_METADATA, delimiter=',', index_col='arxiv_id', usecols=['arxiv_id','first_author', 'total_words', 'mean_sentence_length', 'vocabulary_size'])
     date_df = pd.read_csv(PATH_PUBLISHED_DATE, delimiter=',', usecols=['arxiv_id','published'], index_col='arxiv_id')
@@ -30,7 +34,7 @@ def prepare_data(save_csv=True, path=PATH_DATA):
     print('Converting Time')
     metadata['published'] = metadata['published'].apply(convert_time)
     print('Loading Word Histogram')
-    raw_union_df = import_word_hist('data/normalized_word_hist', PATH_WORD_HIST_UNION, min_count=10000, min_words=50,
+    raw_union_df = import_word_hist('data/normalized_word_hist', PATH_WORD_HIST_UNION, min_count=300, min_words=50,
                                     time_proc=True)
     print('Merging datasets')
     data = pd.merge(metadata, raw_union_df, how='inner', left_index=True, right_index=True)
@@ -38,13 +42,14 @@ def prepare_data(save_csv=True, path=PATH_DATA):
     print('Deleting intermediate dataframes')
     del raw_union_df, metadata_df, date_df, metadata
     print(f'Final Dataset size: {len(data)}')
+    print(f"Counts of papers for each author: {data['first_author'].value_counts()}")
     if save_csv:
         print('Saving Data to '+ path)
         data.to_csv(path + 'data_time_analysis.csv.gz', header=True, index=True, compression='gzip')
     return data
 
 def import_word_hist(target_path, path=PATH_WORD_HIST_UNION, chunksize=300, min_count=5000, min_words=50, time_proc=False):
-    if os.path.exists(target_path):
+    if os.path.exists(target_path + '_full.csv'):
         sys.exit(f'Warning: {target_path} file already exists')
     print('Reading Columns (Features) of Word Hist')
     header_df = pd.read_csv(path, nrows=0, delimiter=',', dtype=int, index_col='Data Name', na_filter=False, converters={'Data Name':float})
@@ -58,7 +63,8 @@ def import_word_hist(target_path, path=PATH_WORD_HIST_UNION, chunksize=300, min_
             if time_proc:
                 start = time.time()
             print(f'Processing Chunk {i}')
-            df = chunk[chunk.sum(axis=1) > min_words]
+            df = chunk.fillna(0)
+            df = df[df.sum(axis=1) > min_words]
             print('Saving Chunk')
             df.to_csv(target_path + '_full.csv', mode='a', columns=cols, index=True, header=False)
             count_df['count'] += df.sum(axis=0)
@@ -68,10 +74,10 @@ def import_word_hist(target_path, path=PATH_WORD_HIST_UNION, chunksize=300, min_
                 del start
             i += 1
     print('Reducing columns')
+    print(f'Maximum Count: {count_df.idxmax(axis=1)} with {count_df.max(axis=1)} ')
     cols = count_df[count_df['count'] > min_count].columns.tolist()
     del count_df
     word_hist_df = pd.read_csv(target_path + '_full.csv', dtype=int, converters={'arxiv_id':float}, na_filter=False, index_col='arxiv_id', usecols=['arxiv_id'] + cols)
-    word_hist_df.to_csv(target_path + '.csv', mode='w', columns=cols, index=True, index_label='arxiv_id', header=True)
     return word_hist_df
 
 def split_dataset(author:str, data:pd.DataFrame) -> [pd.DataFrame, pd.DataFrame]:
@@ -81,14 +87,14 @@ def split_dataset(author:str, data:pd.DataFrame) -> [pd.DataFrame, pd.DataFrame]
 
 def find_sign_features_for_author(author:str, presel_features:list, data:pd.DataFrame):
     author_data, group_data = split_dataset(author, data)
-    author_features_df = find_best_features(feature_list=presel_features, author_data=author_data, n=20)
-    print(f'Author feature dataframe: {author_features_df.head(15)}')
+    author_features_df = find_best_features(feature_list=presel_features, author_data=author_data, n=1000)
+    print(f'Author feature dataframe: {author_features_df.head(5)}')
     selected_features = author_features_df.index.tolist()
-    print(f'Selected features for {author}: {selected_features}')
+    #print(f'Selected features for {author}: {selected_features}')
     general_features_df = fit_group_data(feature_lst=selected_features, group_data=group_data)
-    print(f'Group feature dataframe: {general_features_df.head(15)}')
+    print(f'Group feature dataframe: {general_features_df.head(5)}')
     significant_features = test_features(author_features_df, general_features_df, selected_features)
-    print(f'Significant features for {author}: {significant_features}')
+    #print(f'Significant features for {author}: {significant_features}')
     return significant_features
 
 def convert_time(date):
@@ -99,17 +105,17 @@ def convert_time(date):
     result = year + (month - 1) / 12 + (day - 1) / 365
     return result
 
-def find_best_features(feature_list: list, author_data: pd.DataFrame, n:int=20)-> pd.DataFrame:
-    feat_fit_df = pd.DataFrame(index=feature_list, columns=['slope', 'intercept', 'rvalue', 'pvalue', 'stderr', 'stderr_intercept'])
+def find_best_features(feature_list: list, author_data: pd.DataFrame, n:int=100)-> pd.DataFrame:
+    feat_fit_df = pd.DataFrame(index=feature_list, columns=['slope', 'intercept', 'rvalue', 'pvalue', 'stderr', 'stderr_intercept', 'abs_pvalue'])
     if len(author_data.index.tolist()) == 0:
         sys.exit("Author Dataframe is empty")
     X = author_data['published_x'].to_numpy()
     for feature in feature_list:
         Y = author_data[feature].to_numpy()/author_data['total_words'].to_numpy()
         result = sps.linregress(X, Y)
-        feat_fit_df.loc[feature] = [result.slope, result.intercept, result.rvalue, result.pvalue, result.stderr, result.intercept_stderr]
-    feat_fit_df = feat_fit_df.sort_values(by=['stderr'], ascending=True)
-    return feat_fit_df.head(n)
+        feat_fit_df.loc[feature] = [result.slope, result.intercept, result.rvalue, result.pvalue, result.stderr, result.intercept_stderr, abs(result.pvalue)]
+    feat_fit_df = feat_fit_df[feat_fit_df['abs_pvalue'] < 0.05]
+    return feat_fit_df
 
 def fit_group_data(feature_lst: list, group_data: pd.DataFrame)->pd.DataFrame:
     fit_group_df = pd.DataFrame(index=feature_lst, columns=['slope', 'intercept', 'rvalue', 'pvalue', 'stderr', 'stderr_intercept'])
@@ -127,11 +133,11 @@ def test_statistic(beta1:float, beta2:float, s1:float, s2:float)->float:
 def test_features(author_fits:pd.DataFrame, group_fits:pd.DataFrame, features:list, p=0.05)->dict:
     result_dict = {}
     for feature in features:
-        slope_author, interc_a, _, _, stderr_author, stderr_ic_author = author_fits.loc[feature].tolist()
+        slope_author, interc_a, _, _, stderr_author, stderr_ic_author, _ = author_fits.loc[feature].tolist()
         slope_group, interc_g, _, _, stderr_group, stderr_ic_group = group_fits.loc[feature].tolist()
         t_stat = test_statistic(slope_author, slope_group, stderr_author, stderr_group)
         p_val = sps.norm.sf(t_stat)
-        print(f'Test results for {feature}: \n t = {t_stat} \n p-value = {p_val}')
+        #print(f'Test results for {feature}: \n t = {t_stat} \n p-value = {p_val}')
         if p_val < p:
             result_dict[feature] = (p_val, slope_author, stderr_author, interc_a, stderr_ic_author, slope_group, stderr_group, interc_g, stderr_ic_group)
     return result_dict
@@ -189,3 +195,15 @@ def time_analysis(prep_data=True, authors=AUTHORS, visualize=True):
     json.dump(author_results_dict, open("data/analysis/author_results_dict.json", 'w'))
 
 time_analysis(prep_data=True, visualize=False)
+
+
+def number_of_sign(author_res_dict):
+    author_percentage_dict = {}
+    for author, results in author_res_dict.items():
+        author_percentage_dict[author] = len(list(results.keys()))
+    return author_percentage_dict
+
+with open(RESULTS, 'r') as file:
+    auth_res_dict = json.load(file)
+p_s_d= number_of_sign(auth_res_dict)
+print(p_s_d)
