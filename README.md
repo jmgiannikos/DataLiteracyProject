@@ -1,83 +1,125 @@
-# DataLiteracyProject
-## main.py
+# Data Literacy Project
 
-Will be the pipeline orchestrator. 
+This project implements a comprehensive **arXiv data pipeline** designed to collect, enrich, clean, and analyze academic papers across multiple disciplines (Computer Science, Economics, EESS, Mathematics, Physics) from 2010 to 2025.
 
-select authors -> select papers -> scrape metadata -> scrape text -> clean text -> extract features
+![visual_abstract](docs/visual_abstract.png)
 
-Visualization will be done in a separate jupyter notebook.
+The pipeline automates the extraction of metadata and text features to enable downstream analysis of scientific literature.
 
-## select_papers.py
+The pipeline can reproduce all experiments with novel data. To download the data we used for the original ones, visit this [Drive Folder](https://drive.google.com/file/d/1_uHO1bLTfT_tTJovI4cqNNHou4r61P7S/view?usp=drive_link).
 
-Handles arXiv queries to scrape a list of papers in the form of arXiv IDs.
+## Features
 
-All methods are helpers except for `get_papers()`.
+1. **Multi-Category Collection**: Scrapes papers from 5 major arXiv groups.
+2. **Metadata Enrichment**: Enhances arXiv data with institutional affiliations, citation counts, and venue information using:
+   - **OpenAlex** (via DOI or abstract search)
+   - **Crossref** (via DOI, Journal Ref, or Title match)
+3. **Data Cleaning**: Filters dataset based on metadata completeness and author productivity constraints.
+4. **Feature Extraction**:
+   - Downloads source files (HTML/PDF) from arXiv.
+   - Extracts raw text from non-PDF sources.
+   - Computes word histograms and other text-based features.
+5. **Analysis**: Performs statistical analysis on the processed features (e.g., word distribution, author fingerprints).
 
-```python
-"""
-Args:
-        entry: Entry point author name
-        n: Number of co-authors to include
-        j: Number of first-author papers per author
-        k: Number of non-first-author papers per author
-        strict: If True, require exactly n co-authors, j first-author papers, and k non-first-author papers.
-                If False (default), allow up to n, j, and k respectively.
+## Pipeline Steps
 
-    Returns:
-        Set of arXiv IDs for all deduplicated papers
-"""
+The project runs a 7-step pipeline orchestrated by `main.py`:
+
+1.  **Collect Papers**: Searches arXiv API for papers in defined categories (`cs`, `econ`, `eess`, `math`, `physics`). Resume-capable.
+2.  **Merge to Raw Dataset**: Combines all collected papers from different categories into a single raw CSV.
+3.  **Enrich Metadata**: Queries External APIs (OpenAlex, Crossref) to fill in missing metadata (Affiliations, Countries, Citations).
+4.  **Clean Data**:
+    - Removes entries with low metadata completeness.
+    - Removes authors with fewer than `MIN_PAPERS_PER_AUTHOR` (default: 10) papers.
+5.  **Extract Features**:
+    - Downloads source tarballs.
+    - Extracts text content.
+    - Generates word histograms.
+6.  **Run Analysis**: Analyzes the extracted features (e.g., PCA, unique author stats).
+7.  **Standalone Feature Extraction**: (Optional) Runs feature extraction on any cached text sources independent of the full pipeline.
+
+## Installation
+
+1.  **Clone the repository**:
+    ```bash
+    git clone <repository_url>
+    cd DataLiteracyProject
+    ```
+
+2.  **Prerequisites**:
+    - Python 3.14+ (or compatible newer version)
+    - Recommendation: Use a virtual environment (e.g., `venv` or `uv`).
+
+3.  **Install Dependencies**:
+    This project uses `pyproject.toml` for dependency management.
+    ```bash
+    pip install .
+    ```
+    Or if you use `uv`:
+    ```bash
+    uv sync
+    ```
+
+## Usage
+
+The main entry point is `main.py`.
+
+### Basic Run
+To run the full pipeline from start to finish:
+```bash
+python main.py
 ```
 
-TODO:
-- [ ] recursive call to build a larger set of papers
-- [ ] include "at least `m` co-authors among the `n` selected should appear in `i` papers among the `j+k` selected for each author"
+### Command Line Arguments
+You can control the execution flow using arguments:
 
-## scrape_metadata.py
+- **Start from a specific step**:
+  ```bash
+  python main.py --skip-to <step_number>
+  ```
+  *Example*: `python main.py --skip-to 3` (Starts from metadata enrichment)
 
-Main method: `run()`. First, it extracts basic metadata from arXiv. If DOI present, searches via OpenAlex (highest hitrate possible). If not, tries CrossRef.
-Right now, 50% of papers have full metadata representation.
+- **Resume text extraction**:
+  If Step 5 failed or stopped, you can resume from a specific index:
+  ```bash
+  python main.py --skip-to 5 --start-index 1000
+  ```
 
-```python
-"""
-    Takes a list of arXiv IDs, fetches DOIs from arXiv API, then enriches with
-    metadata from OpenAlex/Crossref.
+- **Run feature extraction only**:
+  Run specific batch extraction on existing cache:
+  ```bash
+  python main.py --features-only
+  ```
 
-    Args:
-        arxiv_ids: List of arXiv identifiers
-        contact_email: Contact email for polite API access (or set CONTACT_EMAIL env var)
-        cache_dir: Base directory for caching API responses
-        output_path: Path for output metadata.csv
+### Configuration
+Key parameters can be configured directly in the `CONFIGURATION` section of `main.py`:
 
-    Returns:
-        DataFrame with enriched metadata
-    """
+- `CATEGORY_GROUPS`: specific arXiv categories to scrape.
+- `YEARS`: Year range (default: 2010-2025).
+- `PAPERS_PER_TOPIC`: Target number of papers per category.
+- `DATA_DIR`: Output directory for data (default: `data/`).
+
+## Project Structure
+
+```
+DataLiteracyProject/
+├── main.py               # Pipeline orchestrator
+├── pyproject.toml        # Dependencies and project metadata
+├── README.md             # Project documentation
+├── data/                 # Generated data (ignored by git usually)
+│   ├── cache/            # Cached API responses (ArXiv, OpenAlex) and text files
+│   ├── intermediate/     # Partial collection results
+│   ├── features/         # Extracted word histograms
+│   ├── analysis/         # Analysis results and plots
+│   └── *.csv             # Key datasets (raw, enriched, cleaned, processed)
+└── src/                  # Source code modules
+    ├── scrape_paper_ids.py   # arXiv API interaction
+    ├── scrape_metadata.py    # Enrichment logic (OpenAlex/Crossref)
+    ├── scrape_text.py        # Text downloading and cleaning
+    ├── extract_features.py   # Feature engineering
+    ├── analysis.py           # Statistical analysis tools
+    └── utils.py              # Helper functions
 ```
 
-## scrape_text.py
-
-Sim
-
-## analysis.py
-currently the two major functions in this file are 'feature_analysis_pipe' and 'prediction_pipe'. Both can be called without parameters, as they are pre-initialized with reasonable values. They do the following:
-### 'feature_analysis_pipe': 
-1) Extract a set of features for each document in the collection: common word frequencies, mean and stdev of sentence lenght, frequency of "easy" words, syllable count frequency
-2) Group the documents into groups according to the value(s) passed in group_by parameter. Remove all groups that do not have a minimum number of samples
-3) compute feature wise distribution for each group via histogram. Fixed number of bins, spread evenly between global min and max value of the binned feature. IMPROVEMENT POSSIBILITY: use some other form of density estimation (e.g. Kernel density estimation)
-4) compute pairwise jensen-shannon divergence for each group (typically for each author, but other groupings are possible) with each other group. Jensen shannon divergence is computed between the respective distributions calculated in the previous step.
-5) use mixed integer programming to find a minimal selection of features for which the average divergence between each pair of groups is above a set value (if this is infeasible there is an option to iteratively reduce the target until it becomes feasible)
-6) returns dict of data frames showing the divergences for each pair for the selected features for each column name provided in group_by (standard). There is also a crossvalidation mode, which returns nested dictionaries with the following hierarchy:
-   - outermost: keys are the groupings like in standard operation
-   - middle: keys are the crossval split
-   - innermost: keys are "divergence_df" (result of the divergence calc), "test" (test df), "train" (train df) and "group names" (names of the retained groups after dropping groups with too few members)
-
-### 'prediction_pipe'
-1) run crossval version of feature analysis pipe to select features
-2) setup predictor with fit():
-   - use Kernel Density Estimation to estimate p(features|group) for each group
-   - estimate p(group) to be num_samples(group)/num_samples(all)
-   - use both to get joint probability distribution 
-3) iterate over holdout sets and predict group with predict():
-   - use previously established distributions and bayes rule to compute p(group|feat) for each group
-4) collect all predictions (across all splits) in one df
-5) average prediction for each group (i.e. compute average p(author|sample) across all samples that belong to the same author) and collect results in df
-6) return df calculated in 5) as a measure 
+## Authors
+Academic Data Literacy Project Team
