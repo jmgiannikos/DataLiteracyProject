@@ -6,6 +6,8 @@ This project implements a comprehensive **arXiv data pipeline** designed to coll
 
 The pipeline automates the extraction of metadata and text features to enable downstream analysis of scientific literature.
 
+The pipeline can reproduce all experiments with novel data. To download the data we used for the original ones, visit this [Drive Folder](https://drive.google.com/file/d/1_uHO1bLTfT_tTJovI4cqNNHou4r61P7S/view?usp=drive_link).
+
 ## Features
 
 1. **Multi-Category Collection**: Scrapes papers from 5 major arXiv groups.
