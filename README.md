@@ -2,6 +2,8 @@
 
 This project implements a comprehensive **arXiv data pipeline** designed to collect, enrich, clean, and analyze academic papers across multiple disciplines (Computer Science, Economics, EESS, Mathematics, Physics) from 2010 to 2025.
 
+![visual_abstract](docs/visual_abstract.png)
+
 The pipeline automates the extraction of metadata and text features to enable downstream analysis of scientific literature.
 
 ## Features
